@@ -217,3 +217,8 @@ Actualizado: 5 de noviembre de 2026.
 - El visor de animaciones admite `tecnica_ID` al generar GIFs. Versiones: script 178, animaciones 124.
 - Comprobaciones de ataques, combate, personajes, catálogo y ocho pruebas Piskel correctas. Chrome `file://`: prueba dirigida de carga/disparo y aislamiento entre formas, sin errores JS. Nivel y forma forzados para la prueba; progresión normal pendiente.
 - Evidencias: `Pruebas_visuales/2026-11-09-bestia/Revision.md`. Continúa pendiente la revisión del resto del plantel; no se han fusionado ramas de Claude. No publicado en main/Pages.
+
+
+## 9 nov. — Ampliación a todo el plantel: en espera
+- Josemi pide aplicar la revisión de técnicas y animaciones a todos los personajes del juego y sus transformaciones visibles, como en Gohan Bestia. Alcance detallado en TAREAS_CODEX.md.
+- **No comenzar todavía:** el usuario ha pedido únicamente apuntarlo. Esperar nueva indicación. No se ha iniciado la ampliación.
