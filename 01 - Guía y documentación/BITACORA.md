@@ -4115,3 +4115,38 @@ ode --check.
 - Hecho: motor común, correcciones de 24 selecciones de forma, 27 secuencias por técnica, emisión alineada y vuelta validada de Piskel. Pruebas específicas y navegador correctos. Cachés y hojas temporales apartadas del cambio.
 - A medias: la revisión manual exhaustiva de todo el catálogo, especialmente las técnicas que todavía usan una pose de reserva. No se afirma que todas las formas estén revisadas a ojo. La suite Python general se interrumpió durante el recálculo de cachés, después de confirmar su fallo de línea base previo.
 - Siguiente paso: revisar las técnicas de reserva por personaje y transformación visibles, aprovechando las secuencias `tecnica_ID`; no volver a generar tandas genéricas ni contar variantes ocultas como mejoras del plantel.
+
+## 2026-11-09 — Codex (retomar DBSurvivor desde GitHub)
+
+### Lo que pidió el usuario
+- «entra a mi github mira el repositorio de DBSurvivor y vamos a seguir con lo que estabamos haciendo».
+
+### Lo que hice
+- Revisado main en GitHub, último relevo c20f9054. Copia aislada de main; continúa la revisión de técnicas que usan poses de reserva.
+
+### A medias / problemas
+- Revisión en curso. No se ha fusionado ninguna rama de Claude.
+
+
+### Cierre de este bloque
+- Corregida la sexta técnica de Gohan Bestia por forma, con secuencia original 14 → 18 y anclas de emisión. Corregidos su nombre y aura. La lista de técnicas de la ficha cambia con la transformación; las fusiones no contaminan las otras formas con el cañón.
+- Corregido `previsualizar.py`: admite acciones dinámicas `tecnica_ID` y su duración al generar GIFs.
+- Pruebas: sintaxis, ataques (incluidas formas y fusión), combate, personajes, catálogo y 8 pruebas Piskel correctas. Índice regenerado desde rutas versionadas por tratarse de checkout parcial: sin cambios, 336 entradas/0 ausentes.
+- Chrome con index.html mediante file://: carga, disparo, nombre/aura, animación propia y técnica de Definitivo comprobados sin errores JS. Prueba dirigida con forma/nivel/ranuras forzados. Evidencias en Pruebas_visuales/2026-11-09-bestia/Revision.md.
+- Hecho: primer bloque de continuación. A medias: revisión del resto de técnicas de reserva y progresión normal de Bestia. Siguiente: continuar por formas visibles, sin tandas genéricas. Ramas de Claude sin fusionar; main y Pages sin modificar.
+
+
+## 2026-11-09 — Codex (encargo global anotado, en espera)
+
+### Lo que pidió el usuario
+- «vale, pues hay que hacer eso en todos los personajes que hay en el juego asi que apuntalo, no hagas nada au».
+
+### Lo que hice
+- Anotado el encargo para todos los personajes y sus transformaciones visibles en TAREAS_CODEX.md y ESTADO_ACTUAL.md. Revisar todos los personajes presentes en el juego y todas sus transformaciones visibles, aplicando el mismo trabajo de Gohan Bestia: técnicas fieles al personaje y la forma, preparación y disparo/ejecución coherentes con los sprites originales, anclas de emisión, nombres y auras correctos, y pruebas visuales (imágenes o GIFs) y de funcionamiento. No dar por revisado un personaje solo por pasar una prueba de carga.
+- Solo documentación; no se ha empezado la ampliación ni se ha cambiado el juego.
+
+### A medias / problemas
+- Encargo en espera por indicación explícita del usuario.
+
+### Siguiente paso recomendado
+- Esperar a que Josemi indique que se puede empezar.

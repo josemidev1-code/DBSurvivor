@@ -8,7 +8,7 @@ Salida en herramientas/_revisar/:
 import os, sys
 from PIL import Image, ImageDraw
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from montar_animaciones import leer_config, cargar_forma, tira, CLAVES, DUR, RAIZ
+from montar_animaciones import leer_config, cargar_forma, tira, claves_forma, DUR, RAIZ
 
 heroe, forma = sys.argv[1], sys.argv[2]
 f = leer_config()[heroe][forma]
@@ -41,8 +41,8 @@ fotos = []
 for t in range(0, 150):
     c = Image.new('RGBA', (GW, GH), (70, 163, 127, 255)); dd = ImageDraw.Draw(c)
     for j, (n, (im, cw, ch)) in enumerate(tiras.items()):
-        clave = [k for k, v in CLAVES.items() if v == n][0]
-        du = f.get(clave + 'Du') or [DUR[n]] * (im.width // cw)
+        clave = next(k for k, v in claves_forma(f).items() if v == n)
+        du = f.get(clave + 'Du') or [DUR.get(n, 12)] * (im.width // cw)
         tick = (t * 2) % sum(du); k = 0
         while tick >= du[k]: tick -= du[k]; k += 1
         cell = im.crop((k * cw, 0, (k + 1) * cw, ch)).resize((cw * Z, ch * Z), Image.NEAREST)

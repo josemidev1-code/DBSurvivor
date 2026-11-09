@@ -1,3 +1,13 @@
+# Encargo vigente — 9 de noviembre de 2026
+
+**APUNTADO, NO INICIAR TODAVÍA.** Josemi ha pedido ampliar la revisión a todo el plantel, pero ha indicado expresamente que aún no se haga nada. Esperar una nueva indicación suya para comenzar.
+
+Revisar todos los personajes presentes en el juego y todas sus transformaciones visibles, aplicando el mismo trabajo de Gohan Bestia: técnicas fieles al personaje y la forma, preparación y disparo/ejecución coherentes con los sprites originales, anclas de emisión, nombres y auras correctos, y pruebas visuales (imágenes o GIFs) y de funcionamiento. No dar por revisado un personaje solo por pasar una prueba de carga.
+
+Referencia: primer bloque de Gohan Bestia en PR #2, rama `codex/revision-tecnicas-2026-11-09`. La ampliación sigue pendiente; no implica que todo el plantel esté revisado.
+
+---
+
 # Prioridades actuales — relevo del 2 de noviembre de 2026
 
 1. Lee `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` y `Cambios propuestos por Josemi.md` en esta carpeta. La petición actual del usuario manda.
