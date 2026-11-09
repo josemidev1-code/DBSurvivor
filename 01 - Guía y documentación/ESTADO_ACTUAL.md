@@ -210,3 +210,10 @@ Actualizado: 5 de noviembre de 2026.
 - Navegador: 270 formas visibles y 1.522 combinaciones forma/técnica cargadas; 13 técnicas específicas probadas en preparación/lanzamiento. No equivale a una revisión visual completa de todas las formas. Siguen pendientes selecciones propias en el resto de técnicas que usan reservas.
 - La comprobación de línea base Python ya fallaba: antes y después hay 1 forma con sueltos, 33 agachadas y 10 desiguales (el test antiguo espera 0/16/4). No se cambian esas expectativas para ocultarlo. La suite general se interrumpió durante el recálculo de cachés, después de verificar por separado las pruebas pertinentes.
 - Versiones: script.js?v=177 y animaciones_juego.js?v=123. Publicación en GitHub Pages pendiente de verificar al cierre de sesión.
+
+
+## 9 nov. — Retomar DBSurvivor: Gohan Bestia
+- Rama de revisión desde main `c20f9054`: sexta técnica de `gohan/4` sustituida por el Cañón Especial Bestia, con preparación/disparo propios (14 → 18 del pack 119). Corregidos el nombre BESTIA y el aura morada que antes heredaba de Definitivo.
+- El visor de animaciones admite `tecnica_ID` al generar GIFs. Versiones: script 178, animaciones 124.
+- Comprobaciones de ataques, combate, personajes, catálogo y ocho pruebas Piskel correctas. Chrome `file://`: prueba dirigida de carga/disparo y aislamiento entre formas, sin errores JS. Nivel y forma forzados para la prueba; progresión normal pendiente.
+- Evidencias: `Pruebas_visuales/2026-11-09-bestia/Revision.md`. Continúa pendiente la revisión del resto del plantel; no se han fusionado ramas de Claude. No publicado en main/Pages.

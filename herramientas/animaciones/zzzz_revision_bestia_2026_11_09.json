@@ -1,0 +1,27 @@
+{
+  "_ayuda": "Gohan Bestia: Makankosappo con dedos en la frente y disparo del mismo pack, revisados visualmente. Fuente: https://en.dragon-ball-official.com/news/01_1823.html",
+  "heroes": {
+    "gohanadult": {
+      "2": {
+        "tecnica_beastcannon": [
+          14,
+          18
+        ],
+        "tecnica_beastcannonDu": [
+          30,
+          18
+        ],
+        "tecnica_beastcannonOrigen": [
+          [
+            0.28,
+            0.36
+          ],
+          [
+            0.94,
+            0.4
+          ]
+        ]
+      }
+    }
+  }
+}

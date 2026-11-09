@@ -1678,6 +1678,7 @@ Object.assign(HDEF.kefla,{forms:['SUPER SAIYAN','SSJ BLUE'],aura:['green','blue'
 Object.assign(HDEF.broly,{forms:['CONTENIDO','SUPER SAIYAN','LEGENDARIO','SUPER SAIYAN 4'],aura:['gold','gold','green','red']});
 
 Object.assign(HDEF.gohanadult,{forms:['BASE','MÍSTICO','BESTIA'],aura:['white','white','purple']});
+Object.assign(HDEF.gohan,{forms:[...HDEF.gohan.forms,'BESTIA'],aura:[...HDEF.gohan.aura,'purple']});
 
 Object.assign(HDEF.trunkscell,{forms:['BASE','SUPER SAIYAN','ULTRA SSJ'],aura:['white','gold','gold']});
 
@@ -3069,7 +3070,13 @@ const UNLOCK_LV=[1,1,4,8,12,16];
 
 let FO=null;const fxSl=[],fxRg=[];
 
-function sigList(hid=S.hid){if(SIGS[hid])return SIGS[hid];const st=HEROES[hid]&&HEROES[hid].start;return['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku']}
+// Bestia conserva sus ranuras y niveles, pero su técnica final es el Makankosappo propio.
+function sigList(hid=S.hid,form=hid===S.hid&&typeof P!=='undefined'&&P?P.form:0){
+  const st=HEROES[hid]&&HEROES[hid].start;
+  const list=SIGS[hid]||['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku'];
+  return (hid==='gohan'&&form===4||hid==='gohanadult'&&form===2)
+    ?list.map(id=>id==='fskame'?'beastcannon':id):list;
+}
 
 function sigOpen(){return sigList().slice(0,P.sigU||2)}
 
@@ -4914,9 +4921,9 @@ function applyOpt(op){
 
      {
 
-       const cur=sigList();
+       const idxA=sigList().indexOf(op.idA);
 
-       const idxA=cur.indexOf(op.idA);
+       const cur=(SIGS[S.hid]||sigList()).slice();
 
        if(idxA!==-1)cur[idxA]=op.fusId;else cur[0]=op.fusId;
 
@@ -8789,6 +8796,8 @@ function rosterForm(d){const id=rosterAnim.id,H=HEROES[id];if(!H)return;const n=
   const face=faceExact(id,f)||(f===0&&MYC['h:'+id+':0']?MYC['h:'+id+':0'].c.toDataURL():null);$('#rPrevImg').src=face||'';$('#rPrevImg').hidden=!face;$('#rNoFace').hidden=!!face;
 
   const formName=(H.forms||[])[f]||'BASE';$('#rFormN').textContent=formName;$('#rFormL').disabled=$('#rFormR').disabled=n<2;$('#rForm').classList.toggle('one',n<2);
+
+  $('#rPrevMoves').innerHTML=sigList(id,f).map((m,i)=>MV[m]?`<li><b>Nv ${UNLOCK_LV[i]||1}</b> ${MV[m].name}</li>`:'').join('');
 
   $('#rFormLock').hidden=true;
 

@@ -134,3 +134,9 @@ Se corrigieron 125 selecciones en 91 formas, la continuidad de los combos y las 
 El motor conserva la postura al lanzar proyectiles y respeta los tiempos de los fotogramas; los combos esperan a terminar su preparación antes de causar daño. Se corrigieron selecciones en 24 formas, separando puños, patadas y espadas y añadiendo poses específicas por técnica. Piskel permite devolver secuencias reordenadas al juego y conserva las pausas del original. Guía: `herramientas/GUIA_ANIMACIONES.md`.
 
 Pendiente: continuar la revisión visual del resto del catálogo, especialmente técnicas que todavía usan una pose de reserva. Las comprobaciones de carga de todo el plantel no sustituyen esa revisión.
+
+
+### 9 de noviembre — Gohan Bestia
+Su quinta forma ya muestra el nombre BESTIA y aura morada. La sexta ranura usa el Cañón Especial Bestia, con sprites propios de preparación y disparo del Makankosappo. Las otras formas conservan sus técnicas. Pruebas dirigidas con doble clic (`file://`) correctas. Evidencias y límites en `01 - Guía y documentación/Pruebas_visuales/2026-11-09-bestia/Revision.md`.
+
+Pendiente: probar la progresión normal de Bestia y continuar la revisión visual de las técnicas de reserva por personaje y transformación visible.

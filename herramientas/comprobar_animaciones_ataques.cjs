@@ -42,3 +42,29 @@ vm.runInContext(source.slice(comboStart,comboEnd),timing);
 assert.equal(impacts,1);
 assert(actor.atkT/actor.atkD<.5,'El daño empieza cuando ya terminó la pose de preparación');
 console.log('Impactos: el daño espera al fotograma de ataque.');
+
+// La transformación visible de Bestia debe usar su técnica, sin contaminar las otras formas.
+const sigStart=source.indexOf('function sigList('),sigEnd=source.indexOf('function sigOpen(',sigStart);
+const formContext=vm.createContext({S:{hid:'gohan'},P:{form:4},HEROES:{},MV:{},SIGS:{
+ gohan:['kiblast','kick','masenko','kame','gekiretsu','fskame'],
+ gohanadult:['kiblast','punch','masenko','kame','makanko','fskame'],goku:['kame','genki']
+}});
+vm.runInContext(source.slice(sigStart,sigEnd),formContext);
+assert.equal(vm.runInContext("sigList().at(-1)",formContext),'beastcannon');
+assert.equal(vm.runInContext("sigList('gohan',3).at(-1)",formContext),'fskame');
+assert.equal(vm.runInContext("sigList('gohanadult',2).at(-1)",formContext),'beastcannon');
+assert.equal(vm.runInContext("sigList('gohanadult',0).at(-1)",formContext),'fskame');
+assert.equal(vm.runInContext("SIGS.gohan.at(-1)",formContext),'fskame');
+assert.equal(vm.runInContext("sigList('goku',4)===SIGS.goku",formContext),true);
+// Fusionar otra ranura de Bestia no guarda el cañón en las formas normales de Gohan.
+const fuseStart=source.indexOf('       const idxA=sigList().indexOf(op.idA);');
+const fuseEnd=source.indexOf('       P.sigTimers[op.fusId]',fuseStart);
+assert(fuseStart>=0&&fuseEnd>fuseStart);
+formContext.op={idA:'kame',fusId:'fusion_prueba'};
+vm.runInContext(source.slice(fuseStart,fuseEnd),formContext);
+assert.equal(vm.runInContext("sigList().includes('fusion_prueba')",formContext),true);
+assert.equal(vm.runInContext("sigList('gohan',0).at(-1)",formContext),'fskame');
+const beast=originals.window.ANIM_SET.h.gohanadult[2].anims.Tecnica_beastcannon;
+assert(beast&&beast.du.length===2,'Bestia necesita preparación y disparo propios');
+assert.equal(beast.origen.length,2);
+console.log('Bestia: técnica por forma, ranuras, fusiones y secuencia propia correctas.');
