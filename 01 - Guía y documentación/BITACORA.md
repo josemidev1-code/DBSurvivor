@@ -4132,3 +4132,19 @@ ode --check.
 - Nombres de forma repetidos corregidos: Gohan «DEFINITIVO» ×2 → la quinta es BESTIA; Trunks «SSJ2 MANGA» ×2 → BASE MANGA y SSJ2 MANGA; Kyabe «SUPER SAIYAN» ×2.
 - Técnicas: 16 versiones que copiaban la lista de Goku/Vegeta/Black/Vegetto tienen ahora técnicas propias de su momento de la serie (Kamehameha x10 en SSJ Kaioken y SSJ4, Golpe del Instinto y Kamehameha Divino en el UI de Granola, Teletransporte primero en Yardrat, Gamma Burst Flash, Ira Divina de Zamasu fusionado…). Ya no quedan dos personajes visibles con la misma lista.
 - Plugin «PixelFX»: no existe en el catálogo de plugins (solo Pixelesq, Pixeltable…). El proyecto ya usa los efectos PixelFX en `efectos_pixelfx.js`.
+- Accesibilidad e interfaz: botones de forma, JUGAR, VOLVER y ✕ de al menos 44 px; título de las barras sin desbordarse. Personajes en móvil vertical: ficha compacta fija arriba y lista en dos columnas. En móvil horizontal: ficha estrecha a la izquierda y lista a la derecha (antes la ficha tapaba la lista y no se podía elegir). Doble toque o doble clic en un personaje = jugar ya. Tarjeta elegida marcada con «ELEGIDO». Menú principal en móvil horizontal: sin noticias ni estadísticas, «¡A LUCHAR!» siempre a la vista.
+- Partida en móvil: barra de ataques un 25 % más pequeña, pegada abajo y sin casillas bloqueadas de más (solo la siguiente). El aviso de nueva técnica dice «TOCALO ABAJO» en táctil.
+- Fallo arreglado: en Kame House el jugador aparecía detrás de la casa (tapado). La casa pasa de la fila -2 a la -5 y el claro alrededor del inicio crece.
+- HUD: los nombres largos se recortan por palabras («GOKU» en vez de «GOKU .»). Las técnicas cuerpo a cuerpo (Patada, Kaioken, Teletransporte, Puño del Dragón…) ya no comparten icono idéntico: tinte y marca del color de cada técnica.
+- Tanda 10 de ataques (`zz_tanda_ataques_10_2026_11_11.json`): Goku SSJ4 Daima (attack2, attack3, kick2) y Goku UI verdadero (attack2, kick2, beam, up). Revisadas con `previsualizar.py`; en SSJ4 Daima se descartó el primer intento porque mezclaba dos escalas del pack. Exportadas a `piskel_animaciones/`. `auditar_animaciones.py` entiende ya la lista multilínea de ocultos y los personajes unidos: 225 formas jugables, 70 sin ataques extra (68 tras esta tanda).
+- Versiones: script.js?v=181, style.css?v=93, animaciones_juego.js?v=124. Comprobaciones `personajes`, `combate`, `animaciones_ataques` y `catalogo_sprites` correctas; `formas` ya fallaba antes («se transforma sin haber pedido el deseo»), sin cambios.
+
+### A medias / problemas
+- Animaciones: quedan 68 formas visibles sin ataques extra (lista en `AUDITORIA_ANIMACIONES.md`). Cada forma exige mirar el pack y revisar escalas a mano; no se rellenan con propuestas automáticas.
+- No hay plugin «PixelFX» en el catálogo; no se instaló nada.
+- `comprobar_formas.cjs` sigue fallando como antes. No se ha jugado una partida larga completa en móvil real; las pruebas son con Playwright (emulación de iPhone 13).
+- Josemi tiene que valorar: la lista de personajes ocultados (se recuperan quitando el ID de `DUPLICADOS_ROSTER`), los nombres de forma corregidos (Gohan BESTIA, Trunks BASE MANGA) y las técnicas nuevas de las versiones.
+
+### Siguiente paso recomendado
+- Seguir la tanda 10 con las formas de packs más ricos: Bra Majin (315 fotogramas), Vegetto Blue 254 (pack mixto), Vegeta Xeno, Androide 13, Dyspo, Gohan del Futuro. Después los fanmade unidos en GOKU FANMADE y BLACK FANMADE.
+- Que Josemi juegue en el móvil y diga si la barra de ataques y la ficha de personajes son cómodas.

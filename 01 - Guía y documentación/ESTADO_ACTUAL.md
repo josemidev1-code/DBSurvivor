@@ -210,3 +210,11 @@ Actualizado: 5 de noviembre de 2026.
 - Navegador: 270 formas visibles y 1.522 combinaciones forma/técnica cargadas; 13 técnicas específicas probadas en preparación/lanzamiento. No equivale a una revisión visual completa de todas las formas. Siguen pendientes selecciones propias en el resto de técnicas que usan reservas.
 - La comprobación de línea base Python ya fallaba: antes y después hay 1 forma con sueltos, 33 agachadas y 10 desiguales (el test antiguo espera 0/16/4). No se cambian esas expectativas para ocultarlo. La suite general se interrumpió durante el recálculo de cachés, después de verificar por separado las pruebas pertinentes.
 - Versiones: script.js?v=177 y animaciones_juego.js?v=123. Publicación en GitHub Pages pendiente de verificar al cierre de sesión.
+
+
+## 11 nov. — Plantel ordenado, selección y móvil (Claude)
+- Selección: la ficha solo cambia al pulsar/tocar (pasar el ratón ya no cambia el personaje). Doble toque = jugar.
+- Plantel de 169 a 117 sin repetidos: 37 versiones ocultas en `DUPLICADOS_ROSTER` (sprites conservados) y fanmade unidos como formas en GOKU FANMADE (13), GOKU BLACK FANMADE (7) y VEGETA XENO (2). Goku Yardrat y Kyabe con dos formas. Técnicas propias para 16 versiones que copiaban listas.
+- Móvil: botones de 44 px, ficha compacta, menú en horizontal, barra de ataques más pequeña. Kame House ya no tapa al jugador al empezar.
+- Tanda 10 de ataques empezada (2 formas). Quedan 68 formas visibles sin ataques extra.
+- script.js?v=181, style.css?v=93, animaciones_juego.js?v=124.
