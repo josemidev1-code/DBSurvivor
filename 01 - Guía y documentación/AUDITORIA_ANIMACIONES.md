@@ -6,8 +6,8 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6153** (20 %).
-- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **73**. Sin ninguno: **57**.
+- En los packs usados hay 30590 imágenes y el juego usa **6179** (20 %).
+- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **73**. Sin ninguno: **53**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
 Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no cuenta porque reutiliza el cuerpo del vuelo.
@@ -25,13 +25,9 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | vegetamanga | 2 | 250 | 36 | 10 |
 | gokualt | 3 | 302 | 67 | 7 |
 | broly | 4 | 234 | 80 | 6 |
-| a14 | 1 | 57 | 14 | 5 |
-| blackkaioshin | 1 | 45 | 14 | 5 |
 | bulma | 1 | 16 | 12 | 5 |
-| cui | 1 | 46 | 15 | 5 |
 | freezer | 6 | 443 | 127 | 5 |
 | gomah | 1 | 38 | 18 | 5 |
-| hatchiyack | 1 | 56 | 15 | 5 |
 | kibitoshin | 1 | 22 | 15 | 5 |
 | magetta | 1 | 84 | 14 | 5 |
 | majinduu | 1 | 79 | 15 | 5 |
@@ -70,6 +66,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | vegeta | 5 | 421 | 127 | 3 |
 | a17 | 1 | 41 | 20 | 2 |
 | bardock | 3 | 271 | 70 | 2 |
+| blackkaioshin | 1 | 45 | 20 | 2 |
 | cumber | 1 | 26 | 15 | 2 |
 | daishinkan | 1 | 86 | 21 | 2 |
 | gohanmanga | 1 | 87 | 21 | 2 |
@@ -82,10 +79,12 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | vegetaxeno | 1 | 185 | 21 | 2 |
 | vegetto | 4 | 446 | 97 | 2 |
 | a13 | 1 | 142 | 22 | 1 |
+| a14 | 1 | 57 | 21 | 1 |
 | a16 | 1 | 64 | 23 | 1 |
 | a18 | 1 | 47 | 21 | 1 |
 | bra | 2 | 217 | 50 | 1 |
 | bramajin | 1 | 315 | 23 | 1 |
+| cui | 1 | 46 | 21 | 1 |
 | dlrx | 1 | 86 | 25 | 1 |
 | dyspo | 1 | 128 | 25 | 1 |
 | gokunino | 1 | 133 | 23 | 1 |
@@ -96,6 +95,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | gokuyardrat | 1 | 113 | 23 | 1 |
 | goten | 1 | 89 | 20 | 1 |
 | granola | 1 | 137 | 23 | 1 |
+| hatchiyack | 1 | 56 | 22 | 1 |
 | hit | 1 | 98 | 26 | 1 |
 | jirengray | 1 | 73 | 22 | 1 |
 | kibito | 1 | 85 | 25 | 1 |

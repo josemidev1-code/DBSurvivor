@@ -4290,3 +4290,7 @@ ode --check.
 - `herramientas/animaciones/zz_tanda_ataques_11_2026_11_11.json`: Kibito (attack2, attack3, kick2, beam), Gran Sacerdote (attack2, kick2, beam), Glorio (los cinco), Gohan manga (attack2, beam, up), Jiren gris (attack2, attack3, kick2, up) y Gohan poseído (los cinco). Elegidos con la hoja y el zoom de `ver_pack.py` y revisados con `previsualizar.py`. Lo que el pack no tiene claro se deja vacío (el juego usa el de siempre).
 - Exportados a `piskel_animaciones/`. Auditoría regenerada: formas jugables sin ningún ataque extra, de 63 a 57. animaciones_juego.js?v=130. `comprobar_personajes` y `comprobar_animaciones_ataques` correctos.
 - Siguiente: seguir con las 57 de `AUDITORIA_ANIMACIONES.md` (formas sueltas de DeviantArt primero: A14, Black Kaioshin, Bulma, Cui, Gomah, Hatchiyack…).
+
+### Tanda 12 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_12_2026_11_11.json`: A14 (attack2, attack3, kick2, up), Black Kaioshin (attack2, attack3, beam), Cui (attack2, kick2, beam, up) y Hatchiyack (attack2, attack3, beam, up). Bulma (16 fotogramas) y Rey Gomah (38) no tienen material suficiente y se dejan.
+- Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=131.

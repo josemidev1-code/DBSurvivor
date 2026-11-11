@@ -1,0 +1,95 @@
+{
+  "heroe": "cui",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/DeviantArt/439_CUI (TheWarriorFF2)",
+  "frames": [
+    {
+      "sha256": "38e6c9782f5f2c36635eb3aa254614e93aeed4b4cefbeb70a111fedd7b8f2606",
+      "indice": 0
+    },
+    {
+      "sha256": "9f3b0a540e6ec9064e4924e70707cd424925ae74b7f38082635afdeea059360e",
+      "indice": 1
+    },
+    {
+      "sha256": "debf0cd77044f1b97cb8cdd5ae8540f93bc39e14c7199a59fe5546e5a459cacb",
+      "indice": 5
+    },
+    {
+      "sha256": "35ef1efa99ea47d3dfdc5d918e9b282a3a90e354ee493f41601cd9fbdb117cab",
+      "indice": 11
+    },
+    {
+      "sha256": "138be92eeb47f6c74810685c673ac01881be3c48ccbae76345b67856247a1dd6",
+      "indice": 12
+    },
+    {
+      "sha256": "af76a6aa2b1a074ca0147414393444cb7108bd53d16b018e7734f61afdd7dc8c",
+      "indice": 13
+    },
+    {
+      "sha256": "de18a108a0396a21b5917507a4e792f388b94d9234d0a737730d01112a0bd7e8",
+      "indice": 18
+    },
+    {
+      "sha256": "b4394ac1cee8953ae91801b39671e39f1c2edd6e5854da2c93426c39fb283464",
+      "indice": 19
+    },
+    {
+      "sha256": "e5c944e7f5dc65835820e38aad681f8c3f8215efd7a7aef355c29ca671411a0c",
+      "indice": 30
+    },
+    {
+      "sha256": "5d4007749a64618dc9f4aa8c1a1e49d0fb3d21eb31c8cb907fad2f7798af5a65",
+      "indice": 31
+    },
+    {
+      "sha256": "027cb2fe75334a8544f8f002ae00cad7012fe349454319f9f2fb3376457241b3",
+      "indice": 34
+    },
+    {
+      "sha256": "2975aa2f83fba5b8a0286e944482f8518f3f7df6c47fe432e8898d7315ed060e",
+      "indice": 39
+    },
+    {
+      "sha256": "64b20c50be8ac08d9f382615af5ff2b93de9d9727b5a9a7a4ae625cdf459612a",
+      "indice": 40
+    },
+    {
+      "sha256": "1742f3a45e8ae2e69e0b7ad2a0d2925fc5bb7e149922a950d6d3e416fedc1fcc",
+      "indice": 41
+    },
+    {
+      "sha256": "b601ae945d57c6186d6e321c5bf4a110166fb8a58c20baa0f75a82ed4a3bec53",
+      "indice": 45
+    },
+    {
+      "sha256": "a597cac490502adcfc9f51d2487430e5cfab867f33f60098431d0d6b50117d33",
+      "indice": 7
+    },
+    {
+      "sha256": "18641af59f487725fb4fb1e2e9d1b23152493a4f3b7b4e9caa5ccfa9b28d7511",
+      "indice": 8
+    },
+    {
+      "sha256": "5c37c7cd65c0f7e1e32f0077f77285c0bf291cb6b4b85a862f1d026e96c6438d",
+      "indice": 20
+    },
+    {
+      "sha256": "38e158e69c16dc62de116ef79fd3facafc97ee5618d9d3a1715be2783fa53d14",
+      "indice": 21
+    },
+    {
+      "sha256": "2484d3e71679b9fbb3a57e31ce3a80e7b72f8f31939df84603730b93b9586663",
+      "indice": 23
+    },
+    {
+      "sha256": "7b9e71e01c89a92173e2a006b13e8f8d498e348f0f20a15cf4411afe89cae091",
+      "indice": 24
+    },
+    {
+      "sha256": "64b20c50be8ac08d9f382615af5ff2b93de9d9727b5a9a7a4ae625cdf459612a",
+      "indice": 40
+    }
+  ]
+}
