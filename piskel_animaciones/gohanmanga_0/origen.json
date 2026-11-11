@@ -1,0 +1,87 @@
+{
+  "heroe": "gohanmanga",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/06_Moro/Gohan/121_GOHAN SAGA MORO MANGA,BY ANDRÉS GAMEN ANIMATIONS , SPRITE HD",
+  "frames": [
+    {
+      "sha256": "91d49b97e4cc910dd85fcab14478d943c6c0206df95d1306e694a546a165fbfb",
+      "indice": 78
+    },
+    {
+      "sha256": "d2cfda1dd775d7de1ce8e23a7b5ce6b9413315cc23c8304b0ec99b4d0c7e4433",
+      "indice": 79
+    },
+    {
+      "sha256": "2bc00fc94b21bfd89c63fd5a3ed5e79504316dbb62431b15bb436f3a3cae9824",
+      "indice": 76
+    },
+    {
+      "sha256": "3d991487d6580a9789788236bc5874c98f639ff35c4fd809672210c8d832046d",
+      "indice": 64
+    },
+    {
+      "sha256": "aea97369e02c9cc934746a4524ed6771155332bb25c1431623e39a80942b8e77",
+      "indice": 65
+    },
+    {
+      "sha256": "d36a036dc48d990ef1c496aaa5a2fcca43f2f67f1b0b30ef6d6da4cf3f463632",
+      "indice": 66
+    },
+    {
+      "sha256": "9700d0e4fc5c42040395a2056b313cde45c988ff8669a8acdfad81d8acb7cd3e",
+      "indice": 58
+    },
+    {
+      "sha256": "6ae5cdb0bdb6008a50ccbcf7167724621e183b981763dd8d801aaa28c4f4a94c",
+      "indice": 62
+    },
+    {
+      "sha256": "6896486062cd3cc2f2c5610150a5a3faff25bee09a5c4da6900f67fb38d931a4",
+      "indice": 27
+    },
+    {
+      "sha256": "53328d833456001d76224941981948cdab8581d4a3a6eebe94bace59b77b0b0c",
+      "indice": 31
+    },
+    {
+      "sha256": "7acdaa08b3acefd1941057b95bcc09c4e427188a6ac1cdab9bcbfd4b409efd14",
+      "indice": 50
+    },
+    {
+      "sha256": "a6e4048a66a03e9dbcb61a1eff7afddb11b947ded1a4bb3c22ad2a8df7880e17",
+      "indice": 51
+    },
+    {
+      "sha256": "327aa37de2a1beaeb0a558251e47f4ebd8964980cc5b2a03950aa083254bd4a8",
+      "indice": 54
+    },
+    {
+      "sha256": "c7d7dee31c895c42fecf6462ae5c0d289d14f5cec0736ca66797294cf44c3e21",
+      "indice": 56
+    },
+    {
+      "sha256": "99c8b73b6a965dd3262560695f8564b8d84f7db1c096760c1eaf2f67eb6d7fc7",
+      "indice": 53
+    },
+    {
+      "sha256": "727c6aba1dcfcda718c6885e82d948cf3d13887904fb4b2e473a5f7b243cc2fd",
+      "indice": 14
+    },
+    {
+      "sha256": "6241fb8785d64057659ea4890493b8ee8cfb56192fe4e6fc49c1266375ab882b",
+      "indice": 15
+    },
+    {
+      "sha256": "aca7ad7a88ce197e66206770ff8f4319771192166fde69bd0ee06790efde039b",
+      "indice": 20
+    },
+    {
+      "sha256": "130dabe01c459b604298d0ccbe36b617379a8de5e7de3cac7ffb4982f4515601",
+      "indice": 24
+    },
+    {
+      "sha256": "21abbeee72612b677be9f5dba857d89d71e6a89445450c7db82dbc7a54806a57",
+      "indice": 12
+    }
+  ]
+}

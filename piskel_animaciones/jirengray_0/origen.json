@@ -1,0 +1,95 @@
+{
+  "heroe": "jirengray",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Jiren/069_Jiren",
+  "frames": [
+    {
+      "sha256": "277d204d7db54f12c1d384c630338f6d2f99d0b13144147e1bac820cfde158d0",
+      "indice": 0
+    },
+    {
+      "sha256": "6bf61378bdcaaf17deff38ed1dfcf8c3ee24e342f8c842cb21680280056ffb75",
+      "indice": 1
+    },
+    {
+      "sha256": "8a6a7b866a7148caec9becf86e21544cb7530d5685412c67e12a053c99a2ae35",
+      "indice": 7
+    },
+    {
+      "sha256": "1a9a47ce52032f0f067d46de047c54867788e4d6a395c4572031984c2a5203b4",
+      "indice": 29
+    },
+    {
+      "sha256": "0d71bf2246e4cdb7a42740cd35369aa3c89da2cc79b2ad3cfa2d95b0bee28c73",
+      "indice": 30
+    },
+    {
+      "sha256": "8671bf788842f1fb3827e4c13e91ec2d182e557b90ede480891d759295b96ea4",
+      "indice": 31
+    },
+    {
+      "sha256": "5cc58f06bacd67c1ef97ef26eaee0d71e94e3be181547eea19f3a0578a621fa4",
+      "indice": 47
+    },
+    {
+      "sha256": "00e7b7d6a56e72d569b40dbcc8f8ff091200a9c8e8766843c2c516cd1dd55584",
+      "indice": 48
+    },
+    {
+      "sha256": "8ad971af84f0c76e86ec4a8bfa78c22b7ce813bb16fbb2c11bf95a3a60295075",
+      "indice": 61
+    },
+    {
+      "sha256": "14df25517b957d6ada700ac600f39c5b0d85bdf27c9d17b2d53b543771baae36",
+      "indice": 63
+    },
+    {
+      "sha256": "b682c6591cc30a6fd76221191e6f4b7bc2d87661462967549af81ccf523a366b",
+      "indice": 70
+    },
+    {
+      "sha256": "72d6c59b795ea86f71b251b99c5564565a4fc311f9e219e294b29b00bda9a362",
+      "indice": 71
+    },
+    {
+      "sha256": "64b0ceb282256eece16bb8e63c1cda058fc4d08eb79c2391748e863864c926ae",
+      "indice": 17
+    },
+    {
+      "sha256": "a9d6362d1d6d83f7c558c12d09c0477eecd9293a4d02b722e5e9cc23ac3fb4b7",
+      "indice": 18
+    },
+    {
+      "sha256": "cc4d226a0c5b9b4e4e520f9e0ec2be388d5d5d4d4024877e5a0b26a21adeb4ab",
+      "indice": 60
+    },
+    {
+      "sha256": "fa02b0d4caa953ab8188bc4850a954c94a2637eb3252232f9536041e115eea21",
+      "indice": 32
+    },
+    {
+      "sha256": "60fbe1f21cf5e53206231179655fa7e7a3b73124c2e9c92f5ddc120894aaca54",
+      "indice": 33
+    },
+    {
+      "sha256": "283d5243cfcc55d108e653781aa156b33f191deeafe68e90555d214e904fc127",
+      "indice": 53
+    },
+    {
+      "sha256": "6ac1f895ccf56acd520b0c80b3c9a6082e89396ddfe303affc2d2fcad042b5ad",
+      "indice": 54
+    },
+    {
+      "sha256": "6bdce11e4d74794de342089b22c4902d24c213053c27b9f488ea4569d2502ff1",
+      "indice": 44
+    },
+    {
+      "sha256": "b81bea4eeaf5b08fa7d4d88110e80f6029dcfb3c3500e21d6e7f8f052638ad3d",
+      "indice": 45
+    },
+    {
+      "sha256": "68c4329c6a6a6591412d63fd833406008e90064e469f04eb35cd2fb743f96b90",
+      "indice": 34
+    }
+  ]
+}

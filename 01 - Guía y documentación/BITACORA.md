@@ -4284,3 +4284,9 @@ ode --check.
 - `herramientas/animaciones/zzzy_guardias_tanda1_2026_11_11.json` (la anterior queda en `idleAntes`): Buu gordo [12], Buu flaco [4,5], Super Buu [2], Buu con Gohan [2], Kid Buu [4,5], Toppo [12], Kale [20,21], Kale SSJ [18,19], Caulifla [8,9], Kefla SSJ [117,118], Kefla Blue [30], Zamasu [16], Zamasu fusionado [32]. Un fotograma → `idleDu` [60].
 - `comprobar_personajes` correcto; revisadas a ojo las hojas del pack y las vistas previas. animaciones_juego.js?v=129.
 - Quedan de la lista: Bra, Baby Vegeta, Roshi, Nappa, Jeice, A21, Dyspo, Kibito, Glorio, Hatchiyack, Trunks GT, Merus, Majin Kuu, A14, A13, Bulma, Majin Duu, Gran Sacerdote, Gas, Omega, Super 17, Pan, Slug, Cui, Kibitoshin, Shin, Tenshinhan, Tao Pai Pai, Jiren (gris). Muchos son de DeviantArt y puede que solo tengan guardia de frente.
+
+### Tanda 11 de ataques extra (11 nov., continuación)
+- Josemi: «pasa a animaciones».
+- `herramientas/animaciones/zz_tanda_ataques_11_2026_11_11.json`: Kibito (attack2, attack3, kick2, beam), Gran Sacerdote (attack2, kick2, beam), Glorio (los cinco), Gohan manga (attack2, beam, up), Jiren gris (attack2, attack3, kick2, up) y Gohan poseído (los cinco). Elegidos con la hoja y el zoom de `ver_pack.py` y revisados con `previsualizar.py`. Lo que el pack no tiene claro se deja vacío (el juego usa el de siempre).
+- Exportados a `piskel_animaciones/`. Auditoría regenerada: formas jugables sin ningún ataque extra, de 63 a 57. animaciones_juego.js?v=130. `comprobar_personajes` y `comprobar_animaciones_ataques` correctos.
+- Siguiente: seguir con las 57 de `AUDITORIA_ANIMACIONES.md` (formas sueltas de DeviantArt primero: A14, Black Kaioshin, Bulma, Cui, Gomah, Hatchiyack…).

@@ -1,0 +1,122 @@
+{
+ "_nota": "Tanda 11 (11 nov. 2026, Claude): ataques extra de formas sueltas que no tenían ninguno. Elegidos con ver_pack.py (hoja y zoom); revisar con previsualizar.py.",
+ "heroes": {
+  "kibito": {
+   "0": {
+    "attack2": [
+     24,
+     25,
+     26
+    ],
+    "attack3": [
+     44,
+     45
+    ],
+    "kick2": [
+     13,
+     47
+    ],
+    "beam": [
+     65,
+     67
+    ]
+   }
+  },
+  "daishinkan": {
+   "0": {
+    "attack2": [
+     27,
+     28
+    ],
+    "kick2": [
+     44,
+     45
+    ],
+    "beam": [
+     79,
+     73
+    ]
+   }
+  },
+  "glorio": {
+   "0": {
+    "attack2": [
+     8,
+     9
+    ],
+    "attack3": [
+     13,
+     14
+    ],
+    "kick2": [
+     30,
+     31
+    ],
+    "beam": [
+     52,
+     53
+    ],
+    "up": [
+     56
+    ]
+   }
+  },
+  "gohanmanga": {
+   "0": {
+    "attack2": [
+     14,
+     15
+    ],
+    "beam": [
+     20,
+     24
+    ],
+    "up": [
+     12
+    ]
+   }
+  },
+  "jirengray": {
+   "0": {
+    "attack2": [
+     32,
+     33
+    ],
+    "attack3": [
+     53,
+     54
+    ],
+    "kick2": [
+     44,
+     45
+    ],
+    "up": [
+     34
+    ]
+   }
+  },
+  "gohanposeido": {
+   "0": {
+    "attack2": [
+     28,
+     24
+    ],
+    "attack3": [
+     49,
+     50
+    ],
+    "kick2": [
+     15,
+     16
+    ],
+    "beam": [
+     61,
+     63
+    ],
+    "up": [
+     17
+    ]
+   }
+  }
+ }
+}
