@@ -1,14 +1,10 @@
 {
- "_nota": "11 nov. 2026 (Josemi: el ki tiene que salir al lanzar, no estar pintado en la mano). Carga y lanzamiento de ki sin bola, fuego ni rayo pintados; los valores anteriores quedan en kiAntes/beamAntes/tecnica_kameAntes.",
+ "_nota": "11 nov. 2026 (Josemi: el ki tiene que salir al lanzar, no estar pintado en la mano). Carga y lanzamiento de ki sin bola, fuego ni rayo pintados; los valores anteriores quedan en kiAntes/beamAntes/antes_tecnica_kame.",
  "heroes": {
   "goku": {
    "0": {
     "tecnica_kame": [
      47,
-     37
-    ],
-    "tecnica_kameAntes": [
-     48,
      37
     ],
     "tecnica_kameOrigen": null,
@@ -18,6 +14,10 @@
     ],
     "ki": [
      34,
+     37
+    ],
+    "antes_tecnica_kame": [
+     48,
      37
     ]
    },
