@@ -4184,3 +4184,7 @@ ode --check.
 1. Josemi instala el plugin (ver abajo) y abre una sesión nueva.
 2. Rehacer el Kamehameha: el rayo hoy es un `BEAM` dibujado por código (`kame:BEAM(...)` en `script.js`; las poses salen de `beam`/`tecnica_kame` en las selecciones). Con el skill de pixelfx: buscar efectos de rayo (`node tools/list.mjs beam`, `node tools/list.mjs kamehameha`), renderizar, elegir y llevarlo a `herramientas/efectos_pixelfx/efectos.js` (bola que crece en las manos, rayo con núcleo blanco y borde azul, impacto). Regenerar `efectos_pixelfx.js` como dice su LEEME. Probar con Goku, Gohan, Goten, Krilin y Cell.
 3. Seguir las guardias de la lista de arriba y las 63 formas sin ataques extra.
+
+### Petición final de la sesión
+- Josemi: «no quiero que todos los ataques sean así de genéricos; quiero variedad basándose en los años de la serie, para que el juego tenga gracia». Que lo pendiente quede escrito para la siguiente sesión (sin copiar y pegar prompts) y que esa sesión instale PixelFX.
+- Hecho: bloque «SIGUIENTE SESIÓN» al principio de `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` con los cinco pasos (PixelFX, Kamehameha, ataques por época, guardias, animaciones).
