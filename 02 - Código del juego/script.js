@@ -8577,6 +8577,10 @@ function buildCards(){const box=$('#chars');box.innerHTML='';cardTimers.forEach(
 
       if(!own){openGacha();return}
 
+      // doble toque (o doble clic) sobre el mismo guerrero: a jugar directamente
+      const now=performance.now();if(rosterAnim.lastTap&&rosterAnim.lastTap.id===id&&now-rosterAnim.lastTap.t<450){rosterAnim.lastTap=null;const bp=$('#rPlayForm');if(bp)bp.click();return}
+      rosterAnim.lastTap={id,t:now};
+
       const s=loadSave();s.sel=id;
 
       const f=(s.selForm&&s.selForm[id]!==undefined)?s.selForm[id]:0;
@@ -8873,7 +8877,7 @@ function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildC
 
   rosterPreview(companion());
 
-  $('#rInfo').innerHTML=`Tienes <b>${all.filter(k=>s.owned[k]).length}</b> de <b>${all.length}</b>. Toca uno tuyo para seleccionarlo o cambiar su forma; pulsa JUGAR para saltar directo a la batalla.`}
+  $('#rInfo').innerHTML=`Tienes <b>${all.filter(k=>s.owned[k]).length}</b> de <b>${all.length}</b>. Toca uno para elegirlo (tócalo dos veces para jugar ya). Con ◀ ▶ cambias de forma.`}
 
 const SHOP=[
   {n:'1 TICKET',d:'Un deseo a Shenron',c:120,t:1,ic:'capsulacorp'},
