@@ -4115,3 +4115,14 @@ ode --check.
 - Hecho: motor común, correcciones de 24 selecciones de forma, 27 secuencias por técnica, emisión alineada y vuelta validada de Piskel. Pruebas específicas y navegador correctos. Cachés y hojas temporales apartadas del cambio.
 - A medias: la revisión manual exhaustiva de todo el catálogo, especialmente las técnicas que todavía usan una pose de reserva. No se afirma que todas las formas estén revisadas a ojo. La suite Python general se interrumpió durante el recálculo de cachés, después de confirmar su fallo de línea base previo.
 - Siguiente paso: revisar las técnicas de reserva por personaje y transformación visibles, aprovechando las secuencias `tecnica_ID`; no volver a generar tandas genéricas ni contar variantes ocultas como mejoras del plantel.
+
+## 2026-11-11 — Claude Opus 5.5 (sesión de mejora general)
+
+### Lo que pidió el usuario
+- Josemi: animar con Piskel todos los personajes de los sprites de las carpetas (algunos ya los animó Codex).
+- Mejorar mucho la interfaz y la accesibilidad: que todo sea fácil de tocar y de mirar. Analizar el juego para que sea divertido, fácil de jugar y «guau».
+- Buscar y arreglar fallos. Quitar personajes repetidos o mal hechos (por Antigravity o Codex).
+- En la selección de personaje, al bajar el ratón para pulsar el botón, pasa por encima de otro personaje y se selecciona ese: arreglarlo.
+- Quitar cosas muy repetidas en los personajes (ataques/combos repetidos) y buscar ese tipo de fallos.
+
+### Lo que hice
