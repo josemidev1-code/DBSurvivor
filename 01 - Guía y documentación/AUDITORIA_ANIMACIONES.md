@@ -6,8 +6,8 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6246** (20 %).
-- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **76**. Sin ninguno: **42**.
+- En los packs usados hay 30590 imágenes y el juego usa **6273** (20 %).
+- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **76**. Sin ninguno: **36**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
 Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no cuenta porque reutiliza el cuerpo del vuelo.
@@ -29,14 +29,8 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | freezer | 6 | 443 | 127 | 5 |
 | gomah | 1 | 38 | 18 | 5 |
 | kibitoshin | 1 | 22 | 15 | 5 |
-| majinkuu | 1 | 50 | 14 | 5 |
 | merus | 1 | 48 | 15 | 5 |
-| metalcooler | 1 | 56 | 14 | 5 |
 | nuova | 1 | 14 | 13 | 5 |
-| omega | 1 | 56 | 14 | 5 |
-| reycold | 1 | 59 | 15 | 5 |
-| shin | 1 | 51 | 15 | 5 |
-| super17 | 1 | 51 | 15 | 5 |
 | tarble | 1 | 31 | 15 | 5 |
 | trunksgt | 1 | 39 | 14 | 5 |
 | vegetabroly | 1 | 101 | 18 | 5 |
@@ -51,7 +45,10 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | janemba | 1 | 72 | 20 | 3 |
 | jiren | 3 | 295 | 61 | 3 |
 | kale | 2 | 100 | 45 | 3 |
+| metalcooler | 1 | 56 | 17 | 3 |
 | moro | 1 | 52 | 20 | 3 |
+| reycold | 1 | 59 | 17 | 3 |
+| shin | 1 | 51 | 19 | 3 |
 | taopaipai | 1 | 78 | 18 | 3 |
 | vegeta | 5 | 421 | 127 | 3 |
 | a17 | 1 | 41 | 20 | 2 |
@@ -67,6 +64,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | piccolo | 2 | 179 | 46 | 2 |
 | raditz | 2 | 92 | 48 | 2 |
 | roshi | 1 | 82 | 19 | 2 |
+| super17 | 1 | 51 | 20 | 2 |
 | trunks | 3 | 312 | 69 | 2 |
 | trunksarmor | 1 | 74 | 17 | 2 |
 | vegetaxeno | 1 | 185 | 21 | 2 |
@@ -94,7 +92,9 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | kibito | 1 | 85 | 25 | 1 |
 | krilin | 1 | 81 | 22 | 1 |
 | majinduu | 1 | 79 | 20 | 1 |
+| majinkuu | 1 | 50 | 22 | 1 |
 | nappa | 1 | 104 | 27 | 1 |
+| omega | 1 | 56 | 19 | 1 |
 | saibaman | 1 | 46 | 22 | 1 |
 | vegetayardrat | 1 | 90 | 19 | 1 |
 | vegettofalso | 1 | 124 | 22 | 1 |

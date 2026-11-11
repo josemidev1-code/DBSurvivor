@@ -1,0 +1,83 @@
+{
+  "heroe": "shin",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/437_SUPREMO KAIOSHIN (ErickFl)",
+  "frames": [
+    {
+      "sha256": "4e1102391d413db5a60dbc3b4b18ccb75db58df549f6718704e4eb71060f2690",
+      "indice": 1
+    },
+    {
+      "sha256": "d4de47a59ef83a668d3d735d4b325d8afc2e3874d44bf4002addc1c55408e7f0",
+      "indice": 10
+    },
+    {
+      "sha256": "949ea8134a793457da2791be7debbea149efa3ac055afe06badf29fe43b4109d",
+      "indice": 4
+    },
+    {
+      "sha256": "ec17767ce8a7be56119381c1f6d2c976856ae5f908ec56742449b9391671971f",
+      "indice": 11
+    },
+    {
+      "sha256": "debfd7a566f3b4f39b45ceb7d28f8d7783b6f816a51d453dbe9010384665192b",
+      "indice": 12
+    },
+    {
+      "sha256": "1e6356941de4373f3511cf1ef727ace6edfaf01ea0008a9b05c5de6118f77219",
+      "indice": 14
+    },
+    {
+      "sha256": "f069b4aab58a384cc0c423fe082320fcc401574351dc87ca28d346155e0d7a11",
+      "indice": 18
+    },
+    {
+      "sha256": "c8a48941cf591611c3357f1d442b388bb7db501e956c146f3779e48d65c03b9e",
+      "indice": 21
+    },
+    {
+      "sha256": "e06a93874eecb4c44794a975748b3ca6ce97c73227f97b14e7f4ad328423e453",
+      "indice": 39
+    },
+    {
+      "sha256": "6ea896e17c983ffa346e9d5546b1a4292456250532cfc38059c4c99374902f28",
+      "indice": 41
+    },
+    {
+      "sha256": "244ea6debcb04623a18ed887778e6889750087362bd866dd2c6ef1f67d9204e5",
+      "indice": 36
+    },
+    {
+      "sha256": "91b6fea622663a17ebe7c7c7e9f1e325149d6c77538089142236112eb06c142d",
+      "indice": 37
+    },
+    {
+      "sha256": "0ae6fee0877574fd0c4213e106d0c790e9a57573c3464faf4ba9629849d7557f",
+      "indice": 23
+    },
+    {
+      "sha256": "5a4141476ebce50da7e1122612f41fde25d1aa66c81d4ceb89dc3dc227001670",
+      "indice": 24
+    },
+    {
+      "sha256": "2303bf6dd93935f2389bcdbaa15b28d75b8030679577f807f00cd950d089438a",
+      "indice": 25
+    },
+    {
+      "sha256": "b4564af8fa6d5a4be73e686a447be83384128913d6688ed9368e85475d0833bd",
+      "indice": 28
+    },
+    {
+      "sha256": "2e03522cd18a5ae0c78a0a1d1995ef372870e0377dcf0cd62149128cbbda3119",
+      "indice": 29
+    },
+    {
+      "sha256": "8aca931d3db7b1982b88b1ff30d36eaf58869cc310038dd182ebc913eb66a59f",
+      "indice": 38
+    },
+    {
+      "sha256": "056f99a836fba845367d49ef7980d0c7b3ccb6ce0a60dbc96e6ffda38d5e2228",
+      "indice": 40
+    }
+  ]
+}
