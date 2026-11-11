@@ -4210,3 +4210,8 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Si a Josemi le gusta: Galick Gun (morado), Final Flash (amarillo), Masenko (amarillo, ahora es `big`) y Makankosappo (espiral) con el mismo sistema (`PFX_RAYO` y una variante del efecto por técnica).
+
+### Valoración de Josemi y retoque (11 nov.)
+- Le gusta el Kamehameha nuevo. Krilin lo lanzaba «con las manos hacia afuera» (fotograma 56, brazos abiertos a los lados): el disparo pasa al 38 (mano abierta empujando hacia el rayo) en `zzzy_kame_manos_2026_11_11.json`, también para `ki`. animaciones_juego.js?v=128.
+- Josemi arreglará más adelante con ChatGPT las manos de los personajes cuyo pack no tenga una pose buena de Kamehameha.
+- `previsualizar.py krilin 0` falla (IndexError en `CLAVES` con animaciones nuevas); comprobado en partida.
