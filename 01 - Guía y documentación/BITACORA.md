@@ -4278,3 +4278,9 @@ ode --check.
 - Muertes (`kill`): enemigos normales → `spawn/poof` (nube con estrellas; tope de 8 a la vez); élite → explosión de plasma naranja; jefes → `explosions/big-explosion` (fogonazo y hongo de humo). `PFX.muerte`.
 - Llegada de un jefe (`spawnBoss`): `lightning/thunderclap` (relámpago que cae con onda y polvo). `PFX.llegada`.
 - Probado en partida con Freezer y Saibaman. Al morir el jefe la partida se pausa para la recompensa: la explosión grande sigue al cerrarla. efectos_pixelfx.js?v=9, script.js?v=190.
+
+### Guardias de lado, tanda 1 (11 nov., continuación)
+- Josemi eligió «guardias y animaciones».
+- `herramientas/animaciones/zzzy_guardias_tanda1_2026_11_11.json` (la anterior queda en `idleAntes`): Buu gordo [12], Buu flaco [4,5], Super Buu [2], Buu con Gohan [2], Kid Buu [4,5], Toppo [12], Kale [20,21], Kale SSJ [18,19], Caulifla [8,9], Kefla SSJ [117,118], Kefla Blue [30], Zamasu [16], Zamasu fusionado [32]. Un fotograma → `idleDu` [60].
+- `comprobar_personajes` correcto; revisadas a ojo las hojas del pack y las vistas previas. animaciones_juego.js?v=129.
+- Quedan de la lista: Bra, Baby Vegeta, Roshi, Nappa, Jeice, A21, Dyspo, Kibito, Glorio, Hatchiyack, Trunks GT, Merus, Majin Kuu, A14, A13, Bulma, Majin Duu, Gran Sacerdote, Gas, Omega, Super 17, Pan, Slug, Cui, Kibitoshin, Shin, Tenshinhan, Tao Pai Pai, Jiren (gris). Muchos son de DeviantArt y puede que solo tengan guardia de frente.

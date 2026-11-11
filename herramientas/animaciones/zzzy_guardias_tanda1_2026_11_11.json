@@ -1,0 +1,185 @@
+{
+ "_nota": "11 nov. 2026 (Claude, tanda 1): guardias de pelea de lado o de tres cuartos en lugar de poses de frente (Buu, Toppo, Kale, Caulifla, Kefla, Zamasu). La anterior queda en idleAntes.",
+ "heroes": {
+  "buu": {
+   "0": {
+    "idle": [
+     12
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     1,
+     2
+    ]
+   },
+   "1": {
+    "idle": [
+     4,
+     5
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     0,
+     2
+    ]
+   },
+   "2": {
+    "idle": [
+     2
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   },
+   "3": {
+    "idle": [
+     2
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   },
+   "4": {
+    "idle": [
+     4,
+     5
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     3,
+     4
+    ]
+   }
+  },
+  "toppo": {
+   "0": {
+    "idle": [
+     12
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     0,
+     3
+    ]
+   }
+  },
+  "kale": {
+   "0": {
+    "idle": [
+     20,
+     21
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   },
+   "1": {
+    "idle": [
+     18,
+     19
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     0,
+     23
+    ]
+   }
+  },
+  "caulifla": {
+   "0": {
+    "idle": [
+     8,
+     9
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   }
+  },
+  "kefla": {
+   "0": {
+    "idle": [
+     117,
+     118
+    ],
+    "idleDu": [
+     26,
+     26
+    ],
+    "idleAntes": [
+     28,
+     29
+    ]
+   },
+   "1": {
+    "idle": [
+     30
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     15,
+     16
+    ]
+   }
+  },
+  "zamasu": {
+   "0": {
+    "idle": [
+     16
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   },
+   "1": {
+    "idle": [
+     32
+    ],
+    "idleDu": [
+     60
+    ],
+    "idleAntes": [
+     18,
+     19
+    ]
+   }
+  }
+ }
+}
