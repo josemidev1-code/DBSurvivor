@@ -33,3 +33,6 @@ $RECYCLE.BIN/
 herramientas/pixelfx/
 herramientas/efectos_pixelfx/node_modules/
 herramientas/efectos_pixelfx/package*.json
+
+# Hojas y propuestas temporales de proponer_ki_limpio.py (se regeneran)
+herramientas/_revisar/ki_*

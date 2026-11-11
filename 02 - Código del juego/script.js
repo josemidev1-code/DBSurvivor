@@ -6790,7 +6790,13 @@ function heroHand(i,left,pose){const pk=scHero(S.hid,P.form);if(!pk)return null;
     for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(d[(y*W+x)*4+3]>40){if(y<y0)y0=y;if(y>y1)y1=y}
 
     if((pose||P.cast?.pose||P.atkPose)==='up')anchors[handKey]=[W/2,y0+2];
-    else if(i===0)anchors[handKey]=[W/2+W*0.12,H-(H-y0)*0.42];
+    // carga: las manos están donde el brazo llega más lejos a la altura de los brazos, delante o detrás del tronco
+    // (en el Kamehameha están juntas detrás, a la altura de la cadera); la bola de ki se dibuja ahí
+    else if(i===0){const ya=y0+(y1-y0)*0.25|0,yb=y0+(y1-y0)*0.72|0,tc=[];let fx=-1,bx=W;
+      for(let y=ya;y<=yb;y++)for(let x=0;x<W;x++)if(d[(y*W+x)*4+3]>40){if(x>fx)fx=x;if(x<bx)bx=x;if(y>y0+(y1-y0)*0.35&&y<y0+(y1-y0)*0.6)tc.push(x)}
+      tc.sort((p,q)=>p-q);const cx=tc.length?tc[tc.length>>1]:W/2,atras=cx-bx>(fx-cx)*1.15,hx=atras?bx:fx;let sy=0,n=0;
+      for(let y=ya;y<=yb;y++)for(let x=Math.max(0,hx-1);x<=Math.min(W-1,hx+1);x++)if(d[(y*W+x)*4+3]>40){sy+=y;n++}
+      anchors[handKey]=fx<0?[W/2+W*0.12,H-(H-y0)*0.42]:[hx+(atras?2:-2),n?sy/n:(ya+yb)/2]}
 
     else{const ya=y0+(y1-y0)*0.25|0,yb=y0+(y1-y0)*0.7|0;let bx=-1,sy=0,n=0;
 

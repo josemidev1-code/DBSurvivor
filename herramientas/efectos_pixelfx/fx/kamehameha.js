@@ -67,7 +67,7 @@ function orb(p, x, y, r, C, ph) {
     if (lv === 5 && bayer(x + dx, y + dy) > (1.25 - q) / 0.15) continue;
     p.px(x + dx, y + dy, LV[lv]);
   }
-  p.glow(x, y, r * 2.4 + 5, C[3], 0.55);
+  p.glow(x, y, r * 1.6 + 3, C[3], 0.4);
   p.glow(x, y, r + 2, WHITE, 0.35 + 0.1 * Math.sin(ph * TAU * 6));
 }
 
@@ -94,7 +94,8 @@ export function draw(p, t, o) {
   if (t < CH) {
     const k = ease.outCubic(clamp(t / CH));
     // la bola cabe entre las manos: no debe tapar al personaje
-    const r = 1.5 + k * Math.min(7, hw * 0.55) + 0.4 * Math.sin(t * 40) * k;
+    // 11 nov. (Josemi: que se vea la pose): bola más pequeña, anillos más cerca y menos brillo sobre el cuerpo
+    const r = 1.5 + k * Math.min(5, hw * 0.4) + 0.4 * Math.sin(t * 40) * k;
     // chispas que entran en espiral hacia las manos
     cycle(t, 0.5, 14, S * 5 + 1, (g) => g.range(0.22, 0.4), (age, life, rr) => {
       const q = age / life, a = rr.range(0, TAU) + q * 2.2, d = (r + 4) + (1 - ease.inQuad(q)) * rr.range(14, 26);
@@ -103,7 +104,7 @@ export function draw(p, t, o) {
     });
     // dos anillos que se cierran sobre la bola
     for (let i = 0; i < 2; i++) {
-      const q = fract(t / 0.42 + i / 2), rad = r + 2 + (1 - ease.outQuad(q)) * 12;
+      const q = fract(t / 0.42 + i / 2), rad = r + 1 + (1 - ease.outQuad(q)) * 8;
       p.ring(HX, HY, rad, 1, q > 0.7 ? WHITE : C[3], 0.35 + 0.5 * q);
     }
     orb(p, HX, HY, r, C, t);
