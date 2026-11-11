@@ -4,20 +4,25 @@
   "goku": {
    "0": {
     "tecnica_kame": [
-     47,
+     48,
      37
     ],
-    "tecnica_kameOrigen": null,
+    "tecnica_kameOrigen": [
+     [
+      0.8,
+      0.6
+     ],
+     [
+      0.92,
+      0.45
+     ]
+    ],
     "kiAntes": [
      35,
      37
     ],
     "ki": [
      34,
-     37
-    ],
-    "antes_tecnica_kame": [
-     48,
      37
     ]
    },
