@@ -1,0 +1,91 @@
+{
+  "heroe": "pangt",
+  "forma": "0",
+  "pack": "02_GT/DeviantArt/448_PAN GT (Saribs)",
+  "frames": [
+    {
+      "sha256": "0cbdfea5e636b545773c36109158d1ddf37baf9d33438f085152c9af5d6e5975",
+      "indice": 0
+    },
+    {
+      "sha256": "3a0b0f660e767be352b110c29cc0484fb399b1ad6f9b494ac6bcdf32e283d9f8",
+      "indice": 1
+    },
+    {
+      "sha256": "8dab1a9a3fc36db498e60b98da396efd2b74c1e4af526cc051b1b10fbb6634aa",
+      "indice": 4
+    },
+    {
+      "sha256": "80acd80819487a351cc5229fee688598409713bf96f57fea9fabfaa9a9d4729e",
+      "indice": 16
+    },
+    {
+      "sha256": "11b291a96abde9118cc9f784fc8d636cd46083268f9de96bc318b3a9c35de886",
+      "indice": 17
+    },
+    {
+      "sha256": "5839660acf51ba4f14facf69118797c67e0542388829e3027b1d0bdaba8158c1",
+      "indice": 21
+    },
+    {
+      "sha256": "b79a7a76a0b79a295b0fdac70c9f1afe845d92824d2d4ef0a8b4972bbadae302",
+      "indice": 32
+    },
+    {
+      "sha256": "45d9a449443c1bcf090814f4419c315721436995c837e179b273d9d5509c2931",
+      "indice": 33
+    },
+    {
+      "sha256": "c3d2c01e6d0c1a16d09bef4086706ee4fb6bcbfe70574bf9b9d9c9eda014fc38",
+      "indice": 49
+    },
+    {
+      "sha256": "898638a333370afdc74f53424c6bbd562412feac6653645cd5b1d0d63da98b73",
+      "indice": 51
+    },
+    {
+      "sha256": "584204ba65b8c0525f47684bc69ae7dc2735d976d0391378ba41fce57bef4c32",
+      "indice": 46
+    },
+    {
+      "sha256": "00162f3d817bcf39b4951dc33e584eaefbf4ea28b9f62b957f4954359bc8bd91",
+      "indice": 47
+    },
+    {
+      "sha256": "80121ccfa1100e834b82cd62018a4690a1020b1f3a4540173bcd2afff39f6b9a",
+      "indice": 6
+    },
+    {
+      "sha256": "0544dc1760da95d9b64db234ae1da3b607d5edabe815244f2b66dc231926e316",
+      "indice": 7
+    },
+    {
+      "sha256": "dec6103ec6b0c47753bec551cf06b694404c14566113df5baf464452e7e0cf3d",
+      "indice": 8
+    },
+    {
+      "sha256": "9e91acd5737123cc3fe6d9a9c96e5e0705d91de69f05f5f9cf0384dd438ca7c6",
+      "indice": 22
+    },
+    {
+      "sha256": "69b59286c29d2ce31900fdcea49fafcd8b68628f259b44dd55042d47a9418c3f",
+      "indice": 23
+    },
+    {
+      "sha256": "8dfb7073ef32408a58ef4105dd2492ddaa1420559e847232c4e0a0e95461ccf3",
+      "indice": 37
+    },
+    {
+      "sha256": "aaf6dbd209046832fdcf0182a35715f819ebaa2f87f82290513c4f7802cef5cf",
+      "indice": 38
+    },
+    {
+      "sha256": "8941554381f0c9d7be5491f62bc660f6e0c97d8b1167313b8301f088eb677a5c",
+      "indice": 68
+    },
+    {
+      "sha256": "04ff99c44b1f8c73a0711e900ec454851aa52cf75e385330537cd2ca9097c5c1",
+      "indice": 75
+    }
+  ]
+}

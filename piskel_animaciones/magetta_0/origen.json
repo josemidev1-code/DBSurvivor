@@ -1,0 +1,99 @@
+{
+  "heroe": "magetta",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/02_Universo_6/DeviantArt/458_MAGETTA (AlquimistaSK)",
+  "frames": [
+    {
+      "sha256": "b9f62a53bc4e78c3b8b7d880c63b00b0cbfedb6117b04b73022208574a1b3900",
+      "indice": 0
+    },
+    {
+      "sha256": "894b8ad5fa6cc87a49acb41d437f0f350e70f215b23a5b9e63fdfc6f5a93980b",
+      "indice": 1
+    },
+    {
+      "sha256": "e31351407e2f7aafbe020265849da68b9208a89d1052bc4339f19261187c1368",
+      "indice": 4
+    },
+    {
+      "sha256": "c981b2cb16716b55525031d44ca2a50baa93e9b4786fe443b2083979a688014b",
+      "indice": 69
+    },
+    {
+      "sha256": "ce6ac7f4dc9307c0a3e703ad14fa65e11d7d562a8013b5586160e43c9f88a759",
+      "indice": 70
+    },
+    {
+      "sha256": "127e018b0dc3eb328db2c6f24c72ddc396fa565d0bbe76112102f7a9af38ea44",
+      "indice": 71
+    },
+    {
+      "sha256": "5b11976e10a12e97573b01dd1f0d53f739cd78a785a0cf76309563be21664f0a",
+      "indice": 82
+    },
+    {
+      "sha256": "123d7c048a063e6b8734107416011ca1d05a931e486eaecb8798db07ddcbffdf",
+      "indice": 83
+    },
+    {
+      "sha256": "ebd90d5cd5cb1e18556498aba40dc44597afb5f15fc286f562be9d0412a708ad",
+      "indice": 75
+    },
+    {
+      "sha256": "21bbb1bf384f19c4f0e6ca9d5478f94fc9188896cba0142013124e2ad050ad5c",
+      "indice": 77
+    },
+    {
+      "sha256": "d9c29ad8bf811708ea994dc897855c267b8783e45b964366cfdf5592c6c829ad",
+      "indice": 12
+    },
+    {
+      "sha256": "d6c8ec8201e61854a93c2759724a3c0a0b5f5a0dbcef0a1e3846242d3b93da37",
+      "indice": 13
+    },
+    {
+      "sha256": "a65490b15384c23822f8d72c34c3817663bb0c369718cb0d5025481a3519fc38",
+      "indice": 67
+    },
+    {
+      "sha256": "aa664fdd3eb6c17930ee2844c237807f04692fa22e38f7bd0bcebf64b11220d7",
+      "indice": 68
+    },
+    {
+      "sha256": "9a920b5fc815816ac11dedd25be051ea574adfdb1ef620c88602e0e7aa95acd6",
+      "indice": 58
+    },
+    {
+      "sha256": "9a920b5fc815816ac11dedd25be051ea574adfdb1ef620c88602e0e7aa95acd6",
+      "indice": 59
+    },
+    {
+      "sha256": "6bb7e45136fad0bd9708f5f0f5c0d68feecbf1596bac76350e2bdf1bb6823dc9",
+      "indice": 33
+    },
+    {
+      "sha256": "fc704762437ceeb59253d14c81a8fadfc2a511d8342bea6c229068287192cc15",
+      "indice": 35
+    },
+    {
+      "sha256": "62f3514352057b68ea99e3a1293b4ffd036b00a8d0a1dbc1495de7b0db922562",
+      "indice": 3
+    },
+    {
+      "sha256": "e31351407e2f7aafbe020265849da68b9208a89d1052bc4339f19261187c1368",
+      "indice": 4
+    },
+    {
+      "sha256": "f59ec805a6af6673e04a85cea1ac9c48b41b8929c837b2cc3c9e54fddf86f17f",
+      "indice": 46
+    },
+    {
+      "sha256": "e61e65ad99793ff039dac18a603f136e64fd0125266b7281ae76b16ca1df807c",
+      "indice": 47
+    },
+    {
+      "sha256": "05316e1e42f8fbcf02fd56aeb770b6e1f0075aceac268583eee839ec524abaf7",
+      "indice": 20
+    }
+  ]
+}

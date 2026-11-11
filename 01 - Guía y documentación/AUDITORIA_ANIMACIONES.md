@@ -6,8 +6,8 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6179** (20 %).
-- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **73**. Sin ninguno: **53**.
+- En los packs usados hay 30590 imágenes y el juego usa **6217** (20 %).
+- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **75**. Sin ninguno: **47**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
 Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no cuenta porque reutiliza el cuerpo del vuelo.
@@ -29,23 +29,17 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | freezer | 6 | 443 | 127 | 5 |
 | gomah | 1 | 38 | 18 | 5 |
 | kibitoshin | 1 | 22 | 15 | 5 |
-| magetta | 1 | 84 | 14 | 5 |
-| majinduu | 1 | 79 | 15 | 5 |
 | majinkuu | 1 | 50 | 14 | 5 |
 | merus | 1 | 48 | 15 | 5 |
 | metalcooler | 1 | 56 | 14 | 5 |
 | nuova | 1 | 14 | 13 | 5 |
 | omega | 1 | 56 | 14 | 5 |
-| pangt | 1 | 99 | 15 | 5 |
-| paragus | 1 | 99 | 15 | 5 |
 | reycold | 1 | 59 | 15 | 5 |
 | shin | 1 | 51 | 15 | 5 |
 | super17 | 1 | 51 | 15 | 5 |
-| taopaipai | 1 | 78 | 14 | 5 |
 | tarble | 1 | 31 | 15 | 5 |
 | trunksarmor | 1 | 74 | 14 | 5 |
 | trunksgt | 1 | 39 | 14 | 5 |
-| vegetabluemal | 1 | 89 | 14 | 5 |
 | vegetabroly | 1 | 101 | 18 | 5 |
 | vegetamui | 1 | 115 | 15 | 5 |
 | vegetayardrat | 1 | 90 | 14 | 5 |
@@ -63,6 +57,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | jiren | 3 | 295 | 61 | 3 |
 | kale | 2 | 100 | 45 | 3 |
 | moro | 1 | 52 | 20 | 3 |
+| taopaipai | 1 | 78 | 18 | 3 |
 | vegeta | 5 | 421 | 127 | 3 |
 | a17 | 1 | 41 | 20 | 2 |
 | bardock | 3 | 271 | 70 | 2 |
@@ -72,6 +67,8 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | gohanmanga | 1 | 87 | 21 | 2 |
 | gokupatrulla | 1 | 53 | 21 | 2 |
 | gokussj4daima | 1 | 281 | 21 | 2 |
+| pangt | 1 | 99 | 21 | 2 |
+| paragus | 1 | 99 | 22 | 2 |
 | piccolo | 2 | 179 | 46 | 2 |
 | raditz | 2 | 92 | 48 | 2 |
 | roshi | 1 | 82 | 19 | 2 |
@@ -100,6 +97,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | jirengray | 1 | 73 | 22 | 1 |
 | kibito | 1 | 85 | 25 | 1 |
 | krilin | 1 | 81 | 22 | 1 |
+| majinduu | 1 | 79 | 20 | 1 |
 | nappa | 1 | 104 | 27 | 1 |
 | saibaman | 1 | 46 | 22 | 1 |
 | zamasu | 2 | 168 | 47 | 1 |
@@ -121,12 +119,14 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | guldo | 1 | 103 | 28 | 0 |
 | jeice | 1 | 79 | 26 | 0 |
 | kefla | 2 | 253 | 52 | 0 |
+| magetta | 1 | 84 | 22 | 0 |
 | mrsatan | 1 | 371 | 31 | 0 |
 | slug | 1 | 46 | 25 | 0 |
 | tenshinhan | 1 | 77 | 25 | 0 |
 | toppo | 1 | 77 | 26 | 0 |
 | turles | 2 | 166 | 51 | 0 |
 | uub | 1 | 93 | 28 | 0 |
+| vegetabluemal | 1 | 89 | 22 | 0 |
 | vegettofan | 4 | 691 | 98 | 0 |
 | videl | 1 | 83 | 24 | 0 |
 | yamcha | 1 | 79 | 22 | 0 |

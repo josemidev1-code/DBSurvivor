@@ -4294,3 +4294,7 @@ ode --check.
 ### Tanda 12 de ataques extra (11 nov., continuación)
 - `zz_tanda_ataques_12_2026_11_11.json`: A14 (attack2, attack3, kick2, up), Black Kaioshin (attack2, attack3, beam), Cui (attack2, kick2, beam, up) y Hatchiyack (attack2, attack3, beam, up). Bulma (16 fotogramas) y Rey Gomah (38) no tienen material suficiente y se dejan.
 - Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=131.
+
+### Tanda 13 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_13_2026_11_11.json`: Magetta (los cinco; solo fotogramas de la escala grande, el pack mezcla dos), Majin Duu (attack2, attack3, kick2, up), Pan GT (attack2, kick2, beam), Paragus (attack2, attack3, beam), Tao Pai Pai (attack2, kick2) y Vegeta Blue maligno (los cinco).
+- Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=132.
