@@ -1,6 +1,6 @@
 # Estado actual — AnimeSurvivor
 
-**11 nov. 2026 (Kamehameha con PixelFX):** el Kamehameha y sus variantes usan el efecto propio `herramientas/efectos_pixelfx/fx/kamehameha.js` (carga, rayo estable e impacto). Aprobado por Josemi. Transformación con pixelfx al estilo de la serie (`fx/transformacion.js`), sin aura permanente. Galick Gun, Final Flash, Masenko (ahora rayo) y Makankosappo con su estilo propio; el resto de rayos del jugador, el Kienzan y el Taiyoken, también con pixelfx. Pendiente de que Josemi lo valore. Ver la bitácora.
+**11 nov. 2026 (Kamehameha con PixelFX):** el Kamehameha y sus variantes usan el efecto propio `herramientas/efectos_pixelfx/fx/kamehameha.js` (carga, rayo estable e impacto). Aprobado por Josemi. Transformación con pixelfx al estilo de la serie (`fx/transformacion.js`), sin aura permanente. Galick Gun, Final Flash, Masenko (ahora rayo) y Makankosappo con su estilo propio; el resto de rayos del jugador, el Kienzan, el Taiyoken y los impactos cuerpo a cuerpo (golpe final con parada corta), también con pixelfx. Pendiente de que Josemi lo valore. Ver la bitácora.
 
 
 

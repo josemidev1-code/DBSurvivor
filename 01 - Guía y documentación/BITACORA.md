@@ -4250,3 +4250,10 @@ ode --check.
 - `fx/taiyoken.js` (una vez, propio): destello en estrella de 12 rayos, anillo blanco y luz que se apaga en 0,7 s. Sale en `fireSig`, rama `nova`, para el Taiyoken (`PFX.nova` con tipo `taiyoken`).
 - Probado en partida: Kienzan (Krilin), Taiyoken y Kikoho (Tenshinhan). efectos_pixelfx.js?v=5, script.js?v=186.
 - Ojo para pruebas: la casilla de cada técnica no siempre es su posición en `SIGS` (Krilin tiene el Kienzan en la 2). La prueba busca la casilla mirando qué temporizador se pone en marcha.
+
+### Golpes cuerpo a cuerpo con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «golpes cuerpo a cuerpo».
+- Cada golpe del combo que toca saca ahora un impacto a la altura del cuerpo del enemigo (antes, cada dos golpes y en los pies): alterna `impacts/blunt-hit` (golpe sordo con polvo) y `impacts/hit-spark`.
+- `fx/golpe.js` (propio): golpe final de combo al estilo anime (líneas de choque radiales, estrella blanca con un rayo largo hacia delante, anillo que se rompe, chispas; 0,35 s). En el último golpe hay además una parada de impacto de 0,05 s (`S.freeze`) y sacudida de cámara 3. El Puño del Dragón añade `crit-hit`.
+- `PFX.hit(x,y,dir,tipo)` con tipo `normal`, `final` o `dragon` (acepta aún `true` = dragon). efectos_pixelfx.js?v=6, script.js?v=187. `comprobar_combate` bien.
+- Probado en partida con Goku (puñetazos). El Puño del Dragón no se pudo lanzar en la prueba automática (no encontró su casilla).

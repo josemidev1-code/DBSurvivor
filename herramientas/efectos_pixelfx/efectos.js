@@ -7,16 +7,18 @@ import * as aura from "./fx/aura.js";
 import * as trans from "./fx/transformacion.js";
 import * as kienzan from "./fx/kienzan.js";
 import * as taiyo from "./fx/taiyoken.js";
+import * as golpe from "./fx/golpe.js";
+import * as blunt from "pixelfx/fx/impacts/blunt-hit";
 import * as plasma from "pixelfx/fx/explosions/plasma-explosion";
 import * as implosion from "pixelfx/fx/explosions/implosion";
 import * as mana from "pixelfx/fx/arcane/mana-burst";
 import * as spark from "pixelfx/fx/impacts/hit-spark";
 import * as crit from "pixelfx/fx/impacts/crit-hit";
 
-const LIB = { plasma, implosion, mana, spark, crit, trans, taiyo };
+const LIB = { plasma, implosion, mana, spark, crit, trans, taiyo, golpe, blunt };
 // tope de efectos vivos por tipo: en plena horda no se acumulan cientos
-const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2, taiyo: 2 };
-const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3, taiyo: 0.75 };
+const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2, taiyo: 2, golpe: 4, blunt: 8 };
+const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3, taiyo: 0.75, golpe: 0.4, blunt: 0.7 };
 
 // rampa oscuro→claro a partir de los colores de la técnica del juego (que ya van de oscuro a claro)
 const hexN = (h) => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map((c) => c + c).join(""); return parseInt(h, 16); };
@@ -122,7 +124,12 @@ window.PFX = {
   // técnicas de área alrededor del personaje
   nova(x, y, rad, cols, tipo) { if (tipo === "taiyoken") return !!spawn("taiyo", x, y - 10, {}); return !!spawn(tipo === "hakai" ? "implosion" : tipo === "final" ? "plasma" : "mana", x, y, { cols: tipo === "hakai" ? null : cols }); },
   // golpe cuerpo a cuerpo: chispa en cada golpe, golpe crítico en el último del combo
-  hit(x, y, dir, last) { return !!spawn(last ? "crit" : "spark", x, y, { flip: dir < 0 }); },
+  // golpe cuerpo a cuerpo: tipo "normal" (golpe sordo o chispa, alternando), "final" (último del combo) o "dragon"
+  hit(x, y, dir, tipo) {
+    if (tipo === true) tipo = "dragon";
+    if (tipo === "final" || tipo === "dragon") { const a = !!spawn("golpe", x, y, { flip: dir < 0 }); if (tipo === "dragon") spawn("crit", x, y, { flip: dir < 0 }); return a; }
+    return !!spawn((seed & 1) ? "blunt" : "spark", x, y, { flip: dir < 0 });
+  },
   // aura de la forma, detrás del personaje: (x, y) son los pies en pantalla; k, la escala del dibujo
   aura(ctx, x, y, kind, time, rayos, k = 1) {
     const A = auraFrames(kind, rayos), im = A.out[Math.floor(time * A.fps) % A.out.length];

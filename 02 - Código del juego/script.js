@@ -3192,8 +3192,10 @@ function sigUpdate(dt,ps){
 
       for(let i=0;i<5;i++)parts.push({x:hx+C.d*rnd(4,12),y:hy-rnd(4,16),vx:C.d*rnd(20,70),vy:rnd(-40,10),t:0.22,c:C.col[i%2],s:2});
 
-      // El destello va sobre el enemigo y no en cada golpe, para que se vea la animación del personaje.
-      if(tocado&&window.PFX&&(last||C.i%2===0))PFX.hit(impX,impY,C.d,last&&!!C.dragon);
+      // Impacto de pixelfx a la altura del cuerpo del enemigo: golpe sordo o chispa en cada golpe que toca y, en el último,
+      // impacto de anime con una parada muy corta y sacudida (el Puño del Dragón añade el golpe crítico).
+      if(tocado&&window.PFX)PFX.hit(impX,impY-12,C.d,last?(C.dragon?'dragon':'final'):'normal');
+      if(tocado&&last){S.freeze=Math.max(S.freeze||0,0.05);cam.shake=Math.max(cam.shake||0,3)}
 
       if(C.dragon&&last){fxRg.push({x:hx,y:hy-6,t:0,dur:0.5,rad:C.rad*1.6,col:C.col});cam.shake=Math.max(cam.shake||0,6)}
 
