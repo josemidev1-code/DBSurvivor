@@ -4188,3 +4188,25 @@ ode --check.
 ### Petición final de la sesión
 - Josemi: «no quiero que todos los ataques sean así de genéricos; quiero variedad basándose en los años de la serie, para que el juego tenga gracia». Que lo pendiente quede escrito para la siguiente sesión (sin copiar y pegar prompts) y que esa sesión instale PixelFX.
 - Hecho: bloque «SIGUIENTE SESIÓN» al principio de `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` con los cinco pasos (PixelFX, Kamehameha, ataques por época, guardias, animaciones).
+
+## 2026-11-11 — Claude Opus 5.5 (Kamehameha con PixelFX)
+
+### Lo que pidió el usuario
+- Josemi: descargar el repositorio de GitHub del otro Claude y seguir desde ahí. Clonado en `Escritorio\DBSURVIVOR\DBSurvivor` (rama `claude/nice-darwin-y7t5jp`).
+- Con `/pixelfx`: rehacer el Kamehameha para que quede bonito (bola azul que crece en las manos, rayo de núcleo blanco y borde azul que no parpadee ni cambie de forma, explosión al impactar), que salga de las manos, que el juego siga abriéndose con doble clic; probar con Goku, Gohan, Goten, Krilin y Cell y mandar GIFs. Cuando le guste: Galick Gun, Final Flash, Masenko y Makankosappo.
+
+### Lo que hice
+- Plugin PixelFX instalado y funcionando (skill `pixelfx:pixelfx`). Copia del repositorio en `herramientas/pixelfx/` (en `.gitignore`).
+- Mirados `arcane/arcane-beam`, `arcane/spell-charge` y `explosions/plasma-explosion` en azul. El rayo de arcane-beam era la mejor base; la carga y la explosión de la librería eran demasiado mágicas (anillos, violeta).
+- Efecto nuevo `herramientas/efectos_pixelfx/fx/kamehameha.js`: carga (bola que crece entre las manos con chispas y anillos que se cierran), rayo estable (bandas de blanco a azul, borde tramado, pulsos de brillo, ondulación de medio píxel como mucho) y explosión en la punta (destello, dos anillos, chispas y vapor). Pasa `check.mjs`.
+- Puente: `PFX.beam(b)` y `PFX.drawBeam(ctx,b,x,y)` en `efectos.js`; un lienzo por rayo del largo del rayo, girado con el ángulo del disparo (a la izquierda se refleja). La explosión sigue en la punta cuando el juego ya ha quitado el rayo. Lo usan las técnicas con `kame` en el id (`PFX_RAYO` en `script.js`); si `efectos_pixelfx.js` no carga, sale el rayo de antes.
+- El origen ya seguía la mano (`heroHand`) en carga y disparo; comprobado en partida. Bola de carga y fogonazo limitados a 7 px de radio para no tapar al personaje.
+- Probado en Chrome sin ventana con Goku, Gohan, Goten, Krilin y Cell (GIFs en `herramientas/pixelfx/gifs/`, fuera del repositorio). efectos_pixelfx.js?v=2, script.js?v=182.
+- Comprobaciones: `animaciones_ataques`, `catalogo_sprites`, `combate`, `personajes` y `roles` bien. `enemigos`, `formas`, `objetos` y `rotacion` fallan igual sin estos cambios (ya fallaban).
+
+### A medias / problemas
+- Falta que Josemi valore el Kamehameha. No se ha probado con doble clic (`file://`) desde aquí; el paquete sigue siendo un solo archivo sin fetch.
+- La librería pasa de pixelfx `a841596` a 0.3.1: las explosiones y golpes que ya se usaban pueden verse algo distintas.
+
+### Siguiente paso recomendado
+- Si a Josemi le gusta: Galick Gun (morado), Final Flash (amarillo), Masenko (amarillo, ahora es `big`) y Makankosappo (espiral) con el mismo sistema (`PFX_RAYO` y una variante del efecto por técnica).

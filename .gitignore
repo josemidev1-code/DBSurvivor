@@ -28,3 +28,8 @@ $RECYCLE.BIN/
 .superpowers/
 .playwright-mcp/
 .env
+
+# Copia local de pixelfx (se clona con git clone https://github.com/patch-gg/pixelfx)
+herramientas/pixelfx/
+herramientas/efectos_pixelfx/node_modules/
+herramientas/efectos_pixelfx/package*.json

@@ -4316,7 +4316,9 @@ function fire(id,m,st,ps){
 
      const ch=st.charge||0.25,dur=st.dur*(ev?1.3:1);
 
-     beams.push({x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id});
+     {const bm={x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id};
+     // Kamehameha y sus variantes: carga, rayo e impacto de pixelfx (efectos_pixelfx.js); si no carga, el rayo de siempre
+     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id))bm.pfx=PFX.beam(bm);beams.push(bm)}
 
      P.cast={a,t:ch+dur,pose:attackPose(W),id};sfx('charge');setTimeout(()=>sfx('beam'),ch*1000);break}
 
@@ -6867,7 +6869,9 @@ function heroTilt(left,mx,my){return 0;// Josemi, 4 nov.: al girar el tronco se 
 
   return 0}
 
+const PFX_RAYO=/kame/;
 function drawBeam(b){
+  if(b.pfx&&window.PFX&&PFX.drawBeam(ctx,b,b.x-cam.x,b.y-cam.y))return;
 
   const ox=Math.round(b.x-cam.x),oy=Math.round(b.y-cam.y),t=b.t;
 
