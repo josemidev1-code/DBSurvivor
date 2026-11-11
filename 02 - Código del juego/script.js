@@ -1681,7 +1681,7 @@ Object.assign(HDEF.gohanadult,{forms:['BASE','MÍSTICO','BESTIA'],aura:['white',
 
 Object.assign(HDEF.trunkscell,{forms:['BASE','SUPER SAIYAN','ULTRA SSJ'],aura:['white','gold','gold']});
 
-Object.assign(HDEF.trunks,{forms:['BASE','SUPER SAIYAN','SSJ2 MANGA'],aura:['white','gold','gold']});
+Object.assign(HDEF.trunks,{forms:['BASE','SUPER SAIYAN','BASE MANGA','SSJ2 MANGA'],aura:['white','gold','white','gold']});
 
 Object.assign(HDEF.gogeta,{forms:['SUPER GOGETA','SUPER SAIYAN 4','SSJ BLUE'],aura:['gold','red','blue']});
 
@@ -7582,11 +7582,20 @@ if(window.ANIM_SET && ANIM_SET.h){
 
     if(ah.gokuui){ah.goku[5]=ah.gokuui[3];ah.goku[6]=ah.gokuui[4]}
 
+    // 11 nov.: la señal del UI de gokuuisign tiene 14 animaciones (la anterior, 10)
+    if(ah.gokuuisign&&ah.gokuuisign[0])ah.goku[5]=ah.gokuuisign[0]
+
     if(ah.gokugt){ah.goku[7]=ah.gokugt[3]}
 
     if(ah.gokusuper){ah.goku[8]=ah.gokusuper[1];ah.goku[9]=ah.gokusuper[3]}
 
   }
+
+  // 11 nov.: Goku Yardrat en un solo personaje, con su Super Saiyan como segunda forma
+  if(ah.gokuyardrat&&ah.gokuyardratssj&&ah.gokuyardratssj[0]){ah.gokuyardrat[1]=ah.gokuyardratssj[0]}
+
+  // 11 nov.: Kyabe tenía dos «SUPER SAIYAN»; ahora BASE (pack clásico) y SUPER SAIYAN del mismo estilo
+  if(ah.kyabe&&ah.kyabeclasico&&ah.kyabeclasico[0]&&ah.kyabe[1]){ah.kyabe={0:ah.kyabeclasico[0],1:ah.kyabe[1]}}
 
   if(ah.vegeta){
 
@@ -7622,7 +7631,15 @@ if(window.ANIM_SET)for(const id in ANIM_SET.h)for(const f in ANIM_SET.h[id]){con
 
 // only hand-picked forms stay: missing forms leave the transformation chain, characters with none leave the game
 
-const DUPLICADOS_ROSTER = new Set(['gokugt','gokusuper','gokuui','vegetagt','vegetasuper','vegetaue','vegetaego','gohanadult','trunkscell']);
+const DUPLICADOS_ROSTER = new Set(['gokugt','gokusuper','gokuui','vegetagt','vegetasuper','vegetaue','vegetaego','gohanadult','trunkscell',
+  // 11 nov. (Josemi: «quédate con los mejores»): la misma forma repetida como personaje aparte, con menos animaciones que la del personaje principal.
+  // Los sprites siguen en sprites/; basta quitar el ID de aquí para recuperarlo.
+  'goku044','goku045','gokussj053','gokussjfp','gokussj2buu','gokussj3swl','gokussj3mais','gokussj4gt','gokussjkaioken2',
+  'gokuuisign','gokuuimanga','gokumuifp','gokumuimanga','gokumuigranola','gokumuigranolav2','gokumuitorneoanime',
+  'gokubluewhis','gokubluedbfz','gokubluemoro','gokuyardratssj','gokuyardratswl',
+  'vegetabaseulsw','vegetassjhd','vegetassj2hd','vegetassjwhis','vegetaexploradorhd','vegetasinarmadura',
+  'vegetablueulsw','vegetablue092','vegetabluewhis','vegetablueevo','vegetabluefp','vegetassj4gt','vegetauihd',
+  'blacklsw','blackrose290','kyabeclasico']);
 
 var FUERA=new Set(); // Roshi ya tiene sprites propios (3 nov.); antes se ocultaba aquí
 
@@ -7635,6 +7652,10 @@ for(const id in HDEF){const D=HDEF[id],A=window.ANIM_SET&&ANIM_SET.h[id];if(D.np
   if(keep.length!==D.forms.length||keep.some((f,i)=>f!==i)){for(const k of ['forms','aura','hair','hc','formPal'])if(Array.isArray(D[k]))D[k]=keep.map(f=>D[k][Math.min(f,D[k].length-1)]);
 
     const H={},R={};const B={};keep.forEach((f,i)=>{H[i]='as-'+id+'-'+f;if(PORTRAIT[id]&&PORTRAIT[id][f])R[i]=PORTRAIT[id][f];if(BUSTO[id+'/'+f])B[id+'/'+i]=1});for(const k in BUSTO)if(k.startsWith(id+'/'))delete BUSTO[k];Object.assign(BUSTO,B);SCPACK.h[id]=H;if(PORTRAIT[id])PORTRAIT[id]=R}}
+
+// 11 nov.: nombres de forma que salían repetidos al ampliar las cadenas de formas
+{const R=(id,f,n,au)=>{const D=HDEF[id];if(D&&D.forms&&D.forms.length>f){D.forms[f]=n;if(au&&Array.isArray(D.aura))D.aura[f]=au}};
+  R('gohan',4,'BESTIA');R('kyabe',0,'BASE','white');R('kyabe',1,'SUPER SAIYAN','gold');R('gokuyardrat',1,'SUPER SAIYAN','gold')}
 
 // big face of a form: that form, else the closest one of the same character
 
