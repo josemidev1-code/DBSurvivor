@@ -26,5 +26,4 @@ Después: `python herramientas/montar_animaciones.py shin` y revisión visual. S
 | **Pow** | 2 | 50x50 | [`shin_Pow.piskel`](Pow/shin_Pow.piskel) | [`shin_Pow.gif`](Pow/shin_Pow.gif) | [`shin_Pow_sheet.png`](Pow/shin_Pow_sheet.png) |
 | **Hurt** | 2 | 50x50 | [`shin_Hurt.piskel`](Hurt/shin_Hurt.piskel) | [`shin_Hurt.gif`](Hurt/shin_Hurt.gif) | [`shin_Hurt_sheet.png`](Hurt/shin_Hurt_sheet.png) |
 | **Faint** | 1 | 56x56 | [`shin_Faint.piskel`](Faint/shin_Faint.piskel) | [`shin_Faint.gif`](Faint/shin_Faint.gif) | [`shin_Faint_sheet.png`](Faint/shin_Faint_sheet.png) |
-| **Attack2** | 2 | 50x50 | [`shin_Attack2.piskel`](Attack2/shin_Attack2.piskel) | [`shin_Attack2.gif`](Attack2/shin_Attack2.gif) | [`shin_Attack2_sheet.png`](Attack2/shin_Attack2_sheet.png) |
 | **Beam** | 2 | 54x54 | [`shin_Beam.piskel`](Beam/shin_Beam.piskel) | [`shin_Beam.gif`](Beam/shin_Beam.gif) | [`shin_Beam_sheet.png`](Beam/shin_Beam_sheet.png) |

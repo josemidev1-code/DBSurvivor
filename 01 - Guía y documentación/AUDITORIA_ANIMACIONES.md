@@ -6,7 +6,7 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6273** (20 %).
+- En los packs usados hay 30590 imágenes y el juego usa **6271** (20 %).
 - Formas de personajes jugables: 225. Con los 5 ataques extra completos: **76**. Sin ninguno: **36**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
@@ -39,6 +39,8 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | gogeta | 3 | 565 | 65 | 4 |
 | gohan | 4 | 278 | 90 | 4 |
 | goku | 5 | 393 | 114 | 4 |
+| reycold | 1 | 59 | 17 | 4 |
+| shin | 1 | 51 | 17 | 4 |
 | black | 3 | 359 | 68 | 3 |
 | buu | 5 | 379 | 102 | 3 |
 | gohanfut | 1 | 123 | 22 | 3 |
@@ -47,8 +49,6 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | kale | 2 | 100 | 45 | 3 |
 | metalcooler | 1 | 56 | 17 | 3 |
 | moro | 1 | 52 | 20 | 3 |
-| reycold | 1 | 59 | 17 | 3 |
-| shin | 1 | 51 | 19 | 3 |
 | taopaipai | 1 | 78 | 18 | 3 |
 | vegeta | 5 | 421 | 127 | 3 |
 | a17 | 1 | 41 | 20 | 2 |
