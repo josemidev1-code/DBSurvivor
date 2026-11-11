@@ -7098,6 +7098,10 @@ function circ(x,y,r,col){ctx.fillStyle=col;for(let yy=-r;yy<=r;yy++){const w=Mat
 
 function ring(x,y,r,col,th=1){ctx.fillStyle=col;const n=Math.max(16,r*4|0);for(let i=0;i<n;i++){const a=i/n*TAU;ctx.fillRect(Math.round(x+Math.cos(a)*r),Math.round(y+Math.sin(a)*r),th,th)}}
 
+// clima de cada escenario: [tipo, colores de oscuro a claro, densidad]
+const CLIMA={bosque:['hojas',['#4a7a18','#8ab828','#d8c040'],1],paoz:['hojas',['#5a8a20','#a0c830','#e8c040'],0.8],pradera:['hojas',['#5a8a20','#a0c830','#e8d060'],0.5],
+  futuro:['lluvia',['#3a5a8a','#7aa8d8','#c8e4ff'],1],volcan:['ceniza',['#4a3a3a','#ff6a20','#ffd080'],1],infierno:['ceniza',['#3a1a1a','#e02a20','#ff9a6a'],1],
+  vegetasei:['ceniza',['#4a2a2a','#ff5a20','#ffc080'],0.7],lookout:['niebla',['#c8d0e0','#e8eef8','#ffffff'],1],kaioshin:['destellos',['#c8a020','#ffe060','#fff8c0'],1]};
 function render(time){
 
   const shkMult=(ACC_CFG.shake??1);
@@ -7381,6 +7385,8 @@ function render(time){
 
   {const lo=P.hp/stats().maxhp;if(lo<0.3&&state==='play'){const a=(0.3-lo)/0.3*(0.35+0.25*Math.sin(time*8));ctx.fillStyle=`rgba(200,20,30,${a.toFixed(3)})`;ctx.fillRect(0,0,VW,4);ctx.fillRect(0,VH-4,VW,4);ctx.fillRect(0,0,4,VH);ctx.fillRect(VW-4,0,4,VH);ctx.fillStyle=`rgba(200,20,30,${(a*0.5).toFixed(3)})`;ctx.fillRect(4,4,VW-8,3);ctx.fillRect(4,VH-7,VW-8,3);ctx.fillRect(4,4,3,VH-8);ctx.fillRect(VW-7,4,3,VH-8)}}
 
+  // clima del escenario con pixelfx (efectos_pixelfx.js), encima del mundo y debajo del HUD
+  {const c=CLIMA[MAPK];if(c&&window.PFX&&PFX.clima)PFX.clima(ctx,c[0],c[1],cam.x,cam.y,time,VW,VH,c[2]||1)}
   // destello de pantalla suave: antes llegaba a un blanco casi opaco (0,8) al transformarse o con la Genkidama
 
   if(S.flash>0){const fMax=ACC_CFG.photosens?0.08:0.35;ctx.fillStyle=`rgba(255,255,230,${Math.min(fMax,S.flash*0.7)})`;ctx.fillRect(0,0,VW,VH)}

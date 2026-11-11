@@ -4265,3 +4265,9 @@ ode --check.
 - Subida de nivel: `ui/level-up` de pixelfx con el texto «NIVEL n» (la fuente no tiene ¡ ni acentos). Se lanza en `gainXP` si sube el nivel (`PFX.nivel`); se ve al cerrar la ventana de mejoras porque la partida está en pausa.
 - Las gemas de experiencia siguen igual (son demasiadas para un efecto cada una).
 - Probado en partida con Goku. efectos_pixelfx.js?v=7, script.js?v=188.
+
+### Escenarios y clima con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «escenarios y clima».
+- Los climas de pixelfx (`weather/*`) traen su propio cielo y suelo vistos de lado, así que no valen para la vista cenital. Hecho `fx/clima.js` (propio): capa transparente de 320×180 que se repite sin costuras, con tipo `lluvia` (gotas y salpicaduras), `hojas`, `ceniza` (brasas que suben), `niebla` y `destellos`.
+- `CLIMA` en `script.js` (antes de `render`): bosque, Monte Paoz y praderas → hojas; Futuro de Trunks → lluvia; tierra volcánica, infierno y Planeta Vegeta → ceniza; Templo de Kami → niebla; Mundo Kaioshin → destellos. Se dibuja encima del mundo y debajo del HUD, pegado al mundo (se mueve con la cámara), con `PFX.clima`; se repinta a 30 fps como mucho.
+- Probado en partida en los siete escenarios. efectos_pixelfx.js?v=8, script.js?v=189.

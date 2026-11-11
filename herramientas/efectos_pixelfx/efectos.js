@@ -12,6 +12,7 @@ import * as blunt from "pixelfx/fx/impacts/blunt-hit";
 import * as columna from "./fx/columna_esfera.js";
 import * as collect from "pixelfx/fx/pickups/collect-burst";
 import * as lvl from "pixelfx/fx/ui/level-up";
+import * as clima from "./fx/clima.js";
 import * as plasma from "pixelfx/fx/explosions/plasma-explosion";
 import * as implosion from "pixelfx/fx/explosions/implosion";
 import * as mana from "pixelfx/fx/arcane/mana-burst";
@@ -38,7 +39,7 @@ function ramp(cols) {
   return [mixHex(c[0], "#000000", 0.3), ...c, "#ffffff"];
 }
 
-let live = [], seed = 1, rayos = [];
+let live = [], seed = 1, rayos = [], climaEstado = null;
 
 // ---- aura de cada forma: los fotogramas del bucle se pintan una vez por color y se guardan
 // (los mismos colores que las llamas de antes del juego, auraFlames en script.js)
@@ -159,6 +160,25 @@ window.PFX = {
   recoger(x, y, kind) { return !!spawn("collect", x, y, { cols: RECOGER_COL[kind] || RECOGER_COL.otro }); },
   // subida de nivel alrededor del personaje
   nivel(x, y, n) { return !!spawn("lvl", x, y, { text: "NIVEL " + n }); },
+  // clima del escenario: capa en mosaico pegada al mundo (se mueve con la cámara); se repinta a 30 fps como mucho
+  clima(ctx, tipo, cols, camX, camY, time, vw, vh, densidad = 1) {
+    const [w, h] = clima.meta.size, key = tipo + (cols || []).join() + densidad;
+    let c = climaEstado;
+    if (!c || c.key !== key) {
+      const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+      c = climaEstado = { key, cv, g: cv.getContext("2d"), frame: createFrame(w, h), img: new ImageData(w, h), f: -1, o: { ...clima.meta.options, tipo, densidad, seed: 9, ...(cols ? { palette: cols } : {}) } };
+    }
+    const f = Math.floor(time * 30);
+    if (f !== c.f) {
+      c.f = f; clearFrame(c.frame);
+      const p = painterFor(c.frame); p.place(0, 0, false, 0); p.fade = 1; p.lightK = 1;
+      clima.draw(p, time % clima.meta.duration, c.o);
+      composite(c.frame, c.img.data, null); c.g.putImageData(c.img, 0, 0);
+    }
+    const ox = -(((Math.round(camX) % w) + w) % w), oy = -(((Math.round(camY) % h) + h) % h);
+    for (let y = oy; y < vh; y += h) for (let x = ox; x < vw; x += w) ctx.drawImage(c.cv, x, y);
+    return true;
+  },
   // Taiyoken: destello cegador en la cara
   taiyoken(x, y) { return !!spawn("taiyo", x, y, {}); },
   // estallido al transformarse, en los pies del personaje, con el color del aura de la nueva forma
