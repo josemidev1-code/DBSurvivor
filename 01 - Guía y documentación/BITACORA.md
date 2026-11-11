@@ -4307,3 +4307,10 @@ ode --check.
 ### Tanda 15 de ataques extra (11 nov., continuación)
 - `zz_tanda_ataques_15_2026_11_11.json`: Metal Cooler (attack2, beam), Omega Shenron (attack2, attack3, beam, up), Rey Cold (beam), Supremo Kaioshin (beam), Super 17 (attack2, beam, up) y Majin Kuu (attack2, attack3, kick2, beam). Packs pequeños de DeviantArt: lo dudoso se dejó fuera.
 - Revisados con `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=134.
+
+## 2026-11-11 — Claude (sesión ki y rayos coherentes con la pose)
+
+### Lo que pidió el usuario
+- (18:00) «Vamos a seguir con las animaciones […] he encontrado muchos errores. Todos los personajes quiero que tengan animaciones buenas. Por ejemplo, Roshi tiene un ki en la mano y tira ki. Eso no es coherente: lo coherente es que haga la animación de tirar el ki y de ahí ya le salga la bola. Revisa todo eso bien, haz las animaciones bien, los Kamehameha bien también, y vamos a hacerlo todo.» Da permiso para todo; se trabaja desde GitHub (rama `claude/nice-darwin-y7t5jp`) porque en el PC nuevo la carpeta es `Escritorio\DBSURVIVOR` y no estaba conectada.
+
+### Lo que hice
