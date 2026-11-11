@@ -4155,10 +4155,10 @@ ode --check.
 - Josemi ya tiene el juego en local: «sigue con las animaciones».
 
 ### Lo que hice
-- Tanda 10 ampliada: Bra Majin, Vegeta Xeno, Vegeta Xeno SSJ4, Androide 13, Dyspo y Gohan del Futuro (además de Goku SSJ4 Daima y Goku UI verdadero). Revisadas con `previsualizar.py`; descartados fotogramas de otra escala (Bra mezcla dos resoluciones), de espaldas (rayo de Dyspo) o dudosos (puño de Gohan del Futuro). Exportadas a Piskel. Formas visibles sin ataques extra: 62.
+- Tanda 10 ampliada: Bra Majin, Vegeta Xeno, Vegeta Xeno SSJ4, Androide 13, Dyspo y Gohan del Futuro (además de Goku SSJ4 Daima y Goku UI verdadero). Revisadas con `previsualizar.py`; descartados fotogramas de otra escala (Bra mezcla dos resoluciones), de espaldas (rayo de Dyspo) o dudosos (puño de Gohan del Futuro). Exportadas a Piskel. Formas visibles sin ataques extra: 63.
 - Josemi vio a Goku con «el brazo transparente». No es fallo del motor: el pack de Goku SSJ2 (`055_Goku SSJ 2`) trae fotogramas con el brazo como estela pálida sin contorno (#20 en el combo normal, #41 en el tercero). Quitados en `zzzy_sin_estelas_2026_11_11.json`, junto al tercer combo de Trunks base (rayas y píxeles sueltos). Revisados a ojo los golpes de Goku, Vegeta, Gohan y Trunks; los demás personajes no.
 - animaciones_juego.js?v=126.
 
 ### Siguiente paso recomendado
 - Que Josemi diga en qué otros personajes ve brazos o golpes raros; `golpes.py` (en el scratchpad de la sesión, fácil de rehacer) saca una hoja con todos los golpes de un personaje.
-- Seguir la tanda con las 62 formas restantes de `AUDITORIA_ANIMACIONES.md`.
+- Seguir la tanda con las 63 formas restantes de `AUDITORIA_ANIMACIONES.md`.
