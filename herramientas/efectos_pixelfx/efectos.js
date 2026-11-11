@@ -66,7 +66,7 @@ function nuevoRayo(b) {
   const e = {
     b, t: 0, ox: ML, oy: h / 2, cv, g: cv.getContext("2d"), frame: createFrame(w, h), img: new ImageData(w, h),
     end: b.T + b.dur + kame.BURST, wx: b.x, wy: b.y, a: b.a,
-    o: { ...kame.meta.options, hx: 0, hy: 0, len: b.len, wid: b.wid, charge: b.T, fire: b.dur, seed: seed++, ...(r ? { palette: r } : {}) },
+    o: { ...kame.meta.options, hx: 0, hy: 0, len: b.len, wid: b.wid, charge: b.T, fire: b.dur, estilo: b.estilo || "kame", seed: seed++, ...(r ? { palette: r } : {}) },
   };
   rayos.push(e);
   return e;

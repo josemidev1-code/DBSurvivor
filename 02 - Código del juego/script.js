@@ -2327,9 +2327,10 @@ const MV={
 
    ds:['ESPECIAL: rayo en espiral que lo atraviesa todo.','+Daño','+Alcance','+Daño','+Daño y menos recarga']},
 
- masenko:{name:'Masenko',kind:'big',col:['#d08a10','#ffcc33','#ffffff'],evo:'Masenko Supremo',req:'power',
+ masenko:{name:'Masenko',kind:'beam',col:['#d08a10','#ffcc33','#ffffff'],evo:'Masenko Supremo',req:'power',
 
-   st:l=>({cd:2.4-l*0.15,dmg:22+l*8,rad:22+l*3,spd:130}),
+   // rayo como en la serie (antes bola grande); recarga algo mayor que la bola para compensar
+   st:l=>({cd:3.2-l*0.2,dmg:24+l*9,len:200+l*15,wid:11+l*1.5,dur:0.55+l*0.05,charge:0.4}),
 
    ds:['Bola de energía que explota al impactar.','+Daño','+Radio de explosión','+Daño','+Daño y cadencia']},
 
@@ -4318,7 +4319,7 @@ function fire(id,m,st,ps){
 
      {const bm={x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id};
      // Kamehameha y sus variantes: carga, rayo e impacto de pixelfx (efectos_pixelfx.js); si no carga, el rayo de siempre
-     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id))bm.pfx=PFX.beam(bm);beams.push(bm)}
+     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)){bm.estilo=PFX_ESTILO[id]||'kame';bm.pfx=PFX.beam(bm)}beams.push(bm)}
 
      P.cast={a,t:ch+dur,pose:attackPose(W),id};sfx('charge');setTimeout(()=>sfx('beam'),ch*1000);break}
 
@@ -5075,7 +5076,7 @@ function checkForm(){const lv=FORM_LV.filter(l=>P.lvl>=l).length-1,f=Math.min(HE
 
   S.banner={t:2.6,text:HEROES[S.hid].forms[f]+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.6;P.powT=1.6;cam.shake=8;sfx('trans');
 
-  burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8']);if(window.PFX&&PFX.transform)PFX.transform(P.x,P.y,heroAura(S.hid,f))}}
+  if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,heroAura(S.hid,f));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}}
 
 
 
@@ -6869,7 +6870,8 @@ function heroTilt(left,mx,my){return 0;// Josemi, 4 nov.: al girar el tronco se 
 
   return 0}
 
-const PFX_RAYO=/kame/;
+// rayos de pixelfx: Kamehameha y variantes, Galick Gun, Final Flash, Masenko y Makankosappo, cada uno con su estilo
+const PFX_RAYO=/kame|galick|finalflash|masenko|makanko/,PFX_ESTILO={galick:'galick',finalflash:'flash',masenko:'masenko',makanko:'espiral'};
 function drawBeam(b){
   if(b.pfx&&window.PFX&&PFX.drawBeam(ctx,b,b.x-cam.x,b.y-cam.y))return;
 
@@ -7139,8 +7141,8 @@ function render(time){
 
       if(P.form>0){const fl=auraFlames(heroAura(S.hid,P.form)),f=(time*14|0)%3;
 
-        // aura de pixelfx (efectos_pixelfx.js); k=2 deshace el ctx.scale(0.5) del personaje: un píxel del efecto = un píxel de pantalla
-        if(!(window.PFX&&PFX.aura&&PFX.aura(ctx,x,y+2,heroAura(S.hid,P.form),time,0,2))){ctx.globalAlpha=0.8;ctx.drawImage(fl[f],Math.round(x-fl[f].width/2),Math.round(y-fl[f].height+3));ctx.globalAlpha=1}
+        // sin aura permanente alrededor del personaje (Josemi, 11 nov.: «no dejes esa cosa que le envuelve»); el aura solo sale
+        // al transformarse (PFX.transform). Para recuperarla: PFX.aura(ctx,x,y+2,heroAura(S.hid,P.form),time,0,2) o las llamas fl[f]
 
         if(P.form>=2&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 

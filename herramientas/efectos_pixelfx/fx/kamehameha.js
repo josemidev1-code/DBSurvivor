@@ -10,6 +10,10 @@
 // El origen (0, 0) son las manos; el rayo apunta a la derecha. El juego gira el lienzo con el ángulo del disparo.
 import { fit, ease, fract, clamp, cycle, fly, Rng, TAU, WHITE, READY } from "pixelfx";
 
+// estilo: "kame" (Kamehameha), "galick" (chispas eléctricas en los bordes), "flash" (Final Flash: cabeza y
+// explosión más grandes, rayos en la carga), "masenko" y "espiral" (Makankosappo: núcleo fino y dos espirales).
+const hash = (a) => fract(Math.sin(a * 127.1 + 311.7) * 43758.5453);
+
 const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) / 16);
 const bayer = (x, y) => BAYER[((Math.floor(y) & 3) << 2) | (Math.floor(x) & 3)];
 
@@ -31,7 +35,7 @@ export const meta = {
   bg: "ground",
   actor: 2,
   // hx, hy: dónde están las manos respecto a los pies (en el juego son 0, 0 porque el lienzo se pone en la mano)
-  options: { palette: KAME, seed: 7, len: 240, wid: 16, charge: 0.75, fire: 1.0, hx: 15, hy: -24 },
+  options: { palette: KAME, seed: 7, len: 240, wid: 16, charge: 0.75, fire: 1.0, hx: 15, hy: -24, estilo: "kame", espiral: ["#5a1a90", "#a050ff", "#e8c8ff"] },
 };
 
 // Para la vista previa de pixelfx: manos atrás mientras carga, empuje hacia delante al disparar.
@@ -67,9 +71,23 @@ function orb(p, x, y, r, C, ph) {
   p.glow(x, y, r + 2, WHITE, 0.35 + 0.1 * Math.sin(ph * TAU * 6));
 }
 
+// arcos eléctricos cortos alrededor de un punto (carga del Galick Gun)
+function arcs(p, x0, y0, r, k, S, C) {
+  for (let i = 0; i < 3; i++) {
+    const a = hash(k * 5 + i * 17 + S) * TAU;
+    let x = x0 + Math.cos(a) * r, y = y0 + Math.sin(a) * r;
+    for (let j = 0; j < 4; j++) {
+      const nx = x + Math.cos(a) * 2 + (hash(k + i * 3 + j) - 0.5) * 4, ny = y + Math.sin(a) * 2 + (hash(k * 7 + j + i) - 0.5) * 4;
+      p.line(x, y, nx, ny, j % 2 ? C[4] : WHITE);
+      x = nx; y = ny;
+    }
+  }
+}
+
 export function draw(p, t, o) {
   const C = fit(o.palette, 6), S = o.seed | 0, HX = o.hx, HY = o.hy;
-  const CH = o.charge, FI = o.fire, hw = Math.max(3, o.wid / 2), L = o.len;
+  const CH = o.charge, FI = o.fire, L = o.len;
+  let hw = Math.max(3, o.wid / 2);
   const u = t - CH, te = t - CH - FI;
 
   // ---- carga
@@ -89,6 +107,12 @@ export function draw(p, t, o) {
       p.ring(HX, HY, rad, 1, q > 0.7 ? WHITE : C[3], 0.35 + 0.5 * q);
     }
     orb(p, HX, HY, r, C, t);
+    if (o.estilo === "flash" || o.estilo === "masenko") {
+      // destello en estrella que crece con la carga
+      const L = r * (o.estilo === "flash" ? 3 : 2.2) * (0.85 + 0.15 * Math.sin(t * 50));
+      for (let i = 0; i < 4; i++) { const a = (i * TAU) / 4 + TAU / 8; p.line(HX, HY, HX + Math.cos(a) * L, HY + Math.sin(a) * L, (v) => (v < 0.5 ? WHITE : C[3]), (v) => 1 - v); }
+    }
+    if (o.estilo === "galick") arcs(p, HX, HY, r + 3, Math.floor(t * 15), S, C);
     return;
   }
 
@@ -96,7 +120,7 @@ export function draw(p, t, o) {
   if (u < FI) {
     const ext = ease.outQuart(clamp(u / EXT));
     const sh = 1 - ease.inQuad(clamp((u - (FI - SHRINK)) / SHRINK));
-    const Lc = L * ext, w0 = hw * sh;
+    const esp = o.estilo === "espiral", Lc = L * ext, w0 = (esp ? Math.max(1.5, hw * 0.45) : hw) * sh;
     const LV = [WHITE, C[5], C[4], C[3], C[2], C[1]];
     for (let d = 0; d <= Lc; d += 0.5) {
       const x = HX + d;
@@ -119,10 +143,33 @@ export function draw(p, t, o) {
       const y = HY + side * (w0 + 1 + q * rr.range(4, 10));
       if (x < HX + Lc) p.dot(x, y, q < 0.5 ? WHITE : C[4], 1 - q);
     });
+    if (esp) {
+      // dos espirales que se enroscan alrededor del núcleo; la de delante, más clara
+      const SP = fit(o.espiral, 3), R2 = hw + 2;
+      for (let d = 2; d <= Lc; d += 1) {
+        for (let s2 = 0; s2 < 2; s2++) {
+          const a = d * 0.22 - u * 28 + s2 * Math.PI, off = Math.sin(a) * R2 * sh, front = Math.cos(a) > 0;
+          p.rect(HX + d, HY + off - 1, 1, 2, front ? (Math.cos(a) > 0.7 ? WHITE : SP[2]) : SP[1]);
+        }
+      }
+    }
+    if (o.estilo === "galick") {
+      // chispas eléctricas que saltan por los bordes del rayo
+      const k = Math.floor(u * 15);
+      for (let i = 0; i < 5; i++) {
+        const d0 = hash(k * 7 + i * 13 + S) * Math.max(8, Lc - 20) + 10, side = hash(k + i * 3) < 0.5 ? -1 : 1;
+        let x = HX + d0, y = HY + side * (w0 + 1);
+        for (let j = 0; j < 5; j++) {
+          const nx = x + 2 + hash(k * 3 + i * 5 + j) * 3, ny = HY + side * (w0 + 1 + hash(k * 11 + i + j * 7) * 5);
+          p.line(x, y, nx, ny, j % 2 ? C[4] : WHITE);
+          x = nx; y = ny;
+        }
+      }
+    }
     // fogonazo en las manos
     orb(p, HX, HY, Math.min(7, w0 * 0.6) + 0.4 * Math.sin(u * 50), C, u);
     // la cabeza del rayo: más ancha, con rayos hacia atrás y anillos
-    const EX = HX + Lc, hr = w0 * 1.3;
+    const EX = HX + Lc, hr = esp ? w0 * 1.6 + 1 : w0 * (o.estilo === "flash" ? 1.6 : 1.3);
     for (let i = 0; i < 6; i++) {
       const a = Math.PI + (i - 2.5) * 0.42, l = hr + 4 + 4 * fract(Math.sin((i + 1) * 12.9 + Math.floor(u * 15)) * 43758);
       p.line(EX, HY, EX + Math.cos(a) * l, HY + Math.sin(a) * l, (v) => (v < 0.45 ? WHITE : C[4]), (v) => (v < 0.6 ? 1 : 1.6 - v));
@@ -139,6 +186,8 @@ export function draw(p, t, o) {
   // ---- explosión en la punta
   if (te < BURST) {
     const EX = HX + L, q = te / BURST, R = new Rng(S * 31 + 9);
+    if (o.estilo === "flash") hw = hw * 1.35;
+    if (o.estilo === "espiral") hw = Math.max(5, hw * 0.8);
     // destello blanco que se encoge
     if (te < 0.16) orb(p, EX, HY, hw * 1.6 * (1 - te / 0.16) + 3, C, te);
     // dos anillos de choque

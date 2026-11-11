@@ -4233,3 +4233,12 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Técnicas con PixelFX: Galick Gun, Final Flash, Masenko y Makankosappo.
+
+### Transformación rehecha y técnicas (11 nov., continuación)
+- Josemi: le gusta la transformación, pero lo que queda envolviendo al personaje al final «queda feo»; replicar mejor la serie y, después de transformarse, quitar el aura.
+- `fx/transformacion.js` rehecho como en la serie: durante la carga tiembla el suelo, flotan piedras, el aura chisporrotea y crece a tirones y saltan relámpagos; en el estallido, destello, llamarada enorme del aura hacia arriba, dos anillos de choque, relámpagos y piedras despedidas; la llamarada se encoge hasta desaparecer (no queda nada).
+- Quitada el aura permanente alrededor del personaje (la nueva de pixelfx y las llamas antiguas). `fx/aura.js` y `PFX.aura` se quedan por si se quieren recuperar (comentario en el dibujo del jugador). Siguen las chispas eléctricas de las formas 2+ y el aura roja del Kaioken.
+- Rayos con estilo en `fx/kamehameha.js` (opción `estilo`): Galick Gun (morado, chispas eléctricas en los bordes y en la carga), Final Flash (amarillo, carga con destello en estrella, cabeza y explosión más grandes), Masenko (amarillo, destello en estrella) y Makankosappo (núcleo fino y dos espirales moradas). `PFX_RAYO`/`PFX_ESTILO` en `script.js`.
+- El Masenko pasa de bola grande (`big`) a rayo, como en la serie: recarga 3,2 s (antes 2,4), daño 24+9/nivel, largo 200+15, grosor 11+1,5, carga 0,4 s. Josemi puede pedir que vuelva a ser bola.
+- Probado en partida: Galick Gun (Vegeta), Final Flash (Vegeta Blue manga), Masenko (Gohan), Makankosappo (Piccolo), transformación de Goku y Vegeta. efectos_pixelfx.js?v=4, script.js?v=185.
+- `comprobar_formas.cjs` busca el final de `checkForm` por su texto: la llamada a `PFX.transform` va antes de `burst(...)` y usa `typeof PFX` para que la prueba siga funcionando (sigue fallando como antes por el deseo).

@@ -1,20 +1,21 @@
 // Transformación (una vez) para DBSurvivor, hecha con pixelfx (github.com/patch-gg/pixelfx, MIT).
-//   0 .. CARGA     la energía se concentra: briznas que entran en espiral, el suelo vibra, un núcleo en el pecho
-//   CARGA          estallido: destello, columna de luz, onda de choque en el suelo, rayos y piedras que saltan
-//   después        llamarada que se apaga, chispas que suben y polvo que se posa
+// Como en la serie:
+//   0 .. CARGA   el suelo tiembla, las piedras flotan hacia arriba, el aura chisporrotea y crece a tirones,
+//                relámpagos cortos alrededor del cuerpo
+//   CARGA        estallido: destello blanco, llamarada enorme del aura hacia arriba, anillos de choque en el suelo,
+//                relámpagos y las piedras salen despedidas
+//   después      la llamarada se encoge hasta desaparecer: al final no queda nada alrededor del personaje
 // El origen (0, 0) son los pies. CARGA coincide con la congelación del juego (S.freeze = 0.6 s).
-import { fit, clamp, cycle, fly, ease, hex, Rng, TAU, WHITE } from "pixelfx";
+import { fit, clamp, fract, ease, hex, loopNoise, Rng, TAU, WHITE } from "pixelfx";
 
-const PIEDRA = hex("#8a7a62"), PIEDRA2 = hex("#5a4a3a"), POLVO = hex("#d8c8a8");
-
-const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) / 16);
-const bayer = (x, y) => BAYER[((Math.floor(y) & 3) << 2) | (Math.floor(x) & 3)];
+const PIEDRA = hex("#8a7a62"), PIEDRA2 = hex("#5a4a3a"), POLVO = hex("#d8c8a8"), RAYO = hex("#bfe6ff");
+const hash = (a) => fract(Math.sin(a * 127.1 + 311.7) * 43758.5453);
 export const CARGA = 0.6;
-const D = 1.9;
+const D = 1.6;
 
 export const meta = {
   name: "Transformación",
-  desc: "Transformación de Dragon Ball: la energía se concentra, estalla en una columna de luz con onda de choque y piedras, y se apaga.",
+  desc: "Transformación de Dragon Ball: tiembla el suelo y flotan las piedras, el aura estalla en una llamarada con relámpagos y anillos de choque, y se apaga del todo.",
   tags: ["ki", "aura", "power", "transformation", "burst", "dragon ball"],
   size: [200, 170],
   origin: [100, 136],
@@ -26,88 +27,92 @@ export const meta = {
   options: { palette: ["#a06008", "#e8a010", "#ffd23f", "#fff6a8", "#ffffff"], seed: 5, alto: 40 },
 };
 
-export function draw(p, t, o) {
-  const C = fit(o.palette, 5), S = o.seed | 0, AH = o.alto, CY = -AH * 0.55;
-  if (t < CARGA) {
-    const k = t / CARGA;
-    // briznas que entran en espiral hacia el pecho
-    cycle(t, 0.35, 16, S * 3 + 1, (g) => g.range(0.2, 0.32), (age, life, r) => {
-      const q = age / life, a = r.range(0, TAU) + q * 1.8, d = 10 + (1 - ease.inQuad(q)) * r.range(26, 44);
-      const x = Math.cos(a) * d, y = CY + Math.sin(a) * d * 0.75;
-      p.line(x, y, x + Math.cos(a) * 4, y + Math.sin(a) * 3, q > 0.6 ? WHITE : C[3], 0.5 + 0.5 * q);
-    });
-    // núcleo que crece en el pecho
-    const r = 1 + k * 5;
-    p.circle(0, CY, r + 1, C[3]);
-    p.circle(0, CY, r, WHITE);
-    p.glow(0, CY, 10 + k * 20, C[2], 0.4 + 0.5 * k);
-    // el suelo tiembla: polvo a los pies
-    for (let i = 0; i < 6; i++) {
-      const sx = ((i * 37 + S) % 30) - 15 + Math.sin(t * 60 + i) * 1.5;
-      p.dot(sx, -((i * 5 + Math.floor(t * 30)) % 3), C[1], 0.5);
+// llamarada de aura con forma de llama (óvalo con puntas que suben), borde de tres tonos y el interior vacío
+function llamarada(p, C, s, ph, S, AH, alpha) {
+  if (s < 0.05) return;
+  const RX = 17 * s, RY = AH * 0.62 * s, CY = -RY * 0.75;
+  for (let x = -RX; x <= RX; x += 0.5) {
+    const k = x / RX;
+    if (Math.abs(k) >= 1) continue;
+    const n = loopNoise(ph, 2, S * 13 + Math.round(x / (2.5 * Math.max(0.6, s)))) * 0.5 + 0.5;
+    const tongue = (1 - Math.abs(k)) * (6 + n * 22) * s * (0.6 + 0.4 * Math.sin(x * 0.7 + ph * TAU * 3));
+    const yTop = CY - RY * Math.sqrt(1 - k * k) - tongue, yBot = Math.min(1.5, CY + RY * Math.sqrt(1 - k * k));
+    for (let y = yTop; y <= yBot; y += 0.5) {
+      const v = (y - CY) / RY, hw = v * v >= 1 ? 0 : RX * Math.sqrt(1 - v * v);
+      const d = Math.min(y - yTop, y < CY - RY * 0.2 ? 99 : hw - Math.abs(x), yBot - y + 2.5);
+      if (d < 1) p.dot(x, y, C[1], alpha);
+      else if (d < 2) p.dot(x, y, C[2], alpha);
+      else if (d < 3.2) p.dot(x, y, C[3], alpha * 0.85);
+      else if (d < 5) p.dot(x, y, C[4], alpha * 0.25);
     }
+  }
+  p.glow(0, CY, RY * 1.4, C[2], 0.5 * alpha);
+}
+
+// relámpago en zigzag de (x0, y0) hacia un lado
+function relampago(p, x0, y0, dir, len, k) {
+  let x = x0, y = y0;
+  for (let j = 0; j < len; j++) {
+    const nx = x + dir * (2 + hash(k + j * 3) * 3), ny = y + (hash(k * 7 + j) - 0.5) * 7;
+    p.line(x, y, nx, ny, j % 2 ? RAYO : WHITE);
+    x = nx; y = ny;
+  }
+}
+
+export function draw(p, t, o) {
+  const C = fit(o.palette, 5), S = o.seed | 0, AH = o.alto, CY = -AH * 0.5, R = new Rng(S * 17 + 3);
+  // piedras: flotan durante la carga y salen despedidas en el estallido
+  for (let i = 0; i < 14; i++) {
+    const x0 = (hash(S + i) - 0.5) * 70, s = 1 + hash(S + i * 3) * 2, up = 4 + hash(S + i * 5) * 18, d0 = hash(S + i * 7) * 0.25;
+    let x, y;
+    if (t < CARGA) {
+      const q = clamp((t - d0) / (CARGA - d0));
+      if (q <= 0) continue;
+      x = x0 + Math.sin(t * 40 + i) * 0.6; y = -ease.outCubic(q) * up;
+    } else {
+      const u = t - CARGA, vx = Math.sign(x0 || 1) * (60 + hash(i * 11) * 90), vy = -60 - hash(i * 13) * 80;
+      x = x0 + vx * u; y = -up + vy * u + 260 * u * u;
+      if (y > 1) continue;
+    }
+    p.rect(x - s / 2, y - s / 2, s, s, i % 3 ? PIEDRA : PIEDRA2);
+  }
+
+  if (t < CARGA) {
+    const k = t / CARGA, f = Math.floor(t * 15);
+    // el aura chisporrotea y crece a tirones (parpadea, como cuando está a punto de estallar)
+    if (hash(f + S) < 0.35 + 0.6 * k) llamarada(p, C, 0.55 + 0.35 * k + hash(f) * 0.1, t / 0.8, S, AH, 0.6 + 0.4 * k);
+    // relámpagos cortos alrededor del cuerpo
+    if (hash(f * 3 + S) < 0.3 + 0.5 * k) relampago(p, (hash(f * 5) - 0.5) * 16, CY + (hash(f * 9) - 0.5) * AH * 0.7, hash(f * 2) < 0.5 ? -1 : 1, 4, f);
+    // polvo que tiembla en el suelo
+    for (let i = 0; i < 8; i++) p.dot((hash(i * 3 + f) - 0.5) * 40, -hash(i + f) * 2, POLVO, 0.6);
+    p.glow(0, CY, 20 + k * 20, C[2], 0.3 + 0.4 * k);
     return;
   }
-  const u = t - CARGA, q = u / (D - CARGA), R = new Rng(S * 17 + 3);
+
+  const u = t - CARGA, q = u / (D - CARGA);
   // destello blanco (dos fotogramas)
-  if (u < 0.07) { p.circle(0, CY, 14 + u * 160, WHITE, 0.9); p.glow(0, CY, 56, WHITE, 1); }
-  // columna de luz: ancha al principio, se estrecha y se apaga
-  // columna estrecha y corta: el personaje tiene que verse transformado enseguida
-  const cw = (7 + 9 * (1 - ease.outCubic(clamp(u / 0.3)))) * (1 - ease.inQuad(clamp(u / 0.38)));
-  if (cw > 0.8) {
-    for (let x = -cw; x <= cw; x += 0.5) {
-      const qx = Math.abs(x) / cw, lv = qx < 0.35 ? 4 : qx < 0.6 ? 3 : qx < 0.85 ? 2 : 1;
-      for (let y = 2; y > -112; y -= 0.5) {
-        const fade = 1 - (-y / 112);
-        if (bayer(x, y) > fade * 1.2 - qx * 0.25) continue;
-        p.dot(x, y, C[lv], 0.7);
-      }
-    }
-    p.glow(0, -50, cw * 3, C[3], 0.6);
-  }
-  // onda de choque en el suelo (elipse en perspectiva) y una segunda más tarde
+  if (u < 0.07) { p.circle(0, CY, 14 + u * 160, WHITE, 0.85); p.glow(0, CY, 56, WHITE, 1); }
+  // llamarada enorme que sale disparada y se encoge hasta desaparecer
+  const s = u < 0.08 ? 1 + ease.outQuad(u / 0.08) * 0.9 : 1.9 * (1 - ease.inQuad(clamp((u - 0.08) / 0.75)));
+  llamarada(p, C, s, u / 0.5, S + 1, AH, 1 - 0.4 * clamp((u - 0.4) / 0.4));
+  // anillos de choque en el suelo
   for (let k = 0; k < 2; k++) {
-    const qq = clamp((u - k * 0.12) / 0.55);
+    const qq = clamp((u - k * 0.1) / 0.5);
     if (qq <= 0 || qq >= 1) continue;
-    const rx = 8 + 74 * ease.outQuart(qq), ry = rx * 0.28;
-    const w = Math.max(1, 3 * (1 - qq));
+    const rx = 8 + 78 * ease.outQuart(qq), ry = rx * 0.26, w = Math.max(1, 3 * (1 - qq));
     for (let i = 0; i < 260; i++) {
       const a = (i / 260) * TAU;
       for (let j = 0; j < w; j += 0.5) p.px(Math.cos(a) * (rx - j), Math.sin(a) * (ry - j * 0.3), j < 1 ? (qq < 0.25 ? WHITE : C[3 - k]) : C[2]);
     }
   }
-  // rayos de luz que salen del pecho al estallar
-  if (u < 0.35) {
-    const k = 1 - u / 0.35;
-    for (let i = 0; i < 10; i++) {
-      const a = (i / 10) * TAU + 0.3, l = 20 + 40 * ease.outCubic(u / 0.35);
-      p.line(Math.cos(a) * 8, CY + Math.sin(a) * 8, Math.cos(a) * l, CY + Math.sin(a) * l, i % 2 ? WHITE : C[3], k);
-    }
-  }
-  // llamarada del aura alrededor del cuerpo, más grande que la normal, que se encoge
-  const fh = (AH + 26) * (1 - ease.inCubic(clamp(u / 0.7)));
-  if (fh > 2) {
-    for (let x = -18; x <= 18; x += 0.5) {
-      const kx = Math.abs(x) / 18, h = fh * Math.pow(1 - kx, 0.6) * (0.85 + 0.15 * Math.sin(x * 1.3 + u * 30));
-      for (let y = 0; y > -h; y -= 0.5) {
-        const v = -y / h, lv = kx < 0.4 && v < 0.8 ? 3 : kx < 0.7 ? 2 : 1;
-        if (v > 0.85 && bayer(x, y) > (1 - v) / 0.15) continue;
-        p.dot(x, y, C[lv], 0.6);
-      }
-    }
-  }
-  // piedras que saltan del suelo y caen
-  for (let i = 0; i < 12; i++) {
-    const a = -Math.PI / 2 + R.range(-1.2, 1.2), sp = R.range(80, 170), life = R.range(0.6, 1.0);
-    if (u > life) continue;
-    const [x, y] = fly(R.range(-10, 10), 0, Math.cos(a) * sp, Math.sin(a) * sp, u, 420, 0.5);
-    if (y > 1) continue;
-    const s = R.range(1, 2.5);
-    p.rect(x - s / 2, y - s / 2, s, s, i % 3 ? PIEDRA : PIEDRA2);
+  // relámpagos durante el estallido
+  if (u < 0.45) {
+    const f = Math.floor(u * 15);
+    for (let i = 0; i < 2; i++) if (hash(f * 3 + i + S) < 0.7) relampago(p, (i ? 1 : -1) * (6 + hash(f + i) * 8), CY + (hash(f * 9 + i) - 0.5) * AH, i ? 1 : -1, 5, f * 2 + i);
   }
   // chispas que suben y se apagan
-  for (let i = 0; i < 22; i++) {
-    const x0 = R.range(-16, 16), sp = R.range(40, 110), life = R.range(0.5, 1.2), d0 = R.range(0, 0.4);
+  for (let i = 0; i < 18; i++) {
+    const x0 = R.range(-18, 18), sp = R.range(50, 120), life = R.range(0.4, 0.8), d0 = R.range(0, 0.2);
     const uu = u - d0;
     if (uu < 0 || uu > life) continue;
     const kk = 1 - uu / life, y = -R.range(4, AH) - sp * uu;
@@ -115,8 +120,8 @@ export function draw(p, t, o) {
   }
   // polvo que se abre en el suelo y se posa
   for (let i = 0; i < 8; i++) {
-    const dir = i % 2 ? 1 : -1, x = dir * (10 + R.range(0, 30) * ease.outCubic(clamp(u / 0.8))), rad = R.range(4, 8) * (0.6 + q);
+    const dir = i % 2 ? 1 : -1, x = dir * (10 + R.range(0, 34) * ease.outCubic(clamp(u / 0.6))), rad = R.range(4, 8) * (0.6 + q);
     p.disc(x, -rad * 0.5, rad, POLVO, (dd) => 0.35 * (1 - q) * (1 - dd * dd));
   }
-  p.glow(0, CY, 60 * (1 - q), C[2], 0.7 * (1 - q));
+  p.glow(0, CY, 60 * (1 - q), C[2], 0.6 * (1 - q));
 }
