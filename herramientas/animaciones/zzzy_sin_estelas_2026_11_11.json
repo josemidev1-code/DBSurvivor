@@ -1,0 +1,19 @@
+{
+ "_nota": "11 nov. 2026 (Claude): Josemi vio el brazo de Goku «como transparente». Son fotogramas del pack con el brazo dibujado como estela pálida, sin contorno. Se quitan de los combos. Trunks base: tercer combo con rayas y píxeles sueltos.",
+ "heroes": {
+  "goku": {
+   "2": {
+    "attack": [
+     18,
+     19
+    ],
+    "attack3": []
+   }
+  },
+  "trunks": {
+   "0": {
+    "attack3": []
+   }
+  }
+ }
+}

@@ -6,8 +6,8 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6071** (19 %).
-- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **73**. Sin ninguno: **70**.
+- En los packs usados hay 30590 imágenes y el juego usa **6122** (20 %).
+- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **71**. Sin ninguno: **63**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
 Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no cuenta porque reutiliza el cuerpo del vuelo.
@@ -25,21 +25,15 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | vegetamanga | 2 | 250 | 36 | 10 |
 | gokualt | 3 | 302 | 67 | 7 |
 | broly | 4 | 234 | 80 | 6 |
-| a13 | 1 | 142 | 14 | 5 |
 | a14 | 1 | 57 | 14 | 5 |
 | blackkaioshin | 1 | 45 | 14 | 5 |
-| bramajin | 1 | 315 | 15 | 5 |
 | bulma | 1 | 16 | 12 | 5 |
 | cui | 1 | 46 | 15 | 5 |
 | daishinkan | 1 | 86 | 15 | 5 |
-| dyspo | 1 | 128 | 18 | 5 |
 | freezer | 6 | 443 | 127 | 5 |
 | glorio | 1 | 90 | 16 | 5 |
-| gohanfut | 1 | 123 | 17 | 5 |
 | gohanmanga | 1 | 87 | 16 | 5 |
 | gohanposeido | 1 | 68 | 16 | 5 |
-| gokussj4daima | 1 | 281 | 14 | 5 |
-| gokuuiverdadero | 1 | 140 | 15 | 5 |
 | gomah | 1 | 38 | 18 | 5 |
 | hatchiyack | 1 | 56 | 15 | 5 |
 | jirengray | 1 | 73 | 15 | 5 |
@@ -64,7 +58,6 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | vegetabluemal | 1 | 89 | 14 | 5 |
 | vegetabroly | 1 | 101 | 18 | 5 |
 | vegetamui | 1 | 115 | 15 | 5 |
-| vegetaxeno | 1 | 185 | 15 | 5 |
 | vegetayardrat | 1 | 90 | 14 | 5 |
 | vegettofalso | 1 | 124 | 15 | 5 |
 | vegitoblue254 | 1 | 546 | 14 | 5 |
@@ -72,9 +65,10 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | cell | 5 | 461 | 107 | 4 |
 | gogeta | 3 | 565 | 65 | 4 |
 | gohan | 4 | 278 | 90 | 4 |
+| goku | 5 | 393 | 114 | 4 |
 | black | 3 | 359 | 68 | 3 |
 | buu | 5 | 379 | 105 | 3 |
-| goku | 5 | 393 | 117 | 3 |
+| gohanfut | 1 | 123 | 22 | 3 |
 | janemba | 1 | 72 | 20 | 3 |
 | jiren | 3 | 295 | 62 | 3 |
 | kale | 2 | 100 | 45 | 3 |
@@ -84,17 +78,24 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | bardock | 3 | 271 | 70 | 2 |
 | cumber | 1 | 26 | 15 | 2 |
 | gokupatrulla | 1 | 53 | 21 | 2 |
+| gokussj4daima | 1 | 281 | 21 | 2 |
 | piccolo | 2 | 179 | 46 | 2 |
 | raditz | 2 | 92 | 48 | 2 |
 | roshi | 1 | 82 | 19 | 2 |
+| trunks | 3 | 312 | 69 | 2 |
+| vegetaxeno | 1 | 185 | 21 | 2 |
 | vegetto | 4 | 446 | 97 | 2 |
+| a13 | 1 | 142 | 22 | 1 |
 | a16 | 1 | 64 | 24 | 1 |
 | a18 | 1 | 47 | 21 | 1 |
 | bra | 2 | 217 | 50 | 1 |
+| bramajin | 1 | 315 | 23 | 1 |
 | dlrx | 1 | 86 | 25 | 1 |
+| dyspo | 1 | 128 | 25 | 1 |
 | gokunino | 1 | 133 | 23 | 1 |
 | gokussjchaqueta | 1 | 76 | 23 | 1 |
 | gokussjkaioken | 1 | 76 | 22 | 1 |
+| gokuuiverdadero | 1 | 140 | 22 | 1 |
 | gokuxeno | 3 | 355 | 70 | 1 |
 | gokuyardrat | 1 | 113 | 23 | 1 |
 | goten | 1 | 89 | 20 | 1 |
@@ -103,7 +104,6 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | krilin | 1 | 81 | 22 | 1 |
 | nappa | 1 | 104 | 27 | 1 |
 | saibaman | 1 | 46 | 22 | 1 |
-| trunks | 3 | 312 | 72 | 1 |
 | zamasu | 2 | 168 | 51 | 1 |
 | a21 | 1 | 195 | 29 | 0 |
 | babyvegeta | 1 | 57 | 22 | 0 |
