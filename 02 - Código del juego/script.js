@@ -5075,7 +5075,7 @@ function checkForm(){const lv=FORM_LV.filter(l=>P.lvl>=l).length-1,f=Math.min(HE
 
   S.banner={t:2.6,text:HEROES[S.hid].forms[f]+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.6;P.powT=1.6;cam.shake=8;sfx('trans');
 
-  burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}}
+  burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8']);if(window.PFX&&PFX.transform)PFX.transform(P.x,P.y,heroAura(S.hid,f))}}
 
 
 
@@ -5128,7 +5128,7 @@ function rolAI(e,d,dx,dy,dt){const r=rolE(e),A=ROL_AJ;if(r==='jefe'||r==='kami')
 
 function update(dt){
 
-  if(S.freeze>0){S.freeze-=dt;updateFx(dt);return}
+  if(S.freeze>0){S.freeze-=dt;updateFx(dt);if(window.PFX)PFX.update(dt);return}
 
   S.t+=dt;const ps=stats();
 
@@ -7139,7 +7139,8 @@ function render(time){
 
       if(P.form>0){const fl=auraFlames(heroAura(S.hid,P.form)),f=(time*14|0)%3;
 
-        ctx.globalAlpha=0.8;ctx.drawImage(fl[f],Math.round(x-fl[f].width/2),Math.round(y-fl[f].height+3));ctx.globalAlpha=1;
+        // aura de pixelfx (efectos_pixelfx.js); k=2 deshace el ctx.scale(0.5) del personaje: un píxel del efecto = un píxel de pantalla
+        if(!(window.PFX&&PFX.aura&&PFX.aura(ctx,x,y+2,heroAura(S.hid,P.form),time,0,2))){ctx.globalAlpha=0.8;ctx.drawImage(fl[f],Math.round(x-fl[f].width/2),Math.round(y-fl[f].height+3));ctx.globalAlpha=1}
 
         if(P.form>=2&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 

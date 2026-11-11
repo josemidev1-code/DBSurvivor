@@ -3,16 +3,18 @@
 // para que el juego siga abriéndose con doble clic). Expone window.PFX.
 import { createFrame, clearFrame, createFx, composite, painterFor } from "pixelfx";
 import * as kame from "./fx/kamehameha.js";
+import * as aura from "./fx/aura.js";
+import * as trans from "./fx/transformacion.js";
 import * as plasma from "pixelfx/fx/explosions/plasma-explosion";
 import * as implosion from "pixelfx/fx/explosions/implosion";
 import * as mana from "pixelfx/fx/arcane/mana-burst";
 import * as spark from "pixelfx/fx/impacts/hit-spark";
 import * as crit from "pixelfx/fx/impacts/crit-hit";
 
-const LIB = { plasma, implosion, mana, spark, crit };
+const LIB = { plasma, implosion, mana, spark, crit, trans };
 // tope de efectos vivos por tipo: en plena horda no se acumulan cientos
-const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6 };
-const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8 };
+const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2 };
+const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3 };
 
 // rampa oscuro→claro a partir de los colores de la técnica del juego (que ya van de oscuro a claro)
 const hexN = (h) => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map((c) => c + c).join(""); return parseInt(h, 16); };
@@ -30,6 +32,28 @@ function ramp(cols) {
 }
 
 let live = [], seed = 1, rayos = [];
+
+// ---- aura de cada forma: los fotogramas del bucle se pintan una vez por color y se guardan
+// (los mismos colores que las llamas de antes del juego, auraFlames en script.js)
+const AURA_COL = { gold: ["#e8a010", "#ffd23f", "#fff6a8"], white: ["#7ab8e8", "#bfe6ff", "#ffffff"], orange: ["#d0501a", "#ff9a3a", "#ffe0a0"], red: ["#a01030", "#ff3a5a", "#ffb0c0"], blue: ["#1a7ad8", "#3ad0f0", "#c0f8ff"], green: ["#5aa010", "#b8f040", "#f0ffc0"], purple: ["#5a1a90", "#a050ff", "#e8c8ff"], silver: ["#8a94a8", "#c8d0dc", "#ffffff"] };
+const auraCache = {};
+function auraFrames(kind, rayos) {
+  const key = kind + (rayos ? "+" : "");
+  if (auraCache[key]) return auraCache[key];
+  const [w, h] = aura.meta.size, [ox, oy] = aura.meta.origin, n = Math.round(aura.meta.duration * aura.meta.fps);
+  const o = { ...aura.meta.options, palette: ramp(AURA_COL[kind] || AURA_COL.gold), rayos: rayos ? 1 : 0 };
+  const frame = createFrame(w, h), img = new ImageData(w, h), out = [];
+  for (let i = 0; i < n; i++) {
+    clearFrame(frame);
+    const p = painterFor(frame); p.place(ox, oy, false, 0); p.fade = 1; p.lightK = 1;
+    const t = (i / n) * aura.meta.duration;
+    p.layer = "back"; aura.drawBack(p, t, o); p.layer = "front"; aura.draw(p, t, o);
+    composite(frame, img.data, null);
+    const cv = document.createElement("canvas"); cv.width = w; cv.height = h; cv.getContext("2d").putImageData(img, 0, 0);
+    out.push(cv);
+  }
+  return (auraCache[key] = { out, ox, oy, fps: aura.meta.fps });
+}
 
 // ---- rayos tipo Kamehameha: un lienzo por rayo, del largo del rayo, que el juego gira con el ángulo del disparo
 const RAYO_MAX = 4;
@@ -80,6 +104,14 @@ window.PFX = {
   nova(x, y, rad, cols, tipo) { return !!spawn(tipo === "hakai" ? "implosion" : tipo === "final" ? "plasma" : "mana", x, y, { cols: tipo === "hakai" ? null : cols }); },
   // golpe cuerpo a cuerpo: chispa en cada golpe, golpe crítico en el último del combo
   hit(x, y, dir, last) { return !!spawn(last ? "crit" : "spark", x, y, { flip: dir < 0 }); },
+  // aura de la forma, detrás del personaje: (x, y) son los pies en pantalla; k, la escala del dibujo
+  aura(ctx, x, y, kind, time, rayos, k = 1) {
+    const A = auraFrames(kind, rayos), im = A.out[Math.floor(time * A.fps) % A.out.length];
+    ctx.drawImage(im, Math.round(x - A.ox * k), Math.round(y - A.oy * k), im.width * k, im.height * k);
+    return true;
+  },
+  // estallido al transformarse, en los pies del personaje, con el color del aura de la nueva forma
+  transform(x, y, kind) { return !!spawn("trans", x, y, { cols: AURA_COL[kind] || AURA_COL.gold }); },
   // Kamehameha y familia: devuelve el estado que el juego guarda en el rayo (b.pfx)
   beam(b) { return nuevoRayo(b); },
   // el juego lo llama desde drawBeam con la posición de las manos en pantalla; el reloj es el del propio rayo

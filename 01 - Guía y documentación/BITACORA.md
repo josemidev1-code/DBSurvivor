@@ -4215,3 +4215,21 @@ ode --check.
 - Le gusta el Kamehameha nuevo. Krilin lo lanzaba «con las manos hacia afuera» (fotograma 56, brazos abiertos a los lados): el disparo pasa al 38 (mano abierta empujando hacia el rayo) en `zzzy_kame_manos_2026_11_11.json`, también para `ki`. animaciones_juego.js?v=128.
 - Josemi arreglará más adelante con ChatGPT las manos de los personajes cuyo pack no tenga una pose buena de Kamehameha.
 - `previsualizar.py krilin 0` falla (IndexError en `CLAVES` con animaciones nuevas); comprobado en partida.
+
+## 2026-11-11 — Claude Opus 5.5 (transformaciones y aura con PixelFX)
+
+### Lo que pidió el usuario
+- Josemi: le gustó el Kamehameha. Krilin (y todos) hacen la pose de lado aunque el rayo vaya hacia abajo: lo arreglará con Codex (apuntado arriba del todo en `TAREAS_CODEX.md`).
+- Hacer con PixelFX primero las transformaciones y el aura, y después las técnicas (Galick Gun, Final Flash, Masenko, Makankosappo).
+
+### Lo que hice
+- `fx/aura.js` (bucle, propio): óvalo pegado al cuerpo con borde de tres tonos y puntas de llama que suben, luz y chispas. Sustituye a las llamas dibujadas por código (`auraFlames`) detrás del personaje; color por forma con la misma tabla (gold, white, red, blue, green, purple, orange, silver). Los fotogramas se pintan una vez por color y se guardan (`PFX.aura`).
+- `fx/transformacion.js` (una vez, propio): la energía entra en espiral al pecho durante la congelación del juego (0,6 s), destello, columna de luz corta, dos anillos de choque en el suelo, rayos, piedras, chispas y polvo. Se lanza en `checkForm()` con el color del aura de la forma nueva (`PFX.transform`). Durante `S.freeze` ahora también avanza `PFX.update`.
+- Probado en partida (Chrome sin ventana): Goku SSJ y SSJ2, Vegeta y Piccolo. GIFs en `herramientas/pixelfx/gifs/`. efectos_pixelfx.js?v=3, script.js?v=183.
+
+### A medias / problemas
+- La forma Majin de Vegeta tiene aura dorada en los datos (`aura` de su HDEF); si debe ser otra, se cambia ahí.
+- Los packs que traen su propia aura en la pose de carga (`pow`) la muestran además de la de pixelfx.
+
+### Siguiente paso recomendado
+- Técnicas con PixelFX: Galick Gun, Final Flash, Masenko y Makankosappo.
