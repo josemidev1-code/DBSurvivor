@@ -5618,7 +5618,7 @@ const WORLD={
 
       ctx.drawImage(groundTile(Tl.beach,tx,ty),x,y)},
 
-    decor(tx,ty,v){if(tx===0&&ty===-2)return Dc.kamehouse;if(Math.abs(tx)<3&&ty>-4&&ty<2)return null;if(v<0.05)return Dc.palm;if(v<0.07)return Dc.rubble;return null}};
+    decor(tx,ty,v){if(tx===0&&ty===-5)return Dc.kamehouse;if(Math.abs(tx)<4&&ty>-7&&ty<3)return null;if(v<0.05)return Dc.palm;if(v<0.07)return Dc.rubble;return null}};
 
 
 
@@ -7478,7 +7478,7 @@ function hud(time){
     if(t)hudPill(t,topY,col,ed,HW/2)}
 
   // Abajo al centro: bandeja de ataques; las casillas aún cerradas se ven con candado
-  {const L=sigOpen(),n=L.length,t2=TACTIL?2:1,w=28*t2,gap=4,total=Math.max(n,Math.min(6,sigList().length,Math.floor((HW-18+gap)/(w+gap)))),tw=total*w+(total-1)*gap+10,tx=Math.round(HW/2-tw/2),y=HH-(TACTIL?48:HW<420?26:7)-w-5,x0=tx+5;P.barR=[];
+  {const L=sigOpen(),n=L.length,t2=TACTIL?1.5:1,w=Math.round(28*t2),gap=4,total=Math.max(n,Math.min(TACTIL?n+1:6,sigList().length,Math.floor((HW-18+gap)/(w+gap)))),tw=total*w+(total-1)*gap+10,tx=Math.round(HW/2-tw/2),y=HH-(TACTIL?10:HW<420?26:7)-w-5,x0=tx+5;P.barR=[];
     hudPanel(tx,y-5,tw,w+10,'#7c2d12');
     for(let i=0;i<total;i++){const x=x0+i*(w+gap);
       if(i>=n){hudR(x,y,w,w,'#090c22');hudR(x,y,w,1,'#1a1f3e');const c=x+w/2|0,m=y+w/2|0;hudR(c-3,m-5,6,1,'#3b4a7c');hudR(c-3,m-5,1,4,'#3b4a7c');hudR(c+2,m-5,1,4,'#3b4a7c');hudR(c-4,m-1,8,6,'#3b4a7c');continue}
@@ -7496,7 +7496,7 @@ function hud(time){
     if(L[P.sel]){const W=MV[L[P.sel]];hudPill(W.name.toUpperCase(),ly,'#ffd23f','#7c2d12',HW/2);ly-=18}
     if(S.t<12&&!TACTIL){const hint='WASD MOVER · 1-'+n+' ATAQUE · ESC PAUSA';if(hint.length*8+12<HW)hudPill(hint,ly,'#c7d2fe','#3b4a9c',HW/2);ly-=18}
     if(!(S.boss&&!S.boss.dead)&&S.bossIdx<BOSS_T.length){const left=BOSS_T[S.bossIdx]-S.t;if(left<20){const t='SE ACERCA '+ET[MAPS[S.map].bosses[S.bossIdx]].n.toUpperCase()+' '+Math.ceil(left),big=t.length*16+12<HW;hudPill(t,ly-(big?8:0),(time*4|0)%2?'#fca5a5':'#ffffff','#dc2626',HW/2,big?16:8);ly-=big?30:18}}
-    if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b='PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
+    if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b=TACTIL?'TOCALO ABAJO PARA USARLO':'PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
 
   // Avisos grandes: franja con filetes dorados
   if(S.banner){const b=S.banner,y=Math.round(HH*0.28),big=b.text.length*16<=HW-24,h=(big?26:18)+(b.sub?12:0),edge=b.boss?'#ef4444':'#ffd23f';
