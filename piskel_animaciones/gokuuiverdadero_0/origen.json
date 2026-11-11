@@ -1,0 +1,95 @@
+{
+  "heroe": "gokuuiverdadero",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/07_Granola/Goku/149_GOKU ULTRA INSTINTO VERDADERO,MANGA,BY ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "08f57d6b495dd6667df3dcaeb953413dcf53195eb22774136fc7c7fedaf403f6",
+      "indice": 99
+    },
+    {
+      "sha256": "04bba0cbdb2592987bf6463d6dc495f3b44fd102368ef00df78342f18b927947",
+      "indice": 100
+    },
+    {
+      "sha256": "00ad6aae8229fdf960ce281e15bce31d263fc788207d69367a5c78c4f819832c",
+      "indice": 115
+    },
+    {
+      "sha256": "5e3efde8b0946322a06f18d55400154097e0eaf8865677f0eebdb67e1eb67bbe",
+      "indice": 102
+    },
+    {
+      "sha256": "4be982c1d570a89e2e22313439133e0b020f4f693076e95822bd3d0a27ff7c8e",
+      "indice": 103
+    },
+    {
+      "sha256": "b83c41d5482d8a688ac65e4d2926f24554628c06aa68ba432a456b1ba9dafef5",
+      "indice": 104
+    },
+    {
+      "sha256": "cf12867cdf150a3a5758decad32884854f22cc0c886c5e1cca9539c34cadfc47",
+      "indice": 84
+    },
+    {
+      "sha256": "048c66f0d72c91b3dcb7435529ef1bf68317c908b9b69106b9f50b877c53d71b",
+      "indice": 85
+    },
+    {
+      "sha256": "82df003e0a6f0ada3ea660cd4bf04efbc850f80fee8cfc830c612daf3ab5ec2b",
+      "indice": 61
+    },
+    {
+      "sha256": "f081aa276b3af6200b43d4711ebdc09bff4912a587c9227f5574166ff32eb101",
+      "indice": 62
+    },
+    {
+      "sha256": "b4eea988ecfeb07adef1967d60b27eb746464918530bd5fbd98ea0f3c715b2e0",
+      "indice": 70
+    },
+    {
+      "sha256": "d3d1530577be8a718898d08b435658f6d5a3a65206c7c6714ddbe7a97295d855",
+      "indice": 71
+    },
+    {
+      "sha256": "fb30450b532309db168334bc76b27d288d0339fb030e28b4abb9bc28ec9ab70e",
+      "indice": 49
+    },
+    {
+      "sha256": "2c992dc1f1dd3b46292d425c7b49ba1134be2cef9db80cb2262730ba15f2e760",
+      "indice": 50
+    },
+    {
+      "sha256": "cefb3e71a54fe9acb722db503b5a7f833c479931e30dd746b4c8a89fb4c12fbf",
+      "indice": 2
+    },
+    {
+      "sha256": "cdf631352e2010e0b21d59816e8392dd9c2502b7ac7c4ecc724dbf24bd55526f",
+      "indice": 113
+    },
+    {
+      "sha256": "caf9c30d8d6e9836e833b0b9e888e280272ded05f4c08bdbaa8dad71867a177d",
+      "indice": 105
+    },
+    {
+      "sha256": "405b4c855d3f2ade96b776beba38bb526ca32c38fac4694ca0057ae3ac4f7825",
+      "indice": 86
+    },
+    {
+      "sha256": "2c9ec58397ca68c5a9b52aec7825038d686a047c0beb1212676c574a8b72230d",
+      "indice": 87
+    },
+    {
+      "sha256": "29eba4b5e6b12df280d192025f55f833ba510eff7d31142efc02e345e0a246e3",
+      "indice": 28
+    },
+    {
+      "sha256": "70805de551a714e2296f20f9ab432a8f2c60f3153ea5c1f354d2219d4cf09a78",
+      "indice": 11
+    },
+    {
+      "sha256": "246debe587142ea063e8a6f6d11157731168295e8ab6a832d97de9f5b40f55c0",
+      "indice": 21
+    }
+  ]
+}

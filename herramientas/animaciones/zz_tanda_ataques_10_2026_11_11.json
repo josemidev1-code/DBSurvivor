@@ -1,0 +1,41 @@
+{
+ "_nota": "Décima tanda (11 nov. 2026, Claude): ataques extra de formas visibles que no tenían ninguno tras la limpieza del plantel. Revisada a ojo con ver_pack.py y previsualizar.py.",
+ "heroes": {
+  "gokussj4daima": {
+   "0": {
+    "attack2": [
+     179,
+     181,
+     182
+    ],
+    "attack3": [
+     154,
+     155
+    ],
+    "kick2": [
+     175,
+     176
+    ]
+   }
+  },
+  "gokuuiverdadero": {
+   "0": {
+    "attack2": [
+     113,
+     105
+    ],
+    "kick2": [
+     86,
+     87
+    ],
+    "beam": [
+     28,
+     11
+    ],
+    "up": [
+     21
+    ]
+   }
+  }
+ }
+}
