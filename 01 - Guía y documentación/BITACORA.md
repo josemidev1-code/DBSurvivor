@@ -4162,3 +4162,25 @@ ode --check.
 ### Siguiente paso recomendado
 - Que Josemi diga en qué otros personajes ve brazos o golpes raros; `golpes.py` (en el scratchpad de la sesión, fácil de rehacer) saca una hoja con todos los golpes de un personaje.
 - Seguir la tanda con las 63 formas restantes de `AUDITORIA_ANIMACIONES.md`.
+
+## 2026-11-11 — Claude Opus 5.5 (guardias, PixelFX y relevo para los Kamehamehas)
+
+### Lo que pidió el usuario
+- Josemi: no le gustan las guardias (idle) en las que el personaje está de frente; si el pack tiene una postura de pelea de lado o de tres cuartos, usar esa. Seguir acabando las animaciones de todos.
+- Que cada personaje tenga solo ataques de la serie y con buenos efectos.
+- Buscar de verdad en internet el plugin PixelFX e instalarlo con Claude Code.
+- Los Kamehamehas «cambian mucho» y la animación es mala: quiere que queden guapos, usando PixelFX. Dejar los pasos para instalar el plugin en una sesión nueva.
+
+### Lo que hice
+- PixelFX es `patch-gg/pixelfx` (MIT; 244 efectos y un skill para Claude Code). El juego ya usaba su librería para explosiones y golpes (`herramientas/efectos_pixelfx/`). Intenté instalar el skill en `.claude/skills/pixelfx` y bajar el repositorio a `herramientas/pixelfx`, pero el sistema de permisos de la sesión bloqueó meter código externo. No quedó nada a medias.
+- Guardias nuevas en `herramientas/animaciones/zzzy_guardias_2026_11_11.json` (la anterior queda en `idleAntes`): Androide 18 [28,29], Androide 17 [1], Androide 16 [4] y Jiren base [36]. Krilin ya estaba de tres cuartos; no se toca.
+- animaciones_juego.js?v=127.
+
+### A medias / problemas
+- Guardias de frente que faltan por revisar: Buu (todas), Toppo, Kale, Caulifla, Kefla, Bra, Zamasu, Baby Vegeta, Roshi, Nappa, Jeice, A21, Dyspo, Kibito, Glorio, Hatchiyack, Trunks GT, Merus, Majin Kuu, A14, A13, Bulma, Majin Duu, Gran Sacerdote, Gas, Omega, Super 17, Pan, Slug, Cui, Kibitoshin, Shin, Tenshinhan, Tao Pai Pai, Jiren (torneo). Muchos son packs de DeviantArt que solo traen guardia de frente.
+- «Solo ataques de la serie»: sin tocar. Las listas llevan Ráfaga de Ki, Combo de golpes y Patada voladora como relleno común; quitarlos cambia el cuerpo a cuerpo que Josemi pidió antes. Preguntarle antes.
+
+### Siguiente paso recomendado (sesión nueva, con PixelFX instalado)
+1. Josemi instala el plugin (ver abajo) y abre una sesión nueva.
+2. Rehacer el Kamehameha: el rayo hoy es un `BEAM` dibujado por código (`kame:BEAM(...)` en `script.js`; las poses salen de `beam`/`tecnica_kame` en las selecciones). Con el skill de pixelfx: buscar efectos de rayo (`node tools/list.mjs beam`, `node tools/list.mjs kamehameha`), renderizar, elegir y llevarlo a `herramientas/efectos_pixelfx/efectos.js` (bola que crece en las manos, rayo con núcleo blanco y borde azul, impacto). Regenerar `efectos_pixelfx.js` como dice su LEEME. Probar con Goku, Gohan, Goten, Krilin y Cell.
+3. Seguir las guardias de la lista de arriba y las 63 formas sin ataques extra.
