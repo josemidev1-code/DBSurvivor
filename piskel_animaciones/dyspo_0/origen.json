@@ -1,0 +1,107 @@
+{
+  "heroe": "dyspo",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/481_DYSPO (Omegasuper)",
+  "frames": [
+    {
+      "sha256": "3531381e052f4c26d0f77ccf475eef85c5b9fbdb2edfb9ff56d9e9eedf12f506",
+      "indice": 0
+    },
+    {
+      "sha256": "76f57e6e9d7c92d8d7340d92b8e356acc931f12bd15948ab943523a7b04b70e1",
+      "indice": 1
+    },
+    {
+      "sha256": "125dba9f7b63182a592f5cfa4768b92de113b8e7b05772520869a3b913e17898",
+      "indice": 2
+    },
+    {
+      "sha256": "68739403c93f9756cb985c3cf63d342adc85fe3a75e90eb66b573c90f06a1f1d",
+      "indice": 20
+    },
+    {
+      "sha256": "59822c2e1a535c4282fe26f1a76fcad7a5bc90a4118b29cece5070cf88571f5e",
+      "indice": 24
+    },
+    {
+      "sha256": "df08b4255aca3297ff3813fa4c541bbb8aaec1277d33349eb957897eac5f1130",
+      "indice": 25
+    },
+    {
+      "sha256": "fc1c178dc39b80c6f2e1bc3cbb6fe52697cf0914efd8bc9b220ba9ce44b0b51e",
+      "indice": 26
+    },
+    {
+      "sha256": "4e3ca6928af1ff3cf5289b7ea3573600eab0cabc96bfee99f70e553243c96645",
+      "indice": 37
+    },
+    {
+      "sha256": "54bd977f5aad1dd22d83bda24aa60c36597306b9f3f825c1f6d618693937eb52",
+      "indice": 44
+    },
+    {
+      "sha256": "7f33d8fc24c3959476161461c36241a9550ca7b9e4c46a7672f3cf55e6dacf3e",
+      "indice": 108
+    },
+    {
+      "sha256": "5b965673369a0f6a0d12e5f52ecdf3518a79bbe08a5442544c3f5dc95e8b0975",
+      "indice": 109
+    },
+    {
+      "sha256": "8d0e8133d3d95f6dd65f9eb9f3ea2ebaa6e669b07bebe45dd086bfa492e65bd9",
+      "indice": 110
+    },
+    {
+      "sha256": "f13da3c4943a035d3be5cfdf5d5f8e41fbd24abe2cbc1a15ba6e72b7f7c193fd",
+      "indice": 81
+    },
+    {
+      "sha256": "80a34652315619c95e0c7f7219298c34b8ace228089a0b263e8c146a1e803488",
+      "indice": 82
+    },
+    {
+      "sha256": "1f8d9a8c781e7d85696d1cbc0cd2950a114039383ae6c1251422ac863e40f4cc",
+      "indice": 83
+    },
+    {
+      "sha256": "dc75b1202957c6d41113b6295bedd86770c59ee236dae25eb0cfa7476d0ca212",
+      "indice": 63
+    },
+    {
+      "sha256": "961132eabf3b1143fd43178c61db7dc09321cfad3c548221f7dcab3b6c016f50",
+      "indice": 65
+    },
+    {
+      "sha256": "43b39405f3e55f0b867fe1863d4ec39fa206ebfb5846e60ce69f9b025b6302f2",
+      "indice": 68
+    },
+    {
+      "sha256": "0fdc43fe4a5c3efadfe5ea0cf429a060151e289ad7b23b63833be6d3458b6de7",
+      "indice": 27
+    },
+    {
+      "sha256": "35691a1b6fa72516d93324af67cac67804638840d357fb65cc7be0d4f4b5bffe",
+      "indice": 28
+    },
+    {
+      "sha256": "0df4f35969629ed5557de795c5777e93662645b45494c8478f8fd3755bf76926",
+      "indice": 31
+    },
+    {
+      "sha256": "2ae357c29ea1d4e4b4c45b07895b83604d260f5277e7a2038a65b45c9b83a5dc",
+      "indice": 32
+    },
+    {
+      "sha256": "7c448ca48ae39942f0eed6ce1fecc679ef26b6a851fd7784a6010749ed1b1417",
+      "indice": 35
+    },
+    {
+      "sha256": "95902e2ac6ed4e32ee94d3cd61344b702ef02129a25a6ca448dfedd316f9bd18",
+      "indice": 36
+    },
+    {
+      "sha256": "8aecda383134e46ded2204558f777d7bf99a3c3941ffd4926add1b94490988bf",
+      "indice": 93
+    }
+  ]
+}
