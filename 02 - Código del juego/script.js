@@ -3283,7 +3283,7 @@ function fireSig(W,st,dmg,ps){
 
     if(W.heal&&hit){const mx=stats().maxhp;P.hp=Math.min(mx,P.hp+mx*0.03*Math.min(hit,8)*W.heal*4);fx(P.x,P.y-12,'green',18,0.5)}
 
-    fxRg.push({x:P.x,y:P.y-10,t:0,dur:0.45,rad,col:W.col});if(window.PFX)PFX.nova(P.x,P.y-10,rad,W.col,W===MV.hakai?'hakai':W===MV.finalexp||W===MV.jibaku?'final':'');if(st.stun)S.flash=Math.max(S.flash,0.25);cam.shake=Math.max(cam.shake||0,5);attackRelease(W,d>0?0:Math.PI,0.3);sfx('charge')}}
+    fxRg.push({x:P.x,y:P.y-10,t:0,dur:0.45,rad,col:W.col});if(window.PFX)PFX.nova(P.x,P.y-10,rad,W.col,W===MV.hakai?'hakai':W===MV.finalexp||W===MV.jibaku?'final':W===MV.taiyoken?'taiyoken':'');if(st.stun)S.flash=Math.max(S.flash,0.25);cam.shake=Math.max(cam.shake||0,5);attackRelease(W,d>0?0:Math.PI,0.3);sfx('charge')}}
 
 function sigIcon(id,size=32){
 
@@ -4319,7 +4319,7 @@ function fire(id,m,st,ps){
 
      {const bm={x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id};
      // Kamehameha y sus variantes: carga, rayo e impacto de pixelfx (efectos_pixelfx.js); si no carga, el rayo de siempre
-     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)){bm.estilo=PFX_ESTILO[id]||'kame';bm.pfx=PFX.beam(bm)}beams.push(bm)}
+     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)){bm.estilo=PFX_ESTILO[id]||(W.spiral?'espiral':'kame');bm.pfx=PFX.beam(bm)}beams.push(bm)}
 
      P.cast={a,t:ch+dur,pose:attackPose(W),id};sfx('charge');setTimeout(()=>sfx('beam'),ch*1000);break}
 
@@ -6870,8 +6870,8 @@ function heroTilt(left,mx,my){return 0;// Josemi, 4 nov.: al girar el tronco se 
 
   return 0}
 
-// rayos de pixelfx: Kamehameha y variantes, Galick Gun, Final Flash, Masenko y Makankosappo, cada uno con su estilo
-const PFX_RAYO=/kame|galick|finalflash|masenko|makanko/,PFX_ESTILO={galick:'galick',finalflash:'flash',masenko:'masenko',makanko:'espiral'};
+// rayos de pixelfx: todos los rayos del jugador, con sus colores; algunos con estilo propio (los de espiral, «espiral»)
+const PFX_RAYO=/./,PFX_ESTILO={galick:'galick',finalflash:'flash',masenko:'masenko',makanko:'espiral',hellflash:'flash',heatdome:'flash',gamma:'flash',doublesunday:'galick',milky:'galick',gomahwave:'galick',gloriowave:'galick'};
 function drawBeam(b){
   if(b.pfx&&window.PFX&&PFX.drawBeam(ctx,b,b.x-cam.x,b.y-cam.y))return;
 
@@ -7289,6 +7289,7 @@ function render(time){
 
       ring(x,y,r+1+((time*12|0)%3),p.col[0],1)}
 
+    else if(p.k==='disc'&&window.PFX&&PFX.disc&&PFX.disc(ctx,x,y,p.r,p.col,Math.atan2(p.vy,p.vx),time)){}
     else if(p.k==='disc'){const im=discSprite(Math.round(p.r)+2,p.col,(time*24|0)%4);ctx.globalAlpha=0.35;ctx.drawImage(im,x-(im.width>>1)-Math.round(p.vx*0.02),y-(im.height>>1)-Math.round(p.vy*0.02));ctx.globalAlpha=1;ctx.drawImage(im,x-(im.width>>1),y-(im.height>>1))}}
 
   for(const b of beams)drawBeam(b);

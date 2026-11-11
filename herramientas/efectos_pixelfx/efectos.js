@@ -5,16 +5,18 @@ import { createFrame, clearFrame, createFx, composite, painterFor } from "pixelf
 import * as kame from "./fx/kamehameha.js";
 import * as aura from "./fx/aura.js";
 import * as trans from "./fx/transformacion.js";
+import * as kienzan from "./fx/kienzan.js";
+import * as taiyo from "./fx/taiyoken.js";
 import * as plasma from "pixelfx/fx/explosions/plasma-explosion";
 import * as implosion from "pixelfx/fx/explosions/implosion";
 import * as mana from "pixelfx/fx/arcane/mana-burst";
 import * as spark from "pixelfx/fx/impacts/hit-spark";
 import * as crit from "pixelfx/fx/impacts/crit-hit";
 
-const LIB = { plasma, implosion, mana, spark, crit, trans };
+const LIB = { plasma, implosion, mana, spark, crit, trans, taiyo };
 // tope de efectos vivos por tipo: en plena horda no se acumulan cientos
-const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2 };
-const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3 };
+const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2, taiyo: 2 };
+const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3, taiyo: 0.75 };
 
 // rampa oscuro→claro a partir de los colores de la técnica del juego (que ya van de oscuro a claro)
 const hexN = (h) => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map((c) => c + c).join(""); return parseInt(h, 16); };
@@ -37,6 +39,23 @@ let live = [], seed = 1, rayos = [];
 // (los mismos colores que las llamas de antes del juego, auraFlames en script.js)
 const AURA_COL = { gold: ["#e8a010", "#ffd23f", "#fff6a8"], white: ["#7ab8e8", "#bfe6ff", "#ffffff"], orange: ["#d0501a", "#ff9a3a", "#ffe0a0"], red: ["#a01030", "#ff3a5a", "#ffb0c0"], blue: ["#1a7ad8", "#3ad0f0", "#c0f8ff"], green: ["#5aa010", "#b8f040", "#f0ffc0"], purple: ["#5a1a90", "#a050ff", "#e8c8ff"], silver: ["#8a94a8", "#c8d0dc", "#ffffff"] };
 const auraCache = {};
+// bucle de cualquier efecto pintado una vez (fotogramas guardados por clave)
+function loopFrames(mod, key, opts) {
+  if (auraCache[key]) return auraCache[key];
+  const [w, h] = mod.meta.size, [ox, oy] = mod.meta.origin, n = Math.max(1, Math.round(mod.meta.duration * mod.meta.fps));
+  const o = { ...mod.meta.options, ...opts }, frame = createFrame(w, h), img = new ImageData(w, h), out = [];
+  for (let i = 0; i < n; i++) {
+    clearFrame(frame);
+    const p = painterFor(frame); p.place(ox, oy, false, 0); p.fade = 1; p.lightK = 1;
+    const t = (i / n) * mod.meta.duration;
+    if (mod.drawBack) { p.layer = "back"; mod.drawBack(p, t, o); }
+    p.layer = "front"; mod.draw(p, t, o);
+    composite(frame, img.data, null);
+    const cv = document.createElement("canvas"); cv.width = w; cv.height = h; cv.getContext("2d").putImageData(img, 0, 0);
+    out.push(cv);
+  }
+  return (auraCache[key] = { out, ox, oy, fps: mod.meta.fps });
+}
 function auraFrames(kind, rayos) {
   const key = kind + (rayos ? "+" : "");
   if (auraCache[key]) return auraCache[key];
@@ -101,7 +120,7 @@ window.PFX = {
   // explosión de ki (Big Bang, Masenko, Genkidama, Death Ball...): rad = radio de daño del juego
   boom(x, y, rad, cols) { return !!spawn("plasma", x, y, { cols }); },
   // técnicas de área alrededor del personaje
-  nova(x, y, rad, cols, tipo) { return !!spawn(tipo === "hakai" ? "implosion" : tipo === "final" ? "plasma" : "mana", x, y, { cols: tipo === "hakai" ? null : cols }); },
+  nova(x, y, rad, cols, tipo) { if (tipo === "taiyoken") return !!spawn("taiyo", x, y - 10, {}); return !!spawn(tipo === "hakai" ? "implosion" : tipo === "final" ? "plasma" : "mana", x, y, { cols: tipo === "hakai" ? null : cols }); },
   // golpe cuerpo a cuerpo: chispa en cada golpe, golpe crítico en el último del combo
   hit(x, y, dir, last) { return !!spawn(last ? "crit" : "spark", x, y, { flip: dir < 0 }); },
   // aura de la forma, detrás del personaje: (x, y) son los pies en pantalla; k, la escala del dibujo
@@ -110,6 +129,15 @@ window.PFX = {
     ctx.drawImage(im, Math.round(x - A.ox * k), Math.round(y - A.oy * k), im.width * k, im.height * k);
     return true;
   },
+  // disco (Kienzan y parecidos): (x, y) el centro en pantalla, r el radio del juego, a el ángulo de avance
+  disc(ctx, x, y, r, cols, a, time) {
+    const R = Math.max(6, Math.round(r * 1.6)), F = loopFrames(kienzan, "disc" + R + (cols || []).join(), { radio: R, ...(ramp(cols) ? { palette: ramp(cols) } : {}) });
+    const im = F.out[Math.floor(time * F.fps) % F.out.length];
+    ctx.save(); ctx.translate(Math.round(x), Math.round(y)); ctx.rotate(a); ctx.drawImage(im, -F.ox, -F.oy); ctx.restore();
+    return true;
+  },
+  // Taiyoken: destello cegador en la cara
+  taiyoken(x, y) { return !!spawn("taiyo", x, y, {}); },
   // estallido al transformarse, en los pies del personaje, con el color del aura de la nueva forma
   transform(x, y, kind) { return !!spawn("trans", x, y, { cols: AURA_COL[kind] || AURA_COL.gold }); },
   // Kamehameha y familia: devuelve el estado que el juego guarda en el rayo (b.pfx)

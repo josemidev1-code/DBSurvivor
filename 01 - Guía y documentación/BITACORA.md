@@ -4242,3 +4242,11 @@ ode --check.
 - El Masenko pasa de bola grande (`big`) a rayo, como en la serie: recarga 3,2 s (antes 2,4), daño 24+9/nivel, largo 200+15, grosor 11+1,5, carga 0,4 s. Josemi puede pedir que vuelva a ser bola.
 - Probado en partida: Galick Gun (Vegeta), Final Flash (Vegeta Blue manga), Masenko (Gohan), Makankosappo (Piccolo), transformación de Goku y Vegeta. efectos_pixelfx.js?v=4, script.js?v=185.
 - `comprobar_formas.cjs` busca el final de `checkForm` por su texto: la llamada a `PFX.transform` va antes de `burst(...)` y usa `typeof PFX` para que la prueba siga funcionando (sigue fallando como antes por el deseo).
+
+### Todos los rayos, Kienzan y Taiyoken (11 nov., continuación)
+- Josemi: «sí, sigue» (seguir aprovechando PixelFX).
+- Todos los rayos del jugador usan ya el rayo de pixelfx con sus colores (`PFX_RAYO=/./`); estilo `flash` para Hell Flash, Heat Dome y Gamma Burst Flash; `galick` para Double Sunday, Milky Cannon, Onda Demoníaca y Onda Mágica; `espiral` para los que tienen `spiral` (Cañón Especial Bestia). Los rayos enemigos siguen como antes.
+- `fx/kienzan.js` (bucle, propio): disco fino que gira, filo blanco, franjas que giran, chispas y estela. Lo usan todos los proyectiles `disc` del jugador (`PFX.disc`, fotogramas guardados por color y tamaño). Los discos enemigos siguen como antes.
+- `fx/taiyoken.js` (una vez, propio): destello en estrella de 12 rayos, anillo blanco y luz que se apaga en 0,7 s. Sale en `fireSig`, rama `nova`, para el Taiyoken (`PFX.nova` con tipo `taiyoken`).
+- Probado en partida: Kienzan (Krilin), Taiyoken y Kikoho (Tenshinhan). efectos_pixelfx.js?v=5, script.js?v=186.
+- Ojo para pruebas: la casilla de cada técnica no siempre es su posición en `SIGS` (Krilin tiene el Kienzan en la 2). La prueba busca la casilla mirando qué temporizador se pone en marcha.
