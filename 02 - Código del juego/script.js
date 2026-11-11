@@ -3312,6 +3312,10 @@ function sigIcon(id,size=32){
 
       g.drawImage(im,Math.round((size-w)/2),Math.round((size-h)/2),w,h);
 
+      // 11 nov.: cada técnica cuerpo a cuerpo con su color (antes todas tenían el mismo guantelete)
+      if(id!=='punch'){g.globalCompositeOperation='source-atop';g.globalAlpha=0.5;g.fillStyle=C[0];g.fillRect(0,0,size,size);g.globalAlpha=1;g.globalCompositeOperation='source-over';
+        const bs=Math.max(4,size>>2),bx=size-bs-1,by=1;g.fillStyle='#101020';g.fillRect(bx-1,by-1,bs+2,bs+2);g.fillStyle=C[0];g.fillRect(bx,by,bs,bs);g.fillStyle=C[1]||'#fff';g.fillRect(bx+1,by+1,Math.max(1,bs-3),1)}
+
       return ICON_C[k]=addOutline(c,'#101020');
 
     }
@@ -7415,7 +7419,7 @@ function hudBar(x,y,w,h,f,c,hi,lo,lag,ticks=10){
   const fw=Math.round(w*f);if(fw>0){hudR(x,y,fw,h,c);hudR(x,y,fw,1,hi);hudR(x,y+h-1,fw,1,lo)}
   if(ticks)for(let i=1;i<ticks;i++)hudR(x+Math.round(w*i/ticks),y,1,h,'rgba(4,6,15,.42)')}
 function hudPill(t,y,col,edge,cx,size=8){const w=t.length*size+12,h=size+6,x=Math.round(cx-w/2);hudPanel(x,y,w,h,edge);text(t,x+w/2,y+3,col,size);return h}
-function hudCut(t,max){return t.length<=max?t:t.slice(0,Math.max(1,max-1))+'.'}
+function hudCut(t,max){if(t.length<=max)return t;t=t.replace(/\s*\(.*?\)\s*/g,' ').trim();if(t.length<=max)return t;const w=t.split(' ');let o='';for(const x of w){if((o?o.length+1:0)+x.length>max)break;o=o?o+' '+x:x}return o||t.slice(0,Math.max(1,max-1))+'.'}
 function hudFace(hid,form){const k=hid+':'+form;if(k in HUD_FACE)return HUD_FACE[k];HUD_FACE[k]=null;
   try{const src=portrait(hid,form);if(src){const im=new Image();im.onload=()=>{const c=mk(26,26),g=c.getContext('2d'),iw=im.naturalWidth,ih=im.naturalHeight,z=Math.min(26/iw,26/ih);g.imageSmoothingEnabled=z<1;if(z<1)g.imageSmoothingQuality='high';const dw=Math.round(iw*z),dh=Math.round(ih*z);g.drawImage(im,(26-dw)>>1,(26-dh)>>1,dw,dh);HUD_FACE[k]=c};im.src=src}}catch(e){}
   return null}
