@@ -4298,3 +4298,8 @@ ode --check.
 ### Tanda 13 de ataques extra (11 nov., continuación)
 - `zz_tanda_ataques_13_2026_11_11.json`: Magetta (los cinco; solo fotogramas de la escala grande, el pack mezcla dos), Majin Duu (attack2, attack3, kick2, up), Pan GT (attack2, kick2, beam), Paragus (attack2, attack3, beam), Tao Pai Pai (attack2, kick2) y Vegeta Blue maligno (los cinco).
 - Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=132.
+
+### Tanda 14 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_14_2026_11_11.json`: Trunks armadura (attack2, kick2, up), Vegeta Yardrat (attack2, attack3, kick2, up), Vegeta MUI (los cinco), Vegetto falso (attack2, attack3, kick2, beam) y Zamasu fusionado (attack2, kick2, beam, up).
+- Vegeta Dios (`vegetabroly`, pack 305) se quedó fuera: los fotogramas extra elegidos (58, 59, 69, 70, 84-86) salían a ~838×801 al montar mientras sus ataques actuales salen a 68×58. Hay que mirar por qué antes de tocarlo.
+- Revisados con `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=133.

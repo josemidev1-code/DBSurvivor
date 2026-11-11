@@ -1,0 +1,95 @@
+{
+  "heroe": "zamasufusion",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Zamasu/106_Zamasu e Black Fusão Desmanchando",
+  "frames": [
+    {
+      "sha256": "414c012e028d715b1dfc6d05e926d65ee52d993426fe7b4b3cf8224ee6c3bb7b",
+      "indice": 2
+    },
+    {
+      "sha256": "e06b4c1851f94a89165e5a6981f19db9ceeb3a081e3a367a046fecb9f1db9395",
+      "indice": 3
+    },
+    {
+      "sha256": "2979188b4df5ac0279bc77cf807f0b5bab0346390c867f2a0a0e547cf6006e8b",
+      "indice": 31
+    },
+    {
+      "sha256": "d889c46c015899f197f07dbb889ea4ec541266e5fa38eb45954e87c44be609da",
+      "indice": 44
+    },
+    {
+      "sha256": "9c199185d45f620963a8bb7f547cfe614a449c40a6c2e7f9db6f59d97820ad41",
+      "indice": 84
+    },
+    {
+      "sha256": "68e107634b7d150a5a741ea63bf7ce4921a72a082e7240dd0aa06fc8cb1451c8",
+      "indice": 79
+    },
+    {
+      "sha256": "5b11c6ebf6da16c97d1e7e9cf97141fd135f604ff7b05330b431e74bc192d3b4",
+      "indice": 47
+    },
+    {
+      "sha256": "bbe5395ec5ce8db2a778f20d92b38002f98aea2d6ef52efc27053a31a8d787e4",
+      "indice": 48
+    },
+    {
+      "sha256": "9e730c4f847634eb7356d3830ff3f6f48029b3e3d9e396830519deab04f276f2",
+      "indice": 65
+    },
+    {
+      "sha256": "c3ce989e5e55a5d6944ab3de2ae636598b58aed401f7df0c703f0a8dc9ca1aab",
+      "indice": 69
+    },
+    {
+      "sha256": "692178092e9fd7b9f7fbc0ffe950975c424ba31fc9834e7860f32066cefc4cd7",
+      "indice": 112
+    },
+    {
+      "sha256": "7a5a79eb6070424d4127d2db992538ca4b78accb53251fe55828366323963899",
+      "indice": 113
+    },
+    {
+      "sha256": "25f0913f4a59d8ed2391def70db128c2b587984671c178d57cd6a39de85d7bef",
+      "indice": 1001
+    },
+    {
+      "sha256": "5d70fb0567841f6948087c654f8ef1612bd8a956e4d117ae82afecfb0fb2d25c",
+      "indice": 1002
+    },
+    {
+      "sha256": "cb18d13585ad8509f73bcaec01fc5f049dd058c35a38c7064a9ff96ea8af1be7",
+      "indice": 1008
+    },
+    {
+      "sha256": "c3ce989e5e55a5d6944ab3de2ae636598b58aed401f7df0c703f0a8dc9ca1aab",
+      "indice": 69
+    },
+    {
+      "sha256": "7de2cf3c0089016e30a04e50160cdcac9b511b976e4a25e4ff1afb79455b13b7",
+      "indice": 70
+    },
+    {
+      "sha256": "60f3eed2563ebf8bfe8082c65a0810bb32f68ed88a3046c6015e20bc2242d3eb",
+      "indice": 76
+    },
+    {
+      "sha256": "bc241de817e5e61a15aa9729aa60e59e21fee2f99dffd6fc6b4a2653101f5892",
+      "indice": 77
+    },
+    {
+      "sha256": "7e1eb553e7fe204fd7e928e5d7ac7355d1f8f87315ab0ae11afcc6e1474c1f04",
+      "indice": 125
+    },
+    {
+      "sha256": "747ed5c5c2245417728ac4d13750603d49f77d49944a4d72b081185c878d018b",
+      "indice": 126
+    },
+    {
+      "sha256": "6977c7e5e41c41ce6df713c7c37c3493103f797fbf547245b2ca1bd7ba48e3b2",
+      "indice": 135
+    }
+  ]
+}

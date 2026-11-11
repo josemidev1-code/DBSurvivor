@@ -6,8 +6,8 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6217** (20 %).
-- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **75**. Sin ninguno: **47**.
+- En los packs usados hay 30590 imágenes y el juego usa **6246** (20 %).
+- Formas de personajes jugables: 225. Con los 5 ataques extra completos: **76**. Sin ninguno: **42**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
 Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no cuenta porque reutiliza el cuerpo del vuelo.
@@ -38,14 +38,9 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | shin | 1 | 51 | 15 | 5 |
 | super17 | 1 | 51 | 15 | 5 |
 | tarble | 1 | 31 | 15 | 5 |
-| trunksarmor | 1 | 74 | 14 | 5 |
 | trunksgt | 1 | 39 | 14 | 5 |
 | vegetabroly | 1 | 101 | 18 | 5 |
-| vegetamui | 1 | 115 | 15 | 5 |
-| vegetayardrat | 1 | 90 | 14 | 5 |
-| vegettofalso | 1 | 124 | 15 | 5 |
 | vegitoblue254 | 1 | 546 | 14 | 5 |
-| zamasufusion | 1 | 136 | 12 | 5 |
 | cell | 5 | 461 | 107 | 4 |
 | gogeta | 3 | 565 | 65 | 4 |
 | gohan | 4 | 278 | 90 | 4 |
@@ -73,6 +68,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | raditz | 2 | 92 | 48 | 2 |
 | roshi | 1 | 82 | 19 | 2 |
 | trunks | 3 | 312 | 69 | 2 |
+| trunksarmor | 1 | 74 | 17 | 2 |
 | vegetaxeno | 1 | 185 | 21 | 2 |
 | vegetto | 4 | 446 | 97 | 2 |
 | a13 | 1 | 142 | 22 | 1 |
@@ -100,7 +96,10 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | majinduu | 1 | 79 | 20 | 1 |
 | nappa | 1 | 104 | 27 | 1 |
 | saibaman | 1 | 46 | 22 | 1 |
+| vegetayardrat | 1 | 90 | 19 | 1 |
+| vegettofalso | 1 | 124 | 22 | 1 |
 | zamasu | 2 | 168 | 47 | 1 |
+| zamasufusion | 1 | 136 | 18 | 1 |
 | a21 | 1 | 195 | 29 | 0 |
 | babyvegeta | 1 | 57 | 22 | 0 |
 | bardockalt | 4 | 329 | 97 | 0 |
@@ -127,6 +126,7 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | turles | 2 | 166 | 51 | 0 |
 | uub | 1 | 93 | 28 | 0 |
 | vegetabluemal | 1 | 89 | 22 | 0 |
+| vegetamui | 1 | 115 | 23 | 0 |
 | vegettofan | 4 | 691 | 98 | 0 |
 | videl | 1 | 83 | 24 | 0 |
 | yamcha | 1 | 79 | 22 | 0 |

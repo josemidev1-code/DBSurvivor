@@ -1,0 +1,91 @@
+{
+  "heroe": "vegetayardrat",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Vegeta/312_vegeta yardrat",
+  "frames": [
+    {
+      "sha256": "935b3d41ca28b2f0b528c4170293abc9b687dea5f583cf7325ddea9f240ec617",
+      "indice": 4
+    },
+    {
+      "sha256": "595734f0fe7cc7ad7a6c47faeae3ce29372c324114b39cb2c5eac4a8b3fb5639",
+      "indice": 19
+    },
+    {
+      "sha256": "5a5875daa9fad997f5ae637ce832f13b11db9c02d06c3ffaa0596b1059608ebb",
+      "indice": 46
+    },
+    {
+      "sha256": "6f9768b1004b6ec2d82acd20760694300119bb61b8e33bfcd8fe6ef176b9f9ab",
+      "indice": 47
+    },
+    {
+      "sha256": "797c04fb4fee4ba04315e0afa7dee6655b3d1d3c3e27bb644b46d536c8cac279",
+      "indice": 48
+    },
+    {
+      "sha256": "4861163badc30bee4bd841af2875e5994f36235f6119547440b8852e4b6b7700",
+      "indice": 51
+    },
+    {
+      "sha256": "06fbe51031301bbb8d2a3b2b922118382fefe46ac536d0e02ccc1572705e99d6",
+      "indice": 53
+    },
+    {
+      "sha256": "1fc036858c66b3637f66c3588bfb9dcb7be1e3601e542d64d09cc21c91c57852",
+      "indice": 70
+    },
+    {
+      "sha256": "b764a9c5152f2cacd71dfe8c58abf3a9d3ee6530a8b9c4560b807acb7a6ff05e",
+      "indice": 69
+    },
+    {
+      "sha256": "f4503e9b6f8eea505ffacd35ad4ef4150a5170e391eb5c427e614adfb4ace60c",
+      "indice": 71
+    },
+    {
+      "sha256": "f5fdab821dd1bf6f3ee4de1d650d6bbbcfff6d7942da91ee6e69aded98ed10cb",
+      "indice": 72
+    },
+    {
+      "sha256": "ff320cad867c32588fdb06a30d02b1aba5316b50ea1aa935aabeb8411789164d",
+      "indice": 66
+    },
+    {
+      "sha256": "526ebf1286d6e615f327d87437559b2e15c500e3fd10a127dac792b8067c55f4",
+      "indice": 67
+    },
+    {
+      "sha256": "77d5e255a4ee0a5a2feae43c39c5b18ebae21c7dba3b2fd488ed1cbedbfabbcb",
+      "indice": 65
+    },
+    {
+      "sha256": "6fce344354bbdafe795bad1a387507420c19d9fc60ed0483e149d8f458756c98",
+      "indice": 27
+    },
+    {
+      "sha256": "e265a996aab84ff176e609b101bbab5e7a615676733548d18ce54cc186e6e015",
+      "indice": 28
+    },
+    {
+      "sha256": "526ebf1286d6e615f327d87437559b2e15c500e3fd10a127dac792b8067c55f4",
+      "indice": 67
+    },
+    {
+      "sha256": "b764a9c5152f2cacd71dfe8c58abf3a9d3ee6530a8b9c4560b807acb7a6ff05e",
+      "indice": 69
+    },
+    {
+      "sha256": "df5029d33a834d8f74955daee0278a3ecabf4202eaa5d45dc58b9ad8d6528d03",
+      "indice": 57
+    },
+    {
+      "sha256": "bc249a79eb23797bb8ad3e49a4d306a4a632207c07c21530bf4197192a75ed92",
+      "indice": 58
+    },
+    {
+      "sha256": "e9c4be9b0783f6642c379adbdcd8f80fb4712f2e72d548101d9b04f6897dc877",
+      "indice": 23
+    }
+  ]
+}
