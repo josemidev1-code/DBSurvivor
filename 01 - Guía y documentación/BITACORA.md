@@ -4126,3 +4126,9 @@ ode --check.
 - Quitar cosas muy repetidas en los personajes (ataques/combos repetidos) y buscar ese tipo de fallos.
 
 ### Lo que hice
+- Selección de personaje: la ficha ya no cambia al pasar el ratón por encima de otra tarjeta; solo al pulsar o tocar. Además pulsar una tarjeta lanzaba un error (`prev` no existía fuera de `openRoster`): ahora es `rosterPreview`. Probado con Playwright (GIF enviado a Josemi).
+- Plantel de 169 a 117 personajes sin perder sprites: `DUPLICADOS_ROSTER` oculta 37 versiones que repetían una forma que ya tiene el personaje principal con más animaciones (Goku clásico ×2, SSJ, SSJ2, SSJ3 ×2, SSJ4 GT, 8 Ultra Instinto, 3 Blue, Vegeta base/SSJ/SSJ2/Blue ×6, Black LSW, Rosé HD…). Para recuperar uno basta quitar su ID de la lista.
+- Unidos como formas de un único personaje (`unir` en el bloque de unificación): GOKU FANMADE (`gokualt`, 13 formas), GOKU BLACK FANMADE (`blackfan`, 7) y VEGETA XENO (base y SSJ4). Goku Yardrat con su SSJ; Kyabe con BASE (pack clásico) y SSJ. La señal del UI de Goku usa ahora `gokuuisign` (14 animaciones en vez de 10).
+- Nombres de forma repetidos corregidos: Gohan «DEFINITIVO» ×2 → la quinta es BESTIA; Trunks «SSJ2 MANGA» ×2 → BASE MANGA y SSJ2 MANGA; Kyabe «SUPER SAIYAN» ×2.
+- Técnicas: 16 versiones que copiaban la lista de Goku/Vegeta/Black/Vegetto tienen ahora técnicas propias de su momento de la serie (Kamehameha x10 en SSJ Kaioken y SSJ4, Golpe del Instinto y Kamehameha Divino en el UI de Granola, Teletransporte primero en Yardrat, Gamma Burst Flash, Ira Divina de Zamasu fusionado…). Ya no quedan dos personajes visibles con la misma lista.
+- Plugin «PixelFX»: no existe en el catálogo de plugins (solo Pixelesq, Pixeltable…). El proyecto ya usa los efectos PixelFX en `efectos_pixelfx.js`.

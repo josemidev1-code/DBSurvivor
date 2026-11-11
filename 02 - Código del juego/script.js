@@ -3002,6 +3002,26 @@ const SIGS_SERIE={raditz:['kiblast','punch','saturday','doublesunday','kick','re
  dyspo:['dysposlash','dyspoball','kick','dysposhoot','punch']};
 
 for(const id in NUEVOS)SIGS[id]=SIGS_SERIE[id]||NUEVOS[id].sig;
+// 11 nov.: cada versión con sus técnicas de la serie, en vez de copiar la lista de Goku o Vegeta base
+Object.assign(SIGS,{
+  gokussjkaioken:['kiblast','kaioken','kame10x','punch','dragonfist','kick'],   // Kaioken x10 Kamehameha
+  gokuuiverdadero:['kiblast','silver','punch','godkame','instant','kick'],       // UI a su manera (Granola)
+  gokussjchaqueta:['kiblast','punch','kame','kick','instant','godkame'],
+  gokupatrulla:['kiblast','instant','kame','punch','silver','godkame'],          // saga de Moro
+  gokussj4daima:['kiblast','punch','kame10x','kick','dragonfist','instant'],     // el Kamehameha x10 del SSJ4
+  gokuyardrat:['kiblast','instant','kame','kick','kaioken','punch'],             // aprende el Teletransporte en Yardrat
+  vegetamui:['kiblast','silver','galick','punch','finalflash','finalexp'],
+  vegetabluemal:['kiblast','punch','galick','gamma','finalflash','finalexp'],
+  vegetayardrat:['kiblast','punch','galick','kick','bigbang','finalflash'],
+  vegetaxeno:['kiblast','punch','galick','finalshine','bigbang','finalflash'],      // Final Shine en SSJ4
+  bramajin:['kiblast','galick','punch','kick','brablast','renzoku'],
+  bardockalt:['kiblast','riot','punch','finalspirit','kick','renzoku'],
+  vegitoblue254:['kiblast','spiritsword','finalkame','punch','godkame','kick'],
+  vegettofalso:['kiblast','bigbang','punch','finalkame','renzoku','kick'],
+  blackkaioshin:['kiblast','kiblade','blackkame','punch','holywrath','kick'],
+  zamasufusion:['kiblast','lances','holywrath','kiblade','scythe','kick']
+});
+for(const id in SIGS)if(SIGS[id])SIGS[id]=SIGS[id].filter(m=>MV[m]);
 
 // 3 nov.: técnicas propias del plan «sprites para casa»
 
@@ -7570,7 +7590,7 @@ SCPACK.h.vegeta[2]='vegeta-grade';SCPACK.h.gokuui[4]='goku-uic';
 
 // hand-picked animations (herramientas/animaciones.json -> animaciones_juego.js) replace the pack of that form
 
-const PORTRAIT={},BUSTO={};
+const PORTRAIT={},BUSTO={},FUSIONADOS=new Set();
 
 // Unificación de personajes ("que vengan de una"): consolidar formas variantes en sus héroes canónicos
 
@@ -7596,6 +7616,19 @@ if(window.ANIM_SET && ANIM_SET.h){
 
   // 11 nov.: Kyabe tenía dos «SUPER SAIYAN»; ahora BASE (pack clásico) y SUPER SAIYAN del mismo estilo
   if(ah.kyabe&&ah.kyabeclasico&&ah.kyabeclasico[0]&&ah.kyabe[1]){ah.kyabe={0:ah.kyabeclasico[0],1:ah.kyabe[1]}}
+
+  // 11 nov. (Josemi: «organízalos, quédate con los mejores»): las versiones inventadas por fans y de Heroes
+  // dejan de ser personajes sueltos con la misma lista de técnicas y pasan a ser formas de un único personaje.
+  {const unir=(dst,srcs)=>{if(!ah[dst]||!HDEF[dst])return;const D=HDEF[dst],forms=[...D.forms],aura=[...(D.aura||[])];let n=Object.keys(ah[dst]).length;
+    for(const src of srcs){const A=ah[src],S=HDEF[src];if(!A||!S)continue;const k=Object.keys(A).map(Number).sort((a,b)=>a-b);
+      k.forEach((f,i)=>{ah[dst][n++]=A[f];forms.push(S.forms[Math.min(i,S.forms.length-1)]);aura.push((S.aura||[])[Math.min(i,(S.aura||[]).length-1)]||'white')});FUSIONADOS.add(src)}
+    D.forms=forms;D.aura=aura};
+   unir('gokualt',['gokureymono','gokussjlegend','gokudiosberserk','gokussj4dios','gokussjsupremo','gokuultradios','gokumuidios','gokumuiblue','gokumuiblueevo','gokuevilssj2']);
+   unir('blackfan',['blackfalso','blackmajin','blackrosen']);
+   unir('vegetaxeno',['vegetaxenossj4']);
+   if(HDEF.gokualt){HDEF.gokualt.name='GOKU FANMADE';HDEF.gokualt.desc='Las versiones de Goku inventadas por fans: Místico, Ikari, Bestia, Rey Mono, Legendario, Dios Berserker, UI Blue y más.'}
+   if(HDEF.blackfan)HDEF.blackfan.desc='Goku Black en formas creadas por fans: Rage, Rosé Kaioken, Rosé UI, MUI, SSJ falso, Majin Dios y Rosé Evolution.';
+   if(HDEF.vegetaxeno)HDEF.vegetaxeno.desc='Vegeta Xeno, patrullero del tiempo de Dragon Ball Heroes, de base a Super Saiyan 4.'}
 
   if(ah.vegeta){
 
@@ -7643,7 +7676,7 @@ const DUPLICADOS_ROSTER = new Set(['gokugt','gokusuper','gokuui','vegetagt','veg
 
 var FUERA=new Set(); // Roshi ya tiene sprites propios (3 nov.); antes se ocultaba aquí
 
-DUPLICADOS_ROSTER.forEach(k=>FUERA.add(k));
+DUPLICADOS_ROSTER.forEach(k=>FUERA.add(k));FUSIONADOS.forEach(k=>FUERA.add(k));
 
 for(const id in HDEF){const D=HDEF[id],A=window.ANIM_SET&&ANIM_SET.h[id];if(D.npc||D.custom)continue;
 
