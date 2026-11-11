@@ -8529,7 +8529,7 @@ function buildCards(){const box=$('#chars');box.innerHTML='';cardTimers.forEach(
 
       rosterAnim.id=id;rosterAnim.form=f;writeSave();
 
-      prev(id);sfx('select');
+      rosterPreview(id);sfx('select');
 
     };
 
@@ -8798,9 +8798,8 @@ function rosterForm(d){const id=rosterAnim.id,H=HEROES[id];if(!H)return;const n=
 
   if(d){rosterAnim.t0=performance.now();const s=loadSave();s.selForm=s.selForm||{};s.selForm[id]=f;writeSave();sfx('select')}}
 
-function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildCards();const s=loadSave(),all=Object.keys(HEROES).filter(spriteHero);
-
-  const prev=id=>{const H=HEROES[id];if(!H)return;
+// ficha de la izquierda: solo cambia al pulsar (o tocar) un personaje, nunca al pasar el ratón por encima
+function rosterPreview(id){const H=HEROES[id];if(!H)return;
 
     const sv=loadSave();if(rosterAnim.id!==id)rosterAnim.form=(sv.selForm&&sv.selForm[id]!==undefined)?sv.selForm[id]:0;
 
@@ -8812,11 +8811,13 @@ function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildC
 
     document.querySelectorAll('#chars .card').forEach(c=>c.classList.toggle('selected',c.dataset.id===id));
 
-  };
+}
+function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildCards();const s=loadSave(),all=Object.keys(HEROES).filter(spriteHero);
+
 
   if(!rosterAnim.on){rosterAnim.on=1;const loop=()=>{if($('#roster').hidden){rosterAnim.on=0;return}drawRosterAnim();drawCardSprites(performance.now()/1000);requestAnimationFrame(loop)};loop()}
 
-  $('#chars').querySelectorAll('.card').forEach(b=>{b.onmouseenter=b.onfocus=()=>prev(b.dataset.id)});prev(companion());
+  rosterPreview(companion());
 
   $('#rInfo').innerHTML=`Tienes <b>${all.filter(k=>s.owned[k]).length}</b> de <b>${all.length}</b>. Toca uno tuyo para seleccionarlo o cambiar su forma; pulsa JUGAR para saltar directo a la batalla.`}
 
