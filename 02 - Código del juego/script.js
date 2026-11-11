@@ -4779,7 +4779,8 @@ function bossAI(e,dt){
 
 // ---------- level up / cards ----------
 
-function gainXP(v){if(S.ev&&S.ev.k==='gravedad')v*=2;P.xp+=v*stats().xp;while(P.xp>=P.need){P.xp-=P.need;P.lvl++;P.need=need(P.lvl);S.pending++}}
+function gainXP(v){if(S.ev&&S.ev.k==='gravedad')v*=2;P.xp+=v*stats().xp;const lv0=P.lvl;while(P.xp>=P.need){P.xp-=P.need;P.lvl++;P.need=need(P.lvl);S.pending++}
+  if(P.lvl>lv0&&typeof PFX!=='undefined'&&PFX.nivel)PFX.nivel(P.x,P.y,P.lvl)}
 
 const RELICS={
 
@@ -5325,7 +5326,7 @@ function update(dt){
 
     if(k.k==='magnet'||d<ps.mag*0.6){k.x+=(P.x-k.x)*dt*6;k.y+=(P.y-k.y)*dt*6}
 
-    if(d<12){k.got=1;
+    if(d<12){k.got=1;if(typeof PFX!=='undefined'&&PFX.recoger)PFX.recoger(k.x,k.y,k.k);
 
       if(k.k==='senzu'||k.k==='capsulaVida'||k.k==='capsulaKi'||k.k==='radar'||k.k==='capsulaDorada'||k.k==='capsulaRoja'||k.k==='senzuBolsa')recogerObjeto(k.k,ps);
 
@@ -7125,7 +7126,7 @@ function render(time){
 
     else if(k.k==='zeni'){ctx.fillStyle=OUTL;ctx.fillRect(x-3,y-7,7,7);ctx.fillStyle='#ffd23f';ctx.fillRect(x-2,y-6,5,5);ctx.fillStyle='#fff3a0';ctx.fillRect(x-1,y-5,2,2)}
 
-    else if(k.k==='dball'){const b=Math.round(Math.sin(time*5)*2);ring(x,y-8+b,7+((time*8|0)%2),'rgba(255,200,80,.6)');drawDBall(x,y-8+b,k.n)}
+    else if(k.k==='dball'){const b=Math.round(Math.sin(time*5)*2);if(window.PFX&&PFX.columna)PFX.columna(ctx,x,y,time);ring(x,y-8+b,7+((time*8|0)%2),'rgba(255,200,80,.6)');drawDBall(x,y-8+b,k.n)}
 
     else if(k.k==='chest'){const b=(time*6|0)%2;ctx.fillStyle=OUTL;ctx.fillRect(x-8,y-12-b,16,12);ctx.fillStyle='#b8741a';ctx.fillRect(x-7,y-11-b,14,10);ctx.fillStyle='#ffd23f';ctx.fillRect(x-7,y-8-b,14,2);ctx.fillRect(x-1,y-9-b,3,4)}}
 

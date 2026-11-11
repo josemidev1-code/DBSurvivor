@@ -4257,3 +4257,11 @@ ode --check.
 - `fx/golpe.js` (propio): golpe final de combo al estilo anime (líneas de choque radiales, estrella blanca con un rayo largo hacia delante, anillo que se rompe, chispas; 0,35 s). En el último golpe hay además una parada de impacto de 0,05 s (`S.freeze`) y sacudida de cámara 3. El Puño del Dragón añade `crit-hit`.
 - `PFX.hit(x,y,dir,tipo)` con tipo `normal`, `final` o `dragon` (acepta aún `true` = dragon). efectos_pixelfx.js?v=6, script.js?v=187. `comprobar_combate` bien.
 - Probado en partida con Goku (puñetazos). El Puño del Dragón no se pudo lanzar en la prueba automática (no encontró su casilla).
+
+### Recompensas e interfaz con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «recompensas e interfaz».
+- Al recoger un objeto: `pickups/collect-burst` con el color del objeto (esfera dorada, Senzu verde, zeni amarillo, cápsulas de su color; `RECOGER_COL` en `efectos.js`). Llamada `PFX.recoger` al poner `k.got`.
+- Esferas del Dragón en el suelo: columna de luz dorada detrás para verlas desde lejos (`fx/columna_esfera.js`: copia de `pickups/loot-beam` de pixelfx sin la espada del suelo; `PFX.columna`, fotogramas guardados).
+- Subida de nivel: `ui/level-up` de pixelfx con el texto «NIVEL n» (la fuente no tiene ¡ ni acentos). Se lanza en `gainXP` si sube el nivel (`PFX.nivel`); se ve al cerrar la ventana de mejoras porque la partida está en pausa.
+- Las gemas de experiencia siguen igual (son demasiadas para un efecto cada una).
+- Probado en partida con Goku. efectos_pixelfx.js?v=7, script.js?v=188.
