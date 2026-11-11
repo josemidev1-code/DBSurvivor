@@ -13,16 +13,19 @@ import * as columna from "./fx/columna_esfera.js";
 import * as collect from "pixelfx/fx/pickups/collect-burst";
 import * as lvl from "pixelfx/fx/ui/level-up";
 import * as clima from "./fx/clima.js";
+import * as poof from "pixelfx/fx/spawn/poof";
+import * as big from "pixelfx/fx/explosions/big-explosion";
+import * as thunder from "pixelfx/fx/lightning/thunderclap";
 import * as plasma from "pixelfx/fx/explosions/plasma-explosion";
 import * as implosion from "pixelfx/fx/explosions/implosion";
 import * as mana from "pixelfx/fx/arcane/mana-burst";
 import * as spark from "pixelfx/fx/impacts/hit-spark";
 import * as crit from "pixelfx/fx/impacts/crit-hit";
 
-const LIB = { plasma, implosion, mana, spark, crit, trans, taiyo, golpe, blunt, collect, lvl };
+const LIB = { plasma, implosion, mana, spark, crit, trans, taiyo, golpe, blunt, collect, lvl, poof, big, thunder };
 // tope de efectos vivos por tipo: en plena horda no se acumulan cientos
-const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2, taiyo: 2, golpe: 4, blunt: 8, collect: 6, lvl: 1 };
-const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3, taiyo: 0.75, golpe: 0.4, blunt: 0.7, collect: 1.4, lvl: 2.6 };
+const CAP = { plasma: 10, implosion: 4, mana: 6, spark: 14, crit: 6, trans: 2, taiyo: 2, golpe: 4, blunt: 8, collect: 6, lvl: 1, poof: 8, big: 1, thunder: 2 };
+const MAX_T = { plasma: 1.2, implosion: 1.7, mana: 1.3, spark: 0.5, crit: 0.8, trans: 2.3, taiyo: 0.75, golpe: 0.4, blunt: 0.7, collect: 1.4, lvl: 2.6, poof: 1.1, big: 4.5, thunder: 1.6 };
 
 // rampa oscuro→claro a partir de los colores de la técnica del juego (que ya van de oscuro a claro)
 const hexN = (h) => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map((c) => c + c).join(""); return parseInt(h, 16); };
@@ -82,7 +85,7 @@ function auraFrames(kind, rayos) {
 }
 
 // ---- rayos tipo Kamehameha: un lienzo por rayo, del largo del rayo, que el juego gira con el ángulo del disparo
-const RAYO_MAX = 4;
+const RAYO_MAX = 6;
 function nuevoRayo(b) {
   if (rayos.length >= RAYO_MAX) return null;
   const hw = Math.max(3, b.wid / 2), ML = Math.round(hw * 1.6 + 16), MR = Math.round(hw * 2.6 + 70);
@@ -179,6 +182,14 @@ window.PFX = {
     for (let y = oy; y < vh; y += h) for (let x = ox; x < vw; x += w) ctx.drawImage(c.cv, x, y);
     return true;
   },
+  // muerte de un enemigo: "normal" (nube con estrellas), "elite" (explosión de plasma) o "jefe" (explosión grande con hongo)
+  muerte(x, y, tipo, cols) {
+    if (tipo === "jefe") return !!spawn("big", x, y, {});
+    if (tipo === "elite") return !!spawn("plasma", x, y - 10, { cols: cols || ["#d8501a", "#ffa040", "#fff0c0"] });
+    return !!spawn("poof", x, y, {});
+  },
+  // llegada de un jefe: relámpago que cae con onda y polvo
+  llegada(x, y) { return !!spawn("thunder", x, y, {}); },
   // Taiyoken: destello cegador en la cara
   taiyoken(x, y) { return !!spawn("taiyo", x, y, {}); },
   // estallido al transformarse, en los pies del personaje, con el color del aura de la nueva forma

@@ -4219,6 +4219,7 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
   e.dead=true;S.kills++;S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
 
+  if(typeof PFX!=='undefined'&&PFX.muerte)PFX.muerte(e.x,e.y,e.boss?'jefe':ET[e.type].elite?'elite':'normal');
   if(e.boss){for(let i=0;i<6;i++)setTimeout(()=>{fx(e.x+rnd(-18,18),e.y-10+rnd(-18,12),i%2?'fire':'gold',16+(i%3)*4,0.6);smoke(e.x,e.y-10,6)},i*140)}
 
   else fx(e.x,e.y-e.h*0.45,DEATHK[e.type]||"fire",8,0.36);
@@ -4519,7 +4520,7 @@ function director(dt){
 
 function spawnBoss(id,final){islandStart();const a=rnd(TAU);S.bossN=S.bossIdx-1;if(S.endless)S.bossN=4;const e=spawn(id,P.x+Math.cos(a)*90,P.y+Math.sin(a)*90);e.final=!!final;S.boss=e;e.powT=1.8;
 
-  S.banner={t:3,text:'¡'+ET[id].n+'!',sub:S.isl.name+' · derrota al jefe y elige una mejora',boss:1};sfx('boss');cam.shake=6}
+  S.banner={t:3,text:'¡'+ET[id].n+'!',sub:S.isl.name+' · derrota al jefe y elige una mejora',boss:1};sfx('boss');cam.shake=6;if(window.PFX&&PFX.llegada)PFX.llegada(e.x,e.y)}
 
 
 
@@ -4731,7 +4732,9 @@ const BBEAM={frieza:['RAYO MORTAL',['#a0207a','#ff6ad0','#ffffff'],8],golden:['R
 
 function bossBeam(e,dt){const B=BBEAM[e.type];if(!B)return false;e.bT=(e.bT===undefined?5:e.bT)-dt;
 
-  if(e.bT<=0){e.bT=7+rnd(0,2);ebeams.push({e,x:e.x,y:e.y-14,a:Math.atan2(P.y-10-(e.y-14),P.x-e.x),t:-1.1,T:1.1,dur:0.8,len:460,wid:B[2],col:B[1],name:B[0],big:B[2]>14,dmg:e.dmg*1.6})}
+  if(e.bT<=0){e.bT=7+rnd(0,2);const eb={e,x:e.x,y:e.y-14,a:Math.atan2(P.y-10-(e.y-14),P.x-e.x),t:-1.1,T:1.1,dur:0.8,len:460,wid:B[2],col:B[1],name:B[0],big:B[2]>14,dmg:e.dmg*1.6};
+    // rayo de jefe con pixelfx (el aviso rojo discontinuo se sigue dibujando encima)
+    if(window.PFX&&PFX.beam){eb.estilo=/FLASH/.test(B[0])?'flash':/GALICK|SUPERNOVA/.test(B[0])?'galick':'kame';eb.pfx=PFX.beam(eb)}ebeams.push(eb)}
 
   return ebeams.some(b=>b.e===e&&b.t<0.8)}
 

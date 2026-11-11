@@ -4271,3 +4271,10 @@ ode --check.
 - Los climas de pixelfx (`weather/*`) traen su propio cielo y suelo vistos de lado, así que no valen para la vista cenital. Hecho `fx/clima.js` (propio): capa transparente de 320×180 que se repite sin costuras, con tipo `lluvia` (gotas y salpicaduras), `hojas`, `ceniza` (brasas que suben), `niebla` y `destellos`.
 - `CLIMA` en `script.js` (antes de `render`): bosque, Monte Paoz y praderas → hojas; Futuro de Trunks → lluvia; tierra volcánica, infierno y Planeta Vegeta → ceniza; Templo de Kami → niebla; Mundo Kaioshin → destellos. Se dibuja encima del mundo y debajo del HUD, pegado al mundo (se mueve con la cámara), con `PFX.clima`; se repinta a 30 fps como mucho.
 - Probado en partida en los siete escenarios. efectos_pixelfx.js?v=8, script.js?v=189.
+
+### Enemigos y jefes con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «enemigos y jefes».
+- Rayos de los jefes (`bossBeam`, `BBEAM`): usan el rayo de pixelfx con sus colores (estilo `flash` si el nombre lleva FLASH; `galick` si lleva GALICK o SUPERNOVA). El aviso rojo discontinuo se sigue dibujando para poder esquivar. `RAYO_MAX` sube a 6.
+- Muertes (`kill`): enemigos normales → `spawn/poof` (nube con estrellas; tope de 8 a la vez); élite → explosión de plasma naranja; jefes → `explosions/big-explosion` (fogonazo y hongo de humo). `PFX.muerte`.
+- Llegada de un jefe (`spawnBoss`): `lightning/thunderclap` (relámpago que cae con onda y polvo). `PFX.llegada`.
+- Probado en partida con Freezer y Saibaman. Al morir el jefe la partida se pausa para la recompensa: la explosión grande sigue al cerrarla. efectos_pixelfx.js?v=9, script.js?v=190.
