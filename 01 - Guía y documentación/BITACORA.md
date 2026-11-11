@@ -4148,3 +4148,10 @@ ode --check.
 ### Siguiente paso recomendado
 - Seguir la tanda 10 con las formas de packs más ricos: Bra Majin (315 fotogramas), Vegetto Blue 254 (pack mixto), Vegeta Xeno, Androide 13, Dyspo, Gohan del Futuro. Después los fanmade unidos en GOKU FANMADE y BLACK FANMADE.
 - Que Josemi juegue en el móvil y diga si la barra de ataques y la ficha de personajes son cómodas.
+
+## 2026-11-11 — Claude Opus 5.5 (tanda 10, continuación)
+
+### Lo que pidió el usuario
+- Josemi ya tiene el juego en local: «sigue con las animaciones».
+
+### Lo que hice
