@@ -1,12 +1,27 @@
-"""Dibuja el título de la pantalla de inicio en pixel art: «DRAGON BALL» con la
-esfera de cuatro estrellas en la O y «SURVIVOR» debajo (estilo de la foto que
-mandó Josemi). Sale a ui/titulo.png a tamaño nativo; el juego lo amplía sin
-suavizar. También lo incrusta como «titulo» en ui_imagenes.js (sin tocar el
-resto: montar_objetos.py volvería a recortar los iconos redibujados).
+"""Título de la pantalla de inicio en pixel art, copiando el logo de la foto que
+mandó Josemi («DRAGON BALL DAIMA», estilo.png) con «SURVIVOR» en lugar de DAIMA.
 
-    python herramientas/generar_titulo.py [--zoom 6]   # --zoom guarda también una vista ampliada
+Rasgos de la foto que se reproducen:
+- Letras altas y estrechas; DRAGON baja de tamaño hacia la esfera y BALL vuelve
+  a crecer hacia la derecha (forma de «V» suave), con la parte de arriba de cada
+  letra cortada en diagonal siguiendo esa línea.
+- DRAGON: amarillo plano arriba y tramado en damero hacia naranja abajo.
+  BALL: rojo anaranjado arriba y tramado hacia rojo oscuro abajo.
+- Contorno negro grueso; los huecos de las letras quedan negros.
+- La O es una esfera del dragón naranja con aro amarillo y estrella roja.
+- Pincelada lila/morada detrás de BALL, que sube hacia la derecha y se deshace.
+- Rótulo de abajo en letras negras con borde blanco y filo negro (como DAIMA),
+  y chispas amarillas a la izquierda.
+
+Sale a ui/titulo.png a tamaño nativo y se incrusta como «titulo» en
+ui_imagenes.js (sin tocar el resto: montar_objetos.py volvería a recortar los
+iconos redibujados).
+
+    python herramientas/generar_titulo.py [--zoom 4]   # --zoom guarda también herramientas/titulo_zoom.png
 """
+import base64
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -14,95 +29,139 @@ from PIL import Image
 
 RAIZ = Path(__file__).resolve().parent.parent
 
-# Letras de 8×12 (las estrechas, menos). «#» = relleno.
-G = {
- "D": ["######..", "#######.", "###..###", "###...##", "###...##", "###...##",
-       "###...##", "###...##", "###...##", "###..###", "#######.", "######.."],
- "R": ["######..", "#######.", "###..###", "###..###", "###..###", "#######.",
-       "######..", "###.###.", "###..###", "###..###", "###..###", "###..###"],
- "A": ["..####..", ".######.", "###..###", "###..###", "###..###", "########",
-       "########", "###..###", "###..###", "###..###", "###..###", "###..###"],
- "G": [".######.", "########", "###..###", "###.....", "###.....", "###.####",
-       "###.####", "###..###", "###..###", "###..###", "########", ".######."],
- "N": ["###..###", "####.###", "####.###", "########", "########", "###.####",
-       "###.####", "###..###", "###..###", "###..###", "###..###", "###..###"],
- "B": ["######..", "#######.", "###..###", "###..###", "###.###.", "######..",
-       "#######.", "###..###", "###..###", "###..###", "########", "#######."],
- "L": ["###.....", "###.....", "###.....", "###.....", "###.....", "###.....",
-       "###.....", "###.....", "###.....", "###.....", "########", "########"],
- "S": [".######.", "########", "###..###", "###.....", "####....", ".######.",
-       "..######", "....####", ".....###", "###..###", "########", ".######."],
- "U": ["###..###", "###..###", "###..###", "###..###", "###..###", "###..###",
-       "###..###", "###..###", "###..###", "###..###", "########", ".######."],
- "V": ["###...###", "###...###", "###...###", "###...###", "###...###", "###...###",
-       ".###.###.", ".###.###.", "..#####..", "..#####..", "...###...", "...###..."],
- "I": ["###", "###", "###", "###", "###", "###", "###", "###", "###", "###", "###", "###"],
- "O": [".######.", "########", "###..###", "###..###", "###..###", "###..###",
-       "###..###", "###..###", "###..###", "###..###", "########", ".######."],
-}
-
-NEGRO = (16, 10, 24, 255)
-SOMBRA = (58, 18, 4, 255)
-
 
 def hexc(h):
     h = h.lstrip("#")
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4)) + (255,)
 
 
-AMARILLO = [hexc(c) for c in ("#fff6a8", "#ffe63a", "#ffd21f", "#ffb31a", "#f58a0c")]
-ROJO = [hexc(c) for c in ("#ffb07a", "#ff6a2a", "#f2421a", "#d8240f", "#a8140a")]
-BLANCO = [hexc(c) for c in ("#ffffff", "#ffffff", "#eef0ff", "#d8dcf2", "#b9bfe0")]
-BLANCO_AZUL = [hexc(c) for c in ("#ffffff", "#ffffff", "#e4ecff", "#a8c4ff", "#6a94f0")]
-MORADO = [hexc(c) for c in ("#c06cff", "#9a4ae8", "#7a33c8", "#5a2496")]
-ESFERA = [hexc(c) for c in ("#fff0b0", "#ffd04a", "#ffb21a", "#f58a0c", "#c8640a")]
-ESTRELLA = hexc("#e4241a")
-ESTRELLA_OSC = hexc("#9a1208")
+NEGRO = hexc("#0a0a12")
+BLANCO = hexc("#ffffff")
+T = (0, 0, 0, 0)
+
+# Letras grandes: 8×16, trazo de 3.
+G16 = {
+ "D": ["######..", "#######.", "###.####"] + ["###..###"] * 10 + ["###.####", "#######.", "######.."],
+ "R": ["######..", "#######.", "###.####"] + ["###..###"] * 3 + ["###.####", "#######.", "######..", "###.###.", "###.####"] + ["###..###"] * 5,
+ "A": ["..####..", ".######."] + ["###..###"] * 7 + ["########", "########"] + ["###..###"] * 5,
+ "G": [".######.", "########", "###..###"] + ["###....."] * 4 + ["###.####", "###.####"] + ["###..###"] * 5 + ["########", ".######."],
+ "N": ["###..###", "####.###", "####.###", "########", "########", "###.####", "###.####"] + ["###..###"] * 9,
+ "B": ["######..", "#######.", "###.####"] + ["###..###"] * 3 + ["###.###.", "######..", "#######.", "###.####"] + ["###..###"] * 4 + ["########", "#######."],
+ "L": ["###....."] * 14 + ["########", "########"],
+}
+
+# Letras del rótulo: 7×9, anchas como las de DAIMA.
+G9 = {
+ "S": [".#####.", "##...##", "##.....", ".####..", "...###.", ".....##", "##...##", "##...##", ".#####."],
+ "U": ["##...##"] * 7 + ["##...##", ".#####."],
+ "R": ["######.", "##...##", "##...##", "##...##", "######.", "##.##..", "##..##.", "##...##", "##...##"],
+ "V": ["##...##"] * 5 + [".##.##.", ".##.##.", "..###..", "...#..."],
+ "I": ["####"] + [".##."] * 7 + ["####"],
+ "O": [".#####.", "##...##", "##...##", "##...##", "##...##", "##...##", "##...##", "##...##", ".#####."],
+}
 
 
-def bitmap(letra, alto, escala_x):
-    """Glifo ampliado: ancho ×escala_x y estirado (vecino más cercano) a `alto`."""
-    filas = G[letra]
-    w = len(filas[0]) * escala_x
-    out = []
-    for y in range(alto):
-        fy = min(len(filas) - 1, int(y * len(filas) / alto))
-        out.append([filas[fy][x // escala_x] == "#" for x in range(w)])
-    return out
+def damero(a, b, f, x, y):
+    """Tramado ordenado 2×2 entre a y b (f = 0..1)."""
+    umbral = [[0.125, 0.625], [0.875, 0.375]][y % 2][x % 2]
+    return b if f > umbral else a
 
 
-def degradado(paleta, t, x, y):
-    """Color de la paleta para t∈[0,1] con tramado en damero entre tonos."""
-    pos = t * (len(paleta) - 1)
-    i = int(pos)
-    f = pos - i
-    if i >= len(paleta) - 1:
-        return paleta[-1]
-    # 3 niveles de tramado: <0.33 tono i, 0.33-0.66 damero, >0.66 tono i+1
-    if f < 0.33:
-        return paleta[i]
-    if f > 0.66:
-        return paleta[i + 1]
-    return paleta[i] if (x + y) % 2 == 0 else paleta[i + 1]
+class Capa:
+    def __init__(self, w, h):
+        self.im = Image.new("RGBA", (w, h), T)
+        self.px = self.im.load()
+        self.w, self.h = w, h
+
+    def p(self, x, y, c):
+        if 0 <= x < self.w and 0 <= y < self.h:
+            self.px[x, y] = c
+
+    def get(self, x, y):
+        if 0 <= x < self.w and 0 <= y < self.h:
+            return self.px[x, y]
+        return T
 
 
-def esfera(img, cx, cy, r):
-    """Esfera del dragón de cuatro estrellas (centrada en cx, cy)."""
+def contorno(img, grosor, color):
+    base = img.copy().load()
     px = img.load()
-    for y in range(cy - r, cy + r + 1):
-        for x in range(cx - r, cx + r + 1):
-            d = math.hypot(x - cx + 0.5, y - cy + 0.5)
+    W, H = img.size
+    for y in range(H):
+        for x in range(W):
+            if base[x, y][3]:
+                continue
+            for dy in range(-grosor, grosor + 1):
+                hit = False
+                for dx in range(-grosor, grosor + 1):
+                    if abs(dx) + abs(dy) > grosor + (1 if grosor > 1 else 0):
+                        continue
+                    xx, yy = x + dx, y + dy
+                    if 0 <= xx < W and 0 <= yy < H and base[xx, yy][3]:
+                        hit = True
+                        break
+                if hit:
+                    px[x, y] = color
+                    break
+
+
+def rellenar_huecos(img, color):
+    """Pinta de `color` los huecos transparentes encerrados (los ojos de las letras)."""
+    W, H = img.size
+    px = img.load()
+    fuera = set()
+    pila = [(x, y) for x in range(W) for y in (0, H - 1)] + [(x, y) for y in range(H) for x in (0, W - 1)]
+    while pila:
+        x, y = pila.pop()
+        if (x, y) in fuera or not (0 <= x < W and 0 <= y < H) or px[x, y][3]:
+            continue
+        fuera.add((x, y))
+        pila += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+    for y in range(H):
+        for x in range(W):
+            if not px[x, y][3] and (x, y) not in fuera:
+                px[x, y] = color
+
+
+# ----------------------------------------------------------------- palabra ----
+AMA_ARRIBA, AMA_MEDIO, AMA_ABAJO = hexc("#fff21c"), hexc("#ffc80a"), hexc("#ff9000")
+ROJO_ARRIBA, ROJO_MEDIO, ROJO_ABAJO = hexc("#ff4a12"), hexc("#f2300c"), hexc("#b81808")
+
+
+def color_letra(paleta, t, x, y):
+    """t: 0 arriba, 1 abajo. Mitad de arriba plana, abajo tramado en dos pasos."""
+    arriba, medio, abajo = paleta
+    if t < 0.5:
+        return arriba
+    if t < 0.75:
+        return damero(arriba, medio, (t - 0.5) / 0.25, x, y)
+    return damero(medio, abajo, min(1, (t - 0.75) / 0.2), x, y)
+
+
+def letra(c, alto, escala=2):
+    filas = G16[c]
+    w = len(filas[0]) * escala
+    return [[filas[min(15, int(y * 16 / alto))][x // escala] == "#" for x in range(w)] for y in range(alto)], w
+
+
+def esfera(capa, cx, cy, r):
+    aro, cuerpo, cuerpo2 = hexc("#ffd21a"), hexc("#ff9a0c"), hexc("#f07a08")
+    for y in range(int(cy - r - 1), int(cy + r + 2)):
+        for x in range(int(cx - r - 1), int(cx + r + 2)):
+            d = math.hypot(x + 0.5 - cx, y + 0.5 - cy)
             if d <= r:
-                # luz desde arriba a la izquierda
-                t = min(1, max(0, (math.hypot(x - (cx - r * 0.35), y - (cy - r * 0.35)) / (r * 1.6))))
-                px[x, y] = degradado(ESFERA, t, x, y)
-    # estrella de cinco puntas en el centro
-    R, ri = r * 0.62, r * 0.26
+                if d > r - 2.2:
+                    c = aro
+                else:
+                    c = damero(cuerpo, cuerpo2, max(0, (y - cy) / r), x, y)
+                capa.p(x, y, c)
+    # estrella roja con filo oscuro
+    R, ri = r * 0.6, r * 0.25
     pts = []
     for k in range(10):
         a = -math.pi / 2 + k * math.pi / 5
         rr = R if k % 2 == 0 else ri
-        pts.append((cx + rr * math.cos(a), cy + 0.6 + rr * math.sin(a)))
+        pts.append((cx + rr * math.cos(a), cy + 0.5 + rr * math.sin(a)))
 
     def dentro(x, y):
         c = False
@@ -114,120 +173,133 @@ def esfera(img, cx, cy, r):
                 c = not c
             j = i
         return c
-    for y in range(cy - r, cy + r + 1):
-        for x in range(cx - r, cx + r + 1):
+    estrella = Capa(capa.w, capa.h)
+    for y in range(int(cy - r), int(cy + r + 1)):
+        for x in range(int(cx - r), int(cx + r + 1)):
             if dentro(x + 0.5, y + 0.5):
-                px[x, y] = ESTRELLA if y < cy + 1 else ESTRELLA_OSC
-    # brillo
-    for (dx, dy) in ((-r // 2, -r // 2), (-r // 2 + 1, -r // 2), (-r // 2, -r // 2 + 1)):
-        px[cx + dx, cy + dy] = (255, 255, 255, 255)
+                estrella.p(x, y, hexc("#e8201a"))
+    contorno(estrella.im, 1, hexc("#8a0c06"))
+    capa.im.alpha_composite(estrella.im)
 
 
-def contorno(img, grosor, color):
-    """Pinta `color` alrededor de lo opaco (grosor en píxeles, 8 vecinos)."""
-    base = img.copy()
-    bp = base.load()
-    px = img.load()
-    W, H = img.size
-    for y in range(H):
-        for x in range(W):
-            if bp[x, y][3]:
+def fila_logo():
+    """DRAGON + esfera + BALL con alturas en V y tapas en diagonal."""
+    esc = 2
+    sep = 3
+    # altura de cada letra en su lado izquierdo y derecho (nativo)
+    plan = [("D", 46, 44), ("R", 43, 41), ("A", 40, 38), ("G", 37, 35), ("O", 0, 0), ("N", 35, 37),
+            None, ("B", 40, 43), ("A", 44, 47), ("L", 48, 51), ("L", 52, 55)]
+    hueco_palabras = 7
+    r_esfera = 16
+    base = 64  # línea de abajo de DRAGON (BALL sube un poco hacia la derecha)
+    W = 300
+    capa = Capa(W, base + 8)
+    x = 4
+    cajas = []
+    for item in plan:
+        if item is None:
+            x += hueco_palabras - sep
+            continue
+        c, h0, h1 = item
+        if c == "O":
+            cx = x + r_esfera
+            esfera(capa, cx, base - r_esfera - 1, r_esfera)
+            x += 2 * r_esfera + sep
+            continue
+        roja = len(cajas) >= 5
+        paleta = (ROJO_ARRIBA, ROJO_MEDIO, ROJO_ABAJO) if roja else (AMA_ARRIBA, AMA_MEDIO, AMA_ABAJO)
+        hmax = max(h0, h1)
+        bm, w = letra(c, hmax, esc)
+        subida = 0 if not roja else round((x - 170) * 0.06)  # BALL: la base sube hacia la derecha
+        b = base - max(0, subida)
+        for col in range(w):
+            hcol = h0 + (h1 - h0) * col / max(1, w - 1)
+            corte = hmax - round(hcol)  # filas de arriba que se recortan (tapa en diagonal)
+            for fy in range(corte, hmax):
+                if bm[fy][col]:
+                    y = b - hmax + fy
+                    t = (fy - corte) / max(1, hmax - corte - 1)
+                    capa.p(x + col, y, color_letra(paleta, t, x + col, y))
+        cajas.append((c, x, w))
+        x += w + sep
+    img = capa.im.crop(capa.im.getbbox())
+    marco = Image.new("RGBA", (img.width + 8, img.height + 8), T)
+    marco.alpha_composite(img, (4, 4))
+    rellenar_huecos(marco, NEGRO)
+    contorno(marco, 2, NEGRO)
+    return marco, cajas
+
+
+# ------------------------------------------------------------------ estela ----
+def estela(w, h):
+    """Pincelada lila → morada que sube hacia la derecha y se deshace en el extremo."""
+    capa = Capa(w, h)
+    cols = [hexc("#f0b4e6"), hexc("#d890f0"), hexc("#b468ff"), hexc("#9044f0"), hexc("#7428d8")]
+    for x in range(w):
+        u = x / (w - 1)
+        top = round(h * 0.42 * (1 - u))            # el borde de arriba sube a la derecha
+        bot = round(h - 1 - h * 0.30 * u)
+        for y in range(top, bot + 1):
+            # rayas horizontales que asoman por los bordes (trazo de pincel)
+            if (y - top < 2 or bot - y < 2) and (x // 3 + y) % 4 == 0:
                 continue
-            hit = False
-            for dy in range(-grosor, grosor + 1):
-                for dx in range(-grosor, grosor + 1):
-                    xx, yy = x + dx, y + dy
-                    if 0 <= xx < W and 0 <= yy < H and bp[xx, yy][3]:
-                        hit = True
-                        break
-                if hit:
-                    break
-            if hit:
-                px[x, y] = color
+            if u > 0.78:
+                hueco = (u - 0.78) / 0.22
+                if ((x * 7 + y * 13) % 10) / 10 < hueco or y % 3 == 0 and u > 0.86:
+                    continue
+            f = u * (len(cols) - 1)
+            i = min(len(cols) - 2, int(f))
+            capa.p(x, y, damero(cols[i], cols[i + 1], f - i, x, y))
+    return capa.im
 
 
-def palabra(texto, alto_base, arco, escala_x, paleta, sep=1, esfera_en=None):
-    """Capa RGBA con la palabra; las letras crecen hacia el centro (arco)."""
-    n = len(texto)
-    altos = []
-    for i in range(n):
-        u = (i - (n - 1) / 2) / max(1, (n - 1) / 2)  # -1..1
-        altos.append(round(alto_base + arco * (1 - u * u)))
-    H = max(altos)
-    anchos = [len(G[c][0]) * escala_x if c != esfera_en else 0 for c in texto]
-    # la esfera ocupa un hueco cuadrado del alto de su letra
-    for i, c in enumerate(texto):
-        if i == esfera_en:
-            anchos[i] = altos[i]
-    W = sum(anchos) + sep * (n - 1)
-    img = Image.new("RGBA", (W, H + 2), (0, 0, 0, 0))
-    px = img.load()
-    x0 = 0
-    for i, c in enumerate(texto):
-        h = altos[i]
-        top = (H - h) // 2  # centradas: crecen arriba y abajo
-        if i == esfera_en:
-            r = h // 2
-            esfera(img, x0 + r, top + r, r)
-        else:
-            bm = bitmap(c, h, escala_x)
-            for y, fila in enumerate(bm):
-                for x, on in enumerate(fila):
-                    if on:
-                        t = y / max(1, h - 1)
-                        col = degradado(paleta, t, x0 + x, top + y)
-                        # filo de luz arriba
-                        if y == 0 or not bm[y - 1][x]:
-                            col = paleta[0]
-                        px[x0 + x, top + y] = col
-        x0 += anchos[i] + sep
-    return img
+# ------------------------------------------------------------------ rótulo ----
+def rotulo(texto):
+    """Letras negras con borde blanco y filo negro, como «DAIMA»."""
+    esc_x, sep = 2, 2
+    ancho = sum(len(G9[c][0]) * esc_x for c in texto) + sep * (len(texto) - 1)
+    alto = 9 * 2
+    capa = Capa(ancho + 12, alto + 12)
+    x = 6
+    for c in texto:
+        filas = G9[c]
+        for y in range(alto):
+            for col in range(len(filas[0]) * esc_x):
+                if filas[y // 2][col // esc_x] == "#":
+                    capa.p(x + col, 6 + y, NEGRO)
+        x += len(filas[0]) * esc_x + sep
+    contorno(capa.im, 2, BLANCO)
+    rellenar_huecos(capa.im, BLANCO)
+    contorno(capa.im, 1, NEGRO)
+    return capa.im.crop(capa.im.getbbox())
 
 
-def con_marco(img, grosor=2):
-    W, H = img.size
-    m = grosor + 2
-    out = Image.new("RGBA", (W + 2 * m, H + 2 * m), (0, 0, 0, 0))
-    out.alpha_composite(img, (m, m))
-    contorno(out, grosor, NEGRO)
-    return out
+def chispas(w, h):
+    """Picos amarillos del aura (como los de la foto a la izquierda de DAIMA)."""
+    capa = Capa(w, h)
+
+    def tri(pts, c):
+        ys = [p[1] for p in pts]
+        for y in range(int(min(ys)), int(max(ys)) + 1):
+            for x in range(w):
+                px, py = x + 0.5, y + 0.5
+                s = 0
+                for i in range(3):
+                    (x1, y1), (x2, y2) = pts[i], pts[(i + 1) % 3]
+                    s += (x2 - x1) * (py - y1) - (y2 - y1) * (px - x1) > 0
+                if s in (0, 3):
+                    capa.p(x, y, c)
+    ama, blanco = hexc("#fff21c"), hexc("#fffbd0")
+    # tres picos que salen de la derecha hacia la izquierda y abajo
+    for (bx, by, tx, ty, g) in ((w - 1, 3, 1, h - 3, 5), (w - 1, 9, 8, h - 1, 4), (w - 3, 0, 4, 4, 3)):
+        tri([(bx, by - g / 2), (bx, by + g / 2), (tx, ty)], ama)
+        tri([(bx, by - g / 5), (bx, by + g / 5), ((bx + tx) / 2, (by + ty) / 2)], blanco)
+    contorno(capa.im, 1, hexc("#e07a00"))
+    return capa.im
 
 
-def sombra(img, dx, dy, color):
-    W, H = img.size
-    out = Image.new("RGBA", (W + dx, H + dy), (0, 0, 0, 0))
-    mask = Image.new("RGBA", img.size, color)
-    out.paste(mask, (dx, dy), img.split()[3])
-    out.alpha_composite(img, (0, 0))
-    return out
-
-
-def estela(W, H):
-    """Pincelada morada en diagonal detrás de BALL, que se deshace hacia la derecha."""
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    px = img.load()
-    for y in range(H):
-        for x in range(W):
-            # banda inclinada
-            off = (H - y) * 0.6
-            u = (x - off) / W
-            if u < 0 or u > 1:
-                continue
-            t = y / max(1, H - 1)
-            col = degradado(MORADO, t, x, y)
-            # se deshace a la derecha: tramado de huecos
-            if u > 0.7 and ((x // 2 + y) % 3 == 0 or (u > 0.85 and (x + y) % 2)):
-                continue
-            # rayas horizontales sueltas a la derecha
-            if u > 0.55 and y % 4 == 3:
-                continue
-            px[x, y] = col
-    return img
-
-
+# ----------------------------------------------------------------- montaje ----
 def incrustar(png):
-    import base64
-    import re
     js = RAIZ / "02 - Código del juego" / "ui_imagenes.js"
     texto = js.read_text(encoding="utf-8")
     uri = "data:image/png;base64," + base64.b64encode(png.read_bytes()).decode()
@@ -236,105 +308,25 @@ def incrustar(png):
     js.write_text(texto, encoding="utf-8")
 
 
-def inclinar(img, k=9):
-    """Cursiva pixel art: cada k filas hacia arriba, un píxel a la derecha."""
-    W, H = img.size
-    out = Image.new("RGBA", (W + H // k + 1, H), (0, 0, 0, 0))
-    for y in range(H):
-        fila = img.crop((0, y, W, y + 1))
-        out.alpha_composite(fila, ((H - 1 - y) // k, y))
-    return out
-
-
-def con_marco_doble(img, interior, grosor=2):
-    """Contorno de 1 px de color y luego `grosor` px de negro (como el logo de la serie)."""
-    W, H = img.size
-    m = grosor + 3
-    out = Image.new("RGBA", (W + 2 * m, H + 2 * m), (0, 0, 0, 0))
-    out.alpha_composite(img, (m, m))
-    contorno(out, 1, interior)
-    contorno(out, grosor, NEGRO)
-    return out
-
-
-def rayo(w, h):
-    """Rayo amarillo en zigzag con el centro blanco."""
-    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    px = img.load()
-    pts = [(w - 1, 0), (w * 0.45, h * 0.42), (w * 0.62, h * 0.45), (0, h - 1), (w * 0.38, h * 0.55), (w * 0.22, h * 0.52)]
-    def dentro(x, y):
-        c = False
-        j = len(pts) - 1
-        for i in range(len(pts)):
-            xi, yi = pts[i]
-            xj, yj = pts[j]
-            if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / (yj - yi) + xi:
-                c = not c
-            j = i
-        return c
-    for y in range(h):
-        for x in range(w):
-            if dentro(x + 0.5, y + 0.5):
-                px[x, y] = hexc("#ffe63a")
-    # núcleo blanco: píxeles con relleno a ambos lados
-    base = img.copy().load()
-    for y in range(1, h - 1):
-        for x in range(2, w - 2):
-            if base[x - 2, y][3] and base[x + 2, y][3] and base[x, y - 1][3] and base[x, y + 1][3]:
-                px[x, y] = (255, 255, 255, 255)
-    out = Image.new("RGBA", (w + 4, h + 4), (0, 0, 0, 0))
-    out.alpha_composite(img, (2, 2))
-    contorno(out, 1, NEGRO)
-    return out
-
-
-def destello(r):
-    """Brillo de cuatro puntas."""
-    n = 2 * r + 1
-    img = Image.new("RGBA", (n, n), (0, 0, 0, 0))
-    px = img.load()
-    for k in range(-r, r + 1):
-        a = 255
-        c = (255, 255, 255, a) if abs(k) < r - 1 else (255, 230, 120, a)
-        px[r + k, r] = c
-        px[r, r + k] = c
-    px[r - 1, r - 1] = px[r + 1, r + 1] = px[r - 1, r + 1] = px[r + 1, r - 1] = (255, 240, 170, 255)
-    return img
-
-
 def main():
-    escala = 2  # cada «píxel» de letra = 2 px nativos
-    dragon = palabra("DRAGON", 24, 10, escala, AMARILLO, sep=1, esfera_en=4)
-    ball = palabra("BALL", 28, 4, escala, ROJO, sep=1)
-    dragon = con_marco_doble(dragon, hexc("#9a3a06"), 2)
-    ball = con_marco_doble(ball, hexc("#5a0a04"), 2)
-    surv = palabra("SURVIVOR", 14, 0, 1, BLANCO_AZUL, sep=2)
-    surv = con_marco_doble(surv, hexc("#e0521a"), 2)
+    fila, cajas = fila_logo()
+    # posiciones útiles: inicio de la G y de la B
+    xg = next(x for c, x, w in cajas if c == "G")
+    xn = next(x for c, x, w in cajas if c == "N")
+    xb = next(x for c, x, w in cajas if c == "B")
+    est = estela(fila.width - xg + 14, int(fila.height * 0.62))
+    rot = rotulo("SURVIVOR")
+    ch = chispas(34, 20)
 
-    gap = -3
-    W1 = dragon.width + gap + ball.width
-    H1 = max(dragon.height, ball.height)
-    fila = Image.new("RGBA", (W1 + 30, H1 + 8), (0, 0, 0, 0))
-    # estela morada detrás de BALL
-    est = estela(ball.width + 32, int(ball.height * 0.62))
-    fila.alpha_composite(est, (dragon.width + gap - 4, (H1 - est.height) // 2 - 3))
-    fila.alpha_composite(dragon, (0, (H1 - dragon.height) // 2))
-    fila.alpha_composite(ball, (dragon.width + gap, (H1 - ball.height) // 2 + 1))
-    fila = inclinar(fila, 9)
-
-    # SURVIVOR montado sobre la parte de abajo, con un rayo a la izquierda
-    W = fila.width + 4
-    H = fila.height + surv.height - 12
-    out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    out.alpha_composite(fila, (4, 0))
-    sx = (W1 - surv.width) // 2 + 14
-    ry = rayo(34, 30)
-    out.alpha_composite(ry, (sx - 36, fila.height - 24))
-    out.alpha_composite(surv, (sx, fila.height - 16))
-    out = sombra(out, 2, 3, SOMBRA)
-    # destellos sobre la esfera y la última L
-    out.alpha_composite(destello(3), (int(dragon.width * 0.74), 2))
-    out.alpha_composite(destello(2), (W1 - 6, 4))
+    W = fila.width + 14
+    H = fila.height + rot.height - 8
+    out = Image.new("RGBA", (W, H), T)
+    out.alpha_composite(est, (xg + 6, 2))
+    out.alpha_composite(fila, (0, 0))
+    rx = xn + 4 - rot.width // 2  # centrado bajo la N, como DAIMA en la foto
+    ry = fila.height - 7
+    out.alpha_composite(ch, (rx - ch.width + 2, ry + 2))
+    out.alpha_composite(rot, (rx, ry))
     out = out.crop(out.getbbox())
 
     destino = RAIZ / "ui" / "titulo.png"
@@ -343,7 +335,7 @@ def main():
     incrustar(destino)
     if "--zoom" in sys.argv:
         z = int(sys.argv[sys.argv.index("--zoom") + 1])
-        fondo = Image.new("RGBA", out.size, (40, 90, 200, 255))
+        fondo = Image.new("RGBA", out.size, (40, 110, 230, 255))
         fondo.alpha_composite(out)
         fondo.resize((out.width * z, out.height * z), Image.NEAREST).save(RAIZ / "herramientas" / "titulo_zoom.png")
 

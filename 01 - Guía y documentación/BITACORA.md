@@ -4352,3 +4352,8 @@ ode --check.
 - **Fallo arreglado**: Escape no pausaba la partida (un manejador pausaba y el de los menús reanudaba en la misma pulsación). Ahora Escape pausa y quita la pausa; Backspace sigue reanudando.
 - Probado en navegador (1280×720 y móvil 844×390): inicio, menú, personajes, mejoras, tienda, escenarios, subida de nivel, pausa, final y partida; sin errores de consola. interfaz.css?v=1, style.css?v=96, script.js?v=193, ui_imagenes.js?v=69.
 - Iconos del menú: Josemi dijo (punto 6) que buscaría los suyos; estos son provisionales hasta que los traiga.
+
+### Logo v3, igual que la foto (13 nov.)
+- Josemi: «El logo no me acaba, quiero el logo idéntico al de la foto que te he enviado».
+- `generar_titulo.py` rehecho desde cero estudiando la foto: letras altas y estrechas (8×16), DRAGON baja de tamaño hacia la esfera y BALL sube hacia la derecha, tapas cortadas en diagonal, amarillo plano arriba y tramado a naranja abajo (BALL en rojo), contorno negro con los huecos negros, esfera naranja con aro amarillo y estrella roja, pincelada lila→morada detrás de BALL, «SURVIVOR» en letras negras con borde blanco (como DAIMA) bajo la N y picos amarillos a la izquierda. Sin cursiva, sin contorno rojo y sin el brillo animado (no están en la foto). 227×77; se ve a ×4 en inicio y ×2 en menú. style.css?v=97, ui_imagenes.js?v=70.
+- Si Josemi manda el archivo original `estilo.png` (1280×846), se puede sacar el logo exacto en vez de redibujarlo desde una foto de la pantalla.
