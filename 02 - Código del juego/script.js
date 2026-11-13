@@ -7038,7 +7038,7 @@ function drawKi(p,x,y,time){if(window.PACK_FX&&PACK_FX.drawShot(ctx,p,x,y,time))
 
 // esferas del dragón dibujadas por el usuario (ui/esfera1..7.png, cargadas desde ui_imagenes.js); 18 px = 9 unidades
 
-if(window.UI_IMG){document.querySelectorAll('[data-ui]').forEach(e=>e.src=UI_IMG[e.dataset.ui]);const fav=document.createElement('link');fav.rel='icon';fav.href=UI_IMG.logo;document.head.appendChild(fav)}
+if(window.UI_IMG){document.querySelectorAll('[data-ui]').forEach(e=>e.src=UI_IMG[e.dataset.ui]);document.querySelectorAll('.tituloWrap').forEach(w=>w.style.setProperty('--titulo','url('+UI_IMG.titulo+')'));const fav=document.createElement('link');fav.rel='icon';fav.href=UI_IMG.logo;document.head.appendChild(fav)}
 
 const radarAviso=$('#radarAviso');
 
@@ -7438,11 +7438,14 @@ const TACTIL=!!(window.matchMedia&&matchMedia('(pointer: coarse)').matches);
 // ---------- HUD: azul marino y naranja como el gi, detalles dorados; todo en rectángulos para que el píxel quede nítido ----------
 const HUDST={hp:1,boss:1,bossE:null,cd:{},flash:{}},HUD_FACE={};
 function hudR(x,y,w,h,c){ctx.fillStyle=c;ctx.fillRect(x,y,w,h)}
+// Marco del HUD con el mismo estilo que las ventanas (bisel claro arriba, oscuro abajo, remaches): 13 nov.
+const HUD_MIX={};function hudMix(c,t,f){const k=c+t+f;if(HUD_MIX[k])return HUD_MIX[k];if(!/^#[0-9a-f]{6}$/i.test(c))return c;const n=parseInt(c.slice(1),16),T=t?255:0,m=v=>Math.round(v*(1-f)+T*f);return HUD_MIX[k]=`rgb(${m(n>>16)},${m(n>>8&255)},${m(n&255)})`}
 function hudPanel(x,y,w,h,edge='#f97316',fill='#0c1130'){
-  const a=ctx.globalAlpha;ctx.globalAlpha=a*0.94;
-  hudR(x+2,y,w-4,h,'#04060f');hudR(x,y+2,w,h-4,'#04060f');hudR(x+1,y+1,w-2,h-2,'#04060f');
-  hudR(x+2,y+1,w-4,h-2,edge);hudR(x+1,y+2,w-2,h-4,edge);
-  hudR(x+2,y+2,w-4,h-4,fill);hudR(x+2,y+2,w-4,1,'rgba(255,255,255,.13)');hudR(x+2,y+h-3,w-4,1,'rgba(0,0,0,.4)');
+  const a=ctx.globalAlpha;ctx.globalAlpha=a*0.94;const L=hudMix(edge,1,.5),D=hudMix(edge,0,.45);
+  hudR(x+1,y,w-2,h,'#04060f');hudR(x,y+1,w,h-2,'#04060f');
+  hudR(x+1,y+1,w-2,h-2,edge);hudR(x+2,y+1,w-4,1,L);hudR(x+1,y+2,1,h-4,L);hudR(x+2,y+h-2,w-4,1,D);hudR(x+w-2,y+2,1,h-4,D);
+  hudR(x+3,y+3,w-6,h-6,'#04060f');hudR(x+3,y+4,w-6,h-7,fill);hudR(x+4,y+4,w-8,1,'rgba(255,255,255,.14)');hudR(x+4,y+h-5,w-8,1,'rgba(0,0,0,.35)');
+  if(w>=24&&h>=16){hudR(x+2,y+2,1,1,'#fff');hudR(x+w-3,y+2,1,1,'#fff');hudR(x+2,y+h-3,1,1,L);hudR(x+w-3,y+h-3,1,1,L)}
   ctx.globalAlpha=a}
 function hudBar(x,y,w,h,f,c,hi,lo,lag,ticks=10){
   hudR(x-1,y-1,w+2,h+2,'#04060f');hudR(x,y,w,h,'#1a1f3e');hudR(x,y,w,1,'#10142c');
@@ -8835,9 +8838,11 @@ const HUB_ITEMS=[
   ['mis','radar','MISIONES',()=>{const n=misReady();return n?`¡${n} recompensa${n>1?'s':''} lista${n>1?'s':''}!`:'Misiones y recompensas'},()=>{openTrain();setTimeout(()=>$('#tMis').scrollIntoView({block:'start'}),30)}],
   ['rank','bastongoku','RANKING','Tus mejores marcas',openRank],
   ['set','scouterRojo','AJUSTES','Sonido, pantalla y opciones',openSettings]];
+// Iconos pixel art del menú (herramientas/generar_interfaz.py).
+const HUB_ICO={play:'menu_jugar',roster:'menu_personajes',train:'menu_mejoras',shop:'menu_tienda',wish:'menu_capsulas',mis:'menu_misiones',rank:'menu_ranking',set:'menu_ajustes'};
 function buildHub(){const nav=$('#hubMenu');nav.innerHTML='';
   for(const [k,ic,t,sub,fn] of HUB_ITEMS){const b=document.createElement('button');b.type='button';b.className='hitem'+(k==='play'?' hitemPlay':'');b.dataset.k=k;
-    const c=icon(ic,36),z=mk(36,36),g=z.getContext('2d');g.imageSmoothingEnabled=false;g.drawImage(c,0,0,36,36);b.appendChild(z);
+    const mi=window.UI_IMG&&UI_IMG[HUB_ICO[k]];if(mi){const im=document.createElement('img');im.className='hIco';im.src=mi;im.alt='';b.appendChild(im)}else{const c=icon(ic,36),z=mk(36,36),g=z.getContext('2d');g.imageSmoothingEnabled=false;g.drawImage(c,0,0,36,36);b.appendChild(z)}
     b.insertAdjacentHTML('beforeend',`<span><b>${t}</b><small>${typeof sub==='function'?sub():sub}</small></span>`);b.onclick=()=>{initAudio();sfx('shot');fn()};nav.appendChild(b)}}
 function hubRefresh(){const s=loadSave(),best=loadBest(),id=companion(),H=HEROES[id],all=Object.keys(HEROES).filter(spriteHero);
   $('#cZeni').innerHTML=`<i class="pxCoin"></i> <b>${s.zeni}</b> ZENI`;
@@ -9018,7 +9023,8 @@ function toggleFull(){if(document.fullscreenElement)document.exitFullscreen();el
           e.preventDefault();
           return;
         }
-      }else if(state==='pause'){
+      }else if(state==='pause'&&e.key==='Backspace'){
+        // Escape ya lo atiende el manejador de la pausa; si se reanudase aquí también, Escape no pausaría nunca
         resume();
         e.preventDefault();
       }

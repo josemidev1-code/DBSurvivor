@@ -53,6 +53,7 @@ def hexc(h):
 AMARILLO = [hexc(c) for c in ("#fff6a8", "#ffe63a", "#ffd21f", "#ffb31a", "#f58a0c")]
 ROJO = [hexc(c) for c in ("#ffb07a", "#ff6a2a", "#f2421a", "#d8240f", "#a8140a")]
 BLANCO = [hexc(c) for c in ("#ffffff", "#ffffff", "#eef0ff", "#d8dcf2", "#b9bfe0")]
+BLANCO_AZUL = [hexc(c) for c in ("#ffffff", "#ffffff", "#e4ecff", "#a8c4ff", "#6a94f0")]
 MORADO = [hexc(c) for c in ("#c06cff", "#9a4ae8", "#7a33c8", "#5a2496")]
 ESFERA = [hexc(c) for c in ("#fff0b0", "#ffd04a", "#ffb21a", "#f58a0c", "#c8640a")]
 ESTRELLA = hexc("#e4241a")
@@ -235,31 +236,105 @@ def incrustar(png):
     js.write_text(texto, encoding="utf-8")
 
 
+def inclinar(img, k=9):
+    """Cursiva pixel art: cada k filas hacia arriba, un píxel a la derecha."""
+    W, H = img.size
+    out = Image.new("RGBA", (W + H // k + 1, H), (0, 0, 0, 0))
+    for y in range(H):
+        fila = img.crop((0, y, W, y + 1))
+        out.alpha_composite(fila, ((H - 1 - y) // k, y))
+    return out
+
+
+def con_marco_doble(img, interior, grosor=2):
+    """Contorno de 1 px de color y luego `grosor` px de negro (como el logo de la serie)."""
+    W, H = img.size
+    m = grosor + 3
+    out = Image.new("RGBA", (W + 2 * m, H + 2 * m), (0, 0, 0, 0))
+    out.alpha_composite(img, (m, m))
+    contorno(out, 1, interior)
+    contorno(out, grosor, NEGRO)
+    return out
+
+
+def rayo(w, h):
+    """Rayo amarillo en zigzag con el centro blanco."""
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    px = img.load()
+    pts = [(w - 1, 0), (w * 0.45, h * 0.42), (w * 0.62, h * 0.45), (0, h - 1), (w * 0.38, h * 0.55), (w * 0.22, h * 0.52)]
+    def dentro(x, y):
+        c = False
+        j = len(pts) - 1
+        for i in range(len(pts)):
+            xi, yi = pts[i]
+            xj, yj = pts[j]
+            if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / (yj - yi) + xi:
+                c = not c
+            j = i
+        return c
+    for y in range(h):
+        for x in range(w):
+            if dentro(x + 0.5, y + 0.5):
+                px[x, y] = hexc("#ffe63a")
+    # núcleo blanco: píxeles con relleno a ambos lados
+    base = img.copy().load()
+    for y in range(1, h - 1):
+        for x in range(2, w - 2):
+            if base[x - 2, y][3] and base[x + 2, y][3] and base[x, y - 1][3] and base[x, y + 1][3]:
+                px[x, y] = (255, 255, 255, 255)
+    out = Image.new("RGBA", (w + 4, h + 4), (0, 0, 0, 0))
+    out.alpha_composite(img, (2, 2))
+    contorno(out, 1, NEGRO)
+    return out
+
+
+def destello(r):
+    """Brillo de cuatro puntas."""
+    n = 2 * r + 1
+    img = Image.new("RGBA", (n, n), (0, 0, 0, 0))
+    px = img.load()
+    for k in range(-r, r + 1):
+        a = 255
+        c = (255, 255, 255, a) if abs(k) < r - 1 else (255, 230, 120, a)
+        px[r + k, r] = c
+        px[r, r + k] = c
+    px[r - 1, r - 1] = px[r + 1, r + 1] = px[r - 1, r + 1] = px[r + 1, r - 1] = (255, 240, 170, 255)
+    return img
+
+
 def main():
     escala = 2  # cada «píxel» de letra = 2 px nativos
-    dragon = palabra("DRAGON", 26, 6, escala, AMARILLO, sep=1, esfera_en=4)
-    ball = palabra("BALL", 28, 3, escala, ROJO, sep=1)
-    dragon = con_marco(dragon, 2)
-    ball = con_marco(ball, 2)
-    surv = con_marco(palabra("SURVIVOR", 12, 0, 1, BLANCO, sep=1), 2)
+    dragon = palabra("DRAGON", 24, 10, escala, AMARILLO, sep=1, esfera_en=4)
+    ball = palabra("BALL", 28, 4, escala, ROJO, sep=1)
+    dragon = con_marco_doble(dragon, hexc("#9a3a06"), 2)
+    ball = con_marco_doble(ball, hexc("#5a0a04"), 2)
+    surv = palabra("SURVIVOR", 14, 0, 1, BLANCO_AZUL, sep=2)
+    surv = con_marco_doble(surv, hexc("#e0521a"), 2)
 
-    gap = -2
+    gap = -3
     W1 = dragon.width + gap + ball.width
     H1 = max(dragon.height, ball.height)
-    fila = Image.new("RGBA", (W1 + 24, H1 + 8), (0, 0, 0, 0))
+    fila = Image.new("RGBA", (W1 + 30, H1 + 8), (0, 0, 0, 0))
     # estela morada detrás de BALL
-    est = estela(ball.width + 26, int(ball.height * 0.62))
-    fila.alpha_composite(est, (dragon.width + gap - 4, (H1 - est.height) // 2 - 2))
+    est = estela(ball.width + 32, int(ball.height * 0.62))
+    fila.alpha_composite(est, (dragon.width + gap - 4, (H1 - est.height) // 2 - 3))
     fila.alpha_composite(dragon, (0, (H1 - dragon.height) // 2))
-    fila.alpha_composite(ball, (dragon.width + gap, (H1 - ball.height) // 2))
+    fila.alpha_composite(ball, (dragon.width + gap, (H1 - ball.height) // 2 + 1))
+    fila = inclinar(fila, 9)
 
-    # SURVIVOR montado sobre la parte de abajo, centrado
-    W = fila.width
-    H = fila.height + surv.height - 10
+    # SURVIVOR montado sobre la parte de abajo, con un rayo a la izquierda
+    W = fila.width + 4
+    H = fila.height + surv.height - 12
     out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    out.alpha_composite(fila, (0, 0))
-    out.alpha_composite(surv, ((W1 - surv.width) // 2 + 6, fila.height - 14))
-    out = sombra(out, 2, 2, SOMBRA)
+    out.alpha_composite(fila, (4, 0))
+    sx = (W1 - surv.width) // 2 + 14
+    ry = rayo(34, 30)
+    out.alpha_composite(ry, (sx - 36, fila.height - 24))
+    out.alpha_composite(surv, (sx, fila.height - 16))
+    out = sombra(out, 2, 3, SOMBRA)
+    # destellos sobre la esfera y la última L
+    out.alpha_composite(destello(3), (int(dragon.width * 0.74), 2))
+    out.alpha_composite(destello(2), (W1 - 6, 4))
     out = out.crop(out.getbbox())
 
     destino = RAIZ / "ui" / "titulo.png"

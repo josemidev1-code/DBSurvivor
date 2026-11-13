@@ -4339,3 +4339,16 @@ ode --check.
 - Daño total y daño por segundo de cada técnica en la pausa y en la pantalla final (hace falta apuntar el origen en cada `hurt()`; hay 16 llamadas).
 - Cuatro opciones al subir de nivel en vez de tres (cambia el equilibrio: preguntar a Josemi).
 - Que Josemi valore el título nuevo y la pantalla final.
+
+### Nueva petición (13 nov.)
+- «Quiero que hagas una mejora en general de todo y que el estilo también lo cambies. Me gusta, pero siento que le faltan cosas: mejorar los pixel arts del menú, del logo, la interfaz, etc.»
+
+### Lo que hice (estilo nuevo, 13 nov.)
+- **Logo v2** (`generar_titulo.py`, 231×61): letras en cursiva, arco más marcado, doble contorno (rojo oscuro + negro), SURVIVOR blanco con degradado azul y contorno naranja, rayo amarillo a la izquierda y destellos. Brillo que recorre el logo cada 4,5 s (`.tituloWrap::after` con máscara del propio logo). Se muestra a múltiplos enteros (×4 en inicio, ×2 en menú) para que no se emborrone.
+- **Pantalla de inicio como la foto**: fondo de rayas diagonales azules, blancas y negras en movimiento (`fondo_rayas`), con resplandor detrás del logo y «PULSA PARA EMPEZAR» en placa.
+- **`herramientas/generar_interfaz.py`** (nuevo): dibuja en `ui/interfaz/` los marcos de 9 trozos (naranja, oro, azul y dos de chip: tinta, bisel claro/oscuro, filo, remaches en las esquinas), los 8 iconos del menú (Kinton, rastreador, pesas, cápsula Hoi-Poi, máquina de cápsulas, radar, copa del torneo, engranaje) y el fondo de rayas. Escribe `interfaz.css` (imágenes incrustadas, funciona con doble clic) y mete los iconos en `ui_imagenes.js` como `menu_*`. Vista: `herramientas/interfaz_zoom.png`.
+- Marcos pixel art en menú principal, noticias, estadísticas, compañero, aviso de cápsula, barras de los menús, chips, tarjetas, subida de nivel, pausa y pantalla final. Iconos nuevos del menú a 2× (cada opción tiene el suyo; antes se repetían). Compañero del menú a 180 px nítidos sobre fondo de rayos y luz.
+- HUD de partida: `hudPanel` con el mismo marco (bisel y remaches).
+- **Fallo arreglado**: Escape no pausaba la partida (un manejador pausaba y el de los menús reanudaba en la misma pulsación). Ahora Escape pausa y quita la pausa; Backspace sigue reanudando.
+- Probado en navegador (1280×720 y móvil 844×390): inicio, menú, personajes, mejoras, tienda, escenarios, subida de nivel, pausa, final y partida; sin errores de consola. interfaz.css?v=1, style.css?v=96, script.js?v=193, ui_imagenes.js?v=69.
+- Iconos del menú: Josemi dijo (punto 6) que buscaría los suyos; estos son provisionales hasta que los traiga.

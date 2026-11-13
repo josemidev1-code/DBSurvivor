@@ -4,14 +4,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
-<link rel="stylesheet" href="02 - Código del juego/style.css?v=95">
+<link rel="stylesheet" href="02 - Código del juego/interfaz.css?v=1">
+<link rel="stylesheet" href="02 - Código del juego/style.css?v=96">
 
 <canvas id="game" aria-label="DragonBall Survivor, juego"></canvas>
 <div id="radarAviso" hidden><img data-ui="radarAnimado" alt="Radar del Dragón animado de Lady-Pixel"><span>RADAR ACTIVO</span></div>
 <div id="hudBtns" hidden><button id="bMute" type="button" aria-label="Silenciar">SON</button><button id="bPause" type="button" aria-label="Pausa">II</button></div>
 
 <div id="start" class="ov start" hidden>
-  <img class="tituloImg" data-ui="titulo" alt="">
+  <div class="tituloWrap"><img class="tituloImg" data-ui="titulo" alt=""></div>
   <h1 class="logo soloLector">DRAGON BALL<span>SURVIVOR</span></h1>
   <p class="tag">Sobrevive a las hordas con tus guerreros Z</p>
   <p class="press">PULSA PARA EMPEZAR</p>
@@ -20,7 +21,7 @@
   <div class="hubTop"><span class="chip zeni" id="cZeni"></span><span class="chip tix" id="cTix"></span><span class="chip" id="cHeroes"></span>
     <button class="chip act gold" id="hSave" type="button">GUARDAR</button><button class="chip act" id="hMute" type="button">SONIDO</button><button class="chip act" id="hFull" type="button">PANTALLA</button><button class="chip act" id="hSet" type="button">AJUSTES</button></div>
   <div class="hubMid">
-    <img class="tituloImg" data-ui="titulo" alt="">
+    <div class="tituloWrap"><img class="tituloImg" data-ui="titulo" alt=""></div>
     <h1 class="logo soloLector">DRAGON BALL<span>SURVIVOR</span></h1>
     <p class="hubSub">SAGA DE LOS GUERREROS Z</p>
     <button class="event" id="hEvent" type="button"></button>
@@ -197,7 +198,7 @@
 </div>
 
 <script src="02 - Código del juego/sprites.js?v=66"></script>
-<script src="02 - Código del juego/ui_imagenes.js?v=68"></script>
+<script src="02 - Código del juego/ui_imagenes.js?v=69"></script>
 <script src="02 - Código del juego/portadas_mapas.js?v=66"></script>
 <script src="02 - Código del juego/shenron_imagen.js?v=66"></script>
 <script src="02 - Código del juego/escenarios_tiles.js?v=66"></script>
@@ -207,4 +208,4 @@
 <script src="02 - Código del juego/andar.js?v=5"></script>
 <script src="02 - Código del juego/andar_frames.js?v=2"></script>
 <script src="02 - Código del juego/efectos_packs.js?v=1"></script>
-<script src="02 - Código del juego/script.js?v=192"></script>
+<script src="02 - Código del juego/script.js?v=193"></script>
