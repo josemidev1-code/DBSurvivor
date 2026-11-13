@@ -1100,3 +1100,13 @@ body.high-contrast .up .nm,body.high-contrast .card h3{color:#ffffff!important;t
   #roster .card p,#roster .card .sBars{display:none}
   #roster .card canvas.cardSpr{width:100%;height:auto;max-height:110px}
 }
+
+/* título de la pantalla de inicio (herramientas/generar_titulo.py → ui/titulo.png, 218×54): pixel art sin suavizar */
+.soloLector{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tituloImg{display:block;margin:0 auto 10px;width:min(872px,92vw);height:auto;image-rendering:pixelated;filter:drop-shadow(0 0 18px rgba(255,170,40,.28))}
+#start .tituloImg{animation:tituloEntra .7s steps(7) both}
+#hub .tituloImg{width:clamp(220px,34vw,436px);margin-bottom:2px}
+@media (max-height:860px){#hub .tituloImg{width:clamp(200px,26vw,327px)}}
+@media (max-height:520px){#hub .tituloImg{width:min(218px,40vw)}#start .tituloImg{width:min(654px,80vw)}}
+@keyframes tituloEntra{from{transform:translateY(-24px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){#start .tituloImg{animation:none}}
