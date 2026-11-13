@@ -209,3 +209,6 @@ RecopilaciÃ³n exhaustiva de 770 hojas de sprites 2D en tamaÃ±o original comp
 - Kyabe clásico, pack 072: MV95, según el archivo de autor conservado.
 - Goku Black LSW, pack 255: GohanAnimations, según el nombre del pack.
 - Vegeta explorador HD (309) y Vegeta SSJ2 HD (298): procedentes de la biblioteca local original; autor específico no identificado en estos packs. Se conservan los originales y cualquier metadato de procedencia.
+
+## Logo del título (13 nov. 2026)
+- `ui/titulo.png` copia el logo pixel art «DRAGON BALL DAIMA» de la imagen `estilo.png` que enseñó Josemi en una foto (autor sin identificar), con «SURVIVOR» en lugar de «DAIMA». **Falta saber de quién es para acreditarlo.** Sale de `herramientas/titulo_desde_foto.py`.

@@ -4357,3 +4357,8 @@ ode --check.
 - Josemi: «El logo no me acaba, quiero el logo idéntico al de la foto que te he enviado».
 - `generar_titulo.py` rehecho desde cero estudiando la foto: letras altas y estrechas (8×16), DRAGON baja de tamaño hacia la esfera y BALL sube hacia la derecha, tapas cortadas en diagonal, amarillo plano arriba y tramado a naranja abajo (BALL en rojo), contorno negro con los huecos negros, esfera naranja con aro amarillo y estrella roja, pincelada lila→morada detrás de BALL, «SURVIVOR» en letras negras con borde blanco (como DAIMA) bajo la N y picos amarillos a la izquierda. Sin cursiva, sin contorno rojo y sin el brillo animado (no están en la foto). 227×77; se ve a ×4 en inicio y ×2 en menú. style.css?v=97, ui_imagenes.js?v=70.
 - Si Josemi manda el archivo original `estilo.png` (1280×846), se puede sacar el logo exacto en vez de redibujarlo desde una foto de la pantalla.
+
+### Logo idéntico al de la foto (13 nov.)
+- Josemi: «Lo quiero igualito igualito».
+- No se encontró el original en internet. Nuevo `herramientas/titulo_desde_foto.py`: lee el logo píxel a píxel de la foto (recorte de la pantalla girado 3° en `herramientas/titulo_foto/recorte_foto.png`; cada píxel del original son 2,76 px de la foto), clasifica cada píxel en la paleta del logo, quita el fondo de rayas, el aura amarilla de Goku y DAIMA, regulariza el tramado y pone SURVIVOR con la letra de DAIMA (negra, borde blanco y filo negro). `ui/titulo.png` 319×110 (×3 en inicio). El dibujado a mano (`generar_titulo.py`) queda marcado como sustituido. style.css?v=98, ui_imagenes.js?v=71.
+- Puede haber algún píxel suelto distinto del original por la foto; con el `estilo.png` original sería exacto. Falta el autor del logo para los créditos.

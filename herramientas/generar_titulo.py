@@ -1,4 +1,7 @@
-"""Título de la pantalla de inicio en pixel art, copiando el logo de la foto que
+"""SUSTITUIDO (13 nov.): el título actual sale de herramientas/titulo_desde_foto.py.
+No ejecutar este: sobrescribiría ui/titulo.png con la versión dibujada a mano.
+
+Título de la pantalla de inicio en pixel art, copiando el logo de la foto que
 mandó Josemi («DRAGON BALL DAIMA», estilo.png) con «SURVIVOR» en lugar de DAIMA.
 
 Rasgos de la foto que se reproducen:
