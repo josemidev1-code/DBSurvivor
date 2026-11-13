@@ -1,0 +1,101 @@
+{
+ "_nota": "Tanda 14 (11 nov. 2026, Claude): ataques extra de formas sueltas sin ninguno (Trunks armadura, Vegeta Yardrat, Vegeta Dios, Vegeta MUI, Vegetto falso, Zamasu fusionado). Vegeta Dios (vegetabroly) fuera: sus fotogramas extra salían a 838x801 al montar; falta ver por qué.",
+ "heroes": {
+  "trunksarmor": {
+   "0": {
+    "attack2": [
+     34,
+     35
+    ],
+    "kick2": [
+     11,
+     12
+    ],
+    "up": [
+     45
+    ]
+   }
+  },
+  "vegetayardrat": {
+   "0": {
+    "attack2": [
+     27,
+     28
+    ],
+    "attack3": [
+     67,
+     69
+    ],
+    "kick2": [
+     57,
+     58
+    ],
+    "up": [
+     23
+    ]
+   }
+  },
+  "vegetamui": {
+   "0": {
+    "attack2": [
+     38,
+     39
+    ],
+    "attack3": [
+     64,
+     65
+    ],
+    "kick2": [
+     56,
+     57
+    ],
+    "beam": [
+     90,
+     91
+    ],
+    "up": [
+     69
+    ]
+   }
+  },
+  "vegettofalso": {
+   "0": {
+    "attack2": [
+     67,
+     68
+    ],
+    "attack3": [
+     34,
+     35
+    ],
+    "kick2": [
+     61,
+     62
+    ],
+    "beam": [
+     38,
+     39
+    ]
+   }
+  },
+  "zamasufusion": {
+   "0": {
+    "attack2": [
+     69,
+     70
+    ],
+    "kick2": [
+     76,
+     77
+    ],
+    "beam": [
+     125,
+     126
+    ],
+    "up": [
+     135
+    ]
+   }
+  }
+ }
+}

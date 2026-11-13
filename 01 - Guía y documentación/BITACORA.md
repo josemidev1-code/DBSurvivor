@@ -4115,3 +4115,209 @@ ode --check.
 - Hecho: motor común, correcciones de 24 selecciones de forma, 27 secuencias por técnica, emisión alineada y vuelta validada de Piskel. Pruebas específicas y navegador correctos. Cachés y hojas temporales apartadas del cambio.
 - A medias: la revisión manual exhaustiva de todo el catálogo, especialmente las técnicas que todavía usan una pose de reserva. No se afirma que todas las formas estén revisadas a ojo. La suite Python general se interrumpió durante el recálculo de cachés, después de confirmar su fallo de línea base previo.
 - Siguiente paso: revisar las técnicas de reserva por personaje y transformación visibles, aprovechando las secuencias `tecnica_ID`; no volver a generar tandas genéricas ni contar variantes ocultas como mejoras del plantel.
+
+## 2026-11-11 — Claude Opus 5.5 (sesión de mejora general)
+
+### Lo que pidió el usuario
+- Josemi: animar con Piskel todos los personajes de los sprites de las carpetas (algunos ya los animó Codex).
+- Mejorar mucho la interfaz y la accesibilidad: que todo sea fácil de tocar y de mirar. Analizar el juego para que sea divertido, fácil de jugar y «guau».
+- Buscar y arreglar fallos. Quitar personajes repetidos o mal hechos (por Antigravity o Codex).
+- En la selección de personaje, al bajar el ratón para pulsar el botón, pasa por encima de otro personaje y se selecciona ese: arreglarlo.
+- Quitar cosas muy repetidas en los personajes (ataques/combos repetidos) y buscar ese tipo de fallos.
+
+### Lo que hice
+- Selección de personaje: la ficha ya no cambia al pasar el ratón por encima de otra tarjeta; solo al pulsar o tocar. Además pulsar una tarjeta lanzaba un error (`prev` no existía fuera de `openRoster`): ahora es `rosterPreview`. Probado con Playwright (GIF enviado a Josemi).
+- Plantel de 169 a 117 personajes sin perder sprites: `DUPLICADOS_ROSTER` oculta 37 versiones que repetían una forma que ya tiene el personaje principal con más animaciones (Goku clásico ×2, SSJ, SSJ2, SSJ3 ×2, SSJ4 GT, 8 Ultra Instinto, 3 Blue, Vegeta base/SSJ/SSJ2/Blue ×6, Black LSW, Rosé HD…). Para recuperar uno basta quitar su ID de la lista.
+- Unidos como formas de un único personaje (`unir` en el bloque de unificación): GOKU FANMADE (`gokualt`, 13 formas), GOKU BLACK FANMADE (`blackfan`, 7) y VEGETA XENO (base y SSJ4). Goku Yardrat con su SSJ; Kyabe con BASE (pack clásico) y SSJ. La señal del UI de Goku usa ahora `gokuuisign` (14 animaciones en vez de 10).
+- Nombres de forma repetidos corregidos: Gohan «DEFINITIVO» ×2 → la quinta es BESTIA; Trunks «SSJ2 MANGA» ×2 → BASE MANGA y SSJ2 MANGA; Kyabe «SUPER SAIYAN» ×2.
+- Técnicas: 16 versiones que copiaban la lista de Goku/Vegeta/Black/Vegetto tienen ahora técnicas propias de su momento de la serie (Kamehameha x10 en SSJ Kaioken y SSJ4, Golpe del Instinto y Kamehameha Divino en el UI de Granola, Teletransporte primero en Yardrat, Gamma Burst Flash, Ira Divina de Zamasu fusionado…). Ya no quedan dos personajes visibles con la misma lista.
+- Plugin «PixelFX»: no existe en el catálogo de plugins (solo Pixelesq, Pixeltable…). El proyecto ya usa los efectos PixelFX en `efectos_pixelfx.js`.
+- Accesibilidad e interfaz: botones de forma, JUGAR, VOLVER y ✕ de al menos 44 px; título de las barras sin desbordarse. Personajes en móvil vertical: ficha compacta fija arriba y lista en dos columnas. En móvil horizontal: ficha estrecha a la izquierda y lista a la derecha (antes la ficha tapaba la lista y no se podía elegir). Doble toque o doble clic en un personaje = jugar ya. Tarjeta elegida marcada con «ELEGIDO». Menú principal en móvil horizontal: sin noticias ni estadísticas, «¡A LUCHAR!» siempre a la vista.
+- Partida en móvil: barra de ataques un 25 % más pequeña, pegada abajo y sin casillas bloqueadas de más (solo la siguiente). El aviso de nueva técnica dice «TOCALO ABAJO» en táctil.
+- Fallo arreglado: en Kame House el jugador aparecía detrás de la casa (tapado). La casa pasa de la fila -2 a la -5 y el claro alrededor del inicio crece.
+- HUD: los nombres largos se recortan por palabras («GOKU» en vez de «GOKU .»). Las técnicas cuerpo a cuerpo (Patada, Kaioken, Teletransporte, Puño del Dragón…) ya no comparten icono idéntico: tinte y marca del color de cada técnica.
+- Tanda 10 de ataques (`zz_tanda_ataques_10_2026_11_11.json`): Goku SSJ4 Daima (attack2, attack3, kick2) y Goku UI verdadero (attack2, kick2, beam, up). Revisadas con `previsualizar.py`; en SSJ4 Daima se descartó el primer intento porque mezclaba dos escalas del pack. Exportadas a `piskel_animaciones/`. `auditar_animaciones.py` entiende ya la lista multilínea de ocultos y los personajes unidos: 225 formas jugables, 70 sin ataques extra (68 tras esta tanda).
+- Versiones: script.js?v=181, style.css?v=93, animaciones_juego.js?v=124. Comprobaciones `personajes`, `combate`, `animaciones_ataques` y `catalogo_sprites` correctas; `formas` ya fallaba antes («se transforma sin haber pedido el deseo»), sin cambios.
+
+### A medias / problemas
+- Animaciones: quedan 68 formas visibles sin ataques extra (lista en `AUDITORIA_ANIMACIONES.md`). Cada forma exige mirar el pack y revisar escalas a mano; no se rellenan con propuestas automáticas.
+- No hay plugin «PixelFX» en el catálogo; no se instaló nada.
+- `comprobar_formas.cjs` sigue fallando como antes. No se ha jugado una partida larga completa en móvil real; las pruebas son con Playwright (emulación de iPhone 13).
+- Josemi tiene que valorar: la lista de personajes ocultados (se recuperan quitando el ID de `DUPLICADOS_ROSTER`), los nombres de forma corregidos (Gohan BESTIA, Trunks BASE MANGA) y las técnicas nuevas de las versiones.
+
+### Siguiente paso recomendado
+- Seguir la tanda 10 con las formas de packs más ricos: Bra Majin (315 fotogramas), Vegetto Blue 254 (pack mixto), Vegeta Xeno, Androide 13, Dyspo, Gohan del Futuro. Después los fanmade unidos en GOKU FANMADE y BLACK FANMADE.
+- Que Josemi juegue en el móvil y diga si la barra de ataques y la ficha de personajes son cómodas.
+
+## 2026-11-11 — Claude Opus 5.5 (tanda 10, continuación)
+
+### Lo que pidió el usuario
+- Josemi ya tiene el juego en local: «sigue con las animaciones».
+
+### Lo que hice
+- Tanda 10 ampliada: Bra Majin, Vegeta Xeno, Vegeta Xeno SSJ4, Androide 13, Dyspo y Gohan del Futuro (además de Goku SSJ4 Daima y Goku UI verdadero). Revisadas con `previsualizar.py`; descartados fotogramas de otra escala (Bra mezcla dos resoluciones), de espaldas (rayo de Dyspo) o dudosos (puño de Gohan del Futuro). Exportadas a Piskel. Formas visibles sin ataques extra: 63.
+- Josemi vio a Goku con «el brazo transparente». No es fallo del motor: el pack de Goku SSJ2 (`055_Goku SSJ 2`) trae fotogramas con el brazo como estela pálida sin contorno (#20 en el combo normal, #41 en el tercero). Quitados en `zzzy_sin_estelas_2026_11_11.json`, junto al tercer combo de Trunks base (rayas y píxeles sueltos). Revisados a ojo los golpes de Goku, Vegeta, Gohan y Trunks; los demás personajes no.
+- animaciones_juego.js?v=126.
+
+### Siguiente paso recomendado
+- Que Josemi diga en qué otros personajes ve brazos o golpes raros; `golpes.py` (en el scratchpad de la sesión, fácil de rehacer) saca una hoja con todos los golpes de un personaje.
+- Seguir la tanda con las 63 formas restantes de `AUDITORIA_ANIMACIONES.md`.
+
+## 2026-11-11 — Claude Opus 5.5 (guardias, PixelFX y relevo para los Kamehamehas)
+
+### Lo que pidió el usuario
+- Josemi: no le gustan las guardias (idle) en las que el personaje está de frente; si el pack tiene una postura de pelea de lado o de tres cuartos, usar esa. Seguir acabando las animaciones de todos.
+- Que cada personaje tenga solo ataques de la serie y con buenos efectos.
+- Buscar de verdad en internet el plugin PixelFX e instalarlo con Claude Code.
+- Los Kamehamehas «cambian mucho» y la animación es mala: quiere que queden guapos, usando PixelFX. Dejar los pasos para instalar el plugin en una sesión nueva.
+
+### Lo que hice
+- PixelFX es `patch-gg/pixelfx` (MIT; 244 efectos y un skill para Claude Code). El juego ya usaba su librería para explosiones y golpes (`herramientas/efectos_pixelfx/`). Intenté instalar el skill en `.claude/skills/pixelfx` y bajar el repositorio a `herramientas/pixelfx`, pero el sistema de permisos de la sesión bloqueó meter código externo. No quedó nada a medias.
+- Guardias nuevas en `herramientas/animaciones/zzzy_guardias_2026_11_11.json` (la anterior queda en `idleAntes`): Androide 18 [28,29], Androide 17 [1], Androide 16 [4] y Jiren base [36]. Krilin ya estaba de tres cuartos; no se toca.
+- animaciones_juego.js?v=127.
+
+### A medias / problemas
+- Guardias de frente que faltan por revisar: Buu (todas), Toppo, Kale, Caulifla, Kefla, Bra, Zamasu, Baby Vegeta, Roshi, Nappa, Jeice, A21, Dyspo, Kibito, Glorio, Hatchiyack, Trunks GT, Merus, Majin Kuu, A14, A13, Bulma, Majin Duu, Gran Sacerdote, Gas, Omega, Super 17, Pan, Slug, Cui, Kibitoshin, Shin, Tenshinhan, Tao Pai Pai, Jiren (torneo). Muchos son packs de DeviantArt que solo traen guardia de frente.
+- «Solo ataques de la serie»: sin tocar. Las listas llevan Ráfaga de Ki, Combo de golpes y Patada voladora como relleno común; quitarlos cambia el cuerpo a cuerpo que Josemi pidió antes. Preguntarle antes.
+
+### Siguiente paso recomendado (sesión nueva, con PixelFX instalado)
+1. Josemi instala el plugin (ver abajo) y abre una sesión nueva.
+2. Rehacer el Kamehameha: el rayo hoy es un `BEAM` dibujado por código (`kame:BEAM(...)` en `script.js`; las poses salen de `beam`/`tecnica_kame` en las selecciones). Con el skill de pixelfx: buscar efectos de rayo (`node tools/list.mjs beam`, `node tools/list.mjs kamehameha`), renderizar, elegir y llevarlo a `herramientas/efectos_pixelfx/efectos.js` (bola que crece en las manos, rayo con núcleo blanco y borde azul, impacto). Regenerar `efectos_pixelfx.js` como dice su LEEME. Probar con Goku, Gohan, Goten, Krilin y Cell.
+3. Seguir las guardias de la lista de arriba y las 63 formas sin ataques extra.
+
+### Petición final de la sesión
+- Josemi: «no quiero que todos los ataques sean así de genéricos; quiero variedad basándose en los años de la serie, para que el juego tenga gracia». Que lo pendiente quede escrito para la siguiente sesión (sin copiar y pegar prompts) y que esa sesión instale PixelFX.
+- Hecho: bloque «SIGUIENTE SESIÓN» al principio de `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` con los cinco pasos (PixelFX, Kamehameha, ataques por época, guardias, animaciones).
+
+## 2026-11-11 — Claude Opus 5.5 (Kamehameha con PixelFX)
+
+### Lo que pidió el usuario
+- Josemi: descargar el repositorio de GitHub del otro Claude y seguir desde ahí. Clonado en `Escritorio\DBSURVIVOR\DBSurvivor` (rama `claude/nice-darwin-y7t5jp`).
+- Con `/pixelfx`: rehacer el Kamehameha para que quede bonito (bola azul que crece en las manos, rayo de núcleo blanco y borde azul que no parpadee ni cambie de forma, explosión al impactar), que salga de las manos, que el juego siga abriéndose con doble clic; probar con Goku, Gohan, Goten, Krilin y Cell y mandar GIFs. Cuando le guste: Galick Gun, Final Flash, Masenko y Makankosappo.
+
+### Lo que hice
+- Plugin PixelFX instalado y funcionando (skill `pixelfx:pixelfx`). Copia del repositorio en `herramientas/pixelfx/` (en `.gitignore`).
+- Mirados `arcane/arcane-beam`, `arcane/spell-charge` y `explosions/plasma-explosion` en azul. El rayo de arcane-beam era la mejor base; la carga y la explosión de la librería eran demasiado mágicas (anillos, violeta).
+- Efecto nuevo `herramientas/efectos_pixelfx/fx/kamehameha.js`: carga (bola que crece entre las manos con chispas y anillos que se cierran), rayo estable (bandas de blanco a azul, borde tramado, pulsos de brillo, ondulación de medio píxel como mucho) y explosión en la punta (destello, dos anillos, chispas y vapor). Pasa `check.mjs`.
+- Puente: `PFX.beam(b)` y `PFX.drawBeam(ctx,b,x,y)` en `efectos.js`; un lienzo por rayo del largo del rayo, girado con el ángulo del disparo (a la izquierda se refleja). La explosión sigue en la punta cuando el juego ya ha quitado el rayo. Lo usan las técnicas con `kame` en el id (`PFX_RAYO` en `script.js`); si `efectos_pixelfx.js` no carga, sale el rayo de antes.
+- El origen ya seguía la mano (`heroHand`) en carga y disparo; comprobado en partida. Bola de carga y fogonazo limitados a 7 px de radio para no tapar al personaje.
+- Probado en Chrome sin ventana con Goku, Gohan, Goten, Krilin y Cell (GIFs en `herramientas/pixelfx/gifs/`, fuera del repositorio). efectos_pixelfx.js?v=2, script.js?v=182.
+- Comprobaciones: `animaciones_ataques`, `catalogo_sprites`, `combate`, `personajes` y `roles` bien. `enemigos`, `formas`, `objetos` y `rotacion` fallan igual sin estos cambios (ya fallaban).
+
+### A medias / problemas
+- Falta que Josemi valore el Kamehameha. No se ha probado con doble clic (`file://`) desde aquí; el paquete sigue siendo un solo archivo sin fetch.
+- La librería pasa de pixelfx `a841596` a 0.3.1: las explosiones y golpes que ya se usaban pueden verse algo distintas.
+
+### Siguiente paso recomendado
+- Si a Josemi le gusta: Galick Gun (morado), Final Flash (amarillo), Masenko (amarillo, ahora es `big`) y Makankosappo (espiral) con el mismo sistema (`PFX_RAYO` y una variante del efecto por técnica).
+
+### Valoración de Josemi y retoque (11 nov.)
+- Le gusta el Kamehameha nuevo. Krilin lo lanzaba «con las manos hacia afuera» (fotograma 56, brazos abiertos a los lados): el disparo pasa al 38 (mano abierta empujando hacia el rayo) en `zzzy_kame_manos_2026_11_11.json`, también para `ki`. animaciones_juego.js?v=128.
+- Josemi arreglará más adelante con ChatGPT las manos de los personajes cuyo pack no tenga una pose buena de Kamehameha.
+- `previsualizar.py krilin 0` falla (IndexError en `CLAVES` con animaciones nuevas); comprobado en partida.
+
+## 2026-11-11 — Claude Opus 5.5 (transformaciones y aura con PixelFX)
+
+### Lo que pidió el usuario
+- Josemi: le gustó el Kamehameha. Krilin (y todos) hacen la pose de lado aunque el rayo vaya hacia abajo: lo arreglará con Codex (apuntado arriba del todo en `TAREAS_CODEX.md`).
+- Hacer con PixelFX primero las transformaciones y el aura, y después las técnicas (Galick Gun, Final Flash, Masenko, Makankosappo).
+
+### Lo que hice
+- `fx/aura.js` (bucle, propio): óvalo pegado al cuerpo con borde de tres tonos y puntas de llama que suben, luz y chispas. Sustituye a las llamas dibujadas por código (`auraFlames`) detrás del personaje; color por forma con la misma tabla (gold, white, red, blue, green, purple, orange, silver). Los fotogramas se pintan una vez por color y se guardan (`PFX.aura`).
+- `fx/transformacion.js` (una vez, propio): la energía entra en espiral al pecho durante la congelación del juego (0,6 s), destello, columna de luz corta, dos anillos de choque en el suelo, rayos, piedras, chispas y polvo. Se lanza en `checkForm()` con el color del aura de la forma nueva (`PFX.transform`). Durante `S.freeze` ahora también avanza `PFX.update`.
+- Probado en partida (Chrome sin ventana): Goku SSJ y SSJ2, Vegeta y Piccolo. GIFs en `herramientas/pixelfx/gifs/`. efectos_pixelfx.js?v=3, script.js?v=183.
+
+### A medias / problemas
+- La forma Majin de Vegeta tiene aura dorada en los datos (`aura` de su HDEF); si debe ser otra, se cambia ahí.
+- Los packs que traen su propia aura en la pose de carga (`pow`) la muestran además de la de pixelfx.
+
+### Siguiente paso recomendado
+- Técnicas con PixelFX: Galick Gun, Final Flash, Masenko y Makankosappo.
+
+### Transformación rehecha y técnicas (11 nov., continuación)
+- Josemi: le gusta la transformación, pero lo que queda envolviendo al personaje al final «queda feo»; replicar mejor la serie y, después de transformarse, quitar el aura.
+- `fx/transformacion.js` rehecho como en la serie: durante la carga tiembla el suelo, flotan piedras, el aura chisporrotea y crece a tirones y saltan relámpagos; en el estallido, destello, llamarada enorme del aura hacia arriba, dos anillos de choque, relámpagos y piedras despedidas; la llamarada se encoge hasta desaparecer (no queda nada).
+- Quitada el aura permanente alrededor del personaje (la nueva de pixelfx y las llamas antiguas). `fx/aura.js` y `PFX.aura` se quedan por si se quieren recuperar (comentario en el dibujo del jugador). Siguen las chispas eléctricas de las formas 2+ y el aura roja del Kaioken.
+- Rayos con estilo en `fx/kamehameha.js` (opción `estilo`): Galick Gun (morado, chispas eléctricas en los bordes y en la carga), Final Flash (amarillo, carga con destello en estrella, cabeza y explosión más grandes), Masenko (amarillo, destello en estrella) y Makankosappo (núcleo fino y dos espirales moradas). `PFX_RAYO`/`PFX_ESTILO` en `script.js`.
+- El Masenko pasa de bola grande (`big`) a rayo, como en la serie: recarga 3,2 s (antes 2,4), daño 24+9/nivel, largo 200+15, grosor 11+1,5, carga 0,4 s. Josemi puede pedir que vuelva a ser bola.
+- Probado en partida: Galick Gun (Vegeta), Final Flash (Vegeta Blue manga), Masenko (Gohan), Makankosappo (Piccolo), transformación de Goku y Vegeta. efectos_pixelfx.js?v=4, script.js?v=185.
+- `comprobar_formas.cjs` busca el final de `checkForm` por su texto: la llamada a `PFX.transform` va antes de `burst(...)` y usa `typeof PFX` para que la prueba siga funcionando (sigue fallando como antes por el deseo).
+
+### Todos los rayos, Kienzan y Taiyoken (11 nov., continuación)
+- Josemi: «sí, sigue» (seguir aprovechando PixelFX).
+- Todos los rayos del jugador usan ya el rayo de pixelfx con sus colores (`PFX_RAYO=/./`); estilo `flash` para Hell Flash, Heat Dome y Gamma Burst Flash; `galick` para Double Sunday, Milky Cannon, Onda Demoníaca y Onda Mágica; `espiral` para los que tienen `spiral` (Cañón Especial Bestia). Los rayos enemigos siguen como antes.
+- `fx/kienzan.js` (bucle, propio): disco fino que gira, filo blanco, franjas que giran, chispas y estela. Lo usan todos los proyectiles `disc` del jugador (`PFX.disc`, fotogramas guardados por color y tamaño). Los discos enemigos siguen como antes.
+- `fx/taiyoken.js` (una vez, propio): destello en estrella de 12 rayos, anillo blanco y luz que se apaga en 0,7 s. Sale en `fireSig`, rama `nova`, para el Taiyoken (`PFX.nova` con tipo `taiyoken`).
+- Probado en partida: Kienzan (Krilin), Taiyoken y Kikoho (Tenshinhan). efectos_pixelfx.js?v=5, script.js?v=186.
+- Ojo para pruebas: la casilla de cada técnica no siempre es su posición en `SIGS` (Krilin tiene el Kienzan en la 2). La prueba busca la casilla mirando qué temporizador se pone en marcha.
+
+### Golpes cuerpo a cuerpo con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «golpes cuerpo a cuerpo».
+- Cada golpe del combo que toca saca ahora un impacto a la altura del cuerpo del enemigo (antes, cada dos golpes y en los pies): alterna `impacts/blunt-hit` (golpe sordo con polvo) y `impacts/hit-spark`.
+- `fx/golpe.js` (propio): golpe final de combo al estilo anime (líneas de choque radiales, estrella blanca con un rayo largo hacia delante, anillo que se rompe, chispas; 0,35 s). En el último golpe hay además una parada de impacto de 0,05 s (`S.freeze`) y sacudida de cámara 3. El Puño del Dragón añade `crit-hit`.
+- `PFX.hit(x,y,dir,tipo)` con tipo `normal`, `final` o `dragon` (acepta aún `true` = dragon). efectos_pixelfx.js?v=6, script.js?v=187. `comprobar_combate` bien.
+- Probado en partida con Goku (puñetazos). El Puño del Dragón no se pudo lanzar en la prueba automática (no encontró su casilla).
+
+### Recompensas e interfaz con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «recompensas e interfaz».
+- Al recoger un objeto: `pickups/collect-burst` con el color del objeto (esfera dorada, Senzu verde, zeni amarillo, cápsulas de su color; `RECOGER_COL` en `efectos.js`). Llamada `PFX.recoger` al poner `k.got`.
+- Esferas del Dragón en el suelo: columna de luz dorada detrás para verlas desde lejos (`fx/columna_esfera.js`: copia de `pickups/loot-beam` de pixelfx sin la espada del suelo; `PFX.columna`, fotogramas guardados).
+- Subida de nivel: `ui/level-up` de pixelfx con el texto «NIVEL n» (la fuente no tiene ¡ ni acentos). Se lanza en `gainXP` si sube el nivel (`PFX.nivel`); se ve al cerrar la ventana de mejoras porque la partida está en pausa.
+- Las gemas de experiencia siguen igual (son demasiadas para un efecto cada una).
+- Probado en partida con Goku. efectos_pixelfx.js?v=7, script.js?v=188.
+
+### Escenarios y clima con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «escenarios y clima».
+- Los climas de pixelfx (`weather/*`) traen su propio cielo y suelo vistos de lado, así que no valen para la vista cenital. Hecho `fx/clima.js` (propio): capa transparente de 320×180 que se repite sin costuras, con tipo `lluvia` (gotas y salpicaduras), `hojas`, `ceniza` (brasas que suben), `niebla` y `destellos`.
+- `CLIMA` en `script.js` (antes de `render`): bosque, Monte Paoz y praderas → hojas; Futuro de Trunks → lluvia; tierra volcánica, infierno y Planeta Vegeta → ceniza; Templo de Kami → niebla; Mundo Kaioshin → destellos. Se dibuja encima del mundo y debajo del HUD, pegado al mundo (se mueve con la cámara), con `PFX.clima`; se repinta a 30 fps como mucho.
+- Probado en partida en los siete escenarios. efectos_pixelfx.js?v=8, script.js?v=189.
+
+### Enemigos y jefes con PixelFX (11 nov., continuación)
+- Josemi eligió el bloque «enemigos y jefes».
+- Rayos de los jefes (`bossBeam`, `BBEAM`): usan el rayo de pixelfx con sus colores (estilo `flash` si el nombre lleva FLASH; `galick` si lleva GALICK o SUPERNOVA). El aviso rojo discontinuo se sigue dibujando para poder esquivar. `RAYO_MAX` sube a 6.
+- Muertes (`kill`): enemigos normales → `spawn/poof` (nube con estrellas; tope de 8 a la vez); élite → explosión de plasma naranja; jefes → `explosions/big-explosion` (fogonazo y hongo de humo). `PFX.muerte`.
+- Llegada de un jefe (`spawnBoss`): `lightning/thunderclap` (relámpago que cae con onda y polvo). `PFX.llegada`.
+- Probado en partida con Freezer y Saibaman. Al morir el jefe la partida se pausa para la recompensa: la explosión grande sigue al cerrarla. efectos_pixelfx.js?v=9, script.js?v=190.
+
+### Guardias de lado, tanda 1 (11 nov., continuación)
+- Josemi eligió «guardias y animaciones».
+- `herramientas/animaciones/zzzy_guardias_tanda1_2026_11_11.json` (la anterior queda en `idleAntes`): Buu gordo [12], Buu flaco [4,5], Super Buu [2], Buu con Gohan [2], Kid Buu [4,5], Toppo [12], Kale [20,21], Kale SSJ [18,19], Caulifla [8,9], Kefla SSJ [117,118], Kefla Blue [30], Zamasu [16], Zamasu fusionado [32]. Un fotograma → `idleDu` [60].
+- `comprobar_personajes` correcto; revisadas a ojo las hojas del pack y las vistas previas. animaciones_juego.js?v=129.
+- Quedan de la lista: Bra, Baby Vegeta, Roshi, Nappa, Jeice, A21, Dyspo, Kibito, Glorio, Hatchiyack, Trunks GT, Merus, Majin Kuu, A14, A13, Bulma, Majin Duu, Gran Sacerdote, Gas, Omega, Super 17, Pan, Slug, Cui, Kibitoshin, Shin, Tenshinhan, Tao Pai Pai, Jiren (gris). Muchos son de DeviantArt y puede que solo tengan guardia de frente.
+
+### Tanda 11 de ataques extra (11 nov., continuación)
+- Josemi: «pasa a animaciones».
+- `herramientas/animaciones/zz_tanda_ataques_11_2026_11_11.json`: Kibito (attack2, attack3, kick2, beam), Gran Sacerdote (attack2, kick2, beam), Glorio (los cinco), Gohan manga (attack2, beam, up), Jiren gris (attack2, attack3, kick2, up) y Gohan poseído (los cinco). Elegidos con la hoja y el zoom de `ver_pack.py` y revisados con `previsualizar.py`. Lo que el pack no tiene claro se deja vacío (el juego usa el de siempre).
+- Exportados a `piskel_animaciones/`. Auditoría regenerada: formas jugables sin ningún ataque extra, de 63 a 57. animaciones_juego.js?v=130. `comprobar_personajes` y `comprobar_animaciones_ataques` correctos.
+- Siguiente: seguir con las 57 de `AUDITORIA_ANIMACIONES.md` (formas sueltas de DeviantArt primero: A14, Black Kaioshin, Bulma, Cui, Gomah, Hatchiyack…).
+
+### Tanda 12 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_12_2026_11_11.json`: A14 (attack2, attack3, kick2, up), Black Kaioshin (attack2, attack3, beam), Cui (attack2, kick2, beam, up) y Hatchiyack (attack2, attack3, beam, up). Bulma (16 fotogramas) y Rey Gomah (38) no tienen material suficiente y se dejan.
+- Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=131.
+
+### Tanda 13 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_13_2026_11_11.json`: Magetta (los cinco; solo fotogramas de la escala grande, el pack mezcla dos), Majin Duu (attack2, attack3, kick2, up), Pan GT (attack2, kick2, beam), Paragus (attack2, attack3, beam), Tao Pai Pai (attack2, kick2) y Vegeta Blue maligno (los cinco).
+- Revisados con zoom y `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=132.
+
+### Tanda 14 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_14_2026_11_11.json`: Trunks armadura (attack2, kick2, up), Vegeta Yardrat (attack2, attack3, kick2, up), Vegeta MUI (los cinco), Vegetto falso (attack2, attack3, kick2, beam) y Zamasu fusionado (attack2, kick2, beam, up).
+- Vegeta Dios (`vegetabroly`, pack 305) se quedó fuera: los fotogramas extra elegidos (58, 59, 69, 70, 84-86) salían a ~838×801 al montar mientras sus ataques actuales salen a 68×58. Hay que mirar por qué antes de tocarlo.
+- Revisados con `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=133.
+
+### Tanda 15 de ataques extra (11 nov., continuación)
+- `zz_tanda_ataques_15_2026_11_11.json`: Metal Cooler (attack2, beam), Omega Shenron (attack2, attack3, beam, up), Rey Cold (beam), Supremo Kaioshin (beam), Super 17 (attack2, beam, up) y Majin Kuu (attack2, attack3, kick2, beam). Packs pequeños de DeviantArt: lo dudoso se dejó fuera.
+- Revisados con `previsualizar.py`; exportados a Piskel. animaciones_juego.js?v=134.
+
+## 2026-11-11 — Claude (sesión ki y rayos coherentes con la pose)
+
+### Lo que pidió el usuario
+- (18:00) «Vamos a seguir con las animaciones […] he encontrado muchos errores. Todos los personajes quiero que tengan animaciones buenas. Por ejemplo, Roshi tiene un ki en la mano y tira ki. Eso no es coherente: lo coherente es que haga la animación de tirar el ki y de ahí ya le salga la bola. Revisa todo eso bien, haz las animaciones bien, los Kamehameha bien también, y vamos a hacerlo todo.» Da permiso para todo; se trabaja desde GitHub (rama `claude/nice-darwin-y7t5jp`) porque en el PC nuevo la carpeta es `Escritorio\DBSURVIVOR` y no estaba conectada.
+
+### Lo que hice
+- Causa: el juego ya pinta su propia bola de ki en la mano al cargar y saca el proyectil o el rayo de la mano del fotograma de lanzamiento (`heroHand`), pero 168 de 313 formas tienen bola, fuego o rayo pintados en sus fotogramas de ki (90 de 200 en la pose del rayo). Se ven dos bolas y el proyectil sale del borde de la pintada. Roshi: sus dos fotogramas de ki llevan una bola de fuego en la mano. (commit 4104aac9)
+- `heroHand`: en la carga, la mano es el punto que más sobresale a la altura de los brazos (detrás del tronco en el Kamehameha), no un punto fijo en el pecho. `fx/kamehameha.js`: bola de carga más pequeña, anillos más cerca y menos brillo; antes tapaba al personaje. efectos_pixelfx.js?v=10, script.js?v=191.
+- `herramientas/proponer_ki_limpio.py`: busca en el mismo pack, a la misma escala que `montar_animaciones.py`, una carga y un lanzamiento sin efecto pintado (no usa poses de daño, aura, vuelo ni patadas). Revisadas a ojo las 167 propuestas: 129 formas con ki nuevo (56 también en `beam`) en `herramientas/animaciones/zzzz_ki_limpio_2026_11_11.json` (lo anterior en `kiAntes`/`beamAntes`). Goku base: ki [34, 37] y Kamehameha de lado [47, 37] (antes cargaba de frente). (commit 41c1cdd5)
+- A medias: 52 formas para elegir a mano (22 con propuesta mala y 30 sin candidato limpio).
+- 30 formas más elegidas a mano (carga en guardia y lanzamiento con el brazo estirado). Montadas las 159 formas: animaciones_juego.js?v=137. `comprobar_personajes` correcto (151 personajes, 204 formas). 22 formas sin fotograma limpio en su pack se quedan como estaban (A13, A19, Dodoria, Zarbon, Recoome, Slug, Tao Pai Pai, Trunks niño, Granola, Metal Cooler, Gomah, Nuova…).
+- Kamehameha de Goku base: Josemi probó varias versiones (19:02 «me gustaba más el de antes, pero no pegues la bola tanto al cuerpo»; 19:04 «un poco más hacia delante y como en la serie»; 19:06 «no uses la pose de bloqueo»). Queda: carga con el cuerpo girado y las manos atrás (47), la bola en la mano de atrás (`tecnica_kameOrigen`), y empuje (37). El pack 215 no tiene empuje a dos manos.
+- Josemi (19:02) pregunta si todos los personajes están animados como sus sprites y si todos tienen sus ataques de la serie. Respuesta: no del todo (76 de 225 formas con todos los ataques extra, 36 sin ninguno; casi todas las listas llevan relleno genérico). Pide seguir animando todos los sprites, ataques personalizados y una tanda de iconos en pixel art porque no le gusta la estética. Propuesta de ataques tanda 1 en `Planes y diseños/ataques_propios_tanda1_2026-11-11.md`, pendiente de que la confirme.

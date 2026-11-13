@@ -1,0 +1,59 @@
+{
+ "_nota": "11 nov. 2026 (Claude): Josemi no quiere guardias de frente o de pie sin más; si el pack tiene una postura de pelea de lado o de tres cuartos, se usa esa. La anterior queda en idleAntes.",
+ "heroes": {
+  "a18": {
+   "0": {
+    "idle": [
+     28,
+     29
+    ],
+    "idleAntes": [
+     0,
+     1
+    ]
+   }
+  },
+  "a17": {
+   "0": {
+    "idle": [
+     1
+    ],
+    "idleAntes": [
+     0,
+     1
+    ],
+    "idleDu": [
+     60
+    ]
+   }
+  },
+  "a16": {
+   "0": {
+    "idle": [
+     4
+    ],
+    "idleAntes": [
+     0,
+     1
+    ],
+    "idleDu": [
+     60
+    ]
+   }
+  },
+  "jiren": {
+   "0": {
+    "idle": [
+     36
+    ],
+    "idleAntes": [
+     10,
+     11
+    ],
+    "idleDu": [
+     60
+    ]
+   }
+  }
+ }
+}

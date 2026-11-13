@@ -1681,7 +1681,7 @@ Object.assign(HDEF.gohanadult,{forms:['BASE','MÍSTICO','BESTIA'],aura:['white',
 
 Object.assign(HDEF.trunkscell,{forms:['BASE','SUPER SAIYAN','ULTRA SSJ'],aura:['white','gold','gold']});
 
-Object.assign(HDEF.trunks,{forms:['BASE','SUPER SAIYAN','SSJ2 MANGA'],aura:['white','gold','gold']});
+Object.assign(HDEF.trunks,{forms:['BASE','SUPER SAIYAN','BASE MANGA','SSJ2 MANGA'],aura:['white','gold','white','gold']});
 
 Object.assign(HDEF.gogeta,{forms:['SUPER GOGETA','SUPER SAIYAN 4','SSJ BLUE'],aura:['gold','red','blue']});
 
@@ -2327,9 +2327,10 @@ const MV={
 
    ds:['ESPECIAL: rayo en espiral que lo atraviesa todo.','+Daño','+Alcance','+Daño','+Daño y menos recarga']},
 
- masenko:{name:'Masenko',kind:'big',col:['#d08a10','#ffcc33','#ffffff'],evo:'Masenko Supremo',req:'power',
+ masenko:{name:'Masenko',kind:'beam',col:['#d08a10','#ffcc33','#ffffff'],evo:'Masenko Supremo',req:'power',
 
-   st:l=>({cd:2.4-l*0.15,dmg:22+l*8,rad:22+l*3,spd:130}),
+   // rayo como en la serie (antes bola grande); recarga algo mayor que la bola para compensar
+   st:l=>({cd:3.2-l*0.2,dmg:24+l*9,len:200+l*15,wid:11+l*1.5,dur:0.55+l*0.05,charge:0.4}),
 
    ds:['Bola de energía que explota al impactar.','+Daño','+Radio de explosión','+Daño','+Daño y cadencia']},
 
@@ -3002,6 +3003,26 @@ const SIGS_SERIE={raditz:['kiblast','punch','saturday','doublesunday','kick','re
  dyspo:['dysposlash','dyspoball','kick','dysposhoot','punch']};
 
 for(const id in NUEVOS)SIGS[id]=SIGS_SERIE[id]||NUEVOS[id].sig;
+// 11 nov.: cada versión con sus técnicas de la serie, en vez de copiar la lista de Goku o Vegeta base
+Object.assign(SIGS,{
+  gokussjkaioken:['kiblast','kaioken','kame10x','punch','dragonfist','kick'],   // Kaioken x10 Kamehameha
+  gokuuiverdadero:['kiblast','silver','punch','godkame','instant','kick'],       // UI a su manera (Granola)
+  gokussjchaqueta:['kiblast','punch','kame','kick','instant','godkame'],
+  gokupatrulla:['kiblast','instant','kame','punch','silver','godkame'],          // saga de Moro
+  gokussj4daima:['kiblast','punch','kame10x','kick','dragonfist','instant'],     // el Kamehameha x10 del SSJ4
+  gokuyardrat:['kiblast','instant','kame','kick','kaioken','punch'],             // aprende el Teletransporte en Yardrat
+  vegetamui:['kiblast','silver','galick','punch','finalflash','finalexp'],
+  vegetabluemal:['kiblast','punch','galick','gamma','finalflash','finalexp'],
+  vegetayardrat:['kiblast','punch','galick','kick','bigbang','finalflash'],
+  vegetaxeno:['kiblast','punch','galick','finalshine','bigbang','finalflash'],      // Final Shine en SSJ4
+  bramajin:['kiblast','galick','punch','kick','brablast','renzoku'],
+  bardockalt:['kiblast','riot','punch','finalspirit','kick','renzoku'],
+  vegitoblue254:['kiblast','spiritsword','finalkame','punch','godkame','kick'],
+  vegettofalso:['kiblast','bigbang','punch','finalkame','renzoku','kick'],
+  blackkaioshin:['kiblast','kiblade','blackkame','punch','holywrath','kick'],
+  zamasufusion:['kiblast','lances','holywrath','kiblade','scythe','kick']
+});
+for(const id in SIGS)if(SIGS[id])SIGS[id]=SIGS[id].filter(m=>MV[m]);
 
 // 3 nov.: técnicas propias del plan «sprites para casa»
 
@@ -3171,8 +3192,10 @@ function sigUpdate(dt,ps){
 
       for(let i=0;i<5;i++)parts.push({x:hx+C.d*rnd(4,12),y:hy-rnd(4,16),vx:C.d*rnd(20,70),vy:rnd(-40,10),t:0.22,c:C.col[i%2],s:2});
 
-      // El destello va sobre el enemigo y no en cada golpe, para que se vea la animación del personaje.
-      if(tocado&&window.PFX&&(last||C.i%2===0))PFX.hit(impX,impY,C.d,last&&!!C.dragon);
+      // Impacto de pixelfx a la altura del cuerpo del enemigo: golpe sordo o chispa en cada golpe que toca y, en el último,
+      // impacto de anime con una parada muy corta y sacudida (el Puño del Dragón añade el golpe crítico).
+      if(tocado&&window.PFX)PFX.hit(impX,impY-12,C.d,last?(C.dragon?'dragon':'final'):'normal');
+      if(tocado&&last){S.freeze=Math.max(S.freeze||0,0.05);cam.shake=Math.max(cam.shake||0,3)}
 
       if(C.dragon&&last){fxRg.push({x:hx,y:hy-6,t:0,dur:0.5,rad:C.rad*1.6,col:C.col});cam.shake=Math.max(cam.shake||0,6)}
 
@@ -3262,7 +3285,7 @@ function fireSig(W,st,dmg,ps){
 
     if(W.heal&&hit){const mx=stats().maxhp;P.hp=Math.min(mx,P.hp+mx*0.03*Math.min(hit,8)*W.heal*4);fx(P.x,P.y-12,'green',18,0.5)}
 
-    fxRg.push({x:P.x,y:P.y-10,t:0,dur:0.45,rad,col:W.col});if(window.PFX)PFX.nova(P.x,P.y-10,rad,W.col,W===MV.hakai?'hakai':W===MV.finalexp||W===MV.jibaku?'final':'');if(st.stun)S.flash=Math.max(S.flash,0.25);cam.shake=Math.max(cam.shake||0,5);attackRelease(W,d>0?0:Math.PI,0.3);sfx('charge')}}
+    fxRg.push({x:P.x,y:P.y-10,t:0,dur:0.45,rad,col:W.col});if(window.PFX)PFX.nova(P.x,P.y-10,rad,W.col,W===MV.hakai?'hakai':W===MV.finalexp||W===MV.jibaku?'final':W===MV.taiyoken?'taiyoken':'');if(st.stun)S.flash=Math.max(S.flash,0.25);cam.shake=Math.max(cam.shake||0,5);attackRelease(W,d>0?0:Math.PI,0.3);sfx('charge')}}
 
 function sigIcon(id,size=32){
 
@@ -3291,6 +3314,10 @@ function sigIcon(id,size=32){
       const w=Math.max(1,Math.round(im.naturalWidth*z)),h=Math.max(1,Math.round(im.naturalHeight*z));
 
       g.drawImage(im,Math.round((size-w)/2),Math.round((size-h)/2),w,h);
+
+      // 11 nov.: cada técnica cuerpo a cuerpo con su color (antes todas tenían el mismo guantelete)
+      if(id!=='punch'){g.globalCompositeOperation='source-atop';g.globalAlpha=0.5;g.fillStyle=C[0];g.fillRect(0,0,size,size);g.globalAlpha=1;g.globalCompositeOperation='source-over';
+        const bs=Math.max(4,size>>2),bx=size-bs-1,by=1;g.fillStyle='#101020';g.fillRect(bx-1,by-1,bs+2,bs+2);g.fillStyle=C[0];g.fillRect(bx,by,bs,bs);g.fillStyle=C[1]||'#fff';g.fillRect(bx+1,by+1,Math.max(1,bs-3),1)}
 
       return ICON_C[k]=addOutline(c,'#101020');
 
@@ -4192,6 +4219,7 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
   e.dead=true;S.kills++;S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
 
+  if(typeof PFX!=='undefined'&&PFX.muerte)PFX.muerte(e.x,e.y,e.boss?'jefe':ET[e.type].elite?'elite':'normal');
   if(e.boss){for(let i=0;i<6;i++)setTimeout(()=>{fx(e.x+rnd(-18,18),e.y-10+rnd(-18,12),i%2?'fire':'gold',16+(i%3)*4,0.6);smoke(e.x,e.y-10,6)},i*140)}
 
   else fx(e.x,e.y-e.h*0.45,DEATHK[e.type]||"fire",8,0.36);
@@ -4292,7 +4320,9 @@ function fire(id,m,st,ps){
 
      const ch=st.charge||0.25,dur=st.dur*(ev?1.3:1);
 
-     beams.push({x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id});
+     {const bm={x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id};
+     // Kamehameha y sus variantes: carga, rayo e impacto de pixelfx (efectos_pixelfx.js); si no carga, el rayo de siempre
+     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)){bm.estilo=PFX_ESTILO[id]||(W.spiral?'espiral':'kame');bm.pfx=PFX.beam(bm)}beams.push(bm)}
 
      P.cast={a,t:ch+dur,pose:attackPose(W),id};sfx('charge');setTimeout(()=>sfx('beam'),ch*1000);break}
 
@@ -4490,7 +4520,7 @@ function director(dt){
 
 function spawnBoss(id,final){islandStart();const a=rnd(TAU);S.bossN=S.bossIdx-1;if(S.endless)S.bossN=4;const e=spawn(id,P.x+Math.cos(a)*90,P.y+Math.sin(a)*90);e.final=!!final;S.boss=e;e.powT=1.8;
 
-  S.banner={t:3,text:'¡'+ET[id].n+'!',sub:S.isl.name+' · derrota al jefe y elige una mejora',boss:1};sfx('boss');cam.shake=6}
+  S.banner={t:3,text:'¡'+ET[id].n+'!',sub:S.isl.name+' · derrota al jefe y elige una mejora',boss:1};sfx('boss');cam.shake=6;if(window.PFX&&PFX.llegada)PFX.llegada(e.x,e.y)}
 
 
 
@@ -4702,7 +4732,9 @@ const BBEAM={frieza:['RAYO MORTAL',['#a0207a','#ff6ad0','#ffffff'],8],golden:['R
 
 function bossBeam(e,dt){const B=BBEAM[e.type];if(!B)return false;e.bT=(e.bT===undefined?5:e.bT)-dt;
 
-  if(e.bT<=0){e.bT=7+rnd(0,2);ebeams.push({e,x:e.x,y:e.y-14,a:Math.atan2(P.y-10-(e.y-14),P.x-e.x),t:-1.1,T:1.1,dur:0.8,len:460,wid:B[2],col:B[1],name:B[0],big:B[2]>14,dmg:e.dmg*1.6})}
+  if(e.bT<=0){e.bT=7+rnd(0,2);const eb={e,x:e.x,y:e.y-14,a:Math.atan2(P.y-10-(e.y-14),P.x-e.x),t:-1.1,T:1.1,dur:0.8,len:460,wid:B[2],col:B[1],name:B[0],big:B[2]>14,dmg:e.dmg*1.6};
+    // rayo de jefe con pixelfx (el aviso rojo discontinuo se sigue dibujando encima)
+    if(window.PFX&&PFX.beam){eb.estilo=/FLASH/.test(B[0])?'flash':/GALICK|SUPERNOVA/.test(B[0])?'galick':'kame';eb.pfx=PFX.beam(eb)}ebeams.push(eb)}
 
   return ebeams.some(b=>b.e===e&&b.t<0.8)}
 
@@ -4750,7 +4782,8 @@ function bossAI(e,dt){
 
 // ---------- level up / cards ----------
 
-function gainXP(v){if(S.ev&&S.ev.k==='gravedad')v*=2;P.xp+=v*stats().xp;while(P.xp>=P.need){P.xp-=P.need;P.lvl++;P.need=need(P.lvl);S.pending++}}
+function gainXP(v){if(S.ev&&S.ev.k==='gravedad')v*=2;P.xp+=v*stats().xp;const lv0=P.lvl;while(P.xp>=P.need){P.xp-=P.need;P.lvl++;P.need=need(P.lvl);S.pending++}
+  if(P.lvl>lv0&&typeof PFX!=='undefined'&&PFX.nivel)PFX.nivel(P.x,P.y,P.lvl)}
 
 const RELICS={
 
@@ -5049,7 +5082,7 @@ function checkForm(){const lv=FORM_LV.filter(l=>P.lvl>=l).length-1,f=Math.min(HE
 
   S.banner={t:2.6,text:HEROES[S.hid].forms[f]+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.6;P.powT=1.6;cam.shake=8;sfx('trans');
 
-  burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}}
+  if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,heroAura(S.hid,f));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}}
 
 
 
@@ -5102,7 +5135,7 @@ function rolAI(e,d,dx,dy,dt){const r=rolE(e),A=ROL_AJ;if(r==='jefe'||r==='kami')
 
 function update(dt){
 
-  if(S.freeze>0){S.freeze-=dt;updateFx(dt);return}
+  if(S.freeze>0){S.freeze-=dt;updateFx(dt);if(window.PFX)PFX.update(dt);return}
 
   S.t+=dt;const ps=stats();
 
@@ -5296,7 +5329,7 @@ function update(dt){
 
     if(k.k==='magnet'||d<ps.mag*0.6){k.x+=(P.x-k.x)*dt*6;k.y+=(P.y-k.y)*dt*6}
 
-    if(d<12){k.got=1;
+    if(d<12){k.got=1;if(typeof PFX!=='undefined'&&PFX.recoger)PFX.recoger(k.x,k.y,k.k);
 
       if(k.k==='senzu'||k.k==='capsulaVida'||k.k==='capsulaKi'||k.k==='radar'||k.k==='capsulaDorada'||k.k==='capsulaRoja'||k.k==='senzuBolsa')recogerObjeto(k.k,ps);
 
@@ -5598,7 +5631,7 @@ const WORLD={
 
       ctx.drawImage(groundTile(Tl.beach,tx,ty),x,y)},
 
-    decor(tx,ty,v){if(tx===0&&ty===-2)return Dc.kamehouse;if(Math.abs(tx)<3&&ty>-4&&ty<2)return null;if(v<0.05)return Dc.palm;if(v<0.07)return Dc.rubble;return null}};
+    decor(tx,ty,v){if(tx===0&&ty===-5)return Dc.kamehouse;if(Math.abs(tx)<4&&ty>-7&&ty<3)return null;if(v<0.05)return Dc.palm;if(v<0.07)return Dc.rubble;return null}};
 
 
 
@@ -6757,7 +6790,13 @@ function heroHand(i,left,pose){const pk=scHero(S.hid,P.form);if(!pk)return null;
     for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(d[(y*W+x)*4+3]>40){if(y<y0)y0=y;if(y>y1)y1=y}
 
     if((pose||P.cast?.pose||P.atkPose)==='up')anchors[handKey]=[W/2,y0+2];
-    else if(i===0)anchors[handKey]=[W/2+W*0.12,H-(H-y0)*0.42];
+    // carga: las manos están donde el brazo llega más lejos a la altura de los brazos, delante o detrás del tronco
+    // (en el Kamehameha están juntas detrás, a la altura de la cadera); la bola de ki se dibuja ahí
+    else if(i===0){const ya=y0+(y1-y0)*0.25|0,yb=y0+(y1-y0)*0.72|0,tc=[];let fx=-1,bx=W;
+      for(let y=ya;y<=yb;y++)for(let x=0;x<W;x++)if(d[(y*W+x)*4+3]>40){if(x>fx)fx=x;if(x<bx)bx=x;if(y>y0+(y1-y0)*0.35&&y<y0+(y1-y0)*0.6)tc.push(x)}
+      tc.sort((p,q)=>p-q);const cx=tc.length?tc[tc.length>>1]:W/2,atras=cx-bx>(fx-cx)*1.15,hx=atras?bx:fx;let sy=0,n=0;
+      for(let y=ya;y<=yb;y++)for(let x=Math.max(0,hx-1);x<=Math.min(W-1,hx+1);x++)if(d[(y*W+x)*4+3]>40){sy+=y;n++}
+      anchors[handKey]=fx<0?[W/2+W*0.12,H-(H-y0)*0.42]:[hx+(atras?2:-2),n?sy/n:(ya+yb)/2]}
 
     else{const ya=y0+(y1-y0)*0.25|0,yb=y0+(y1-y0)*0.7|0;let bx=-1,sy=0,n=0;
 
@@ -6843,7 +6882,10 @@ function heroTilt(left,mx,my){return 0;// Josemi, 4 nov.: al girar el tronco se 
 
   return 0}
 
+// rayos de pixelfx: todos los rayos del jugador, con sus colores; algunos con estilo propio (los de espiral, «espiral»)
+const PFX_RAYO=/./,PFX_ESTILO={galick:'galick',finalflash:'flash',masenko:'masenko',makanko:'espiral',hellflash:'flash',heatdome:'flash',gamma:'flash',doublesunday:'galick',milky:'galick',gomahwave:'galick',gloriowave:'galick'};
 function drawBeam(b){
+  if(b.pfx&&window.PFX&&PFX.drawBeam(ctx,b,b.x-cam.x,b.y-cam.y))return;
 
   const ox=Math.round(b.x-cam.x),oy=Math.round(b.y-cam.y),t=b.t;
 
@@ -7065,6 +7107,10 @@ function circ(x,y,r,col){ctx.fillStyle=col;for(let yy=-r;yy<=r;yy++){const w=Mat
 
 function ring(x,y,r,col,th=1){ctx.fillStyle=col;const n=Math.max(16,r*4|0);for(let i=0;i<n;i++){const a=i/n*TAU;ctx.fillRect(Math.round(x+Math.cos(a)*r),Math.round(y+Math.sin(a)*r),th,th)}}
 
+// clima de cada escenario: [tipo, colores de oscuro a claro, densidad]
+const CLIMA={bosque:['hojas',['#4a7a18','#8ab828','#d8c040'],1],paoz:['hojas',['#5a8a20','#a0c830','#e8c040'],0.8],pradera:['hojas',['#5a8a20','#a0c830','#e8d060'],0.5],
+  futuro:['lluvia',['#3a5a8a','#7aa8d8','#c8e4ff'],1],volcan:['ceniza',['#4a3a3a','#ff6a20','#ffd080'],1],infierno:['ceniza',['#3a1a1a','#e02a20','#ff9a6a'],1],
+  vegetasei:['ceniza',['#4a2a2a','#ff5a20','#ffc080'],0.7],lookout:['niebla',['#c8d0e0','#e8eef8','#ffffff'],1],kaioshin:['destellos',['#c8a020','#ffe060','#fff8c0'],1]};
 function render(time){
 
   const shkMult=(ACC_CFG.shake??1);
@@ -7093,7 +7139,7 @@ function render(time){
 
     else if(k.k==='zeni'){ctx.fillStyle=OUTL;ctx.fillRect(x-3,y-7,7,7);ctx.fillStyle='#ffd23f';ctx.fillRect(x-2,y-6,5,5);ctx.fillStyle='#fff3a0';ctx.fillRect(x-1,y-5,2,2)}
 
-    else if(k.k==='dball'){const b=Math.round(Math.sin(time*5)*2);ring(x,y-8+b,7+((time*8|0)%2),'rgba(255,200,80,.6)');drawDBall(x,y-8+b,k.n)}
+    else if(k.k==='dball'){const b=Math.round(Math.sin(time*5)*2);if(window.PFX&&PFX.columna)PFX.columna(ctx,x,y,time);ring(x,y-8+b,7+((time*8|0)%2),'rgba(255,200,80,.6)');drawDBall(x,y-8+b,k.n)}
 
     else if(k.k==='chest'){const b=(time*6|0)%2;ctx.fillStyle=OUTL;ctx.fillRect(x-8,y-12-b,16,12);ctx.fillStyle='#b8741a';ctx.fillRect(x-7,y-11-b,14,10);ctx.fillStyle='#ffd23f';ctx.fillRect(x-7,y-8-b,14,2);ctx.fillRect(x-1,y-9-b,3,4)}}
 
@@ -7111,7 +7157,8 @@ function render(time){
 
       if(P.form>0){const fl=auraFlames(heroAura(S.hid,P.form)),f=(time*14|0)%3;
 
-        ctx.globalAlpha=0.8;ctx.drawImage(fl[f],Math.round(x-fl[f].width/2),Math.round(y-fl[f].height+3));ctx.globalAlpha=1;
+        // sin aura permanente alrededor del personaje (Josemi, 11 nov.: «no dejes esa cosa que le envuelve»); el aura solo sale
+        // al transformarse (PFX.transform). Para recuperarla: PFX.aura(ctx,x,y+2,heroAura(S.hid,P.form),time,0,2) o las llamas fl[f]
 
         if(P.form>=2&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 
@@ -7258,6 +7305,7 @@ function render(time){
 
       ring(x,y,r+1+((time*12|0)%3),p.col[0],1)}
 
+    else if(p.k==='disc'&&window.PFX&&PFX.disc&&PFX.disc(ctx,x,y,p.r,p.col,Math.atan2(p.vy,p.vx),time)){}
     else if(p.k==='disc'){const im=discSprite(Math.round(p.r)+2,p.col,(time*24|0)%4);ctx.globalAlpha=0.35;ctx.drawImage(im,x-(im.width>>1)-Math.round(p.vx*0.02),y-(im.height>>1)-Math.round(p.vy*0.02));ctx.globalAlpha=1;ctx.drawImage(im,x-(im.width>>1),y-(im.height>>1))}}
 
   for(const b of beams)drawBeam(b);
@@ -7346,6 +7394,8 @@ function render(time){
 
   {const lo=P.hp/stats().maxhp;if(lo<0.3&&state==='play'){const a=(0.3-lo)/0.3*(0.35+0.25*Math.sin(time*8));ctx.fillStyle=`rgba(200,20,30,${a.toFixed(3)})`;ctx.fillRect(0,0,VW,4);ctx.fillRect(0,VH-4,VW,4);ctx.fillRect(0,0,4,VH);ctx.fillRect(VW-4,0,4,VH);ctx.fillStyle=`rgba(200,20,30,${(a*0.5).toFixed(3)})`;ctx.fillRect(4,4,VW-8,3);ctx.fillRect(4,VH-7,VW-8,3);ctx.fillRect(4,4,3,VH-8);ctx.fillRect(VW-7,4,3,VH-8)}}
 
+  // clima del escenario con pixelfx (efectos_pixelfx.js), encima del mundo y debajo del HUD
+  {const c=CLIMA[MAPK];if(c&&window.PFX&&PFX.clima)PFX.clima(ctx,c[0],c[1],cam.x,cam.y,time,VW,VH,c[2]||1)}
   // destello de pantalla suave: antes llegaba a un blanco casi opaco (0,8) al transformarse o con la Genkidama
 
   if(S.flash>0){const fMax=ACC_CFG.photosens?0.08:0.35;ctx.fillStyle=`rgba(255,255,230,${Math.min(fMax,S.flash*0.7)})`;ctx.fillRect(0,0,VW,VH)}
@@ -7395,7 +7445,7 @@ function hudBar(x,y,w,h,f,c,hi,lo,lag,ticks=10){
   const fw=Math.round(w*f);if(fw>0){hudR(x,y,fw,h,c);hudR(x,y,fw,1,hi);hudR(x,y+h-1,fw,1,lo)}
   if(ticks)for(let i=1;i<ticks;i++)hudR(x+Math.round(w*i/ticks),y,1,h,'rgba(4,6,15,.42)')}
 function hudPill(t,y,col,edge,cx,size=8){const w=t.length*size+12,h=size+6,x=Math.round(cx-w/2);hudPanel(x,y,w,h,edge);text(t,x+w/2,y+3,col,size);return h}
-function hudCut(t,max){return t.length<=max?t:t.slice(0,Math.max(1,max-1))+'.'}
+function hudCut(t,max){if(t.length<=max)return t;t=t.replace(/\s*\(.*?\)\s*/g,' ').trim();if(t.length<=max)return t;const w=t.split(' ');let o='';for(const x of w){if((o?o.length+1:0)+x.length>max)break;o=o?o+' '+x:x}return o||t.slice(0,Math.max(1,max-1))+'.'}
 function hudFace(hid,form){const k=hid+':'+form;if(k in HUD_FACE)return HUD_FACE[k];HUD_FACE[k]=null;
   try{const src=portrait(hid,form);if(src){const im=new Image();im.onload=()=>{const c=mk(26,26),g=c.getContext('2d'),iw=im.naturalWidth,ih=im.naturalHeight,z=Math.min(26/iw,26/ih);g.imageSmoothingEnabled=z<1;if(z<1)g.imageSmoothingQuality='high';const dw=Math.round(iw*z),dh=Math.round(ih*z);g.drawImage(im,(26-dw)>>1,(26-dh)>>1,dw,dh);HUD_FACE[k]=c};im.src=src}}catch(e){}
   return null}
@@ -7458,7 +7508,7 @@ function hud(time){
     if(t)hudPill(t,topY,col,ed,HW/2)}
 
   // Abajo al centro: bandeja de ataques; las casillas aún cerradas se ven con candado
-  {const L=sigOpen(),n=L.length,t2=TACTIL?2:1,w=28*t2,gap=4,total=Math.max(n,Math.min(6,sigList().length,Math.floor((HW-18+gap)/(w+gap)))),tw=total*w+(total-1)*gap+10,tx=Math.round(HW/2-tw/2),y=HH-(TACTIL?48:HW<420?26:7)-w-5,x0=tx+5;P.barR=[];
+  {const L=sigOpen(),n=L.length,t2=TACTIL?1.5:1,w=Math.round(28*t2),gap=4,total=Math.max(n,Math.min(TACTIL?n+1:6,sigList().length,Math.floor((HW-18+gap)/(w+gap)))),tw=total*w+(total-1)*gap+10,tx=Math.round(HW/2-tw/2),y=HH-(TACTIL?10:HW<420?26:7)-w-5,x0=tx+5;P.barR=[];
     hudPanel(tx,y-5,tw,w+10,'#7c2d12');
     for(let i=0;i<total;i++){const x=x0+i*(w+gap);
       if(i>=n){hudR(x,y,w,w,'#090c22');hudR(x,y,w,1,'#1a1f3e');const c=x+w/2|0,m=y+w/2|0;hudR(c-3,m-5,6,1,'#3b4a7c');hudR(c-3,m-5,1,4,'#3b4a7c');hudR(c+2,m-5,1,4,'#3b4a7c');hudR(c-4,m-1,8,6,'#3b4a7c');continue}
@@ -7476,7 +7526,7 @@ function hud(time){
     if(L[P.sel]){const W=MV[L[P.sel]];hudPill(W.name.toUpperCase(),ly,'#ffd23f','#7c2d12',HW/2);ly-=18}
     if(S.t<12&&!TACTIL){const hint='WASD MOVER · 1-'+n+' ATAQUE · ESC PAUSA';if(hint.length*8+12<HW)hudPill(hint,ly,'#c7d2fe','#3b4a9c',HW/2);ly-=18}
     if(!(S.boss&&!S.boss.dead)&&S.bossIdx<BOSS_T.length){const left=BOSS_T[S.bossIdx]-S.t;if(left<20){const t='SE ACERCA '+ET[MAPS[S.map].bosses[S.bossIdx]].n.toUpperCase()+' '+Math.ceil(left),big=t.length*16+12<HW;hudPill(t,ly-(big?8:0),(time*4|0)%2?'#fca5a5':'#ffffff','#dc2626',HW/2,big?16:8);ly-=big?30:18}}
-    if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b='PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
+    if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b=TACTIL?'TOCALO ABAJO PARA USARLO':'PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
 
   // Avisos grandes: franja con filetes dorados
   if(S.banner){const b=S.banner,y=Math.round(HH*0.28),big=b.text.length*16<=HW-24,h=(big?26:18)+(b.sub?12:0),edge=b.boss?'#ef4444':'#ffd23f';
@@ -7570,7 +7620,7 @@ SCPACK.h.vegeta[2]='vegeta-grade';SCPACK.h.gokuui[4]='goku-uic';
 
 // hand-picked animations (herramientas/animaciones.json -> animaciones_juego.js) replace the pack of that form
 
-const PORTRAIT={},BUSTO={};
+const PORTRAIT={},BUSTO={},FUSIONADOS=new Set();
 
 // Unificación de personajes ("que vengan de una"): consolidar formas variantes en sus héroes canónicos
 
@@ -7582,11 +7632,33 @@ if(window.ANIM_SET && ANIM_SET.h){
 
     if(ah.gokuui){ah.goku[5]=ah.gokuui[3];ah.goku[6]=ah.gokuui[4]}
 
+    // 11 nov.: la señal del UI de gokuuisign tiene 14 animaciones (la anterior, 10)
+    if(ah.gokuuisign&&ah.gokuuisign[0])ah.goku[5]=ah.gokuuisign[0]
+
     if(ah.gokugt){ah.goku[7]=ah.gokugt[3]}
 
     if(ah.gokusuper){ah.goku[8]=ah.gokusuper[1];ah.goku[9]=ah.gokusuper[3]}
 
   }
+
+  // 11 nov.: Goku Yardrat en un solo personaje, con su Super Saiyan como segunda forma
+  if(ah.gokuyardrat&&ah.gokuyardratssj&&ah.gokuyardratssj[0]){ah.gokuyardrat[1]=ah.gokuyardratssj[0]}
+
+  // 11 nov.: Kyabe tenía dos «SUPER SAIYAN»; ahora BASE (pack clásico) y SUPER SAIYAN del mismo estilo
+  if(ah.kyabe&&ah.kyabeclasico&&ah.kyabeclasico[0]&&ah.kyabe[1]){ah.kyabe={0:ah.kyabeclasico[0],1:ah.kyabe[1]}}
+
+  // 11 nov. (Josemi: «organízalos, quédate con los mejores»): las versiones inventadas por fans y de Heroes
+  // dejan de ser personajes sueltos con la misma lista de técnicas y pasan a ser formas de un único personaje.
+  {const unir=(dst,srcs)=>{if(!ah[dst]||!HDEF[dst])return;const D=HDEF[dst],forms=[...D.forms],aura=[...(D.aura||[])];let n=Object.keys(ah[dst]).length;
+    for(const src of srcs){const A=ah[src],S=HDEF[src];if(!A||!S)continue;const k=Object.keys(A).map(Number).sort((a,b)=>a-b);
+      k.forEach((f,i)=>{ah[dst][n++]=A[f];forms.push(S.forms[Math.min(i,S.forms.length-1)]);aura.push((S.aura||[])[Math.min(i,(S.aura||[]).length-1)]||'white')});FUSIONADOS.add(src)}
+    D.forms=forms;D.aura=aura};
+   unir('gokualt',['gokureymono','gokussjlegend','gokudiosberserk','gokussj4dios','gokussjsupremo','gokuultradios','gokumuidios','gokumuiblue','gokumuiblueevo','gokuevilssj2']);
+   unir('blackfan',['blackfalso','blackmajin','blackrosen']);
+   unir('vegetaxeno',['vegetaxenossj4']);
+   if(HDEF.gokualt){HDEF.gokualt.name='GOKU FANMADE';HDEF.gokualt.desc='Las versiones de Goku inventadas por fans: Místico, Ikari, Bestia, Rey Mono, Legendario, Dios Berserker, UI Blue y más.'}
+   if(HDEF.blackfan)HDEF.blackfan.desc='Goku Black en formas creadas por fans: Rage, Rosé Kaioken, Rosé UI, MUI, SSJ falso, Majin Dios y Rosé Evolution.';
+   if(HDEF.vegetaxeno)HDEF.vegetaxeno.desc='Vegeta Xeno, patrullero del tiempo de Dragon Ball Heroes, de base a Super Saiyan 4.'}
 
   if(ah.vegeta){
 
@@ -7622,11 +7694,19 @@ if(window.ANIM_SET)for(const id in ANIM_SET.h)for(const f in ANIM_SET.h[id]){con
 
 // only hand-picked forms stay: missing forms leave the transformation chain, characters with none leave the game
 
-const DUPLICADOS_ROSTER = new Set(['gokugt','gokusuper','gokuui','vegetagt','vegetasuper','vegetaue','vegetaego','gohanadult','trunkscell']);
+const DUPLICADOS_ROSTER = new Set(['gokugt','gokusuper','gokuui','vegetagt','vegetasuper','vegetaue','vegetaego','gohanadult','trunkscell',
+  // 11 nov. (Josemi: «quédate con los mejores»): la misma forma repetida como personaje aparte, con menos animaciones que la del personaje principal.
+  // Los sprites siguen en sprites/; basta quitar el ID de aquí para recuperarlo.
+  'goku044','goku045','gokussj053','gokussjfp','gokussj2buu','gokussj3swl','gokussj3mais','gokussj4gt','gokussjkaioken2',
+  'gokuuisign','gokuuimanga','gokumuifp','gokumuimanga','gokumuigranola','gokumuigranolav2','gokumuitorneoanime',
+  'gokubluewhis','gokubluedbfz','gokubluemoro','gokuyardratssj','gokuyardratswl',
+  'vegetabaseulsw','vegetassjhd','vegetassj2hd','vegetassjwhis','vegetaexploradorhd','vegetasinarmadura',
+  'vegetablueulsw','vegetablue092','vegetabluewhis','vegetablueevo','vegetabluefp','vegetassj4gt','vegetauihd',
+  'blacklsw','blackrose290','kyabeclasico']);
 
 var FUERA=new Set(); // Roshi ya tiene sprites propios (3 nov.); antes se ocultaba aquí
 
-DUPLICADOS_ROSTER.forEach(k=>FUERA.add(k));
+DUPLICADOS_ROSTER.forEach(k=>FUERA.add(k));FUSIONADOS.forEach(k=>FUERA.add(k));
 
 for(const id in HDEF){const D=HDEF[id],A=window.ANIM_SET&&ANIM_SET.h[id];if(D.npc||D.custom)continue;
 
@@ -7635,6 +7715,10 @@ for(const id in HDEF){const D=HDEF[id],A=window.ANIM_SET&&ANIM_SET.h[id];if(D.np
   if(keep.length!==D.forms.length||keep.some((f,i)=>f!==i)){for(const k of ['forms','aura','hair','hc','formPal'])if(Array.isArray(D[k]))D[k]=keep.map(f=>D[k][Math.min(f,D[k].length-1)]);
 
     const H={},R={};const B={};keep.forEach((f,i)=>{H[i]='as-'+id+'-'+f;if(PORTRAIT[id]&&PORTRAIT[id][f])R[i]=PORTRAIT[id][f];if(BUSTO[id+'/'+f])B[id+'/'+i]=1});for(const k in BUSTO)if(k.startsWith(id+'/'))delete BUSTO[k];Object.assign(BUSTO,B);SCPACK.h[id]=H;if(PORTRAIT[id])PORTRAIT[id]=R}}
+
+// 11 nov.: nombres de forma que salían repetidos al ampliar las cadenas de formas
+{const R=(id,f,n,au)=>{const D=HDEF[id];if(D&&D.forms&&D.forms.length>f){D.forms[f]=n;if(au&&Array.isArray(D.aura))D.aura[f]=au}};
+  R('gohan',4,'BESTIA');R('kyabe',0,'BASE','white');R('kyabe',1,'SUPER SAIYAN','gold');R('gokuyardrat',1,'SUPER SAIYAN','gold')}
 
 // big face of a form: that form, else the closest one of the same character
 
@@ -8523,13 +8607,17 @@ function buildCards(){const box=$('#chars');box.innerHTML='';cardTimers.forEach(
 
       if(!own){openGacha();return}
 
+      // doble toque (o doble clic) sobre el mismo guerrero: a jugar directamente
+      const now=performance.now();if(rosterAnim.lastTap&&rosterAnim.lastTap.id===id&&now-rosterAnim.lastTap.t<450){rosterAnim.lastTap=null;const bp=$('#rPlayForm');if(bp)bp.click();return}
+      rosterAnim.lastTap={id,t:now};
+
       const s=loadSave();s.sel=id;
 
       const f=(s.selForm&&s.selForm[id]!==undefined)?s.selForm[id]:0;
 
       rosterAnim.id=id;rosterAnim.form=f;writeSave();
 
-      prev(id);sfx('select');
+      rosterPreview(id);sfx('select');
 
     };
 
@@ -8798,9 +8886,8 @@ function rosterForm(d){const id=rosterAnim.id,H=HEROES[id];if(!H)return;const n=
 
   if(d){rosterAnim.t0=performance.now();const s=loadSave();s.selForm=s.selForm||{};s.selForm[id]=f;writeSave();sfx('select')}}
 
-function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildCards();const s=loadSave(),all=Object.keys(HEROES).filter(spriteHero);
-
-  const prev=id=>{const H=HEROES[id];if(!H)return;
+// ficha de la izquierda: solo cambia al pulsar (o tocar) un personaje, nunca al pasar el ratón por encima
+function rosterPreview(id){const H=HEROES[id];if(!H)return;
 
     const sv=loadSave();if(rosterAnim.id!==id)rosterAnim.form=(sv.selForm&&sv.selForm[id]!==undefined)?sv.selForm[id]:0;
 
@@ -8812,13 +8899,15 @@ function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildC
 
     document.querySelectorAll('#chars .card').forEach(c=>c.classList.toggle('selected',c.dataset.id===id));
 
-  };
+}
+function openRoster(){hideMenus();state='title';$('#roster').hidden=false;buildCards();const s=loadSave(),all=Object.keys(HEROES).filter(spriteHero);
+
 
   if(!rosterAnim.on){rosterAnim.on=1;const loop=()=>{if($('#roster').hidden){rosterAnim.on=0;return}drawRosterAnim();drawCardSprites(performance.now()/1000);requestAnimationFrame(loop)};loop()}
 
-  $('#chars').querySelectorAll('.card').forEach(b=>{b.onmouseenter=b.onfocus=()=>prev(b.dataset.id)});prev(companion());
+  rosterPreview(companion());
 
-  $('#rInfo').innerHTML=`Tienes <b>${all.filter(k=>s.owned[k]).length}</b> de <b>${all.length}</b>. Toca uno tuyo para seleccionarlo o cambiar su forma; pulsa JUGAR para saltar directo a la batalla.`}
+  $('#rInfo').innerHTML=`Tienes <b>${all.filter(k=>s.owned[k]).length}</b> de <b>${all.length}</b>. Toca uno para elegirlo (tócalo dos veces para jugar ya). Con ◀ ▶ cambias de forma.`}
 
 const SHOP=[
   {n:'1 TICKET',d:'Un deseo a Shenron',c:120,t:1,ic:'capsulacorp'},

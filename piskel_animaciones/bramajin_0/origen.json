@@ -1,0 +1,99 @@
+{
+  "heroe": "bramajin",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Bra/189_Majin bra,sprite(db multiverse) Andrés",
+  "frames": [
+    {
+      "sha256": "d1d19ca2036dba110ed84a8f5dedc89deb96a27e6e897e0b267f0188eab6718b",
+      "indice": 42
+    },
+    {
+      "sha256": "b096dd80fb2bbfacc05e212c41913878a4c5098e85f378b08c1d6ec53bb5a4cf",
+      "indice": 48
+    },
+    {
+      "sha256": "00556f3373013334211782a235609bfd62237e58fb911fccdf1dc55c242ac0f6",
+      "indice": 41
+    },
+    {
+      "sha256": "5027d1f740401060f82430d7330535b6dfd0f2fc7bf6db84e510b20e896dadbc",
+      "indice": 61
+    },
+    {
+      "sha256": "5212f714e5b367b4c3f837ef7b5cbecf574bc17c9884d5e0172ec667044fc5bc",
+      "indice": 62
+    },
+    {
+      "sha256": "4fb4fec881ebb630436308c22472f9be0621d36eae6292a4f8a3a85740312ba5",
+      "indice": 66
+    },
+    {
+      "sha256": "a23a1d9fedb057d8da8b7868653958e7fa3fd59174d0865e47f08ea0a67a36cb",
+      "indice": 99
+    },
+    {
+      "sha256": "0040638c80b18b3b8013cdd0e04994109ad981b43d689f2e259b643c770290b6",
+      "indice": 102
+    },
+    {
+      "sha256": "9a8bd1b82e475ee00f2b2a8865e22cfa7e76c4588a8f04a18f8df2bbd6c8af36",
+      "indice": 148
+    },
+    {
+      "sha256": "95c4f98ebdd8f5b073e00f7645e015b692e6ade69b8d6cf346183cf24aa9c87d",
+      "indice": 149
+    },
+    {
+      "sha256": "8ed86f148b1ba49d0b200f216e7f81f2d0471a715ed307a76cecb3b3d5f685e5",
+      "indice": 128
+    },
+    {
+      "sha256": "fea281a0f92c4907b1b1e1e65f3d117f989b85fe489ac23749395646bca3c910",
+      "indice": 129
+    },
+    {
+      "sha256": "906a7c0c0dcfb158faaf306513337498e5ca013001f6866b0a9f807ba3b9879d",
+      "indice": 70
+    },
+    {
+      "sha256": "8c1d841431c418f185a9040c54c9c4e4d0b90d2a45d565668c32ddfb688dacbe",
+      "indice": 71
+    },
+    {
+      "sha256": "72fad58e1fcc9bdc3c3b63769173b5dff160b858bd2307b396ab4671fab77c78",
+      "indice": 122
+    },
+    {
+      "sha256": "98e771745cc0db05ecf0b2eebedf515f25bbf35bbe1e878dbf4684b3dd4f6349",
+      "indice": 58
+    },
+    {
+      "sha256": "6390410a5eefcd6e61981e42df10d3b9a8feaada31bd2142b31f6ad833972b9a",
+      "indice": 65
+    },
+    {
+      "sha256": "9e84041b35fe91baddf40f7b66e342b42129f2e03ab5d80425cb262d549719e4",
+      "indice": 180
+    },
+    {
+      "sha256": "8875deb4e5a1ce17d6d64c4d7f5df482a1338b644cf3b263c383b4c4acfae458",
+      "indice": 181
+    },
+    {
+      "sha256": "8b8482cb66837dc69a9225f701a77df2948f8de59dcd77fff9170f169ab060c7",
+      "indice": 93
+    },
+    {
+      "sha256": "39c3bd22cd33b4077d54aeca28386c60f787a4f388447f5b554bc21e319f61cc",
+      "indice": 94
+    },
+    {
+      "sha256": "a3f7cece95f8c89e62dc68fa39376a9ae61b4bed54cbcedd54b2c875f90067b1",
+      "indice": 125
+    },
+    {
+      "sha256": "e645ca465ef4cfb34dc99647868c5c3fe4e650a4ec5b011f3f935d51f9e63ee4",
+      "indice": 150
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "heroe": "blackkaioshin",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Goku Black/178_Goku black traje kaioshin.Andres Gamen",
+  "frames": [
+    {
+      "sha256": "487a844c868f6f31305856748769aaa572150bbddad2331e0b5c475c00cd9e3f",
+      "indice": 0
+    },
+    {
+      "sha256": "3cc2f4a0bcd26d174ec0fd5e70cc550145bc6e308ee13f03e86ad64f2cc85cd3",
+      "indice": 1
+    },
+    {
+      "sha256": "5a9741060260bf09fa62d58a1e3963b7ccd5d8bb6daed0638e52eaa507ae66d7",
+      "indice": 6
+    },
+    {
+      "sha256": "0b3a44a616ba65d8872e7ef6197f7f15b4c3295b5205910815bb863016e29536",
+      "indice": 7
+    },
+    {
+      "sha256": "4875cc94416ca5ae872f78f3307762a97159d922654fa6a33af50eb9c47faacf",
+      "indice": 8
+    },
+    {
+      "sha256": "57ddb3800081c0fb54a79d6615856f7325a7dd1c36e08c258ca560c62377cf2f",
+      "indice": 9
+    },
+    {
+      "sha256": "ba6161fac06c75dfbf9fd9660935c410c1552247c0c29a0c7d2d45e85f86d0d7",
+      "indice": 5
+    },
+    {
+      "sha256": "3989da47797386f0182d8d42a50b0946e9a35b649c4280b6a287f769d6b92cdc",
+      "indice": 4
+    },
+    {
+      "sha256": "622c34207dd55b837a1e6d23ce3ece6da627f8bef8106180c62b0e0f59c0fea4",
+      "indice": 34
+    },
+    {
+      "sha256": "d0baf3d62e9783f881f4569a31a432e2892f7656f9c4996ca430d438ee7b2acb",
+      "indice": 35
+    },
+    {
+      "sha256": "7b95f5ab2a9d6dc4f8ce9bb6fd1794e1d05e04e2f7820308cfc4fb210863290f",
+      "indice": 26
+    },
+    {
+      "sha256": "001f4ec76c9437d7e779e65d0ec178faa2812c9ce75bdab84db93965037c6f72",
+      "indice": 27
+    },
+    {
+      "sha256": "a8ddce6965f3fe0dfec093e7ab4975e0ea705f263043c2f28d7e8603f79e48ec",
+      "indice": 39
+    },
+    {
+      "sha256": "cefb47fdcfc91aef6a4437e96be5c5cbffb146c891d3bc6fbbfee46c98b875e4",
+      "indice": 40
+    },
+    {
+      "sha256": "02488fe47c0465e9e0c512f0dd4a991523364ad26e6281c72504e77a8bc1c84f",
+      "indice": 10
+    },
+    {
+      "sha256": "314f9cedc11d6020006455781795d4d1277e87e386eb9671ad9b98dd33cab8ea",
+      "indice": 11
+    },
+    {
+      "sha256": "85fcdee2c6076da251a3e79e274dc84072e123e9c0ef3bab529da1dc8bfdd03e",
+      "indice": 12
+    },
+    {
+      "sha256": "1b0f406ba254b061ae4de40658516960b5a83e76c2570b70aa1e4099d30ec41c",
+      "indice": 13
+    },
+    {
+      "sha256": "d33163ccd978607b6f27838f0642818317c9825b496e8b36dbea75a374ff1f57",
+      "indice": 32
+    },
+    {
+      "sha256": "f4cbdb8a7e202fb2e629b2897a138baac8dfd649700217139b03dd3357bae840",
+      "indice": 30
+    }
+  ]
+}

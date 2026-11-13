@@ -1,5 +1,21 @@
 # Empieza aquí — Relevo para Claude
 
+## >>> SIGUIENTE SESIÓN (dejado el 11 nov. 2026): HAZ ESTO PRIMERO <<<
+
+Josemi abrirá una sesión nueva y solo dirá «sigue». Trabaja en la rama `claude/nice-darwin-y7t5jp` (o la que indique el sistema), lee las últimas entradas de `BITACORA.md` y haz, en este orden:
+
+0. **11 nov.: hechos los pasos 1 y 2 para el Kamehameha** (ver bitácora). Falta la opinión de Josemi y el resto de rayos.
+1. **Comprueba que el plugin PixelFX está instalado** (skill `pixelfx`, repositorio `patch-gg/pixelfx`, MIT). Si no lo está, pídele a Josemi que escriba en Claude Code `/plugin marketplace add patch-gg/pixelfx` y luego `/plugin install pixelfx@pixelfx`, y que abra otra sesión. Si el skill pide una copia del repositorio, clónala en `herramientas/pixelfx/` y añade esa carpeta a `.gitignore`.
+2. **Rehacer el Kamehameha para que quede guapo** (Josemi: «la animación es muy mala», «cambia mucho»). Hoy el rayo es un `BEAM` dibujado por código (`kame:BEAM(...)` en `02 - Código del juego/script.js`) y las poses salen de `beam` / `tecnica_kame` en `herramientas/animaciones/*.json`. Con PixelFX: buscar efectos (`node tools/list.mjs beam`), renderizarlos y mirarlos, y montar una bola que crece en las manos, un rayo con núcleo blanco y borde azul, y el impacto. El puente con el juego está en `herramientas/efectos_pixelfx/efectos.js`; se regenera `efectos_pixelfx.js` como explica su `LEEME.md` (el juego debe seguir abriéndose con doble clic). Probar con Goku, Gohan, Goten, Krilin y Cell; mandar un GIF a Josemi. Después, mismo trato al Galick Gun, Final Flash, Masenko y Makankosappo.
+3. **Ataques NO genéricos, con variedad según la época de la serie** (petición expresa de Josemi). Hoy casi todos llevan el mismo relleno: «Ráfaga de Ki», «Combo de golpes», «Patada voladora», «Renzoku Energy Dan». Josemi no los quiere así: cada personaje debe tener técnicas suyas y de su etapa (Dragon Ball, Z, GT, Super, Daima, películas). Ejemplos: el combo de Yamcha es el Rōgafūfūken; el de Goku niño, el Jan Ken; Krilin usa el Kienzan y el Taiyoken; Tenshinhan, el Kikoho; Vegeta de la saga Saiyan, Galick Gun; Vegeta de Super, Final Flash y Gamma Burst Flash; Goku de GT, Kamehameha x10 y Puño del Dragón. Los SIGS están en `script.js` (`const SIGS=`, `SIGS_SERIE` y el bloque `Object.assign(SIGS,{...})` del 11 nov.). Se puede mantener un ataque cuerpo a cuerpo por personaje, pero con nombre y estilo propio. **No inventes técnicas**: si dudas del nombre, apúntalo y pregúntale. Enseña la lista propuesta a Josemi antes de aplicarla a todos.
+4. **Guardias (idle) de frente**: Josemi prefiere una postura de pelea de lado o de tres cuartos si el pack la tiene. Hecho: Androides 16, 17 y 18, y Jiren (`herramientas/animaciones/zzzy_guardias_2026_11_11.json`). Faltan los de la lista de la bitácora del 11 nov. Si la guardia tiene un solo fotograma, pon `idleDu` con un solo valor (si no, falla `comprobar_personajes.cjs`).
+5. **Seguir las animaciones**: quedan 63 formas visibles sin ataques extra (`AUDITORIA_ANIMACIONES.md`). Mirar siempre el pack (las escalas cambian dentro de un mismo pack) y revisar con `previsualizar.py`. No meter fotogramas con el brazo como estela pálida (Josemi lo ve como «brazo transparente»).
+
+Al acabar cada bloque: commit, push, una línea en `ESTADO_ACTUAL.md` y la entrada de la bitácora. Josemi quiere GIFs de cómo va.
+
+---
+
+
 Actualizado el 2 de noviembre de 2026 (tarde). Usuario: Josemi. Proyecto: `C:\Users\soyjo\Desktop\ANIMESURVIVOR`.
 
 ## Qué quiere Josemi

@@ -1,0 +1,87 @@
+{
+ "_nota": "Tanda 15 (11 nov. 2026, Claude): ataques extra de Metal Cooler, Omega Shenron, Rey Cold, Supremo Kaioshin, Super 17 y Majin Kuu. Rey Cold y Shin solo con rayo: sus candidatos a 2.º combo parecían daño o guardia.",
+ "heroes": {
+  "metalcooler": {
+   "0": {
+    "attack2": [
+     30,
+     31
+    ],
+    "beam": [
+     47,
+     49
+    ]
+   }
+  },
+  "omega": {
+   "0": {
+    "attack2": [
+     19,
+     20
+    ],
+    "attack3": [
+     14,
+     15
+    ],
+    "beam": [
+     31,
+     33
+    ],
+    "up": [
+     9
+    ]
+   }
+  },
+  "reycold": {
+   "0": {
+    "beam": [
+     52,
+     53
+    ]
+   }
+  },
+  "shin": {
+   "0": {
+    "beam": [
+     38,
+     40
+    ]
+   }
+  },
+  "super17": {
+   "0": {
+    "attack2": [
+     10,
+     11
+    ],
+    "beam": [
+     43,
+     44
+    ],
+    "up": [
+     49
+    ]
+   }
+  },
+  "majinkuu": {
+   "0": {
+    "attack2": [
+     24,
+     25
+    ],
+    "attack3": [
+     26,
+     27
+    ],
+    "kick2": [
+     40,
+     41
+    ],
+    "beam": [
+     37,
+     36
+    ]
+   }
+  }
+ }
+}

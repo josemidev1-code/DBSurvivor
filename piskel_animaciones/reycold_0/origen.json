@@ -1,0 +1,75 @@
+{
+  "heroe": "reycold",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/DeviantArt/440_REY COLD (AlquimistaSK)",
+  "frames": [
+    {
+      "sha256": "f39b821c26862b57c3aef5ff573108f6b3708c77299b600b68bcc355c1dadb81",
+      "indice": 15
+    },
+    {
+      "sha256": "db32d359a95ff3e6fb3e8a53a12433cad2a38f716b358d67586227499a5afd2b",
+      "indice": 16
+    },
+    {
+      "sha256": "1a54df070bff29fe4e0b78e06686d4dd8f90fc182b7be91b734401df1deca61d",
+      "indice": 22
+    },
+    {
+      "sha256": "34162bdd1768d028d00ac040da46a06abb681e170d340efb3b496c8b9a892396",
+      "indice": 36
+    },
+    {
+      "sha256": "279f85280fd915b5208e8640332c9a0a53afb0937eac677fb4f2d8f857e038e8",
+      "indice": 37
+    },
+    {
+      "sha256": "3b816cc7421cac0ed42a193747a533ea3cb9bdaace3e8b04e19b2589734b3921",
+      "indice": 38
+    },
+    {
+      "sha256": "c23fff89baef2612ec7e513519c9f40a8c3d98020f6c24d3fba96152bc51e39e",
+      "indice": 48
+    },
+    {
+      "sha256": "c241a5cbc5a1e41dd9347db05945d7f3f0a83a67316883a2ace39b3c9dd6b178",
+      "indice": 49
+    },
+    {
+      "sha256": "2f9769f845f29aa5cab5b1df70f62ac45b1bb63a33251f7fd45bab8362af7152",
+      "indice": 10
+    },
+    {
+      "sha256": "3ae8b006603c25ee9c857a5883abf665b9c7a1f61691b9b2300996de33ffcce3",
+      "indice": 11
+    },
+    {
+      "sha256": "e2d8f9b911db7b2984459036179abfeea520a0d865a190f47b08ba9ac7d67f28",
+      "indice": 27
+    },
+    {
+      "sha256": "d91e291ada4e59431077b405357b42df1d4c253e8e7b2cda0899bb8064362170",
+      "indice": 28
+    },
+    {
+      "sha256": "e654bdd88c1956a34ebd0b753fd5d6f1118462d76307abd331ae7290715d6ec5",
+      "indice": 31
+    },
+    {
+      "sha256": "4c7737af54ad958d9b50330ab9d535ae4cf816afe97cf7aff87514759aa38889",
+      "indice": 32
+    },
+    {
+      "sha256": "e04d54427c068869699c7a77c28cd4951a549c6ab008ee09d21d5a004707b973",
+      "indice": 34
+    },
+    {
+      "sha256": "ae1a2106fcfae835ecc4c8db58604b7314230e069ed62e5539dd95dfd646ef46",
+      "indice": 52
+    },
+    {
+      "sha256": "c17192b7985a2200277334b095b8d967271667172a115035071b580e4f97576d",
+      "indice": 53
+    }
+  ]
+}

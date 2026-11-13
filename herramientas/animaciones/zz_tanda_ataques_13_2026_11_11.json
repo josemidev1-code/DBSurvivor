@@ -1,0 +1,116 @@
+{
+ "_nota": "Tanda 13 (11 nov. 2026, Claude): ataques extra de formas sueltas sin ninguno. En Magetta solo fotogramas de la escala grande (el pack mezcla dos).",
+ "heroes": {
+  "magetta": {
+   "0": {
+    "attack2": [
+     58,
+     59
+    ],
+    "attack3": [
+     33,
+     35
+    ],
+    "kick2": [
+     3,
+     4
+    ],
+    "beam": [
+     46,
+     47
+    ],
+    "up": [
+     20
+    ]
+   }
+  },
+  "majinduu": {
+   "0": {
+    "attack2": [
+     65,
+     66,
+     67
+    ],
+    "attack3": [
+     71,
+     72
+    ],
+    "kick2": [
+     77,
+     78
+    ],
+    "up": [
+     6
+    ]
+   }
+  },
+  "pangt": {
+   "0": {
+    "attack2": [
+     22,
+     23
+    ],
+    "kick2": [
+     37,
+     38
+    ],
+    "beam": [
+     68,
+     75
+    ]
+   }
+  },
+  "paragus": {
+   "0": {
+    "attack2": [
+     53,
+     54,
+     55
+    ],
+    "attack3": [
+     26,
+     27
+    ],
+    "beam": [
+     78,
+     80
+    ]
+   }
+  },
+  "taopaipai": {
+   "0": {
+    "attack2": [
+     19,
+     20
+    ],
+    "kick2": [
+     29,
+     31
+    ]
+   }
+  },
+  "vegetabluemal": {
+   "0": {
+    "attack2": [
+     62,
+     63
+    ],
+    "attack3": [
+     38,
+     39
+    ],
+    "kick2": [
+     41,
+     42
+    ],
+    "beam": [
+     21,
+     20
+    ],
+    "up": [
+     36
+    ]
+   }
+  }
+ }
+}

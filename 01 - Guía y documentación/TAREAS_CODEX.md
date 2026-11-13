@@ -1,3 +1,14 @@
+# Pendiente para Codex — pedido por Josemi el 11 nov. 2026
+
+**Pose del Kamehameha (y de todos los rayos) cuando el rayo no va de lado.** Josemi: el personaje hace la pose mirando a la izquierda o a la derecha, pero el Kamehameha sale hacia abajo (o hacia arriba). Pasa con Krilin y con todos los personajes. Josemi lo arreglará contigo (Codex).
+
+- Por qué pasa: el rayo apunta al enemigo más cercano con cualquier ángulo (`b.a` en `fire()`, rama `beam`, `script.js`), pero los sprites solo tienen la pose `beam`/`ki` de lado; el personaje solo se gira a izquierda o derecha (`P.face`) y se inclina un poco (`heroTilt`). El origen del rayo sí sigue a la mano (`heroHand`).
+- Ideas: poses de disparo hacia arriba y hacia abajo cuando el pack las tenga; inclinar el cuerpo según el ángulo del rayo; o limitar el ángulo del rayo a una franja alrededor de la horizontal en la que la pose se vea bien.
+- El efecto del rayo (carga, rayo e impacto) es de pixelfx: `herramientas/efectos_pixelfx/fx/kamehameha.js` y `PFX.drawBeam` en `herramientas/efectos_pixelfx/efectos.js`. Si se cambia el ángulo, el efecto se gira solo.
+- Hecho ya: Krilin dispara con el fotograma 38 (mano hacia delante) en vez del 56 (brazos abiertos), en `herramientas/animaciones/zzzy_kame_manos_2026_11_11.json`.
+
+---
+
 # Prioridades actuales — relevo del 2 de noviembre de 2026
 
 1. Lee `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` y `Cambios propuestos por Josemi.md` en esta carpeta. La petición actual del usuario manda.

@@ -23,8 +23,12 @@ src = open(os.path.join(M.RAIZ, '02 - Código del juego', 'script.js'), encoding
 jugables = set(re.findall(r"\b(\w+):\{name:'[^']+',rar:", src)) | set(re.findall(r"\bHDEF\.(\w+)=\{", src))
 
 # Estos personajes no se pueden elegir: solo cuentan las formas que el juego usa como transformación de otro.
-ocultos = set(re.findall(r"'(\w+)'", re.search(r"DUPLICADOS_ROSTER = new Set\(\[(.*?)\]\)", src).group(1)))
+ocultos = set(re.findall(r"'(\w+)'", re.sub(r"//[^\n]*", "", re.search(r"DUPLICADOS_ROSTER = new Set\(\[(.*?)\]\)", src, re.S).group(1))))
 alias = {(h, f) for h, f in re.findall(r"ah\.\w+\[\d+\]=ah\.(\w+)\[(\d+)\]", src)}
+alias |= {(h, f) for h, f in re.findall(r"\d+:ah\.(\w+)\[(\d+)\]", src)}  # ah.kyabe={0:ah.kyabeclasico[0],...}
+# 11 nov.: personajes fanmade unidos como formas de otro (unir('gokualt',[...])): siguen visibles a través de él
+for lista in re.findall(r"unir\('\w+',\[(.*?)\]\)", src):
+    for h in re.findall(r"'(\w+)'", lista): ocultos.add(h); alias |= {(h, str(f)) for f in range(20)}
 visible = lambda h, f: h in jugables and (h not in ocultos or (h, f) in alias)
 usados = collections.defaultdict(set)
 heroes = collections.defaultdict(lambda: {'formas': [], 'n': 0, 'sel': 0, 'falta': collections.Counter()})

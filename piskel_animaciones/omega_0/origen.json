@@ -1,0 +1,91 @@
+{
+  "heroe": "omega",
+  "forma": "0",
+  "pack": "02_GT/DeviantArt/451_OMEGA SHENRON (qsab101)",
+  "frames": [
+    {
+      "sha256": "9c46e8a940e9f22cf61d132eff7c92c37854f0d04c6f700bda875831afea3c73",
+      "indice": 3
+    },
+    {
+      "sha256": "3d6c078731bc193241cfa34145d5d23a8fafcd4721bc66cb3b3f46bcac963ca6",
+      "indice": 4
+    },
+    {
+      "sha256": "0af5642213d6682cf175beb01f2727ad498516ea9c401850fa26da56c1d167ed",
+      "indice": 12
+    },
+    {
+      "sha256": "830dca5adc5fccf57c39dd1f31905428de4d4f7d37acf7a1eebd3085b6dee854",
+      "indice": 17
+    },
+    {
+      "sha256": "6109628adab9d253875fb6f0ce9e5ef5e2189f98e8593aa051161ca3b3e9929c",
+      "indice": 18
+    },
+    {
+      "sha256": "ada1e005528c5fc047fd8634f6e5b2c60a114f00d078b0c87b53ec292cc6ff8c",
+      "indice": 20
+    },
+    {
+      "sha256": "d0f62ea0d54775c2efd9577891b3b58ac04e0e671147fc1f1a2c7e7e6eb41a15",
+      "indice": 24
+    },
+    {
+      "sha256": "c4fbeecca9d591f99ba96ee3991c290708389e95c6eb950479c1ccbd84753b07",
+      "indice": 26
+    },
+    {
+      "sha256": "6551bd7215b4efad5d00a2f25c361a983fd000f2a4fee7aae83a14ec78d905bb",
+      "indice": 32
+    },
+    {
+      "sha256": "4f63897251382967da5ae0d0e553be972a750781607c8a780505b359c59e16cb",
+      "indice": 33
+    },
+    {
+      "sha256": "712d91362ab13ceef85a641ee240ae3cdbf0dec2cdb1c2f7ad8568dac04c736b",
+      "indice": 37
+    },
+    {
+      "sha256": "ee4923dae288156029f45da74011acdae38fb8859cd60ef4005e47df2fd2775b",
+      "indice": 38
+    },
+    {
+      "sha256": "e09bd3a355b73f6dd17b6bfae3561973a64060632fd8d04de28d79ab0021365e",
+      "indice": 28
+    },
+    {
+      "sha256": "c5371b6cc519fad79a0e07e91c083b7048b2ef90e7a65749e7246d77f7efe4ee",
+      "indice": 29
+    },
+    {
+      "sha256": "b8389eaad5a54986a659f87446e8a9808868b4ac16d5acf0a9bda596cfa2c561",
+      "indice": 19
+    },
+    {
+      "sha256": "ada1e005528c5fc047fd8634f6e5b2c60a114f00d078b0c87b53ec292cc6ff8c",
+      "indice": 20
+    },
+    {
+      "sha256": "28c6abe3746520cd17c328e28942bcd7c48a39b3cbb0cdbaa95b8ee6c5ce3a6e",
+      "indice": 14
+    },
+    {
+      "sha256": "1c0f68ddfdd5b9d4dff9e8246139f3ba63205f560480d9ffedc1cf9aebc19297",
+      "indice": 15
+    },
+    {
+      "sha256": "ad7b4a2e8b3398db27c8066eca75cd9b886842847fe9e2b0a8e0943e73e2996d",
+      "indice": 31
+    },
+    {
+      "sha256": "4f63897251382967da5ae0d0e553be972a750781607c8a780505b359c59e16cb",
+      "indice": 33
+    },
+    {
+      "sha256": "236786b4751832aa6c8abbf0d5691ae6396fb86aad38e85706c89f8e041dad98",
+      "indice": 9
+    }
+  ]
+}

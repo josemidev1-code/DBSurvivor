@@ -1,0 +1,91 @@
+{
+  "heroe": "vegetaxeno",
+  "forma": "0",
+  "pack": "04_Heroes_y_videojuegos/Vegeta/267_VEGETA BASE XENO ULSW",
+  "frames": [
+    {
+      "sha256": "7270f459a1e97665ae0c7bb2e887ae9e258b647e3f8f5f900c16746a97d36b4a",
+      "indice": 31
+    },
+    {
+      "sha256": "18c31db9070b41a11548baa9770ede81142d540803d0f996beb6938ac771e111",
+      "indice": 32
+    },
+    {
+      "sha256": "704d25a6571c83612cd50dade7cecfc52a18b5694571034aba508e1f8f3746c5",
+      "indice": 13
+    },
+    {
+      "sha256": "44ce1dc90e4f986336da16ae765fb507f992eb39f474a30df7f19f4b57651ac7",
+      "indice": 15
+    },
+    {
+      "sha256": "90cd01cd301f007a43b709c32b1ed6039e739cdadba65cdc4d76ee7f49aadbbd",
+      "indice": 16
+    },
+    {
+      "sha256": "33f24a14759ce374d49da77088bcf80f4f8be5954ec0b2f414f2068d6de553d2",
+      "indice": 17
+    },
+    {
+      "sha256": "a30c1ba2d2212fa2b374cb6a7184ed2e16dde0dac1e438eb95c92f2d3fa5c4a5",
+      "indice": 26
+    },
+    {
+      "sha256": "6f9632121735a09fa1114c27397a1b0efe10e52b131638e0b3ad135b2b13ce41",
+      "indice": 27
+    },
+    {
+      "sha256": "becf5e7da66dd1c4fc4c4ad1937bcda1773e5a77c8ac5f33d8d1343776c1ebcc",
+      "indice": 95
+    },
+    {
+      "sha256": "25b1f339ec586c0ce0771f509d48dc4d81513b5a069d965be704e46436c8954a",
+      "indice": 120
+    },
+    {
+      "sha256": "d29c865706bf335846e7a521ff32102a061c599c72d653ef701c08da0eeeb4b0",
+      "indice": 42
+    },
+    {
+      "sha256": "13347b5315d26f9e25882dac8618bf50287f64b6ac67f821026067767517cf4c",
+      "indice": 43
+    },
+    {
+      "sha256": "5b445e3b5976267dbf67cad869b3f19364cff16e94e41c5dcc77f5adc57e7037",
+      "indice": 34
+    },
+    {
+      "sha256": "58979342ac261076ee547a6c6eaf69bc1de326865f71823ff5b9d34a9eb8f10e",
+      "indice": 35
+    },
+    {
+      "sha256": "9bccc1db9b82eef5c4ca14071fd188dc10df2636b87955d5b58b16983a510ac2",
+      "indice": 37
+    },
+    {
+      "sha256": "ac516880cdb01a31b23798d5e7a0efc266f1479d822d8e09d77830e1f7fd0b42",
+      "indice": 23
+    },
+    {
+      "sha256": "c83ea71da349ba0cb0d3d8660ea445c16f957838e28d7ab3c4649cefd235a57f",
+      "indice": 22
+    },
+    {
+      "sha256": "f8a052953ecaefc5ceb7762fd22bf45454dab2298b48330d3cc80f786cdaf837",
+      "indice": 28
+    },
+    {
+      "sha256": "bad71c280d2b5fb6453ec4968ca8ba9c747beec6bf4ebcb5a1439658f5019453",
+      "indice": 29
+    },
+    {
+      "sha256": "04df2248854e497db1b129c56e0161b4644e8eeafbb6842ce2f1d4c2d616abd8",
+      "indice": 63
+    },
+    {
+      "sha256": "6c7044725f97fe364d6ddd62122e586bec71fac921f099d88949938e16743a82",
+      "indice": 89
+    }
+  ]
+}

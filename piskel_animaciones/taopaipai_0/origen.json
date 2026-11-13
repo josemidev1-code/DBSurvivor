@@ -1,0 +1,79 @@
+{
+  "heroe": "taopaipai",
+  "forma": "0",
+  "pack": "07_Personajes_sin_saga_concreta/DeviantArt/426_TAO PAI PAI (ChrisReinerVV)",
+  "frames": [
+    {
+      "sha256": "cf4fee8dac321c4a9393cd79976cf1d3db74a1535ae6d1e349216a29539c4ad5",
+      "indice": 6
+    },
+    {
+      "sha256": "c92ec88bd0ac814dae621fdc9797bb2fba258970ef9f214fd4625853b1c94a85",
+      "indice": 7
+    },
+    {
+      "sha256": "6d64f8daa43e168394d9398e1b1cfa1103582589c050c01055db8bc00374d6bb",
+      "indice": 16
+    },
+    {
+      "sha256": "06ef538cd9253ae63871df714482e4e739c9633f441524e5fbdc9c0c1f57d998",
+      "indice": 21
+    },
+    {
+      "sha256": "5c5b0202ee8290239856921a09869ff835caf5134663814674191ff9587efc09",
+      "indice": 23
+    },
+    {
+      "sha256": "fc82ea838dc4f937a97da067bb3687eaa3cc33c5148338787f8bd28c5283161e",
+      "indice": 25
+    },
+    {
+      "sha256": "63648507a532c45f1d36db65171fc4cef49a92e6dd94c0526da0c26204990ba5",
+      "indice": 26
+    },
+    {
+      "sha256": "5811fd59c7d01f59c157b3da987bbc95cdd25143a6c2008d18f15386368175ba",
+      "indice": 28
+    },
+    {
+      "sha256": "c326d642879b845e386416f950416bdbb5ce4a0880131646fb1b85179eb3fc32",
+      "indice": 42
+    },
+    {
+      "sha256": "3dc7ccef8cde8cdce52e92b78d4a4b9b25d6d3c3a7668a011de5d2cfd76777fa",
+      "indice": 43
+    },
+    {
+      "sha256": "5ae3b7c09bd32ce2b330bfe0db43d6f167903892b872288880f2b19d2ac05f24",
+      "indice": 34
+    },
+    {
+      "sha256": "b3f5e80bcf06108e09111a854cbe37b9933725849273455402d289df7377681f",
+      "indice": 35
+    },
+    {
+      "sha256": "8630265b0151a06fb09fdeb3d7afc0d1d7faaf0b906ad214839d94858d8892d9",
+      "indice": 12
+    },
+    {
+      "sha256": "09b0c5b5ca378a0118e9729390572e13066a91e34ead6b329e17aeeee2b03218",
+      "indice": 24
+    },
+    {
+      "sha256": "fa391cd2febfed97cf679d48fe6a52c8a3839b4d6c4cf42042f64eb1f1496b91",
+      "indice": 19
+    },
+    {
+      "sha256": "8f4256554cab8463f9a859493ecd44782f66eab6effb79b021d64a2148753b28",
+      "indice": 20
+    },
+    {
+      "sha256": "3b72e6393bf7e3ae964759402a6b586382910c00d9df650e6ee5e3b52e5a7e26",
+      "indice": 29
+    },
+    {
+      "sha256": "a163bed30e0b879e9186aced84afcd4554d1010b2eb18c14f72dcbf1b949bb61",
+      "indice": 31
+    }
+  ]
+}

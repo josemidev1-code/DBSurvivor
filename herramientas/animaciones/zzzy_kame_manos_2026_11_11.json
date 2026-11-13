@@ -1,0 +1,13 @@
+{
+ "_nota": "11 nov. 2026 (Claude): Josemi ve raro que Krilin lance el Kamehameha con los brazos abiertos hacia los lados (fotograma 56). El disparo pasa al 38: mano abierta empujando hacia delante, hacia el rayo. La carga sigue en el 44 (manos recogidas a un lado). La anterior queda en beamAntes y kiAntes.",
+ "heroes": {
+  "krilin": {
+   "0": {
+    "beam": [44, 38],
+    "beamAntes": [44, 56],
+    "ki": [44, 38],
+    "kiAntes": [44, 56]
+   }
+  }
+ }
+}

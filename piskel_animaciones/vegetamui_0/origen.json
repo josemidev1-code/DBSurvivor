@@ -1,0 +1,103 @@
+{
+  "heroe": "vegetamui",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Vegeta/303_vegeta mui",
+  "frames": [
+    {
+      "sha256": "28809fbb7ff2f8b79fc64cbca758112dc8e72cdc33ff63507b381ae35cc20265",
+      "indice": 13
+    },
+    {
+      "sha256": "75c25f6a500ff9df0be531289569ad13183d07205b4a69719f3d0642e349e1e7",
+      "indice": 14
+    },
+    {
+      "sha256": "2f89555a66f3114615a565a7afa93f6c0fc3f8eb8f90be6251d2a2db68d7ebfa",
+      "indice": 27
+    },
+    {
+      "sha256": "e37d6db43dbe952994d4e7bb4b47265cf725ef7623846bd0d672a55cb9401cb7",
+      "indice": 41
+    },
+    {
+      "sha256": "f8aaa320b025a82328aa0519ae4cc58a201129fb6b56342cdf3026918d7a7783",
+      "indice": 44
+    },
+    {
+      "sha256": "0587c6f6fd54527142f7f79a7de60928b3f203b78bebba11b78f05df81deb6b4",
+      "indice": 43
+    },
+    {
+      "sha256": "9cc3ed5c372dd556520ad59aebc3643b51033e6f6e8f06c3c7a4bdc7db923209",
+      "indice": 54
+    },
+    {
+      "sha256": "2a971cfa6ee3d3d99986aa736d5568e8a15ede0d9229a4dd91e5074fcb5ed35b",
+      "indice": 53
+    },
+    {
+      "sha256": "c492b8496f4c0db83b8bfcbfd569213e7205c159c973c9a2f78be463b55e28ae",
+      "indice": 66
+    },
+    {
+      "sha256": "b8ba6a4de2952c8fd27896a7b898794e9071399c343e5831fdc4a09e623098d6",
+      "indice": 67
+    },
+    {
+      "sha256": "2f15f6a4b62acfc76e3e4b5720730c4e71904aae3a6d3d76cf54d260e32c5b2b",
+      "indice": 1
+    },
+    {
+      "sha256": "56daa2af941ff97762283d54d234a795554877729b2f7908015890854701bb37",
+      "indice": 2
+    },
+    {
+      "sha256": "e4a566a353f1baa8071d2ff29d9e8c80b031d61ddb57d93988cabae5520ec174",
+      "indice": 57
+    },
+    {
+      "sha256": "cfa54a85243655daddd240fd621774e43f328003e0e1cf4cdd5a4c04f4a237c8",
+      "indice": 58
+    },
+    {
+      "sha256": "51bdce1ae827c7c8b70334560a8656341831b7775c007cd5db4000e889b6a06c",
+      "indice": 79
+    },
+    {
+      "sha256": "86121a534dbb6bffa38470944a186c721d0fceb1e9f7500172ed65fdf105b8f6",
+      "indice": 38
+    },
+    {
+      "sha256": "fa6f5a0d5326bceea692ba99ed17a18c823cc71e37df69ce2b7a300ee49a4ea8",
+      "indice": 39
+    },
+    {
+      "sha256": "88f133197fe63fa2417992d9e258ae514b984070c5a49aecbd1e88e87d904dc4",
+      "indice": 64
+    },
+    {
+      "sha256": "c5edaf9ba5278e01baad9ad3bca037169a7e7d6d91d9472eb893bf038105b4f1",
+      "indice": 65
+    },
+    {
+      "sha256": "a27c687794f136e3603a2a8fc4ab9031da4624b53e5e46443857433eecbc1478",
+      "indice": 56
+    },
+    {
+      "sha256": "e4a566a353f1baa8071d2ff29d9e8c80b031d61ddb57d93988cabae5520ec174",
+      "indice": 57
+    },
+    {
+      "sha256": "fd26a8c39bd8192a3efe0b4b4d4b037d2b0108b9589871f2b30ad28bcd9754a9",
+      "indice": 90
+    },
+    {
+      "sha256": "6e4456601a5c85b85425abf7e3c4c44b849d7652d5b5c1000b167dd068b84d03",
+      "indice": 91
+    },
+    {
+      "sha256": "03a766bf5fbad4354712edf51c6f2c23eb32b99b1205ca626de84e07e17a5443",
+      "indice": 69
+    }
+  ]
+}

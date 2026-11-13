@@ -1,0 +1,78 @@
+{
+ "_nota": "Tanda 12 (11 nov. 2026, Claude): ataques extra de formas sueltas sin ninguno. Bulma (16 fotogramas) y Rey Gomah (38) no tienen material suficiente; se dejan como están.",
+ "heroes": {
+  "a14": {
+   "0": {
+    "attack2": [
+     27,
+     28
+    ],
+    "attack3": [
+     18,
+     19
+    ],
+    "kick2": [
+     36,
+     37
+    ],
+    "up": [
+     44
+    ]
+   }
+  },
+  "blackkaioshin": {
+   "0": {
+    "attack2": [
+     10,
+     11
+    ],
+    "attack3": [
+     12,
+     13
+    ],
+    "beam": [
+     32,
+     30
+    ]
+   }
+  },
+  "cui": {
+   "0": {
+    "attack2": [
+     7,
+     8
+    ],
+    "kick2": [
+     20,
+     21
+    ],
+    "beam": [
+     23,
+     24
+    ],
+    "up": [
+     40
+    ]
+   }
+  },
+  "hatchiyack": {
+   "0": {
+    "attack2": [
+     12,
+     13
+    ],
+    "attack3": [
+     51,
+     52
+    ],
+    "beam": [
+     46,
+     47
+    ],
+    "up": [
+     49
+    ]
+   }
+  }
+ }
+}

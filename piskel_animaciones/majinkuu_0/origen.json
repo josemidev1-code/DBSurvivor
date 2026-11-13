@@ -1,0 +1,95 @@
+{
+  "heroe": "majinkuu",
+  "forma": "0",
+  "pack": "03_Daima/DeviantArt/464_MAJIN KUU (Strice12)",
+  "frames": [
+    {
+      "sha256": "04f714c711e9b12be6861ab510827fe7186ec113eb00aefbe403cbc4e8a2c170",
+      "indice": 5
+    },
+    {
+      "sha256": "dd486c8f31377a0d0cab9795366b63b6d15cccd6b41a41a59b41969a041eb9b5",
+      "indice": 6
+    },
+    {
+      "sha256": "632d1d1317792d47a01cc033ec67053f3c98fe8e5cb4c9e484d88c87489f942b",
+      "indice": 17
+    },
+    {
+      "sha256": "68dc9ffc9cdca0bd70ec612c278d35ab71634df1b25e842284933114a9bd60af",
+      "indice": 21
+    },
+    {
+      "sha256": "24de53e4c0a836e06875686ae1320b42e15dc0e88607ec9eb3821329a57a97ca",
+      "indice": 22
+    },
+    {
+      "sha256": "2a6f186cbff351cd961fe73394c69039080e27a0341a35e331e168b41a4f5b32",
+      "indice": 23
+    },
+    {
+      "sha256": "849ae8864e6e0b678c996233996c3e89ff0d8ff04034054aaa9ecfd81a9f9c39",
+      "indice": 33
+    },
+    {
+      "sha256": "52bbc3009e8a50903778f04f23a4c5ce0f8876df5cfb7a1b3f5137cb3f32604e",
+      "indice": 34
+    },
+    {
+      "sha256": "e8f3258b56ee0d9f27da1511f985aac233720e7e96daac4c14cf7e35aba6df72",
+      "indice": 48
+    },
+    {
+      "sha256": "61850b0ee1da78a437a7aa253700495611cc9118a2afa539a569b44b9e598064",
+      "indice": 49
+    },
+    {
+      "sha256": "b88595a8614791abae48fb76df021007d3d82fc32cb3bb2910d2c26172c71c33",
+      "indice": 43
+    },
+    {
+      "sha256": "9acf6b9d0ca2974773cafb81e1c037ff1d76920b7ac209927b65bb2c8e89fd38",
+      "indice": 44
+    },
+    {
+      "sha256": "d1a735a119881e59bc39fe94be80467b1f15e21100283fbeb44746b339665411",
+      "indice": 38
+    },
+    {
+      "sha256": "384ed3de38ecf90eb91e197a1479b21d7e0bc94f275510b417c6bbbc5cda4b12",
+      "indice": 39
+    },
+    {
+      "sha256": "4b64eb0da2bd405da726b2fbb0240c9a7958eab819038995cde12af9a4c7a3fa",
+      "indice": 24
+    },
+    {
+      "sha256": "2340726b76b6554cafd6723c07b1ead8298c9d19726548da5560cd56ba9e02b5",
+      "indice": 25
+    },
+    {
+      "sha256": "2774987958d72b1306a043ebe3680c6dc2834449cba2cebd01ad837514503299",
+      "indice": 26
+    },
+    {
+      "sha256": "b6a1f4b3e84536c3a92ab25f4099a71fbe141b36c5faecc0721186bf7ef8622f",
+      "indice": 27
+    },
+    {
+      "sha256": "22e1171bc05766e438ecee7c967b180e41d54d2b0d66b38a7a8405795f112f7a",
+      "indice": 40
+    },
+    {
+      "sha256": "c90f77a7d1440e3ad9aba78f4443dec93049a6a778da3970eed12d5a40b3627f",
+      "indice": 41
+    },
+    {
+      "sha256": "23cbd0ef30e37c593e58e5dfec485988c4e5f89e548b3e4276a45bee7d57cd4d",
+      "indice": 37
+    },
+    {
+      "sha256": "664d351c17bf2367ff046b96be0228012bd014dcadd54989f3c18c3e60956490",
+      "indice": 36
+    }
+  ]
+}
