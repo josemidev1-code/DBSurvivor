@@ -4330,3 +4330,12 @@ ode --check.
 ### Lo que hice
 - Jugada una partida en pokesurvivor.com como invitado (Scorbunny, 1:39, nivel 4). Visto: test de personalidad para elegir compañero, menú en tarjetas, subida de nivel con 4 opciones y botón «Cambiar opciones (1) · R», pausa con daño y DPS por ataque, pantalla final con «¡Nuevo récord de tiempo!», daño por ataque, maestría del compañero y botones «Volver a jugar / Mejoras / Volver al menú».
 - Título nuevo en pixel art: `herramientas/generar_titulo.py` dibuja `ui/titulo.png` (218×54; letras propias, esfera con estrella en la O, BALL en rojo, estela morada y SURVIVOR en blanco debajo) y lo incrusta como `titulo` en `ui_imagenes.js`. No usar `montar_objetos.py` para esto: vuelve a recortar los iconos redibujados de `ui/objetos`. Puesto en la pantalla de inicio (grande, con entrada animada) y en el menú (pequeño); el `<h1>` de texto queda solo para lectores de pantalla. El logo Z dibujado por Josemi sigue como icono de la pestaña. Vista ampliada: `herramientas/titulo_zoom.png`. style.css?v=94, ui_imagenes.js?v=68.
+- Ideas de PokéSurvivor llevadas al juego (sin copiar código):
+  - **Cambiar opciones (tecla R)** en la subida de nivel: vuelve a sacar las cartas. 1 por partida (`S.rerolls`) y +1 por cada nivel de la mejora permanente nueva **Consejo de Kaio** (máx. 3; 300 zeni, ×2,2; icono scouter). No sale en el deseo de Shenron ni en la pantalla de fusión del jefe. `luReroll()` junto a `openLevelUp`.
+  - **Pantalla final** nueva: aviso «¡NUEVO RÉCORD DE TIEMPO!» (o de derrotados), casillas de Tiempo, Nivel, Derrotados, Zeni y Tickets, barra de maestría del guerrero con su retrato y técnicas con icono y nivel. Botones «VOLVER A JUGAR», «MEJORAS» (abre la Sala de entrenamiento) y «VOLVER AL MENÚ».
+  - Probado en navegador: el cambio de opciones baja de 1 a 0 y se desactiva; la pantalla final y el botón Mejoras funcionan; sin errores de consola. Comprobaciones: siguen fallando las mismas cuatro de antes (enemigos, formas, objetos —`capsulaVida`, ya fallaba—, rotación). script.js?v=192, style.css?v=95.
+
+### Siguiente paso recomendado (ideas vistas en PokéSurvivor que faltan)
+- Daño total y daño por segundo de cada técnica en la pausa y en la pantalla final (hace falta apuntar el origen en cada `hurt()`; hay 16 llamadas).
+- Cuatro opciones al subir de nivel en vez de tres (cambia el equilibrio: preguntar a Josemi).
+- Que Josemi valore el título nuevo y la pantalla final.

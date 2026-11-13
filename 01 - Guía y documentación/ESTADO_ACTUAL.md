@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**13 nov. 2026 (título y PokéSurvivor):** título nuevo en pixel art (DRAGON BALL con la esfera en la O y SURVIVOR debajo; `herramientas/generar_titulo.py` → `ui/titulo.png`). Botón «Cambiar opciones (R)» al subir de nivel (1 por partida + mejora «Consejo de Kaio»). Pantalla final con récord, casillas, maestría y botón Mejoras. Pendiente de que Josemi lo valore. Ver la bitácora.
+
 **11 nov. 2026 (Kamehameha con PixelFX):** el Kamehameha y sus variantes usan el efecto propio `herramientas/efectos_pixelfx/fx/kamehameha.js` (carga, rayo estable e impacto). Aprobado por Josemi. Transformación con pixelfx al estilo de la serie (`fx/transformacion.js`), sin aura permanente. Galick Gun, Final Flash, Masenko (ahora rayo) y Makankosappo con su estilo propio; el resto de rayos del jugador, el Kienzan, el Taiyoken los impactos cuerpo a cuerpo (golpe final con parada corta), la recogida de objetos, la columna de luz de las esferas, la subida de nivel el clima de los escenarios (`CLIMA`) y los rayos, muertes y llegadas de enemigos y jefes, también con pixelfx. Pendiente de que Josemi lo valore. Ver la bitácora.
 
 

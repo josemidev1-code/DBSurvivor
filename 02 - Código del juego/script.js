@@ -4015,7 +4015,7 @@ function newGame(hid,map){
 
   const H=HEROES[hid];
 
-  S={map:MAPK,bossN:0,t:0,kills:0,spawnT:0,bossIdx:0,ringIdx:0,boss:null,banner:null,flash:0,pending:0,hid,won:false,endless:false,nextEndless:0,zeni:0,freeze:0,diff:pickedDiff,meta:metaBonus(),mr:1+0.01*mastRank(hid),aw:awaken(hid),saiba:0,forms:0,evos:0,balls:0,ballN:0,wishes:0,bank:{t:0,kills:0,boss:0,saiba:0,forms:0,evos:0,zeni:0,wishes:0}};S.revives=S.meta.revive;
+  S={map:MAPK,bossN:0,t:0,kills:0,spawnT:0,bossIdx:0,ringIdx:0,boss:null,banner:null,flash:0,pending:0,hid,won:false,endless:false,nextEndless:0,zeni:0,freeze:0,diff:pickedDiff,meta:metaBonus(),mr:1+0.01*mastRank(hid),aw:awaken(hid),saiba:0,forms:0,evos:0,balls:0,ballN:0,wishes:0,bank:{t:0,kills:0,boss:0,saiba:0,forms:0,evos:0,zeni:0,wishes:0}};S.revives=S.meta.revive;S.rerolls=1+(S.meta.reroll||0);
 
   const s=loadSave();
 
@@ -4096,6 +4096,7 @@ addEventListener('keydown',e=>{keys[e.code]=true;
   if(state==='play'){let num=-1;const m=/^(Digit|Numpad)([1-6])$/.exec(e.code);if(m)num=+m[2];else if(/^[1-6]$/.test(e.key))num=+e.key;if(num>=1&&num<=6){sigSelect(num-1);e.preventDefault()}}
 
   if(state==='levelup'&&/^Digit[1-4]$/.test(e.code)){const b=$('#ups').querySelectorAll('button')[+e.code.slice(5)-1];if(b)b.click()}
+  if(state==='levelup'&&e.code==='KeyR'){const b=$('#luReroll');if(b&&!b.hidden&&!b.disabled){b.click();e.preventDefault()}}
 
   if((e.code==='Escape'||e.code==='KeyP')){if(state==='play')pauseGame();else if(state==='pause')resume()}
 
@@ -5027,7 +5028,7 @@ function optInfo(op){
 
   const cv=icon('capsulaDorada',32);return{cv,nm:'Bolsa de Zeni',lv:'+50 ZENI',ds:'Monedas de oro para la tienda de mejoras.',cls:''}}
 
-function openLevelUp(title){
+function openLevelUp(title,cambio){
 
   state='levelup';const box=$('#ups');box.innerHTML='';$('#luTitle').textContent=S.mastery?'¡FUSIÓN Y LEGADO DEL JEFE!':title||'¡Nivel '+P.lvl+'!';
 
@@ -5039,8 +5040,12 @@ function openLevelUp(title){
     b.insertAdjacentHTML('beforeend','<span class="nm">'+inf.nm+'</span><span class="ds">'+inf.ds+'</span>'+pips+'<span class="key">'+(i+1)+'</span>');
     b.onclick=()=>{const wasMastery=!!S.mastery;applyOpt(op);if(S.mastery)S.mastery--;sfx('gem');$('#levelup').hidden=true;S.pending=Math.max(0,S.pending-1);state='play';last=performance.now();if(wasMastery&&S.victoryAfterReward&&!S.mastery){S.victoryAfterReward=false;endGame(true)}};
     box.appendChild(b)});
-  luBuild();
-  $('#levelup').hidden=false;setTimeout(()=>{const f=box.querySelector('button');f&&f.focus({preventScroll:true})},30);sfx('level')}
+  luBuild();luReroll(title);
+  $('#levelup').hidden=false;setTimeout(()=>{const f=box.querySelector('button');f&&f.focus({preventScroll:true})},30);sfx(cambio?'gem':'level')}
+// Cambiar opciones (idea de PokéSurvivor): vuelve a sacar las cartas; 1 por partida + «Consejo de Kaio». Tecla R.
+function luReroll(title){const b=$('#luReroll');if(!b)return;const n=S.rerolls||0;b.hidden=!!S.mastery;b.disabled=n<=0;
+  b.innerHTML='CAMBIAR OPCIONES ('+n+') <kbd>R</kbd>';b.title=n>0?'Saca otras cartas':'Consigue más con «Consejo de Kaio» en Mejoras';
+  b.onclick=()=>{if(state!=='levelup'||S.mastery||(S.rerolls||0)<=0)return;S.rerolls--;openLevelUp(title,true)}}
 function cvCopy(c){const n=mk(c.width,c.height);n.getContext('2d').drawImage(c,0,0);return n}
 // lo que ya llevas en esta partida, para decidir con la vista puesta en tu equipo
 function luBuild(){const b=$('#luBuild');b.hidden=false;b.innerHTML='<span class="luLbl">TU EQUIPO</span>';
@@ -7087,7 +7092,7 @@ function shenlong(f=0){
 
 }
 
-function openWish(){state='levelup';const box=$('#ups');box.innerHTML='';$('#luBuild').hidden=true;{const sc=document.createElement('canvas');sc.width=170;sc.height=120;sc.getContext('2d').drawImage(shenlong(),0,0);sc.style.cssText='max-width:510px;width:100%;image-rendering:pixelated';const wr=document.createElement('div');wr.style.cssText='flex-basis:100%;display:flex;justify-content:center';wr.appendChild(sc);box.appendChild(wr)}$('#luTitle').textContent='¡SHENLONG! PIDE UN DESEO';S.flash=0.6;cam.shake=6;sfx('trans');
+function openWish(){state='levelup';const box=$('#ups');box.innerHTML='';$('#luBuild').hidden=true;{const r=$('#luReroll');if(r)r.hidden=true}{const sc=document.createElement('canvas');sc.width=170;sc.height=120;sc.getContext('2d').drawImage(shenlong(),0,0);sc.style.cssText='max-width:510px;width:100%;image-rendering:pixelated';const wr=document.createElement('div');wr.style.cssText='flex-basis:100%;display:flex;justify-content:center';wr.appendChild(sc);box.appendChild(wr)}$('#luTitle').textContent='¡SHENLONG! PIDE UN DESEO';S.flash=0.6;cam.shake=6;sfx('trans');
 
   const W=[['wPow','PODER ILIMITADO','Todas tus técnicas suben 1 nivel.',()=>{for(const id of P.order){const m=P.moves[id];if(m.lv<5)m.lv++}}],
 
@@ -8245,7 +8250,9 @@ const UPG=[
 
  {id:'tick',name:'Bolas de Dragón',ds:'+1 ticket al acabar cada partida',max:10,cost:400,g:1.45},
 
- {id:'revive',name:'Semilla Senzu extra',ds:'Revives una vez por partida',max:2,cost:2500,g:3}];
+ {id:'revive',name:'Semilla Senzu extra',ds:'Revives una vez por partida',max:2,cost:2500,g:3},
+
+ {id:'reroll',name:'Consejo de Kaio',ds:'+1 cambio de opciones por partida al subir de nivel',max:3,cost:300,g:2.2}];
 
 const upCost=(u,lv)=>Math.floor(u.cost*Math.pow(u.g,lv));
 
@@ -8253,7 +8260,7 @@ function upLv(id){return(loadSave().up[id]||0)}
 
 function metaBonus(){const L=upLv;return{dmg:1+0.04*L('power'),hp:6*L('hp'),armor:0.4*L('armor'),spd:1+0.02*L('speed'),cd:Math.pow(0.98,L('cd')),
 
-  mag:1+0.08*L('magnet'),regen:0.1*L('regen'),xp:1+0.04*L('xp'),greed:1+0.08*L('greed'),tick:L('tick'),revive:L('revive')}}
+  mag:1+0.08*L('magnet'),regen:0.1*L('regen'),xp:1+0.04*L('xp'),greed:1+0.08*L('greed'),tick:L('tick'),revive:L('revive'),reroll:L('reroll')}}
 
 // mastery: every hero ranks up by playing (kills + seconds survived); +1% damage per rank
 
@@ -8313,7 +8320,7 @@ function dailyGift(){const s=loadSave(),d=new Date().toISOString().slice(0,10);i
 
 function openTrain(){state='train';hideMenus();$('#train').hidden=false;drawTrain()}
 
-const UPG_ICONS={power:'pesas',hp:'capsulaVida',armor:'armaduraSaiyan',speed:'kinton',cd:'capsulaKi',magnet:'radar',regen:'senzuBolsa',xp:'capsulaDorada',greed:'capsulacorp',tick:'esfera4',revive:'senzu'};
+const UPG_ICONS={power:'pesas',hp:'capsulaVida',armor:'armaduraSaiyan',speed:'kinton',cd:'capsulaKi',magnet:'radar',regen:'senzuBolsa',xp:'capsulaDorada',greed:'capsulacorp',tick:'esfera4',revive:'senzu',reroll:'scouter'};
 function drawTrain(justBought){const s=loadSave();$('#tInfo').innerHTML='<span class="resChip"><i class="pxCoin"></i>'+s.zeni+'<em>ZENI</em></span><span class="resChip"><i class="pxTick"></i>'+s.tickets+'<em>TICKETS</em></span>';
   const box=$('#tList');box.innerHTML='';
   UPG.forEach(u=>{const lv=s.up[u.id]||0,max=lv>=u.max,cost=upCost(u,lv),poor=!max&&s.zeni<cost,b=document.createElement('button');b.type='button';b.className='up train'+(max?' maxed':poor?' poor':' canBuy')+(justBought===u.id?' bought':'');
@@ -8507,7 +8514,7 @@ function endGame(won){
 
   state='end';$('#hudBtns').hidden=true;
 
-  const best=loadBest(),b=best[S.hid]||{t:0,k:0};if(S.t>b.t)b.t=S.t;if(S.kills>b.k)b.k=S.kills;best[S.hid]=b;
+  const best=loadBest(),b=best[S.hid]||{t:0,k:0},recT=S.t>b.t&&b.t>0,recK=S.kills>b.k&&b.k>0;if(S.t>b.t)b.t=S.t;if(S.kills>b.k)b.k=S.kills;best[S.hid]=b;
 
   const sv=loadSave(),B=S.bank,dt=S.t-B.t,dk=S.kills-B.kills,db=(S.bossKills||0)-B.boss,first=!B.paid;
 
@@ -8523,7 +8530,13 @@ function endGame(won){
 
   $('#endTitle').textContent=won?'¡VICTORIA!':'HAS CAIDO';
 
-  $('#endStats').innerHTML=`<p class="stat">Tiempo <b>${fmt(S.t)}</b> · Nivel <b>${P.lvl}</b> · KO <b>${S.kills}</b></p><p class="stat">Forma: <b>${HEROES[S.hid].forms[P.form]}</b> · Zeni <b>+${zn}</b> · Tickets <b>+${tk}</b></p>${S.unl&&S.diff+1<DIFF.length?`<p class="stat">¡Desbloqueada la dificultad <b>${DIFF[S.diff+1].n}</b> en ${MAPS[S.map].name}!</p>`:''}${S.diff?`<p class="stat">Dificultad ${DIFF[S.diff].n}: premios x${DIFF[S.diff].rw}</p>`:''}${r1>r0?`<p class="stat">¡${HEROES[S.hid].name} sube a <b>RANGO ${r1}</b>! +${mrw} tickets</p>`:''}${misReady()?`<p class="stat">Tienes <b>${misReady()}</b> misiones listas para cobrar en ENTRENAMIENTO</p>`:''}<div class="moves">${P.order.map(id=>`<span>${P.moves[id].evo?MV[id].evo:MV[id].name} NV ${P.moves[id].lv}</span>`).join('')}</div>`;
+  // Pantalla final al estilo PokéSurvivor: récord, casillas de resultado, maestría del guerrero y técnicas.
+  const tile=(nm,v,c)=>`<div class="endTile${c?' '+c:''}"><span>${nm}</span><b>${v}</b></div>`,mx=sv.mast[S.hid]||0,ma=mastXP(r1),mb=mastXP(r1+1),mf=r1>=30?1:clamp((mx-ma)/(mb-ma),0,1);
+  const tecs=[...sigOpen().map((id,i)=>[id,MV[id].name,sigLv(i)]),...P.order.map(id=>[id,P.moves[id].evo?MV[id].evo:MV[id].name,P.moves[id].lv])];
+  $('#endStats').innerHTML=`${recT||recK?`<p class="endRec">${recT?'¡NUEVO RÉCORD DE TIEMPO!':'¡NUEVO RÉCORD DE DERROTADOS!'}</p>`:''}<div class="endTiles">${tile('TIEMPO',fmt(S.t))+tile('NIVEL',P.lvl)+tile('DERROTADOS',S.kills)+tile('ZENI','+'+zn,'zeni')+tile('TICKETS','+'+tk,'tix')}</div>`
+   +`<div class="endMast"><img src="${portrait(S.hid,P.form)}" alt=""><div><p><b>${HEROES[S.hid].name}</b> · ${HEROES[S.hid].forms[P.form]} · MAESTRÍA ${r1}${r1>r0?' <em>¡SUBE!</em>':''}</p><u><i style="width:${Math.round(mf*100)}%"></i></u><small>${r1>=30?'Maestría máxima':(mx-ma)+' / '+(mb-ma)+' para el rango '+(r1+1)}</small></div></div>`
+   +`${S.unl&&S.diff+1<DIFF.length?`<p class="stat">¡Desbloqueada la dificultad <b>${DIFF[S.diff+1].n}</b> en ${MAPS[S.map].name}!</p>`:''}${S.diff?`<p class="stat">Dificultad ${DIFF[S.diff].n}: premios x${DIFF[S.diff].rw}</p>`:''}${r1>r0?`<p class="stat">¡${HEROES[S.hid].name} sube a <b>RANGO ${r1}</b>! +${mrw} tickets</p>`:''}${misReady()?`<p class="stat">Tienes <b>${misReady()}</b> misiones listas para cobrar en ENTRENAMIENTO</p>`:''}`
+   +`<div class="endMoves">${tecs.map(([id,nm,lv])=>`<span><img src="${sigIcon(id,32).toDataURL()}" alt="">${nm}<b>NV ${lv}</b></span>`).join('')}</div>`;
 
   const btns=$('#endBtns');btns.innerHTML='';
 
@@ -8531,9 +8544,11 @@ function endGame(won){
 
   if(won)add('MODO INFINITO','',()=>{S.endless=true;S.nextEndless=S.t+60;$('#end').hidden=true;$('#hudBtns').hidden=false;state='play';last=performance.now()});
 
-  add('REINTENTAR',won?'alt':'',()=>startGame(S.hid,S.map));
+  add('VOLVER A JUGAR',won?'alt':'',()=>startGame(S.hid,S.map));
 
-  add('PERSONAJES','alt',()=>{$('#end').hidden=true;showTitle()});
+  add('MEJORAS','alt',()=>{$('#end').hidden=true;showTitle();openTrain()});
+
+  add('VOLVER AL MENÚ','alt',()=>{$('#end').hidden=true;showTitle()});
 
   $('#end').hidden=false;setTimeout(()=>btns.querySelector('button').focus(),20)}
 
