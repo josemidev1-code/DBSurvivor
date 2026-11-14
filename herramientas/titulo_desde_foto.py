@@ -95,25 +95,141 @@ DAIMA = {
 }
 
 
-def rotulo_daima(texto, sep=2, bloque=2, blanco=4, filo=2):
+# Elegida por Josemi (14 nov., «este perfecto»): esquinas en diagonal, rebote y sombra tramada.
+# Probadas y descartadas: esfera en la O (esfera=True) y aura de Super Saiyan (OPC_AURA=True).
+OPC_SURVIVOR = {'chaflan': 2, 'rebote': 2, 'sombra': True}  # opciones del rótulo (chaflan, rebote, sombra, esfera)
+OPC_AURA = False  # aura dorada de Super Saiyan detrás de todo el logo
+
+
+def bola(diam):
+    """Esfera del dragón como la O de DRAGON: aro amarillo, centro tramado a naranja, estrella roja."""
+    r = diam / 2
+    B = np.full((diam, diam), '.', dtype='<U1')
+    bay = np.array([[0, 2], [3, 1]]) / 4 + 0.125
+    for y in range(diam):
+        for x in range(diam):
+            d = np.hypot(x + 0.5 - r, y + 0.5 - r)
+            if d <= r:
+                if d > r - 2.2:
+                    B[y, x] = 'Y'
+                else:
+                    f = (y + 0.5) / diam
+                    q = 0.25 if f < 0.45 else 0.5 if f < 0.7 else 0.75
+                    B[y, x] = 'O' if q > bay[y % 2, x % 2] else 'Y'
+    pts = []
+    for k in range(10):
+        a = -np.pi / 2 + k * np.pi / 5
+        rr = r * 0.58 if k % 2 == 0 else r * 0.24
+        pts.append((r + rr * np.cos(a), r + 0.6 + rr * np.sin(a)))
+    est = np.zeros((diam, diam), bool)
+    for y in range(diam):
+        for x in range(diam):
+            px, py, dentro = x + 0.5, y + 0.5, False
+            j = len(pts) - 1
+            for i in range(len(pts)):
+                (xi, yi), (xj, yj) = pts[i], pts[j]
+                if (yi > py) != (yj > py) and px < (xj - xi) * (py - yi) / (yj - yi) + xi:
+                    dentro = not dentro
+                j = i
+            est[y, x] = dentro
+    B[est] = 'R'
+    B[nd.binary_dilation(est) & ~est & (B != '.')] = 'D'
+    return B
+
+
+def rotulo_daima(texto, sep=2, bloque=2, blanco=4, filo=2, chaflan=0, rebote=0, sombra=False, esfera=False):
+    """chaflan: corta las esquinas en diagonal (como DAIMA); rebote: sube/baja letras alternas;
+    sombra: tramado gris azulado en la parte baja del rótulo blanco (como el tramado de DRAGON)."""
     H = len(DAIMA['S']) * bloque
-    Wt = sum(len(DAIMA[c][0]) * bloque for c in texto) + sep * (len(texto) - 1)
-    pad = blanco + filo + 1
+    Wt = sum((H if (esfera and c == 'O') else len(DAIMA[c][0]) * bloque) for c in texto) + sep * (len(texto) - 1)
+    pad = blanco + filo + 1 + rebote
     m = np.zeros((H + 2 * pad, Wt + 2 * pad), bool)
     x = pad
-    for c in texto:
+    bolas = []
+    for i, c in enumerate(texto):
         filas = DAIMA[c]
+        if esfera and c == 'O':   # la O es una esfera del dragón, como en DRAGON
+            B = bola(H + 2)
+            dy = (-rebote if i % 2 else rebote) if rebote else 0
+            bolas.append((pad + dy - 1, x - 1, B))
+            m[pad + dy - 1:pad + dy - 1 + B.shape[0], x - 1:x - 1 + B.shape[1]] |= B != '.'
+            x += B.shape[1] - 2 + sep
+            continue
+        g = np.zeros((H, len(filas[0]) * bloque), bool)
         for y, fila in enumerate(filas):
             for xx, ch in enumerate(fila):
                 if ch == '#':
-                    m[pad + y * bloque:pad + (y + 1) * bloque, x + xx * bloque:x + (xx + 1) * bloque] = True
-        x += len(filas[0]) * bloque + sep
+                    g[y * bloque:(y + 1) * bloque, xx * bloque:(xx + 1) * bloque] = True
+        if chaflan:
+            g2 = np.pad(g, chaflan + 1)
+            g2 = nd.binary_opening(g2, structure=nd.generate_binary_structure(2, 1), iterations=chaflan)
+            g = g2[chaflan + 1:-chaflan - 1, chaflan + 1:-chaflan - 1]
+        dy = (-rebote if i % 2 else rebote) if rebote else 0
+        m[pad + dy:pad + dy + H, x:x + g.shape[1]] |= g
+        x += g.shape[1] + sep
     R = np.full(m.shape, '.', dtype='<U1')
     w = nd.binary_dilation(m, iterations=blanco) & ~m
     w |= nd.binary_fill_holes(m | w) & ~m & ~w
     k = nd.binary_dilation(m | w, iterations=filo) & ~(m | w)
     R[k] = 'K'; R[w] = 'W'; R[m] = 'K'
+    for (y0, x0, B) in bolas:
+        sel = B != '.'
+        sub = R[y0:y0 + B.shape[0], x0:x0 + B.shape[1]]
+        sub[sel] = B[sel]
+        borde = nd.binary_dilation(sel, iterations=1) & ~sel
+        sub[borde] = 'K'
+    if sombra:
+        ys = np.where(w.any(1))[0]; y0, y1 = ys.min(), ys.max()
+        bay = np.array([[0, 2], [3, 1]]) / 4 + 0.125
+        for y in range(y0, y1 + 1):
+            f = (y - y0) / max(1, y1 - y0)
+            q = 0 if f < 0.6 else 0.25 if f < 0.75 else 0.5 if f < 0.88 else 0.75
+            for xx in np.where(w[y])[0]:
+                if q > bay[y % 2, xx % 2]:
+                    R[y, xx] = 'G'
     return R
+
+
+def aura(R, semilla=4):
+    """Aura dorada de Super Saiyan: llamas que suben por detrás del logo, en pixel art tramado."""
+    rnd = np.random.RandomState(semilla)
+    mt, ml = 36, 10
+    H, W = R.shape
+    big = np.full((H + mt + 6, W + 2 * ml), '.', dtype='<U1'); big[mt:mt + H, ml:ml + W] = R
+    A = big != '.'
+    Hb, Wb = big.shape
+    dist = nd.distance_transform_edt(~A)
+    # alto de la llama por columna: dientes en sierra de anchura y altura variables
+    llama = np.zeros(Wb)
+    x = 0
+    while x < Wb:
+        w = rnd.randint(6, 14); h = rnd.randint(9, 32)
+        for k in range(w):
+            if x + k < Wb:
+                llama[x + k] = h * (1 - abs(k - (w - 1) / 2) / ((w + 1) / 2)) ** 1.6
+        x += w
+    top = np.array([np.where(A[:, max(0, c - 3):c + 4].any(1))[0].min() if A[:, max(0, c - 3):c + 4].any() else Hb for c in range(Wb)])
+    au = np.zeros_like(A); f = np.zeros(A.shape)
+    for c in range(Wb):
+        for y in range(Hb):
+            if A[y, c]:
+                continue
+            if dist[y, c] <= 3:
+                au[y, c] = True; f[y, c] = dist[y, c] / 3 * 0.45
+            elif y < top[c] and top[c] - y <= llama[c] + 3 and top[c] < Hb:
+                au[y, c] = True; f[y, c] = 0.45 + 0.55 * (top[c] - y - 3) / max(1, llama[c])
+    bay = np.array([[0, 2], [3, 1]]) / 4 + 0.125
+    for y, c in zip(*np.where(au)):
+        v = f[y, c]; th = bay[y % 2, c % 2]
+        if v < 0.3:
+            big[y, c] = 'a' if v / 0.3 < th + 0.25 else 'b'
+        elif v < 0.7:
+            big[y, c] = 'b' if (v - 0.3) / 0.4 < th else 'c'
+        else:
+            big[y, c] = 'c'
+    borde = nd.binary_dilation(au) & ~au & ~A
+    big[borde] = 'e'
+    return big
 
 
 def montar(R):
@@ -127,7 +243,7 @@ def montar(R):
         R[m]=np.where(q[m]>th[m],b,a)
     tramar('Y','O');tramar('R','D')
     # --- SURVIVOR con la letra de DAIMA (Josemi, 14 nov.: «como DAIMA, igualito»)
-    S_ = rotulo_daima('SURVIVOR')
+    S_ = rotulo_daima('SURVIVOR', **OPC_SURVIVOR)
     cx = int(np.median(np.where(np.isin(R, list('YORD')))[1]))
     fondo = np.where(np.isin(R, list('YORDK')))[0].max()
     ox = cx - S_.shape[1] // 2; oy = fondo - 4
@@ -135,7 +251,9 @@ def montar(R):
     m = S_ != '.'
     ys, xs = np.where(m); big[ys + oy, xs + ox] = S_[m]
     R = big
-    CLEAN={'K':(16,12,20),'Y':(255,238,0),'O':(240,150,0),'R':(242,58,20),'D':(170,26,30),'W':(255,255,255),'P':(140,52,230),'L':(186,122,236),'S':(236,180,190)}
+    if OPC_AURA:
+        R = aura(R)
+    CLEAN={'a':(255,250,190),'b':(255,226,40),'c':(255,160,16),'e':(214,96,8),'G':(176,190,232),'K':(16,12,20),'Y':(255,238,0),'O':(240,150,0),'R':(242,58,20),'D':(170,26,30),'W':(255,255,255),'P':(140,52,230),'L':(186,122,236),'S':(236,180,190)}
     out=np.zeros(R.shape+(4,),np.uint8)
     for k,v in CLEAN.items(): out[R==k]=v+(255,)
     ys,xs=np.where(out[:,:,3]>0);out=out[ys.min():ys.max()+1,xs.min():xs.max()+1]

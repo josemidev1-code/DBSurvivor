@@ -4367,3 +4367,7 @@ ode --check.
 - Josemi: «Solo quiero que quede lo de Dragon Ball; el fondo azul quítalo; lo de Survivor está mal hecho, quiero que sea también de la tipografía de la foto; y lo violeta del fondo también quítalo». Después: «Survivor lo quiero como DAIMA, igualito» y «no como el de arriba».
 - `titulo_desde_foto.py`: fuera la estela morada (y sus motas); SURVIVOR con la letra de DAIMA vista de cerca en la foto: negra, recta, muy gruesa (trazo ≈6 px), huecos de 2 px, escalones de 2 px, 14×22 px por letra, sobre rótulo blanco continuo de 4 px con filo negro. `ui/titulo.png` 300×120 (×3 en inicio).
 - Pantalla de inicio: quitadas las rayas azules; vuelve el mapa de fondo oscurecido. style.css?v=99, ui_imagenes.js?v=72.
+
+### SURVIVOR elegido (14 nov.)
+- Josemi: «Están bien pero no tiene ese toque que quiero» → se le enseñaron 4 versiones (actual, A diagonal, B diagonal + rebote, C diagonal + rebote + sombra). Pidió «un toque más de Dragon Ball, siento que está muy genérico»; se probaron esfera en la O y aura de Super Saiyan. Al final eligió la **C** («este perfecto», con captura).
+- `titulo_desde_foto.py`: `OPC_SURVIVOR = {'chaflan': 2, 'rebote': 2, 'sombra': True}`, `OPC_AURA = False` (la esfera en la O y el aura quedan en el código como opciones). `ui/titulo.png` 300×124: ×3 en inicio, 400 px en el menú (para que quepan las estadísticas abajo). style.css?v=101, ui_imagenes.js?v=74.

@@ -1169,12 +1169,12 @@ body.high-contrast .up .nm,body.high-contrast .card h3{color:#ffffff!important;t
 /* sin brillo animado: el logo queda igual que el de la foto */
 .tituloWrap::after{display:none}
 #hub .tituloWrap .tituloImg{margin-bottom:0}
-/* título a múltiplos enteros (300×120 nativo, sacado de la foto) y guerrero del menú más grande y nítido */
+/* título a múltiplos enteros (300×124 nativo, sacado de la foto) y guerrero del menú más grande y nítido */
 .tituloImg{width:min(900px,92vw)}
-#hub .tituloImg{width:min(450px,36vw)}
-@media (max-height:860px){#hub .tituloImg{width:min(450px,36vw)}}
+#hub .tituloImg{width:min(400px,32vw)}
+@media (max-height:860px){#hub .tituloImg{width:min(400px,32vw)}}
 @media (max-height:520px){#hub .tituloImg{width:min(225px,30vw)}#start .tituloImg{width:min(600px,80vw)}}
 @media (min-height:640px) and (min-width:900px){.comp{width:250px!important;aspect-ratio:auto!important}.comp canvas{width:180px!important;height:180px!important}}
 .comp{background:radial-gradient(ellipse at 50% 92%,rgba(255,210,63,.55) 0,rgba(249,115,22,.28) 22%,transparent 48%),repeating-conic-gradient(from 0deg at 50% 70%,rgba(255,255,255,.06) 0 10deg,transparent 10deg 20deg),linear-gradient(180deg,#22307a,#0c1240)!important}
 .compName{font-size:14px;text-shadow:2px 2px 0 #0a0d1a}
-#hub .tituloWrap{margin-top:46px}
+#hub .tituloWrap{margin-top:30px}
