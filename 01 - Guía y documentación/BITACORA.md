@@ -4446,3 +4446,4 @@ ode --check.
 
 ### Nueva petición (14 nov.)
 - Josemi: «Sí, sigue» (seguir con las formas pendientes).
+- Tanda 16 (9.ª parte): combo 3 de Vegeta Dios y Vegeta manga perfecto; rayo de Vegeta manga perfecto, Goku SSJ Legendario, Evil SSJ2, Rey Mono, Black MUI y Black Time Breaker Rosé 3. Muerte de Goku MUI Blue descartada (lleva un efecto pegado). Quedan 99 formas con huecos (55 solo brazos arriba).
