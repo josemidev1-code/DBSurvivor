@@ -4371,3 +4371,13 @@ ode --check.
 ### SURVIVOR elegido (14 nov.)
 - Josemi: «Están bien pero no tiene ese toque que quiero» → se le enseñaron 4 versiones (actual, A diagonal, B diagonal + rebote, C diagonal + rebote + sombra). Pidió «un toque más de Dragon Ball, siento que está muy genérico»; se probaron esfera en la O y aura de Super Saiyan. Al final eligió la **C** («este perfecto», con captura).
 - `titulo_desde_foto.py`: `OPC_SURVIVOR = {'chaflan': 2, 'rebote': 2, 'sombra': True}`, `OPC_AURA = False` (la esfera en la O y el aura quedan en el código como opciones). `ui/titulo.png` 300×124: ×3 en inicio, 400 px en el menú (para que quepan las estadísticas abajo). style.css?v=101, ui_imagenes.js?v=74.
+
+## 2026-11-14 — Claude (inventario de animaciones para Piskel)
+
+### Lo que pidió el usuario
+- «Quiero mejorar el juego. De todos los sprites que hay, ¿cuáles están full animados? Quiero animarlos todos con Piskel. Mira todos los sprites que tenemos y dime cuáles están animados y cuáles no.»
+
+### Lo que hice
+- Nuevo `herramientas/inventario_animaciones.py` → `INVENTARIO_ANIMACIONES.md`: para cada forma mira las 14 animaciones del juego y marca ✅ animada / 🟡 quieta (1 fotograma) / ❌ falta. Moverse con 1 fotograma vale (vuelan, según la guía); el retrato se enseña pero no cuenta para «completa». Nombres desde `herramientas/nombres_personajes.json` (volcado de `AS.HDEF`).
+- Resultado: 225 formas jugables → 13 completas, 140 casi (1-2 pendientes), 69 a medias, 3 poco animadas. 40 formas de enemigos (39 a medias). 88 carpetas de `sprites/` con personajes sin montar. Lo más repetido: brazos arriba (110 sin, 92 con 1 fotograma), combo 3 (79 sin), patada 2 (63), rayo (50), combo 2 (47), muerte (33). Auditoría antigua regenerada.
+- Siguiente: Josemi elige por dónde empezar a animar con Piskel (`exportar_piskel_lote.py` → piskelapp.com → `importar_piskel.py`).

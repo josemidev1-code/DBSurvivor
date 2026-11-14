@@ -1,4 +1,4 @@
-# Auditoría de animaciones (2026-11-11)
+# Auditoría de animaciones (2026-11-14)
 
 Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` con las selecciones montadas en el juego. Un fotograma sin usar puede ser un efecto o un duplicado: la cifra indica material sin aprovechar, no ataques exactos.
 
@@ -6,7 +6,7 @@ Generada con `python herramientas/auditar_animaciones.py`. Compara `sprites/` co
 
 - Carpetas con imágenes: **405** (37468 imágenes). En el juego: **302**. Sin usar: **103**.
 - De las 103 sin usar, 10 son escenarios, referencias o Shenron; quedan **93** con personajes (6655 imágenes).
-- En los packs usados hay 30590 imágenes y el juego usa **6271** (20 %).
+- En los packs usados hay 30590 imágenes y el juego usa **6082** (19 %).
 - Formas de personajes jugables: 225. Con los 5 ataques extra completos: **76**. Sin ninguno: **36**.
 - Formas de personajes ocultos que no se ven en el juego: 48. Formas solo de enemigo u otras: 40.
 
@@ -16,56 +16,56 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 
 | Personaje | Formas | Fotogramas en sus packs | Usados | Ataques extra que faltan |
 |---|---:|---:|---:|---:|
-| blackfan | 4 | 522 | 74 | 20 |
+| blackfan | 4 | 522 | 73 | 20 |
 | gokumoro | 5 | 445 | 80 | 19 |
 | blacktime | 3 | 514 | 55 | 15 |
-| gokubroly | 4 | 286 | 86 | 10 |
+| gokubroly | 4 | 286 | 84 | 10 |
 | kyabe | 2 | 162 | 30 | 10 |
 | trunksnino | 2 | 346 | 29 | 10 |
-| vegetamanga | 2 | 250 | 36 | 10 |
-| gokualt | 3 | 302 | 67 | 7 |
-| broly | 4 | 234 | 80 | 6 |
+| vegetamanga | 2 | 250 | 35 | 10 |
+| gokualt | 3 | 302 | 65 | 7 |
+| broly | 4 | 234 | 79 | 6 |
 | bulma | 1 | 16 | 12 | 5 |
-| freezer | 6 | 443 | 127 | 5 |
+| freezer | 6 | 443 | 125 | 5 |
 | gomah | 1 | 38 | 18 | 5 |
 | kibitoshin | 1 | 22 | 15 | 5 |
-| merus | 1 | 48 | 15 | 5 |
+| merus | 1 | 48 | 14 | 5 |
 | nuova | 1 | 14 | 13 | 5 |
-| tarble | 1 | 31 | 15 | 5 |
+| tarble | 1 | 31 | 14 | 5 |
 | trunksgt | 1 | 39 | 14 | 5 |
 | vegetabroly | 1 | 101 | 18 | 5 |
 | vegitoblue254 | 1 | 546 | 14 | 5 |
-| cell | 5 | 461 | 107 | 4 |
-| gogeta | 3 | 565 | 65 | 4 |
-| gohan | 4 | 278 | 90 | 4 |
-| goku | 5 | 393 | 114 | 4 |
-| reycold | 1 | 59 | 17 | 4 |
-| shin | 1 | 51 | 17 | 4 |
-| black | 3 | 359 | 68 | 3 |
-| buu | 5 | 379 | 102 | 3 |
-| gohanfut | 1 | 123 | 22 | 3 |
+| cell | 5 | 461 | 106 | 4 |
+| gogeta | 3 | 565 | 63 | 4 |
+| gohan | 4 | 278 | 84 | 4 |
+| goku | 5 | 393 | 113 | 4 |
+| reycold | 1 | 59 | 15 | 4 |
+| shin | 1 | 51 | 14 | 4 |
+| black | 3 | 359 | 62 | 3 |
+| buu | 5 | 379 | 100 | 3 |
+| gohanfut | 1 | 123 | 21 | 3 |
 | janemba | 1 | 72 | 20 | 3 |
 | jiren | 3 | 295 | 61 | 3 |
-| kale | 2 | 100 | 45 | 3 |
+| kale | 2 | 100 | 43 | 3 |
 | metalcooler | 1 | 56 | 17 | 3 |
-| moro | 1 | 52 | 20 | 3 |
+| moro | 1 | 52 | 19 | 3 |
 | taopaipai | 1 | 78 | 18 | 3 |
-| vegeta | 5 | 421 | 127 | 3 |
+| vegeta | 5 | 421 | 123 | 3 |
 | a17 | 1 | 41 | 20 | 2 |
-| bardock | 3 | 271 | 70 | 2 |
+| bardock | 3 | 271 | 67 | 2 |
 | blackkaioshin | 1 | 45 | 20 | 2 |
 | cumber | 1 | 26 | 15 | 2 |
-| daishinkan | 1 | 86 | 21 | 2 |
+| daishinkan | 1 | 86 | 20 | 2 |
 | gohanmanga | 1 | 87 | 21 | 2 |
-| gokupatrulla | 1 | 53 | 21 | 2 |
-| gokussj4daima | 1 | 281 | 21 | 2 |
-| pangt | 1 | 99 | 21 | 2 |
-| paragus | 1 | 99 | 22 | 2 |
-| piccolo | 2 | 179 | 46 | 2 |
+| gokupatrulla | 1 | 53 | 20 | 2 |
+| gokussj4daima | 1 | 281 | 19 | 2 |
+| pangt | 1 | 99 | 17 | 2 |
+| paragus | 1 | 99 | 20 | 2 |
+| piccolo | 2 | 179 | 45 | 2 |
 | raditz | 2 | 92 | 48 | 2 |
-| roshi | 1 | 82 | 19 | 2 |
-| super17 | 1 | 51 | 20 | 2 |
-| trunks | 3 | 312 | 69 | 2 |
+| roshi | 1 | 82 | 18 | 2 |
+| super17 | 1 | 51 | 17 | 2 |
+| trunks | 3 | 312 | 64 | 2 |
 | trunksarmor | 1 | 74 | 17 | 2 |
 | vegetaxeno | 1 | 185 | 21 | 2 |
 | vegetto | 4 | 446 | 97 | 2 |
@@ -73,64 +73,64 @@ Ataques extra contados: `attack2`, `attack3`, `kick2`, `beam` y `up`. `dash` no 
 | a14 | 1 | 57 | 21 | 1 |
 | a16 | 1 | 64 | 23 | 1 |
 | a18 | 1 | 47 | 21 | 1 |
-| bra | 2 | 217 | 50 | 1 |
-| bramajin | 1 | 315 | 23 | 1 |
+| bra | 2 | 217 | 49 | 1 |
+| bramajin | 1 | 315 | 19 | 1 |
 | cui | 1 | 46 | 21 | 1 |
 | dlrx | 1 | 86 | 25 | 1 |
 | dyspo | 1 | 128 | 25 | 1 |
-| gokunino | 1 | 133 | 23 | 1 |
-| gokussjchaqueta | 1 | 76 | 23 | 1 |
+| gokunino | 1 | 133 | 22 | 1 |
+| gokussjchaqueta | 1 | 76 | 21 | 1 |
 | gokussjkaioken | 1 | 76 | 22 | 1 |
-| gokuuiverdadero | 1 | 140 | 22 | 1 |
-| gokuxeno | 3 | 355 | 70 | 1 |
+| gokuuiverdadero | 1 | 140 | 20 | 1 |
+| gokuxeno | 3 | 355 | 63 | 1 |
 | gokuyardrat | 1 | 113 | 23 | 1 |
-| goten | 1 | 89 | 20 | 1 |
+| goten | 1 | 89 | 18 | 1 |
 | granola | 1 | 137 | 23 | 1 |
-| hatchiyack | 1 | 56 | 22 | 1 |
+| hatchiyack | 1 | 56 | 19 | 1 |
 | hit | 1 | 98 | 26 | 1 |
 | jirengray | 1 | 73 | 22 | 1 |
 | kibito | 1 | 85 | 25 | 1 |
 | krilin | 1 | 81 | 22 | 1 |
 | majinduu | 1 | 79 | 20 | 1 |
-| majinkuu | 1 | 50 | 22 | 1 |
-| nappa | 1 | 104 | 27 | 1 |
+| majinkuu | 1 | 50 | 20 | 1 |
+| nappa | 1 | 104 | 26 | 1 |
 | omega | 1 | 56 | 19 | 1 |
 | saibaman | 1 | 46 | 22 | 1 |
 | vegetayardrat | 1 | 90 | 19 | 1 |
-| vegettofalso | 1 | 124 | 22 | 1 |
-| zamasu | 2 | 168 | 47 | 1 |
-| zamasufusion | 1 | 136 | 18 | 1 |
-| a21 | 1 | 195 | 29 | 0 |
+| vegettofalso | 1 | 124 | 18 | 1 |
+| zamasu | 2 | 168 | 42 | 1 |
+| zamasufusion | 1 | 136 | 16 | 1 |
+| a21 | 1 | 195 | 25 | 0 |
 | babyvegeta | 1 | 57 | 22 | 0 |
-| bardockalt | 4 | 329 | 97 | 0 |
-| bills | 1 | 78 | 27 | 0 |
-| brolyfan | 2 | 241 | 50 | 0 |
-| caulifla | 1 | 103 | 25 | 0 |
+| bardockalt | 4 | 329 | 94 | 0 |
+| bills | 1 | 78 | 25 | 0 |
+| brolyfan | 2 | 241 | 49 | 0 |
+| caulifla | 1 | 103 | 23 | 0 |
 | cooler | 1 | 81 | 27 | 0 |
 | frost | 2 | 106 | 48 | 0 |
 | gas | 1 | 44 | 24 | 0 |
-| ginyu | 1 | 111 | 26 | 0 |
+| ginyu | 1 | 111 | 24 | 0 |
 | glorio | 1 | 90 | 23 | 0 |
 | gogetafan | 3 | 573 | 79 | 0 |
-| gohandbs | 5 | 603 | 128 | 0 |
-| gohanposeido | 1 | 68 | 25 | 0 |
+| gohandbs | 5 | 603 | 122 | 0 |
+| gohanposeido | 1 | 68 | 24 | 0 |
 | gotenks | 1 | 108 | 26 | 0 |
 | guldo | 1 | 103 | 28 | 0 |
 | jeice | 1 | 79 | 26 | 0 |
-| kefla | 2 | 253 | 52 | 0 |
+| kefla | 2 | 253 | 49 | 0 |
 | magetta | 1 | 84 | 22 | 0 |
 | mrsatan | 1 | 371 | 31 | 0 |
 | slug | 1 | 46 | 25 | 0 |
 | tenshinhan | 1 | 77 | 25 | 0 |
-| toppo | 1 | 77 | 26 | 0 |
+| toppo | 1 | 77 | 25 | 0 |
 | turles | 2 | 166 | 51 | 0 |
 | uub | 1 | 93 | 28 | 0 |
 | vegetabluemal | 1 | 89 | 22 | 0 |
 | vegetamui | 1 | 115 | 23 | 0 |
-| vegettofan | 4 | 691 | 98 | 0 |
+| vegettofan | 4 | 691 | 92 | 0 |
 | videl | 1 | 83 | 24 | 0 |
-| yamcha | 1 | 79 | 22 | 0 |
-| zombies | 3 | 396 | 74 | 0 |
+| yamcha | 1 | 79 | 20 | 0 |
+| zombies | 3 | 396 | 73 | 0 |
 
 ## Packs de personajes sin usar
 
