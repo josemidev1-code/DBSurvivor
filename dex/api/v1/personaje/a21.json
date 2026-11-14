@@ -1,0 +1,51 @@
+{
+ "id": "a21",
+ "nombre": "Androide 21",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Photon Wave",
+ "descJuego": "La androide con hambre de Majin. Convierte a sus rivales en dulces.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Patrulla Roja",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Majin",
+   "aura": "purple",
+   "poder": {
+    "valor": 5e+17,
+    "texto": "500 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 125,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "04_Heroes_y_videojuegos/DeviantArt/410_ANDROIDE 21 (arisrad)"
+  }
+ ],
+ "num": 72
+}

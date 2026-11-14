@@ -1,0 +1,57 @@
+{
+ "id": "jirengray",
+ "nombre": "Jiren (Torneo)",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Jiren del Torneo del Poder, otro estilo de sprite.",
+ "regen": 0,
+ "raza": "Raza de Jiren",
+ "bando": "Tropas del Orgullo",
+ "planeta": "Universo 11",
+ "descripcion": "Jiren es un poderoso luchador del Universo 11 y uno de los oponentes más formidables en el torneo.",
+ "api": {
+  "id": 38,
+  "nombre": "Jiren",
+  "url": "https://dragonball-api.com/api/characters/38",
+  "ki": "121 Quintillion",
+  "maxKi": "12.1 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "red",
+   "poder": {
+    "valor": 1.21e+20,
+    "texto": "121 trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 135,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Jiren/069_Jiren"
+  }
+ ],
+ "num": 136
+}

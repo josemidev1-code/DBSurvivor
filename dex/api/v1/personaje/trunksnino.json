@@ -1,0 +1,91 @@
+{
+ "id": "trunksnino",
+ "nombre": "Trunks Niño",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Burning Attack",
+ "descJuego": "El hijo de Vegeta y Bulma: travieso, rápido y Super Saiyan desde pequeño.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Hijo de Vegeta y Bulma. Es un mestizo entre humano terrícola y Saiyano nacido en la Tierra, e hijo de Bulma y Vegeta, el cual es introducido en el Arco de los Androides y Cell. Más tarde en su vida como joven, se termina convirtiendo en un luchador de artes marciales, el mejor amigo de Son Goten y en el hermano mayor de su hermana Bra.",
+ "api": {
+  "id": 16,
+  "nombre": "Trunks",
+  "url": "https://dragonball-api.com/api/characters/16",
+  "ki": "50.000.000",
+  "maxKi": "37.4 septllion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 30000000.0,
+    "texto": "30 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 105,
+    "ataque": 110,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/434_TRUNKS NINO (MrDryy)"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 905000000.0,
+    "texto": "905 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 138,
+    "velocidad": 96,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/434_TRUNKS NINO (MrDryy)"
+  }
+ ],
+ "num": 104
+}

@@ -1,0 +1,193 @@
+{
+ "id": "goku",
+ "nombre": "Goku",
+ "rareza": 0,
+ "rarezaNombre": "INICIAL",
+ "tecnica": "Kamehameha",
+ "descJuego": "Equilibrado. Empieza con Kamehameha.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misión de conquistarla. Sin embargo, el caer por un barranco le proporcionó un brutal golpe que si bien casi lo mata, este alteró su memoria y anuló todos los instintos violentos de su especie, lo que lo hizo crecer con un corazón puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que él fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucción de su planeta por parte de Freeza. Más tarde, Kakarot, ahora conocido como Son Goku, se convertiría en el príncipe consorte del monte Fry-pan y líder de los Guerreros Z, así como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucción en innumerables ocasiones, a pesar de no considerarse a sí mismo como un héroe o salvador.",
+ "api": {
+  "id": 1,
+  "nombre": "Goku",
+  "url": "https://dragonball-api.com/api/characters/1",
+  "ki": "60.000.000",
+  "maxKi": "90 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 60000000.0,
+    "texto": "60 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 100,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/215_GOKU BASE,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 3000000000.0,
+    "texto": "3 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 125,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/220_GOKU,SSJ 1,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Saiyan 2",
+   "aura": "gold",
+   "poder": {
+    "valor": 6000000000.0,
+    "texto": "6 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 150,
+    "velocidad": 93,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Goku/055_Goku SSJ 2"
+  },
+  {
+   "n": 3,
+   "nombre": "Super Saiyan 3",
+   "aura": "gold",
+   "poder": {
+    "valor": 24000000000.0,
+    "texto": "24 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 175,
+    "velocidad": 98,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/147_GOKU SSJ3,SAGA MAJIN BUU,DBZ, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 4,
+   "nombre": "SSJ Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 9e+18,
+    "texto": "9 trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 180,
+    "ataque": 200,
+    "velocidad": 103,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/141_GOKU SSJ BLUE ,DBS BROLY, MEJORADO, BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 1
+}

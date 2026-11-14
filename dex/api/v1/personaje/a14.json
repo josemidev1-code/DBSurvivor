@@ -1,0 +1,57 @@
+{
+ "id": "a14",
+ "nombre": "Androide 14",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Embestida del 14",
+ "descJuego": "El gigante silencioso del Dr. Gero: embestidas y ondas de energía.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Villano",
+ "planeta": "Tierra",
+ "descripcion": "Android 14 es otro androide que aparece en la misma película que Android 13.",
+ "api": {
+  "id": 27,
+  "nombre": "Android 14",
+  "url": "https://dragonball-api.com/api/characters/27",
+  "ki": "192.500.000",
+  "maxKi": "192.500.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 192500000.0,
+    "texto": "192,5 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 105,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/461_ANDROIDE 14 (Arisrad)"
+  }
+ ],
+ "num": 84
+}

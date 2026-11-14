@@ -1,0 +1,193 @@
+{
+ "id": "cell",
+ "nombre": "Cell",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha",
+ "descJuego": "El androide perfecto. Absorbe y crece.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Por libre",
+ "planeta": "Tierra",
+ "descripcion": "Cell conocido como Célula en España, es un bioandroide creado por la computadora del Dr. Gero, quien vino del futuro de la línea 3 con la intención de vengarse de Goku por haber acabado con el Ejército del Listón Rojo, y con ello el sueño de todo villano: dominar el mundo. Es el antagonista principal del Arco de los Androides y Cell.",
+ "api": {
+  "id": 9,
+  "nombre": "Celula",
+  "url": "https://dragonball-api.com/api/characters/9",
+  "ki": "250.000.000",
+  "maxKi": "5 Billion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Imperfecto",
+   "aura": "gold",
+   "poder": {
+    "valor": 370000000.0,
+    "texto": "370 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 120,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Cell/021_Cell Imperfeito"
+  },
+  {
+   "n": 1,
+   "nombre": "Semiperfecto",
+   "aura": "gold",
+   "poder": {
+    "valor": 897000000.0,
+    "texto": "897 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 150,
+    "velocidad": 85,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Cell/022_Cell Semi Perfeito"
+  },
+  {
+   "n": 2,
+   "nombre": "Perfecto",
+   "aura": "gold",
+   "poder": {
+    "valor": 10970000000.0,
+    "texto": "11 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 155,
+    "ataque": 180,
+    "velocidad": 90,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Cell/023_cell Perfeito"
+  },
+  {
+   "n": 3,
+   "nombre": "Golden",
+   "aura": "gold",
+   "poder": {
+    "valor": 1e+20,
+    "texto": "100 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 170,
+    "ataque": 210,
+    "velocidad": 95,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Cell/154_GOLDEN CELL +KAIOKEN REMASTERIZADO, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 4,
+   "nombre": "Majin",
+   "aura": "gold",
+   "poder": {
+    "valor": 14000000000.0,
+    "texto": "14 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 185,
+    "ataque": 240,
+    "velocidad": 100,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Cell/204_Majin Cell, ANDRÉS GAMEN"
+  }
+ ],
+ "num": 36
+}

@@ -1,0 +1,57 @@
+{
+ "id": "janemba",
+ "nombre": "Janemba",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Makankosappo",
+ "descJuego": "El demonio del Más Allá. Espada y portales.",
+ "regen": 0,
+ "raza": "Demonio",
+ "bando": "Otros",
+ "planeta": "Otro Mundo",
+ "descripcion": "Janemba es un demonio de pura maldad y gran poder maligno. Creado a partir de las acciones de un adolescente ogro llamado Psyche Oni, quien era el responsable de vigilar la máquina purificadora de almas, la cual explota como consecuencia de la falta de cuidado del ogro, las almas malignas terminan por usar como huésped su cuerpo, creando así a este demonio.",
+ "api": {
+  "id": 67,
+  "nombre": "Janemba",
+  "url": "https://dragonball-api.com/api/characters/67",
+  "ki": "15 Billion",
+  "maxKi": "75 Billion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Janemba",
+   "aura": "purple",
+   "poder": {
+    "valor": 75000000000.0,
+    "texto": "75 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 125,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Janemba/068_Janemba"
+  }
+ ],
+ "num": 35
+}

@@ -1,0 +1,51 @@
+{
+ "id": "babyvegeta",
+ "nombre": "Baby Vegeta",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Galick Gun",
+ "descJuego": "El parásito Tsufur en el cuerpo de Vegeta.",
+ "regen": 0,
+ "raza": "Tsufur",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Baby",
+   "aura": "gold",
+   "poder": {
+    "valor": 900000000000000.0,
+    "texto": "900 billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 130,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "02_GT/Vegeta/307_Baby Vegeta"
+  }
+ ],
+ "num": 46
+}

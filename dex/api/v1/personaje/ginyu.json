@@ -1,0 +1,57 @@
+{
+ "id": "ginyu",
+ "nombre": "Capitán Ginyu",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Milky Cannon",
+ "descJuego": "Líder de las Fuerzas Especiales. Cambia de cuerpo con su rival.",
+ "regen": 0,
+ "raza": "Raza de Freezer",
+ "bando": "Ejército de Freezer",
+ "planeta": "Namek",
+ "descripcion": "Ginyu es el líder del la élite de mercenarios de mayor prestigio del Ejército de Freeza, la cual lleva el nombre de Fuerzas Especiales Ginew en su honor[9].",
+ "api": {
+  "id": 8,
+  "nombre": "Ginyu",
+  "url": "https://dragonball-api.com/api/characters/8",
+  "ki": "9.000",
+  "maxKi": "25.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "purple",
+   "poder": {
+    "valor": 120000,
+    "texto": "120.000",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 115,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/DeviantArt/401_CAPITAN GINYU (Strice12)"
+  }
+ ],
+ "num": 67
+}

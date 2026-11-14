@@ -1,0 +1,85 @@
+{
+ "id": "frost",
+ "nombre": "Frost",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Kienzan",
+ "descJuego": "El tramposo del Universo 6.",
+ "regen": 0,
+ "raza": "Raza de Freezer",
+ "bando": "Universo 6",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "1ª Forma",
+   "aura": "purple",
+   "poder": {
+    "valor": 100000000000,
+    "texto": "100 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 110,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/02_Universo_6/Frost/031_Frost Primeira Forma"
+  },
+  {
+   "n": 1,
+   "nombre": "Forma Final",
+   "aura": "purple",
+   "poder": {
+    "valor": 150000000000.0,
+    "texto": "150 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 138,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/02_Universo_6/Frost/032_Frost Ultima Forma"
+  }
+ ],
+ "num": 40
+}

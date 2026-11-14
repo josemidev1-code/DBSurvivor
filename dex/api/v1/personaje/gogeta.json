@@ -1,0 +1,125 @@
+{
+ "id": "gogeta",
+ "nombre": "Gogeta",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Stardust Breaker",
+ "descJuego": "Fusión por danza. Empieza con Stardust Breaker.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Gogeta es la fusión resultante de Son Goku y Vegeta, cuando realizan la Danza de la Fusión correctamente para enfrentarse a Broly. Su voz es una voz dual que contiene las voces de Goku y Vegeta. Junto con el poder todopoderoso de los dos, con la astucia y perspicacia de Vegeta, y la habilidad pródiga de las artes marciales de Goku, es uno de los guerreros más temibles para desafiar a una pelea.",
+ "api": {
+  "id": 65,
+  "nombre": "Gogeta",
+  "url": "https://dragonball-api.com/api/characters/65",
+  "ki": "250 Billion",
+  "maxKi": "15 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Gogeta",
+   "aura": "gold",
+   "poder": {
+    "valor": 6.3e+21,
+    "texto": "6,3 mil trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 130,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "07_Personajes_sin_saga_concreta/Gogeta/064_Gogeta"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan 4",
+   "aura": "red",
+   "poder": {
+    "valor": 1.68e+17,
+    "texto": "168 mil billones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 145,
+    "ataque": 162,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "02_GT/Gogeta/257_GOGETA SSJ4 GT"
+  },
+  {
+   "n": 2,
+   "nombre": "SSJ Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.2599999999999999e+25,
+    "texto": "12,6 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 195,
+    "velocidad": 99,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Gogeta/252_gogeta.ssj blue HD.andres Game"
+  }
+ ],
+ "num": 13
+}

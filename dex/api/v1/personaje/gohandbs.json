@@ -1,0 +1,193 @@
+{
+ "id": "gohandbs",
+ "nombre": "Gohan DBS",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Masenko",
+ "descJuego": "Gohan de Super, del Torneo del Poder a la saga de Granolah.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+ "api": {
+  "id": 10,
+  "nombre": "Gohan",
+  "url": "https://dragonball-api.com/api/characters/10",
+  "ki": "45.000.000",
+  "maxKi": "40 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 45000000.0,
+    "texto": "45 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 125,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Gohan/112_GOHAN BASE DBS ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 1,
+   "nombre": "Místico",
+   "aura": "white",
+   "poder": {
+    "valor": 43000000000.0,
+    "texto": "43 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 156,
+    "velocidad": 91,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Gohan/114_GOHAN MÍSTICO DBS ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Ultra Instinto",
+   "aura": "silver",
+   "poder": {
+    "valor": 6.75e+24,
+    "texto": "6,8 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 188,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gohan/115_GOHAN ULTRA INSTINTO DBS ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 3,
+   "nombre": "MUI",
+   "aura": "silver",
+   "poder": {
+    "valor": 6.75e+25,
+    "texto": "67,5 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 219,
+    "velocidad": 101,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gohan/113_GOHAN MUI DBS ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 4,
+   "nombre": "Bestia",
+   "aura": "purple",
+   "poder": {
+    "valor": 2.5600000000000002e+25,
+    "texto": "25,6 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 180,
+    "ataque": 250,
+    "velocidad": 106,
+    "recarga": 80
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gohan/120_GOHAN MODO BESTIA BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 48
+}

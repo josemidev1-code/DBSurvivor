@@ -1,0 +1,57 @@
+{
+ "id": "gotenks",
+ "nombre": "Gotenks",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha",
+ "descJuego": "La fusión de Goten y Trunks. Rápido y fuerte.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": " Gotenks también conocido inicialmente como Gotrunk en el doblaje al español de España, es el resultado de la Danza de la Fusión llevada a cabo correctamente por Goten y Trunks.",
+ "api": {
+  "id": 15,
+  "nombre": "Gotenks",
+  "url": "https://dragonball-api.com/api/characters/15",
+  "ki": "65.600.000",
+  "maxKi": "34.8 Billion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "gold",
+   "poder": {
+    "valor": 65600000.0,
+    "texto": "65,6 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 115,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Gotenks/065_Gotenks Base"
+  }
+ ],
+ "num": 17
+}

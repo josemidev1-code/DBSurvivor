@@ -1,0 +1,51 @@
+{
+ "id": "moro",
+ "nombre": "Moro",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Esferas del Dragón",
+ "descJuego": "El devorador de planetas.",
+ "regen": 0,
+ "raza": "Raza de Moro",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Ultra Instinto",
+   "aura": "white",
+   "poder": {
+    "valor": 5e+18,
+    "texto": "5 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 125,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Moro/292_moro Ultra instito . Andrés Gamen"
+  }
+ ],
+ "num": 45
+}

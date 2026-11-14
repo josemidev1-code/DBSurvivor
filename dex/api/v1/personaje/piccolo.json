@@ -1,0 +1,91 @@
+{
+ "id": "piccolo",
+ "nombre": "Piccolo",
+ "rareza": 0,
+ "rarezaNombre": "INICIAL",
+ "tecnica": "Makankosappo",
+ "descJuego": "Resistente y se regenera. Empieza con Makankosappo.",
+ "regen": 0.6,
+ "raza": "Namekiano",
+ "bando": "Guerreros Z",
+ "planeta": "Namek",
+ "descripcion": "Es un namekiano que surgió tras ser creado en los últimos momentos de vida de su padre, siendo su actual reencarnación. Aunque en un principio fue el archienemigo de Son Goku, con el paso del tiempo fue haciéndose menos malvado hasta finalmente convertirse en un ser bondadoso y miembro de los Guerreros Z. A través del tiempo, también comenzó a tomarle cariño a su discípulo Son Gohan, a quien veía como una especie de \"vástago\" y formando un lazo de amistad con este.",
+ "api": {
+  "id": 3,
+  "nombre": "Piccolo",
+  "url": "https://dragonball-api.com/api/characters/3",
+  "ki": "2.000.000",
+  "maxKi": "500.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 2000000.0,
+    "texto": "2 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 95,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "07_Personajes_sin_saga_concreta/Piccolo/083_Piccolo"
+  },
+  {
+   "n": 1,
+   "nombre": "Piccolo Naranja",
+   "aura": "orange",
+   "poder": {
+    "valor": 4.125e+19,
+    "texto": "41,2 trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 155,
+    "ataque": 119,
+    "velocidad": 80,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/08_Super_Hero/Piccolo/191_Orange Piccolo, Sprites BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 3
+}

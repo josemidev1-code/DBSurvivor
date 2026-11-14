@@ -1,0 +1,85 @@
+{
+ "id": "kefla",
+ "nombre": "Kefla",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Fusión de Kale y Caulifla. Empieza con Eraser Cannon.",
+ "regen": 0,
+ "raza": "Saiyan (fusión)",
+ "bando": "Universo 6",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Saiyan",
+   "aura": "green",
+   "poder": {
+    "valor": 3000000000000000,
+    "texto": "3 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 125,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Kefla/074_Kefla Super Sayajin"
+  },
+  {
+   "n": 1,
+   "nombre": "SSJ Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.8e+19,
+    "texto": "18 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 156,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Kefla/202_KEFLA ssjblue,ssjblue evolution, Andrés Gamen"
+  }
+ ],
+ "num": 18
+}

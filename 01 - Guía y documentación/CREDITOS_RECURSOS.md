@@ -212,3 +212,6 @@ RecopilaciÃ³n exhaustiva de 770 hojas de sprites 2D en tamaÃ±o original comp
 
 ## Logo del título (13 nov. 2026)
 - `ui/titulo.png` copia el logo pixel art «DRAGON BALL DAIMA» de la imagen `estilo.png` que enseñó Josemi en una foto (autor sin identificar), con «SURVIVOR» en lugar de «DAIMA». **Falta saber de quién es para acreditarlo.** Sale de `herramientas/titulo_desde_foto.py`.
+
+## Datos de la Dex (14 nov. 2026)
+- Raza, planeta, afiliación, descripción y poder de pelea: [dragonball-api.com](https://dragonball-api.com) (API pública y gratuita), descargados con `herramientas/descargar_dbapi.py` en `herramientas/dbapi/`. Lo que la API no trae se inventa y la Dex lo marca como «INVENTADO».

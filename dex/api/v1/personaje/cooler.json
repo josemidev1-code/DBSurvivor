@@ -1,0 +1,51 @@
+{
+ "id": "cooler",
+ "nombre": "Cooler",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kienzan",
+ "descJuego": "El hermano de Freezer. Golpes y rayos.",
+ "regen": 0,
+ "raza": "Raza de Freezer",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Forma Final",
+   "aura": "purple",
+   "poder": {
+    "valor": 9000000,
+    "texto": "9 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 120,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Cooler/025_Cooler"
+  }
+ ],
+ "num": 34
+}

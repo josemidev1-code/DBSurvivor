@@ -1,0 +1,91 @@
+{
+ "id": "gohanadult",
+ "nombre": "Gohan Adulto",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha",
+ "descJuego": "El poder místico de Gohan. Empieza con Kamehameha.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+ "api": {
+  "id": 10,
+  "nombre": "Gohan",
+  "url": "https://dragonball-api.com/api/characters/10",
+  "ki": "45.000.000",
+  "maxKi": "40 septillion"
+ },
+ "formas": [
+  {
+   "n": 1,
+   "nombre": "Místico",
+   "aura": "white",
+   "poder": {
+    "valor": 43000000000.0,
+    "texto": "43 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 144,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Gohan/035_Gohan Mistico"
+  },
+  {
+   "n": 2,
+   "nombre": "Bestia",
+   "aura": "purple",
+   "poder": {
+    "valor": 2.5600000000000002e+25,
+    "texto": "25,6 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 172,
+    "velocidad": 93,
+    "recarga": 90
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/08_Super_Hero/Gohan/119_GOHAN BESTIA VERSIÓN 2 (ANDRÉS GAMEN ANIMATIONS)"
+  }
+ ],
+ "num": 22
+}

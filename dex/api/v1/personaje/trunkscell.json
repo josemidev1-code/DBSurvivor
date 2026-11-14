@@ -1,0 +1,91 @@
+{
+ "id": "trunkscell",
+ "nombre": "Trunks (Cell)",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Burning Attack",
+ "descJuego": "Trunks con armadura. Empieza con Burning Attack.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Hijo de Vegeta y Bulma. Es un mestizo entre humano terrícola y Saiyano nacido en la Tierra, e hijo de Bulma y Vegeta, el cual es introducido en el Arco de los Androides y Cell. Más tarde en su vida como joven, se termina convirtiendo en un luchador de artes marciales, el mejor amigo de Son Goten y en el hermano mayor de su hermana Bra.",
+ "api": {
+  "id": 16,
+  "nombre": "Trunks",
+  "url": "https://dragonball-api.com/api/characters/16",
+  "ki": "50.000.000",
+  "maxKi": "37.4 septllion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 50000000.0,
+    "texto": "50 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 112,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Trunks/233_TRUNKS CON ARMADURA,BASE, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Ultra SSJ",
+   "aura": "gold",
+   "poder": {
+    "valor": 3500000000.0,
+    "texto": "3,5 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 145,
+    "ataque": 168,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Trunks/232_TRUNKS CON ARMADURA, ULTRA SSJ, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 27
+}

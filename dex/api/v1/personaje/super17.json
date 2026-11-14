@@ -1,0 +1,51 @@
+{
+ "id": "super17",
+ "nombre": "Super 17",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Tormenta Infernal",
+ "descJuego": "Fusión de los dos Androides 17: absorbe el ki y lanza la Tormenta Infernal.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 1000000000000000.0,
+    "texto": "mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 115,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "02_GT/DeviantArt/449_SUPER 17 (LSW-Sprite)"
+  }
+ ],
+ "num": 94
+}

@@ -1,0 +1,51 @@
+{
+ "id": "magetta",
+ "nombre": "Magetta",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Escupitajo de Magma",
+ "descJuego": "El robot de lava del Universo 6: escupe magma y se pone al rojo si le insultan.",
+ "regen": 0,
+ "raza": "Metal",
+ "bando": "Universo 6",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 5000000000000.0,
+    "texto": "5 billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 105,
+    "velocidad": 70,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/02_Universo_6/DeviantArt/458_MAGETTA (AlquimistaSK)"
+  }
+ ],
+ "num": 87
+}

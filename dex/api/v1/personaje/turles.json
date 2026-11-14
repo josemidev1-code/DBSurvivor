@@ -1,0 +1,85 @@
+{
+ "id": "turles",
+ "nombre": "Turles",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Galick Gun",
+ "descJuego": "El Saiyan del Árbol Sagrado.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "purple",
+   "poder": {
+    "valor": 3000000,
+    "texto": "3 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 115,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Turles/089_Turles"
+  },
+  {
+   "n": 1,
+   "nombre": "SSJ Maligno",
+   "aura": "red",
+   "poder": {
+    "valor": 2100000000.0,
+    "texto": "2,1 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 144,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Turles/236_TURLES SSJ MALIGNO, ANDRÉS GAMEN ANIMATIONS ✓"
+  }
+ ],
+ "num": 38
+}

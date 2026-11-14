@@ -1,0 +1,85 @@
+{
+ "id": "kyabe",
+ "nombre": "Kyabe",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Galick Gun",
+ "descJuego": "Saiyan del Universo 6. Equilibrado.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Universo 6",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 2000000000,
+    "texto": "2 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 100,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/02_Universo_6/DeviantArt/452_KYABE SSJ (MrDryy)"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 6000000000.0,
+    "texto": "6 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 125,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/02_Universo_6/Cabba/073_Kyabe ssj"
+  }
+ ],
+ "num": 21
+}

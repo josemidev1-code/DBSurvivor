@@ -1,0 +1,119 @@
+{
+ "id": "zombies",
+ "nombre": "Saiyans Zombi",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Gohan, Goku y Vegeta convertidos en zombis.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Gohan",
+   "aura": "green",
+   "poder": {
+    "valor": 10000000.0,
+    "texto": "10 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 110,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gohan/284_GOHAN ZOMBIE ULSW"
+  },
+  {
+   "n": 1,
+   "nombre": "Goku",
+   "aura": "green",
+   "poder": {
+    "valor": 15000000.0,
+    "texto": "15 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 138,
+    "velocidad": 80,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku/285_GOKU ZOMBIE ULSW"
+  },
+  {
+   "n": 2,
+   "nombre": "Vegeta",
+   "aura": "green",
+   "poder": {
+    "valor": 20000000.0,
+    "texto": "20 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 165,
+    "velocidad": 84,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegeta/286_VEGETA ZOMBIE ULSW"
+  }
+ ],
+ "num": 54
+}

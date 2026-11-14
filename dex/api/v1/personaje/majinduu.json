@@ -1,0 +1,51 @@
+{
+ "id": "majinduu",
+ "nombre": "Majin Duu",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Rodillo Majin",
+ "descJuego": "El Majin de Daima: grande, glotón y con golpes de rodillo.",
+ "regen": 0,
+ "raza": "Majin",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 3000000000000000.0,
+    "texto": "3 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 110,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "03_Daima/DeviantArt/457_MAJIN DUU (AlquimistaSK)"
+  }
+ ],
+ "num": 88
+}

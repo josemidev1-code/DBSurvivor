@@ -1,0 +1,57 @@
+{
+ "id": "mrsatan",
+ "nombre": "Mr. Satán",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Megaton Punch",
+ "descJuego": "El campeón del mundo. Sin ki: puñetazos, patadas y regalos explosivos.",
+ "regen": 0,
+ "raza": "Humano",
+ "bando": "Otros",
+ "planeta": "Tierra",
+ "descripcion": "Luchador humano famoso por llevarse el mérito de las victorias de los Guerreros Z.",
+ "api": {
+  "id": 20,
+  "nombre": "Mr. Satan",
+  "url": "https://dragonball-api.com/api/characters/20",
+  "ki": "450",
+  "maxKi": "5.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 450.0,
+    "texto": "450",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 95,
+    "velocidad": 78,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/409_MR SATAN (JayHyperStarX)"
+  }
+ ],
+ "num": 71
+}

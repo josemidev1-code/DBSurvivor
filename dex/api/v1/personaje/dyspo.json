@@ -1,0 +1,57 @@
+{
+ "id": "dyspo",
+ "nombre": "Dyspo",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Golpe Relámpago",
+ "descJuego": "El más rápido de las Tropas del Orgullo: golpes a la velocidad de la luz.",
+ "regen": 0,
+ "raza": "Dios",
+ "bando": "Tropas del Orgullo",
+ "planeta": "Universo 11",
+ "descripcion": "Dyspo es uno de los miembros del Equipo Universo 11 como uno de los soldados más poderosos de las Tropas del Orgullo junto con Jiren y su líder Toppo.",
+ "api": {
+  "id": 40,
+  "nombre": "Dyspo",
+  "url": "https://dragonball-api.com/api/characters/40",
+  "ki": "50 Trillion",
+  "maxKi": "150 Quintillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "purple",
+   "poder": {
+    "valor": 50000000000000.0,
+    "texto": "50 billones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 120,
+    "velocidad": 107,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/481_DYSPO (Omegasuper)"
+  }
+ ],
+ "num": 73
+}

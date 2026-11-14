@@ -1,0 +1,57 @@
+{
+ "id": "kibitoshin",
+ "nombre": "Kibitoshin",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kai Kai",
+ "descJuego": "Fusión de Shin y Kibito con los pendientes Pothala; se teletransporta y cura.",
+ "regen": 0,
+ "raza": "Dios",
+ "bando": "Otros",
+ "planeta": "Nucleo del Mundo",
+ "descripcion": "es la fusión entre Shin y Kibito. Ellos fueron unidos permanentemente mediante el uso de los míticos pendientes Pothala. Está actualmente separado gracias a un deseo concedido por las Esferas del Dragón namekianas.",
+ "api": {
+  "id": 37,
+  "nombre": "Kibito-Shin",
+  "url": "https://dragonball-api.com/api/characters/37",
+  "ki": "3.2 Billion",
+  "maxKi": "3.2 Billion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 3200000000.0,
+    "texto": "3,2 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 112,
+    "velocidad": 87,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/438_KIBITOSHIN (ErickFl)"
+  }
+ ],
+ "num": 100
+}

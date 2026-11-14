@@ -1,0 +1,57 @@
+{
+ "id": "gohanposeido",
+ "nombre": "Gohan Poseído",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Masenko",
+ "descJuego": "Gohan controlado por una fuerza oscura.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+ "api": {
+  "id": 10,
+  "nombre": "Gohan",
+  "url": "https://dragonball-api.com/api/characters/10",
+  "ki": "45.000.000",
+  "maxKi": "40 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Poseído",
+   "aura": "purple",
+   "poder": {
+    "valor": 4000000000.0,
+    "texto": "4 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 105,
+    "ataque": 110,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gohan/036_Gohan Possuido"
+  }
+ ],
+ "num": 49
+}

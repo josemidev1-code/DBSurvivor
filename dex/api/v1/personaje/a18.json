@@ -1,0 +1,57 @@
+{
+ "id": "a18",
+ "nombre": "Androide 18",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Esferas del Dragón",
+ "descJuego": "Energía infinita. Empieza con esferas que giran.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Es la hermana melliza del Androide Número 17 y una \"androide\" creada a partir de una base humana por el Dr. Gero con el único fin de destruir a Goku.",
+ "api": {
+  "id": 64,
+  "nombre": "Android 18",
+  "url": "https://dragonball-api.com/api/characters/64",
+  "ki": "280,000,000",
+  "maxKi": "300,000,000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 280000000.0,
+    "texto": "280 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 105,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Androides/012_Androide 18"
+  }
+ ],
+ "num": 9
+}

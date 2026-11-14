@@ -1,0 +1,85 @@
+{
+ "id": "zamasu",
+ "nombre": "Zamasu",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Makankosappo",
+ "descJuego": "El Kaioshin que odia a los mortales.",
+ "regen": 0,
+ "raza": "Kaioshin",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 1000000000000000,
+    "texto": "mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 125,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Zamasu/104_Zamasu"
+  },
+  {
+   "n": 1,
+   "nombre": "Fusionado",
+   "aura": "purple",
+   "poder": {
+    "valor": 1500000000000000.0,
+    "texto": "1,5 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 156,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Zamasu/105_Zamasu e Black Fusion"
+  }
+ ],
+ "num": 42
+}

@@ -1,0 +1,57 @@
+{
+ "id": "gohanfut",
+ "nombre": "Gohan Del Futuro",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha del Futuro",
+ "descJuego": "El último guerrero Z de la línea de Trunks: manco, Super Saiyan y sin rendirse jamás.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+ "api": {
+  "id": 10,
+  "nombre": "Gohan",
+  "url": "https://dragonball-api.com/api/characters/10",
+  "ki": "45.000.000",
+  "maxKi": "40 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 4700000000.0,
+    "texto": "4,7 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 120,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/DeviantArt/476_GOHAN DEL FUTURO (BlackSanYT)"
+  }
+ ],
+ "num": 75
+}

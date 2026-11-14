@@ -1,0 +1,51 @@
+{
+ "id": "dlrx",
+ "nombre": "DLRX",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Saiyan creado por fans.",
+ "regen": 0,
+ "raza": "Demonio",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 5e+17,
+    "texto": "500 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 115,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/DLRX/009_DLRX-v5 Sprite pack"
+  }
+ ],
+ "num": 53
+}

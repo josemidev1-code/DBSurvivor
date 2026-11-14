@@ -1,0 +1,51 @@
+{
+ "id": "bramajin",
+ "nombre": "Bra Majin SSJ",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Bra adulta poseída por Babidi en Super Saiyan, de Dragon Ball Multiverse (fanmade).",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Majin",
+   "aura": "gold",
+   "poder": {
+    "valor": 7000000000.0,
+    "texto": "7 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 112,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Bra/189_Majin bra,sprite(db multiverse) Andrés"
+  }
+ ],
+ "num": 110
+}

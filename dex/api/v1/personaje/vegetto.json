@@ -1,0 +1,159 @@
+{
+ "id": "vegetto",
+ "nombre": "Vegetto",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Final Kamehameha",
+ "descJuego": "Fusión Potara. Empieza con Final Kamehameha.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Vegetto es el personaje más fuerte dentro del manga original y uno de los personajes más poderosos de toda la serie en general. Su poder es el resultado del máximo poder combinado de Goku y Vegeta, multiplicado varias veces su fuerza, siendo una de las fusiones más poderosas dentro de la franquicia.",
+ "api": {
+  "id": 66,
+  "nombre": "Vegetto",
+  "url": "https://dragonball-api.com/api/characters/66",
+  "ki": "180 Billion",
+  "maxKi": "10.8 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": null,
+   "poder": {
+    "valor": 180000000000.0,
+    "texto": "180 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 130,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Vegetto/100_Vegito"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Vegetto",
+   "aura": null,
+   "poder": {
+    "valor": 9000000000000.0,
+    "texto": "9 billones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 145,
+    "ataque": 162,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Vegetto/102_Vegito Ssj1"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Vegetto 2",
+   "aura": null,
+   "poder": {
+    "valor": 216000000000.0,
+    "texto": "216 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 195,
+    "velocidad": 99,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegetto/103_Vegito Ssj2"
+  },
+  {
+   "n": 3,
+   "nombre": "SSJ Blue",
+   "aura": null,
+   "poder": {
+    "valor": 1.08e+25,
+    "texto": "10,8 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 175,
+    "ataque": 228,
+    "velocidad": 104,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegetto/101_Vegito SSJ Blue"
+  }
+ ],
+ "num": 12
+}

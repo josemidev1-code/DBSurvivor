@@ -1,0 +1,51 @@
+{
+ "id": "zamasufusion",
+ "nombre": "Zamasu Fusionado (Deshaciéndose)",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "Zamasu fusionado mientras su cuerpo inmortal se deshace.",
+ "regen": 0,
+ "raza": "Kaioshin",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Fusión",
+   "aura": "purple",
+   "poder": {
+    "valor": 3e+19,
+    "texto": "30 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 140,
+    "velocidad": 94,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Zamasu/106_Zamasu e Black Fusão Desmanchando"
+  }
+ ],
+ "num": 111
+}

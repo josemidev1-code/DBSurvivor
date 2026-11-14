@@ -1,0 +1,57 @@
+{
+ "id": "gohanmanga",
+ "nombre": "Gohan Manga",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Masenko",
+ "descJuego": "Gohan en la saga de Moro del manga.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Son Gohanda en su tiempo en España, o simplemente Gohan en Hispanoamérica, es uno de los personajes principales de los arcos argumentales de Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es un mestizo entre saiyano y humano terrícola. Es el primer hijo de Son Goku y Chi-Chi, hermano mayor de Son Goten, esposo de Videl y padre de Pan.",
+ "api": {
+  "id": 10,
+  "nombre": "Gohan",
+  "url": "https://dragonball-api.com/api/characters/10",
+  "ki": "45.000.000",
+  "maxKi": "40 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 45000000.0,
+    "texto": "45 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 115,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/06_Moro/Gohan/121_GOHAN SAGA MORO MANGA,BY ANDRÉS GAMEN ANIMATIONS , SPRITE HD"
+  }
+ ],
+ "num": 50
+}

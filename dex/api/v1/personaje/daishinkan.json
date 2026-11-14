@@ -1,0 +1,57 @@
+{
+ "id": "daishinkan",
+ "nombre": "Gran Sacerdote",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Golpe Angelical",
+ "descJuego": "El ángel más poderoso, al servicio de Zeno: esquiva todo y golpea con calma.",
+ "regen": 0,
+ "raza": "Ángel",
+ "bando": "Otros",
+ "planeta": "Templo móvil del Rey de Todo",
+ "descripcion": "El Gran Sacerdote es el supervisor del torneo y uno de los seres más poderosos. Gran Ministro de los Omni-Reyes , es un ángel que actúa como asesor cercano y figura guía de Zenón y del Futuro Zenón . De vez en cuando hace cumplir los Decretos Divinos de los Zenos y da la bienvenida a los invitados a su palacio . El Gran Ministro es también padre de trece Ángeles, de los cuales doce sirven a los Dioses de la Destrucción . Por su posición y poder, es quizás el segundo ser más fuerte del Multiverso .",
+ "api": {
+  "id": 44,
+  "nombre": "Grand Priest ",
+  "url": "https://dragonball-api.com/api/characters/44",
+  "ki": "969 Googolplex",
+  "maxKi": "969 Googolplex"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 9.69e+102,
+    "texto": "Incalculable",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 135,
+    "velocidad": 96,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/DeviantArt/456_GRAN SACERDOTE (YolokinG777)"
+  }
+ ],
+ "num": 89
+}

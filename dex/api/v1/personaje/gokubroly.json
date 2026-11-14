@@ -1,0 +1,159 @@
+{
+ "id": "gokubroly",
+ "nombre": "Goku Película Broly",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Goku frente a Broly: de base a Super Saiyan Blue perfecto.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misión de conquistarla. Sin embargo, el caer por un barranco le proporcionó un brutal golpe que si bien casi lo mata, este alteró su memoria y anuló todos los instintos violentos de su especie, lo que lo hizo crecer con un corazón puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que él fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucción de su planeta por parte de Freeza. Más tarde, Kakarot, ahora conocido como Son Goku, se convertiría en el príncipe consorte del monte Fry-pan y líder de los Guerreros Z, así como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucción en innumerables ocasiones, a pesar de no considerarse a sí mismo como un héroe o salvador.",
+ "api": {
+  "id": 1,
+  "nombre": "Goku",
+  "url": "https://dragonball-api.com/api/characters/1",
+  "ki": "60.000.000",
+  "maxKi": "90 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 60000000.0,
+    "texto": "60 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 130,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/215_GOKU BASE,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 3000000000.0,
+    "texto": "3 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 162,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/220_GOKU,SSJ 1,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "SSJ Dios",
+   "aura": "red",
+   "poder": {
+    "valor": 5e+17,
+    "texto": "500 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 155,
+    "ataque": 195,
+    "velocidad": 99,
+    "recarga": 90
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/216_GOKU, SSJ GOD,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 3,
+   "nombre": "SSJ Blue Perfecto",
+   "aura": "blue",
+   "poder": {
+    "valor": 2e+19,
+    "texto": "20 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 170,
+    "ataque": 228,
+    "velocidad": 104,
+    "recarga": 85
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Goku/221_GOKU,SSJ BLUE PERFECTO,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 60
+}

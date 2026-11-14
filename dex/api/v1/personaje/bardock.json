@@ -1,0 +1,91 @@
+{
+ "id": "bardock",
+ "nombre": "Bardock",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Riot Javelin",
+ "descJuego": "Padre de Goku. Empieza con Riot Javelin.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Vegeta",
+ "descripcion": "Es un saiyano de clase baja proveniente del Planeta Vegeta del Universo 7. Pertenece al Ejército Saiyano, que está bajo el liderazgo del Rey Vegeta, y es jefe de su escuadrón durante la anexión del planeta por parte de las fuerzas coloniales del Imperio de Freeza. Él es el esposo de Gine y padre biológico de Kakarotto y Raditz.",
+ "api": {
+  "id": 18,
+  "nombre": "Bardock",
+  "url": "https://dragonball-api.com/api/characters/18",
+  "ki": "450.000",
+  "maxKi": "180.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "gold",
+   "poder": {
+    "valor": 450000.0,
+    "texto": "450.000",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 110,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/05_Broly/Bardock/003_BARDOCK,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 900000000.0,
+    "texto": "900 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 138,
+    "velocidad": 85,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Bardock/015_Bardock Ssj"
+  }
+ ],
+ "num": 10
+}

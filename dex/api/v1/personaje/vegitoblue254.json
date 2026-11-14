@@ -1,0 +1,57 @@
+{
+ "id": "vegitoblue254",
+ "nombre": "Vegetto Blue",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Final Kamehameha",
+ "descJuego": "Vegetto en Super Saiyan Blue, la fusión con los Pendientes Pothala.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Vegetto es el personaje más fuerte dentro del manga original y uno de los personajes más poderosos de toda la serie en general. Su poder es el resultado del máximo poder combinado de Goku y Vegeta, multiplicado varias veces su fuerza, siendo una de las fusiones más poderosas dentro de la franquicia.",
+ "api": {
+  "id": 66,
+  "nombre": "Vegetto",
+  "url": "https://dragonball-api.com/api/characters/66",
+  "ki": "180 Billion",
+  "maxKi": "10.8 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.08e+25,
+    "texto": "10,8 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 135,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "09_Packs_mixtos_por_revisar/Varios/254_SPRITESEXTRA"
+  }
+ ],
+ "num": 109
+}

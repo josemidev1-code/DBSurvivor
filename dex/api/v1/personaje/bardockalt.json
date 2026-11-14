@@ -1,0 +1,159 @@
+{
+ "id": "bardockalt",
+ "nombre": "Bardock Leyendas",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Riot Javelin",
+ "descJuego": "Bardock en sus versiones de fans.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Vegeta",
+ "descripcion": "Es un saiyano de clase baja proveniente del Planeta Vegeta del Universo 7. Pertenece al Ejército Saiyano, que está bajo el liderazgo del Rey Vegeta, y es jefe de su escuadrón durante la anexión del planeta por parte de las fuerzas coloniales del Imperio de Freeza. Él es el esposo de Gine y padre biológico de Kakarotto y Raditz.",
+ "api": {
+  "id": 18,
+  "nombre": "Bardock",
+  "url": "https://dragonball-api.com/api/characters/18",
+  "ki": "450.000",
+  "maxKi": "180.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 450000.0,
+    "texto": "450.000",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 120,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Bardock/013_Bardock"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 900000000.0,
+    "texto": "900 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 150,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "04_Heroes_y_videojuegos/Bardock/223_BARDOCK SSJ1,DBH,ANDRES GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Black",
+   "aura": "red",
+   "poder": {
+    "valor": 900000.0,
+    "texto": "900.000",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 155,
+    "ataque": 180,
+    "velocidad": 93,
+    "recarga": 90
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "05_Fanmade_y_alternativos/Bardock/210_BARDOCK BLACK, ANDRÉS GAMEN ANIMATIONS ✓"
+  },
+  {
+   "n": 3,
+   "nombre": "Evolución",
+   "aura": "gold",
+   "poder": {
+    "valor": 1125000.0,
+    "texto": "1,1 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 170,
+    "ataque": 210,
+    "velocidad": 98,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Bardock/002_BARDOCK EVOLUCIÓN SAYAYÍN,BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 51
+}

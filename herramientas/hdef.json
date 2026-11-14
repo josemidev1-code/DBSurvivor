@@ -1,0 +1,4779 @@
+{
+ "goku": {
+  "name": "GOKU",
+  "rar": 0,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Equilibrado. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN 2",
+   "SUPER SAIYAN 3",
+   "SSJ BLUE",
+   "UI SEÑAL",
+   "UI DOMINADO",
+   "SSJ4 GT",
+   "KAIOKEN",
+   "SSJ DIOS"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "gold",
+   "gold",
+   "blue",
+   "white",
+   "white",
+   "red",
+   "red",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegeta": {
+  "name": "VEGETA",
+  "rar": 0,
+  "hp": 100,
+  "spd": 66,
+  "atk": 1.15,
+  "start": "galick",
+  "desc": "Más ataque, menos vida. Empieza con Galick Gun.",
+  "face": "V",
+  "majin": 3,
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER VEGETA",
+   "MAJIN VEGETA",
+   "SSJ BLUE",
+   "ULTRA EGO",
+   "SSJ4 GT",
+   "SSJ DIOS",
+   "BLUE EVOLUTION"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "gold",
+   "gold",
+   "blue",
+   "purple",
+   "red",
+   "red",
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "piccolo": {
+  "name": "PICCOLO",
+  "rar": 0,
+  "hp": 140,
+  "spd": 58,
+  "atk": 0.95,
+  "start": "makanko",
+  "regen": 0.6,
+  "desc": "Resistente y se regenera. Empieza con Makankosappo.",
+  "head": "turban",
+  "forms": [
+   "BASE",
+   "PICCOLO NARANJA"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "orange"
+  ],
+  "formPal": "<arr4>"
+ },
+ "krilin": {
+  "name": "KRILIN",
+  "rar": 3,
+  "hp": 105,
+  "spd": 68,
+  "atk": 0.95,
+  "start": "kienzan",
+  "desc": "Rápido. Empieza con Kienzan.",
+  "head": "bald",
+  "forms": [
+   "BASE"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white"
+  ]
+ },
+ "yamcha": {
+  "name": "YAMCHA",
+  "rar": 3,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1,
+  "start": "sokidan",
+  "desc": "Colmillo de lobo y Sōkidan teledirigido. Rápido.",
+  "forms": [
+   "BASE"
+  ],
+  "hair": "<arr1>",
+  "hc": [
+   "dark"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "white",
+   "white",
+   "white"
+  ]
+ },
+ "goten": {
+  "name": "GOTEN",
+  "rar": 3,
+  "hp": 100,
+  "spd": 70,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Pequeño y muy veloz. Empieza con Kamehameha.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold"
+  ]
+ },
+ "gohan": {
+  "name": "GOHAN",
+  "rar": 4,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1.1,
+  "start": "kame",
+  "desc": "Poder oculto. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN 2",
+   "DEFINITIVO",
+   "BESTIA"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "dark",
+   "dark"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold",
+   "gold",
+   "gold",
+   "white",
+   "white"
+  ]
+ },
+ "trunks": {
+  "name": "TRUNKS",
+  "rar": 4,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "burning",
+  "desc": "Del futuro. Empieza con Burning Attack.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "BASE MANGA",
+   "SSJ2 MANGA"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "lav",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "gold",
+   "white",
+   "gold"
+  ]
+ },
+ "a18": {
+  "name": "ANDROIDE 18",
+  "rar": 4,
+  "hp": 110,
+  "spd": 68,
+  "atk": 1.05,
+  "start": "orbs",
+  "desc": "Energía infinita. Empieza con esferas que giran.",
+  "forms": [
+   "BASE"
+  ],
+  "hair": "<arr1>",
+  "hc": [
+   "blond"
+  ],
+  "aura": [
+   "white"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bardock": {
+  "name": "BARDOCK",
+  "rar": 4,
+  "hp": 125,
+  "spd": 62,
+  "atk": 1.1,
+  "start": "riot",
+  "desc": "Padre de Goku. Empieza con Riot Javelin.",
+  "band": 1,
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN 4"
+  ],
+  "hair": "<arr3>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj3"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold",
+   "gold",
+   "red"
+  ]
+ },
+ "broly": {
+  "name": "BROLY",
+  "rar": 5,
+  "hp": 160,
+  "spd": 58,
+  "atk": 1.25,
+  "start": "eraser",
+  "desc": "El Super Saiyan Legendario. Empieza con Eraser Cannon.",
+  "face": "V",
+  "forms": [
+   "CONTENIDO",
+   "SUPER SAIYAN",
+   "LEGENDARIO",
+   "SUPER SAIYAN 4"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "dark",
+   "ssj",
+   "lssj",
+   "lssj"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "green",
+   "red"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetto": {
+  "name": "VEGETTO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "finalkame",
+  "desc": "Fusión Potara. Empieza con Final Kamehameha.",
+  "face": "V",
+  "ear": 1,
+  "forms": [
+   "BASE",
+   "SUPER VEGETTO",
+   "SUPER VEGETTO 2",
+   "SSJ BLUE"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "god",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gogeta": {
+  "name": "GOGETA",
+  "rar": 5,
+  "hp": 130,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "stardust",
+  "desc": "Fusión por danza. Empieza con Stardust Breaker.",
+  "face": "V",
+  "forms": [
+   "SUPER GOGETA",
+   "SUPER SAIYAN 4",
+   "SSJ BLUE"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "god",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold",
+   "red",
+   "blue"
+  ]
+ },
+ "black": {
+  "name": "GOKU BLACK",
+  "rar": 5,
+  "hp": 110,
+  "spd": 64,
+  "atk": 1.2,
+  "start": "kame",
+  "desc": "El villano del futuro. Pega fuerte. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN ROSÉ"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "red"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "dark",
+   "rose"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "ear": 1
+ },
+ "gohanb": {
+  "name": "GOHAN BESTIA",
+  "rar": 5,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1.3,
+  "start": "kame",
+  "desc": "Su poder despierta con la furia. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN 2",
+   "DEFINITIVO",
+   "BESTIA"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "dark",
+   "ssj",
+   "dark",
+   "ui"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold",
+   "gold",
+   "white",
+   "red"
+  ],
+  "formPal": "<object>",
+  "npc": 1
+ },
+ "gokuui": {
+  "name": "GOKU UI",
+  "rar": 5,
+  "hp": 115,
+  "spd": 70,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Ultra Instinto: rapidísimo. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SSJ BLUE",
+   "ULTRA INSTINTO",
+   "UI DOMINADO"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "blue",
+   "white",
+   "white"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "dark",
+   "ssj",
+   "blue",
+   "ui"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetaue": {
+  "name": "VEGETA EGO",
+  "rar": 5,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Ultra Ego: más fuerte cuanto más pelea. Empieza con Galick Gun.",
+  "face": "V",
+  "majin": 99,
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SSJ BLUE",
+   "ULTRA EGO"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "blue",
+   "red"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "dark",
+   "ssj",
+   "blue",
+   "ego"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "formPal": "<object>"
+ },
+ "a17npc": {
+  "name": "ANDROIDE 17",
+  "rar": 0,
+  "hp": 110,
+  "spd": 68,
+  "atk": 1.05,
+  "start": "orbs",
+  "desc": "Energía infinita. Empieza con esferas que giran.",
+  "forms": [
+   "BASE",
+   "MEJORADA",
+   "ILIMITADA",
+   "DEFINITIVA"
+  ],
+  "hair": "<arr1>",
+  "hc": [
+   "dark"
+  ],
+  "aura": [
+   "white",
+   "white",
+   "white",
+   "white"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "npc": 1
+ },
+ "a18npc": {
+  "name": "ANDROIDE 18",
+  "rar": 0,
+  "hp": 110,
+  "spd": 68,
+  "atk": 1.05,
+  "start": "orbs",
+  "desc": "Energía infinita. Empieza con esferas que giran.",
+  "forms": [
+   "BASE",
+   "MEJORADA",
+   "ILIMITADA",
+   "DEFINITIVA"
+  ],
+  "hair": "<arr1>",
+  "hc": [
+   "blond"
+  ],
+  "aura": [
+   "white",
+   "white",
+   "white",
+   "white"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "npc": 1
+ },
+ "gotenks": {
+  "name": "GOTENKS",
+  "rar": 4,
+  "hp": 115,
+  "spd": 70,
+  "atk": 1.15,
+  "start": "kame",
+  "desc": "La fusión de Goten y Trunks. Rápido y fuerte.",
+  "forms": [
+   "BASE"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold"
+  ],
+  "npc": 0
+ },
+ "kefla": {
+  "name": "KEFLA",
+  "rar": 5,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.25,
+  "start": "eraser",
+  "desc": "Fusión de Kale y Caulifla. Empieza con Eraser Cannon.",
+  "forms": [
+   "SUPER SAIYAN",
+   "SSJ BLUE"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "green",
+   "blue"
+  ],
+  "npc": 0
+ },
+ "caulifla": {
+  "name": "CAULIFLA",
+  "rar": 3,
+  "hp": 105,
+  "spd": 70,
+  "atk": 1.05,
+  "start": "galick",
+  "desc": "Saiyan del Universo 6. Muy veloz.",
+  "forms": [
+   "BASE"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold"
+  ],
+  "npc": 0
+ },
+ "kale": {
+  "name": "KALE",
+  "rar": 4,
+  "hp": 130,
+  "spd": 60,
+  "atk": 1.1,
+  "start": "eraser",
+  "desc": "Su furia despierta al Berserker.",
+  "forms": [
+   "BASE",
+   "BERSERKER"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "gold",
+   "green"
+  ],
+  "npc": 0
+ },
+ "kyabe": {
+  "name": "KYABE",
+  "rar": 3,
+  "hp": 110,
+  "spd": 64,
+  "atk": 1,
+  "start": "galick",
+  "desc": "Saiyan del Universo 6. Equilibrado.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "gold"
+  ],
+  "npc": 0
+ },
+ "gohanadult": {
+  "name": "GOHAN ADULTO",
+  "rar": 4,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1.15,
+  "start": "kame",
+  "desc": "El poder místico de Gohan. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "MÍSTICO",
+   "BESTIA"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "dark"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "white",
+   "purple"
+  ]
+ },
+ "gokugt": {
+  "name": "GOKU GT",
+  "rar": 5,
+  "hp": 125,
+  "spd": 64,
+  "atk": 1.2,
+  "start": "kame",
+  "desc": "Super Saiyan 4. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN 3",
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "gold",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetagt": {
+  "name": "VEGETA GT",
+  "rar": 5,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1.3,
+  "start": "galick",
+  "desc": "Super Saiyan 4. Empieza con Galick Gun.",
+  "face": "V",
+  "majin": 99,
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokusuper": {
+  "name": "GOKU SUPER",
+  "rar": 5,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1.15,
+  "start": "kame",
+  "desc": "Kaioken y poder divino. Empieza con Kamehameha.",
+  "forms": [
+   "BASE",
+   "KAIOKEN",
+   "SSJ KAIOKEN",
+   "SSJ GOD",
+   "BLUE KAIOKEN"
+  ],
+  "aura": [
+   "white",
+   "red",
+   "gold",
+   "red",
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetasuper": {
+  "name": "VEGETA SUPER",
+  "rar": 5,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1.3,
+  "start": "galick",
+  "desc": "Orgullo divino. Empieza con Galick Gun.",
+  "face": "V",
+  "majin": 99,
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SSJ GOD",
+   "SSJ BLUE",
+   "BLUE FULL POWER"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "red",
+   "blue",
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "trunkscell": {
+  "name": "TRUNKS (CELL)",
+  "rar": 3,
+  "hp": 115,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "burning",
+  "desc": "Trunks con armadura. Empieza con Burning Attack.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "ULTRA SSJ"
+  ],
+  "hair": "<arr4>",
+  "hc": [
+   "lav",
+   "ssj",
+   "ssj",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "aura": [
+   "white",
+   "gold",
+   "gold"
+  ]
+ },
+ "roshi": {
+  "name": "MAESTRO ROSHI",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "El maestro de la tortuga; inventó el Kamehameha y aún puede hinchar los músculos.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "raditz": {
+  "name": "RADITZ",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1.05,
+  "start": "galick",
+  "desc": "El hermano de Goku. Saturday Crush y Double Sunday.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "white",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "saibaman": {
+  "name": "SAIBAMAN",
+  "rar": 3,
+  "hp": 90,
+  "spd": 72,
+  "atk": 0.95,
+  "start": "kame",
+  "desc": "Pequeño y rápido. Explota si hace falta.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "a16": {
+  "name": "ANDROIDE 16",
+  "rar": 4,
+  "hp": 160,
+  "spd": 56,
+  "atk": 1.15,
+  "start": "eraser",
+  "desc": "Enorme y resistente. Puño Cohete y Hell Flash.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "a17": {
+  "name": "ANDROIDE 17",
+  "rar": 4,
+  "hp": 110,
+  "spd": 70,
+  "atk": 1.05,
+  "start": "orbs",
+  "desc": "Energía infinita y barrera. Muy veloz.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "freezer": {
+  "name": "FREEZER",
+  "rar": 5,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1.25,
+  "start": "kienzan",
+  "desc": "El emperador del universo. Empieza con el Disco Mortal.",
+  "forms": [
+   "1ª FORMA",
+   "3ª FORMA",
+   "FORMA FINAL",
+   "100%",
+   "GOLDEN",
+   "BLACK"
+  ],
+  "aura": [
+   "purple",
+   "purple",
+   "purple",
+   "purple",
+   "gold",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "cooler": {
+  "name": "COOLER",
+  "rar": 4,
+  "hp": 120,
+  "spd": 62,
+  "atk": 1.2,
+  "start": "kienzan",
+  "desc": "El hermano de Freezer. Golpes y rayos.",
+  "forms": [
+   "FORMA FINAL"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "janemba": {
+  "name": "JANEMBA",
+  "rar": 5,
+  "hp": 130,
+  "spd": 62,
+  "atk": 1.25,
+  "start": "makanko",
+  "desc": "El demonio del Más Allá. Espada y portales.",
+  "forms": [
+   "SUPER JANEMBA"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "cell": {
+  "name": "CELL",
+  "rar": 5,
+  "hp": 125,
+  "spd": 62,
+  "atk": 1.2,
+  "start": "kame",
+  "desc": "El androide perfecto. Absorbe y crece.",
+  "forms": [
+   "IMPERFECTO",
+   "SEMIPERFECTO",
+   "PERFECTO",
+   "GOLDEN",
+   "MAJIN"
+  ],
+  "aura": [
+   "gold",
+   "gold",
+   "gold",
+   "gold",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "buu": {
+  "name": "MAJIN BUU",
+  "rar": 5,
+  "hp": 150,
+  "spd": 60,
+  "atk": 1.15,
+  "start": "donut",
+  "desc": "Se regenera sin parar. Cinco formas.",
+  "forms": [
+   "GORDO",
+   "MALIGNO",
+   "SUPER BUU",
+   "BUU GOHAN",
+   "KID BUU"
+  ],
+  "aura": [
+   "purple",
+   "purple",
+   "purple",
+   "purple",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>",
+  "regen": 0.5
+ },
+ "turles": {
+  "name": "TURLES",
+  "rar": 4,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1.15,
+  "start": "galick",
+  "desc": "El Saiyan del Árbol Sagrado.",
+  "forms": [
+   "BASE",
+   "SSJ MALIGNO"
+  ],
+  "aura": [
+   "purple",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bills": {
+  "name": "BILLS",
+  "rar": 5,
+  "hp": 130,
+  "spd": 66,
+  "atk": 1.35,
+  "start": "bigbang",
+  "desc": "El Dios de la Destrucción. Esfera de Destrucción y Hakai.",
+  "forms": [
+   "DIOS DESTRUCTOR"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "frost": {
+  "name": "FROST",
+  "rar": 3,
+  "hp": 110,
+  "spd": 64,
+  "atk": 1.1,
+  "start": "kienzan",
+  "desc": "El tramposo del Universo 6.",
+  "forms": [
+   "1ª FORMA",
+   "FORMA FINAL"
+  ],
+  "aura": [
+   "purple",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "hit": {
+  "name": "HIT",
+  "rar": 5,
+  "hp": 115,
+  "spd": 70,
+  "atk": 1.3,
+  "start": "kienzan",
+  "desc": "El asesino legendario. Salta en el tiempo.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "zamasu": {
+  "name": "ZAMASU",
+  "rar": 5,
+  "hp": 120,
+  "spd": 64,
+  "atk": 1.25,
+  "start": "makanko",
+  "desc": "El Kaioshin que odia a los mortales.",
+  "forms": [
+   "BASE",
+   "FUSIONADO"
+  ],
+  "aura": [
+   "white",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "jiren": {
+  "name": "JIREN",
+  "rar": 5,
+  "hp": 150,
+  "spd": 62,
+  "atk": 1.35,
+  "start": "eraser",
+  "desc": "El más fuerte del Universo 11.",
+  "forms": [
+   "BASE",
+   "MÁXIMO PODER",
+   "HAKAISHIN"
+  ],
+  "aura": [
+   "red",
+   "red",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "toppo": {
+  "name": "TOPPO",
+  "rar": 4,
+  "hp": 150,
+  "spd": 56,
+  "atk": 1.2,
+  "start": "eraser",
+  "desc": "Líder de las Tropas del Orgullo.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "moro": {
+  "name": "MORO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 62,
+  "atk": 1.25,
+  "start": "orbs",
+  "desc": "El devorador de planetas.",
+  "forms": [
+   "ULTRA INSTINTO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "babyvegeta": {
+  "name": "BABY VEGETA",
+  "rar": 5,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.3,
+  "start": "galick",
+  "desc": "El parásito Tsufur en el cuerpo de Vegeta.",
+  "forms": [
+   "SUPER BABY"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bra": {
+  "name": "BRA",
+  "rar": 3,
+  "hp": 105,
+  "spd": 70,
+  "atk": 1.05,
+  "start": "masenko",
+  "desc": "La hija de Vegeta, del Multiverso.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "white",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gohandbs": {
+  "name": "GOHAN DBS",
+  "rar": 5,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.25,
+  "start": "masenko",
+  "desc": "Gohan de Super, del Torneo del Poder a la saga de Granolah.",
+  "forms": [
+   "BASE",
+   "MÍSTICO",
+   "ULTRA INSTINTO",
+   "MUI",
+   "BESTIA"
+  ],
+  "aura": [
+   "white",
+   "white",
+   "silver",
+   "silver",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gohanposeido": {
+  "name": "GOHAN POSEÍDO",
+  "rar": 3,
+  "hp": 105,
+  "spd": 66,
+  "atk": 1.1,
+  "start": "masenko",
+  "desc": "Gohan controlado por una fuerza oscura.",
+  "forms": [
+   "POSEÍDO"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gohanmanga": {
+  "name": "GOHAN MANGA",
+  "rar": 4,
+  "hp": 115,
+  "spd": 66,
+  "atk": 1.15,
+  "start": "masenko",
+  "desc": "Gohan en la saga de Moro del manga.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bardockalt": {
+  "name": "BARDOCK LEYENDAS",
+  "rar": 5,
+  "hp": 125,
+  "spd": 64,
+  "atk": 1.2,
+  "start": "riot",
+  "desc": "Bardock en sus versiones de fans.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "BLACK",
+   "EVOLUCIÓN"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "red",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "cumber": {
+  "name": "CUMBER",
+  "rar": 5,
+  "hp": 140,
+  "spd": 60,
+  "atk": 1.3,
+  "start": "eraser",
+  "desc": "El Saiyan del mal de Heroes.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "dlrx": {
+  "name": "DLRX",
+  "rar": 4,
+  "hp": 115,
+  "spd": 68,
+  "atk": 1.15,
+  "start": "kame",
+  "desc": "Saiyan creado por fans.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "zombies": {
+  "name": "SAIYANS ZOMBI",
+  "rar": 3,
+  "hp": 120,
+  "spd": 58,
+  "atk": 1.1,
+  "start": "kame",
+  "desc": "Gohan, Goku y Vegeta convertidos en zombis.",
+  "forms": [
+   "GOHAN",
+   "GOKU",
+   "VEGETA"
+  ],
+  "aura": [
+   "green",
+   "green",
+   "green"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "brolyfan": {
+  "name": "BROLY FANMADE",
+  "rar": 5,
+  "hp": 150,
+  "spd": 58,
+  "atk": 1.3,
+  "start": "eraser",
+  "desc": "Broly en formas inventadas por fans.",
+  "forms": [
+   "SSJ FALSO",
+   "SUPER SAIYAN 3"
+  ],
+  "aura": [
+   "green",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gogetafan": {
+  "name": "GOGETA FANMADE",
+  "rar": 5,
+  "hp": 135,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "stardust",
+  "desc": "Gogeta en formas de fans.",
+  "forms": [
+   "BLUE EVOLUTION",
+   "SSJ4 BLUE",
+   "MUI"
+  ],
+  "aura": [
+   "blue",
+   "blue",
+   "silver"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegettofan": {
+  "name": "VEGETTO FANMADE",
+  "rar": 5,
+  "hp": 135,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Vegetto en formas de fans.",
+  "forms": [
+   "SSJ DIOS",
+   "DIOS KAIOKEN",
+   "SUPER SAIYAN 4",
+   "MUI"
+  ],
+  "aura": [
+   "red",
+   "red",
+   "red",
+   "silver"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuxeno": {
+  "name": "GOKU XENO",
+  "rar": 5,
+  "hp": 125,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "kame",
+  "desc": "El Goku de la Patrulla del Tiempo.",
+  "forms": [
+   "BASE",
+   "SSJ DIOS",
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "white",
+   "red",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumoro": {
+  "name": "GOKU SAGA MORO",
+  "rar": 5,
+  "hp": 125,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "kame",
+  "desc": "Goku con la ropa rota en la lucha contra Moro.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SSJ DIOS",
+   "SSJ BLUE",
+   "ULTRA INSTINTO"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "red",
+   "blue",
+   "silver"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokubroly": {
+  "name": "GOKU PELÍCULA BROLY",
+  "rar": 5,
+  "hp": 125,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "kame",
+  "desc": "Goku frente a Broly: de base a Super Saiyan Blue perfecto.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN",
+   "SSJ DIOS",
+   "SSJ BLUE PERFECTO"
+  ],
+  "aura": [
+   "white",
+   "gold",
+   "red",
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetamanga": {
+  "name": "VEGETA BLUE MANGA",
+  "rar": 5,
+  "hp": 130,
+  "spd": 66,
+  "atk": 1.3,
+  "start": "galick",
+  "desc": "Vegeta con el traje dañado y el Blue perfeccionado del manga.",
+  "forms": [
+   "SSJ BLUE",
+   "SSJ BLUE PERFECTO"
+  ],
+  "aura": [
+   "blue",
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetabroly": {
+  "name": "VEGETA DIOS · BROLY",
+  "rar": 5,
+  "hp": 130,
+  "spd": 66,
+  "atk": 1.25,
+  "start": "galick",
+  "desc": "Super Saiyan Dios durante el combate contra Broly.",
+  "forms": [
+   "SSJ DIOS"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blacktime": {
+  "name": "BLACK TIME BREAKER",
+  "rar": 5,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "blackkame",
+  "desc": "El Goku Black enmascarado de Heroes.",
+  "forms": [
+   "SSJ DIOS",
+   "SSJ ROSÉ",
+   "SSJ ROSÉ 3"
+  ],
+  "aura": [
+   "red",
+   "purple",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackfan": {
+  "name": "GOKU BLACK FANMADE",
+  "rar": 5,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "blackkame",
+  "desc": "Goku Black en formas creadas por fans: Rage, Rosé Kaioken, Rosé UI, MUI, SSJ falso, Majin Dios y Rosé Evolution.",
+  "forms": [
+   "SSJ RAGE",
+   "ROSÉ KAIOKEN",
+   "ROSÉ ULTRA INSTINTO",
+   "MUI",
+   "SSJ FALSO",
+   "SSJ DIOS",
+   "ROSÉ EVOLUTION"
+  ],
+  "aura": [
+   "gold",
+   "red",
+   "purple",
+   "silver",
+   "gold",
+   "red",
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokualt": {
+  "name": "GOKU FANMADE",
+  "rar": 5,
+  "hp": 130,
+  "spd": 66,
+  "atk": 1.3,
+  "start": "kame",
+  "desc": "Las versiones de Goku inventadas por fans: Místico, Ikari, Bestia, Rey Mono, Legendario, Dios Berserker, UI Blue y más.",
+  "forms": [
+   "MÍSTICO",
+   "IKARI",
+   "BESTIA",
+   "SSJ REY MONO",
+   "SSJ LEGENDARIO",
+   "DIOS BERSERKER",
+   "SSJ4 DIOS",
+   "SSJ SUPREMO",
+   "ULTRA SSJ DIOS",
+   "UI DIOS",
+   "UI BLUE",
+   "UI BLUE EVOLUTION",
+   "SSJ2 MALIGNO"
+  ],
+  "aura": [
+   "white",
+   "green",
+   "purple",
+   "gold",
+   "green",
+   "red",
+   "red",
+   "gold",
+   "red",
+   "red",
+   "blue",
+   "blue",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "nappa": {
+  "name": "NAPPA",
+  "rar": 3,
+  "hp": 150,
+  "spd": 58,
+  "atk": 1.15,
+  "start": "breakcannon",
+  "desc": "El gigante de élite Saiyan. Break Cannon y Bomber DX.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "ginyu": {
+  "name": "CAPITÁN GINYU",
+  "rar": 4,
+  "hp": 125,
+  "spd": 62,
+  "atk": 1.15,
+  "start": "milky",
+  "desc": "Líder de las Fuerzas Especiales. Cambia de cuerpo con su rival.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "jeice": {
+  "name": "JEICE",
+  "rar": 3,
+  "hp": 105,
+  "spd": 70,
+  "atk": 1.05,
+  "start": "burning",
+  "desc": "El veloz de las Fuerzas Especiales. Lanza la Crusher Ball.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "guldo": {
+  "name": "GULDO",
+  "rar": 3,
+  "hp": 95,
+  "spd": 58,
+  "atk": 1,
+  "start": "kienzan",
+  "desc": "Detiene el tiempo y lanza rocas con la mente.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "uub": {
+  "name": "UUB",
+  "rar": 4,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.15,
+  "start": "kame",
+  "desc": "La reencarnación de Kid Buu y alumno de Goku.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "mrsatan": {
+  "name": "MR. SATÁN",
+  "rar": 3,
+  "hp": 130,
+  "spd": 60,
+  "atk": 0.95,
+  "start": "megaton",
+  "desc": "El campeón del mundo. Sin ki: puñetazos, patadas y regalos explosivos.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "a21": {
+  "name": "ANDROIDE 21",
+  "rar": 5,
+  "hp": 125,
+  "spd": 66,
+  "atk": 1.25,
+  "start": "photonwave",
+  "desc": "La androide con hambre de Majin. Convierte a sus rivales en dulces.",
+  "forms": [
+   "MAJIN"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "dyspo": {
+  "name": "DYSPO",
+  "rar": 4,
+  "hp": 110,
+  "spd": 82,
+  "atk": 1.2,
+  "start": "dysposlash",
+  "desc": "El más rápido de las Tropas del Orgullo: golpes a la velocidad de la luz.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "kibito": {
+  "name": "KIBITO",
+  "rar": 3,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1,
+  "start": "kibitowave",
+  "desc": "El guardaespaldas del Supremo Kaioshin: teletransporte, ondas paralizantes y curación.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gohanfut": {
+  "name": "GOHAN DEL FUTURO",
+  "rar": 4,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.2,
+  "start": "gohanfutkame",
+  "desc": "El último guerrero Z de la línea de Trunks: manco, Super Saiyan y sin rendirse jamás.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "glorio": {
+  "name": "GLORIO",
+  "rar": 4,
+  "hp": 110,
+  "spd": 70,
+  "atk": 1.15,
+  "start": "gloriogun",
+  "desc": "El agente de Gomah en Daima: pistola, magia del Reino Demoníaco y barreras.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "hatchiyack": {
+  "name": "HATCHIYACK",
+  "rar": 4,
+  "hp": 135,
+  "spd": 62,
+  "atk": 1.2,
+  "start": "revenger",
+  "desc": "La máquina de venganza tsufur: se alimenta de odio y lanza el Revenger Cannon.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "green"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "trunksgt": {
+  "name": "TRUNKS GT",
+  "rar": 3,
+  "hp": 110,
+  "spd": 68,
+  "atk": 1.1,
+  "start": "trunksbuster",
+  "desc": "Trunks adulto en el viaje de GT: presidente de la Corporación Cápsula y guerrero veterano.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "nuova": {
+  "name": "NUOVA SHENRON",
+  "rar": 4,
+  "hp": 135,
+  "spd": 64,
+  "atk": 1.2,
+  "start": "nuovafire",
+  "desc": "El dragón de la Esfera de Cuatro Estrellas: guerrero de fuego con honor.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gomah": {
+  "name": "REY GOMAH",
+  "rar": 4,
+  "hp": 125,
+  "spd": 66,
+  "atk": 1.2,
+  "start": "gomahwave",
+  "desc": "El Rey Demonio del Reino Demoníaco en Daima: bastón, magia y un aura morada.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "merus": {
+  "name": "MERUS",
+  "rar": 4,
+  "hp": 120,
+  "spd": 70,
+  "atk": 1.2,
+  "start": "merusgun",
+  "desc": "Ángel en formación y agente de la Patrulla Galáctica: bastón, pistola y reflejos divinos.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "majinkuu": {
+  "name": "MAJIN KUU",
+  "rar": 3,
+  "hp": 105,
+  "spd": 72,
+  "atk": 1.05,
+  "start": "kuublast",
+  "desc": "El pequeño Majin de Daima: rápido, burlón y con ráfagas verdes.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "metalcooler": {
+  "name": "METAL COOLER",
+  "rar": 4,
+  "hp": 135,
+  "spd": 66,
+  "atk": 1.2,
+  "start": "metalbeam",
+  "desc": "Cooler reconstruido en metal: se regenera y no conoce el cansancio.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "a14": {
+  "name": "ANDROIDE 14",
+  "rar": 3,
+  "hp": 150,
+  "spd": 58,
+  "atk": 1.05,
+  "start": "a14rush",
+  "desc": "El gigante silencioso del Dr. Gero: embestidas y ondas de energía.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "a13": {
+  "name": "ANDROIDE 13",
+  "rar": 4,
+  "hp": 140,
+  "spd": 60,
+  "atk": 1.15,
+  "start": "deadlybomber",
+  "desc": "El androide sureño de la película: SS Deadly Bomber y puños de hierro.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bulma": {
+  "name": "BULMA",
+  "rar": 3,
+  "hp": 90,
+  "spd": 66,
+  "atk": 0.95,
+  "start": "bulmagun",
+  "desc": "La genio de la Corporación Cápsula: pistola, cápsulas y mucho carácter.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "magetta": {
+  "name": "MAGETTA",
+  "rar": 3,
+  "hp": 160,
+  "spd": 54,
+  "atk": 1.05,
+  "start": "magma",
+  "desc": "El robot de lava del Universo 6: escupe magma y se pone al rojo si le insultan.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "majinduu": {
+  "name": "MAJIN DUU",
+  "rar": 3,
+  "hp": 150,
+  "spd": 58,
+  "atk": 1.1,
+  "start": "duuroll",
+  "desc": "El Majin de Daima: grande, glotón y con golpes de rodillo.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "daishinkan": {
+  "name": "GRAN SACERDOTE",
+  "rar": 5,
+  "hp": 150,
+  "spd": 74,
+  "atk": 1.35,
+  "start": "angelbeam",
+  "desc": "El ángel más poderoso, al servicio de Zeno: esquiva todo y golpea con calma.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "paragus": {
+  "name": "PARAGUS",
+  "rar": 3,
+  "hp": 115,
+  "spd": 60,
+  "atk": 1.05,
+  "start": "paragusball",
+  "desc": "El padre de Broly: lo controla con la corona y dispara esferas de ki verdes.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "granola": {
+  "name": "GRANOLA",
+  "rar": 4,
+  "hp": 115,
+  "spd": 68,
+  "atk": 1.2,
+  "start": "granolasnipe",
+  "desc": "El último cerealiano: francotirador con el ojo derecho y el deseo de ser el más fuerte.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gas": {
+  "name": "GAS",
+  "rar": 4,
+  "hp": 140,
+  "spd": 64,
+  "atk": 1.2,
+  "start": "gasring",
+  "desc": "El más fuerte de los Heeters tras pedir su deseo a las esferas de Cereal.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "omega": {
+  "name": "OMEGA SHENRON",
+  "rar": 5,
+  "hp": 150,
+  "spd": 60,
+  "atk": 1.3,
+  "start": "minusball",
+  "desc": "El dragón oscuro de una estrella: Bola de Energía Negativa y Minus Energy Power Ball.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "super17": {
+  "name": "SUPER 17",
+  "rar": 4,
+  "hp": 135,
+  "spd": 62,
+  "atk": 1.15,
+  "start": "hellstorm",
+  "desc": "Fusión de los dos Androides 17: absorbe el ki y lanza la Tormenta Infernal.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "pangt": {
+  "name": "PAN GT",
+  "rar": 3,
+  "hp": 100,
+  "spd": 70,
+  "atk": 1,
+  "start": "masenko",
+  "desc": "La nieta de Goku en la saga GT: rápida, valiente y con Giru siempre cerca.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "slug": {
+  "name": "LORD SLUG",
+  "rar": 4,
+  "hp": 130,
+  "spd": 62,
+  "atk": 1.15,
+  "start": "slugball",
+  "desc": "Namekiano demoníaco de la película: crece, estira el brazo y lanza bolas de ki.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "tarble": {
+  "name": "TARBLE",
+  "rar": 3,
+  "hp": 105,
+  "spd": 68,
+  "atk": 1.05,
+  "start": "galick",
+  "desc": "El hermano pequeño de Vegeta: Super Saiyan tranquilo que pelea si hace falta.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "reycold": {
+  "name": "REY COLD",
+  "rar": 4,
+  "hp": 135,
+  "spd": 60,
+  "atk": 1.2,
+  "start": "deathbeam",
+  "desc": "El padre de Freezer y Cooler; enorme, cruel y con un cañón de ki en la mano.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "cui": {
+  "name": "CUI",
+  "rar": 3,
+  "hp": 105,
+  "spd": 66,
+  "atk": 0.95,
+  "start": "cuiblast",
+  "desc": "Rival de Vegeta en el ejército de Freezer; rápido y presumido.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "kibitoshin": {
+  "name": "KIBITOSHIN",
+  "rar": 4,
+  "hp": 120,
+  "spd": 67,
+  "atk": 1.12,
+  "start": "kaikai",
+  "desc": "Fusión de Shin y Kibito con los pendientes Pothala; se teletransporta y cura.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "shin": {
+  "name": "SUPREMO KAIOSHIN",
+  "rar": 4,
+  "hp": 115,
+  "spd": 67,
+  "atk": 1.1,
+  "start": "kaishot",
+  "desc": "El dios de la creación del Universo 7: ráfagas de ki rosa y poderes divinos.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "videl": {
+  "name": "VIDEL",
+  "rar": 3,
+  "hp": 100,
+  "spd": 66,
+  "atk": 0.95,
+  "start": "videlkick",
+  "desc": "Hija de Mr. Satán y justiciera de Satan City; vuela y pelea a patadas.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokunino": {
+  "name": "GOKU NIÑO",
+  "rar": 3,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1,
+  "start": "jankenpon",
+  "desc": "El niño de la cola de mono: Nyoibo, nube Kinton y su Jan Ken.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "trunksnino": {
+  "name": "TRUNKS NIÑO",
+  "rar": 3,
+  "hp": 105,
+  "spd": 70,
+  "atk": 1.1,
+  "start": "burningatk",
+  "desc": "El hijo de Vegeta y Bulma: travieso, rápido y Super Saiyan desde pequeño.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "white",
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "tenshinhan": {
+  "name": "TENSHINHAN",
+  "rar": 3,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.1,
+  "start": "kikoho",
+  "desc": "Tres ojos y cuatro brazos si hace falta: Kikoho, Taiyoken y Dodonpa.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "taopaipai": {
+  "name": "TAO PAI PAI",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1,
+  "start": "dodonpa",
+  "desc": "El asesino más famoso del mundo; dispara el Dodonpa con el dedo.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokureymono": {
+  "name": "GOKU REY MONO",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku Rey Mono en Super Saiyan, de DB Tale (fanmade).",
+  "forms": [
+   "SSJ REY MONO"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetamui": {
+  "name": "VEGETA UI DOMINADO",
+  "rar": 5,
+  "hp": 115,
+  "spd": 72,
+  "atk": 1.45,
+  "start": "galick",
+  "desc": "Vegeta con el Ultra Instinto dominado, versión fanmade.",
+  "forms": [
+   "UI DOMINADO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegitoblue254": {
+  "name": "VEGETTO BLUE",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "finalkame",
+  "desc": "Vegetto en Super Saiyan Blue, la fusión con los Pendientes Pothala.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "bramajin": {
+  "name": "BRA MAJIN SSJ",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Bra adulta poseída por Babidi en Super Saiyan, de Dragon Ball Multiverse (fanmade).",
+  "forms": [
+   "SSJ MAJIN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "zamasufusion": {
+  "name": "ZAMASU FUSIONADO (DESHACIÉNDOSE)",
+  "rar": 5,
+  "hp": 130,
+  "spd": 72,
+  "atk": 1.4,
+  "start": "blackkame",
+  "desc": "Zamasu fusionado mientras su cuerpo inmortal se deshace.",
+  "forms": [
+   "FUSIÓN"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj4daima": {
+  "name": "GOKU SSJ4 (DAIMA)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 4, versión de Dragon Ball Daima.",
+  "forms": [
+   "SSJ4"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackrose290": {
+  "name": "BLACK ROSÉ (HD)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 69,
+  "atk": 1.3,
+  "start": "blackkame",
+  "desc": "Goku Black en Super Saiyan Rosé, megapack de sprites HD.",
+  "forms": [
+   "SSJ ROSÉ"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjfp": {
+  "name": "GOKU SSJ FULL POWER",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan a pleno poder, sprite HD de estilo SWL.",
+  "forms": [
+   "SSJ FULL POWER"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj053": {
+  "name": "GOKU SSJ (CLÁSICO)",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan, sprite clásico de Dragon Ball Z.",
+  "forms": [
+   "SSJ"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "goku045": {
+  "name": "GOKU (CLÁSICO 2)",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Goku en estado base, segunda versión del sprite clásico.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "goku044": {
+  "name": "GOKU (CLÁSICO)",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Goku en estado base, sprite clásico de Dragon Ball Z.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjkaioken2": {
+  "name": "GOKU SSJ KAIOKEN (HALO)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en el Más Allá, con halo, combinando Super Saiyan y Kaioken.",
+  "forms": [
+   "SSJ KAIOKEN"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjlegend": {
+  "name": "GOKU SSJ LEGENDARIO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con el poder del Super Saiyan Legendario, versión fanmade.",
+  "forms": [
+   "SSJ LEGENDARIO"
+  ],
+  "aura": [
+   "green"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokudiosberserk": {
+  "name": "GOKU DIOS BERSERKER",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku Super Saiyan Dios desatado con aura oscura, versión fanmade.",
+  "forms": [
+   "DIOS BERSERKER"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj4dios": {
+  "name": "GOKU SSJ4 DIOS",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 4 con el poder de un dios, versión fanmade.",
+  "forms": [
+   "SSJ4 DIOS"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjsupremo": {
+  "name": "GOKU SSJ SUPREMO",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en un Super Saiyan supremo con chispas, versión fanmade.",
+  "forms": [
+   "SSJ SUPREMO"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuultradios": {
+  "name": "GOKU ULTRA SSJ DIOS",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku en una forma Super Saiyan Dios potenciada, versión fanmade.",
+  "forms": [
+   "ULTRA SSJ DIOS"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuidios": {
+  "name": "GOKU UI DIOS",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku combinando el Ultra Instinto con el Super Saiyan Dios, versión fanmade.",
+  "forms": [
+   "UI DIOS"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuiblue": {
+  "name": "GOKU UI BLUE",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku combinando el Ultra Instinto con el Super Saiyan Blue, versión fanmade.",
+  "forms": [
+   "UI BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuiblueevo": {
+  "name": "GOKU UI BLUE EVOLUTION",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku fusionando el Ultra Instinto con el Blue Evolución, versión fanmade.",
+  "forms": [
+   "UI BLUE EVOLUTION"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuevilssj2": {
+  "name": "GOKU MALIGNO SSJ2",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku poseído en Super Saiyan 2 de pelo rojo, versión fanmade.",
+  "forms": [
+   "SSJ2 MALIGNO"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjkaioken": {
+  "name": "GOKU SSJ KAIOKEN",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku combinando el Super Saiyan con el Kaioken.",
+  "forms": [
+   "SSJ KAIOKEN"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj2buu": {
+  "name": "GOKU SSJ2 (BUU)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 2, saga de Majin Buu, sprite HD de estilo SWL.",
+  "forms": [
+   "SSJ2"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuuimanga": {
+  "name": "GOKU UI SEÑAL (MANGA)",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con la señal del Ultra Instinto, versión del manga.",
+  "forms": [
+   "UI SEÑAL"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuimanga": {
+  "name": "GOKU UI DOMINADO (MANGA)",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con el Ultra Instinto dominado, manga del Torneo del Poder.",
+  "forms": [
+   "UI DOMINADO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokubluedbfz": {
+  "name": "GOKU BLUE (FIGHTERZ)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan Blue, estilo Dragon Ball FighterZ.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokubluemoro": {
+  "name": "GOKU BLUE (MORO)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan Blue, manga de la saga de Moro.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuuiverdadero": {
+  "name": "GOKU UI VERDADERO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con el Ultra Instinto a su manera, manga de Granola.",
+  "forms": [
+   "UI VERDADERO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuigranola": {
+  "name": "GOKU UI (GRANOLA)",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con el Ultra Instinto dominado, saga de Granola.",
+  "forms": [
+   "UI DOMINADO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussjchaqueta": {
+  "name": "GOKU SSJ CHAQUETA",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan con su chaqueta naranja, saga de Super Hero.",
+  "forms": [
+   "SSJ"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokupatrulla": {
+  "name": "GOKU PATRULLERO",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Goku con el uniforme de la Patrulla Galáctica, saga de Moro.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuifp": {
+  "name": "GOKU UI DOMINADO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con el Ultra Instinto dominado a pleno poder, Torneo del Poder.",
+  "forms": [
+   "UI DOMINADO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuuisign": {
+  "name": "GOKU UI SEÑAL",
+  "rar": 5,
+  "hp": 130,
+  "spd": 70,
+  "atk": 1.35,
+  "start": "kame",
+  "desc": "Goku con la señal del Ultra Instinto, Torneo del Poder.",
+  "forms": [
+   "UI SEÑAL"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokubluewhis": {
+  "name": "GOKU BLUE (WHIS)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan Blue con su gi, saga de Freezer resucitado.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj3swl": {
+  "name": "GOKU SSJ3 (HD)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 3, sprite HD de estilo SWL.",
+  "forms": [
+   "SSJ3"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj3mais": {
+  "name": "GOKU SSJ3 (CLÁSICO)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 3, saga de Majin Buu, sprite clásico.",
+  "forms": [
+   "SSJ3"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetabluemal": {
+  "name": "VEGETA BLUE MALIGNO",
+  "rar": 5,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Vegeta Blue con aura oscura, versión maligna de Dragon Ball Heroes.",
+  "forms": [
+   "BLUE MALIGNO"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetauihd": {
+  "name": "VEGETA ULTRA INSTINTO",
+  "rar": 5,
+  "hp": 115,
+  "spd": 72,
+  "atk": 1.45,
+  "start": "galick",
+  "desc": "Vegeta con el Ultra Instinto, versión fanmade en HD.",
+  "forms": [
+   "ULTRA INSTINTO"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetassjhd": {
+  "name": "VEGETA SSJ (HD)",
+  "rar": 4,
+  "hp": 105,
+  "spd": 68,
+  "atk": 1.22,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan, sprite HD de estilo ULSW.",
+  "forms": [
+   "SSJ"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetaxeno": {
+  "name": "VEGETA XENO",
+  "rar": 3,
+  "hp": 100,
+  "spd": 66,
+  "atk": 1.1,
+  "start": "galick",
+  "desc": "Vegeta Xeno, patrullero del tiempo de Dragon Ball Heroes, de base a Super Saiyan 4.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "white",
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetaego": {
+  "name": "VEGETA ULTRA EGO",
+  "rar": 5,
+  "hp": 115,
+  "spd": 72,
+  "atk": 1.45,
+  "start": "galick",
+  "desc": "Vegeta con el Ultra Ego, poder de destrucción de la saga de Granola.",
+  "forms": [
+   "ULTRA EGO"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetabaseulsw": {
+  "name": "VEGETA (HD)",
+  "rar": 3,
+  "hp": 100,
+  "spd": 66,
+  "atk": 1.1,
+  "start": "galick",
+  "desc": "Vegeta en estado base, sprite HD de estilo ULSW.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetablueevo": {
+  "name": "VEGETA BLUE EVOLUTION",
+  "rar": 5,
+  "hp": 115,
+  "spd": 72,
+  "atk": 1.45,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan Blue Evolución, Torneo del Poder.",
+  "forms": [
+   "BLUE EVOLUTION"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetabluefp": {
+  "name": "VEGETA BLUE FULL POWER",
+  "rar": 5,
+  "hp": 115,
+  "spd": 72,
+  "atk": 1.45,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan Blue al máximo, Torneo del Poder.",
+  "forms": [
+   "BLUE FULL POWER"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetablueulsw": {
+  "name": "VEGETA BLUE (HD)",
+  "rar": 5,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan Blue, sprite HD de estilo ULSW.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetablue092": {
+  "name": "VEGETA BLUE (SUPER)",
+  "rar": 5,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan Blue, sprite clásico de Super.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetabluewhis": {
+  "name": "VEGETA BLUE (WHIS)",
+  "rar": 5,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan Blue, saga de Freezer resucitado.",
+  "forms": [
+   "SSJ BLUE"
+  ],
+  "aura": [
+   "blue"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetassjwhis": {
+  "name": "VEGETA SSJ (WHIS)",
+  "rar": 4,
+  "hp": 105,
+  "spd": 68,
+  "atk": 1.22,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan con la armadura de la saga de Freezer resucitado.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetassj4gt": {
+  "name": "VEGETA SSJ4 GT",
+  "rar": 5,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.35,
+  "start": "galick",
+  "desc": "Vegeta en Super Saiyan 4, de Dragon Ball GT.",
+  "forms": [
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokussj4gt": {
+  "name": "GOKU SSJ4 GT",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.25,
+  "start": "kame",
+  "desc": "Goku en Super Saiyan 4, de Dragon Ball GT.",
+  "forms": [
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetayardrat": {
+  "name": "VEGETA YARDRAT",
+  "rar": 3,
+  "hp": 100,
+  "spd": 66,
+  "atk": 1.1,
+  "start": "galick",
+  "desc": "Vegeta con la ropa de Yardrat.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuyardratswl": {
+  "name": "GOKU YARDRAT SSJ SWL",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Goku de Yardrat en Super Saiyan, otro estilo de sprite.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuyardratssj": {
+  "name": "GOKU YARDRAT SSJ",
+  "rar": 4,
+  "hp": 120,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "kame",
+  "desc": "Goku de Yardrat en Super Saiyan.",
+  "forms": [
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokuyardrat": {
+  "name": "GOKU YARDRAT",
+  "rar": 3,
+  "hp": 115,
+  "spd": 64,
+  "atk": 1,
+  "start": "kame",
+  "desc": "Goku con la ropa de Yardrat, tras Namek.",
+  "forms": [
+   "BASE",
+   "SUPER SAIYAN"
+  ],
+  "aura": [
+   "white",
+   "gold"
+  ],
+  "hair": "<arr2>",
+  "hc": [
+   "dark",
+   "ssj"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackmajin": {
+  "name": "MAJIN BLACK DIOS",
+  "rar": 5,
+  "hp": 125,
+  "spd": 69,
+  "atk": 1.3,
+  "start": "blackkame",
+  "desc": "Goku Black Majin en Super Saiyan Dios, de los fans.",
+  "forms": [
+   "SSJ DIOS"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackrosen": {
+  "name": "BLACK ROSÉ EVOLUTION",
+  "rar": 5,
+  "hp": 125,
+  "spd": 69,
+  "atk": 1.3,
+  "start": "blackkame",
+  "desc": "Goku Black Rosé evolucionado, de los fans.",
+  "forms": [
+   "ROSÉ EVOLUTION"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackfalso": {
+  "name": "GOKU BLACK SSJ FALSO",
+  "rar": 4,
+  "hp": 120,
+  "spd": 68,
+  "atk": 1.17,
+  "start": "blackkame",
+  "desc": "Goku Black en Super Saiyan falso, de los fans.",
+  "forms": [
+   "SSJ FALSO"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blackkaioshin": {
+  "name": "GOKU BLACK KAIOSHIN",
+  "rar": 3,
+  "hp": 115,
+  "spd": 66,
+  "atk": 1.05,
+  "start": "blackkame",
+  "desc": "Goku Black con el traje de Kaioshin.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "jirengray": {
+  "name": "JIREN (TORNEO)",
+  "rar": 5,
+  "hp": 150,
+  "spd": 62,
+  "atk": 1.35,
+  "start": "eraser",
+  "desc": "Jiren del Torneo del Poder, otro estilo de sprite.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegettofalso": {
+  "name": "VEGETTO SSJ FALSO",
+  "rar": 5,
+  "hp": 130,
+  "spd": 68,
+  "atk": 1.3,
+  "start": "finalkame",
+  "desc": "Vegetto en su forma de Super Saiyan falso.",
+  "forms": [
+   "SSJ FALSO"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "trunksarmor": {
+  "name": "TRUNKS ARMADURA",
+  "rar": 4,
+  "hp": 110,
+  "spd": 66,
+  "atk": 1.12,
+  "start": "burning",
+  "desc": "Trunks del futuro con la armadura Saiyan.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "tora": {
+  "name": "TORA",
+  "rar": 3,
+  "hp": 120,
+  "spd": 65,
+  "atk": 1.08,
+  "start": "riot",
+  "desc": "Compañero de Bardock. Combos saiyan y ráfagas de ki.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetaexploradorhd": {
+  "name": "VEGETA EXPLORADOR (HD)",
+  "rar": 4,
+  "hp": 120,
+  "spd": 65,
+  "atk": 1.1,
+  "start": "galick",
+  "desc": "Armadura de explorador y técnicas de la invasión saiyan.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetassj2hd": {
+  "name": "VEGETA SUPER SAIYAN 2 (HD)",
+  "rar": 4,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "galick",
+  "desc": "La segunda fase Super Saiyan con el traje de combate azul.",
+  "forms": [
+   "SUPER SAIYAN 2"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "kyabeclasico": {
+  "name": "KYABE (CLÁSICO)",
+  "rar": 3,
+  "hp": 110,
+  "spd": 69,
+  "atk": 1.05,
+  "start": "galick",
+  "desc": "El saiyan del Universo 6, con su pack clásico de combate.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "blacklsw": {
+  "name": "GOKU BLACK (LSW)",
+  "rar": 4,
+  "hp": 120,
+  "spd": 67,
+  "atk": 1.15,
+  "start": "blackkame",
+  "desc": "El cuerpo de Goku y el ki oscuro de Zamasu.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "ginyucuerpogoku": {
+  "name": "GINYU (CUERPO DE GOKU)",
+  "rar": 4,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "milky",
+  "desc": "Ginyu conserva su ki y sus tecnicas en el cuerpo de Goku.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "purple"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetasinarmadura": {
+  "name": "VEGETA SIN ARMADURA",
+  "rar": 4,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "galick",
+  "desc": "Vegeta sin peto de combate, con el pack HD completo.",
+  "forms": [
+   "BASE"
+  ],
+  "aura": [
+   "white"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetaxenossj4": {
+  "name": "VEGETA XENO SSJ4",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "finalshine",
+  "desc": "El patrullero del tiempo en Super Saiyan 4.",
+  "forms": [
+   "SUPER SAIYAN 4"
+  ],
+  "aura": [
+   "red"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "vegetassj3daima": {
+  "name": "VEGETA SSJ3 (DAIMA)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "galick",
+  "desc": "El Super Saiyan 3 adulto de Daima.",
+  "forms": [
+   "SUPER SAIYAN 3"
+  ],
+  "aura": [
+   "gold"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuigranolav2": {
+  "name": "GOKU UI GRANOLA (V2)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "silver",
+  "desc": "Ultra Instinto en la saga de Granola, variante V2.",
+  "forms": [
+   "ULTRA INSTINTO"
+  ],
+  "aura": [
+   "silver"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ },
+ "gokumuitorneoanime": {
+  "name": "GOKU UI TORNEO (ANIME)",
+  "rar": 5,
+  "hp": 125,
+  "spd": 67,
+  "atk": 1.2,
+  "start": "silver",
+  "desc": "Ultra Instinto del Torneo del Poder con sus secuencias del anime.",
+  "forms": [
+   "ULTRA INSTINTO"
+  ],
+  "aura": [
+   "silver"
+  ],
+  "hair": "<arr5>",
+  "hc": [
+   "dark",
+   "ssj",
+   "ssj",
+   "ssj3",
+   "blue"
+  ],
+  "mats": "<object>",
+  "pal": "<object>"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "id": "shin",
+ "nombre": "Supremo Kaioshin",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Esfera Divina",
+ "descJuego": "El dios de la creación del Universo 7: ráfagas de ki rosa y poderes divinos.",
+ "regen": 0,
+ "raza": "Kaioshin",
+ "bando": "Otros",
+ "planeta": "Nucleo del Mundo",
+ "descripcion": "Es uno de los Kaio-shin, los dioses de la creación que se encargan de crear vida en todo el Universo 7 y protegerlo de amenazas supremas.\nAnteriormente solía hacerse cargo de proteger la zona este del universo, ya que después de la muerte de los otros Kaio-shin a manos de Majin-Boo, se convirtió en el Kaio-shin principal del Universo 7.",
+ "api": {
+  "id": 73,
+  "nombre": "Kaio-shin del Este",
+  "url": "https://dragonball-api.com/api/characters/73",
+  "ki": "unknown",
+  "maxKi": "unknown"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 90000000.0,
+    "texto": "90 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 110,
+    "velocidad": 87,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/437_SUPREMO KAIOSHIN (ErickFl)"
+  }
+ ],
+ "num": 101
+}

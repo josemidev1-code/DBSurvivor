@@ -1,0 +1,57 @@
+{
+ "id": "vegetaue",
+ "nombre": "Vegeta Ego",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Galick Gun",
+ "descJuego": "Ultra Ego: más fuerte cuanto más pelea. Empieza con Galick Gun.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Vegeta",
+ "descripcion": "Príncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antagónico, poco después decide rebelarse ante el Imperio de Freeza, volviéndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegaría a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, él es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antihéroe, a finalmente un héroe a lo largo del transcurso de la historia, convirtiéndose así en el deuteragonista de la serie.",
+ "api": {
+  "id": 2,
+  "nombre": "Vegeta",
+  "url": "https://dragonball-api.com/api/characters/2",
+  "ki": "54.000.000",
+  "maxKi": "19.84 Septillion"
+ },
+ "formas": [
+  {
+   "n": 3,
+   "nombre": "Ultra Ego",
+   "aura": "red",
+   "poder": {
+    "valor": 1.984e+25,
+    "texto": "19,8 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 236,
+    "velocidad": 101,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/07_Granola/Vegeta/239_VEGETA MEGA INSTINTO, COLOR OFICIAL BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 16
+}

@@ -1,0 +1,51 @@
+{
+ "id": "blackmajin",
+ "nombre": "Majin Black Dios",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "Goku Black Majin en Super Saiyan Dios, de los fans.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Dios",
+   "aura": "red",
+   "poder": {
+    "valor": 5e+17,
+    "texto": "500 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 130,
+    "velocidad": 90,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/184_Majin Goku black ssj Díos.Andres Gamen"
+  }
+ ],
+ "num": 132
+}

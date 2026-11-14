@@ -1,0 +1,193 @@
+{
+ "id": "buu",
+ "nombre": "Majin Buu",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Donut Galáctico",
+ "descJuego": "Se regenera sin parar. Cinco formas.",
+ "regen": 0.5,
+ "raza": "Majin",
+ "bando": "Villano",
+ "planeta": "Tierra",
+ "descripcion": "También conocido como Boo original, es la forma original y pura de Majin-Boo, y la última forma de Boo que aparece en Dragon Ball Z.",
+ "api": {
+  "id": 32,
+  "nombre": "Majin Buu",
+  "url": "https://dragonball-api.com/api/characters/32",
+  "ki": "8 Billion",
+  "maxKi": "100 Trillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Gordo",
+   "aura": "purple",
+   "poder": {
+    "valor": 8000000000.0,
+    "texto": "8 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 115,
+    "velocidad": 78,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/077_Majin Buu"
+  },
+  {
+   "n": 1,
+   "nombre": "Maligno",
+   "aura": "purple",
+   "poder": {
+    "valor": 14000000000.0,
+    "texto": "14 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 144,
+    "velocidad": 83,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/079_Majin Buu(Flaco)"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Buu",
+   "aura": "purple",
+   "poder": {
+    "valor": 5670000000.0,
+    "texto": "5,7 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 180,
+    "ataque": 172,
+    "velocidad": 87,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/080_Super Buu"
+  },
+  {
+   "n": 3,
+   "nombre": "Buu Gohan",
+   "aura": "purple",
+   "poder": {
+    "valor": 20000000000.0,
+    "texto": "20 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 195,
+    "ataque": 201,
+    "velocidad": 92,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/078_Majin Buu Gohan"
+  },
+  {
+   "n": 4,
+   "nombre": "Kid Buu",
+   "aura": "purple",
+   "poder": {
+    "valor": 4000000000.0,
+    "texto": "4 mil millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 210,
+    "ataque": 230,
+    "velocidad": 97,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/076_Kid Buu"
+  }
+ ],
+ "num": 37
+}

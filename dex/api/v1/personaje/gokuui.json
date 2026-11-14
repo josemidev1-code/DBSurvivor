@@ -1,0 +1,91 @@
+{
+ "id": "gokuui",
+ "nombre": "Goku Ui",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Ultra Instinto: rapidísimo. Empieza con Kamehameha.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "El protagonista de la serie, conocido por su gran poder y personalidad amigable. Originalmente enviado a la Tierra como un infante volador con la misión de conquistarla. Sin embargo, el caer por un barranco le proporcionó un brutal golpe que si bien casi lo mata, este alteró su memoria y anuló todos los instintos violentos de su especie, lo que lo hizo crecer con un corazón puro y bondadoso, pero conservando todos los poderes de su raza. No obstante, en la nueva continuidad de Dragon Ball se establece que él fue enviado por sus padres a la Tierra con el objetivo de sobrevivir a toda costa a la destrucción de su planeta por parte de Freeza. Más tarde, Kakarot, ahora conocido como Son Goku, se convertiría en el príncipe consorte del monte Fry-pan y líder de los Guerreros Z, así como el mayor defensor de la Tierra y del Universo 7, logrando mantenerlos a salvo de la destrucción en innumerables ocasiones, a pesar de no considerarse a sí mismo como un héroe o salvador.",
+ "api": {
+  "id": 1,
+  "nombre": "Goku",
+  "url": "https://dragonball-api.com/api/characters/1",
+  "ki": "60.000.000",
+  "maxKi": "90 Septillion"
+ },
+ "formas": [
+  {
+   "n": 3,
+   "nombre": "Ultra Instinto",
+   "aura": "white",
+   "poder": {
+    "valor": 1.08e+25,
+    "texto": "10,8 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 219,
+    "velocidad": 107,
+    "recarga": 85
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku/219_GOKU, ULTRA INSTINTO SEÑAL,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 4,
+   "nombre": "UI Dominado",
+   "aura": "white",
+   "poder": {
+    "valor": 9e+25,
+    "texto": "90 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 175,
+    "ataque": 250,
+    "velocidad": 113,
+    "recarga": 80
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku/218_GOKU, ULTRA INSTINTO DOMINADO,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 15
+}

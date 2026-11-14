@@ -1,0 +1,51 @@
+{
+ "id": "reycold",
+ "nombre": "Rey Cold",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Rayo Mortal",
+ "descJuego": "El padre de Freezer y Cooler; enorme, cruel y con un cañón de ki en la mano.",
+ "regen": 0,
+ "raza": "Raza de Freezer",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 3000000,
+    "texto": "3 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 120,
+    "velocidad": 78,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/DeviantArt/440_REY COLD (AlquimistaSK)"
+  }
+ ],
+ "num": 98
+}

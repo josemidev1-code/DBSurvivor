@@ -1,0 +1,125 @@
+{
+ "id": "gogetafan",
+ "nombre": "Gogeta Fanmade",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Stardust Breaker",
+ "descJuego": "Gogeta en formas de fans.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Gogeta es la fusión resultante de Son Goku y Vegeta, cuando realizan la Danza de la Fusión correctamente para enfrentarse a Broly. Su voz es una voz dual que contiene las voces de Goku y Vegeta. Junto con el poder todopoderoso de los dos, con la astucia y perspicacia de Vegeta, y la habilidad pródiga de las artes marciales de Goku, es uno de los guerreros más temibles para desafiar a una pelea.",
+ "api": {
+  "id": 65,
+  "nombre": "Gogeta",
+  "url": "https://dragonball-api.com/api/characters/65",
+  "ki": "250 Billion",
+  "maxKi": "15 septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Blue Evolution",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.26e+27,
+    "texto": "1,3 mil cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 135,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "04_Heroes_y_videojuegos/Gogeta/156_Gogeta ssj blue evolution,DBH, Andrés Gamen animation"
+  },
+  {
+   "n": 1,
+   "nombre": "SSJ4 Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.5119999999999997e+27,
+    "texto": "1,5 mil cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 169,
+    "velocidad": 96,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gogeta/118_GOGETA SSJ4 BLUE, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )"
+  },
+  {
+   "n": 2,
+   "nombre": "MUI",
+   "aura": "silver",
+   "poder": {
+    "valor": 1.5119999999999997e+27,
+    "texto": "1,5 mil cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 203,
+    "velocidad": 102,
+    "recarga": 90
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "05_Fanmade_y_alternativos/Gogeta/117_GOGETA MUI+MEGA INSTINTO,BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 56
+}

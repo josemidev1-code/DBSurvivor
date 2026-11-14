@@ -1,0 +1,159 @@
+{
+ "id": "broly",
+ "nombre": "Broly",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "El Super Saiyan Legendario. Empieza con Eraser Cannon.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Otros",
+ "planeta": "Vegeta",
+ "descripcion": "Broly es un Saiyajin que posee un poder gigantesco e incontrolable, el cual se manifiesta en toda su magnitud cuando se convierte en el Super Saiyajin Legendario. Incluso cuando apenas era un bebé su nivel de poder alcanzaba cifras inmensas que provocaban asombro y preocupación entre los de su raza",
+ "api": {
+  "id": 68,
+  "nombre": "Broly",
+  "url": "https://dragonball-api.com/api/characters/68",
+  "ki": "7 quadrillion",
+  "maxKi": "11.2 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Contenido",
+   "aura": "gold",
+   "poder": {
+    "valor": 7000000000000000.0,
+    "texto": "7 mil billones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 125,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Broly/017_Broly Segunda Forma"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 8400000000000000.0,
+    "texto": "8,4 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 175,
+    "ataque": 156,
+    "velocidad": 80,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "quieta",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Broly/019_Broly Terceira forma"
+  },
+  {
+   "n": 2,
+   "nombre": "Legendario",
+   "aura": "green",
+   "poder": {
+    "valor": 1.1199999999999999e+25,
+    "texto": "11,2 cuatrillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 190,
+    "ataque": 188,
+    "velocidad": 84,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Broly/016_Broly Full Power"
+  },
+  {
+   "n": 3,
+   "nombre": "Super Saiyan 4",
+   "aura": "red",
+   "poder": {
+    "valor": 8400000000000000.0,
+    "texto": "8,4 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 205,
+    "ataque": 219,
+    "velocidad": 89,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Broly/018_Broly Ssj4"
+  }
+ ],
+ "num": 11
+}

@@ -1,0 +1,57 @@
+{
+ "id": "krilin",
+ "nombre": "Krilin",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Kienzan",
+ "descJuego": "Rápido. Empieza con Kienzan.",
+ "regen": 0,
+ "raza": "Humano",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Amigo cercano de Goku y guerrero valiente, es un personaje del manga y anime de Dragon Ball. Es uno de los principales discípulos de Kame-Sen'nin, Guerrero Z, y el mejor amigo de Son Goku. Es junto a Bulma uno de los personajes de apoyo principales de Dragon Ball, Dragon Ball Z y Dragon Ball Super. Aparece en Dragon Ball GT como personaje secundario. En el Arco de Majin Boo, se retira de las artes marciales, optando por formar una familia, como el esposo de la Androide Número 18 y el padre de Marron.",
+ "api": {
+  "id": 11,
+  "nombre": "Krillin",
+  "url": "https://dragonball-api.com/api/characters/11",
+  "ki": "1.000.000",
+  "maxKi": "1 Billion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 1000000.0,
+    "texto": "1 millón",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 105,
+    "ataque": 95,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "07_Personajes_sin_saga_concreta/Krilin/075_Kuririn"
+  }
+ ],
+ "num": 4
+}

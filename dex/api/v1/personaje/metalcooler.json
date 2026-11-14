@@ -1,0 +1,51 @@
+{
+ "id": "metalcooler",
+ "nombre": "Metal Cooler",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Rayo de Metal Cooler",
+ "descJuego": "Cooler reconstruido en metal: se regenera y no conoce el cansancio.",
+ "regen": 0,
+ "raza": "Máquina",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 400000000,
+    "texto": "400 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 120,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/463_METAL COOLER (Mast3rK1ll3r171)"
+  }
+ ],
+ "num": 83
+}

@@ -1,0 +1,57 @@
+{
+ "id": "trunksgt",
+ "nombre": "Trunks GT",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Buster Cannon",
+ "descJuego": "Trunks adulto en el viaje de GT: presidente de la Corporación Cápsula y guerrero veterano.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Hijo de Vegeta y Bulma. Es un mestizo entre humano terrícola y Saiyano nacido en la Tierra, e hijo de Bulma y Vegeta, el cual es introducido en el Arco de los Androides y Cell. Más tarde en su vida como joven, se termina convirtiendo en un luchador de artes marciales, el mejor amigo de Son Goten y en el hermano mayor de su hermana Bra.",
+ "api": {
+  "id": 16,
+  "nombre": "Trunks",
+  "url": "https://dragonball-api.com/api/characters/16",
+  "ki": "50.000.000",
+  "maxKi": "37.4 septllion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 50000000.0,
+    "texto": "50 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 110,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "POCA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "quieta",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "02_GT/DeviantArt/474_TRUNKS GT (Breckhhh)"
+  }
+ ],
+ "num": 78
+}

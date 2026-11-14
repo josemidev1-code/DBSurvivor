@@ -1,0 +1,227 @@
+{
+ "id": "freezer",
+ "nombre": "Freezer",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kienzan",
+ "descJuego": "El emperador del universo. Empieza con el Disco Mortal.",
+ "regen": 0,
+ "raza": "Raza de Freezer",
+ "bando": "Ejército de Freezer",
+ "planeta": "Freezer No. 79",
+ "descripcion": "Freezer es el tirano espacial y el principal antagonista de la saga de Freezer.",
+ "api": {
+  "id": 5,
+  "nombre": "Freezer",
+  "url": "https://dragonball-api.com/api/characters/5",
+  "ki": "530.000",
+  "maxKi": "52.71 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "1ª Forma",
+   "aura": "purple",
+   "poder": {
+    "valor": 530000.0,
+    "texto": "530.000",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 125,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/Freezer/028_Freeza Primeira Forma"
+  },
+  {
+   "n": 1,
+   "nombre": "3ª Forma",
+   "aura": "purple",
+   "poder": {
+    "valor": 2120000.0,
+    "texto": "2,1 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 156,
+    "velocidad": 91,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/Freezer/029_Freeza Terceira Forma"
+  },
+  {
+   "n": 2,
+   "nombre": "Forma Final",
+   "aura": "purple",
+   "poder": {
+    "valor": 60000000.0,
+    "texto": "60 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 188,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/Freezer/026_Freeza Forma Final"
+  },
+  {
+   "n": 3,
+   "nombre": "100%",
+   "aura": "purple",
+   "poder": {
+    "valor": 120000000.0,
+    "texto": "120 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 155,
+    "ataque": 219,
+    "velocidad": 101,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/Freezer/027_Freeza Full Power"
+  },
+  {
+   "n": 4,
+   "nombre": "Golden",
+   "aura": "gold",
+   "poder": {
+    "valor": 1e+20,
+    "texto": "100 trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 170,
+    "ataque": 250,
+    "velocidad": 106,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/01_Resurreccion_de_Freezer_y_Whis/Freezer/030_Golden Freeza"
+  },
+  {
+   "n": 5,
+   "nombre": "Black",
+   "aura": "purple",
+   "poder": {
+    "valor": 1e+21,
+    "texto": "mil trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 185,
+    "ataque": 281,
+    "velocidad": 112,
+    "recarga": 75
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/07_Granola/Freezer/004_BLACK FREEZER, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 33
+}

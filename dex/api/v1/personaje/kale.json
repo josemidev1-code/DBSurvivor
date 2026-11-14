@@ -1,0 +1,85 @@
+{
+ "id": "kale",
+ "nombre": "Kale",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Su furia despierta al Berserker.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Universo 6",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "gold",
+   "poder": {
+    "valor": 3000000000,
+    "texto": "3 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 110,
+    "velocidad": 78,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Kale/070_Kale"
+  },
+  {
+   "n": 1,
+   "nombre": "Berserker",
+   "aura": "green",
+   "poder": {
+    "valor": 4e+18,
+    "texto": "4 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 145,
+    "ataque": 138,
+    "velocidad": 83,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Kale/071_Kale Ssj"
+  }
+ ],
+ "num": 20
+}

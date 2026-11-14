@@ -1,0 +1,57 @@
+{
+ "id": "a13",
+ "nombre": "Androide 13",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "SS Deadly Bomber",
+ "descJuego": "El androide sureño de la película: SS Deadly Bomber y puños de hierro.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Villano",
+ "planeta": "Tierra",
+ "descripcion": "Android 13 es un androide peligroso que aparece en la película \"El Regreso de Cooler\".",
+ "api": {
+  "id": 26,
+  "nombre": "Android 13",
+  "url": "https://dragonball-api.com/api/characters/26",
+  "ki": "195.000.000",
+  "maxKi": "562.500.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 195000000.0,
+    "texto": "195 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 115,
+    "velocidad": 78,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/462_ANDROIDE 13 (Strice12)"
+  }
+ ],
+ "num": 85
+}

@@ -1,0 +1,57 @@
+{
+ "id": "bulma",
+ "nombre": "Bulma",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Pistola de Bulma",
+ "descJuego": "La genio de la Corporación Cápsula: pistola, cápsulas y mucho carácter.",
+ "regen": 0,
+ "raza": "Humano",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Bulma es la protagonista femenina de la serie manga Dragon Ball y sus adaptaciones al anime Dragon Ball, Dragon Ball Z, Dragon Ball Super y Dragon Ball GT. Es hija del Dr. Brief y su esposa Panchy, hermana menor de Tights y una gran amiga de Son Goku con quien inicia la búsqueda de las Esferas del Dragón. En Dragon Ball Z tuvo a Trunks, primogénito de quien sería su esposo Vegeta, a su hija Bra[3] y su hijo adulto del tiempo alterno Trunks del Futuro Alternativo.",
+ "api": {
+  "id": 4,
+  "nombre": "Bulma",
+  "url": "https://dragonball-api.com/api/characters/4",
+  "ki": "0",
+  "maxKi": "0"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 5000000.0,
+    "texto": "5 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 90,
+    "ataque": 95,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "07_Personajes_sin_saga_concreta/DeviantArt/459_BULMA (ChipsoDebik)"
+  }
+ ],
+ "num": 86
+}

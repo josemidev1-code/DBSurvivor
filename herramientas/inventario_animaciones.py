@@ -85,35 +85,40 @@ quietas = collections.Counter(k for r in jug for k, v in r['e'].items() if v == 
 faltan = collections.Counter(k for r in jug for k, v in r['e'].items() if v == 'falta')
 NOMA = dict(ANIM)
 
-L = [f'# Inventario de animaciones ({datetime.date.today()})', '',
-     'Generado con `python herramientas/inventario_animaciones.py`. Para cada forma se miran las 14 animaciones del juego: '
-     '✅ animada (2 fotogramas o más; moverse, daño, muerte y retrato valen con 1), 🟡 quieta (un solo fotograma), ❌ falta (el juego usa otra).', '',
-     '## Resumen', '',
-     'El retrato se enseña pero no cuenta para «completa» (no es una animación; sin él se usa el de otra forma).', '',
-     f'- Formas jugables: **{len(jug)}**. Completas: **{cuenta["COMPLETA"]}** · casi (1-2 pendientes): **{cuenta["CASI"]}** · '
-     f'a medias (3-6): **{cuenta["A MEDIAS"]}** · poco animadas (7 o más): **{cuenta["POCA"]}**.',
-     f'- Formas de enemigos: **{len(ene)}**. Formas ocultas (no se ven en el juego): **{sum(r["grupo"] == "oculto" for r in filas)}**.',
-     f'- Carpetas de `sprites/` con personajes que el juego no usa: **{len(sin_montar)}** ({sum(sin_montar.values())} imágenes).', '',
-     '**Lo que más se repite en las formas jugables:**', '']
-for k, n in quietas.most_common():
-    L.append(f'- {NOMA[k]} con un solo fotograma: {n} formas')
-for k, n in faltan.most_common():
-    L.append(f'- {NOMA[k]} sin animación propia: {n} formas')
-L += ['', '## Formas jugables (de menos a más animadas)', '',
-      '| Personaje · forma | Estado | ' + ' | '.join(n for _, n in ANIM) + ' |',
-      '|---|---|' + '---|' * len(ANIM)]
-for r in jug:
-    L.append(f'| {r["nom"]} (`{r["h"]}/{r["f"]}`) | {nivel(r)} | ' + ' | '.join(ICO[r['e'][k]] for k, _ in ANIM) + ' |')
-L += ['', '## Enemigos', '', '| Enemigo | Estado | ' + ' | '.join(n for _, n in ANIM) + ' |', '|---|---|' + '---|' * len(ANIM)]
-for r in ene:
-    L.append(f'| {r["nom"]} (`{r["h"]}/{r["f"]}`) | {nivel(r)} | ' + ' | '.join(ICO[r['e'][k]] for k, _ in ANIM) + ' |')
-L += ['', '## Carpetas de personajes sin montar en el juego', '', 'No tienen ninguna animación en el juego todavía.', '']
-for p, n in sorted(sin_montar.items()):
-    L.append(f'- `{p}` ({n} imágenes)')
-L += ['', '## Cómo animar con Piskel', '',
-      '1. `python herramientas/exportar_piskel_lote.py` deja en `piskel_animaciones/<personaje>_<forma>/` un `.piskel` por animación.',
-      '2. Abre el `.piskel` en https://www.piskelapp.com (Abrir → archivo), edita o añade fotogramas y guarda el `.piskel`.',
-      '3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `piskel_animaciones/LEEME.md` antes).', '']
-open(os.path.join(RAIZ, '01 - Guía y documentación', 'INVENTARIO_ANIMACIONES.md'), 'w', encoding='utf-8').write('\n'.join(L))
-print(len(jug), dict(cuenta), len(ene), len(sin_montar))
-print('quietas', quietas.most_common()); print('faltan', faltan.most_common())
+def escribir():
+    L = [f'# Inventario de animaciones ({datetime.date.today()})', '',
+         'Generado con `python herramientas/inventario_animaciones.py`. Para cada forma se miran las 14 animaciones del juego: '
+         '✅ animada (2 fotogramas o más; moverse, daño, muerte y retrato valen con 1), 🟡 quieta (un solo fotograma), ❌ falta (el juego usa otra).', '',
+         '## Resumen', '',
+         'El retrato se enseña pero no cuenta para «completa» (no es una animación; sin él se usa el de otra forma).', '',
+         f'- Formas jugables: **{len(jug)}**. Completas: **{cuenta["COMPLETA"]}** · casi (1-2 pendientes): **{cuenta["CASI"]}** · '
+         f'a medias (3-6): **{cuenta["A MEDIAS"]}** · poco animadas (7 o más): **{cuenta["POCA"]}**.',
+         f'- Formas de enemigos: **{len(ene)}**. Formas ocultas (no se ven en el juego): **{sum(r["grupo"] == "oculto" for r in filas)}**.',
+         f'- Carpetas de `sprites/` con personajes que el juego no usa: **{len(sin_montar)}** ({sum(sin_montar.values())} imágenes).', '',
+         '**Lo que más se repite en las formas jugables:**', '']
+    for k, n in quietas.most_common():
+        L.append(f'- {NOMA[k]} con un solo fotograma: {n} formas')
+    for k, n in faltan.most_common():
+        L.append(f'- {NOMA[k]} sin animación propia: {n} formas')
+    L += ['', '## Formas jugables (de menos a más animadas)', '',
+          '| Personaje · forma | Estado | ' + ' | '.join(n for _, n in ANIM) + ' |',
+          '|---|---|' + '---|' * len(ANIM)]
+    for r in jug:
+        L.append(f'| {r["nom"]} (`{r["h"]}/{r["f"]}`) | {nivel(r)} | ' + ' | '.join(ICO[r['e'][k]] for k, _ in ANIM) + ' |')
+    L += ['', '## Enemigos', '', '| Enemigo | Estado | ' + ' | '.join(n for _, n in ANIM) + ' |', '|---|---|' + '---|' * len(ANIM)]
+    for r in ene:
+        L.append(f'| {r["nom"]} (`{r["h"]}/{r["f"]}`) | {nivel(r)} | ' + ' | '.join(ICO[r['e'][k]] for k, _ in ANIM) + ' |')
+    L += ['', '## Carpetas de personajes sin montar en el juego', '', 'No tienen ninguna animación en el juego todavía.', '']
+    for p, n in sorted(sin_montar.items()):
+        L.append(f'- `{p}` ({n} imágenes)')
+    L += ['', '## Cómo animar con Piskel', '',
+          '1. `python herramientas/exportar_piskel_lote.py` deja en `piskel_animaciones/<personaje>_<forma>/` un `.piskel` por animación.',
+          '2. Abre el `.piskel` en https://www.piskelapp.com (Abrir → archivo), edita o añade fotogramas y guarda el `.piskel`.',
+          '3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `piskel_animaciones/LEEME.md` antes).', '']
+    open(os.path.join(RAIZ, '01 - Guía y documentación', 'INVENTARIO_ANIMACIONES.md'), 'w', encoding='utf-8').write('\n'.join(L))
+    print(len(jug), dict(cuenta), len(ene), len(sin_montar))
+    print('quietas', quietas.most_common()); print('faltan', faltan.most_common())
+
+
+if __name__ == '__main__':
+    escribir()

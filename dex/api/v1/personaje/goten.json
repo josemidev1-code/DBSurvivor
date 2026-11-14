@@ -1,0 +1,51 @@
+{
+ "id": "goten",
+ "nombre": "Goten",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Pequeño y muy veloz. Empieza con Kamehameha.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 4000000000.0,
+    "texto": "4 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 100,
+    "ataque": 100,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/433_GOTEN (ThatonePeepDA)"
+  }
+ ],
+ "num": 6
+}

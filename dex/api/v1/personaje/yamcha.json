@@ -1,0 +1,57 @@
+{
+ "id": "yamcha",
+ "nombre": "Yamcha",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Sōkidan",
+ "descJuego": "Colmillo de lobo y Sōkidan teledirigido. Rápido.",
+ "regen": 0,
+ "raza": "Humano",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Luchador que solía ser un bandido del desierto.",
+ "api": {
+  "id": 13,
+  "nombre": "Yamcha",
+  "url": "https://dragonball-api.com/api/characters/13",
+  "ki": "1.980.000",
+  "maxKi": "4.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 1980000.0,
+    "texto": "2 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 100,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/DeviantArt/431_YAMCHA (Dryy7)"
+  }
+ ],
+ "num": 5
+}

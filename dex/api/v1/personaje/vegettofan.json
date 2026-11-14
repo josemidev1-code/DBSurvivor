@@ -1,0 +1,159 @@
+{
+ "id": "vegettofan",
+ "nombre": "Vegetto Fanmade",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha",
+ "descJuego": "Vegetto en formas de fans.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Vegetto es el personaje más fuerte dentro del manga original y uno de los personajes más poderosos de toda la serie en general. Su poder es el resultado del máximo poder combinado de Goku y Vegeta, multiplicado varias veces su fuerza, siendo una de las fusiones más poderosas dentro de la franquicia.",
+ "api": {
+  "id": 66,
+  "nombre": "Vegetto",
+  "url": "https://dragonball-api.com/api/characters/66",
+  "ki": "180 Billion",
+  "maxKi": "10.8 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Dios",
+   "aura": "red",
+   "poder": {
+    "valor": 1.5e+21,
+    "texto": "1,5 mil trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 135,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegetto/248_VEGETTO SSJ GOD MEJORADO, ANDRÉS GAMEN ANIMATIONS 🗿👍"
+  },
+  {
+   "n": 1,
+   "nombre": "Dios Kaioken",
+   "aura": "red",
+   "poder": {
+    "valor": 1.8e+21,
+    "texto": "1,8 mil trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 169,
+    "velocidad": 96,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegetto/214_VEGETTO SSJ DIOS KAIOKEN, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Saiyan 4",
+   "aura": "red",
+   "poder": {
+    "valor": 1.8e+21,
+    "texto": "1,8 mil trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 203,
+    "velocidad": 102,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegetto/265_VEGGITO SSJ4 GT"
+  },
+  {
+   "n": 3,
+   "nombre": "MUI",
+   "aura": "silver",
+   "poder": {
+    "valor": 1.8e+26,
+    "texto": "180 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 180,
+    "ataque": 236,
+    "velocidad": 107,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegetto/246_VEGETTO MUI+MEGA INSTINTO,BY ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 57
+}

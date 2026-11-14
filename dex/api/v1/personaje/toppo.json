@@ -1,0 +1,57 @@
+{
+ "id": "toppo",
+ "nombre": "Toppo",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Líder de las Tropas del Orgullo.",
+ "regen": 0,
+ "raza": "Dios",
+ "bando": "Tropas del Orgullo",
+ "planeta": "Universo 11",
+ "descripcion": "Toppo es el líder de las Tropas del Orgullo, guerreros de la justicia del Universo 11 que actúan como protectores de la paz y superhéroes del bien. Él ha sido entrenado por el ángel guía Marcarita, convirtiéndose así en un candidato como futuro Dios de la Destrucción en su universo.",
+ "api": {
+  "id": 39,
+  "nombre": "Toppo",
+  "url": "https://dragonball-api.com/api/characters/39",
+  "ki": "99 Quadrillion",
+  "maxKi": "7.5 Sextillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "red",
+   "poder": {
+    "valor": 9.9e+16,
+    "texto": "99 mil billones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 120,
+    "velocidad": 73,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "01_Dragon_Ball_Super/04_Torneo_del_Poder/Toppo/087_Toppo"
+  }
+ ],
+ "num": 44
+}

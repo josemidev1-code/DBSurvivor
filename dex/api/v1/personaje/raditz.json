@@ -1,0 +1,91 @@
+{
+ "id": "raditz",
+ "nombre": "Raditz",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Galick Gun",
+ "descJuego": "El hermano de Goku. Saturday Crush y Double Sunday.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Ejército de Freezer",
+ "planeta": "Vegeta",
+ "descripcion": "Es el hijo de Bardock y Gine, y hermano mayor de Son Goku. Él es uno de los pocos saiyanos que sobrevivieron a la destrucción del Planeta Vegeta, y formaba parte del equipo de Vegeta. Es el primer antagonista de Dragon Ball Z.",
+ "api": {
+  "id": 30,
+  "nombre": "Raditz",
+  "url": "https://dragonball-api.com/api/characters/30",
+  "ki": "1.500 ",
+  "maxKi": "1.500 "
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 1500,
+    "texto": "1.500",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 105,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/00_Saiyans/Raditz/084_Raditz"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 900000000.0,
+    "texto": "900 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 131,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Raditz/085_Raditz Ssj"
+  }
+ ],
+ "num": 29
+}

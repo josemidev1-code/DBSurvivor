@@ -1,0 +1,193 @@
+{
+ "id": "vegeta",
+ "nombre": "Vegeta",
+ "rareza": 0,
+ "rarezaNombre": "INICIAL",
+ "tecnica": "Galick Gun",
+ "descJuego": "Más ataque, menos vida. Empieza con Galick Gun.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Vegeta",
+ "descripcion": "Príncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antagónico, poco después decide rebelarse ante el Imperio de Freeza, volviéndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegaría a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, él es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antihéroe, a finalmente un héroe a lo largo del transcurso de la historia, convirtiéndose así en el deuteragonista de la serie.",
+ "api": {
+  "id": 2,
+  "nombre": "Vegeta",
+  "url": "https://dragonball-api.com/api/characters/2",
+  "ki": "54.000.000",
+  "maxKi": "19.84 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 54000000.0,
+    "texto": "54 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 100,
+    "ataque": 115,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/00_Saiyans/Vegeta/097_Vegeta Sayajin Saga"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 330000000.0,
+    "texto": "330 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 115,
+    "ataque": 144,
+    "velocidad": 91,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Vegeta/237_VEGETA ( SAGA FREEZER ) SSJ 1, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Vegeta",
+   "aura": "gold",
+   "poder": {
+    "valor": 3240000000.0,
+    "texto": "3,2 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 172,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Vegeta/099_Vegeta Ssj Grade"
+  },
+  {
+   "n": 3,
+   "nombre": "Majin Vegeta",
+   "aura": "gold",
+   "poder": {
+    "valor": 6300000000.0,
+    "texto": "6,3 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 145,
+    "ataque": 201,
+    "velocidad": 101,
+    "recarga": 85
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Vegeta/090_Majin Vegeta"
+  },
+  {
+   "n": 4,
+   "nombre": "SSJ Blue",
+   "aura": "blue",
+   "poder": {
+    "valor": 1e+20,
+    "texto": "100 trillones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 230,
+    "velocidad": 106,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/242_VEGETA SSJ BLUE PERFECTO ( MANGA ) ANDRÉS GAMEN ANIMATIONS ( SPRITE HD ) ✓"
+  }
+ ],
+ "num": 2
+}

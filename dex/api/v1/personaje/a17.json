@@ -1,0 +1,57 @@
+{
+ "id": "a17",
+ "nombre": "Androide 17",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Esferas del Dragón",
+ "descJuego": "Energía infinita y barrera. Muy veloz.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Villano",
+ "planeta": "Tierra",
+ "descripcion": "Antes de ser secuestrado, es el hermano mellizo de la Androide Número 18, quien al igual que ella antes de ser Androide era un humano normal hasta que fueron secuestrados por el Dr. Gero, y es por eso que lo odian. Tras su cambio de humano a Androide, le insertaron un chip con el objetivo de destruir a Son Goku, quien en su juventud extermino al Ejército del Listón Rojo. Al considerarse defectuoso porque no quería ser 'esclavo de nadie', el Dr. Gero les había colocado a ambos hermanos, un dispositivo de apagado para detenerlos en cualquier momento de desobediencia, pero cuando el científico los despierta, el rencor y rebeldía de 17 eran tal que se encargó de destruir el control que lo volvería a encerrar y acto seguido mató sin piedad a su propio creador. Su situación se le iría en contra, ya que Cell tenía como misión absorber a 17 y 18 para completar su desarrollo y convertirse en Cell Perfecto.",
+ "api": {
+  "id": 22,
+  "nombre": "Android 17",
+  "url": "https://dragonball-api.com/api/characters/22",
+  "ki": "320.000.000",
+  "maxKi": "40 Quintillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "blue",
+   "poder": {
+    "valor": 320000000.0,
+    "texto": "320 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 105,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Androides/011_Androide 17"
+  }
+ ],
+ "num": 32
+}

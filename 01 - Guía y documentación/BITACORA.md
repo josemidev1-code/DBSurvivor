@@ -4381,3 +4381,17 @@ ode --check.
 - Nuevo `herramientas/inventario_animaciones.py` → `INVENTARIO_ANIMACIONES.md`: para cada forma mira las 14 animaciones del juego y marca ✅ animada / 🟡 quieta (1 fotograma) / ❌ falta. Moverse con 1 fotograma vale (vuelan, según la guía); el retrato se enseña pero no cuenta para «completa». Nombres desde `herramientas/nombres_personajes.json` (volcado de `AS.HDEF`).
 - Resultado: 225 formas jugables → 13 completas, 140 casi (1-2 pendientes), 69 a medias, 3 poco animadas. 40 formas de enemigos (39 a medias). 88 carpetas de `sprites/` con personajes sin montar. Lo más repetido: brazos arriba (110 sin, 92 con 1 fotograma), combo 3 (79 sin), patada 2 (63), rayo (50), combo 2 (47), muerte (33). Auditoría antigua regenerada.
 - Siguiente: Josemi elige por dónde empezar a animar con Piskel (`exportar_piskel_lote.py` → piskelapp.com → `importar_piskel.py`).
+
+## 2026-11-14 — Claude (DB Dex, al estilo de PMD Sprite Collab y PokéAPI)
+
+### Lo que pidió el usuario
+- «https://sprites.pmdcollab.org/ y PokéAPI: míralo bien, quiero algo así. Y la API de los personajes de Dragon Ball para las estadísticas; si no hay, nos las inventamos como en el anime.»
+- Luego: «Quiero tener eso como referencia para mejorar las animaciones de los personajes.»
+
+### Lo que hice
+- `herramientas/descargar_dbapi.py` → `herramientas/dbapi/` (58 personajes y planetas de dragonball-api.com).
+- `herramientas/generar_dex.py` → `dex/datos.js` y `dex/api/v1/personaje/*.json` (API estática al estilo de PokéAPI). Lee `herramientas/hdef.json`, el volcado de HDEF (`--volcar` lo rehace).
+  - Para cada forma visible: las estadísticas del juego (con la subida por forma de `stats()`), el estado de las 13 animaciones (de `inventario_animaciones.py`, que ahora se puede importar) y el poder de pelea.
+  - Poder de pelea: el de la API cuando trae la forma (83 formas) o inventado como en el anime (141 formas, con la escala de Goku y su fuerza, o los poderes conocidos del anime).
+- `dex/index.html` (se abre con doble clic): lista con retrato, rareza, puntos por animación y filtros (estado, rareza, raza, «le falta: …») y orden por número, nombre, poder o menos animados. La ficha de cada forma trae las 13 animaciones en movimiento, las estadísticas, el poder (API o inventado), los datos del anime, el comando de Piskel y el enlace a su JSON. Explicado en `dex/LEEME.md`.
+- 138 personajes jugables y 224 formas.

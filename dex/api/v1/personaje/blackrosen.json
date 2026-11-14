@@ -1,0 +1,51 @@
+{
+ "id": "blackrosen",
+ "nombre": "Black Rosé Evolution",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "Goku Black Rosé evolucionado, de los fans.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Rosé Evolution",
+   "aura": "purple",
+   "poder": {
+    "valor": 1.2e+20,
+    "texto": "120 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 130,
+    "velocidad": 90,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/176_Goku black ssj Rosen evolution.Andres Gamen"
+  }
+ ],
+ "num": 133
+}

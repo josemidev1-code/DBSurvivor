@@ -1,0 +1,91 @@
+{
+ "id": "vegetasuper",
+ "nombre": "Vegeta Super",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Galick Gun",
+ "descJuego": "Orgullo divino. Empieza con Galick Gun.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Vegeta",
+ "descripcion": "Príncipe de los Saiyans, inicialmente un villano, pero luego se une a los Z Fighters. A pesar de que a inicios de Dragon Ball Z, Vegeta cumple un papel antagónico, poco después decide rebelarse ante el Imperio de Freeza, volviéndose un aliado clave para los Guerreros Z. Con el paso del tiempo llegaría a cambiar su manera de ser, optando por permanecer y vivir en la Tierra para luchar a su lado contra las inminentes adversidades que superar. Junto con Piccolo, él es de los antiguos enemigos de Goku que ha evolucionando al pasar de ser un villano y antihéroe, a finalmente un héroe a lo largo del transcurso de la historia, convirtiéndose así en el deuteragonista de la serie.",
+ "api": {
+  "id": 2,
+  "nombre": "Vegeta",
+  "url": "https://dragonball-api.com/api/characters/2",
+  "ki": "54.000.000",
+  "maxKi": "19.84 Septillion"
+ },
+ "formas": [
+  {
+   "n": 2,
+   "nombre": "SSJ God",
+   "aura": "red",
+   "poder": {
+    "valor": 4.5e+17,
+    "texto": "450 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 195,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/00_Dioses_y_Super_Saiyan_God/Vegeta/244_VEGETA SSJ GOD MANGA, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 4,
+   "nombre": "Blue Full Power",
+   "aura": "blue",
+   "poder": {
+    "valor": 1.8e+19,
+    "texto": "18 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 170,
+    "ataque": 260,
+    "velocidad": 106,
+    "recarga": 80
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/231_SUPER VEGETA SSJ BLUE, ANDRÉS GAMEN ANIMATIONS ✓"
+  }
+ ],
+ "num": 26
+}

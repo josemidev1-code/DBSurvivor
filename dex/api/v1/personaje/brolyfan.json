@@ -1,0 +1,91 @@
+{
+ "id": "brolyfan",
+ "nombre": "Broly Fanmade",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Broly en formas inventadas por fans.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Otros",
+ "planeta": "Vegeta",
+ "descripcion": "Broly es un Saiyajin que posee un poder gigantesco e incontrolable, el cual se manifiesta en toda su magnitud cuando se convierte en el Super Saiyajin Legendario. Incluso cuando apenas era un bebé su nivel de poder alcanzaba cifras inmensas que provocaban asombro y preocupación entre los de su raza",
+ "api": {
+  "id": 68,
+  "nombre": "Broly",
+  "url": "https://dragonball-api.com/api/characters/68",
+  "ki": "7 quadrillion",
+  "maxKi": "11.2 Septillion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Falso",
+   "aura": "green",
+   "poder": {
+    "valor": 3.5e+17,
+    "texto": "350 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 130,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Broly/211_BROLY SSJ FALSO,DBZ, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan 3",
+   "aura": "gold",
+   "poder": {
+    "valor": 4.2e+17,
+    "texto": "420 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 162,
+    "velocidad": 80,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Broly/006_BROLY SSJ 3 DBZ ANDRES GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 55
+}

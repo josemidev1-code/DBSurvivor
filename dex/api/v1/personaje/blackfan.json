@@ -1,0 +1,153 @@
+{
+ "id": "blackfan",
+ "nombre": "Goku Black Fanmade",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "Goku Black en formas creadas por fans: Rage, Rosé Kaioken, Rosé UI, MUI, SSJ falso, Majin Dios y Rosé Evolution.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Rage",
+   "aura": "gold",
+   "poder": {
+    "valor": 6000000000000000.0,
+    "texto": "6 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 130,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/123_GOKU BLACK SSJ RAGE, ANDRÉS GAMEN ANIMATIONS (SPRITE HD )"
+  },
+  {
+   "n": 1,
+   "nombre": "Rosé Kaioken",
+   "aura": "red",
+   "poder": {
+    "valor": 2.7e+19,
+    "texto": "27 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 162,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/212_GOKU BLACK SSJ ROSE KAIOKEN, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 2,
+   "nombre": "Rosé Ultra Instinto",
+   "aura": "purple",
+   "poder": {
+    "valor": 3e+24,
+    "texto": "3 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 195,
+    "velocidad": 99,
+    "recarga": 90
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/213_GOKU BLACK ULTRA INSTITO SSJ ROSE, ANDRÉS GAMEN ANIMATIONS"
+  },
+  {
+   "n": 3,
+   "nombre": "MUI",
+   "aura": "silver",
+   "poder": {
+    "valor": 2.7e+25,
+    "texto": "27 cuatrillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 165,
+    "ataque": 228,
+    "velocidad": 104,
+    "recarga": 85
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/122_GOKU BLACK MUI , ANDRÉS GAMEN ANIMATIONS, Sprites HD"
+  }
+ ],
+ "num": 64
+}

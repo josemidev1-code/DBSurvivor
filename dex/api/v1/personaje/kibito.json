@@ -1,0 +1,57 @@
+{
+ "id": "kibito",
+ "nombre": "Kibito",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Onda Paralizante",
+ "descJuego": "El guardaespaldas del Supremo Kaioshin: teletransporte, ondas paralizantes y curación.",
+ "regen": 0,
+ "raza": "Kaioshin",
+ "bando": "Otros",
+ "planeta": "Nucleo del Mundo",
+ "descripcion": "Kibito es el ayudante y guardaespaldas del Kaio-shin del Este. Es un experto combatiente y con ciertos poderes curativos y mágicos como corresponde a su función. Su técnica más conocida es el Kai-Kai.",
+ "api": {
+  "id": 78,
+  "nombre": "Kibito",
+  "url": "https://dragonball-api.com/api/characters/78",
+  "ki": "unknown",
+  "maxKi": "unknown"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 60000000.0,
+    "texto": "60 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 100,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/479_KIBITO (Dryy7)"
+  }
+ ],
+ "num": 74
+}

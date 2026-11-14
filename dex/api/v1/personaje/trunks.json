@@ -1,0 +1,125 @@
+{
+ "id": "trunks",
+ "nombre": "Trunks",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Burning Attack",
+ "descJuego": "Del futuro. Empieza con Burning Attack.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Hijo de Vegeta y Bulma. Es un mestizo entre humano terrícola y Saiyano nacido en la Tierra, e hijo de Bulma y Vegeta, el cual es introducido en el Arco de los Androides y Cell. Más tarde en su vida como joven, se termina convirtiendo en un luchador de artes marciales, el mejor amigo de Son Goten y en el hermano mayor de su hermana Bra.",
+ "api": {
+  "id": 16,
+  "nombre": "Trunks",
+  "url": "https://dragonball-api.com/api/characters/16",
+  "ki": "50.000.000",
+  "maxKi": "37.4 septllion"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 50000000.0,
+    "texto": "50 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 112,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "quieta",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Trunks/081_Mirai Trunks"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 905000000.0,
+    "texto": "905 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 140,
+    "velocidad": 91,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Trunks/082_Super Mirai Trunks"
+  },
+  {
+   "n": 2,
+   "nombre": "Base Manga",
+   "aura": "white",
+   "poder": {
+    "valor": 100000000.0,
+    "texto": "100 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 168,
+    "velocidad": 96,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "quieta",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Trunks/235_TRUNKS DEL FUTURO,SSJ2 MANGA, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 8
+}

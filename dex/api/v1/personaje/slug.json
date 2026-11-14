@@ -1,0 +1,51 @@
+{
+ "id": "slug",
+ "nombre": "Lord Slug",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Bola Explosiva",
+ "descJuego": "Namekiano demoníaco de la película: crece, estira el brazo y lanza bolas de ki.",
+ "regen": 0,
+ "raza": "Namekiano",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 4000000,
+    "texto": "4 millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 130,
+    "ataque": 115,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/445_LORD SLUG (Adrianzin09)"
+  }
+ ],
+ "num": 96
+}

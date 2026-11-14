@@ -1,0 +1,57 @@
+{
+ "id": "a16",
+ "nombre": "Androide 16",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Eraser Cannon",
+ "descJuego": "Enorme y resistente. Puño Cohete y Hell Flash.",
+ "regen": 0,
+ "raza": "Androide",
+ "bando": "Villano",
+ "planeta": "Tierra",
+ "descripcion": "Android 16 es un androide gigante conocido por su amor a la naturaleza y la vida.",
+ "api": {
+  "id": 23,
+  "nombre": "Android 16",
+  "url": "https://dragonball-api.com/api/characters/23",
+  "ki": "440.000.000",
+  "maxKi": "440.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 440000000.0,
+    "texto": "440 millones",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 160,
+    "ataque": 115,
+    "velocidad": 73,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "quieta",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Androides/010_Androide 16"
+  }
+ ],
+ "num": 31
+}

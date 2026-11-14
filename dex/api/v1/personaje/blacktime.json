@@ -1,0 +1,119 @@
+{
+ "id": "blacktime",
+ "nombre": "Black Time Breaker",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "El Goku Black enmascarado de Heroes.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Dios",
+   "aura": "red",
+   "poder": {
+    "valor": 8000000000000000.0,
+    "texto": "8 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 130,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "04_Heroes_y_videojuegos/Goku Black/124_GOKU BLACK TIME BREAKER SSJ DIOS, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )✓"
+  },
+  {
+   "n": 1,
+   "nombre": "SSJ Rosé",
+   "aura": "purple",
+   "poder": {
+    "valor": 2.7e+18,
+    "texto": "2,7 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 162,
+    "velocidad": 94,
+    "recarga": 95
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "04_Heroes_y_videojuegos/Goku Black/126_GOKU BLACK TIME BREAKER SSJR MEJORADO , ANDRÉS GAMEN ANIMATIONS ( SPRITE HD REMASTERIZADO )"
+  },
+  {
+   "n": 2,
+   "nombre": "SSJ Rosé 3",
+   "aura": "purple",
+   "poder": {
+    "valor": 3e+19,
+    "texto": "30 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 195,
+    "velocidad": 99,
+    "recarga": 90
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/125_GOKU BLACK TIME BREAKER SSJ ROSE 3 SWL, ANDRÉS GAMEN ANIMATIONS"
+  }
+ ],
+ "num": 63
+}

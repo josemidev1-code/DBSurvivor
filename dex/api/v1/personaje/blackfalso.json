@@ -1,0 +1,51 @@
+{
+ "id": "blackfalso",
+ "nombre": "Goku Black SSJ Falso",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha Negro",
+ "descJuego": "Goku Black en Super Saiyan falso, de los fans.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "SSJ Falso",
+   "aura": "gold",
+   "poder": {
+    "valor": 3000000000.0,
+    "texto": "3 mil millones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 117,
+    "velocidad": 88,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "05_Fanmade_y_alternativos/Goku Black/177_Goku black ssj falso.Andres Gamen"
+  }
+ ],
+ "num": 134
+}

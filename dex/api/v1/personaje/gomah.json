@@ -1,0 +1,51 @@
+{
+ "id": "gomah",
+ "nombre": "Rey Gomah",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Onda Demoníaca",
+ "descJuego": "El Rey Demonio del Reino Demoníaco en Daima: bastón, magia y un aura morada.",
+ "regen": 0,
+ "raza": "Demonio",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "purple",
+   "poder": {
+    "valor": 5000000000000000.0,
+    "texto": "5 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 120,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "falta",
+    "attack3": "falta",
+    "kick2": "falta",
+    "beam": "falta",
+    "up": "falta"
+   },
+   "pack": "03_Daima/DeviantArt/469_REY GOMAH (ChrisReinerVV)"
+  }
+ ],
+ "num": 80
+}

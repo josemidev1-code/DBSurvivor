@@ -1,0 +1,51 @@
+{
+ "id": "nappa",
+ "nombre": "Nappa",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Break Cannon",
+ "descJuego": "El gigante de élite Saiyan. Break Cannon y Bomber DX.",
+ "regen": 0,
+ "raza": "Saiyan",
+ "bando": "Ejército de Freezer",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "gold",
+   "poder": {
+    "valor": 4000,
+    "texto": "4.000",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 150,
+    "ataque": 115,
+    "velocidad": 75,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "animada",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/00_Saiyans/DeviantArt/403_NAPPA (Strice12)"
+  }
+ ],
+ "num": 66
+}

@@ -1,0 +1,119 @@
+{
+ "id": "black",
+ "nombre": "Goku Black",
+ "rareza": 5,
+ "rarezaNombre": "LEGENDARIO",
+ "tecnica": "Kamehameha",
+ "descJuego": "El villano del futuro. Pega fuerte. Empieza con Kamehameha.",
+ "regen": 0,
+ "raza": "Kaioshin (cuerpo de Goku)",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "gold",
+   "poder": {
+    "valor": 6000000000000000.0,
+    "texto": "6 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 110,
+    "ataque": 120,
+    "velocidad": 83,
+    "recarga": 100
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Goku Black/040_Goku Black 2"
+  },
+  {
+   "n": 1,
+   "nombre": "Super Saiyan",
+   "aura": "gold",
+   "poder": {
+    "valor": 7200000000000000.0,
+    "texto": "7,2 mil billones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 125,
+    "ataque": 150,
+    "velocidad": 88,
+    "recarga": 95
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Goku Black/043_Goku Black SSJ(versión 2)"
+  },
+  {
+   "n": 2,
+   "nombre": "Super Saiyan Rosé",
+   "aura": "red",
+   "poder": {
+    "valor": 1.8e+19,
+    "texto": "18 trillones",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 140,
+    "ataque": 180,
+    "velocidad": 93,
+    "recarga": 90
+   },
+   "estado": "CASI",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "falta"
+   },
+   "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Goku Black/041_Goku Black Rose"
+  }
+ ],
+ "num": 14
+}

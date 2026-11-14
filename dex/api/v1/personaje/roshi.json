@@ -1,0 +1,57 @@
+{
+ "id": "roshi",
+ "nombre": "Maestro Roshi",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Kamehameha",
+ "descJuego": "El maestro de la tortuga; inventó el Kamehameha y aún puede hinchar los músculos.",
+ "regen": 0,
+ "raza": "Humano",
+ "bando": "Guerreros Z",
+ "planeta": "Tierra",
+ "descripcion": "Maestro de artes marciales y mentor de Goku. Conocido bajo el nombre de Muten Rosh, fue en su momento el terrícola más fuerte de la Tierra, y mucha gente lo recuerda como el \"Dios de las Artes Marciales\", pero antes de poder ostentar dicho título tuvo que trabajar y estudiar las artes marciales con su maestro Mutaito y su eterno rival Tsuru-Sen'nin.",
+ "api": {
+  "id": 17,
+  "nombre": "Master Roshi",
+  "url": "https://dragonball-api.com/api/characters/17",
+  "ki": "500.000",
+  "maxKi": "350.000.000"
+ },
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "white",
+   "poder": {
+    "valor": 500000.0,
+    "texto": "500.000",
+    "fuente": "dragonball-api"
+   },
+   "stats": {
+    "pv": 120,
+    "ataque": 112,
+    "velocidad": 86,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "falta",
+    "kick2": "animada",
+    "beam": "falta",
+    "up": "quieta"
+   },
+   "pack": "07_Personajes_sin_saga_concreta/DeviantArt/417_MAESTRO ROSHI (Xxspartan1235xX)"
+  }
+ ],
+ "num": 28
+}

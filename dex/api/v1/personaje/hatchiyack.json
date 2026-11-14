@@ -1,0 +1,51 @@
+{
+ "id": "hatchiyack",
+ "nombre": "Hatchiyack",
+ "rareza": 4,
+ "rarezaNombre": "ÉPICO",
+ "tecnica": "Revenger Cannon",
+ "descJuego": "La máquina de venganza tsufur: se alimenta de odio y lanza el Revenger Cannon.",
+ "regen": 0,
+ "raza": "Máquina Tuffle",
+ "bando": "Villano",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "green",
+   "poder": {
+    "valor": 1000000000000.0,
+    "texto": "1 billón",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 135,
+    "ataque": 120,
+    "velocidad": 81,
+    "recarga": 100
+   },
+   "estado": "A MEDIAS",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "falta",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "falta",
+    "beam": "animada",
+    "up": "quieta"
+   },
+   "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/475_HATCHIYACK (BLZofOZ)"
+  }
+ ],
+ "num": 77
+}

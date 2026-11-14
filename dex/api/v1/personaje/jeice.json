@@ -1,0 +1,51 @@
+{
+ "id": "jeice",
+ "nombre": "Jeice",
+ "rareza": 3,
+ "rarezaNombre": "RARO",
+ "tecnica": "Burning Attack",
+ "descJuego": "El veloz de las Fuerzas Especiales. Lanza la Crusher Ball.",
+ "regen": 0,
+ "raza": "Raza de Jeice",
+ "bando": "Fuerzas Especiales Ginyu",
+ "planeta": null,
+ "descripcion": null,
+ "api": null,
+ "formas": [
+  {
+   "n": 0,
+   "nombre": "Base",
+   "aura": "red",
+   "poder": {
+    "valor": 40000,
+    "texto": "40.000",
+    "fuente": "inventado"
+   },
+   "stats": {
+    "pv": 105,
+    "ataque": 105,
+    "velocidad": 91,
+    "recarga": 100
+   },
+   "estado": "COMPLETA",
+   "animaciones": {
+    "idle": "animada",
+    "move": "animada",
+    "attack": "animada",
+    "kick": "animada",
+    "ki": "animada",
+    "pow": "animada",
+    "hurt": "animada",
+    "faint": "animada",
+    "portrait": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
+   },
+   "pack": "00_Dragon_Ball_Z/01_Namek_y_Freezer/DeviantArt/402_JEICE (MrDryy)"
+  }
+ ],
+ "num": 68
+}
