@@ -4431,3 +4431,15 @@ ode --check.
 - Hecho (commits bd45f733 y e8e9d91a): Trunks GT, Goku MUI Blue, Black Rosé, Majin Black, Goku UI señal (solo poder: el resto del pack es otra forma), Trunks niño base y SSJ, Goku MUI Dios, Black Rosé Kaioken, Rey Gomah, Merus, Vegeta Blue manga dañado y Kyabe SSJ (073).
 - Sin nada bueno que añadir: Black SSJ falso, Tarble, Kibitoshin; Nuova y Bulma ya usan casi todo su pack.
 - **Packs con zoom puesto a mano** (`escalaFrames`, p. ej. Vegeta manga 243 y seguramente Vegeta Dios 305, el que se quedó fuera en la tanda 14): los fotogramas nuevos salen enormes si no se les da su zoom. Se calcula como altura del recorte ÷ ~52 px (de pie) y se revisa a ojo.
+- Continuación (commits 65cce6cc … 0cfbcb09): Vegeta Dios (arreglado el zoom que dejó fuera la tanda 14), Vegeta Blue manga perfecto, Kyabe SSJ 452, Goku MUI Blue Evo, SSJ Supremo, SSJ Legendario, Rey Mono, SSJ Blue perfecto (Kienzan en brazos arriba), Evil SSJ2, modo bestia, Black SSJ Rage, Black UI Rosé, Black MUI, Gohan Bestia v2, Black Time Breaker Dios y Rosé 3, poder de Goku Moro (3 formas), muerte de Goku SSJ (220), Piccolo y Bardock SSJ4, patada 2 de Goku Ultra SSJ Dios.
+- Lo revisado sin fotograma bueno se guarda como `[]` en el JSON de la tanda (así no vuelve a salir como pendiente). Las vistas previas de `_revisar` no se suben al repositorio.
+- Piskel exportado para todas las formas tocadas; inventario y Dex regenerados. `node herramientas/comprobar_animaciones_ataques.cjs` correcto; el juego carga sin errores. animaciones_juego.js?v=145.
+- Resultado: 0 formas «poco animadas» (antes 3), 56 a medias (antes 69), 156 casi completas (antes 140).
+
+### A medias
+- Quedan unas 170 formas con 1-3 cosas pendientes, sobre todo «brazos arriba» con un solo fotograma (100) o sin él (97), combo 3 (67) y rayo (46). Muchas ya las revisaron tandas antiguas (las que tienen `[]` no salen).
+- Sin mirar todavía: Vegetto Blue (`vegitoblue254`, pack de 546 fotogramas) y Black Time Breaker mejorado (`blacktime/1`, 251).
+- `previsualizar.py` falla en alguna forma con claves `tecnica_*` (IndexError en CLAVES); `montar_animaciones.py` sí funciona.
+
+### Siguiente paso recomendado
+- Seguir con la lista de pendientes (script de la sesión: cruzar `inventario_animaciones` con las claves que faltan en `leer_config()`), empezando por las que les falta muerte, combo 3 o rayo. Para packs con `escalaFrames`, dar a cada fotograma nuevo su zoom (altura ÷ altura de la guardia).
