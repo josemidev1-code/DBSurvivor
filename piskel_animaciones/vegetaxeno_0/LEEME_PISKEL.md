@@ -27,5 +27,6 @@ Después: `python herramientas/montar_animaciones.py vegetaxeno` y revisión vis
 | **Hurt** | 2 | 70x70 | [`vegetaxeno_Hurt.piskel`](Hurt/vegetaxeno_Hurt.piskel) | [`vegetaxeno_Hurt.gif`](Hurt/vegetaxeno_Hurt.gif) | [`vegetaxeno_Hurt_sheet.png`](Hurt/vegetaxeno_Hurt_sheet.png) |
 | **Faint** | 1 | 60x60 | [`vegetaxeno_Faint.piskel`](Faint/vegetaxeno_Faint.piskel) | [`vegetaxeno_Faint.gif`](Faint/vegetaxeno_Faint.gif) | [`vegetaxeno_Faint_sheet.png`](Faint/vegetaxeno_Faint_sheet.png) |
 | **Attack2** | 2 | 60x60 | [`vegetaxeno_Attack2.piskel`](Attack2/vegetaxeno_Attack2.piskel) | [`vegetaxeno_Attack2.gif`](Attack2/vegetaxeno_Attack2.gif) | [`vegetaxeno_Attack2_sheet.png`](Attack2/vegetaxeno_Attack2_sheet.png) |
+| **Attack3** | 2 | 56x56 | [`vegetaxeno_Attack3.piskel`](Attack3/vegetaxeno_Attack3.piskel) | [`vegetaxeno_Attack3.gif`](Attack3/vegetaxeno_Attack3.gif) | [`vegetaxeno_Attack3_sheet.png`](Attack3/vegetaxeno_Attack3_sheet.png) |
 | **Kick2** | 2 | 70x70 | [`vegetaxeno_Kick2.piskel`](Kick2/vegetaxeno_Kick2.piskel) | [`vegetaxeno_Kick2.gif`](Kick2/vegetaxeno_Kick2.gif) | [`vegetaxeno_Kick2_sheet.png`](Kick2/vegetaxeno_Kick2_sheet.png) |
 | **Beam** | 2 | 56x56 | [`vegetaxeno_Beam.piskel`](Beam/vegetaxeno_Beam.piskel) | [`vegetaxeno_Beam.gif`](Beam/vegetaxeno_Beam.gif) | [`vegetaxeno_Beam_sheet.png`](Beam/vegetaxeno_Beam_sheet.png) |

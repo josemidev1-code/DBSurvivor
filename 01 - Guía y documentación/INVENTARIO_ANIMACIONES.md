@@ -6,7 +6,7 @@ Generado con `python herramientas/inventario_animaciones.py`. Para cada forma se
 
 El retrato se enseña pero no cuenta para «completa» (no es una animación; sin él se usa el de otra forma).
 
-- Formas jugables: **225**. Completas: **18** · casi (1-2 pendientes): **164** · a medias (3-6): **43** · poco animadas (7 o más): **0**.
+- Formas jugables: **225**. Completas: **18** · casi (1-2 pendientes): **165** · a medias (3-6): **42** · poco animadas (7 o más): **0**.
 - Formas de enemigos: **40**. Formas ocultas (no se ven en el juego): **48**.
 - Carpetas de `sprites/` con personajes que el juego no usa: **88** (6646 imágenes).
 
@@ -17,11 +17,11 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 - Poder/aura con un solo fotograma: 12 formas
 - Retrato sin animación propia: 144 formas
 - Brazos arriba sin animación propia: 83 formas
-- Combo 3 sin animación propia: 54 formas
-- Muerte sin animación propia: 33 formas
-- Patada 2 sin animación propia: 33 formas
+- Combo 3 sin animación propia: 53 formas
+- Patada 2 sin animación propia: 32 formas
+- Muerte sin animación propia: 30 formas
 - Rayo sin animación propia: 29 formas
-- Combo 2 sin animación propia: 23 formas
+- Combo 2 sin animación propia: 21 formas
 
 ## Formas jugables (de menos a más animadas)
 
@@ -42,14 +42,14 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Black Time Breaker · Ssj Rosé (`blacktime/1`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Black Rosé Evolution (`blackrosen/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | Tao Pai Pai (`taopaipai/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| Supremo Kaioshin (`shin/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Rey Gomah (`gomah/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Rey Cold (`reycold/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Goku Ui · Ultra Instinto (`gokuui/3`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ | 🟡 |
 | Goku Ui Blue (`gokumuiblue/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | 🟡 |
 | Trunks · Base (`trunks/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | Trunks Niño · Super Saiyan (`trunksnino/1`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Trunks Gt (`trunksgt/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ |
+| Supremo Kaioshin (`shin/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ |
+| Rey Cold (`reycold/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
 | Moro (`moro/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ |
 | Metal Cooler (`metalcooler/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ |
 | Merus (`merus/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ |
@@ -63,7 +63,6 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Goku Black Kaioshin (`blackkaioshin/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ |
 | Goku Black Fanmade · Rosé Ultra Instinto (`blackfan/2`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | 🟡 |
 | Gohan · Definitivo (`gohan/3`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | 🟡 |
-| Gohan Del Futuro (`gohanfut/0`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
 | Gohan Adulto · Místico (`gohanadult/1`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ | 🟡 |
 | Gohan Adulto · Bestia (`gohanadult/2`) | A MEDIAS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ |
 | Freezer · 3ª Forma (`freezer/1`) | A MEDIAS | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
@@ -74,7 +73,6 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Vegetto · Base (`vegetto/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | Vegeta · Majin Vegeta (`vegeta/3`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | Vegeta Yardrat (`vegetayardrat/0`) | CASI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
-| Vegeta Xeno · Base (`vegetaxeno/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Vegeta Super · Blue Full Power (`vegetasuper/4`) | CASI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Vegeta Dios · Broly (`vegetabroly/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | 🟡 |
 | Vegeta Blue Manga · Ssj Blue (`vegetamanga/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | 🟡 |
@@ -85,7 +83,6 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Pan Gt (`pangt/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Omega Shenron (`omega/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Nappa (`nappa/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | 🟡 |
-| Majin Kuu (`majinkuu/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Majin Buu · Super Buu (`buu/2`) | CASI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Majin Buu · Gordo (`buu/0`) | CASI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Majin Buu · Buu Gohan (`buu/3`) | CASI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
@@ -102,19 +99,18 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Goku Xeno · Super Saiyan 4 (`gokuxeno/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Xeno · Ssj Dios (`gokuxeno/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Ultra Ssj Dios (`gokuultradios/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
-| Goku Ui Dios (`gokumuidios/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Ssj Supremo (`gokussjsupremo/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Goku Ssj Kaioken (`gokussjkaioken/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Ssj Chaqueta (`gokussjchaqueta/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Película Broly · Super Saiyan (`gokubroly/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Goku Película Broly · Ssj Dios (`gokubroly/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | 🟡 |
 | Goku Patrullero (`gokupatrulla/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | 🟡 |
-| Goku Gt · Super Saiyan 4 (`gokugt/3`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Goku Fanmade · Bestia (`gokualt/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Goku Black · Super Saiyan (`black/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | Goku Black Fanmade · Ssj Rage (`blackfan/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Gohan · Base (`gohan/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | Gohan Manga (`gohanmanga/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | 🟡 |
+| Gohan Del Futuro (`gohanfut/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Gogeta · Super Gogeta (`gogeta/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Cell · Perfecto (`cell/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ |
 | Cell · Imperfecto (`cell/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
@@ -140,6 +136,7 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Vegeta · Super Saiyan (`vegeta/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Vegeta · Ssj Blue (`vegeta/4`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Vegeta · Base (`vegeta/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
+| Vegeta Xeno · Base (`vegetaxeno/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Vegeta Ui Dominado (`vegetamui/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Vegeta Super · Ssj God (`vegetasuper/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Vegeta Gt · Super Saiyan 4 (`vegetagt/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
@@ -162,6 +159,7 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Raditz · Base (`raditz/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Piccolo · Piccolo Naranja (`piccolo/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Piccolo · Base (`piccolo/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Majin Kuu (`majinkuu/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Majin Duu (`majinduu/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Majin Buu · Maligno (`buu/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Majin Buu · Kid Buu (`buu/4`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
@@ -183,6 +181,7 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Goku Xeno · Base (`gokuxeno/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Goku Ui Verdadero (`gokuuiverdadero/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Ui Señal (`gokuuisign/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
+| Goku Ui Dios (`gokumuidios/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Super · Ssj God (`gokusuper/3`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Super · Kaioken (`gokusuper/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Ssj4 Dios (`gokussj4dios/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
@@ -191,6 +190,7 @@ El retrato se enseña pero no cuenta para «completa» (no es una animación; si
 | Goku Película Broly · Base (`gokubroly/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
 | Goku Niño (`gokunino/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Goku Maligno Ssj2 (`gokuevilssj2/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Goku Gt · Super Saiyan 4 (`gokugt/3`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Goku Fanmade · Ikari (`gokualt/1`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🟡 |
 | Goku Black · Super Saiyan Rosé (`black/2`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Goku Black · Base (`black/0`) | CASI | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |

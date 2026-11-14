@@ -1,0 +1,111 @@
+{
+  "heroe": "gokugt",
+  "forma": "2",
+  "pack": "02_GT/Goku/260_GOKU SSJ3 GT",
+  "frames": [
+    {
+      "sha256": "3a165b8600161cf57df5e7caae9574d47b5207ba799488225e9f9a3cc51e7cb4",
+      "indice": 15
+    },
+    {
+      "sha256": "2f70a7247747dc39a9bbb54c37c70d3a5dcadb78f573fe6040ca08c96da79c9e",
+      "indice": 16
+    },
+    {
+      "sha256": "5725548a7711cdd4da795a139eb059557ea62f81d6863b7a4b00fc7168dff24d",
+      "indice": 24
+    },
+    {
+      "sha256": "2e763f2f9b398725e54bb16823804fb6ae20417d627b828cfe129ddc0939f63f",
+      "indice": 33
+    },
+    {
+      "sha256": "b0b748f513f26a11b008cf2de832aa4a357f86194dceee69b2632c996dd2fc00",
+      "indice": 36
+    },
+    {
+      "sha256": "e10f53d467091d6d95fbf35529336acb311a8d61edf23ba0bd827fec203ea1e5",
+      "indice": 35
+    },
+    {
+      "sha256": "5f6922eab969ac8614e4d4a85893daadb70118f9529d72b2b9dc5b6a3f155aa5",
+      "indice": 46
+    },
+    {
+      "sha256": "137aa1eac52542c823f5c8e85a6e7b46cea857b50ad2068f426bd2455df5d0bf",
+      "indice": 47
+    },
+    {
+      "sha256": "3a165b8600161cf57df5e7caae9574d47b5207ba799488225e9f9a3cc51e7cb4",
+      "indice": 15
+    },
+    {
+      "sha256": "e7b739ff908beb93c36ebc79b33009d23fa4409c3506238141b648aca27c9922",
+      "indice": 93
+    },
+    {
+      "sha256": "a27dcac29e64229754572c7e81886caf45853e7e2f41fb134ff720a92f4943f3",
+      "indice": 50
+    },
+    {
+      "sha256": "c72745afc4a1c4c2fd8d1dc75c2fd2e70ade6eb597cb3befaa74d066cbb0464d",
+      "indice": 51
+    },
+    {
+      "sha256": "8b22b0d5a7dd1c5f46a63a25e0b1d681c69a1610c1dfef3071c40a4126ef0e8e",
+      "indice": 52
+    },
+    {
+      "sha256": "f9636e19c3ed8525f8b6867a36cbac2a7e1cb5c65b6bb850ebfd3c88e0c67fff",
+      "indice": 23
+    },
+    {
+      "sha256": "1ae1afabacf2ae999f5eceb78b8729e8cd6882b55226b38d2d4c61147163aa3f",
+      "indice": 25
+    },
+    {
+      "sha256": "4cb7dc86ff73b1bde2fbd3a712dd05fd078df15e9ca338bacf863eed3c923e77",
+      "indice": 75
+    },
+    {
+      "sha256": "cc389d0b56f7d7c98df19e371265ca66729d0c8d00619b043d8fd34a0ec8b1ab",
+      "indice": 76
+    },
+    {
+      "sha256": "5b6fd24e473c852a154f7577f522690783e549ce024fec20b95ea7f4cb1adc73",
+      "indice": 97
+    },
+    {
+      "sha256": "cc41f2e1f76488f61d9f63a0fc3629177258bf6c6687d3aaacd7d1c7ed910ff2",
+      "indice": 98
+    },
+    {
+      "sha256": "bd86e13c8c2ca5d5f869ad53212ccc2137d79300f644a8f5e6597bfb9fd80232",
+      "indice": 100
+    },
+    {
+      "sha256": "cf0a871fd05812154708ca259610514ac4071ddf08028edb0f648780e1eed15f",
+      "indice": 40
+    },
+    {
+      "sha256": "2bc4d542b30b136f2841416f722a62062cf7b64c240c8a6458ce906f8485b94e",
+      "indice": 41
+    },
+    {
+      "sha256": "e4cec4817ae364d37332b9438da8c3e696e7343b6d260f823da3f1bf5a85a710",
+      "indice": 42
+    },
+    {
+      "sha256": "21eeafe4dd6e0dc0962e892bf3ae2f2d1aed287c59acac9c4fd9f661e0be92d4",
+      "indice": 54
+    },
+    {
+      "sha256": "e82cb71b593c874f6bdeb72960f5db46c678973b0a4a2cb3f42a4b5ca567c4d6",
+      "indice": 57
+    },
+    {
+      "sha256": "5725548a7711cdd4da795a139eb059557ea62f81d6863b7a4b00fc7168dff24d",
+      "indice": 24
+    }
+  ]
+}

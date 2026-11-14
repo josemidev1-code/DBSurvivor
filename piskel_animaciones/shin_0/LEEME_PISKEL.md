@@ -22,8 +22,9 @@ Después: `python herramientas/montar_animaciones.py shin` y revisión visual. S
 | **Walk** | 1 | 44x44 | [`shin_Walk.piskel`](Walk/shin_Walk.piskel) | [`shin_Walk.gif`](Walk/shin_Walk.gif) | [`shin_Walk_sheet.png`](Walk/shin_Walk_sheet.png) |
 | **Attack** | 3 | 52x52 | [`shin_Attack.piskel`](Attack/shin_Attack.piskel) | [`shin_Attack.gif`](Attack/shin_Attack.gif) | [`shin_Attack_sheet.png`](Attack/shin_Attack_sheet.png) |
 | **Kick** | 2 | 62x62 | [`shin_Kick.piskel`](Kick/shin_Kick.piskel) | [`shin_Kick.gif`](Kick/shin_Kick.gif) | [`shin_Kick_sheet.png`](Kick/shin_Kick_sheet.png) |
-| **Cast** | 2 | 58x58 | [`shin_Cast.piskel`](Cast/shin_Cast.piskel) | [`shin_Cast.gif`](Cast/shin_Cast.gif) | [`shin_Cast_sheet.png`](Cast/shin_Cast_sheet.png) |
+| **Cast** | 2 | 52x52 | [`shin_Cast.piskel`](Cast/shin_Cast.piskel) | [`shin_Cast.gif`](Cast/shin_Cast.gif) | [`shin_Cast_sheet.png`](Cast/shin_Cast_sheet.png) |
 | **Pow** | 2 | 50x50 | [`shin_Pow.piskel`](Pow/shin_Pow.piskel) | [`shin_Pow.gif`](Pow/shin_Pow.gif) | [`shin_Pow_sheet.png`](Pow/shin_Pow_sheet.png) |
 | **Hurt** | 2 | 50x50 | [`shin_Hurt.piskel`](Hurt/shin_Hurt.piskel) | [`shin_Hurt.gif`](Hurt/shin_Hurt.gif) | [`shin_Hurt_sheet.png`](Hurt/shin_Hurt_sheet.png) |
 | **Faint** | 1 | 56x56 | [`shin_Faint.piskel`](Faint/shin_Faint.piskel) | [`shin_Faint.gif`](Faint/shin_Faint.gif) | [`shin_Faint_sheet.png`](Faint/shin_Faint_sheet.png) |
-| **Beam** | 2 | 54x54 | [`shin_Beam.piskel`](Beam/shin_Beam.piskel) | [`shin_Beam.gif`](Beam/shin_Beam.gif) | [`shin_Beam_sheet.png`](Beam/shin_Beam_sheet.png) |
+| **Attack2** | 2 | 52x52 | [`shin_Attack2.piskel`](Attack2/shin_Attack2.piskel) | [`shin_Attack2.gif`](Attack2/shin_Attack2.gif) | [`shin_Attack2_sheet.png`](Attack2/shin_Attack2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`shin_Beam.piskel`](Beam/shin_Beam.piskel) | [`shin_Beam.gif`](Beam/shin_Beam.gif) | [`shin_Beam_sheet.png`](Beam/shin_Beam_sheet.png) |
