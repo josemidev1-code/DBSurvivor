@@ -1,0 +1,115 @@
+{
+  "heroe": "bardock",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/05_Broly/Bardock/003_BARDOCK,DBS BROLY, ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "64027ba641b90d13a2d89d9be686105b1ce502670a28394e12dbb66f6f4f25c6",
+      "indice": 53
+    },
+    {
+      "sha256": "67588983f17186c1c3e0586171546da7cc597f8f79770b4968cc7b3e7ab09b31",
+      "indice": 54
+    },
+    {
+      "sha256": "450845ecdca27c21bbdcba67eb6b3e93ed8deb8f1e62470721375b03a6f6e819",
+      "indice": 132
+    },
+    {
+      "sha256": "832acd3b1810e2918fabc311ca42b85b5dda6d13a82f26568788a3a8561995c2",
+      "indice": 90
+    },
+    {
+      "sha256": "b455092a32ecb36c04c2fe920866b553c319cb7c6d18e2ba72619bc57722bd3e",
+      "indice": 91
+    },
+    {
+      "sha256": "c0c09bf5f3be4ff46fc929245833cadc235caab7ff7a5c93502c2aa4a2e052f2",
+      "indice": 99
+    },
+    {
+      "sha256": "939d2cd61e78eb4fde410f8f78a6fc0cfa64cafecf3464eed4f87819e35ef289",
+      "indice": 109
+    },
+    {
+      "sha256": "f9e19d22de591a9c769da7d6115a69e4e2f97cb2c4897f099b687d096021d078",
+      "indice": 110
+    },
+    {
+      "sha256": "84258867b6c6fe79290c520dcde48e39c763c9e560db53f3792820b686d34659",
+      "indice": 111
+    },
+    {
+      "sha256": "982da8a27ae78465e0a0ee8dad317cd24b0907b9f8807529b62bb5b5f17d836e",
+      "indice": 112
+    },
+    {
+      "sha256": "64027ba641b90d13a2d89d9be686105b1ce502670a28394e12dbb66f6f4f25c6",
+      "indice": 53
+    },
+    {
+      "sha256": "b0501e6884037e0b802d513d88465a06b536f57c08a2faa988a66af4373af514",
+      "indice": 60
+    },
+    {
+      "sha256": "cf6acef587049f2e40ae209dca03b4f694835dea8c4b1aae11709a543587c729",
+      "indice": 74
+    },
+    {
+      "sha256": "ab929225f5fd8ec9d9915cf3337c3f3b25b2764fa9581793be4c5e486a92f4b4",
+      "indice": 75
+    },
+    {
+      "sha256": "d4e699f43cbedc3dec39d78f9aa521adeeb2b2307a42e96dd7963da2d96d591d",
+      "indice": 84
+    },
+    {
+      "sha256": "866809f2682ecbe9cf611ab5048c1c86d67877e7e17b8a301935debd62d0b913",
+      "indice": 85
+    },
+    {
+      "sha256": "1a280db1436302891171895718a5d2353e1a3f20630c945b1d4f0a24d73e8615",
+      "indice": 76
+    },
+    {
+      "sha256": "381b1178baf31a690219280f4ad546da072e6d27c1c0a24bcf8a97fd164d34b7",
+      "indice": 100
+    },
+    {
+      "sha256": "78dead106b4c99cded0a24f25b413ea1ae08ada14427d40d45ae7a267214a0f0",
+      "indice": 101
+    },
+    {
+      "sha256": "400820d33c5f7fe432ccfda8ae3f6b7f7c0c2a460684fe6f7e8e26571a829b3b",
+      "indice": 102
+    },
+    {
+      "sha256": "30a9ff7b211350ab750d33755dcc7162cb0340841a05494965db9e7942d77549",
+      "indice": 103
+    },
+    {
+      "sha256": "f09d3e184db8b4e72081252feafba83c6bb0db0d8b5c13c4664aa00ddcd0978e",
+      "indice": 113
+    },
+    {
+      "sha256": "52d94370bd4a23b4895fb5632a152341d07fcf44162ce9c9881d77ca56a218b6",
+      "indice": 114
+    },
+    {
+      "sha256": "64027ba641b90d13a2d89d9be686105b1ce502670a28394e12dbb66f6f4f25c6",
+      "indice": 53
+    },
+    {
+      "sha256": "b0501e6884037e0b802d513d88465a06b536f57c08a2faa988a66af4373af514",
+      "indice": 60
+    },
+    {
+      "sha256": "2ef6bd11e9a1dcf4ccfb2ae5352ecc05abbf23a2954b39c5ea9461118a19cda6",
+      "indice": 123
+    },
+    {
+      "sha256": "450845ecdca27c21bbdcba67eb6b3e93ed8deb8f1e62470721375b03a6f6e819",
+      "indice": 132
+    }
+  ]
+}

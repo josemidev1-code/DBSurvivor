@@ -1,0 +1,111 @@
+{
+  "heroe": "goku",
+  "forma": "3",
+  "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Majin Buu/147_GOKU SSJ3,SAGA MAJIN BUU,DBZ, ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "171bf35fd6d13dbeec794f55885dccbd3238aeddb0f5868d0db3776a7ffe2b10",
+      "indice": 51
+    },
+    {
+      "sha256": "f9bf97438c451de24e2f80cc98e6f2e26852336eb0fd4ad0a22992edbb28dc70",
+      "indice": 52
+    },
+    {
+      "sha256": "903aaacc4d63c438196543d545e2d32d2fe72e2fcc9e34a4caf0445765fe2ad5",
+      "indice": 32
+    },
+    {
+      "sha256": "81e11e25d9db314a20f80933b9f0cde187a98a2864a377595f8be38ac432d141",
+      "indice": 88
+    },
+    {
+      "sha256": "7748f90a6fcc0d98828b28b7f5a08527bea24b5871e49a4de87886d9afe86563",
+      "indice": 89
+    },
+    {
+      "sha256": "3badf351add430df77de7310bc803a390da6405df1da0fd6b5715d83066a7596",
+      "indice": 90
+    },
+    {
+      "sha256": "ab3d904f7599ce4664263b5c498ff0e08dab0bacb587fc3713e70fb03a60e8b6",
+      "indice": 91
+    },
+    {
+      "sha256": "31c2501f9017550c6e408b55be2dbdf5054ed22da98897135006846725c64b6f",
+      "indice": 82
+    },
+    {
+      "sha256": "b2a1ce8d3fc254c03dfc9f1ac347c0392f72d51b865fe44a4762ca9956ed4d80",
+      "indice": 85
+    },
+    {
+      "sha256": "df9d10cb9d80a6454280c1f116f93765e271b1ee819dfcffbe8f49f79c27b5a8",
+      "indice": 64
+    },
+    {
+      "sha256": "002d20ed533b6af31b5a8bd364fe0c28fd72f60abadd2be937ba84da4d1c38cc",
+      "indice": 59
+    },
+    {
+      "sha256": "f8192c427908b028d08f1962c5ff44c3586e26e7b0270761a74fd55276103776",
+      "indice": 66
+    },
+    {
+      "sha256": "3f872bec49de0e38f566ec0a150e9d312d7ad288bfa96721aad8e61fca28d048",
+      "indice": 67
+    },
+    {
+      "sha256": "49671a407ff28ba5be5df552a6c90f0abb628759829543d60989dde4a8356f25",
+      "indice": 48
+    },
+    {
+      "sha256": "49671a407ff28ba5be5df552a6c90f0abb628759829543d60989dde4a8356f25",
+      "indice": 48
+    },
+    {
+      "sha256": "b3f9a6b178a53cce01700ecdc11a1c6d41a09cf3ea58e269453ea69ec509cbb4",
+      "indice": 22
+    },
+    {
+      "sha256": "cc61e903012a40d65957c89719ec56fe64aa2023936ecbd3becda34fd67acca3",
+      "indice": 62
+    },
+    {
+      "sha256": "20d82516ec8e62e5dee03b267cbe220b432e14acbfcd7bc6c33944eeb17013fd",
+      "indice": 63
+    },
+    {
+      "sha256": "65b57f41bf363e01bc0079564cdb00a1206e2893e92ac2c698d5b6880a097b73",
+      "indice": 31
+    },
+    {
+      "sha256": "903aaacc4d63c438196543d545e2d32d2fe72e2fcc9e34a4caf0445765fe2ad5",
+      "indice": 32
+    },
+    {
+      "sha256": "4c07522c7102ce0206b975a67d87b7b88ac903df3a4164c256477dcf879383f4",
+      "indice": 70
+    },
+    {
+      "sha256": "a2328cbb8d80bfeff4c910ed8510e63cffe7a49b187ca690cc1450fdf66bd026",
+      "indice": 76
+    },
+    {
+      "sha256": "df9d10cb9d80a6454280c1f116f93765e271b1ee819dfcffbe8f49f79c27b5a8",
+      "indice": 64
+    },
+    {
+      "sha256": "002d20ed533b6af31b5a8bd364fe0c28fd72f60abadd2be937ba84da4d1c38cc",
+      "indice": 59
+    },
+    {
+      "sha256": "f3f1fe94d48f844320718880bfd2475f84aa1b03b1b1cac47249a0927a60fe2a",
+      "indice": 25
+    },
+    {
+      "sha256": "903aaacc4d63c438196543d545e2d32d2fe72e2fcc9e34a4caf0445765fe2ad5",
+      "indice": 32
+    }
+  ]
+}

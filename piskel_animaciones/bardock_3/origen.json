@@ -1,0 +1,111 @@
+{
+  "heroe": "bardock",
+  "forma": "3",
+  "pack": "05_Fanmade_y_alternativos/Bardock/014_Bardock SSJ4",
+  "frames": [
+    {
+      "sha256": "d5c2dbbfaf7656fbc3484b87e996e10efb8cb0c86d2ad3fb9a4144df2f983f03",
+      "indice": 2
+    },
+    {
+      "sha256": "1d068cfd01931e6d3998ec0804452e358e490fc753d2dfb7e75ae02b824acee4",
+      "indice": 3
+    },
+    {
+      "sha256": "436d75cc275adc8eff0b4ba1e11f847cce464b74f879ef92018de1fa0c2cfa89",
+      "indice": 5
+    },
+    {
+      "sha256": "e79bf9c0515571739daece1e7e352d6efd7ac2d883fc390894e2f40fa8d69825",
+      "indice": 11
+    },
+    {
+      "sha256": "22cb702d6deadbd45f84ef05b42610085ae16260aeb0ec03b6252f95f025d58a",
+      "indice": 12
+    },
+    {
+      "sha256": "5ed6c56a0b2e147862614a1ab806cf8fd0b0051075e7ab0b699581d96d65f6ee",
+      "indice": 13
+    },
+    {
+      "sha256": "65b617d04f276bbe9bb475a1e36c38fe7b5b3d4a5b8277a27ae80cd588673109",
+      "indice": 17
+    },
+    {
+      "sha256": "b3e361240b621ee63337e1b7b9b81b032e58aac256dd02699d2b946d9a6d711a",
+      "indice": 18
+    },
+    {
+      "sha256": "46a9b776a0d64d62088945859b6a2a70005b53a72c0a9eee33d3650f5d46119f",
+      "indice": 19
+    },
+    {
+      "sha256": "c80955650fc29f5024467e0a4f83363e1853b6b680eab8d5febb719455706052",
+      "indice": 16
+    },
+    {
+      "sha256": "cd868479a319d86c341561ba39e2d6ce0bfcbc4429284a40a98e53f1ad7c9021",
+      "indice": 56
+    },
+    {
+      "sha256": "2c596976f37fb8ba19c7371f96aa4cbffbee91923c0b8fe9431979b91e57719c",
+      "indice": 43
+    },
+    {
+      "sha256": "b181272e19c832ae4e5064cfd57e4fa1df3ea7810d70584d51c34f24723e61db",
+      "indice": 44
+    },
+    {
+      "sha256": "133bee8aef55a4cbf7eba8eb848a2d09334a9b4bcc4ca876cece8c2ce39f7b25",
+      "indice": 45
+    },
+    {
+      "sha256": "1c752fd13a1694c954fbf6949ae0ceb10c9032b1f52682ad8cfbe9cb83ca046c",
+      "indice": 32
+    },
+    {
+      "sha256": "e869d58591e3601d748e65fe80e33b17b367478fa0b048074a61f4d2cb198266",
+      "indice": 33
+    },
+    {
+      "sha256": "0d127c105cc4fb270ad9d44bdfab47bc0993ddff1b511a5a2855e6cd4482ffe9",
+      "indice": 38
+    },
+    {
+      "sha256": "9b5891ae7a85d041c2407265466ad8f565091916ad80e998ce79a24c4ed6ef51",
+      "indice": 14
+    },
+    {
+      "sha256": "2a23e2d07501f7a78cd5236c1515b89290bbb0e0ff3ebbb6294aedabf8920814",
+      "indice": 15
+    },
+    {
+      "sha256": "c80955650fc29f5024467e0a4f83363e1853b6b680eab8d5febb719455706052",
+      "indice": 16
+    },
+    {
+      "sha256": "f254f027066fb2f4fd3aa8fb32ad2e828e6ec2360f2cdcf1173bbc2a5925fba1",
+      "indice": 20
+    },
+    {
+      "sha256": "f254f027066fb2f4fd3aa8fb32ad2e828e6ec2360f2cdcf1173bbc2a5925fba1",
+      "indice": 20
+    },
+    {
+      "sha256": "c4acfc3bdf3cf1adcf86543f4c250d325ecb793f95efd4fc99683e58fff18905",
+      "indice": 21
+    },
+    {
+      "sha256": "c80955650fc29f5024467e0a4f83363e1853b6b680eab8d5febb719455706052",
+      "indice": 16
+    },
+    {
+      "sha256": "cd868479a319d86c341561ba39e2d6ce0bfcbc4429284a40a98e53f1ad7c9021",
+      "indice": 56
+    },
+    {
+      "sha256": "436d75cc275adc8eff0b4ba1e11f847cce464b74f879ef92018de1fa0c2cfa89",
+      "indice": 5
+    }
+  ]
+}

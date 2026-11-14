@@ -1,0 +1,107 @@
+{
+  "heroe": "piccolo",
+  "forma": "1",
+  "pack": "01_Dragon_Ball_Super/08_Super_Hero/Piccolo/191_Orange Piccolo, Sprites BY ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "f9562327386b6ec6fceff2a1047acc9356bbc23622848d025222b6b72af2af2b",
+      "indice": 63
+    },
+    {
+      "sha256": "b023f4e56737db5434c842dd3f3fa7a42c14e6f4a88bed808273b9fa811b3920",
+      "indice": 64
+    },
+    {
+      "sha256": "c7ce926376689646a3446c977e428330e3d59dd87dc84c09bb710ebbdbfe6da4",
+      "indice": 59
+    },
+    {
+      "sha256": "b054d0a14ea5410bdfa7ea3f562b060a16f5605c99c45fa9cd2c0a0c9ba312b8",
+      "indice": 24
+    },
+    {
+      "sha256": "896f76c32c7dd97c17ff9ad8aa00d00b23bbd4ad236e36fcc9590d8b1c843489",
+      "indice": 25
+    },
+    {
+      "sha256": "19905905e132d3ec57bdba7dceb37006972b446c915e14d56fb95e91cb23e20d",
+      "indice": 26
+    },
+    {
+      "sha256": "922d710f1b787ffdc31377e62b002f78deda3163285b1f71009b315e79add95a",
+      "indice": 41
+    },
+    {
+      "sha256": "26c2e10fb697a980542c517bbed3ca4c458e0c092e36fbb1d669b776e0c78810",
+      "indice": 42
+    },
+    {
+      "sha256": "f9562327386b6ec6fceff2a1047acc9356bbc23622848d025222b6b72af2af2b",
+      "indice": 63
+    },
+    {
+      "sha256": "6bcf14d97aed96a25380b0247b6adba7a77c575960b41ee3528923c0bcf17808",
+      "indice": 19
+    },
+    {
+      "sha256": "151f0f53f000e1c4587a8f612b42fd0d5b45ee9a4106fe07a46770fe083840b9",
+      "indice": 35
+    },
+    {
+      "sha256": "c6a46910d85b386f6c5ea1edb0ae8ef86a885358810316e46ea8439299c31ba6",
+      "indice": 36
+    },
+    {
+      "sha256": "4cac04b5e1c48c2d83ead504695e9f933bdf523e262f599f5eeab2ebd8ff7fc3",
+      "indice": 32
+    },
+    {
+      "sha256": "676ec296e71caeacc2dce22b5729a00590fb881fd1292ac16e89573a70106f00",
+      "indice": 34
+    },
+    {
+      "sha256": "a961d6ace1c77a48cc49df3e87ab32fa9e317754a3deaad11940fb9c11b5f806",
+      "indice": 31
+    },
+    {
+      "sha256": "c34cd97317af1a5ddc062856c63b4a84ac7bdff7913cb5610b280a4284e834a5",
+      "indice": 49
+    },
+    {
+      "sha256": "48a7dc473f848589780eba729b82453d35e5f991a42785caf4b25bd629bdc50a",
+      "indice": 50
+    },
+    {
+      "sha256": "88ec1f7b89a161678ffc389ee0a8477de96fe5917b97e9d465ad9200bb31a4f0",
+      "indice": 51
+    },
+    {
+      "sha256": "30010d1cf8296fe61f1fb4db415784dac750ec2b8a87f7f7ce4bdf97b4191d46",
+      "indice": 45
+    },
+    {
+      "sha256": "c5adb2170604e954248b17dac4baecc0c4ad7c52fa76e1a650ce8b2acf028a81",
+      "indice": 46
+    },
+    {
+      "sha256": "c9a51c66778a5cd03e694c137ca60c7d2575d1fa5bad9fbc219581a979dba252",
+      "indice": 43
+    },
+    {
+      "sha256": "f47093c39e506bff627d5066086c14e512ad5102eb8f6bec8418031bf41c6fce",
+      "indice": 44
+    },
+    {
+      "sha256": "f9562327386b6ec6fceff2a1047acc9356bbc23622848d025222b6b72af2af2b",
+      "indice": 63
+    },
+    {
+      "sha256": "6bcf14d97aed96a25380b0247b6adba7a77c575960b41ee3528923c0bcf17808",
+      "indice": 19
+    },
+    {
+      "sha256": "c7ce926376689646a3446c977e428330e3d59dd87dc84c09bb710ebbdbfe6da4",
+      "indice": 59
+    }
+  ]
+}

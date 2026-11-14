@@ -1,0 +1,95 @@
+{
+  "heroe": "goku",
+  "forma": "2",
+  "pack": "00_Dragon_Ball_Z/03_Majin_Buu/Goku/055_Goku SSJ 2",
+  "frames": [
+    {
+      "sha256": "6b7e5c6273096b2f4eda480a8eafc4caacfd25cc7e43c95954e8fde56310a5e7",
+      "indice": 26
+    },
+    {
+      "sha256": "782ee80725996049f704728bed365aed7159ab5738ee9284c9671183bec4c964",
+      "indice": 27
+    },
+    {
+      "sha256": "b00e5b223478c900e406e451920e5a9cddabfa3ebeb9e3d5acabb1ffb9f2265f",
+      "indice": 9
+    },
+    {
+      "sha256": "059e3d9312ef82a1d7120038feae2717797b5e178472124c0cb22e74953d3ead",
+      "indice": 18
+    },
+    {
+      "sha256": "0ee5054a93c04575ce3db78b9eb75151aff28d237b33765b84842468fcbcd512",
+      "indice": 19
+    },
+    {
+      "sha256": "69cd49322fdb846a25b86507c0cd40b3677f4c675ad173de8faa4111552302c6",
+      "indice": 16
+    },
+    {
+      "sha256": "6870dec46fc9050dfe30260c3d1ea36d99a937c736a458243fb18ef3d8163587",
+      "indice": 17
+    },
+    {
+      "sha256": "99374bb8d2fbf83e4d002134754382557cc9804770daa8a5446929ee8ae30d86",
+      "indice": 46
+    },
+    {
+      "sha256": "d66028517fc0e3c35c9e3e5f7573cfaf9db7a21620861f49409509b708248b16",
+      "indice": 52
+    },
+    {
+      "sha256": "b6293048b70c53ebe06cb2fbb1062ba75d2eae9fa645ceee5d1a5bd5400b3a80",
+      "indice": 0
+    },
+    {
+      "sha256": "c249efd1043497081569ea6d031d75d53124b3bd6e3f1f3299eda9f3481019e1",
+      "indice": 1
+    },
+    {
+      "sha256": "49eb95094c74d8364b5ce50812d234d20097304ef4778c90dd58460de0e02035",
+      "indice": 30
+    },
+    {
+      "sha256": "41738707d3cc2689c32d413c626a7c34b9d8e999e661940b275341052ab7130c",
+      "indice": 31
+    },
+    {
+      "sha256": "af77cff7396bfbc3c0210afc2921516f2a652463ded57310798907e2d8c554b6",
+      "indice": 34
+    },
+    {
+      "sha256": "33b1f576500935091bd1ae1103ac238492c8e266fd45bb555706df9f534cbda3",
+      "indice": 36
+    },
+    {
+      "sha256": "d18b96e1eda583a29fe354e6419194682cd0ac002d47fb6b40dc6bd2e0674a79",
+      "indice": 37
+    },
+    {
+      "sha256": "d90c2871ed3ea975e099b97703b8d3de2ddfee985ef8def5776e0459af732fba",
+      "indice": 28
+    },
+    {
+      "sha256": "d83904f9153345fe863d8a0a209f4b1dc70dff8de7d1cf0da4119c01df846b2c",
+      "indice": 29
+    },
+    {
+      "sha256": "99374bb8d2fbf83e4d002134754382557cc9804770daa8a5446929ee8ae30d86",
+      "indice": 46
+    },
+    {
+      "sha256": "d66028517fc0e3c35c9e3e5f7573cfaf9db7a21620861f49409509b708248b16",
+      "indice": 52
+    },
+    {
+      "sha256": "ddf01bf9fff74b346365d1bea4e0f7d511c01c0647fca0cd80ed073fe85681ed",
+      "indice": 22
+    },
+    {
+      "sha256": "b00e5b223478c900e406e451920e5a9cddabfa3ebeb9e3d5acabb1ffb9f2265f",
+      "indice": 9
+    }
+  ]
+}

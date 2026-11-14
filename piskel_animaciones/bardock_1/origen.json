@@ -1,0 +1,115 @@
+{
+  "heroe": "bardock",
+  "forma": "1",
+  "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/Bardock/015_Bardock Ssj",
+  "frames": [
+    {
+      "sha256": "bf72361de8464bbbb5881fb51e1d0c914ef33f01e8f4fcbea94deec9e37e9414",
+      "indice": 6
+    },
+    {
+      "sha256": "f7537802fbeff2f6520dc8bae7eb4452fa50ca33851c899d7125e90a38dc4e25",
+      "indice": 7
+    },
+    {
+      "sha256": "22243000e7cdc46703a90e3542e43a801ada277519846e03e2d5d7bb43a39811",
+      "indice": 11
+    },
+    {
+      "sha256": "befa15a317703adcd8445842f03a38978ac2c786edad60d66484dddac5ad18b5",
+      "indice": 25
+    },
+    {
+      "sha256": "0a8d50faac5dbd737589bb62c9776e57628f644bdedcaca9fc205da6c446dba6",
+      "indice": 26
+    },
+    {
+      "sha256": "8c9a77b1dfcc4f27c9eed7e06cf744e6747e3b8d8191cf4976075d879347846c",
+      "indice": 27
+    },
+    {
+      "sha256": "4e12d37d4a6987a2f343c8bb5872c818ceb7e35b77664a312e6fa6e4e088e9e6",
+      "indice": 28
+    },
+    {
+      "sha256": "54c3148c1e64c11b2042ead7a7a038daf122992e2c4b66bab0c714d95a381e9a",
+      "indice": 18
+    },
+    {
+      "sha256": "d59fc72162638680aa7211d1516be413b0af25ed444aca5ee8fb723e352e4426",
+      "indice": 19
+    },
+    {
+      "sha256": "fd446f189c4ad0824bbe6d22b06856b86f2e7e736bb1e3bb98dc75748e9c9f98",
+      "indice": 20
+    },
+    {
+      "sha256": "e2ce0204d5d7836935b429f09fc1035412f377af6a84e5ec82893a8b295ee139",
+      "indice": 21
+    },
+    {
+      "sha256": "e69f2dccb2f9a39d8f1bc10772421cb699fc9630f12ce383e28439c53d36df26",
+      "indice": 30
+    },
+    {
+      "sha256": "2b2e78602b2df3beaf5381db44ad127ee2f35c2aaf61996d530326582bce2df2",
+      "indice": 62
+    },
+    {
+      "sha256": "49f2ab2bcc6ba95a9fecffbbe2d1d7ad69bebfd794d98b2a09233f61ae57d49f",
+      "indice": 0
+    },
+    {
+      "sha256": "807f3d5a04336f68b5195fa079de2e71efdd3086d6f292e3eae0e875918d6526",
+      "indice": 1
+    },
+    {
+      "sha256": "f837205a3b833e7981eaa31f00b6f78ebc4e31e43bee96599a29c74bbcae9040",
+      "indice": 40
+    },
+    {
+      "sha256": "1bfc72534bf82917f50d8dcee95dc01036d73cd3edb9d72af2fb510b55d38f3d",
+      "indice": 41
+    },
+    {
+      "sha256": "a13d626dfce07567093ed5ca041171e8c8a6ed98cfec2f4855bb2f03abeab27c",
+      "indice": 45
+    },
+    {
+      "sha256": "d9311c7ee117a4ec7f89613ab22defe7c0de9601283784e2c0cd7e087bc2ea80",
+      "indice": 29
+    },
+    {
+      "sha256": "e69f2dccb2f9a39d8f1bc10772421cb699fc9630f12ce383e28439c53d36df26",
+      "indice": 30
+    },
+    {
+      "sha256": "dcb3e80c921914289c82d5f041bcc8546e34bb70df79cdec1071b5c3d6034de8",
+      "indice": 31
+    },
+    {
+      "sha256": "5160996341238d13287b37c5ab1c4d43aa9fa37610c4011e2db3aca46855f34b",
+      "indice": 32
+    },
+    {
+      "sha256": "8c9a77b1dfcc4f27c9eed7e06cf744e6747e3b8d8191cf4976075d879347846c",
+      "indice": 22
+    },
+    {
+      "sha256": "744236fc137498d0c2eadcd24323d34e100487410465a5d121439b1e722edfeb",
+      "indice": 23
+    },
+    {
+      "sha256": "e69f2dccb2f9a39d8f1bc10772421cb699fc9630f12ce383e28439c53d36df26",
+      "indice": 30
+    },
+    {
+      "sha256": "2b2e78602b2df3beaf5381db44ad127ee2f35c2aaf61996d530326582bce2df2",
+      "indice": 62
+    },
+    {
+      "sha256": "22243000e7cdc46703a90e3542e43a801ada277519846e03e2d5d7bb43a39811",
+      "indice": 11
+    }
+  ]
+}

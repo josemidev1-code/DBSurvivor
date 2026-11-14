@@ -67,7 +67,7 @@
     "velocidad": 88,
     "recarga": 95
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -76,7 +76,7 @@
     "ki": "animada",
     "pow": "animada",
     "hurt": "animada",
-    "faint": "falta",
+    "faint": "animada",
     "portrait": "animada",
     "attack2": "animada",
     "attack3": "falta",

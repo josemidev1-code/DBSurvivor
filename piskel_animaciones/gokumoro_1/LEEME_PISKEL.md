@@ -23,9 +23,6 @@ Después: `python herramientas/montar_animaciones.py gokumoro` y revisión visua
 | **Attack** | 3 | 52x52 | [`gokumoro_Attack.piskel`](Attack/gokumoro_Attack.piskel) | [`gokumoro_Attack.gif`](Attack/gokumoro_Attack.gif) | [`gokumoro_Attack_sheet.png`](Attack/gokumoro_Attack_sheet.png) |
 | **Kick** | 2 | 54x54 | [`gokumoro_Kick.piskel`](Kick/gokumoro_Kick.piskel) | [`gokumoro_Kick.gif`](Kick/gokumoro_Kick.gif) | [`gokumoro_Kick_sheet.png`](Kick/gokumoro_Kick_sheet.png) |
 | **Cast** | 2 | 50x50 | [`gokumoro_Cast.piskel`](Cast/gokumoro_Cast.piskel) | [`gokumoro_Cast.gif`](Cast/gokumoro_Cast.gif) | [`gokumoro_Cast_sheet.png`](Cast/gokumoro_Cast_sheet.png) |
-| **Pow** | 1 | 82x82 | [`gokumoro_Pow.piskel`](Pow/gokumoro_Pow.piskel) | [`gokumoro_Pow.gif`](Pow/gokumoro_Pow.gif) | [`gokumoro_Pow_sheet.png`](Pow/gokumoro_Pow_sheet.png) |
+| **Pow** | 2 | 82x82 | [`gokumoro_Pow.piskel`](Pow/gokumoro_Pow.piskel) | [`gokumoro_Pow.gif`](Pow/gokumoro_Pow.gif) | [`gokumoro_Pow_sheet.png`](Pow/gokumoro_Pow_sheet.png) |
 | **Hurt** | 2 | 54x54 | [`gokumoro_Hurt.piskel`](Hurt/gokumoro_Hurt.piskel) | [`gokumoro_Hurt.gif`](Hurt/gokumoro_Hurt.gif) | [`gokumoro_Hurt_sheet.png`](Hurt/gokumoro_Hurt_sheet.png) |
-| **Faint** | 1 | 58x58 | [`gokumoro_Faint.piskel`](Faint/gokumoro_Faint.piskel) | [`gokumoro_Faint.gif`](Faint/gokumoro_Faint.gif) | [`gokumoro_Faint_sheet.png`](Faint/gokumoro_Faint_sheet.png) |
-| **Attack2** | 3 | 54x54 | [`gokumoro_Attack2.piskel`](Attack2/gokumoro_Attack2.piskel) | [`gokumoro_Attack2.gif`](Attack2/gokumoro_Attack2.gif) | [`gokumoro_Attack2_sheet.png`](Attack2/gokumoro_Attack2_sheet.png) |
-| **Attack3** | 2 | 50x50 | [`gokumoro_Attack3.piskel`](Attack3/gokumoro_Attack3.piskel) | [`gokumoro_Attack3.gif`](Attack3/gokumoro_Attack3.gif) | [`gokumoro_Attack3_sheet.png`](Attack3/gokumoro_Attack3_sheet.png) |
 | **Dash** | 1 | 72x72 | [`gokumoro_Dash.piskel`](Dash/gokumoro_Dash.piskel) | [`gokumoro_Dash.gif`](Dash/gokumoro_Dash.gif) | [`gokumoro_Dash_sheet.png`](Dash/gokumoro_Dash_sheet.png) |
