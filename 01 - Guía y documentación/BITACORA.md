@@ -4425,3 +4425,9 @@ ode --check.
 
 ### Nueva petición (14 nov.)
 - ¿Adaptar importar_piskel.py a fotogramas dibujados? Josemi: «depende, si son animaciones buenas sí, si no, no». Lo que quiere: «que cojas todos los sprites, revises qué animaciones están hechas y qué tipo de animaciones son las que están hechas, y que cojas a los personajes que faltan animar y los animes también. Todos los frames se deben coger de los sprites existentes, y se animarán en la página que se llama Piskel».
+
+### Lo que hice (tanda 16, 14 nov., a medias)
+- Cruce del inventario con las tandas anteriores: 212 formas jugables tienen algo pendiente; 89 no las había revisado ninguna tanda (las otras 123 ya se miraron y lo dudoso se dejó fuera). Voy por las 89, de más a menos incompletas, en `herramientas/animaciones/zz_tanda_ataques_16_2026_11_14.json`. Solo fotogramas del mismo pack, revisados con `ver_pack.py` y `previsualizar.py`; lo dudoso se queda fuera.
+- Hecho (commits bd45f733 y e8e9d91a): Trunks GT, Goku MUI Blue, Black Rosé, Majin Black, Goku UI señal (solo poder: el resto del pack es otra forma), Trunks niño base y SSJ, Goku MUI Dios, Black Rosé Kaioken, Rey Gomah, Merus, Vegeta Blue manga dañado y Kyabe SSJ (073).
+- Sin nada bueno que añadir: Black SSJ falso, Tarble, Kibitoshin; Nuova y Bulma ya usan casi todo su pack.
+- **Packs con zoom puesto a mano** (`escalaFrames`, p. ej. Vegeta manga 243 y seguramente Vegeta Dios 305, el que se quedó fuera en la tanda 14): los fotogramas nuevos salen enormes si no se les da su zoom. Se calcula como altura del recorte ÷ ~52 px (de pie) y se revisa a ojo.
