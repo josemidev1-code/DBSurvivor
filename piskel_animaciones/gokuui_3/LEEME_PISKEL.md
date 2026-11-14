@@ -27,4 +27,5 @@ Después: `python herramientas/montar_animaciones.py gokuui` y revisión visual.
 | **Hurt** | 2 | 50x50 | [`gokuui_Hurt.piskel`](Hurt/gokuui_Hurt.piskel) | [`gokuui_Hurt.gif`](Hurt/gokuui_Hurt.gif) | [`gokuui_Hurt_sheet.png`](Hurt/gokuui_Hurt_sheet.png) |
 | **Attack3** | 2 | 68x68 | [`gokuui_Attack3.piskel`](Attack3/gokuui_Attack3.piskel) | [`gokuui_Attack3.gif`](Attack3/gokuui_Attack3.gif) | [`gokuui_Attack3_sheet.png`](Attack3/gokuui_Attack3_sheet.png) |
 | **Kick2** | 2 | 56x56 | [`gokuui_Kick2.piskel`](Kick2/gokuui_Kick2.piskel) | [`gokuui_Kick2.gif`](Kick2/gokuui_Kick2.gif) | [`gokuui_Kick2_sheet.png`](Kick2/gokuui_Kick2_sheet.png) |
+| **Up** | 1 | 84x84 | [`gokuui_Up.piskel`](Up/gokuui_Up.piskel) | [`gokuui_Up.gif`](Up/gokuui_Up.gif) | [`gokuui_Up_sheet.png`](Up/gokuui_Up_sheet.png) |
 | **Dash** | 1 | 76x76 | [`gokuui_Dash.piskel`](Dash/gokuui_Dash.piskel) | [`gokuui_Dash.gif`](Dash/gokuui_Dash.gif) | [`gokuui_Dash_sheet.png`](Dash/gokuui_Dash_sheet.png) |

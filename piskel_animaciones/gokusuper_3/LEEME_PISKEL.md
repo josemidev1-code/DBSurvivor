@@ -30,4 +30,5 @@ Después: `python herramientas/montar_animaciones.py gokusuper` y revisión visu
 | **Attack3** | 2 | 72x72 | [`gokusuper_Attack3.piskel`](Attack3/gokusuper_Attack3.piskel) | [`gokusuper_Attack3.gif`](Attack3/gokusuper_Attack3.gif) | [`gokusuper_Attack3_sheet.png`](Attack3/gokusuper_Attack3_sheet.png) |
 | **Kick2** | 2 | 80x80 | [`gokusuper_Kick2.piskel`](Kick2/gokusuper_Kick2.piskel) | [`gokusuper_Kick2.gif`](Kick2/gokusuper_Kick2.gif) | [`gokusuper_Kick2_sheet.png`](Kick2/gokusuper_Kick2_sheet.png) |
 | **Beam** | 2 | 72x72 | [`gokusuper_Beam.piskel`](Beam/gokusuper_Beam.piskel) | [`gokusuper_Beam.gif`](Beam/gokusuper_Beam.gif) | [`gokusuper_Beam_sheet.png`](Beam/gokusuper_Beam_sheet.png) |
+| **Up** | 1 | 96x96 | [`gokusuper_Up.piskel`](Up/gokusuper_Up.piskel) | [`gokusuper_Up.gif`](Up/gokusuper_Up.gif) | [`gokusuper_Up_sheet.png`](Up/gokusuper_Up_sheet.png) |
 | **Dash** | 1 | 80x80 | [`gokusuper_Dash.piskel`](Dash/gokusuper_Dash.piskel) | [`gokusuper_Dash.gif`](Dash/gokusuper_Dash.gif) | [`gokusuper_Dash_sheet.png`](Dash/gokusuper_Dash_sheet.png) |

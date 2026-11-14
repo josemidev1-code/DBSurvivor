@@ -1,0 +1,107 @@
+{
+  "heroe": "raditz",
+  "forma": "1",
+  "pack": "05_Fanmade_y_alternativos/Raditz/085_Raditz Ssj",
+  "frames": [
+    {
+      "sha256": "723bfdc6e13f1b7e5f9396dcfacd5446892005fefd3f4dd63dee0714ee457bcb",
+      "indice": 0
+    },
+    {
+      "sha256": "bd79fd77a2ccb85fba730503a39ce57f636bae5009e8f6152ff9a38636f550dd",
+      "indice": 1
+    },
+    {
+      "sha256": "c10b312dc9a5f8e58c5307997f406cc56879fb88a6dbd70f01de93687faad590",
+      "indice": 6
+    },
+    {
+      "sha256": "a2777cd54e2edb9f17bfa74f6cbbde18ad493eba430a67eaf3405396b5161d0c",
+      "indice": 11
+    },
+    {
+      "sha256": "7e5b60192deb5f2abac455b57dac06b8cbde00f8a529d28f1b8bea3f8ee272c0",
+      "indice": 12
+    },
+    {
+      "sha256": "6836ef4b207dfaf1055998a9e3b6bc0c6525646b607af0d8e7c14ed532746834",
+      "indice": 13
+    },
+    {
+      "sha256": "1f31cfc643102ab1b1a46556879991245ccf3cfe09ac19627cbc476ab50fd986",
+      "indice": 17
+    },
+    {
+      "sha256": "8e3d201cf4fa5e39eb57dc6471b2e98298960ca9fd020b5d537eceb91fae7982",
+      "indice": 18
+    },
+    {
+      "sha256": "37ff72992366a79c29e584305cc98e2a5718e8007fd99e172ef714ae30da33f3",
+      "indice": 39
+    },
+    {
+      "sha256": "6b1034888e72ec9b6781caa7210ba87f52f7a02758738128a854810ac820f2d2",
+      "indice": 40
+    },
+    {
+      "sha256": "af30872c1e56cb313446b9e144ce0e531ca6b2ca3f14b832f0a13535bf20a272",
+      "indice": 28
+    },
+    {
+      "sha256": "ef7f36045a493aa987632178439c6d00abb709ec0d96d019fa0d9583ee9be5b2",
+      "indice": 29
+    },
+    {
+      "sha256": "677ebad4a74f5ed82957c759d5505c9e72ac7421c08a90e9ed043147528d9e64",
+      "indice": 30
+    },
+    {
+      "sha256": "cc6b68a675bf434d4cc27b1633dfdf7962efc08b170fdf287ae796cf6101a3e2",
+      "indice": 22
+    },
+    {
+      "sha256": "610d56e0a96b63590a7f2490ad71b8d3578b21cb250858ac08eeeca188c2750b",
+      "indice": 23
+    },
+    {
+      "sha256": "34d4cf09dc43f679f404a8e53ab51e3a1065e64dc214dcdbe26a729d130b78f8",
+      "indice": 27
+    },
+    {
+      "sha256": "4ea883c6ca436f065f15f60ba7721980de8a7a9f89f91823750d3f389ccfd9d9",
+      "indice": 9
+    },
+    {
+      "sha256": "429d9b493ffe07b09c98b104b91f7a34b523fa7d6c40dd0e403dd852055216db",
+      "indice": 10
+    },
+    {
+      "sha256": "9f4194af6a6b38198a9a06fff27a2ae42ea92b9c7af43dff8afb534d9f08d371",
+      "indice": 24
+    },
+    {
+      "sha256": "815b28a951ef5946692570bcd4572ba0b017ad96f9d973ad34ab99cbed2a0865",
+      "indice": 25
+    },
+    {
+      "sha256": "cbaa2995b6b2ef41675d51e1416db6ca301f28c7e77aaec92f2db32cd26a7309",
+      "indice": 19
+    },
+    {
+      "sha256": "c7f374b86b7c787ea96f38d54c3e14beab701a750c95b4096498a0b0abe8bdd2",
+      "indice": 20
+    },
+    {
+      "sha256": "96f33d183464a5966abe35f0d921a9c567774ad95646a6d8300b4997db94062b",
+      "indice": 31
+    },
+    {
+      "sha256": "8bdbbd91e1d0def94758b9d0627cfe5b620e134f7c7caf838c46071ca5c94e22",
+      "indice": 32
+    },
+    {
+      "sha256": "7926b9e0223c42714fbd52e08698d07344721c8ab2d4009786acff3f8d707aaf",
+      "indice": 15
+    }
+  ]
+}

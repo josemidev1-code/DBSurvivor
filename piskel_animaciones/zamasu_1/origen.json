@@ -1,0 +1,111 @@
+{
+  "heroe": "zamasu",
+  "forma": "1",
+  "pack": "01_Dragon_Ball_Super/03_Trunks_del_futuro/Zamasu/105_Zamasu e Black Fusion",
+  "frames": [
+    {
+      "sha256": "4631bbe757bf0ceb5a391343682b97b79df08487926da830083f7af12a83d254",
+      "indice": 32
+    },
+    {
+      "sha256": "497b66ebfc8231a0a7b115d5236340772e1e0d9a0dcab98fac02c7990b3cee38",
+      "indice": 30
+    },
+    {
+      "sha256": "4631bbe757bf0ceb5a391343682b97b79df08487926da830083f7af12a83d254",
+      "indice": 32
+    },
+    {
+      "sha256": "f93ebd1d272103e8180e906697ccfcf73c7fccd7a77eb718422d5b617f702dd9",
+      "indice": 33
+    },
+    {
+      "sha256": "e84cecaec964f809dea56b8849f316b06504fc93cdcd4a97beb5cd15d682f47e",
+      "indice": 43
+    },
+    {
+      "sha256": "915c99744a770dc5bc8376f9b55c409711f52f181df85413cfbacdec3f7d5dd2",
+      "indice": 42
+    },
+    {
+      "sha256": "4d7902f962043fdcb93518db68e5a19e63dccc1fce356430c919a73c42ace1ed",
+      "indice": 51
+    },
+    {
+      "sha256": "0ce721db53eeb2e2a36590cbed4c901b3b15290232bdd9aebbf09d72777ad5c2",
+      "indice": 46
+    },
+    {
+      "sha256": "2dd9e936125826c79b45923bacfd2f2461f6b3d1eb829591a29eaf79a9755ac5",
+      "indice": 70
+    },
+    {
+      "sha256": "de4f9cad1866f3b09210c743ba6908dc126277df1b6730e231bf462031cdb151",
+      "indice": 59
+    },
+    {
+      "sha256": "150b1e71ac6f6937229cb315b7c3e1562ff47b5c45a294f998f7f601eef6f66a",
+      "indice": 60
+    },
+    {
+      "sha256": "afe4704cdd31dbb880f4d6d69d9859e30ce17fac12a37385f04907fe77686b84",
+      "indice": 61
+    },
+    {
+      "sha256": "f32e4abb0c1c52a3c6b54da6ae7a1cfd407dc2f22158d0c90618b1936ccbd81d",
+      "indice": 54
+    },
+    {
+      "sha256": "dc30531614a05bb8408f676921fa9046cad65ffdb18c59a9ab6550731d395ed1",
+      "indice": 55
+    },
+    {
+      "sha256": "2d64901240aa8b9f7ca031e4e6d5f7e80986968f1b5b2f96bcb5114a947e0fe6",
+      "indice": 58
+    },
+    {
+      "sha256": "7225828d839313a80ce53b1989c9d88f523c757fee320264db5cab5dd69a7286",
+      "indice": 44
+    },
+    {
+      "sha256": "886a0ecbe99a169699ac7af7fd15c45c93572bf46883500e5453e98cea170e19",
+      "indice": 45
+    },
+    {
+      "sha256": "0ce721db53eeb2e2a36590cbed4c901b3b15290232bdd9aebbf09d72777ad5c2",
+      "indice": 46
+    },
+    {
+      "sha256": "cce058ff27849da0cdc88d0f6a6acc2e4a089917c942450636010893cb86b4cc",
+      "indice": 47
+    },
+    {
+      "sha256": "8d7c96fdb1e606c59e1fc0d4a82d6ad2d1276be41c6b5c21a314141759d5ad4a",
+      "indice": 49
+    },
+    {
+      "sha256": "653781bf8bffe10db4c548c12ed2a064ca37b2ac4d309a0ddb992dcd43bcdfaa",
+      "indice": 37
+    },
+    {
+      "sha256": "651841e4da0a4457bb65abafadadfa489efd44dab49e258abacf0b1991160f56",
+      "indice": 40
+    },
+    {
+      "sha256": "0ce721db53eeb2e2a36590cbed4c901b3b15290232bdd9aebbf09d72777ad5c2",
+      "indice": 46
+    },
+    {
+      "sha256": "2dd9e936125826c79b45923bacfd2f2461f6b3d1eb829591a29eaf79a9755ac5",
+      "indice": 70
+    },
+    {
+      "sha256": "a5fc3e6bb4ba35e9abd483409ca4c03651d6a557080f526e1e1ff9b9c20c0810",
+      "indice": 86
+    },
+    {
+      "sha256": "dd509c2100dcd2cce949bc4297e591ef3965b36c330a198bc1778da42657f050",
+      "indice": 87
+    }
+  ]
+}

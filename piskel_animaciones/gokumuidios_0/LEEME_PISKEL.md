@@ -29,3 +29,4 @@ Después: `python herramientas/montar_animaciones.py gokumuidios` y revisión vi
 | **Attack3** | 3 | 60x60 | [`gokumuidios_Attack3.piskel`](Attack3/gokumuidios_Attack3.piskel) | [`gokumuidios_Attack3.gif`](Attack3/gokumuidios_Attack3.gif) | [`gokumuidios_Attack3_sheet.png`](Attack3/gokumuidios_Attack3_sheet.png) |
 | **Kick2** | 3 | 60x60 | [`gokumuidios_Kick2.piskel`](Kick2/gokumuidios_Kick2.piskel) | [`gokumuidios_Kick2.gif`](Kick2/gokumuidios_Kick2.gif) | [`gokumuidios_Kick2_sheet.png`](Kick2/gokumuidios_Kick2_sheet.png) |
 | **Beam** | 2 | 64x64 | [`gokumuidios_Beam.piskel`](Beam/gokumuidios_Beam.piskel) | [`gokumuidios_Beam.gif`](Beam/gokumuidios_Beam.gif) | [`gokumuidios_Beam_sheet.png`](Beam/gokumuidios_Beam_sheet.png) |
+| **Up** | 1 | 58x58 | [`gokumuidios_Up.piskel`](Up/gokumuidios_Up.piskel) | [`gokumuidios_Up.gif`](Up/gokumuidios_Up.gif) | [`gokumuidios_Up_sheet.png`](Up/gokumuidios_Up_sheet.png) |

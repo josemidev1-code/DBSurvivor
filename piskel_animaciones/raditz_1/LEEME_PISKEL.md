@@ -3,12 +3,16 @@
 Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (https://www.piskelapp.com/).
 
 ## Cómo abrir en Piskel:
-1. Entra a **https://www.piskelapp.com/p/create** en tu navegador.
+1. Entra a **https://www.piskelapp.com/p/create/sprite** en tu navegador.
 2. Haz clic en el icono de carpeta de la barra derecha (**Import**).
 3. Elige cualquiera de estas opciones:
    - **Import .piskel file**: selecciona el archivo `.piskel` de cualquier animación.
    - **Import animated GIF**: selecciona el archivo `.gif` (Piskel importa todos los fotogramas y la velocidad al instante).
    - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).
+
+## Volver al juego:
+`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/raditz_1/origen.json --heroe raditz --forma 1 --anim attack --aplicar`
+Después: `python herramientas/montar_animaciones.py raditz` y revisión visual. Solo se aceptan sprites originales exportados.
 
 ## Animaciones disponibles:
 
@@ -26,3 +30,4 @@ Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (
 | **Attack3** | 2 | 56x56 | [`raditz_Attack3.piskel`](Attack3/raditz_Attack3.piskel) | [`raditz_Attack3.gif`](Attack3/raditz_Attack3.gif) | [`raditz_Attack3_sheet.png`](Attack3/raditz_Attack3_sheet.png) |
 | **Kick2** | 2 | 56x56 | [`raditz_Kick2.piskel`](Kick2/raditz_Kick2.piskel) | [`raditz_Kick2.gif`](Kick2/raditz_Kick2.gif) | [`raditz_Kick2_sheet.png`](Kick2/raditz_Kick2_sheet.png) |
 | **Beam** | 2 | 64x64 | [`raditz_Beam.piskel`](Beam/raditz_Beam.piskel) | [`raditz_Beam.gif`](Beam/raditz_Beam.gif) | [`raditz_Beam_sheet.png`](Beam/raditz_Beam_sheet.png) |
+| **Up** | 1 | 58x58 | [`raditz_Up.piskel`](Up/raditz_Up.piskel) | [`raditz_Up.gif`](Up/raditz_Up.gif) | [`raditz_Up_sheet.png`](Up/raditz_Up_sheet.png) |

@@ -29,3 +29,4 @@ Después: `python herramientas/montar_animaciones.py daishinkan` y revisión vis
 | **Attack2** | 2 | 54x54 | [`daishinkan_Attack2.piskel`](Attack2/daishinkan_Attack2.piskel) | [`daishinkan_Attack2.gif`](Attack2/daishinkan_Attack2.gif) | [`daishinkan_Attack2_sheet.png`](Attack2/daishinkan_Attack2_sheet.png) |
 | **Kick2** | 2 | 46x46 | [`daishinkan_Kick2.piskel`](Kick2/daishinkan_Kick2.piskel) | [`daishinkan_Kick2.gif`](Kick2/daishinkan_Kick2.gif) | [`daishinkan_Kick2_sheet.png`](Kick2/daishinkan_Kick2_sheet.png) |
 | **Beam** | 2 | 54x54 | [`daishinkan_Beam.piskel`](Beam/daishinkan_Beam.piskel) | [`daishinkan_Beam.gif`](Beam/daishinkan_Beam.gif) | [`daishinkan_Beam_sheet.png`](Beam/daishinkan_Beam_sheet.png) |
+| **Up** | 2 | 48x48 | [`daishinkan_Up.piskel`](Up/daishinkan_Up.piskel) | [`daishinkan_Up.gif`](Up/daishinkan_Up.gif) | [`daishinkan_Up_sheet.png`](Up/daishinkan_Up_sheet.png) |

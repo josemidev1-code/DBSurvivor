@@ -29,3 +29,4 @@ Después: `python herramientas/montar_animaciones.py blacktime` y revisión visu
 | **Attack2** | 2 | 54x54 | [`blacktime_Attack2.piskel`](Attack2/blacktime_Attack2.piskel) | [`blacktime_Attack2.gif`](Attack2/blacktime_Attack2.gif) | [`blacktime_Attack2_sheet.png`](Attack2/blacktime_Attack2_sheet.png) |
 | **Kick2** | 2 | 62x62 | [`blacktime_Kick2.piskel`](Kick2/blacktime_Kick2.piskel) | [`blacktime_Kick2.gif`](Kick2/blacktime_Kick2.gif) | [`blacktime_Kick2_sheet.png`](Kick2/blacktime_Kick2_sheet.png) |
 | **Beam** | 2 | 78x78 | [`blacktime_Beam.piskel`](Beam/blacktime_Beam.piskel) | [`blacktime_Beam.gif`](Beam/blacktime_Beam.gif) | [`blacktime_Beam_sheet.png`](Beam/blacktime_Beam_sheet.png) |
+| **Up** | 1 | 74x74 | [`blacktime_Up.piskel`](Up/blacktime_Up.piskel) | [`blacktime_Up.gif`](Up/blacktime_Up.gif) | [`blacktime_Up_sheet.png`](Up/blacktime_Up_sheet.png) |

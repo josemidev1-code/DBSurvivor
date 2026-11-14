@@ -1,0 +1,103 @@
+{
+  "heroe": "gokupatrulla",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/06_Moro/Goku/174_Goku base.patrullero galáctico.dbs moro.andres Gamen",
+  "frames": [
+    {
+      "sha256": "a01984d9848d6afa60cbab176db383589015941cdfc875f12588c375e249d2f8",
+      "indice": 22
+    },
+    {
+      "sha256": "425bb90697b51686d9c5f4126819b5c22bbacf54368135ce4a9e2508181eb076",
+      "indice": 23
+    },
+    {
+      "sha256": "4f6d27d98da9f89b8125a5a942292239e11f5b4b8167dcbc8f49cc2f72c0fedd",
+      "indice": 8
+    },
+    {
+      "sha256": "7ded30b6ea3cc26eccdaeeaf1caa89eea2ec53ed72e24a7d0b32e3b48354fc07",
+      "indice": 30
+    },
+    {
+      "sha256": "49b732fb15d5cedf016e80e14bc9585982cf978611e224502f4674d9a59f00d6",
+      "indice": 28
+    },
+    {
+      "sha256": "3ef876ce441da1edfe89b4d8a36518a08c4399d793daeb53bccd8759ba6c708c",
+      "indice": 27
+    },
+    {
+      "sha256": "e05a390b03e8dab858caa6a124ccd58419e3c3f99bd34cd00b792a44fb65cc60",
+      "indice": 38
+    },
+    {
+      "sha256": "99938755e10cda1432802340efefa194a7f89e57c2541ef2c482c1017ca5f0f2",
+      "indice": 37
+    },
+    {
+      "sha256": "a01984d9848d6afa60cbab176db383589015941cdfc875f12588c375e249d2f8",
+      "indice": 22
+    },
+    {
+      "sha256": "7ded30b6ea3cc26eccdaeeaf1caa89eea2ec53ed72e24a7d0b32e3b48354fc07",
+      "indice": 30
+    },
+    {
+      "sha256": "10b0da952ed54d14bffc7959452d75c8523bbf6ab754306bc311480226104374",
+      "indice": 50
+    },
+    {
+      "sha256": "8477992b2adb161fe9477690db6f6bc0631b2e34c4623c97926ccf548edbaa28",
+      "indice": 51
+    },
+    {
+      "sha256": "c18af9a98d07fe4eb57225079b83ffef0f1f47658073895d9a1c8eb454342bbb",
+      "indice": 40
+    },
+    {
+      "sha256": "940061a5aea89d25421b89a9f183ef35546aca7c44d06ee299002c9d5c297938",
+      "indice": 42
+    },
+    {
+      "sha256": "6e3c54e75a9f6da0d63654c33d41d477bc10e24eb9839fb411ed47a8946493b0",
+      "indice": 43
+    },
+    {
+      "sha256": "ae86ac7d1111413364fe6dc45cdf62014771334d86df9312b158657b41764970",
+      "indice": 33
+    },
+    {
+      "sha256": "385eef366e2043f6040c50b54ca9de61be683423439edc97a0d17a3eabaa7d89",
+      "indice": 34
+    },
+    {
+      "sha256": "063a7d67daa7fdd99238a3c813147456558735e933c072922d295d3395560707",
+      "indice": 35
+    },
+    {
+      "sha256": "9890831b0105317d897d38c65cbe42c8c91b26d45c25bbcdbe1267891130dd51",
+      "indice": 19
+    },
+    {
+      "sha256": "56e93b928553fdc99311205965a3486b20fe5bb9fe51033a6dbfe3bce1f45a3e",
+      "indice": 20
+    },
+    {
+      "sha256": "73f36aaa19e18bc58edcbe762548092af3e66f945e3f460058a8f6b2b910f655",
+      "indice": 44
+    },
+    {
+      "sha256": "d12eb8758120870587e9e6c26bd2528f223d229dbfef2cc520b25ba74893c8fa",
+      "indice": 48
+    },
+    {
+      "sha256": "91c5af95c81669217a0fa1afedc24ef9c0cb214c1376f49cc7f3d02f2fae03ce",
+      "indice": 17
+    },
+    {
+      "sha256": "4f6d27d98da9f89b8125a5a942292239e11f5b4b8167dcbc8f49cc2f72c0fedd",
+      "indice": 8
+    }
+  ]
+}
