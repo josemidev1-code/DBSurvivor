@@ -57,22 +57,19 @@ def limpiar(R):
     lab,n=nd.label(np.isin(R,list('YO')))
     for i in range(1,n+1):
         ys,xs=np.where(lab==i)
-        if len(ys)<6 or ys.mean()>78 or xs.max()<16: R[lab==i]='B'
+        if len(ys)<40 or ys.mean()>78 or xs.max()<16: R[lab==i]='B'
+    lab,n=nd.label(np.isin(R,list('RD')))
+    for i in range(1,n+1):
+        if (lab==i).sum()<40: R[lab==i]='B'
     # 2b) estela: solo la mancha grande; fuera motas lilas sueltas
     lab,n=nd.label(np.isin(R,list('PLS')))
     if n:
         sz=nd.sum(np.ones_like(lab),lab,range(1,n+1))
         for i in range(1,n+1):
             if sz[i-1]<120: R[lab==i]='B'
-    col=np.isin(R,list('YORDPLS'))
-    # 3) rellenar huecos de la estela (rayas blancas/azules que la cruzan)
-    sw=np.isin(R,list('PLS'))
-    swc=nd.binary_closing(sw,structure=np.ones((3,3)),iterations=2)&~col
-    swc[83:,90:208]=False
-    if swc.any():
-        idx=nd.distance_transform_edt(~sw,return_distances=False,return_indices=True)
-        R[swc]=R[idx[0][swc],idx[1][swc]]
-    col=np.isin(R,list('YORDPLS'))
+    # 3) sin la estela morada (Josemi, 14 nov.: solo las letras de DRAGON BALL)
+    R[np.isin(R,list('PLS'))]='B'
+    col=np.isin(R,list('YORD'))
     # 4) negro solo pegado al logo (≤2 px) o encerrado
     near=nd.binary_dilation(col,iterations=2)
     encl=nd.binary_fill_holes(col|((R=='K')&near))
@@ -85,6 +82,40 @@ def limpiar(R):
 
     return R
 
+# Letra de «DAIMA» en la foto: negra, recta, muy gruesa (trazo ≈6 px), huecos de 2 px y
+# escalones de 2 px. Se dibuja en bloques de 2×2 (7×11 bloques = 14×22 px) sobre un rótulo
+# blanco continuo con filo negro.
+DAIMA = {
+ 'S': [".#####.", "#######", "###.###", "###....", "####...", ".#####.", "...####", "....###", "###.###", "#######", ".#####."],
+ 'U': ["###.###"] * 9 + ["#######", ".#####."],
+ 'R': ["######.", "#######", "###.###", "###.###", "#######", "######.", "###.###", "###.###", "###.###", "###.###", "###.###"],
+ 'V': ["###.###"] * 6 + [".#####."] * 2 + ["..###.."] * 3,
+ 'I': ["###"] * 11,
+ 'O': [".#####.", "#######"] + ["###.###"] * 7 + ["#######", ".#####."],
+}
+
+
+def rotulo_daima(texto, sep=2, bloque=2, blanco=4, filo=2):
+    H = len(DAIMA['S']) * bloque
+    Wt = sum(len(DAIMA[c][0]) * bloque for c in texto) + sep * (len(texto) - 1)
+    pad = blanco + filo + 1
+    m = np.zeros((H + 2 * pad, Wt + 2 * pad), bool)
+    x = pad
+    for c in texto:
+        filas = DAIMA[c]
+        for y, fila in enumerate(filas):
+            for xx, ch in enumerate(fila):
+                if ch == '#':
+                    m[pad + y * bloque:pad + (y + 1) * bloque, x + xx * bloque:x + (xx + 1) * bloque] = True
+        x += len(filas[0]) * bloque + sep
+    R = np.full(m.shape, '.', dtype='<U1')
+    w = nd.binary_dilation(m, iterations=blanco) & ~m
+    w |= nd.binary_fill_holes(m | w) & ~m & ~w
+    k = nd.binary_dilation(m | w, iterations=filo) & ~(m | w)
+    R[k] = 'K'; R[w] = 'W'; R[m] = 'K'
+    return R
+
+
 def montar(R):
     H, W = R.shape
     bay=np.array([[0,2],[3,1]])/4+0.125
@@ -95,32 +126,15 @@ def montar(R):
         yy,xx=np.mgrid[0:H,0:W];th=bay[yy%2,xx%2]
         R[m]=np.where(q[m]>th[m],b,a)
     tramar('Y','O');tramar('R','D')
-    # --- rótulo SURVIVOR al estilo de DAIMA
-    G={'S':[".#####.","##...##","##.....","###....",".#####.","....###",".....##","##...##","##...##",".#####."],
-     'U':["##...##"]*9+[".#####."],
-     'R':["######.","##...##","##...##","##...##","######.","####...","##.##..","##..##.","##...##","##...##"],
-     'V':["##...##"]*6+[".##.##."]*2+["..###.."]*2,
-     'I':["####"]+[".##."]*8+["####"],
-     'O':[".#####."]+["##...##"]*8+[".#####."]}
-    txt='SURVIVOR';sc=2;gap=4
-    w=sum(len(G[c][0])*sc for c in txt)+gap*(len(txt)-1);h=10*sc
-    pl=np.zeros((h+10,w+10),np.uint8)  # 1=negro letra
-    x=5
-    for c in txt:
-        for yy,row in enumerate(G[c]):
-            for xx,ch in enumerate(row):
-                if ch=='#': pl[5+yy*sc:5+yy*sc+sc,x+xx*sc:x+xx*sc+sc]=1
-        x+=len(G[c][0])*sc+gap
-    let=pl==1
-    white=nd.binary_dilation(let,iterations=3)&~let
-    white|=nd.binary_fill_holes(let|white)&~let&~white
-    edge=nd.binary_dilation(let|white,iterations=2)&~(let|white)
-    cx=152;top=80
-    ox=cx-pl.shape[1]//2;oy=top
-    big=np.full((max(H,oy+pl.shape[0]+2),W),'.',dtype='<U1');big[:H]=R
-    for m,c in ((edge,'K'),(white,'W'),(let,'K')):
-        ys,xs=np.where(m);big[ys+oy,xs+ox]=c
-    R=big
+    # --- SURVIVOR con la letra de DAIMA (Josemi, 14 nov.: «como DAIMA, igualito»)
+    S_ = rotulo_daima('SURVIVOR')
+    cx = int(np.median(np.where(np.isin(R, list('YORD')))[1]))
+    fondo = np.where(np.isin(R, list('YORDK')))[0].max()
+    ox = cx - S_.shape[1] // 2; oy = fondo - 4
+    big = np.full((max(H, oy + S_.shape[0] + 2), max(W, ox + S_.shape[1])), '.', dtype='<U1'); big[:H, :W] = R
+    m = S_ != '.'
+    ys, xs = np.where(m); big[ys + oy, xs + ox] = S_[m]
+    R = big
     CLEAN={'K':(16,12,20),'Y':(255,238,0),'O':(240,150,0),'R':(242,58,20),'D':(170,26,30),'W':(255,255,255),'P':(140,52,230),'L':(186,122,236),'S':(236,180,190)}
     out=np.zeros(R.shape+(4,),np.uint8)
     for k,v in CLEAN.items(): out[R==k]=v+(255,)

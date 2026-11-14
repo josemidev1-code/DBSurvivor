@@ -4362,3 +4362,8 @@ ode --check.
 - Josemi: «Lo quiero igualito igualito».
 - No se encontró el original en internet. Nuevo `herramientas/titulo_desde_foto.py`: lee el logo píxel a píxel de la foto (recorte de la pantalla girado 3° en `herramientas/titulo_foto/recorte_foto.png`; cada píxel del original son 2,76 px de la foto), clasifica cada píxel en la paleta del logo, quita el fondo de rayas, el aura amarilla de Goku y DAIMA, regulariza el tramado y pone SURVIVOR con la letra de DAIMA (negra, borde blanco y filo negro). `ui/titulo.png` 319×110 (×3 en inicio). El dibujado a mano (`generar_titulo.py`) queda marcado como sustituido. style.css?v=98, ui_imagenes.js?v=71.
 - Puede haber algún píxel suelto distinto del original por la foto; con el `estilo.png` original sería exacto. Falta el autor del logo para los créditos.
+
+### Logo: solo DRAGON BALL y SURVIVOR como DAIMA (14 nov.)
+- Josemi: «Solo quiero que quede lo de Dragon Ball; el fondo azul quítalo; lo de Survivor está mal hecho, quiero que sea también de la tipografía de la foto; y lo violeta del fondo también quítalo». Después: «Survivor lo quiero como DAIMA, igualito» y «no como el de arriba».
+- `titulo_desde_foto.py`: fuera la estela morada (y sus motas); SURVIVOR con la letra de DAIMA vista de cerca en la foto: negra, recta, muy gruesa (trazo ≈6 px), huecos de 2 px, escalones de 2 px, 14×22 px por letra, sobre rótulo blanco continuo de 4 px con filo negro. `ui/titulo.png` 300×120 (×3 en inicio).
+- Pantalla de inicio: quitadas las rayas azules; vuelve el mapa de fondo oscurecido. style.css?v=99, ui_imagenes.js?v=72.

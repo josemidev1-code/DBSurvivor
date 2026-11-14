@@ -1156,13 +1156,10 @@ body.high-contrast .up .nm,body.high-contrast .card h3{color:#ffffff!important;t
 @keyframes icoFlota{50%{transform:translateY(-3px)}}
 @media (max-height:860px){.hitem .hIco{width:36px;height:36px}#hubMenu .hitem.hitemPlay .hIco{width:48px;height:48px}}
 @media (max-height:520px){.hitem .hIco{width:24px;height:24px}#hubMenu .hitem.hitemPlay .hIco{width:36px;height:36px}}
-/* pantalla de inicio: rayas diagonales azules como la foto, en movimiento */
-#start.start{background:radial-gradient(ellipse at 50% 42%,rgba(255,255,255,.55) 0,rgba(160,200,255,.18) 30%,transparent 58%),var(--px-fondo-rayas) 0 0/auto 100% repeat-x,#1840c8!important;image-rendering:pixelated;animation:rayasMov 3s linear infinite}
-@keyframes rayasMov{from{background-position:0 0,0 0}to{background-position:0 0,calc(100vh*16/9) 0}}
-#start.start::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(4,8,30,.55) 100%)}
+
+/* inicio: fondo del mapa oscurecido (Josemi quitó las rayas azules el 14 nov.) */
 #start .tag,#start .press{position:relative;z-index:1;text-shadow:2px 2px 0 #0a0d1a,-1px -1px 0 #0a0d1a}
 #start .press{background:#0a0d1a;padding:8px 14px;color:#ffd23f;box-shadow:0 0 0 2px #ffd23f}
-@media (prefers-reduced-motion:reduce){#start.start{animation:none}}
 /* brillo que recorre el título */
 .tituloWrap{position:relative;display:block;width:fit-content;margin:0 auto;z-index:1}
 .tituloWrap .tituloImg{margin-bottom:10px}
@@ -1172,12 +1169,12 @@ body.high-contrast .up .nm,body.high-contrast .card h3{color:#ffffff!important;t
 /* sin brillo animado: el logo queda igual que el de la foto */
 .tituloWrap::after{display:none}
 #hub .tituloWrap .tituloImg{margin-bottom:0}
-/* título a múltiplos enteros (319×110 nativo, sacado de la foto) y guerrero del menú más grande y nítido */
-.tituloImg{width:min(957px,92vw)}
-#hub .tituloImg{width:min(478px,40vw)}
-@media (max-height:860px){#hub .tituloImg{width:min(478px,40vw)}}
-@media (max-height:520px){#hub .tituloImg{width:min(319px,40vw)}#start .tituloImg{width:min(638px,84vw)}}
+/* título a múltiplos enteros (300×120 nativo, sacado de la foto) y guerrero del menú más grande y nítido */
+.tituloImg{width:min(900px,92vw)}
+#hub .tituloImg{width:min(450px,36vw)}
+@media (max-height:860px){#hub .tituloImg{width:min(450px,36vw)}}
+@media (max-height:520px){#hub .tituloImg{width:min(225px,30vw)}#start .tituloImg{width:min(600px,80vw)}}
 @media (min-height:640px) and (min-width:900px){.comp{width:250px!important;aspect-ratio:auto!important}.comp canvas{width:180px!important;height:180px!important}}
 .comp{background:radial-gradient(ellipse at 50% 92%,rgba(255,210,63,.55) 0,rgba(249,115,22,.28) 22%,transparent 48%),repeating-conic-gradient(from 0deg at 50% 70%,rgba(255,255,255,.06) 0 10deg,transparent 10deg 20deg),linear-gradient(180deg,#22307a,#0c1240)!important}
 .compName{font-size:14px;text-shadow:2px 2px 0 #0a0d1a}
-#hub .tituloWrap{margin-top:34px}
+#hub .tituloWrap{margin-top:46px}
