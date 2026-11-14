@@ -4399,3 +4399,26 @@ ode --check.
 ### Limpieza de carpetas (14 nov.)
 - Josemi: «Quita todas las carpetas que hay en todo mi escritorio y deja la carpeta definitiva con la Dex». No hay acceso a su escritorio; eligió «quitar lo que sobra» del proyecto y pidió el commit.
 - Borrados `scratch/`, `antigravity sprites/` (320 MB) y `Recursos pendientes/` (29 MB). Siguen en el historial de git. Se quedan `sprites/`, `herramientas/` y `piskel_animaciones/`, que hacen falta para animar con Piskel y regenerar la Dex. Las herramientas de LSW/DeviantArt y Sprite Fusion que usaban esas carpetas ya no tienen de dónde leer. La guía ABREME enlaza ahora a la Dex.
+
+## 2026-11-14 — Claude (relevo: poner al día la copia local y comprobar juego y Dex)
+
+### Lo que pidió el usuario
+- Leer AGENTS.md, CLAUDE.md, ESTADO_ACTUAL.md y la bitácora.
+- Poner la copia local al día con la rama `claude/sharp-brown-csiu19` (preguntando antes si había cambios sin commitear).
+- Comprobar que ya no están `scratch/`, `antigravity sprites/` ni `Recursos pendientes/`.
+- Comprobar que el juego (`index.html`) y la Dex (`dex/index.html`) funcionan, con el filtro «Le falta: …».
+- Usar la Dex como referencia para mejorar animaciones con Piskel (exportar_piskel_lote → piskelapp.com → importar_piskel → generar_dex). Lo que más falta: brazos arriba, combo 3, patada 2, rayo, combo 2 y muerte.
+- Pendiente de antes: autor del logo para los créditos; opcional, botón para abrir la Dex desde el menú.
+
+### Lo que hice
+- La copia local estaba en `claude/nice-darwin-y7t5jp` con 62 previsualizaciones modificadas y ~70 nuevas en `herramientas/_revisar/` (salidas regenerables de previsualizar.py / ver_pack.py; las nuevas ya las había sacado del repositorio a propósito el commit 79c81c7b). Josemi: «mira los cambios y si nos sirve guárdalos y si no quítalos» → apartadas con `git stash` («previsualizaciones _revisar regenerables (11-nov)…»), recuperables con `git stash pop` o desechables con `git stash drop`.
+- Cambio a `claude/sharp-brown-csiu19` (a38e18b8). El remoto solo traía la rama nice-darwin en `remote.origin.fetch`; añadida la de sharp-brown y puesto el seguimiento. `git pull`: al día.
+- Las tres carpetas ya no están en disco.
+- Probado en navegador (servidor local): inicio, menú, elegir escenario y partida en Kame House sin errores de consola. Dex: lista, ficha de Goku con animaciones y poder de pelea, y filtro «Le falta: Brazos arriba» (quita a Krilin, enseña la forma de Goku que le falta). Ninguna de las dos páginas usa fetch, así que el doble clic sigue valiendo.
+
+### A medias / problemas
+- **Flujo de Piskel**: `importar_piskel.py` solo acepta fotogramas idénticos a sprites originales del manifiesto («No acepta dibujos nuevos ni fotogramas de otro pack»); sirve para reordenar o repetir, no para dibujar fotogramas nuevos. Además pide argumentos (`archivo.piskel --manifiesto … --heroe … --forma … --anim … [--aplicar]`) y ki, rayo y daño necesitan exactamente 2 fotogramas. No existe `piskel_animaciones/LEEME.md`: cada carpeta `<heroe>_<n.º de forma>/` trae su `LEEME_PISKEL.md`. Hay que decidir con Josemi si se permite importar fotogramas dibujados a mano.
+- Autor del logo: sigue sin saberse (no se encontró el original en internet).
+
+### Siguiente paso recomendado
+- Según lo que decida Josemi: adaptar `importar_piskel.py` para aceptar fotogramas nuevos (dibujados a mano en Piskel) y escribir `piskel_animaciones/LEEME.md` con el flujo completo; después, el botón de la Dex en el menú.
