@@ -4422,3 +4422,6 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Según lo que decida Josemi: adaptar `importar_piskel.py` para aceptar fotogramas nuevos (dibujados a mano en Piskel) y escribir `piskel_animaciones/LEEME.md` con el flujo completo; después, el botón de la Dex en el menú.
+
+### Nueva petición (14 nov.)
+- ¿Adaptar importar_piskel.py a fotogramas dibujados? Josemi: «depende, si son animaciones buenas sí, si no, no». Lo que quiere: «que cojas todos los sprites, revises qué animaciones están hechas y qué tipo de animaciones son las que están hechas, y que cojas a los personajes que faltan animar y los animes también. Todos los frames se deben coger de los sprites existentes, y se animarán en la página que se llama Piskel».
