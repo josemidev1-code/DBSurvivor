@@ -27,5 +27,7 @@ Después: `python herramientas/montar_animaciones.py vegetamanga` y revisión vi
 | **Hurt** | 2 | 50x50 | [`vegetamanga_Hurt.piskel`](Hurt/vegetamanga_Hurt.piskel) | [`vegetamanga_Hurt.gif`](Hurt/vegetamanga_Hurt.gif) | [`vegetamanga_Hurt_sheet.png`](Hurt/vegetamanga_Hurt_sheet.png) |
 | **Faint** | 1 | 54x54 | [`vegetamanga_Faint.piskel`](Faint/vegetamanga_Faint.piskel) | [`vegetamanga_Faint.gif`](Faint/vegetamanga_Faint.gif) | [`vegetamanga_Faint_sheet.png`](Faint/vegetamanga_Faint_sheet.png) |
 | **Attack2** | 2 | 50x50 | [`vegetamanga_Attack2.piskel`](Attack2/vegetamanga_Attack2.piskel) | [`vegetamanga_Attack2.gif`](Attack2/vegetamanga_Attack2.gif) | [`vegetamanga_Attack2_sheet.png`](Attack2/vegetamanga_Attack2_sheet.png) |
+| **Attack3** | 2 | 54x54 | [`vegetamanga_Attack3.piskel`](Attack3/vegetamanga_Attack3.piskel) | [`vegetamanga_Attack3.gif`](Attack3/vegetamanga_Attack3.gif) | [`vegetamanga_Attack3_sheet.png`](Attack3/vegetamanga_Attack3_sheet.png) |
 | **Kick2** | 3 | 54x54 | [`vegetamanga_Kick2.piskel`](Kick2/vegetamanga_Kick2.piskel) | [`vegetamanga_Kick2.gif`](Kick2/vegetamanga_Kick2.gif) | [`vegetamanga_Kick2_sheet.png`](Kick2/vegetamanga_Kick2_sheet.png) |
+| **Beam** | 2 | 60x60 | [`vegetamanga_Beam.piskel`](Beam/vegetamanga_Beam.piskel) | [`vegetamanga_Beam.gif`](Beam/vegetamanga_Beam.gif) | [`vegetamanga_Beam_sheet.png`](Beam/vegetamanga_Beam_sheet.png) |
 | **Up** | 1 | 50x50 | [`vegetamanga_Up.piskel`](Up/vegetamanga_Up.piskel) | [`vegetamanga_Up.gif`](Up/vegetamanga_Up.gif) | [`vegetamanga_Up_sheet.png`](Up/vegetamanga_Up_sheet.png) |

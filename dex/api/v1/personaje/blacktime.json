@@ -95,7 +95,7 @@
     "velocidad": 99,
     "recarga": 90
    },
-   "estado": "CASI",
+   "estado": "COMPLETA",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -109,7 +109,7 @@
     "attack2": "animada",
     "attack3": "animada",
     "kick2": "animada",
-    "beam": "falta",
+    "beam": "animada",
     "up": "animada"
    },
    "pack": "05_Fanmade_y_alternativos/Goku Black/125_GOKU BLACK TIME BREAKER SSJ ROSE 3 SWL, ANDRÉS GAMEN ANIMATIONS"

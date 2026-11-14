@@ -27,5 +27,6 @@ Después: `python herramientas/montar_animaciones.py vegetabroly` y revisión vi
 | **Hurt** | 2 | 46x46 | [`vegetabroly_Hurt.piskel`](Hurt/vegetabroly_Hurt.piskel) | [`vegetabroly_Hurt.gif`](Hurt/vegetabroly_Hurt.gif) | [`vegetabroly_Hurt_sheet.png`](Hurt/vegetabroly_Hurt_sheet.png) |
 | **Faint** | 1 | 50x50 | [`vegetabroly_Faint.piskel`](Faint/vegetabroly_Faint.piskel) | [`vegetabroly_Faint.gif`](Faint/vegetabroly_Faint.gif) | [`vegetabroly_Faint_sheet.png`](Faint/vegetabroly_Faint_sheet.png) |
 | **Attack2** | 3 | 62x62 | [`vegetabroly_Attack2.piskel`](Attack2/vegetabroly_Attack2.piskel) | [`vegetabroly_Attack2.gif`](Attack2/vegetabroly_Attack2.gif) | [`vegetabroly_Attack2_sheet.png`](Attack2/vegetabroly_Attack2_sheet.png) |
+| **Attack3** | 2 | 56x56 | [`vegetabroly_Attack3.piskel`](Attack3/vegetabroly_Attack3.piskel) | [`vegetabroly_Attack3.gif`](Attack3/vegetabroly_Attack3.gif) | [`vegetabroly_Attack3_sheet.png`](Attack3/vegetabroly_Attack3_sheet.png) |
 | **Kick2** | 2 | 60x60 | [`vegetabroly_Kick2.piskel`](Kick2/vegetabroly_Kick2.piskel) | [`vegetabroly_Kick2.gif`](Kick2/vegetabroly_Kick2.gif) | [`vegetabroly_Kick2_sheet.png`](Kick2/vegetabroly_Kick2_sheet.png) |
 | **Up** | 1 | 60x60 | [`vegetabroly_Up.piskel`](Up/vegetabroly_Up.piskel) | [`vegetabroly_Up.gif`](Up/vegetabroly_Up.gif) | [`vegetabroly_Up_sheet.png`](Up/vegetabroly_Up_sheet.png) |

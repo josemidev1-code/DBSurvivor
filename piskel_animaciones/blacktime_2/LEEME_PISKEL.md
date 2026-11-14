@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py blacktime` y revisión visu
 | **Attack2** | 3 | 50x50 | [`blacktime_Attack2.piskel`](Attack2/blacktime_Attack2.piskel) | [`blacktime_Attack2.gif`](Attack2/blacktime_Attack2.gif) | [`blacktime_Attack2_sheet.png`](Attack2/blacktime_Attack2_sheet.png) |
 | **Attack3** | 2 | 52x52 | [`blacktime_Attack3.piskel`](Attack3/blacktime_Attack3.piskel) | [`blacktime_Attack3.gif`](Attack3/blacktime_Attack3.gif) | [`blacktime_Attack3_sheet.png`](Attack3/blacktime_Attack3_sheet.png) |
 | **Kick2** | 2 | 50x50 | [`blacktime_Kick2.piskel`](Kick2/blacktime_Kick2.piskel) | [`blacktime_Kick2.gif`](Kick2/blacktime_Kick2.gif) | [`blacktime_Kick2_sheet.png`](Kick2/blacktime_Kick2_sheet.png) |
+| **Beam** | 2 | 58x58 | [`blacktime_Beam.piskel`](Beam/blacktime_Beam.piskel) | [`blacktime_Beam.gif`](Beam/blacktime_Beam.gif) | [`blacktime_Beam_sheet.png`](Beam/blacktime_Beam_sheet.png) |
 | **Up** | 2 | 60x60 | [`blacktime_Up.piskel`](Up/blacktime_Up.piskel) | [`blacktime_Up.gif`](Up/blacktime_Up.gif) | [`blacktime_Up_sheet.png`](Up/blacktime_Up_sheet.png) |

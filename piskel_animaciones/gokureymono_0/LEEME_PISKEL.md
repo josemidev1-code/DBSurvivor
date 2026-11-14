@@ -27,3 +27,4 @@ Después: `python herramientas/montar_animaciones.py gokureymono` y revisión vi
 | **Hurt** | 2 | 64x64 | [`gokureymono_Hurt.piskel`](Hurt/gokureymono_Hurt.piskel) | [`gokureymono_Hurt.gif`](Hurt/gokureymono_Hurt.gif) | [`gokureymono_Hurt_sheet.png`](Hurt/gokureymono_Hurt_sheet.png) |
 | **Faint** | 1 | 82x82 | [`gokureymono_Faint.piskel`](Faint/gokureymono_Faint.piskel) | [`gokureymono_Faint.gif`](Faint/gokureymono_Faint.gif) | [`gokureymono_Faint_sheet.png`](Faint/gokureymono_Faint_sheet.png) |
 | **Attack2** | 3 | 50x50 | [`gokureymono_Attack2.piskel`](Attack2/gokureymono_Attack2.piskel) | [`gokureymono_Attack2.gif`](Attack2/gokureymono_Attack2.gif) | [`gokureymono_Attack2_sheet.png`](Attack2/gokureymono_Attack2_sheet.png) |
+| **Beam** | 2 | 56x56 | [`gokureymono_Beam.piskel`](Beam/gokureymono_Beam.piskel) | [`gokureymono_Beam.gif`](Beam/gokureymono_Beam.gif) | [`gokureymono_Beam_sheet.png`](Beam/gokureymono_Beam_sheet.png) |
