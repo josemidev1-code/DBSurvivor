@@ -1,0 +1,107 @@
+{
+  "heroe": "vegitoblue254",
+  "forma": "0",
+  "pack": "09_Packs_mixtos_por_revisar/Varios/254_SPRITESEXTRA",
+  "frames": [
+    {
+      "sha256": "efabdfaf114a2b07fac6b36888017d2ddf9e6bc8528f7f1633d57bebb30d62b8",
+      "indice": 90
+    },
+    {
+      "sha256": "478341fa205a6c0ccf28d704f87fd35bbbae7b0bc9d52625b4a1cc68df5ddb00",
+      "indice": 92
+    },
+    {
+      "sha256": "269e6d646efbcd2e4cacffc228fcb5b3587c36b5badcf19fc409dd1e0ae4cb1c",
+      "indice": 196
+    },
+    {
+      "sha256": "de2ce2e98548a0a5b61d49586b3dfb5978b60c9956528690201507c22c0ffba3",
+      "indice": 181
+    },
+    {
+      "sha256": "7bdc3530a81188e335c793b7cf6c71659e66e7ef8ef8d723bf673f734523d7bc",
+      "indice": 183
+    },
+    {
+      "sha256": "cc8ea019f6db644df7c192dfed875d4f8e05b2f616cc93aebcb05d2ed309fdb6",
+      "indice": 189
+    },
+    {
+      "sha256": "5633f1eb59e06c02ff0a26ed9f3c85c93dd10614b5de2e219c2db9ae501fc52c",
+      "indice": 220
+    },
+    {
+      "sha256": "b837c2ab7110ea6cda8729c64dca3071fd13eb35c89a2eaca0aa4214b5cb5737",
+      "indice": 222
+    },
+    {
+      "sha256": "00020351ba8d6b11b347031eeaa2a8df2727055573195b6b28b8f79ef3fb94ee",
+      "indice": 281
+    },
+    {
+      "sha256": "0c9d5cf21412dc7787d71bcb383ec93092cf54100a2a6653985e92423566b6b1",
+      "indice": 283
+    },
+    {
+      "sha256": "6e3fa9ec32ca1ce150a8fbf54a0669842b71334a6ec0e8eca92e2f6476c83db3",
+      "indice": 245
+    },
+    {
+      "sha256": "8db835823faa203dfaebb011e5a52b50b6bd3459fba55a00f1d748e05320d959",
+      "indice": 246
+    },
+    {
+      "sha256": "3b013babbb725bb21503129aa62f1f59424c08c87e5d0556e1508b91623022c2",
+      "indice": 238
+    },
+    {
+      "sha256": "c2b7540cfc5e6ebdd7b232c4835d5a9ce7e2ce5be075d38819e93147aa6fdffb",
+      "indice": 242
+    },
+    {
+      "sha256": "96b1b272f558c2c2d78a770f67a8d72e8a434caf114787c4f031873543171758",
+      "indice": 243
+    },
+    {
+      "sha256": "e1bc2f3950e21086a16aacd2464e7d1730345f3be036c689bb4654852b6e21be",
+      "indice": 256
+    },
+    {
+      "sha256": "e4532842903995b20521a3c68fde72bfe6717f37969c1cdc889eed3ef67a40bb",
+      "indice": 257
+    },
+    {
+      "sha256": "b6b25839f79390646dd38743ee88dd4913bc156692c7b7e281573b63905e6730",
+      "indice": 233
+    },
+    {
+      "sha256": "621ffb2b7f1d4c53cb8ce51b498b945162719a72c8692f487e205b2679c58bca",
+      "indice": 234
+    },
+    {
+      "sha256": "b837c2ab7110ea6cda8729c64dca3071fd13eb35c89a2eaca0aa4214b5cb5737",
+      "indice": 222
+    },
+    {
+      "sha256": "bb131d942e99c38be5757e8d0b21b68936bb4228083f348ad6dc7530566c4293",
+      "indice": 223
+    },
+    {
+      "sha256": "9b4637b843d01720cceb92f3bcaf6f605e45e6e3f5adac36b9badf09586fbd71",
+      "indice": 224
+    },
+    {
+      "sha256": "7c9042af236f7afdc923ebc57ae00863808ce07e9064c34fb6ab04915c4b963d",
+      "indice": 277
+    },
+    {
+      "sha256": "5bf494a19ae290118824d2a1a9b38d4326306eccff333d0d2b1f1a20ab81172c",
+      "indice": 278
+    },
+    {
+      "sha256": "8b546c00d2c5c801c7a18b3297ca82f63bf7ac7538a55278af0c17f8cb2d60d8",
+      "indice": 255
+    }
+  ]
+}

@@ -61,7 +61,7 @@
     "velocidad": 94,
     "recarga": 95
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -72,10 +72,10 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
+    "attack2": "animada",
     "attack3": "falta",
-    "kick2": "falta",
-    "beam": "falta",
+    "kick2": "animada",
+    "beam": "animada",
     "up": "falta"
    },
    "pack": "04_Heroes_y_videojuegos/Goku Black/126_GOKU BLACK TIME BREAKER SSJR MEJORADO , ANDRÉS GAMEN ANIMATIONS ( SPRITE HD REMASTERIZADO )"

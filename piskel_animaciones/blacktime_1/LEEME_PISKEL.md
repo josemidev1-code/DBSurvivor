@@ -26,3 +26,6 @@ Después: `python herramientas/montar_animaciones.py blacktime` y revisión visu
 | **Pow** | 2 | 86x86 | [`blacktime_Pow.piskel`](Pow/blacktime_Pow.piskel) | [`blacktime_Pow.gif`](Pow/blacktime_Pow.gif) | [`blacktime_Pow_sheet.png`](Pow/blacktime_Pow_sheet.png) |
 | **Hurt** | 2 | 50x50 | [`blacktime_Hurt.piskel`](Hurt/blacktime_Hurt.piskel) | [`blacktime_Hurt.gif`](Hurt/blacktime_Hurt.gif) | [`blacktime_Hurt_sheet.png`](Hurt/blacktime_Hurt_sheet.png) |
 | **Faint** | 1 | 58x58 | [`blacktime_Faint.piskel`](Faint/blacktime_Faint.piskel) | [`blacktime_Faint.gif`](Faint/blacktime_Faint.gif) | [`blacktime_Faint_sheet.png`](Faint/blacktime_Faint_sheet.png) |
+| **Attack2** | 2 | 56x56 | [`blacktime_Attack2.piskel`](Attack2/blacktime_Attack2.piskel) | [`blacktime_Attack2.gif`](Attack2/blacktime_Attack2.gif) | [`blacktime_Attack2_sheet.png`](Attack2/blacktime_Attack2_sheet.png) |
+| **Kick2** | 2 | 52x52 | [`blacktime_Kick2.piskel`](Kick2/blacktime_Kick2.piskel) | [`blacktime_Kick2.gif`](Kick2/blacktime_Kick2.gif) | [`blacktime_Kick2_sheet.png`](Kick2/blacktime_Kick2_sheet.png) |
+| **Beam** | 2 | 56x56 | [`blacktime_Beam.piskel`](Beam/blacktime_Beam.piskel) | [`blacktime_Beam.gif`](Beam/blacktime_Beam.gif) | [`blacktime_Beam_sheet.png`](Beam/blacktime_Beam_sheet.png) |

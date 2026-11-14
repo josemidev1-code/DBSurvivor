@@ -26,3 +26,4 @@ Después: `python herramientas/montar_animaciones.py blackmajin` y revisión vis
 | **Pow** | 2 | 66x66 | [`blackmajin_Pow.piskel`](Pow/blackmajin_Pow.piskel) | [`blackmajin_Pow.gif`](Pow/blackmajin_Pow.gif) | [`blackmajin_Pow_sheet.png`](Pow/blackmajin_Pow_sheet.png) |
 | **Hurt** | 2 | 54x54 | [`blackmajin_Hurt.piskel`](Hurt/blackmajin_Hurt.piskel) | [`blackmajin_Hurt.gif`](Hurt/blackmajin_Hurt.gif) | [`blackmajin_Hurt_sheet.png`](Hurt/blackmajin_Hurt_sheet.png) |
 | **Attack2** | 2 | 50x50 | [`blackmajin_Attack2.piskel`](Attack2/blackmajin_Attack2.piskel) | [`blackmajin_Attack2.gif`](Attack2/blackmajin_Attack2.gif) | [`blackmajin_Attack2_sheet.png`](Attack2/blackmajin_Attack2_sheet.png) |
+| **Attack3** | 2 | 54x54 | [`blackmajin_Attack3.piskel`](Attack3/blackmajin_Attack3.piskel) | [`blackmajin_Attack3.gif`](Attack3/blackmajin_Attack3.gif) | [`blackmajin_Attack3_sheet.png`](Attack3/blackmajin_Attack3_sheet.png) |

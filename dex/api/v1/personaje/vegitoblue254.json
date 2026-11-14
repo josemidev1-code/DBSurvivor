@@ -33,7 +33,7 @@
     "velocidad": 91,
     "recarga": 100
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -42,13 +42,13 @@
     "ki": "animada",
     "pow": "animada",
     "hurt": "animada",
-    "faint": "falta",
+    "faint": "animada",
     "portrait": "falta",
-    "attack2": "falta",
-    "attack3": "falta",
-    "kick2": "falta",
-    "beam": "falta",
-    "up": "falta"
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "quieta"
    },
    "pack": "09_Packs_mixtos_por_revisar/Varios/254_SPRITESEXTRA"
   }

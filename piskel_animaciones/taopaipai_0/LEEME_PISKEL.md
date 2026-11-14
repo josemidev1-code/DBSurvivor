@@ -26,4 +26,5 @@ Después: `python herramientas/montar_animaciones.py taopaipai` y revisión visu
 | **Pow** | 2 | 46x46 | [`taopaipai_Pow.piskel`](Pow/taopaipai_Pow.piskel) | [`taopaipai_Pow.gif`](Pow/taopaipai_Pow.gif) | [`taopaipai_Pow_sheet.png`](Pow/taopaipai_Pow_sheet.png) |
 | **Hurt** | 2 | 50x50 | [`taopaipai_Hurt.piskel`](Hurt/taopaipai_Hurt.piskel) | [`taopaipai_Hurt.gif`](Hurt/taopaipai_Hurt.gif) | [`taopaipai_Hurt_sheet.png`](Hurt/taopaipai_Hurt_sheet.png) |
 | **Attack2** | 2 | 48x48 | [`taopaipai_Attack2.piskel`](Attack2/taopaipai_Attack2.piskel) | [`taopaipai_Attack2.gif`](Attack2/taopaipai_Attack2.gif) | [`taopaipai_Attack2_sheet.png`](Attack2/taopaipai_Attack2_sheet.png) |
+| **Attack3** | 2 | 44x44 | [`taopaipai_Attack3.piskel`](Attack3/taopaipai_Attack3.piskel) | [`taopaipai_Attack3.gif`](Attack3/taopaipai_Attack3.gif) | [`taopaipai_Attack3_sheet.png`](Attack3/taopaipai_Attack3_sheet.png) |
 | **Kick2** | 2 | 50x50 | [`taopaipai_Kick2.piskel`](Kick2/taopaipai_Kick2.piskel) | [`taopaipai_Kick2.gif`](Kick2/taopaipai_Kick2.gif) | [`taopaipai_Kick2_sheet.png`](Kick2/taopaipai_Kick2_sheet.png) |
