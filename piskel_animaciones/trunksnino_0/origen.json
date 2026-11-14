@@ -1,0 +1,83 @@
+{
+  "heroe": "trunksnino",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/03_Majin_Buu/DeviantArt/434_TRUNKS NINO (MrDryy)",
+  "frames": [
+    {
+      "sha256": "630593b20cf981e630b5f841745620f9a801bfdc98dff59336d634c7c8b5e44b",
+      "indice": 0
+    },
+    {
+      "sha256": "1222c0a0724dd8370d41fa4890a57c9a5ee0b4accc428b68fa609471675ad36b",
+      "indice": 1
+    },
+    {
+      "sha256": "8c8806d44b4552261bf27ca81d00c6ce83961f85302674f0c3136d3f61532480",
+      "indice": 3
+    },
+    {
+      "sha256": "5585e53141bbc4be54e4a6b47c5b5c7f342c92cd039d5e0bdede3e0dc0e0bd4b",
+      "indice": 12
+    },
+    {
+      "sha256": "7b158406d4cbd47032a8359b78969912e8b3fda38019f31c0fe37419091fe4ae",
+      "indice": 13
+    },
+    {
+      "sha256": "3e763cdee52e133ba6384236d7fbbb224a866b9dcdc1cf58a87fca559fd293f7",
+      "indice": 9
+    },
+    {
+      "sha256": "49180f15fad2b1febc8b1e5ab76b33e384c91b03c6e7b708c01b1eb068b8a916",
+      "indice": 15
+    },
+    {
+      "sha256": "1e674dc5c4340ad7383761fb32394387bb864b4eea56d3429a61d9f885f00d88",
+      "indice": 16
+    },
+    {
+      "sha256": "d3c30df9933fc9d56839707e2ed21fff79a8695623ac373860a744ea9771ee6e",
+      "indice": 40
+    },
+    {
+      "sha256": "53077172cedb4576545e4a3c7a625941bae38fa238dc6935f4fac4fd3dbd483d",
+      "indice": 41
+    },
+    {
+      "sha256": "417dfb4e5cad7209d8dd390f0418aa4634bc4ea2061631663c2a7552cd810580",
+      "indice": 34
+    },
+    {
+      "sha256": "9a4f98392e10ec002dcb9f06af77be485ac6d1badfc25630d1ea37551951a57f",
+      "indice": 35
+    },
+    {
+      "sha256": "52c313533b08448e4e5301efaf6216e2891d1e17c3fc2051bda7734935c3f670",
+      "indice": 29
+    },
+    {
+      "sha256": "9f411e5e6f5e161b9261ca42eca0030b318e3aca6b83cece1de394edea325c2f",
+      "indice": 30
+    },
+    {
+      "sha256": "a73d69648e9457fcf5d0124c1a1004985dba44b857d8a8bf14d7ac8225440925",
+      "indice": 31
+    },
+    {
+      "sha256": "5ed481b415ad07e5789858c5ce0e6a8be0dc1c437745ad5e6c0048a9da6aeeb2",
+      "indice": 23
+    },
+    {
+      "sha256": "218f98ae37ba29f9b9e27f87adefe6857081329bbe097e2e55de91f872a68d69",
+      "indice": 24
+    },
+    {
+      "sha256": "d2adb84342511280ba36023cac87495b213e8db9bc72b7d19953b2bf5a4366fc",
+      "indice": 45
+    },
+    {
+      "sha256": "a5713de8c85796b7d2cafa059e36a0a63bd50b63d23d5b4a70d8832813807c65",
+      "indice": 46
+    }
+  ]
+}

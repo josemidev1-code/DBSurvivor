@@ -1,0 +1,103 @@
+{
+  "heroe": "blackfan",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku Black/123_GOKU BLACK SSJ RAGE, ANDRÉS GAMEN ANIMATIONS (SPRITE HD )",
+  "frames": [
+    {
+      "sha256": "dd2d58e44e53fbc37bb8b92a74b2a559d6ea7415e888a3838527d9ce1436a04d",
+      "indice": 110
+    },
+    {
+      "sha256": "e22437f67c470354aea12e040095eaa85350b65b9906c6d548cbf4ea777b1528",
+      "indice": 111
+    },
+    {
+      "sha256": "c8e77908753cadd4b90c65e19ef4f7224e22535967a3d00ff6de1b875500ce56",
+      "indice": 102
+    },
+    {
+      "sha256": "7749e1127319426a3f7a94cc8b785ba9f8ef1dff8ee40a46fa9cafc5e52aa8db",
+      "indice": 103
+    },
+    {
+      "sha256": "987286c56cd03688b1264fb7660edf4b27bcb2a3e6e72794ec69bd8015a5eb7b",
+      "indice": 90
+    },
+    {
+      "sha256": "168f68fb469f5588161bd6f43e9651deacc6339217f27a684729a97ac6300038",
+      "indice": 91
+    },
+    {
+      "sha256": "7498f73aaa575e53cb6f66cc8ee766e646cad6c39007a833c9eb117eba987416",
+      "indice": 78
+    },
+    {
+      "sha256": "7a5c1f9142ea6067e54a18fe425cc1f503032c0536a1fff25e5b55cf5a3b7f25",
+      "indice": 79
+    },
+    {
+      "sha256": "0b7985f43fac736c78afcddc84ef262fcc141140df307aa062a5162bd1041780",
+      "indice": 52
+    },
+    {
+      "sha256": "0485182f4527eae3d0a79d50da9977a283fbd1ce8cc692ba767c97307435ced5",
+      "indice": 53
+    },
+    {
+      "sha256": "03c6b7d9e4023c382a31912bd148c5fa05de240b90dbc7ad553ccecacbc54fe5",
+      "indice": 54
+    },
+    {
+      "sha256": "30fd43a56ae39fa8957b02edeae2b1f37fa33572a99e31738e0a2c456d279163",
+      "indice": 17
+    },
+    {
+      "sha256": "58ad90c300cbc7c648029f5b4415f9ac8c7d080bae991d8f5cbe296c6ad0036d",
+      "indice": 15
+    },
+    {
+      "sha256": "865713e2f0108b486398a303aa48048d37948d626d842a424fa08b1e994b5c3e",
+      "indice": 35
+    },
+    {
+      "sha256": "dc15d8c52e66006d6cf80449c183d8d7999ca9d228d761f648066c1def906c3b",
+      "indice": 36
+    },
+    {
+      "sha256": "ec1b4b37c6eeb12f3c92a0e95986c44873b816ac1d231c8bd2fcd1972b9f98f1",
+      "indice": 43
+    },
+    {
+      "sha256": "832e4ab5d423b143ed68fb88a5120c758c081b5402061a7a61dd83a78bef9962",
+      "indice": 44
+    },
+    {
+      "sha256": "5d934215f5720930626e2a187fa841ca5fc44ad00a83713ff00bdb3a38426cfd",
+      "indice": 39
+    },
+    {
+      "sha256": "1a34dac1ce6deb9a17d638552868f7d7b5fad11b54808815af8edab61ddf6bce",
+      "indice": 72
+    },
+    {
+      "sha256": "750de57245344120e3b8d6916bdc62e9852b5e371d0408afedc31907b4450e2b",
+      "indice": 73
+    },
+    {
+      "sha256": "42938d2abe718c736126c01dd415d275f040ddc2699dcc6592d989aced84f55c",
+      "indice": 80
+    },
+    {
+      "sha256": "d8a15fa7bcb25788315d4e953755aca1ed140ff187c425c522a9116da747d595",
+      "indice": 81
+    },
+    {
+      "sha256": "3e627c749b26d9d5a466601bc308c2aff72afdf2643f05d244950c4bbfd199e7",
+      "indice": 67
+    },
+    {
+      "sha256": "58512e1c6de40cc26c5ba2002589d0732bdd58c18d75a79cfb99d483f7cd7e30",
+      "indice": 68
+    }
+  ]
+}

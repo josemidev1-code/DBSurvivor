@@ -33,7 +33,7 @@
     "velocidad": 91,
     "recarga": 100
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -44,10 +44,10 @@
     "hurt": "animada",
     "faint": "falta",
     "portrait": "falta",
-    "attack2": "falta",
-    "attack3": "falta",
-    "kick2": "falta",
-    "beam": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
+    "beam": "animada",
     "up": "falta"
    },
    "pack": "05_Fanmade_y_alternativos/Goku/135_GOKU MUI DIOS, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )"

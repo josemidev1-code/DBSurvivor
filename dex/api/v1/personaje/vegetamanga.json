@@ -33,7 +33,7 @@
     "velocidad": 86,
     "recarga": 100
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -44,11 +44,11 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
-    "attack3": "falta",
-    "kick2": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
     "beam": "falta",
-    "up": "falta"
+    "up": "quieta"
    },
    "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/243_VEGETA SSJ BLUE,TRAJE,DAÑADO,MANGA VERSION(ANDRES GAMEN ANIMATIONS)"
   },
@@ -78,11 +78,11 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
+    "attack2": "animada",
     "attack3": "falta",
-    "kick2": "falta",
+    "kick2": "animada",
     "beam": "falta",
-    "up": "falta"
+    "up": "quieta"
    },
    "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/245_VEGETA SSJB PERFECTO, MANGA , MEJORADO, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )"
   }

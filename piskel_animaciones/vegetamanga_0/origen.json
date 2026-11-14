@@ -1,0 +1,111 @@
+{
+  "heroe": "vegetamanga",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/243_VEGETA SSJ BLUE,TRAJE,DAÑADO,MANGA VERSION(ANDRES GAMEN ANIMATIONS)",
+  "frames": [
+    {
+      "sha256": "f74e2b707e47e8371b7b4cc066720360baf05b79c2e6d44534e837767692063c",
+      "indice": 54
+    },
+    {
+      "sha256": "6973497f0934a57622cd39a091c83d675dfb276b767cc2bfc0216a70d0e86616",
+      "indice": 55
+    },
+    {
+      "sha256": "4dece7a76c9f14eac0f5c41ad01872face1880a3023ae309d6a8d9ae740669e9",
+      "indice": 91
+    },
+    {
+      "sha256": "f74e2b707e47e8371b7b4cc066720360baf05b79c2e6d44534e837767692063c",
+      "indice": 54
+    },
+    {
+      "sha256": "b63f946cae8cd19a93113812f508ce427ce3eb45582790142f2611d04eb8c760",
+      "indice": 79
+    },
+    {
+      "sha256": "810a95af9f64d16d8884bf9a0fee1a40c05361cc971bf530ba4f5790b0ba3fd0",
+      "indice": 81
+    },
+    {
+      "sha256": "76f4133d6c1e515767935bff86ba5319e815a424ff1711a51f3d2e2cb12ef5b8",
+      "indice": 82
+    },
+    {
+      "sha256": "41169d744e4b622a047a7e171a6cea653b855b72281008e2e81ab657e5a84055",
+      "indice": 75
+    },
+    {
+      "sha256": "6fcb6709881eb1195eb2ab1f4ba45f885b261461575b31903d5522b81eb261b5",
+      "indice": 76
+    },
+    {
+      "sha256": "ab5fa7562f26fd85c1d30c31986926166f4ea17e45c7ac7d74b695937ed0f16a",
+      "indice": 77
+    },
+    {
+      "sha256": "1c2d6a572f7ba2a14d4e69395a1c499eb185a91f4790ed9e462cf9f497db7668",
+      "indice": 31
+    },
+    {
+      "sha256": "b9acf74dfa8f8849483405d3c68d00b3e7c02aca92740dd9ebef2d17e4f70237",
+      "indice": 26
+    },
+    {
+      "sha256": "493fe66efec396fb34f002467a1ee0ac8072b772ea1eea22f8c6d3adc45e24f9",
+      "indice": 63
+    },
+    {
+      "sha256": "cd6493344d88520a5bb6d4b13e5bd10d3c6032b7281163b283b01b6f3cb01577",
+      "indice": 64
+    },
+    {
+      "sha256": "5277b9989b23aee9c53c6293008693d8f7b9cae3c06f76862fdb574e13d11b48",
+      "indice": 58
+    },
+    {
+      "sha256": "608558ffae6636bade8edb66f95cb2dcb7f8ee83e1e80b4a73b8edef8b7c2b0f",
+      "indice": 37
+    },
+    {
+      "sha256": "f20272bce0d728aa97d9bd8ebdec2d426a2ba9c110a5f5f88af17ebd9960a375",
+      "indice": 57
+    },
+    {
+      "sha256": "b9acf74dfa8f8849483405d3c68d00b3e7c02aca92740dd9ebef2d17e4f70237",
+      "indice": 26
+    },
+    {
+      "sha256": "6d92f590f5fcfc7ec1f3f9547a2c5e9bdeea1aabe0b3b11dbc7988e639eb52c2",
+      "indice": 27
+    },
+    {
+      "sha256": "130170f2cfc062fc3e83813a6412063629be198644e03871caf76a7122377eb3",
+      "indice": 28
+    },
+    {
+      "sha256": "b03c2401d56c1c253df7c97515ae3f8163cee1ef61bfdb580bb2a825733ec82b",
+      "indice": 90
+    },
+    {
+      "sha256": "4dece7a76c9f14eac0f5c41ad01872face1880a3023ae309d6a8d9ae740669e9",
+      "indice": 91
+    },
+    {
+      "sha256": "cc4931535145b8933816e294049302c0600b541fd0ee6a1d2695e9adbbd920f4",
+      "indice": 92
+    },
+    {
+      "sha256": "10ed854d2379213269a398ce52ef56ba4bff9f59ffc25d8ce33e6cbe8717c2d9",
+      "indice": 67
+    },
+    {
+      "sha256": "e334ffa2e4e7764de718c0be00fb3a9b25cc610fdbb532395a7ead3fde4c4ddd",
+      "indice": 69
+    },
+    {
+      "sha256": "996854ee5789ef50416489ea5bfc435d85639c37ad273795ea63077a515c1be6",
+      "indice": 38
+    }
+  ]
+}

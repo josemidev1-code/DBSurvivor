@@ -1,0 +1,71 @@
+{
+  "heroe": "blackrosen",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku Black/176_Goku black ssj Rosen evolution.Andres Gamen",
+  "frames": [
+    {
+      "sha256": "6191dbd494fe99d52fed3745f3d0b11828037d2fb75385eeb43cacb43440bf0c",
+      "indice": 8
+    },
+    {
+      "sha256": "5fbdfd11359e715393eac4b4fe20024a3ca7be471ba009946af58f4a5f1fdeb5",
+      "indice": 9
+    },
+    {
+      "sha256": "b1fb25dada8b1757c005368a650e0940832423509c4c3c779c5d9457f10b8c94",
+      "indice": 13
+    },
+    {
+      "sha256": "dc42eb9b58b465996302e4eda134e033d61d2a96854bbe6155c25c4dbced1a88",
+      "indice": 20
+    },
+    {
+      "sha256": "c97905e07e7d43867b67d53c622fbf091cc9d8bc9028d237b60bbace82735e27",
+      "indice": 21
+    },
+    {
+      "sha256": "14d6d5b56956e39fe26ff2e4cb82a445af170bd63e76107165c8e158359cd9a0",
+      "indice": 22
+    },
+    {
+      "sha256": "97181754ad46077029ddf9ebd0befcb3fb1a74b8260f014f34aff614e6c44cea",
+      "indice": 24
+    },
+    {
+      "sha256": "ab63a5d03423d25a3ce610a3a09889f628d99ff0bffd6ff01f963562bc94716f",
+      "indice": 25
+    },
+    {
+      "sha256": "87816211250764ef29c8510f180d46f19fcd44d900cf6334c3288227cc6bbca6",
+      "indice": 38
+    },
+    {
+      "sha256": "8852eb5a2673a5c85f0e21f3f095660f4565f4a86da17fe1833422245733098e",
+      "indice": 37
+    },
+    {
+      "sha256": "b99698adefbc4edb559031bd9c5a27125b8f716c533e335801957dfd0caf0671",
+      "indice": 30
+    },
+    {
+      "sha256": "5a006d89ac7604dc607898c21c15801b9aa3a8540263f13a5bee05d5f8579a6c",
+      "indice": 31
+    },
+    {
+      "sha256": "e6954fcff0649e5ed0c55e4c4574adb1cdc521d660a04290844ebca0212ba7f4",
+      "indice": 28
+    },
+    {
+      "sha256": "887365eb13999fa63d6f4689114bf9efbe74cfb87969a9ce76d957bfd747f38a",
+      "indice": 29
+    },
+    {
+      "sha256": "ad2acb1f7b08ab9908d07017013643cca6e54d46fa0c6f9b9dc5f3fe8b08a8be",
+      "indice": 18
+    },
+    {
+      "sha256": "cb8b754cafe34f4737f386db759065fd6cc713a46128ae3ce357ef7c9fed63df",
+      "indice": 19
+    }
+  ]
+}

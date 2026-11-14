@@ -1,0 +1,111 @@
+{
+  "heroe": "gokualt",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku/131_GOKU MODO MÍSTICO,DBZ, ANDRÉS GAMEN ANIMATIONS (SPRITES HD)",
+  "frames": [
+    {
+      "sha256": "b45d159e9d02f3e4adb268f53a4a177b50ab3d550da309234bd9dfe00763ef42",
+      "indice": 90
+    },
+    {
+      "sha256": "8e9f49d14151f6d03b53f594a5a03ab6aa12b95c6e7c45584bd834f27c930c8a",
+      "indice": 91
+    },
+    {
+      "sha256": "e978c931a18fabf86eb91c59f01fdb322a20c46d7d349159ef73ed1af7b5d566",
+      "indice": 87
+    },
+    {
+      "sha256": "3ef7de1bc0d5d8c871c6a3e85664c867d519a36c8dcd4fcc84df54fc7facb957",
+      "indice": 73
+    },
+    {
+      "sha256": "444e8e50bb6b72dc1dec25b58a63ca46039f30f7e132e1993db20e311c7d41d9",
+      "indice": 74
+    },
+    {
+      "sha256": "841008602e050d1aa6252590d285bf94a8a9550b3ec234c9f2e5dd0bf41966da",
+      "indice": 75
+    },
+    {
+      "sha256": "2bd7626f4571eb510ce942386b2332cd0e8c28e289391958b171061bb78b28f5",
+      "indice": 76
+    },
+    {
+      "sha256": "b77ba303c5e1bf6e38d131be37d8519952140809b1bb0b764ce4650d2a5aa4c9",
+      "indice": 67
+    },
+    {
+      "sha256": "bad02deff513156d7829a75cf2079cea5e16fde32b3b11de48811c232654ed56",
+      "indice": 68
+    },
+    {
+      "sha256": "f7bca5f963c1acd50354b8eb075281ba8062850aad37fdf3af87b47b0d0baaaa",
+      "indice": 51
+    },
+    {
+      "sha256": "ab10d3efd76a548094ae4d9fa93caeb951f68bdfa01da0bed5949820b9272e59",
+      "indice": 50
+    },
+    {
+      "sha256": "dbb652297138a180bc66ded2d79978ebcfebc1497fe7954e2a3a74a7015c1f40",
+      "indice": 42
+    },
+    {
+      "sha256": "51a8e9622dd0c453a334bb5c1c092ff58100f48f05c987a5943b317b03c4ca10",
+      "indice": 43
+    },
+    {
+      "sha256": "be85a821c9d774b6a300801a1c369518fb571ecb064717830407fa1d35d9f9c1",
+      "indice": 34
+    },
+    {
+      "sha256": "a68f1a46a337b30f2f223d614d90b49d6ebcedf2cb907323df0f8add2aa3d626",
+      "indice": 35
+    },
+    {
+      "sha256": "1a349fccf8206a8efaf3a7087e0f0004c64a2204b173fb27f2d49d33cfc1292c",
+      "indice": 32
+    },
+    {
+      "sha256": "cd93161217a90f99e5a21c53b33faaa04013e39b1ae9b1a3453890c1bdf21144",
+      "indice": 55
+    },
+    {
+      "sha256": "a930a54df827d7b017e468f318c8e6b3b80c92cec32f144319eff2c337052984",
+      "indice": 56
+    },
+    {
+      "sha256": "d6ccc1ba20991466e64759576c7f9455f65fc4d76a5fed3cf062bfda3ecee26e",
+      "indice": 70
+    },
+    {
+      "sha256": "e7700fc33dec5eb6972612e79fba577c930d59bf2fcf0f38448b4de141104d32",
+      "indice": 71
+    },
+    {
+      "sha256": "e9d6a383518a83bb0a2cd18b8e73d51cf2539b5dff073a1e9dd7f4b0357487a5",
+      "indice": 72
+    },
+    {
+      "sha256": "9a0eee45efbfb7feffb0574420daed0cc6ac15e31f9d7939d6fa06ef27ba8dee",
+      "indice": 39
+    },
+    {
+      "sha256": "d290e8950cf7830580db2014223d6043dae416faf4a0a66768a8d5dfa864a8d0",
+      "indice": 40
+    },
+    {
+      "sha256": "ffd97f0bc4e6278e1432934dec6b1df88cb7af445e5f152fa801e635a98cc739",
+      "indice": 20
+    },
+    {
+      "sha256": "b908a3734757684e4f14cd61fe2f386620432853069884081aa97f2f2dbe4830",
+      "indice": 22
+    },
+    {
+      "sha256": "e978c931a18fabf86eb91c59f01fdb322a20c46d7d349159ef73ed1af7b5d566",
+      "indice": 87
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "heroe": "gokualt",
+  "forma": "2",
+  "pack": "05_Fanmade_y_alternativos/Goku/129_GOKU MODO BESTIA,BY ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "9cc1e789e97f237260a6bfa371beca42a542183385c4c1a7486b5d18dfeaa687",
+      "indice": 35
+    },
+    {
+      "sha256": "05bf6842f84ca3747a9e67b7b8ac26c8c7e6338a9896d079cdeb196c3380e818",
+      "indice": 36
+    },
+    {
+      "sha256": "7bae76bef4ebce3f36fd7852bf7023d6a9fbaa8aa4fcf28f63c468e28e790b65",
+      "indice": 93
+    },
+    {
+      "sha256": "9f00edfa513f13f32d338fd65ab1ab3072f7416a12f3f89499408d4281ff7f3b",
+      "indice": 77
+    },
+    {
+      "sha256": "bd39bd441de4c7c979b390d5d63b65e492937845c461ed144df229a63b908b65",
+      "indice": 80
+    },
+    {
+      "sha256": "edf2e7ab0ce2556323cd46fab327aaf623032167fb44d953087adb086da18bfa",
+      "indice": 81
+    },
+    {
+      "sha256": "97efe5bebcd003cc2639fdccaa51755cf6115ab81cb9837bb2ee6c18a5112595",
+      "indice": 82
+    },
+    {
+      "sha256": "6cdc58ae12e669011d9fbd297ef6163e2ca38857cee35d5f29d28199798495d6",
+      "indice": 68
+    },
+    {
+      "sha256": "ace9429fd72c8c10be4da838e93952383fd042dc2e92eb9af23e8992a62da328",
+      "indice": 69
+    },
+    {
+      "sha256": "e0839ed52548303ccd53ba95b21fe0631d5d3db0fffaf16ffc96ec3d92c651de",
+      "indice": 50
+    },
+    {
+      "sha256": "5b4124941e2bcc027a3edf8fca0c555c5031bfb446d92c10f2861d8ebe2baf90",
+      "indice": 58
+    },
+    {
+      "sha256": "2c643c6a6c76c682b54b56333a6d06771ac1b940fc6051560a0e827929e24334",
+      "indice": 40
+    },
+    {
+      "sha256": "ac4271fe002b008e9c8b01138d6a339abecbd450881cad711c5f5fb1cdf1efc8",
+      "indice": 41
+    },
+    {
+      "sha256": "9a593530857228e379b5916504efc59e7a19eb411e3b9fb7eb4405d09c55f7a7",
+      "indice": 21
+    },
+    {
+      "sha256": "2032ad82330e285dada02f2160fb6df2818834c490107d98d1e93e1da4873e61",
+      "indice": 23
+    },
+    {
+      "sha256": "1fb3140faddbd014f6a08a4c6a47f0a1dc8b6926f6efb7682eb71a94956e896e",
+      "indice": 20
+    },
+    {
+      "sha256": "4b89f15c9ddec49dc55b6ffc9472067435c14ccf84c5a53d7762360f2828ccf0",
+      "indice": 62
+    },
+    {
+      "sha256": "cca86c80a9ea8ace7ebc5d45e8dd3378b3d7999aa9b3f760203186541e6ff34e",
+      "indice": 63
+    },
+    {
+      "sha256": "5b4124941e2bcc027a3edf8fca0c555c5031bfb446d92c10f2861d8ebe2baf90",
+      "indice": 58
+    },
+    {
+      "sha256": "caf712b298ab61817754333ba90bee13805b66c0504747703b18370ecd7d3f33",
+      "indice": 59
+    },
+    {
+      "sha256": "2145514c9f7b4a8bdfe7f779e0e15810ec48912e96eb113b3de7102cccb8b51b",
+      "indice": 74
+    },
+    {
+      "sha256": "885bd29accf569a30a1156ec34f0523967495f687535e1459b2b1b16ebdd068c",
+      "indice": 75
+    }
+  ]
+}

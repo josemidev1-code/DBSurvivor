@@ -1,0 +1,103 @@
+{
+  "heroe": "vegetamanga",
+  "forma": "1",
+  "pack": "01_Dragon_Ball_Super/09_Generales_y_manga/Vegeta/245_VEGETA SSJB PERFECTO, MANGA , MEJORADO, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )",
+  "frames": [
+    {
+      "sha256": "992f8d2f8ec1be5431b4257e56209979ccf70ccb5be85785a9c1eec35e64d74e",
+      "indice": 131
+    },
+    {
+      "sha256": "e3e4b7791d010c0c3b3690a246f37a73a450691f70d538d2d6b806674e16fa2e",
+      "indice": 132
+    },
+    {
+      "sha256": "cd903f2fbfd3318b58609e60825dcaf44856f70e1d4002b33095aa6618d14b8c",
+      "indice": 121
+    },
+    {
+      "sha256": "919431e0cb552631c002125837d3d11b28f99140032a362cde142dff0b7e6721",
+      "indice": 122
+    },
+    {
+      "sha256": "29d36260c27b60961a1dcd12e748fd4671c6456a9d20e2504bbe36d216a20b84",
+      "indice": 110
+    },
+    {
+      "sha256": "2e603128957997f9d9953e534fdcb29caa87ae75672213a1cb16837f373b25f1",
+      "indice": 100
+    },
+    {
+      "sha256": "a4b2c6168720b33e7b79bac6da3487008b145e078aa375ef9a2a7aca27153af7",
+      "indice": 101
+    },
+    {
+      "sha256": "854ce19e4ae0e066133c9658b58d8876328d5cdd9ae9a89e13c152f86f5c9ac9",
+      "indice": 104
+    },
+    {
+      "sha256": "0fccd9397589098f12f18a7fa6cb8c8c110db583f3dc0858dd5e701e3a6f677c",
+      "indice": 94
+    },
+    {
+      "sha256": "25c49fa56e1923cc3d1a712047794cac08730078637451b82ed06455c8a38443",
+      "indice": 95
+    },
+    {
+      "sha256": "8f64b852770ab9823d9f13c7e248bcfec51b4873ec4bfb78af6d72ccec0561f4",
+      "indice": 96
+    },
+    {
+      "sha256": "992f8d2f8ec1be5431b4257e56209979ccf70ccb5be85785a9c1eec35e64d74e",
+      "indice": 131
+    },
+    {
+      "sha256": "2ce2451089d6a9a8e3f478cf8cdf7b9d9d6d2b315417b46afc977611d0c714b8",
+      "indice": 34
+    },
+    {
+      "sha256": "eeee8f2d45e521e0e3b4f48f6ddc3317ade31328cb04f2eccfc69d2931ea0597",
+      "indice": 134
+    },
+    {
+      "sha256": "e73962c81d072ca326900e7f11e23ff3b52b47e344880fa70b0a71af93354af3",
+      "indice": 135
+    },
+    {
+      "sha256": "e3aaa7d348f5132ad586888a1bb3b6f8108541ee09f7624bd25f2c9509618498",
+      "indice": 50
+    },
+    {
+      "sha256": "f0416d2e9a88347e7e830ee413e63865a66edafbfd95ffee955e27b659feae41",
+      "indice": 52
+    },
+    {
+      "sha256": "2844c0d864adb3d94cb25a9338b2295f2f02e66d5874ce06a763f5eddf006c73",
+      "indice": 48
+    },
+    {
+      "sha256": "0a6a606c05a3024603f0471b3555a1cb6198bb48a958a0031cfac325ec4ddea9",
+      "indice": 102
+    },
+    {
+      "sha256": "d6ebb2541b7ccb712152b13a12b6b076d7f54313da49b0d0ba1f49aae54b4327",
+      "indice": 103
+    },
+    {
+      "sha256": "c27f6a50b9023acb83c7fbb2f4265061f5bb36eb2dc2de73429a945aed7779e0",
+      "indice": 74
+    },
+    {
+      "sha256": "62c870bdba2b4c887502e350ceeea580e3c78e2b3d6d395fbc8adef3410adc46",
+      "indice": 75
+    },
+    {
+      "sha256": "f9b8e8590ba215bcedfca82e3e40a7d2e37e5019d60daeb9d99874387283ff9b",
+      "indice": 76
+    },
+    {
+      "sha256": "50935bddeac287e3a92201224d9c6359931d3c0601032b292c345a101db4682d",
+      "indice": 67
+    }
+  ]
+}

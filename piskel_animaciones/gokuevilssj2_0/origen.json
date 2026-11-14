@@ -1,0 +1,95 @@
+{
+  "heroe": "gokuevilssj2",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku/127_GOKU EVIL SSJ 2 , ANDRÉS GAMEN ANIMATIONS , SPRITE HD,",
+  "frames": [
+    {
+      "sha256": "91b9358162e173b67581da4767fa1c722e78cf50efe3db8eedff1db9cdf19d8b",
+      "indice": 41
+    },
+    {
+      "sha256": "840b1fcf5431021b6666f413c497605da43888c043589056c510ff52ebe0e437",
+      "indice": 42
+    },
+    {
+      "sha256": "ed5ad74ed69c95d2f9020b52e7f362f45175a8a2722f379ea9689eba1b005384",
+      "indice": 96
+    },
+    {
+      "sha256": "dd22e8e4e0518c68374e88ba5ebb1cfa0e2025b2ea171c382cf6fe6ee89a4b6b",
+      "indice": 81
+    },
+    {
+      "sha256": "82a538501c6339124c83ebe79addd07250c7ace531f67a99a00d5e692a52eeae",
+      "indice": 82
+    },
+    {
+      "sha256": "849e4a3b7a9468009e802445494f96425c99ec444a721829f45b28cf166417d8",
+      "indice": 83
+    },
+    {
+      "sha256": "5a0f16f86722fe63161c9be5288df9a408240c787cc38fd0652827c0ff8f1d43",
+      "indice": 57
+    },
+    {
+      "sha256": "7debd68eeb3a71b7ffe67379873a0aa90c4ae04a78fa32669ef2e6bb8b3abc97",
+      "indice": 58
+    },
+    {
+      "sha256": "e1cb78820c39674d51037d37133d0b1b52eb440dac28877085c34b5dbe8b2cb8",
+      "indice": 19
+    },
+    {
+      "sha256": "9ba2a5e9a01bfc6ea78e98c43d547611e8fb8def2c6765753c974f5f29c49cf3",
+      "indice": 20
+    },
+    {
+      "sha256": "5e970de31ca334fb1f45285eabc2dc6d5b1d3fa4837a708c8f358f0c6bf1b2e0",
+      "indice": 17
+    },
+    {
+      "sha256": "1718898cf939b88cf4048c38ce96e9d648a7d6e4316f460499b3617779b4032d",
+      "indice": 111
+    },
+    {
+      "sha256": "f8cb0eb38275c8625d1be1d6758d25cd424788c5eb5ef1b92535150f5a9d3c88",
+      "indice": 29
+    },
+    {
+      "sha256": "3036850d34bf111af4ffa952cf7dc02186a155bd9f30233dcd29258c76719045",
+      "indice": 32
+    },
+    {
+      "sha256": "0a5b307ba50ecced2961b88eb26b06038cbf6ad4e2cef292da59d87690528cdf",
+      "indice": 28
+    },
+    {
+      "sha256": "947708b7b43e362bb7e80df8bc75077d649dfe7fc974337321c5335ce584b554",
+      "indice": 72
+    },
+    {
+      "sha256": "8fba6982ff358e5fcdabd1fc37bd48ce632ef6deb3160b5c4fa3bc9af07ab99f",
+      "indice": 73
+    },
+    {
+      "sha256": "6f6d3651eac7d0477f959f28ed21d71ef7c6dae832738cb7e8abae7dfbae26cc",
+      "indice": 74
+    },
+    {
+      "sha256": "b8cbcbd24b80e13007baebe8da0562505287781bb4dcfa01ad635ccb1bb994e4",
+      "indice": 70
+    },
+    {
+      "sha256": "9e85c4379ec25a5b16752e01935d70fe112d947ebeed7ba978df3bbbd55d7c95",
+      "indice": 71
+    },
+    {
+      "sha256": "30b9b45b9a31056cdb1053837a82a917439e6149c6bb3c4318dff1900b672fc2",
+      "indice": 54
+    },
+    {
+      "sha256": "706357ca3e6c6100343d9ed4752aab893dc1777126f01a60bdd76aa6ed73d33b",
+      "indice": 55
+    }
+  ]
+}

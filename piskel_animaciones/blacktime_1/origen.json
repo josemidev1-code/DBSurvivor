@@ -1,0 +1,79 @@
+{
+  "heroe": "blacktime",
+  "forma": "1",
+  "pack": "04_Heroes_y_videojuegos/Goku Black/126_GOKU BLACK TIME BREAKER SSJR MEJORADO , ANDRÉS GAMEN ANIMATIONS ( SPRITE HD REMASTERIZADO )",
+  "frames": [
+    {
+      "sha256": "2e19602805620b0431c7c54003157eb009911abeb42e5895a9d305611b06f55e",
+      "indice": 214
+    },
+    {
+      "sha256": "079117ebd50b7a79d88b01f4c502d5a81a69f405c6e34c5086d12acef3d2a106",
+      "indice": 215
+    },
+    {
+      "sha256": "a43bb39795d895d4bd8d213e4807759a64d3125ed23964a5069a3be1413e5a1e",
+      "indice": 204
+    },
+    {
+      "sha256": "523ff05e8da63552a3e280463aba3d34ce3f96521b878d515eafe994c7aa93d2",
+      "indice": 205
+    },
+    {
+      "sha256": "11b9880643ec907b873451960b86c579e7799cab38212d87ad9deae365269dee",
+      "indice": 186
+    },
+    {
+      "sha256": "a8097c622b9a83c6daacfdc3740a6cd401a7f20cc0012219b19b66b64d505a7f",
+      "indice": 181
+    },
+    {
+      "sha256": "968aa9d1f6b32f03a5589e95549cff8e7332b4ed77521bed3744b29ae469e4f6",
+      "indice": 182
+    },
+    {
+      "sha256": "607dca083077ab0b80f8015c88a20f7837d118658039c55d00c2eff36a274b5e",
+      "indice": 184
+    },
+    {
+      "sha256": "3f653832a87b802f3738bbe4da8b66de0611dfbd819ce700142dc677c8267151",
+      "indice": 158
+    },
+    {
+      "sha256": "8187aa06a7b088d937332bccce3ac3c6317b7d588a79e4c547f61507f3d2c010",
+      "indice": 160
+    },
+    {
+      "sha256": "c6b36c45287fe463689de04a9e64ae079e2cec10c21da91127dfae6b22ca76c6",
+      "indice": 161
+    },
+    {
+      "sha256": "88cea5033ec3311055c0f5163b29ba04725c76d823dbd42e5bcfa2eabcf7202e",
+      "indice": 52
+    },
+    {
+      "sha256": "c2d438c684640f75cf38a89b83d661fc99a4f0955c62f8ee3debc851b05d22f1",
+      "indice": 47
+    },
+    {
+      "sha256": "9704997dc741c6247b3d404983e7b791e123ff48c15951e7f41d3f75be5fde8f",
+      "indice": 232
+    },
+    {
+      "sha256": "a2c3e40211c69de75ba522c7dbf56aefbbe16ddba894990f84bb13d6b082f164",
+      "indice": 233
+    },
+    {
+      "sha256": "7e4779e8a7915e8c060fcd901a154926928afacd255e900304babd272f2e0ff1",
+      "indice": 150
+    },
+    {
+      "sha256": "1929fe8e9b5a908f3a3edbe4780a9be0f81baa4e4f78c9ccc239859b9696ad5d",
+      "indice": 151
+    },
+    {
+      "sha256": "c7b0751f3a15499b7d0a01056dae7c9017965131622f07bb561d2da79236fc2b",
+      "indice": 146
+    }
+  ]
+}

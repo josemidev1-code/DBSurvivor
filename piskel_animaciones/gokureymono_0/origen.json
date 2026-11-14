@@ -1,0 +1,79 @@
+{
+  "heroe": "gokureymono",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku/138_GOKU REY MONO,DB TALE, HECHO POR ANDRÉSITO GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "7f8ff76c857f4c2e4249976d59c839924b787838287d30495edbf6194b223d40",
+      "indice": 73
+    },
+    {
+      "sha256": "0928ba16d4a1dd27e7e2e789b64044ecb3863ce84a802f7cefef910dcb535a90",
+      "indice": 74
+    },
+    {
+      "sha256": "281c03f26ec1ff7cff20a59f8651bb706d387119be57955199166fb7f8b50c54",
+      "indice": 96
+    },
+    {
+      "sha256": "11a5bbbf1cf4c4aa261b683606f223cde7e8497a7ce4b629a9020b2990f2580f",
+      "indice": 79
+    },
+    {
+      "sha256": "4168c326190dc53a9b699f32c150ddd81cbb51ff7371ae0b00bec93437c31559",
+      "indice": 82
+    },
+    {
+      "sha256": "c8730ce1784837401a689ebfba2cfbeb799a820ed2fbe62c774addda95c31d35",
+      "indice": 86
+    },
+    {
+      "sha256": "90c25530f06b0b97ab003947fa0ef51c38d835c143a5338db7490fc862b28172",
+      "indice": 84
+    },
+    {
+      "sha256": "5f34243d37775a142609e458f520b1adfe3629924f1d2fd9bc6c6ced3e78c71e",
+      "indice": 113
+    },
+    {
+      "sha256": "c9b4e1a87e9d2918a38d8457c959cfbfff89d4ce89c54c52dd54f8e0fb08c17a",
+      "indice": 66
+    },
+    {
+      "sha256": "b49487a9004938be6818924d91fa006aa52c6afb2c69d3efa7f46cd54ce62fa4",
+      "indice": 71
+    },
+    {
+      "sha256": "7eef8123a92d5a5f3d8e50cc0185884435c17e62ea9ed3d9918d3bd0118090ee",
+      "indice": 62
+    },
+    {
+      "sha256": "02705b4f35bb364feb839f728c12982fd2f52dd916d481666a99ec8f4986c517",
+      "indice": 63
+    },
+    {
+      "sha256": "f978cc4263b5c87dd1accd74abdfb0fbbf5b27551a7aadb17ff2c930af20df55",
+      "indice": 92
+    },
+    {
+      "sha256": "b919b83752979b6c7b700de4cad183db8e5b8d5dc96f3b0dc4469baf5cf4524a",
+      "indice": 93
+    },
+    {
+      "sha256": "eb5364ef9090542232775ed3f4d18b4201ad81e89be48a473b6abcc0a5e1187a",
+      "indice": 17
+    },
+    {
+      "sha256": "b49487a9004938be6818924d91fa006aa52c6afb2c69d3efa7f46cd54ce62fa4",
+      "indice": 71
+    },
+    {
+      "sha256": "9a4c0700582351f3ef63a7da445f78e983c21b4fa56d7147438651e4bf964c07",
+      "indice": 72
+    },
+    {
+      "sha256": "7f8ff76c857f4c2e4249976d59c839924b787838287d30495edbf6194b223d40",
+      "indice": 73
+    }
+  ]
+}

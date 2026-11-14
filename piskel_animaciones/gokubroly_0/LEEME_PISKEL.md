@@ -22,7 +22,7 @@ Después: `python herramientas/montar_animaciones.py gokubroly` y revisión visu
 | **Walk** | 1 | 66x66 | [`gokubroly_Walk.piskel`](Walk/gokubroly_Walk.piskel) | [`gokubroly_Walk.gif`](Walk/gokubroly_Walk.gif) | [`gokubroly_Walk_sheet.png`](Walk/gokubroly_Walk_sheet.png) |
 | **Attack** | 4 | 58x58 | [`gokubroly_Attack.piskel`](Attack/gokubroly_Attack.piskel) | [`gokubroly_Attack.gif`](Attack/gokubroly_Attack.gif) | [`gokubroly_Attack_sheet.png`](Attack/gokubroly_Attack_sheet.png) |
 | **Kick** | 3 | 54x54 | [`gokubroly_Kick.piskel`](Kick/gokubroly_Kick.piskel) | [`gokubroly_Kick.gif`](Kick/gokubroly_Kick.gif) | [`gokubroly_Kick_sheet.png`](Kick/gokubroly_Kick_sheet.png) |
-| **Cast** | 2 | 60x60 | [`gokubroly_Cast.piskel`](Cast/gokubroly_Cast.piskel) | [`gokubroly_Cast.gif`](Cast/gokubroly_Cast.gif) | [`gokubroly_Cast_sheet.png`](Cast/gokubroly_Cast_sheet.png) |
+| **Cast** | 2 | 54x54 | [`gokubroly_Cast.piskel`](Cast/gokubroly_Cast.piskel) | [`gokubroly_Cast.gif`](Cast/gokubroly_Cast.gif) | [`gokubroly_Cast_sheet.png`](Cast/gokubroly_Cast_sheet.png) |
 | **Pow** | 2 | 86x86 | [`gokubroly_Pow.piskel`](Pow/gokubroly_Pow.piskel) | [`gokubroly_Pow.gif`](Pow/gokubroly_Pow.gif) | [`gokubroly_Pow_sheet.png`](Pow/gokubroly_Pow_sheet.png) |
 | **Hurt** | 2 | 56x56 | [`gokubroly_Hurt.piskel`](Hurt/gokubroly_Hurt.piskel) | [`gokubroly_Hurt.gif`](Hurt/gokubroly_Hurt.gif) | [`gokubroly_Hurt_sheet.png`](Hurt/gokubroly_Hurt_sheet.png) |
 | **Faint** | 1 | 54x54 | [`gokubroly_Faint.piskel`](Faint/gokubroly_Faint.piskel) | [`gokubroly_Faint.gif`](Faint/gokubroly_Faint.gif) | [`gokubroly_Faint_sheet.png`](Faint/gokubroly_Faint_sheet.png) |

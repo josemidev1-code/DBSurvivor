@@ -1,0 +1,75 @@
+{
+  "heroe": "gokumoro",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/06_Moro/Goku/201_GOKU,CAMISA MEDIA RASGADA,DBS MORO, ANDRÉS GAMEN",
+  "frames": [
+    {
+      "sha256": "944bb75400573bb54f93d004e0060c3868c1ff46b6659b09b180f30bd1d31c39",
+      "indice": 1
+    },
+    {
+      "sha256": "1bbd1b4901894a8f539bb8710f959953c88fa416b82088d9a9d9365919392057",
+      "indice": 2
+    },
+    {
+      "sha256": "6bbac107ad6b49b50cc93f5b594b3c1f3308f33f3dce150afd354fb6659eabcc",
+      "indice": 6
+    },
+    {
+      "sha256": "0fe047056aab853332e4658bde6e67f3cab8637d9accb60cb1a0d10b3be97a28",
+      "indice": 13
+    },
+    {
+      "sha256": "d56b28e136ab2d473984a87e39e8e6c452d440fe0fc0d9956a7f9e8b6bdd2c57",
+      "indice": 15
+    },
+    {
+      "sha256": "47e0d1f267d9abf2d7c04f5677e88741064e1fc7710d2bc7b931f8633a70bfce",
+      "indice": 16
+    },
+    {
+      "sha256": "486dea7b93e4f26d1d25d4b362f52884d00109ed07310bdda3aeeff7ea56e95c",
+      "indice": 10
+    },
+    {
+      "sha256": "1f03c4398d36550e7aa6327f650f872fe66cc729f303a7721a078038c0473206",
+      "indice": 11
+    },
+    {
+      "sha256": "600fb780fe9a9bf2991a8164264cb8a0767163d249f47f8ff40c2a23120fd214",
+      "indice": 9
+    },
+    {
+      "sha256": "47e0d1f267d9abf2d7c04f5677e88741064e1fc7710d2bc7b931f8633a70bfce",
+      "indice": 16
+    },
+    {
+      "sha256": "929a761c635de1b15f5153893af54ecb431d4b5bfdd88a30fe0554da01662647",
+      "indice": 23
+    },
+    {
+      "sha256": "c2c6893affc5b01faec2b2671470811b3645bf649e435ceda36bc91a24e091f6",
+      "indice": 18
+    },
+    {
+      "sha256": "50c505ef56623baeceba1070302586e4432c909d57459939f2ee2475125c3ffd",
+      "indice": 20
+    },
+    {
+      "sha256": "9c0170a106ba67ee4bd1183d168b28554624e66d1e9bede8114d5ceb2825d6ae",
+      "indice": 21
+    },
+    {
+      "sha256": "bb24ed312817a63fc22af075673de41165c54d8a7d903e1f72f77967818bd7be",
+      "indice": 12
+    },
+    {
+      "sha256": "c439c4ae7beb50e8e552564e1c43072bd86d2aad9cf5cb3321e894cc52466a0a",
+      "indice": 14
+    },
+    {
+      "sha256": "6bbac107ad6b49b50cc93f5b594b3c1f3308f33f3dce150afd354fb6659eabcc",
+      "indice": 6
+    }
+  ]
+}

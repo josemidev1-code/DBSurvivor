@@ -1,0 +1,59 @@
+{
+  "heroe": "gokumoro",
+  "forma": "4",
+  "pack": "01_Dragon_Ball_Super/06_Moro/Goku/251_fases Goku dbs moro, Damaged.Andres Gamen",
+  "frames": [
+    {
+      "sha256": "5a076eef5aee4be1ba7f53c971c029745bdffdb51f48380d2451180d225474ad",
+      "indice": 119
+    },
+    {
+      "sha256": "bf7cfdefa4893e6de1f7347fab734fedaa82011b7b829a89631ca3eff9546fd0",
+      "indice": 124
+    },
+    {
+      "sha256": "d9a661e592809769207e31f317db21c9b5a4b4f980a5f28bbaddc45697ac0ddc",
+      "indice": 153
+    },
+    {
+      "sha256": "591f42bdb7bbb57299728011d88638e9c4b402394e707330ef9c505ecd9a14f5",
+      "indice": 130
+    },
+    {
+      "sha256": "1e178a0519208320e014a3bd7cac3b815b0a43b902a26a984be0c26f01f12649",
+      "indice": 131
+    },
+    {
+      "sha256": "fc0b8acf7797335f64512277bacd9f3ec327f3b955761928a54686fcc4ef0927",
+      "indice": 128
+    },
+    {
+      "sha256": "6281c5d6a7dfe9b11b255d6b7c4b95ce9c5a197c5baf481fb6c000f8805e9d34",
+      "indice": 129
+    },
+    {
+      "sha256": "74a80e415e53785cfee2da5873c56ab82b1589f413006f4e0d9be5f7db2e4c4d",
+      "indice": 134
+    },
+    {
+      "sha256": "bfdf6fe2263d8d457274a5395047093643b8e2c983381084266339ccd7fd4100",
+      "indice": 141
+    },
+    {
+      "sha256": "1e2e938b6ae3a56fdc24d5e9a9a685941c227b44ce38a712c82037f6992056b2",
+      "indice": 125
+    },
+    {
+      "sha256": "7145e66fde5124789114a635d4df4318e9c2fefe2308098031cfdf37c51d9b6f",
+      "indice": 126
+    },
+    {
+      "sha256": "4951db0e05349b184ab1359c1d0cfbdfad98a93697f5f2391f3d4ab44226672a",
+      "indice": 146
+    },
+    {
+      "sha256": "4951db0e05349b184ab1359c1d0cfbdfad98a93697f5f2391f3d4ab44226672a",
+      "indice": 146
+    }
+  ]
+}

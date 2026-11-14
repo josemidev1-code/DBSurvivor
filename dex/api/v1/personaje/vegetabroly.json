@@ -44,11 +44,11 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
+    "attack2": "animada",
     "attack3": "falta",
-    "kick2": "falta",
+    "kick2": "animada",
     "beam": "falta",
-    "up": "falta"
+    "up": "quieta"
    },
    "pack": "01_Dragon_Ball_Super/05_Broly/Vegeta/305_Vegeta god dbs broly"
   }

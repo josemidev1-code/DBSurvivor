@@ -1,0 +1,91 @@
+{
+  "heroe": "gokumoro",
+  "forma": "2",
+  "pack": "01_Dragon_Ball_Super/06_Moro/Goku/200_GOKU SSJ DIOS CAMISA MEDIA RASGADA,DBS MORO, ANDRÉS GAMEN",
+  "frames": [
+    {
+      "sha256": "da6487fba8db57653d6d550c319084b85b57b05f1dc05b0656dacbea7abf704f",
+      "indice": 6
+    },
+    {
+      "sha256": "defbe875bbfe2b5cb43579ca924ca758ccd82b7128e5780e987812cffff3db0b",
+      "indice": 7
+    },
+    {
+      "sha256": "84b22ce266625f3d0c0c677b029b18feda2a42f81415bff77bf098a015dd5be4",
+      "indice": 12
+    },
+    {
+      "sha256": "1349593108e72f0fdc97f10fa4a6b6d319e6f0466c2a0acd0bae81d658db8375",
+      "indice": 19
+    },
+    {
+      "sha256": "f621a37744571a71a6b81c45ea03b8b359270283a9ab1aab862e5d28083a0c1a",
+      "indice": 20
+    },
+    {
+      "sha256": "1fabbc4c15e47b5f3d4972489e7f74d4d514d486273a934b9d3cce784b8e749f",
+      "indice": 21
+    },
+    {
+      "sha256": "dcff6886df2deb01a5d6d1efc5bf13a8d11677e210b486f36a15bc377acb7fdc",
+      "indice": 16
+    },
+    {
+      "sha256": "eab6420e7c9a2ba8ec03c08c7e82ac16b83f7c07029442b7828b1919b36a5429",
+      "indice": 17
+    },
+    {
+      "sha256": "fcb8ad97d3dafdb20840f8dbe00f759e81dff8fdf9be847b668e598bf97081c8",
+      "indice": 32
+    },
+    {
+      "sha256": "d384248e03406e44eb6131f58983325594d6e7c983fce944dde39eab89966652",
+      "indice": 33
+    },
+    {
+      "sha256": "ac3607f316286e4a9e975871a75add13f87ea05f2459e4f57ac17d4a6292400c",
+      "indice": 29
+    },
+    {
+      "sha256": "7a851b622553474be9f8d2a0e1aa6abb9aa8ba3538d902ee7f837597d3d43f72",
+      "indice": 25
+    },
+    {
+      "sha256": "4fd946367f2d2db3dc52884390e74cb5d0cf3538982957f34078b8c1bf07fafb",
+      "indice": 26
+    },
+    {
+      "sha256": "23932ded94b0e46e47f29e94feae3f67757e9ff636772d9894d5c983cb7e75b0",
+      "indice": 27
+    },
+    {
+      "sha256": "54563598cdf32e9300e47b71b0b6fb03ff6b59d9729e5588aaceb31df58a51d1",
+      "indice": 22
+    },
+    {
+      "sha256": "b9cd06f11275528371ec5aeec8778e70a276ce39b796a07c063bf39127ec3bf7",
+      "indice": 23
+    },
+    {
+      "sha256": "2c06a33c0e2431c40747eee5542759e245d657324b1d6e91f8ff38983e4493ed",
+      "indice": 24
+    },
+    {
+      "sha256": "74f331ba9058651ea6213eaddacfba09e8d2b12f41aa8fb29bb007e44fc1236b",
+      "indice": 31
+    },
+    {
+      "sha256": "fcb8ad97d3dafdb20840f8dbe00f759e81dff8fdf9be847b668e598bf97081c8",
+      "indice": 32
+    },
+    {
+      "sha256": "d384248e03406e44eb6131f58983325594d6e7c983fce944dde39eab89966652",
+      "indice": 33
+    },
+    {
+      "sha256": "84b22ce266625f3d0c0c677b029b18feda2a42f81415bff77bf098a015dd5be4",
+      "indice": 12
+    }
+  ]
+}

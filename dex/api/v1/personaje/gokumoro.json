@@ -169,14 +169,14 @@
     "velocidad": 110,
     "recarga": 80
    },
-   "estado": "POCA",
+   "estado": "A MEDIAS",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
     "attack": "animada",
     "kick": "animada",
     "ki": "animada",
-    "pow": "quieta",
+    "pow": "animada",
     "hurt": "animada",
     "faint": "falta",
     "portrait": "animada",

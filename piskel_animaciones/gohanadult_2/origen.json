@@ -1,0 +1,87 @@
+{
+  "heroe": "gohanadult",
+  "forma": "2",
+  "pack": "01_Dragon_Ball_Super/08_Super_Hero/Gohan/119_GOHAN BESTIA VERSIÓN 2 (ANDRÉS GAMEN ANIMATIONS)",
+  "frames": [
+    {
+      "sha256": "88c263835d3d8464fc74f5c491aa116eb233f0b0794af6db1a1818cea8c9d30d",
+      "indice": 130
+    },
+    {
+      "sha256": "16effec8697151c81daf10b4a707d2b5b97cd9e3e624dca9ba863cd4521a7992",
+      "indice": 131
+    },
+    {
+      "sha256": "347dc66bdd31b40c0ac3bdeca2425a7304522914ddf1eb94809947cfac2d81b0",
+      "indice": 138
+    },
+    {
+      "sha256": "18aca68d8cde81a7bee6b40a9081fad8bf93670c57a100c4c9cd2ca441c0d324",
+      "indice": 126
+    },
+    {
+      "sha256": "f3d41aaeebef61ed739aa2fcb9d20b959ca638cf59d91f956bd9c9741dc71f9b",
+      "indice": 127
+    },
+    {
+      "sha256": "50f1b5d3776f55ba97fa128014a6c368e8ccbb3f33d9b9fa4de14ab007a95d2c",
+      "indice": 128
+    },
+    {
+      "sha256": "264de9c279f9732855351b16c2e2b0ab43e8aba90fe44974fff36df7a958cefb",
+      "indice": 115
+    },
+    {
+      "sha256": "d0a9c33612f8c1b83d634f44d6fa56ac2e13dcce504055273a3f136f912b877d",
+      "indice": 116
+    },
+    {
+      "sha256": "52e66248e7f249a7acd0f21372c0ddbf77c6e2400c46e0798b0df5a7f11fa010",
+      "indice": 24
+    },
+    {
+      "sha256": "f3d41aaeebef61ed739aa2fcb9d20b959ca638cf59d91f956bd9c9741dc71f9b",
+      "indice": 127
+    },
+    {
+      "sha256": "eb0d1dc46fc4f6d2743408215db40d7a2c63eeae742e9899fc8407f883d1bd19",
+      "indice": 66
+    },
+    {
+      "sha256": "d27fc7a40cf5e5bf49895f0c26583810a9afa5028434ab5cd1c34e9dcebb038e",
+      "indice": 67
+    },
+    {
+      "sha256": "13f24de503e8ac7cb29bb1f48c753279c9fee6afd7a146fa9627994954f6df66",
+      "indice": 68
+    },
+    {
+      "sha256": "ebe438ab675c7c86030b1326d043adb26d4cd828e0ab23032c9df57c1e0c009b",
+      "indice": 73
+    },
+    {
+      "sha256": "ebe438ab675c7c86030b1326d043adb26d4cd828e0ab23032c9df57c1e0c009b",
+      "indice": 73
+    },
+    {
+      "sha256": "bf6f3350ba7eeced2ffffa93bef92e7e11c8b945c72a28c58a1a22759c4153ce",
+      "indice": 71
+    },
+    {
+      "sha256": "6395407ecda9c1fe3d1b52738c9b75e5909075957422a8764fb07651cc1db365",
+      "indice": 122
+    },
+    {
+      "sha256": "312e8dc2dee9ba8ad733407860572252ae778cfb268b42f4ce27b85d68c2aa4a",
+      "indice": 125
+    },
+    {
+      "sha256": "1d94236cd9967560dbac51e1b8a788b882a076242a4296802acfe372cb54bd54",
+      "indice": 78
+    },
+    {
+      "sha256": "07c857f6998e7e0963f59c5cbe38f5dd0cd4934faf1edb95ade902310dce60a0",
+      "indice": 79
+    }
+  ]
+}

@@ -27,7 +27,7 @@
     "velocidad": 88,
     "recarga": 100
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -38,10 +38,10 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
+    "attack2": "animada",
     "attack3": "falta",
-    "kick2": "falta",
-    "beam": "falta",
+    "kick2": "animada",
+    "beam": "animada",
     "up": "falta"
    },
    "pack": "04_Heroes_y_videojuegos/Goku Black/124_GOKU BLACK TIME BREAKER SSJ DIOS, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )✓"
@@ -95,7 +95,7 @@
     "velocidad": 99,
     "recarga": 90
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -106,11 +106,11 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "falta",
-    "attack2": "falta",
-    "attack3": "falta",
-    "kick2": "falta",
+    "attack2": "animada",
+    "attack3": "animada",
+    "kick2": "animada",
     "beam": "falta",
-    "up": "falta"
+    "up": "animada"
    },
    "pack": "05_Fanmade_y_alternativos/Goku Black/125_GOKU BLACK TIME BREAKER SSJ ROSE 3 SWL, ANDRÉS GAMEN ANIMATIONS"
   }

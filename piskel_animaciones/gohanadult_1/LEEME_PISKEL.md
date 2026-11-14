@@ -22,10 +22,10 @@ Después: `python herramientas/montar_animaciones.py gohanadult` y revisión vis
 | **Walk** | 1 | 48x48 | [`gohanadult_Walk.piskel`](Walk/gohanadult_Walk.piskel) | [`gohanadult_Walk.gif`](Walk/gohanadult_Walk.gif) | [`gohanadult_Walk_sheet.png`](Walk/gohanadult_Walk_sheet.png) |
 | **Attack** | 4 | 58x58 | [`gohanadult_Attack.piskel`](Attack/gohanadult_Attack.piskel) | [`gohanadult_Attack.gif`](Attack/gohanadult_Attack.gif) | [`gohanadult_Attack_sheet.png`](Attack/gohanadult_Attack_sheet.png) |
 | **Kick** | 3 | 58x58 | [`gohanadult_Kick.piskel`](Kick/gohanadult_Kick.piskel) | [`gohanadult_Kick.gif`](Kick/gohanadult_Kick.gif) | [`gohanadult_Kick_sheet.png`](Kick/gohanadult_Kick_sheet.png) |
-| **Cast** | 2 | 60x60 | [`gohanadult_Cast.piskel`](Cast/gohanadult_Cast.piskel) | [`gohanadult_Cast.gif`](Cast/gohanadult_Cast.gif) | [`gohanadult_Cast_sheet.png`](Cast/gohanadult_Cast_sheet.png) |
+| **Cast** | 2 | 58x58 | [`gohanadult_Cast.piskel`](Cast/gohanadult_Cast.piskel) | [`gohanadult_Cast.gif`](Cast/gohanadult_Cast.gif) | [`gohanadult_Cast_sheet.png`](Cast/gohanadult_Cast_sheet.png) |
 | **Pow** | 3 | 86x86 | [`gohanadult_Pow.piskel`](Pow/gohanadult_Pow.piskel) | [`gohanadult_Pow.gif`](Pow/gohanadult_Pow.gif) | [`gohanadult_Pow_sheet.png`](Pow/gohanadult_Pow_sheet.png) |
 | **Hurt** | 2 | 60x60 | [`gohanadult_Hurt.piskel`](Hurt/gohanadult_Hurt.piskel) | [`gohanadult_Hurt.gif`](Hurt/gohanadult_Hurt.gif) | [`gohanadult_Hurt_sheet.png`](Hurt/gohanadult_Hurt_sheet.png) |
 | **Faint** | 1 | 60x60 | [`gohanadult_Faint.piskel`](Faint/gohanadult_Faint.piskel) | [`gohanadult_Faint.gif`](Faint/gohanadult_Faint.gif) | [`gohanadult_Faint_sheet.png`](Faint/gohanadult_Faint_sheet.png) |
 | **Kick2** | 2 | 58x58 | [`gohanadult_Kick2.piskel`](Kick2/gohanadult_Kick2.piskel) | [`gohanadult_Kick2.gif`](Kick2/gohanadult_Kick2.gif) | [`gohanadult_Kick2_sheet.png`](Kick2/gohanadult_Kick2_sheet.png) |
-| **Beam** | 2 | 54x54 | [`gohanadult_Beam.piskel`](Beam/gohanadult_Beam.piskel) | [`gohanadult_Beam.gif`](Beam/gohanadult_Beam.gif) | [`gohanadult_Beam_sheet.png`](Beam/gohanadult_Beam_sheet.png) |
+| **Beam** | 2 | 58x58 | [`gohanadult_Beam.piskel`](Beam/gohanadult_Beam.piskel) | [`gohanadult_Beam.gif`](Beam/gohanadult_Beam.gif) | [`gohanadult_Beam_sheet.png`](Beam/gohanadult_Beam_sheet.png) |
 | **Up** | 1 | 64x64 | [`gohanadult_Up.piskel`](Up/gohanadult_Up.piskel) | [`gohanadult_Up.gif`](Up/gohanadult_Up.gif) | [`gohanadult_Up_sheet.png`](Up/gohanadult_Up_sheet.png) |

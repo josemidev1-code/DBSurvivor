@@ -1,0 +1,91 @@
+{
+  "heroe": "trunksgt",
+  "forma": "0",
+  "pack": "02_GT/DeviantArt/474_TRUNKS GT (Breckhhh)",
+  "frames": [
+    {
+      "sha256": "ffafc1757c4829cacfde87b44ec058f4624f83b027d4ff2880f893daf2431222",
+      "indice": 0
+    },
+    {
+      "sha256": "6aa14287af26140983f9e3abcd96bc66e0865c738c656ee218d0348081602303",
+      "indice": 1
+    },
+    {
+      "sha256": "6ff6b15c702d165df21014427a033215e766bb86cee44205ea95bbc67c8a1593",
+      "indice": 16
+    },
+    {
+      "sha256": "945bc7826046a6559126b9554f7de60e2d1f15b9f2bfb7e83e77529bcdf6798a",
+      "indice": 6
+    },
+    {
+      "sha256": "58ea28448c16a120f704e0bab5c9bc4d182cd1c946d21e3088a1586547a980e6",
+      "indice": 7
+    },
+    {
+      "sha256": "d6c31e8ec7f3ee6ffc969802a09e850ad420d06d17f88899c26d85bb6e8ea50b",
+      "indice": 24
+    },
+    {
+      "sha256": "612392c8fa18f90da63aabbf30a2518dc740f66d3a750e97a366e973ff2d028e",
+      "indice": 11
+    },
+    {
+      "sha256": "13d68b0d46208f95140cf5ecb55396b6f4306b7ca710f74ae08b97f25df8da7a",
+      "indice": 12
+    },
+    {
+      "sha256": "a2671da4ad2a38899f03deca49d72bfa6c1ec02f6d8e22a152351b288fd2af05",
+      "indice": 21
+    },
+    {
+      "sha256": "195955ef496fc8bd8f7fa802d8fe38c82b4028857e5e405246964867c79cf2dc",
+      "indice": 22
+    },
+    {
+      "sha256": "2d5035dc5b9ede222c94e97419079ce0399f0d2873ba8b3034784f9228965aae",
+      "indice": 23
+    },
+    {
+      "sha256": "99f0099cb5bf48052e878d8168f55ec1379f947869197afb8499b6108416e65b",
+      "indice": 31
+    },
+    {
+      "sha256": "1ef294c374630a00675db843d18a670bb5e9efaebb3e0a158cab6e3c2709b218",
+      "indice": 32
+    },
+    {
+      "sha256": "55a9c8c3fd7a5905f607524fddab788a981bb4a479147bdccb87283621769e62",
+      "indice": 28
+    },
+    {
+      "sha256": "df5fdf210327512fccc2c45d14988462b047a0e16a0d5668c788d9f657a6ab92",
+      "indice": 30
+    },
+    {
+      "sha256": "84fb21fa1b4870f0950b22668965e2e5745e36eee730833c1283b7432cf75414",
+      "indice": 17
+    },
+    {
+      "sha256": "33525e28c0eb6669d6736f7a925d1e2f914b73aaec3d99f2baab66a35689e2c2",
+      "indice": 8
+    },
+    {
+      "sha256": "f723b5f8dd37bcc00aaf8f5cef73f2af6b8b0f86d1b141384d14b4d8b6fcec4b",
+      "indice": 9
+    },
+    {
+      "sha256": "add2ec05df67f442043720dd882d40ad52f27eb07f0f4d0053781f0da4a3e3e0",
+      "indice": 3
+    },
+    {
+      "sha256": "97742c81b5a828c8cdcdf27fb6843b6a0cd592aebc61dd9e0bc736e64907f18d",
+      "indice": 4
+    },
+    {
+      "sha256": "2a9afdcb5cba11e303168a13a96500af9ddfea0950452c77221a2ded05ab0650",
+      "indice": 5
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "heroe": "kyabe",
+  "forma": "1",
+  "pack": "01_Dragon_Ball_Super/02_Universo_6/Cabba/073_Kyabe ssj",
+  "frames": [
+    {
+      "sha256": "7669a5c6ed2af3d3b44ca4a266db1f52ab239b17e189bdd417c3836928549bbd",
+      "indice": 0
+    },
+    {
+      "sha256": "e3ecfd7971a7aac00c999a742abf7bb56df75fb4106eeb8a8fd559efd34028c9",
+      "indice": 1
+    },
+    {
+      "sha256": "7e73d0ad95ab2975f75f8a649e5cba55d8c1ea7c0be5a36b1b091c879012fedc",
+      "indice": 3
+    },
+    {
+      "sha256": "47d3215b2bff49832f10c8f4c0d918cb054b219787b10d41ede57c77579b9c91",
+      "indice": 9
+    },
+    {
+      "sha256": "abfcea29a94642585d539f3b8f8a0066d153ec5b1a52c6bde81ff183f3cedc31",
+      "indice": 11
+    },
+    {
+      "sha256": "7f74c8f7fb0009481a5abe6c7be59325d2ca65104877a5de393005300495384c",
+      "indice": 12
+    },
+    {
+      "sha256": "9cc220209d983b48bb87488918f2dff1dbd2a4db3f9c84e937047e0aefb251ea",
+      "indice": 21
+    },
+    {
+      "sha256": "de109da8702b5df67c86fd643231e42461da29df06e2daec2f355a7717badf99",
+      "indice": 23
+    },
+    {
+      "sha256": "4000de8cc7320a4a026b8cd7b3f93d092678f26d3d19b9cbf3d029705ba3adff",
+      "indice": 44
+    },
+    {
+      "sha256": "d9e46c724e81af0ebfdc27644aacda21a76db3f36c91d311fe078be651282f60",
+      "indice": 46
+    },
+    {
+      "sha256": "f489b28877cbae90accebfbe663e556f775823f8f588272e6b290cfbff97e03e",
+      "indice": 39
+    },
+    {
+      "sha256": "d3b13415f8010e3d885134525623f01eb4c7455c81b314974cf2fcfb6acbabb5",
+      "indice": 40
+    },
+    {
+      "sha256": "7cc3b5967eb16a5e53a76e15e8ae45011883c693680b2f65d140aac9392395ce",
+      "indice": 35
+    },
+    {
+      "sha256": "e463133270d997699f99133e3faacfe2c2acb617cf277b931170ed98289b7cd7",
+      "indice": 36
+    },
+    {
+      "sha256": "11a38d7f4652a39cda220e3f594617354723738f30b9237a603ca8b50dbe2aac",
+      "indice": 38
+    },
+    {
+      "sha256": "4520afe91b14f80ab4cc74e7c35bc5dff54caacab4f0f47a9ca94ffc8862bd9f",
+      "indice": 13
+    },
+    {
+      "sha256": "f8ba8ee5e1a178215c056bf6b408288b38b22b0fbd2e6e040031ef681c97ee50",
+      "indice": 15
+    },
+    {
+      "sha256": "9c9d78d4af4fff228777443d7cefe92f3862ea77a03ed8e74c7b4146c1c388f1",
+      "indice": 16
+    },
+    {
+      "sha256": "f5efccc51d3a98619ef1905193cd44dcab5d492cf6ce39485b3ce7360cae6d0b",
+      "indice": 29
+    },
+    {
+      "sha256": "8dd51b8b71a84ce556af83b9d8a5b7f97af6ac9e470522620a6b24edd1da0b37",
+      "indice": 30
+    },
+    {
+      "sha256": "5781b0de69d7a284ea4c42880d124a0b837dff6a67cfd2adba0209d78cfc9de5",
+      "indice": 31
+    },
+    {
+      "sha256": "3d468cfbab4b391daaa7ee3c7e5a14c832edf7a605af3c960d9221f0db0ece75",
+      "indice": 24
+    },
+    {
+      "sha256": "e1a7e2f80b7177ab34d983de54577e4670e26e56583f2518f47374e620061ca7",
+      "indice": 25
+    },
+    {
+      "sha256": "6c88c4d1501800eb7bc5ec9bce1c7561cb68ca0439871efe0f07f70e96afcf83",
+      "indice": 51
+    },
+    {
+      "sha256": "5b1a4baf463bf729fcba2044a1b33e4d6700dbcebf801a09ef456de0a5e0c32d",
+      "indice": 52
+    }
+  ]
+}

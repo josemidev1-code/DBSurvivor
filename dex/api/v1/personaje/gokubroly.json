@@ -135,7 +135,7 @@
     "velocidad": 104,
     "recarga": 85
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -146,11 +146,11 @@
     "hurt": "animada",
     "faint": "animada",
     "portrait": "animada",
-    "attack2": "falta",
+    "attack2": "animada",
     "attack3": "falta",
-    "kick2": "falta",
-    "beam": "falta",
-    "up": "falta"
+    "kick2": "animada",
+    "beam": "animada",
+    "up": "animada"
    },
    "pack": "01_Dragon_Ball_Super/05_Broly/Goku/221_GOKU,SSJ BLUE PERFECTO,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
   }

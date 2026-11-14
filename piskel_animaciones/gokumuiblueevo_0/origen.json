@@ -1,0 +1,83 @@
+{
+  "heroe": "gokumuiblueevo",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku/133_GOKU MUI BLUE EVOLUTION, ANDRÉS GAMEN ANIMATIONS ( SPRITE HD )",
+  "frames": [
+    {
+      "sha256": "304e4fc160d11c5addfe6b98a7d77f28c5b576e73ca9dc475f88c5f690133e7b",
+      "indice": 118
+    },
+    {
+      "sha256": "0368737eb18811730da41daa55df4ee4e91d8abaf55fdf0b4803537b484b3013",
+      "indice": 59
+    },
+    {
+      "sha256": "68bbefd94e0fa891ae48a17c472adf11ca4d261c58a8d8882766f433507aef27",
+      "indice": 126
+    },
+    {
+      "sha256": "a9bb8367548cd04e3ec2333ed2baec8f6e90e107acb8dfbbf0fb84661579a768",
+      "indice": 100
+    },
+    {
+      "sha256": "d008f6755f27626b5d65c221ec9245d825036602a0e621fa3e7659c61305a557",
+      "indice": 101
+    },
+    {
+      "sha256": "386e58bb36efe8c19d974193542ab9e35d81777bbad6892c2665419594995e75",
+      "indice": 102
+    },
+    {
+      "sha256": "042b7aa14d4e431b286bbfdeca8fb752fda5228d3ced0512d86786c22e2db2b0",
+      "indice": 84
+    },
+    {
+      "sha256": "8d210c0da460a69159f70d465920797ad31035b1f81da16ef626d8e78d2a9957",
+      "indice": 80
+    },
+    {
+      "sha256": "8bdf022baafab4fd07d75abd69732d4386a7d4f071b0f7951c8d385c9c8ad514",
+      "indice": 50
+    },
+    {
+      "sha256": "b668f6c39acaf6c9d4f407329e3e2005fe66a634a7888e82a4da716a52f1209a",
+      "indice": 51
+    },
+    {
+      "sha256": "5840c0ffc06d8a8837e8e2e0af1b12f887aca2a41b285060a318e3095e600ff5",
+      "indice": 140
+    },
+    {
+      "sha256": "a258560c9eeb48924b42a9141191674538f550c8608c1961ba81ad3b6f68fde4",
+      "indice": 141
+    },
+    {
+      "sha256": "f1036269e509a016116999bdd55740950a97156643714702b9bd193e47b77b24",
+      "indice": 57
+    },
+    {
+      "sha256": "ddfdc29c11b70e19b814798a176717a19faf00a479c1bf75ec9a38fb8c546108",
+      "indice": 54
+    },
+    {
+      "sha256": "7bfa7f23463588b8c482cf7b082d191393ee2f3e938f90bb116cbdaf29e904b4",
+      "indice": 53
+    },
+    {
+      "sha256": "dd06318f937dd632e26a9030ab616d79d6413103af42df524a9e402ac4fc29ec",
+      "indice": 91
+    },
+    {
+      "sha256": "dc154d54aa565d77fed84eef8badd7a6fbb54856c327356a20149000da08cddb",
+      "indice": 92
+    },
+    {
+      "sha256": "72feec47a3e395cc7c30ece89539e46f1757940af39a1efba45d81a9f1073f97",
+      "indice": 78
+    },
+    {
+      "sha256": "81ed9eddbf4e7e87a324398bb6fbf21255ad7041a47d2898fdcf16428887558d",
+      "indice": 79
+    }
+  ]
+}

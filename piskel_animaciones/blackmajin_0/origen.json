@@ -1,0 +1,71 @@
+{
+  "heroe": "blackmajin",
+  "forma": "0",
+  "pack": "05_Fanmade_y_alternativos/Goku Black/184_Majin Goku black ssj Díos.Andres Gamen",
+  "frames": [
+    {
+      "sha256": "39c6dbd6d496411f7547ace14c1125f680bd504d11c7666633086aeaf32219a6",
+      "indice": 7
+    },
+    {
+      "sha256": "1ddf73f630223fbda7945cf7086e19091ca040849c889ee0a0f41402269bbafa",
+      "indice": 8
+    },
+    {
+      "sha256": "d47273598f37cd91a3bfb599c18f89b2996d8a3b8c5f587815cd38affdfa0dbb",
+      "indice": 13
+    },
+    {
+      "sha256": "f5058c865324b66513c3484ac9226a4384e60e9ac0e00518485bed57cf1fca7b",
+      "indice": 18
+    },
+    {
+      "sha256": "807d361636000a20f35c9b7c6bc6cc69696b8cc28acc88862689d252f2b83476",
+      "indice": 19
+    },
+    {
+      "sha256": "46e3fdfa03b0045ea37a2565596c80e9e4d28c685ba22e1a516ac589d426468b",
+      "indice": 20
+    },
+    {
+      "sha256": "1d2eeeefc6feefc45dc3937dba68467b8c416d724086f828f2fd1d750d1e7cfb",
+      "indice": 22
+    },
+    {
+      "sha256": "4d7fd5c9565a02f9c9abfa489fdbe028d45083da3c3f918e9e4c0190c32a85e8",
+      "indice": 26
+    },
+    {
+      "sha256": "44d532bee559a491c8ad908cc52d3a44ecc4799a92f7cec5a0759ff9c24ffe64",
+      "indice": 33
+    },
+    {
+      "sha256": "52a17fea0638e23c302aec3908769689580601cfffb1b462720511a0c9627024",
+      "indice": 34
+    },
+    {
+      "sha256": "22d2c6ef622fd690d6f0b67f133a35f2a5dd80e524013faf3a16c7baca0f8e1d",
+      "indice": 28
+    },
+    {
+      "sha256": "c4c3d983540d77321decfd721a5ebd3915d0314a57e65399740e7cc94b36af14",
+      "indice": 29
+    },
+    {
+      "sha256": "17e961f35200988f0a7ebcff180a2b6569c9462ffaa9ed3a3dd10b9aa69d0739",
+      "indice": 24
+    },
+    {
+      "sha256": "b2559b2cd88570f7ea165e6228c03bf3b9dee2a1ab6e4d7daed5532ba52f3090",
+      "indice": 25
+    },
+    {
+      "sha256": "0b0a5406b0a9610416dc3c903ec8dd9339c49f219ad7878cac23752631695008",
+      "indice": 16
+    },
+    {
+      "sha256": "f3c705d2d75ac06bfde29011d82bb657c1255291db9cee20dcf4e70835de2aff",
+      "indice": 17
+    }
+  ]
+}

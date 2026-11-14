@@ -1,0 +1,87 @@
+{
+  "heroe": "gomah",
+  "forma": "0",
+  "pack": "03_Daima/DeviantArt/469_REY GOMAH (ChrisReinerVV)",
+  "frames": [
+    {
+      "sha256": "d060bba7701028123a52c88b28f8cd18db8f3789dfd31dfdee69f84bbce5d057",
+      "indice": 5
+    },
+    {
+      "sha256": "800695a817d9549989f92143e7a8413d400528c827b33e6d5fdab2683eabb6ef",
+      "indice": 6
+    },
+    {
+      "sha256": "fc14caa48d2ff53458473c1a7ca0c6b8d47a1334dda25929d869a0d6999e0bd4",
+      "indice": 7
+    },
+    {
+      "sha256": "7c51a84a6844f734a6f51d2b8f44e11abe2719d563adce1572a8965a39cf6073",
+      "indice": 11
+    },
+    {
+      "sha256": "a6fa3491e8aa93f71184b7fd9754503973df9c11f2c4a8a647b29a43314976da",
+      "indice": 24
+    },
+    {
+      "sha256": "6fb9212c094f2f14a2f8926ad70bf0ef6ea4784da7c637f2e7af3deff37714da",
+      "indice": 25
+    },
+    {
+      "sha256": "84bcaf73e9956cbb9fd5a066c6c62e7146523a49be7f9f5f268a3003c6e9b1ff",
+      "indice": 22
+    },
+    {
+      "sha256": "5f630cb3bad2a0967d6a3dc228fe966f75088ee9755da0e7b471aa958ccc1c8e",
+      "indice": 30
+    },
+    {
+      "sha256": "79421b5ed40b62ac4a40c8fd57e39bcfb92f27c868284c4d1e4974b01afb6c48",
+      "indice": 31
+    },
+    {
+      "sha256": "73c27480725410f7931fd5d67a28c7566232cde7a6e413d4568f6ea75dad5144",
+      "indice": 19
+    },
+    {
+      "sha256": "91dc67f36d128a9ca9f943bc606d80b7f10d9d9d5ce9b450055bfc95df6ee34b",
+      "indice": 4
+    },
+    {
+      "sha256": "b01c35374836f45adce0763930e2587f909fb0f335f96bae1e6206ffc539536f",
+      "indice": 15
+    },
+    {
+      "sha256": "9a571f510e6fad1c8812d6e220555b3b18394176d4c847415bbdd29fcdebe4e9",
+      "indice": 16
+    },
+    {
+      "sha256": "0ac8f9386774fba9bb7ec6f33e7c687f28119ad8ed46b70b574e538eed835d29",
+      "indice": 17
+    },
+    {
+      "sha256": "ccc600c2be4aaea6533dd34392471304ebcfe62af5e725971404c13417051279",
+      "indice": 18
+    },
+    {
+      "sha256": "6a77b4342fccda3e3eb53da3c60779ec1a730daa30de3b7d103994769584caa8",
+      "indice": 32
+    },
+    {
+      "sha256": "90a68c61f46a6617d477f9545faa28776e85772ec684968570106632641f8649",
+      "indice": 33
+    },
+    {
+      "sha256": "37521dd1392c8014dca912658812f5ad5ab0c534f44e35e8ccf9f58617d34ede",
+      "indice": 21
+    },
+    {
+      "sha256": "6c01e49ea9a3019ec7760857d0a12c6b1c7b1214ac7cdc1e7e633d5329504e81",
+      "indice": 28
+    },
+    {
+      "sha256": "fa136377323aee76cdbf49124bbf16e2800f6211d88c8a05c1ec91b30716b221",
+      "indice": 29
+    }
+  ]
+}
