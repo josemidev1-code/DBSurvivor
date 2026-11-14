@@ -4443,3 +4443,6 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Seguir con la lista de pendientes (script de la sesión: cruzar `inventario_animaciones` con las claves que faltan en `leer_config()`), empezando por las que les falta muerte, combo 3 o rayo. Para packs con `escalaFrames`, dar a cada fotograma nuevo su zoom (altura ÷ altura de la guardia).
+
+### Nueva petición (14 nov.)
+- Josemi: «Sí, sigue» (seguir con las formas pendientes).
