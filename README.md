@@ -19,7 +19,6 @@ Juego de supervivencia (estilo PokéSurvivor / Vampire Survivors) con personajes
 | `ui/objetos/` | Senzu, cápsulas, radares, originales y procedencia de cada recurso |
 | `01 - Guía y documentación/CREDITOS_RECURSOS.md` | Autores de los recursos incorporados y catálogo de fuentes revisadas |
 | `sprites/` | Los packs de sprites originales de donde salen los personajes |
-| `antigravity sprites/` | Biblioteca de 770 hojas completas de sprites 2D estilo LSW/ULSW descargadas desde DeviantArt con su índice |
 | `herramientas/` | Programas para elegir fotogramas y montar las animaciones (ver `herramientas/GUIA_ANIMACIONES.md`) |
 | `01 - Guía y documentación/BITACORA.md` | Diario: lo que pediste y lo que se hizo en cada sesión |
 | `01 - Guía y documentación/TAREAS_CODEX.md` | Prioridades actuales para la siguiente IA |
@@ -36,7 +35,7 @@ carpeta de referencia de 3,6 GB) está en `Desktop/AnimeSurvivor_archivo/`, por 
 
 ## Cómo está ahora (05/11/2026)
 
-- Biblioteca `antigravity sprites/`: 770 hojas de sprites completas en tamaño original de Dragon Ball en estilo LSW (Legendary Super Warriors / ULSW) descargadas desde DeviantArt, estructuradas en 10 categorías y con índice detallado de créditos y fuentes en `antigravity sprites/INDICE_SPRITES.md`.
+- La biblioteca `antigravity sprites/` y `Recursos pendientes/` se quitaron el 14 nov. 2026 (siguen en el historial de git).
 - Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/CAMBIOS_COMBATE_2026-11-04.md`.
 - Pendiente principal: revisar y seleccionar los ataques extra de cada pack; todavía no se ha hecho para todo el catálogo.
 

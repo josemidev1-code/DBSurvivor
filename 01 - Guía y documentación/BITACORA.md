@@ -4395,3 +4395,7 @@ ode --check.
   - Poder de pelea: el de la API cuando trae la forma (83 formas) o inventado como en el anime (141 formas, con la escala de Goku y su fuerza, o los poderes conocidos del anime).
 - `dex/index.html` (se abre con doble clic): lista con retrato, rareza, puntos por animación y filtros (estado, rareza, raza, «le falta: …») y orden por número, nombre, poder o menos animados. La ficha de cada forma trae las 13 animaciones en movimiento, las estadísticas, el poder (API o inventado), los datos del anime, el comando de Piskel y el enlace a su JSON. Explicado en `dex/LEEME.md`.
 - 138 personajes jugables y 224 formas.
+
+### Limpieza de carpetas (14 nov.)
+- Josemi: «Quita todas las carpetas que hay en todo mi escritorio y deja la carpeta definitiva con la Dex». No hay acceso a su escritorio; eligió «quitar lo que sobra» del proyecto y pidió el commit.
+- Borrados `scratch/`, `antigravity sprites/` (320 MB) y `Recursos pendientes/` (29 MB). Siguen en el historial de git. Se quedan `sprites/`, `herramientas/` y `piskel_animaciones/`, que hacen falta para animar con Piskel y regenerar la Dex. Las herramientas de LSW/DeviantArt y Sprite Fusion que usaban esas carpetas ya no tienen de dónde leer. La guía ABREME enlaza ahora a la Dex.
