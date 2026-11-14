@@ -1,0 +1,111 @@
+{
+  "heroe": "gokusuper",
+  "forma": "0",
+  "pack": "01_Dragon_Ball_Super/01_Resurreccion_de_Freezer_y_Whis/Goku/062_Goku Whis Gi",
+  "frames": [
+    {
+      "sha256": "d9f0bbd8158fbacbc6ed12f80f0e7a1946d0998523d2ba94646f02e274374ffe",
+      "indice": 1
+    },
+    {
+      "sha256": "c5f2c1b7ba592ac05b31ef03ffed9b53b8a6b9e2efc7192f04a02d8be139bda2",
+      "indice": 2
+    },
+    {
+      "sha256": "60e2822924c1456fbd4b4a9609c9922479c347f5af720283152e5368854cf2cd",
+      "indice": 14
+    },
+    {
+      "sha256": "a47d63edef4bfcc8e98de656dee2d8854e4ba1ac2587153dec1894722b5cf8f5",
+      "indice": 18
+    },
+    {
+      "sha256": "7ddb31919db8f6d6795f0c24278641b5f013a88cbbc0d70e92008a576bdff143",
+      "indice": 19
+    },
+    {
+      "sha256": "8771ad5673471b054af13a3a45b61c3bbd9bc59bd4b4c71cc52e43c7ae8c6abe",
+      "indice": 20
+    },
+    {
+      "sha256": "1273161e2415dc2133835a143f56bef1d4bd27fda2aea42f0a88e8b85a9cd3bb",
+      "indice": 30
+    },
+    {
+      "sha256": "8374413a3b1ec11ebd2c5fad5f68974bc1f60b350c766759b09c29051debd75c",
+      "indice": 31
+    },
+    {
+      "sha256": "d9f0bbd8158fbacbc6ed12f80f0e7a1946d0998523d2ba94646f02e274374ffe",
+      "indice": 1
+    },
+    {
+      "sha256": "a47d63edef4bfcc8e98de656dee2d8854e4ba1ac2587153dec1894722b5cf8f5",
+      "indice": 18
+    },
+    {
+      "sha256": "3531dc47351e9d4ef781494690a0f5e1fc093a70300692d1480861c98975b3cb",
+      "indice": 44
+    },
+    {
+      "sha256": "a6b7f39f1d17eefd4cb1267d7765f242b72d7172afd8c4653a9f3fe407ef7def",
+      "indice": 45
+    },
+    {
+      "sha256": "70d5e3ae1b88d19ec38ddcf720673964a7da096f23bf7c89ee013b2f1aaa1f95",
+      "indice": 46
+    },
+    {
+      "sha256": "e35cfbafc3ea4ca93d4ecd3e727701536425e987563cd38c11f6864f4a735843",
+      "indice": 40
+    },
+    {
+      "sha256": "e35cfbafc3ea4ca93d4ecd3e727701536425e987563cd38c11f6864f4a735843",
+      "indice": 42
+    },
+    {
+      "sha256": "27566f438a87937c98cb52a4b6d2f77c9ac77c495699fbb09c03edf71dab0c9c",
+      "indice": 15
+    },
+    {
+      "sha256": "8b524e264d138e884be1bc5df8462d95db469d59add79fd12e9dd0d0f703291a",
+      "indice": 22
+    },
+    {
+      "sha256": "c0e10b22cb04e38110695b2149b918ee6fccfb046dd0fd7d833461fc0f15d0c9",
+      "indice": 23
+    },
+    {
+      "sha256": "321bd767be8265c431c9f0f35db6244dac56148b6c64772a95fcd56a4a39eff7",
+      "indice": 52
+    },
+    {
+      "sha256": "259e98c25bf88213cb140496cf97ced58c1b58d70ade58a55afa2092a7778ec3",
+      "indice": 53
+    },
+    {
+      "sha256": "76c42837ade6008daaac32dae149845920eab8c89a06bed038b0cd7d229c5d2b",
+      "indice": 34
+    },
+    {
+      "sha256": "db179163368444050e18540ba84b9796ad00fcabb729e908644d105b843f08dd",
+      "indice": 35
+    },
+    {
+      "sha256": "e62bf2b2b1005147b18841aabfd287cce26b31bc63477dd99fa35f5e4429a6c8",
+      "indice": 55
+    },
+    {
+      "sha256": "321bd767be8265c431c9f0f35db6244dac56148b6c64772a95fcd56a4a39eff7",
+      "indice": 52
+    },
+    {
+      "sha256": "21ff9a8c95da03bf61238ea761bef87a27af77b51011e0430486f1cd7eb33c8d",
+      "indice": 43
+    },
+    {
+      "sha256": "60e2822924c1456fbd4b4a9609c9922479c347f5af720283152e5368854cf2cd",
+      "indice": 14
+    }
+  ]
+}

@@ -61,7 +61,7 @@
     "velocidad": 88,
     "recarga": 95
    },
-   "estado": "CASI",
+   "estado": "COMPLETA",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -75,7 +75,7 @@
     "attack2": "animada",
     "attack3": "animada",
     "kick2": "animada",
-    "beam": "falta",
+    "beam": "animada",
     "up": "animada"
    },
    "pack": "01_Dragon_Ball_Super/02_Universo_6/Cabba/073_Kyabe ssj"

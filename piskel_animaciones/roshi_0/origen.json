@@ -1,0 +1,91 @@
+{
+  "heroe": "roshi",
+  "forma": "0",
+  "pack": "07_Personajes_sin_saga_concreta/DeviantArt/417_MAESTRO ROSHI (Xxspartan1235xX)",
+  "frames": [
+    {
+      "sha256": "7b2f21884207d0c9216b7af1b1b588f17b1dc4343424bd5657f52d71f2d8b171",
+      "indice": 2
+    },
+    {
+      "sha256": "9965ecaf8a8fa2b1b7e03d181f78db0469f2ab7c347135252d1f079b25837ff4",
+      "indice": 3
+    },
+    {
+      "sha256": "b7f987e6bd592149136cc4b1c6392133cb37bbd446ee7a9f45d5f60dfbe73b01",
+      "indice": 5
+    },
+    {
+      "sha256": "c66fdf4f40703d0dcb682af7a19b783b2f2808816081daef315fdfc3d2f7c043",
+      "indice": 13
+    },
+    {
+      "sha256": "fad7e4835aaddbc97c6432bab5fd34c1481b447a6659a735d979ccc9ac42ee84",
+      "indice": 14
+    },
+    {
+      "sha256": "ded2df96c450a2c0b252e93e0e5fae7e9819cd7dab01d08f4823dea264b3dd24",
+      "indice": 15
+    },
+    {
+      "sha256": "273ea270258f2cd6f41cdb3127fcec0c13c920d313c5b268499b87827b0cb200",
+      "indice": 16
+    },
+    {
+      "sha256": "c730a4fcdcadcf965d37c3d2178bd82031fea38719778b561d764a2a57d51a58",
+      "indice": 17
+    },
+    {
+      "sha256": "7b2f21884207d0c9216b7af1b1b588f17b1dc4343424bd5657f52d71f2d8b171",
+      "indice": 2
+    },
+    {
+      "sha256": "9965ecaf8a8fa2b1b7e03d181f78db0469f2ab7c347135252d1f079b25837ff4",
+      "indice": 39
+    },
+    {
+      "sha256": "a00399a76ed34701a25f98f310813078b56627e8168fcbe24a69860240d38e50",
+      "indice": 28
+    },
+    {
+      "sha256": "662877ceea1732f29b5095607f005c146e71ab930d31df5f88edbf6bfbfe3124",
+      "indice": 29
+    },
+    {
+      "sha256": "ae90372a624a65bf88c3e0ad6f2c010849361cf7e16e1fbd15892264ad117301",
+      "indice": 10
+    },
+    {
+      "sha256": "ee655e998ca1abd4b8ab176d256023a6126c0bd446e698795435575758e6c7a7",
+      "indice": 42
+    },
+    {
+      "sha256": "56ade63397c88d3c971397117c602fe4502591df3fb7b4cccd417ee108e8233b",
+      "indice": 21
+    },
+    {
+      "sha256": "d2236407d452ad6d43e831a9eacefdd8c06598ee3526d07034a6a9782cd37cca",
+      "indice": 23
+    },
+    {
+      "sha256": "56ade63397c88d3c971397117c602fe4502591df3fb7b4cccd417ee108e8233b",
+      "indice": 18
+    },
+    {
+      "sha256": "3b909e82fc22561098bbec62153d3630116210f26f4a6045c7b719fa7b85090b",
+      "indice": 19
+    },
+    {
+      "sha256": "9b7b3f4e7f77214663b39d70c94d160293bf3e523ea375032ae63507206bbf68",
+      "indice": 54
+    },
+    {
+      "sha256": "bf890e0213ec1bae73ccf90582b3797fa891b5bba66acf7216ba64979e4ece9c",
+      "indice": 57
+    },
+    {
+      "sha256": "3ae105c1e587af5b8f7eff9af3d18cb5111c817bac41628918e2550870a41aed",
+      "indice": 27
+    }
+  ]
+}

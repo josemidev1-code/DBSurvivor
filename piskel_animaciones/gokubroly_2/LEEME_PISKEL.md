@@ -28,5 +28,6 @@ Después: `python herramientas/montar_animaciones.py gokubroly` y revisión visu
 | **Faint** | 1 | 66x66 | [`gokubroly_Faint.piskel`](Faint/gokubroly_Faint.piskel) | [`gokubroly_Faint.gif`](Faint/gokubroly_Faint.gif) | [`gokubroly_Faint_sheet.png`](Faint/gokubroly_Faint_sheet.png) |
 | **Attack2** | 2 | 58x58 | [`gokubroly_Attack2.piskel`](Attack2/gokubroly_Attack2.piskel) | [`gokubroly_Attack2.gif`](Attack2/gokubroly_Attack2.gif) | [`gokubroly_Attack2_sheet.png`](Attack2/gokubroly_Attack2_sheet.png) |
 | **Attack3** | 2 | 60x60 | [`gokubroly_Attack3.piskel`](Attack3/gokubroly_Attack3.piskel) | [`gokubroly_Attack3.gif`](Attack3/gokubroly_Attack3.gif) | [`gokubroly_Attack3_sheet.png`](Attack3/gokubroly_Attack3_sheet.png) |
+| **Beam** | 2 | 76x76 | [`gokubroly_Beam.piskel`](Beam/gokubroly_Beam.piskel) | [`gokubroly_Beam.gif`](Beam/gokubroly_Beam.gif) | [`gokubroly_Beam_sheet.png`](Beam/gokubroly_Beam_sheet.png) |
 | **Up** | 1 | 56x56 | [`gokubroly_Up.piskel`](Up/gokubroly_Up.piskel) | [`gokubroly_Up.gif`](Up/gokubroly_Up.gif) | [`gokubroly_Up_sheet.png`](Up/gokubroly_Up_sheet.png) |
 | **Dash** | 1 | 72x72 | [`gokubroly_Dash.piskel`](Dash/gokubroly_Dash.piskel) | [`gokubroly_Dash.gif`](Dash/gokubroly_Dash.gif) | [`gokubroly_Dash_sheet.png`](Dash/gokubroly_Dash_sheet.png) |

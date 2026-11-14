@@ -3,12 +3,16 @@
 Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (https://www.piskelapp.com/).
 
 ## Cómo abrir en Piskel:
-1. Entra a **https://www.piskelapp.com/p/create** en tu navegador.
+1. Entra a **https://www.piskelapp.com/p/create/sprite** en tu navegador.
 2. Haz clic en el icono de carpeta de la barra derecha (**Import**).
 3. Elige cualquiera de estas opciones:
    - **Import .piskel file**: selecciona el archivo `.piskel` de cualquier animación.
    - **Import animated GIF**: selecciona el archivo `.gif` (Piskel importa todos los fotogramas y la velocidad al instante).
    - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).
+
+## Volver al juego:
+`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/cell_0/origen.json --heroe cell --forma 0 --anim attack --aplicar`
+Después: `python herramientas/montar_animaciones.py cell` y revisión visual. Solo se aceptan sprites originales exportados.
 
 ## Animaciones disponibles:
 

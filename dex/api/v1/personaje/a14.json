@@ -33,7 +33,7 @@
     "velocidad": 75,
     "recarga": 100
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -47,7 +47,7 @@
     "attack2": "animada",
     "attack3": "animada",
     "kick2": "animada",
-    "beam": "falta",
+    "beam": "animada",
     "up": "quieta"
    },
    "pack": "00_Dragon_Ball_Z/04_Peliculas_y_especiales/DeviantArt/461_ANDROIDE 14 (Arisrad)"

@@ -1,0 +1,107 @@
+{
+  "heroe": "bra",
+  "forma": "1",
+  "pack": "05_Fanmade_y_alternativos/Bra/188_Bra ssj1 multiverse by Andrés",
+  "frames": [
+    {
+      "sha256": "6b34a5136d32d5106eba9be0c6490fe7c332576c31ddd0c1d6c0426537450ade",
+      "indice": 13
+    },
+    {
+      "sha256": "c7d7ecbd32c96eb0da976dbc04c14f62c816a7f58bbec249657d77eb638eadd0",
+      "indice": 15
+    },
+    {
+      "sha256": "eed76f461dc429bd01b74f4da928576311b29492750cb4ee5717498f9f58dcd7",
+      "indice": 24
+    },
+    {
+      "sha256": "14c25c0d419924d8b4c0f44272fb0af6f2a9e92ce4ddc87c8069f892f6e7d849",
+      "indice": 33
+    },
+    {
+      "sha256": "348e0884f711b3d8dc75b66a733b20ca98dbf4b1fbe9e4a008b3263175ba03e6",
+      "indice": 35
+    },
+    {
+      "sha256": "d3cbc3c0f5b4207802ef49421fd6f96a81ddadf6a267c929b8080a516583add4",
+      "indice": 39
+    },
+    {
+      "sha256": "ce6823359dd4b1a604a2db39836c20da5749cffbf41b7ceae99d52f7b81405f1",
+      "indice": 47
+    },
+    {
+      "sha256": "f7041e1beaa296de33343f343d57761ac0acb41e23258ba1cfd64fe3627b2388",
+      "indice": 48
+    },
+    {
+      "sha256": "aeb180de110b5e856e3729b9c7d117b441eb21d51ddaf2c77e54176a3b5088f1",
+      "indice": 94
+    },
+    {
+      "sha256": "370539dd115d871d7f80a72331666265ae269ca3919b5a3b56894cd9f102f012",
+      "indice": 95
+    },
+    {
+      "sha256": "77a0170dde5b7f37ccfb71d5c04e5dac76cd9b1dee16aa002c7ffbb69c7fbf91",
+      "indice": 66
+    },
+    {
+      "sha256": "dd9e38626a750465b5070f874d3f7a49feee9b61cd71a74ea5ad6ccc18ee0bc6",
+      "indice": 67
+    },
+    {
+      "sha256": "a663c44c3ad5f632cff7a0eea00984a16694002a4dee0835f3c5dce35ce51dec",
+      "indice": 50
+    },
+    {
+      "sha256": "a1c0b14be4afd6c2bb62bb114b92c87ab8df59142eee53f7f5039c4dd81369cf",
+      "indice": 51
+    },
+    {
+      "sha256": "0bfed4f0d47edf3aa0fd3dcab3da7b33307b96613a7418731cd696e1b75ad1eb",
+      "indice": 54
+    },
+    {
+      "sha256": "9f207a7196d7847d44953d4715a2891407a4ea4bebf39af04f12f07909d438d7",
+      "indice": 43
+    },
+    {
+      "sha256": "e1cb9615dbbdf31742e88cfab60674302941b832a9127c6577773d4fc9e34c02",
+      "indice": 44
+    },
+    {
+      "sha256": "13f0acbb465719ac22c2db79fb654934824df60763e4448a1ffe30091b89d675",
+      "indice": 37
+    },
+    {
+      "sha256": "ec54d8ab377175817e5a242ff306e101ead2ae1ed8c8ea5fecacbc3df74cca71",
+      "indice": 38
+    },
+    {
+      "sha256": "5124461f0c55e86815c243a7329238f9445bd1d1a84f13c00ae3559d9179c535",
+      "indice": 45
+    },
+    {
+      "sha256": "c48083e3a14ccd3f1e5429685e468862991ba91855a92f2f9965565fbf0a93af",
+      "indice": 46
+    },
+    {
+      "sha256": "133435e0a59755bf3b22472f6d2e930205961e22eca8bdcffd97b865f8d7869f",
+      "indice": 90
+    },
+    {
+      "sha256": "81e20ba0909a0e08e70d83c8dabd3d064980b3fc55d23263af8e74dfd985e023",
+      "indice": 91
+    },
+    {
+      "sha256": "43e6b8d1da12add43fa90feb55348810347c34e950c85484d78fef63a83d8709",
+      "indice": 80
+    },
+    {
+      "sha256": "96b049943f9f8c80398a30281746bc492828cb7168c00c125c3265bb67f75ef9",
+      "indice": 81
+    }
+  ]
+}

@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py kyabe` y revisión visual. 
 | **Attack2** | 3 | 62x62 | [`kyabe_Attack2.piskel`](Attack2/kyabe_Attack2.piskel) | [`kyabe_Attack2.gif`](Attack2/kyabe_Attack2.gif) | [`kyabe_Attack2_sheet.png`](Attack2/kyabe_Attack2_sheet.png) |
 | **Attack3** | 3 | 56x56 | [`kyabe_Attack3.piskel`](Attack3/kyabe_Attack3.piskel) | [`kyabe_Attack3.gif`](Attack3/kyabe_Attack3.gif) | [`kyabe_Attack3_sheet.png`](Attack3/kyabe_Attack3_sheet.png) |
 | **Kick2** | 2 | 76x76 | [`kyabe_Kick2.piskel`](Kick2/kyabe_Kick2.piskel) | [`kyabe_Kick2.gif`](Kick2/kyabe_Kick2.gif) | [`kyabe_Kick2_sheet.png`](Kick2/kyabe_Kick2_sheet.png) |
+| **Beam** | 2 | 58x58 | [`kyabe_Beam.piskel`](Beam/kyabe_Beam.piskel) | [`kyabe_Beam.gif`](Beam/kyabe_Beam.gif) | [`kyabe_Beam_sheet.png`](Beam/kyabe_Beam_sheet.png) |
 | **Up** | 2 | 68x68 | [`kyabe_Up.piskel`](Up/kyabe_Up.piskel) | [`kyabe_Up.gif`](Up/kyabe_Up.gif) | [`kyabe_Up_sheet.png`](Up/kyabe_Up_sheet.png) |

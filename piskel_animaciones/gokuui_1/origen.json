@@ -1,0 +1,95 @@
+{
+  "heroe": "gokuui",
+  "forma": "1",
+  "pack": "01_Dragon_Ball_Super/05_Broly/Goku/220_GOKU,SSJ 1,DBS BROLY, ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "416b75993e092134bec9143d805c4f0dcd7f70a0a329db3cc562ba81d93c9c98",
+      "indice": 5
+    },
+    {
+      "sha256": "f8313f30a3eb35dfadd8734af9dab5a964402ef3aba654b55fbcc3b4f196de20",
+      "indice": 6
+    },
+    {
+      "sha256": "08248ac99f224c881fc332fa4cac6959a4dd4877ce00a7f7f6a0ba6c19b19192",
+      "indice": 11
+    },
+    {
+      "sha256": "1d32b9f5e3edb34e556be6d12f4b10ef90806a74d4213b9e8d91856e2e44a591",
+      "indice": 15
+    },
+    {
+      "sha256": "8d464640181fc4b53a99f941b7245918ea45b3e14fa0135fbf369888d3dcfb25",
+      "indice": 16
+    },
+    {
+      "sha256": "afff05f6c64a67cdd1f7a9a46619d648d2646c22201168a62a12817b2c2f7910",
+      "indice": 17
+    },
+    {
+      "sha256": "7dd218cee770fa66554a5379d34945381f330c032afb00b389ebc3209375215a",
+      "indice": 18
+    },
+    {
+      "sha256": "f7e4fe7aa57cf9046d7b42f71494feac298fed6d352dbfe65c26d352f3c3535f",
+      "indice": 19
+    },
+    {
+      "sha256": "17d681b9b6ce9636fdeaf8954e2a4c1bb57699d24d40367508bbd70d1297b67b",
+      "indice": 34
+    },
+    {
+      "sha256": "e51e490d4dc3ae750c8eea4f1cade6315dce697d1fd450135a04d9d012fb0689",
+      "indice": 35
+    },
+    {
+      "sha256": "2455862e9842e1351db7295fbd0d9dfbdc76aa8b0e61027564053a7c344fdd28",
+      "indice": 28
+    },
+    {
+      "sha256": "1e74353793a045b2a4067cd5ec4d2c7279d25f1c8b666385ca76752a226fdab0",
+      "indice": 29
+    },
+    {
+      "sha256": "01df176152cfa68279ed295b22627dbe3d0e3f68ce4ab95392ccb77dcfab1898",
+      "indice": 24
+    },
+    {
+      "sha256": "01df176152cfa68279ed295b22627dbe3d0e3f68ce4ab95392ccb77dcfab1898",
+      "indice": 26
+    },
+    {
+      "sha256": "44cea6900f64647406a928fae6d0f466717420ac156f2d0a196f744881c58842",
+      "indice": 13
+    },
+    {
+      "sha256": "8a8d0d8a39b59ce83ecc72b7081610c5bfcb65d3ada6415c44511bae9e360f21",
+      "indice": 14
+    },
+    {
+      "sha256": "afff05f6c64a67cdd1f7a9a46619d648d2646c22201168a62a12817b2c2f7910",
+      "indice": 17
+    },
+    {
+      "sha256": "69f45563bc341ba7e4f509d4a92b83e5d8d60c8ff41a5161a29a447965006e4a",
+      "indice": 9
+    },
+    {
+      "sha256": "1c5e881445e445614900939e3f3d1b9ecca29281c16a1ea28134b96e0ab9f5a1",
+      "indice": 20
+    },
+    {
+      "sha256": "8f5ea9c53161e2f2d856ae7be4a12e4fe0772fad5075761e1bf4028358eafdfa",
+      "indice": 31
+    },
+    {
+      "sha256": "e51e490d4dc3ae750c8eea4f1cade6315dce697d1fd450135a04d9d012fb0689",
+      "indice": 35
+    },
+    {
+      "sha256": "08248ac99f224c881fc332fa4cac6959a4dd4877ce00a7f7f6a0ba6c19b19192",
+      "indice": 11
+    }
+  ]
+}

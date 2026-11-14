@@ -28,4 +28,5 @@ Después: `python herramientas/montar_animaciones.py a14` y revisión visual. So
 | **Attack2** | 2 | 50x50 | [`a14_Attack2.piskel`](Attack2/a14_Attack2.piskel) | [`a14_Attack2.gif`](Attack2/a14_Attack2.gif) | [`a14_Attack2_sheet.png`](Attack2/a14_Attack2_sheet.png) |
 | **Attack3** | 2 | 46x46 | [`a14_Attack3.piskel`](Attack3/a14_Attack3.piskel) | [`a14_Attack3.gif`](Attack3/a14_Attack3.gif) | [`a14_Attack3_sheet.png`](Attack3/a14_Attack3_sheet.png) |
 | **Kick2** | 2 | 46x46 | [`a14_Kick2.piskel`](Kick2/a14_Kick2.piskel) | [`a14_Kick2.gif`](Kick2/a14_Kick2.gif) | [`a14_Kick2_sheet.png`](Kick2/a14_Kick2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`a14_Beam.piskel`](Beam/a14_Beam.piskel) | [`a14_Beam.gif`](Beam/a14_Beam.gif) | [`a14_Beam_sheet.png`](Beam/a14_Beam_sheet.png) |
 | **Up** | 1 | 48x48 | [`a14_Up.piskel`](Up/a14_Up.piskel) | [`a14_Up.gif`](Up/a14_Up.gif) | [`a14_Up_sheet.png`](Up/a14_Up_sheet.png) |

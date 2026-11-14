@@ -26,5 +26,7 @@ Después: `python herramientas/montar_animaciones.py trunksnino` y revisión vis
 | **Pow** | 2 | 94x94 | [`trunksnino_Pow.piskel`](Pow/trunksnino_Pow.piskel) | [`trunksnino_Pow.gif`](Pow/trunksnino_Pow.gif) | [`trunksnino_Pow_sheet.png`](Pow/trunksnino_Pow_sheet.png) |
 | **Hurt** | 2 | 56x56 | [`trunksnino_Hurt.piskel`](Hurt/trunksnino_Hurt.piskel) | [`trunksnino_Hurt.gif`](Hurt/trunksnino_Hurt.gif) | [`trunksnino_Hurt_sheet.png`](Hurt/trunksnino_Hurt_sheet.png) |
 | **Faint** | 1 | 54x54 | [`trunksnino_Faint.piskel`](Faint/trunksnino_Faint.piskel) | [`trunksnino_Faint.gif`](Faint/trunksnino_Faint.gif) | [`trunksnino_Faint_sheet.png`](Faint/trunksnino_Faint_sheet.png) |
+| **Attack3** | 2 | 52x52 | [`trunksnino_Attack3.piskel`](Attack3/trunksnino_Attack3.piskel) | [`trunksnino_Attack3.gif`](Attack3/trunksnino_Attack3.gif) | [`trunksnino_Attack3_sheet.png`](Attack3/trunksnino_Attack3_sheet.png) |
 | **Kick2** | 2 | 54x54 | [`trunksnino_Kick2.piskel`](Kick2/trunksnino_Kick2.piskel) | [`trunksnino_Kick2.gif`](Kick2/trunksnino_Kick2.gif) | [`trunksnino_Kick2_sheet.png`](Kick2/trunksnino_Kick2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`trunksnino_Beam.piskel`](Beam/trunksnino_Beam.piskel) | [`trunksnino_Beam.gif`](Beam/trunksnino_Beam.gif) | [`trunksnino_Beam_sheet.png`](Beam/trunksnino_Beam_sheet.png) |
 | **Up** | 2 | 56x56 | [`trunksnino_Up.piskel`](Up/trunksnino_Up.piskel) | [`trunksnino_Up.gif`](Up/trunksnino_Up.gif) | [`trunksnino_Up_sheet.png`](Up/trunksnino_Up_sheet.png) |

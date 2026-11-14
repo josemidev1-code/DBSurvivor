@@ -101,7 +101,7 @@
     "velocidad": 99,
     "recarga": 90
    },
-   "estado": "A MEDIAS",
+   "estado": "CASI",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -115,7 +115,7 @@
     "attack2": "animada",
     "attack3": "animada",
     "kick2": "falta",
-    "beam": "falta",
+    "beam": "animada",
     "up": "quieta"
    },
    "pack": "01_Dragon_Ball_Super/05_Broly/Goku/216_GOKU, SSJ GOD,DBS BROLY, ANDRÉS GAMEN ANIMATIONS"
@@ -135,7 +135,7 @@
     "velocidad": 104,
     "recarga": 85
    },
-   "estado": "CASI",
+   "estado": "COMPLETA",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -147,7 +147,7 @@
     "faint": "animada",
     "portrait": "animada",
     "attack2": "animada",
-    "attack3": "falta",
+    "attack3": "animada",
     "kick2": "animada",
     "beam": "animada",
     "up": "animada"

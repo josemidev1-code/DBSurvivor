@@ -27,5 +27,6 @@ Después: `python herramientas/montar_animaciones.py gohanmanga` y revisión vis
 | **Hurt** | 2 | 54x54 | [`gohanmanga_Hurt.piskel`](Hurt/gohanmanga_Hurt.piskel) | [`gohanmanga_Hurt.gif`](Hurt/gohanmanga_Hurt.gif) | [`gohanmanga_Hurt_sheet.png`](Hurt/gohanmanga_Hurt_sheet.png) |
 | **Faint** | 1 | 54x54 | [`gohanmanga_Faint.piskel`](Faint/gohanmanga_Faint.piskel) | [`gohanmanga_Faint.gif`](Faint/gohanmanga_Faint.gif) | [`gohanmanga_Faint_sheet.png`](Faint/gohanmanga_Faint_sheet.png) |
 | **Attack2** | 2 | 52x52 | [`gohanmanga_Attack2.piskel`](Attack2/gohanmanga_Attack2.piskel) | [`gohanmanga_Attack2.gif`](Attack2/gohanmanga_Attack2.gif) | [`gohanmanga_Attack2_sheet.png`](Attack2/gohanmanga_Attack2_sheet.png) |
+| **Attack3** | 2 | 52x52 | [`gohanmanga_Attack3.piskel`](Attack3/gohanmanga_Attack3.piskel) | [`gohanmanga_Attack3.gif`](Attack3/gohanmanga_Attack3.gif) | [`gohanmanga_Attack3_sheet.png`](Attack3/gohanmanga_Attack3_sheet.png) |
 | **Beam** | 2 | 54x54 | [`gohanmanga_Beam.piskel`](Beam/gohanmanga_Beam.piskel) | [`gohanmanga_Beam.gif`](Beam/gohanmanga_Beam.gif) | [`gohanmanga_Beam_sheet.png`](Beam/gohanmanga_Beam_sheet.png) |
 | **Up** | 1 | 50x50 | [`gohanmanga_Up.piskel`](Up/gohanmanga_Up.piskel) | [`gohanmanga_Up.gif`](Up/gohanmanga_Up.gif) | [`gohanmanga_Up_sheet.png`](Up/gohanmanga_Up_sheet.png) |

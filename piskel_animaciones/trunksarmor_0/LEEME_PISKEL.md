@@ -27,5 +27,7 @@ Después: `python herramientas/montar_animaciones.py trunksarmor` y revisión vi
 | **Hurt** | 2 | 50x50 | [`trunksarmor_Hurt.piskel`](Hurt/trunksarmor_Hurt.piskel) | [`trunksarmor_Hurt.gif`](Hurt/trunksarmor_Hurt.gif) | [`trunksarmor_Hurt_sheet.png`](Hurt/trunksarmor_Hurt_sheet.png) |
 | **Faint** | 1 | 56x56 | [`trunksarmor_Faint.piskel`](Faint/trunksarmor_Faint.piskel) | [`trunksarmor_Faint.gif`](Faint/trunksarmor_Faint.gif) | [`trunksarmor_Faint_sheet.png`](Faint/trunksarmor_Faint_sheet.png) |
 | **Attack2** | 2 | 46x46 | [`trunksarmor_Attack2.piskel`](Attack2/trunksarmor_Attack2.piskel) | [`trunksarmor_Attack2.gif`](Attack2/trunksarmor_Attack2.gif) | [`trunksarmor_Attack2_sheet.png`](Attack2/trunksarmor_Attack2_sheet.png) |
+| **Attack3** | 2 | 50x50 | [`trunksarmor_Attack3.piskel`](Attack3/trunksarmor_Attack3.piskel) | [`trunksarmor_Attack3.gif`](Attack3/trunksarmor_Attack3.gif) | [`trunksarmor_Attack3_sheet.png`](Attack3/trunksarmor_Attack3_sheet.png) |
 | **Kick2** | 2 | 50x50 | [`trunksarmor_Kick2.piskel`](Kick2/trunksarmor_Kick2.piskel) | [`trunksarmor_Kick2.gif`](Kick2/trunksarmor_Kick2.gif) | [`trunksarmor_Kick2_sheet.png`](Kick2/trunksarmor_Kick2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`trunksarmor_Beam.piskel`](Beam/trunksarmor_Beam.piskel) | [`trunksarmor_Beam.gif`](Beam/trunksarmor_Beam.gif) | [`trunksarmor_Beam_sheet.png`](Beam/trunksarmor_Beam_sheet.png) |
 | **Up** | 1 | 54x54 | [`trunksarmor_Up.piskel`](Up/trunksarmor_Up.piskel) | [`trunksarmor_Up.gif`](Up/trunksarmor_Up.gif) | [`trunksarmor_Up_sheet.png`](Up/trunksarmor_Up_sheet.png) |

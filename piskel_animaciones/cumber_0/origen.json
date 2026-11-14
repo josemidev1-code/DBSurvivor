@@ -1,0 +1,87 @@
+{
+  "heroe": "cumber",
+  "forma": "0",
+  "pack": "04_Heroes_y_videojuegos/Cumber/196_KAMBA,Damaged, Andrés Gamen",
+  "frames": [
+    {
+      "sha256": "d686edb6f443a47707e9a3cb0d4c877253729262a9e33c9f5362786999d4e82b",
+      "indice": 3
+    },
+    {
+      "sha256": "c0ea68d2b9e5ec4819ca41d96e35142606c1b378083efdca08a7c5417dbd2cb0",
+      "indice": 4
+    },
+    {
+      "sha256": "898d54920f245889b14761b4978065fdf5621a305ece4ad6ab64932540d8acf5",
+      "indice": 5
+    },
+    {
+      "sha256": "d2f75b0f8f09729bece415b336fc9a43ddde7e8167f69a7a3fdce1534875d3a0",
+      "indice": 13
+    },
+    {
+      "sha256": "30138995a6895b7c38aad319c3ae85a3e032297c6ff7f6af409ef91b405274da",
+      "indice": 14
+    },
+    {
+      "sha256": "35777bf8fa54045ccbec69f162c0cfde3fe0d9b87e2d4a35f02f0ef4cc402a76",
+      "indice": 11
+    },
+    {
+      "sha256": "143266027493fb1bf90ea92df1a08dbd9b811df650f9c16a6b76cbd2d842c7e0",
+      "indice": 12
+    },
+    {
+      "sha256": "ffb5925e3d389895fdbc32cfc5372d37617b8773945a3ea9e0bf903df388d85e",
+      "indice": 7
+    },
+    {
+      "sha256": "15815e8e90e89b60ab0d4a017d4588b64334b4189abcaa14ae50642067a0e883",
+      "indice": 17
+    },
+    {
+      "sha256": "a2a526f99cda15acf7d12b613539217353e477944e813d185ee7891e7a53b65a",
+      "indice": 2
+    },
+    {
+      "sha256": "f43474fde4708bfefa0d5f84d27c38137c0227d5e458d59d1398351563d49c62",
+      "indice": 8
+    },
+    {
+      "sha256": "4362b8b383db306b81ba2420bfdc567ee76b1b12391df8ec280e9b5ef58436d0",
+      "indice": 9
+    },
+    {
+      "sha256": "60ff0a14495762a92d9e97f91fcd61b8e757371d701dce61b14b3a5d845f2436",
+      "indice": 10
+    },
+    {
+      "sha256": "dec877d093f9d2425e41490bb13c3777fc1d521d289a3f785d6c2a3c1b0121ee",
+      "indice": 6
+    },
+    {
+      "sha256": "15815e8e90e89b60ab0d4a017d4588b64334b4189abcaa14ae50642067a0e883",
+      "indice": 17
+    },
+    {
+      "sha256": "07cfba092b51b24493e635e74e22516499bedf81f647d06d9e9dbd6ca9bdf12e",
+      "indice": 20
+    },
+    {
+      "sha256": "ecafd6923b341d8ed215855cda06771373301cb188dd94c42db660e03bfce4bb",
+      "indice": 22
+    },
+    {
+      "sha256": "ffb5925e3d389895fdbc32cfc5372d37617b8773945a3ea9e0bf903df388d85e",
+      "indice": 7
+    },
+    {
+      "sha256": "15815e8e90e89b60ab0d4a017d4588b64334b4189abcaa14ae50642067a0e883",
+      "indice": 17
+    },
+    {
+      "sha256": "024fc3528e762f79a329492075107773ef7921640b628112f7c4aca2071bb2b4",
+      "indice": 15
+    }
+  ]
+}

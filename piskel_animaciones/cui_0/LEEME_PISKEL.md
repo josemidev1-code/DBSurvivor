@@ -27,6 +27,7 @@ Después: `python herramientas/montar_animaciones.py cui` y revisión visual. So
 | **Hurt** | 2 | 46x46 | [`cui_Hurt.piskel`](Hurt/cui_Hurt.piskel) | [`cui_Hurt.gif`](Hurt/cui_Hurt.gif) | [`cui_Hurt_sheet.png`](Hurt/cui_Hurt_sheet.png) |
 | **Faint** | 1 | 46x46 | [`cui_Faint.piskel`](Faint/cui_Faint.piskel) | [`cui_Faint.gif`](Faint/cui_Faint.gif) | [`cui_Faint_sheet.png`](Faint/cui_Faint_sheet.png) |
 | **Attack2** | 2 | 46x46 | [`cui_Attack2.piskel`](Attack2/cui_Attack2.piskel) | [`cui_Attack2.gif`](Attack2/cui_Attack2.gif) | [`cui_Attack2_sheet.png`](Attack2/cui_Attack2_sheet.png) |
+| **Attack3** | 2 | 54x54 | [`cui_Attack3.piskel`](Attack3/cui_Attack3.piskel) | [`cui_Attack3.gif`](Attack3/cui_Attack3.gif) | [`cui_Attack3_sheet.png`](Attack3/cui_Attack3_sheet.png) |
 | **Kick2** | 2 | 52x52 | [`cui_Kick2.piskel`](Kick2/cui_Kick2.piskel) | [`cui_Kick2.gif`](Kick2/cui_Kick2.gif) | [`cui_Kick2_sheet.png`](Kick2/cui_Kick2_sheet.png) |
 | **Beam** | 2 | 46x46 | [`cui_Beam.piskel`](Beam/cui_Beam.piskel) | [`cui_Beam.gif`](Beam/cui_Beam.gif) | [`cui_Beam_sheet.png`](Beam/cui_Beam_sheet.png) |
 | **Up** | 1 | 46x46 | [`cui_Up.piskel`](Up/cui_Up.piskel) | [`cui_Up.gif`](Up/cui_Up.gif) | [`cui_Up_sheet.png`](Up/cui_Up_sheet.png) |

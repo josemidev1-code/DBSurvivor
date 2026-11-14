@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py dyspo` y revisión visual. 
 | **Attack2** | 2 | 50x50 | [`dyspo_Attack2.piskel`](Attack2/dyspo_Attack2.piskel) | [`dyspo_Attack2.gif`](Attack2/dyspo_Attack2.gif) | [`dyspo_Attack2_sheet.png`](Attack2/dyspo_Attack2_sheet.png) |
 | **Attack3** | 2 | 50x50 | [`dyspo_Attack3.piskel`](Attack3/dyspo_Attack3.piskel) | [`dyspo_Attack3.gif`](Attack3/dyspo_Attack3.gif) | [`dyspo_Attack3_sheet.png`](Attack3/dyspo_Attack3_sheet.png) |
 | **Kick2** | 2 | 50x50 | [`dyspo_Kick2.piskel`](Kick2/dyspo_Kick2.piskel) | [`dyspo_Kick2.gif`](Kick2/dyspo_Kick2.gif) | [`dyspo_Kick2_sheet.png`](Kick2/dyspo_Kick2_sheet.png) |
+| **Beam** | 2 | 50x50 | [`dyspo_Beam.piskel`](Beam/dyspo_Beam.piskel) | [`dyspo_Beam.gif`](Beam/dyspo_Beam.gif) | [`dyspo_Beam_sheet.png`](Beam/dyspo_Beam_sheet.png) |
 | **Up** | 1 | 56x56 | [`dyspo_Up.piskel`](Up/dyspo_Up.piskel) | [`dyspo_Up.gif`](Up/dyspo_Up.gif) | [`dyspo_Up_sheet.png`](Up/dyspo_Up_sheet.png) |

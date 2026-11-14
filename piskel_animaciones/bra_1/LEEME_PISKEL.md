@@ -3,12 +3,16 @@
 Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (https://www.piskelapp.com/).
 
 ## Cómo abrir en Piskel:
-1. Entra a **https://www.piskelapp.com/p/create** en tu navegador.
+1. Entra a **https://www.piskelapp.com/p/create/sprite** en tu navegador.
 2. Haz clic en el icono de carpeta de la barra derecha (**Import**).
 3. Elige cualquiera de estas opciones:
    - **Import .piskel file**: selecciona el archivo `.piskel` de cualquier animación.
    - **Import animated GIF**: selecciona el archivo `.gif` (Piskel importa todos los fotogramas y la velocidad al instante).
    - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).
+
+## Volver al juego:
+`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/bra_1/origen.json --heroe bra --forma 1 --anim attack --aplicar`
+Después: `python herramientas/montar_animaciones.py bra` y revisión visual. Solo se aceptan sprites originales exportados.
 
 ## Animaciones disponibles:
 
@@ -24,5 +28,6 @@ Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (
 | **Faint** | 1 | 56x56 | [`bra_Faint.piskel`](Faint/bra_Faint.piskel) | [`bra_Faint.gif`](Faint/bra_Faint.gif) | [`bra_Faint_sheet.png`](Faint/bra_Faint_sheet.png) |
 | **Attack2** | 2 | 66x66 | [`bra_Attack2.piskel`](Attack2/bra_Attack2.piskel) | [`bra_Attack2.gif`](Attack2/bra_Attack2.gif) | [`bra_Attack2_sheet.png`](Attack2/bra_Attack2_sheet.png) |
 | **Attack3** | 2 | 52x52 | [`bra_Attack3.piskel`](Attack3/bra_Attack3.piskel) | [`bra_Attack3.gif`](Attack3/bra_Attack3.gif) | [`bra_Attack3_sheet.png`](Attack3/bra_Attack3_sheet.png) |
+| **Kick2** | 2 | 60x60 | [`bra_Kick2.piskel`](Kick2/bra_Kick2.piskel) | [`bra_Kick2.gif`](Kick2/bra_Kick2.gif) | [`bra_Kick2_sheet.png`](Kick2/bra_Kick2_sheet.png) |
 | **Beam** | 2 | 64x64 | [`bra_Beam.piskel`](Beam/bra_Beam.piskel) | [`bra_Beam.gif`](Beam/bra_Beam.gif) | [`bra_Beam_sheet.png`](Beam/bra_Beam_sheet.png) |
 | **Up** | 2 | 68x68 | [`bra_Up.piskel`](Up/bra_Up.piskel) | [`bra_Up.gif`](Up/bra_Up.gif) | [`bra_Up_sheet.png`](Up/bra_Up_sheet.png) |

@@ -1,0 +1,107 @@
+{
+  "heroe": "cell",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/02_Androides_Cell_y_Trunks/Cell/021_Cell Imperfeito",
+  "frames": [
+    {
+      "sha256": "8d4d767ab74f8635abf0a5fd7e6f7b1fde432566db7832b4c977136e74e96243",
+      "indice": 0
+    },
+    {
+      "sha256": "22c03d8eb6975c22b2713ca96707ad42acd21063fb9be475e61060f3c6edb8b5",
+      "indice": 1
+    },
+    {
+      "sha256": "7275028262b81ada520b43940e3ef6fab305881fc352353916fd0231a7bd469d",
+      "indice": 5
+    },
+    {
+      "sha256": "50a4ce8b674e6a5812bab733eda931946511be1c89ae81d03c18b5b311b8a9d0",
+      "indice": 6
+    },
+    {
+      "sha256": "6bc650a4b37cd49a0751de450c642f96cda62cbb03326c25ab6d651d30666e9b",
+      "indice": 7
+    },
+    {
+      "sha256": "67cb7b800fae77c2bf07dd799cddc8aaef310029eff8adac3d7a7e5c368a9131",
+      "indice": 8
+    },
+    {
+      "sha256": "82fc7ffe9e3791207f2ee871b961474facdccb4ebadab0ccd86c9becdc6d6268",
+      "indice": 13
+    },
+    {
+      "sha256": "398ef1ac40c0769f46ad8a8f756d4b84e05affe50261032dc8f943aafbbae2f7",
+      "indice": 14
+    },
+    {
+      "sha256": "4aea2888ab9d65a2410aac9dcf76f89f651dd002f0c3d2815c624e27452daa1c",
+      "indice": 30
+    },
+    {
+      "sha256": "e656e0c9038c051fdf612bd05ec301d7928f84406fab32459a3843dc1cc04dc0",
+      "indice": 31
+    },
+    {
+      "sha256": "18a0d713b76d83456072f8a52b029cc8838a083cba6b71f6bc61343ecbb5e1f1",
+      "indice": 27
+    },
+    {
+      "sha256": "a4c973d439ccd8ede924c81dba02c8d8a814485b0ab7fc1a15f7ccaf5c57d6f1",
+      "indice": 28
+    },
+    {
+      "sha256": "7e78eed54c93a786d6ecb3e0ed44f989fdacaae1b5cdf473de0c216c8444150e",
+      "indice": 29
+    },
+    {
+      "sha256": "63bf8dbed69f903ff25442623d15ff1a3c81b661012d22d94f0452b406f3a75a",
+      "indice": 35
+    },
+    {
+      "sha256": "1e56ef091cbf57b1f19e9f44f1bc881c753cce59d8f7a0e04692d79de9120be9",
+      "indice": 17
+    },
+    {
+      "sha256": "de2a3ca91927b590fc72cffd685b0c0b4de3d6a41a8fb600372a1ce9be7ec158",
+      "indice": 9
+    },
+    {
+      "sha256": "ce72e9574ea3dbb7412b5a4c093cddf6c040c8ae34799d4012626a10e1a4a3a2",
+      "indice": 10
+    },
+    {
+      "sha256": "88c3e1c7013c8d8915ea616ca02dabdfe93c7ef89b68bd6464d345dafc47bb88",
+      "indice": 11
+    },
+    {
+      "sha256": "8c8e4539b5c2daa9aa63a5cb13ec148a942a9785702b716316ad263258c31c21",
+      "indice": 12
+    },
+    {
+      "sha256": "4a3913452b6d664ed4a56fa434a25bb152ef7e8157f60a77d2f8241672089d9e",
+      "indice": 15
+    },
+    {
+      "sha256": "a776f7b23bed5913d1673709fd02cbf6f2c6980f09c766497ce4d810aee6a187",
+      "indice": 16
+    },
+    {
+      "sha256": "4aea2888ab9d65a2410aac9dcf76f89f651dd002f0c3d2815c624e27452daa1c",
+      "indice": 30
+    },
+    {
+      "sha256": "e656e0c9038c051fdf612bd05ec301d7928f84406fab32459a3843dc1cc04dc0",
+      "indice": 31
+    },
+    {
+      "sha256": "8c8e4539b5c2daa9aa63a5cb13ec148a942a9785702b716316ad263258c31c21",
+      "indice": 12
+    },
+    {
+      "sha256": "7275028262b81ada520b43940e3ef6fab305881fc352353916fd0231a7bd469d",
+      "indice": 5
+    }
+  ]
+}

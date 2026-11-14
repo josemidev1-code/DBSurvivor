@@ -1,0 +1,95 @@
+{
+  "heroe": "saibaman",
+  "forma": "0",
+  "pack": "00_Dragon_Ball_Z/00_Saiyans/Saibaman/086_Saibaman",
+  "frames": [
+    {
+      "sha256": "acf3ca807e72d71e9d7955a38fdb9fe5e7aa2ce4b7569d8bffedc7f1bfee18ea",
+      "indice": 0
+    },
+    {
+      "sha256": "34332f1d1a2c453684f7934b47134b6351aba8dea868ea7cfa701963fb6a43c7",
+      "indice": 3
+    },
+    {
+      "sha256": "32dff32c82e17ee599085cf393da98a5c81395c831fe5ff6612b54b73d6fb04b",
+      "indice": 15
+    },
+    {
+      "sha256": "3afb90a7692a9a43a5799448d77ac8f47bc107910fce928acee469e6c9e0b0b8",
+      "indice": 8
+    },
+    {
+      "sha256": "2d15c38af7fe2939c16872b618cbf7de23c3427e6b9524c96f5163d35c26bc95",
+      "indice": 9
+    },
+    {
+      "sha256": "5f6d26f6f2fc12ae541dc27f242ff803135be7aaa38816a3508cccd5aedf03b6",
+      "indice": 12
+    },
+    {
+      "sha256": "915aeab8907648b969b6d106b17ac60e156a856798f2ef4fdb9268d531c3d7db",
+      "indice": 13
+    },
+    {
+      "sha256": "e4e443481ed08da0a34f21bce178cda8178618cd071325f2983112dcba4ac8bd",
+      "indice": 25
+    },
+    {
+      "sha256": "9f8889b9d54c997997014983d3483ae958a54e8300041c211f6cb357effcf3c3",
+      "indice": 26
+    },
+    {
+      "sha256": "dacc6810c7cdcf406c6b701426f57f3834cb2053b7080e5731ba42fd6f51584d",
+      "indice": 29
+    },
+    {
+      "sha256": "2c49c091eb8e1712ebf4f79462196172dc9a0f89e101861d8d41418d0d44e732",
+      "indice": 30
+    },
+    {
+      "sha256": "29a791542258e84fe2fbcb78a3d0f74b2c21f1cb0b1a4b6bb7edd9a37d0cdeab",
+      "indice": 31
+    },
+    {
+      "sha256": "b7552e6a5d06a6b93052efd6512a22a9a1265253a20d0326d7d82cae3f6ff1a7",
+      "indice": 17
+    },
+    {
+      "sha256": "64020220327c36293c1fbc4968f78e66af0373947ff940b8d63e1c21d43ef1c8",
+      "indice": 21
+    },
+    {
+      "sha256": "0ae45617101bf2e0f09511316fa7430f4cd77b1ba1cd64326cfab8a5a8c9fdb4",
+      "indice": 24
+    },
+    {
+      "sha256": "b03fed9046e633e1b2f7529ad2a796880fcfc4196525066cb0a847f377e88b64",
+      "indice": 10
+    },
+    {
+      "sha256": "fd42c03c31bb987b9ed31b7ddf4110da3211aa226e224d6b83bab0974ad2d48d",
+      "indice": 11
+    },
+    {
+      "sha256": "c3a59f1d67fab83b0033cacbe45b59e6c99ca226906777c17451112a3234427e",
+      "indice": 14
+    },
+    {
+      "sha256": "b1dcb9a819a5b1ebe37bc869f87ec590431169cffe4dc34fc4035253667483d8",
+      "indice": 16
+    },
+    {
+      "sha256": "657cca51e1c363a0bc16121e685c149daab1f2dd37e065cae515e68233699c57",
+      "indice": 34
+    },
+    {
+      "sha256": "ce7cb0ab7168071eded0912d4323df2be3244c5bb0b461ca0e7b5485f636e62a",
+      "indice": 40
+    },
+    {
+      "sha256": "952104f1e5b5c3da95423ec43061e28f77bf41a0b050032956003d8ef0f050c4",
+      "indice": 33
+    }
+  ]
+}

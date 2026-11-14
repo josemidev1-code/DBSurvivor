@@ -3,12 +3,16 @@
 Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (https://www.piskelapp.com/).
 
 ## Cómo abrir en Piskel:
-1. Entra a **https://www.piskelapp.com/p/create** en tu navegador.
+1. Entra a **https://www.piskelapp.com/p/create/sprite** en tu navegador.
 2. Haz clic en el icono de carpeta de la barra derecha (**Import**).
 3. Elige cualquiera de estas opciones:
    - **Import .piskel file**: selecciona el archivo `.piskel` de cualquier animación.
    - **Import animated GIF**: selecciona el archivo `.gif` (Piskel importa todos los fotogramas y la velocidad al instante).
    - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).
+
+## Volver al juego:
+`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/gokuxeno_0/origen.json --heroe gokuxeno --forma 0 --anim attack --aplicar`
+Después: `python herramientas/montar_animaciones.py gokuxeno` y revisión visual. Solo se aceptan sprites originales exportados.
 
 ## Animaciones disponibles:
 
@@ -18,7 +22,7 @@ Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (
 | **Walk** | 1 | 48x48 | [`gokuxeno_Walk.piskel`](Walk/gokuxeno_Walk.piskel) | [`gokuxeno_Walk.gif`](Walk/gokuxeno_Walk.gif) | [`gokuxeno_Walk_sheet.png`](Walk/gokuxeno_Walk_sheet.png) |
 | **Attack** | 3 | 56x56 | [`gokuxeno_Attack.piskel`](Attack/gokuxeno_Attack.piskel) | [`gokuxeno_Attack.gif`](Attack/gokuxeno_Attack.gif) | [`gokuxeno_Attack_sheet.png`](Attack/gokuxeno_Attack_sheet.png) |
 | **Kick** | 2 | 50x50 | [`gokuxeno_Kick.piskel`](Kick/gokuxeno_Kick.piskel) | [`gokuxeno_Kick.gif`](Kick/gokuxeno_Kick.gif) | [`gokuxeno_Kick_sheet.png`](Kick/gokuxeno_Kick_sheet.png) |
-| **Cast** | 2 | 60x60 | [`gokuxeno_Cast.piskel`](Cast/gokuxeno_Cast.piskel) | [`gokuxeno_Cast.gif`](Cast/gokuxeno_Cast.gif) | [`gokuxeno_Cast_sheet.png`](Cast/gokuxeno_Cast_sheet.png) |
+| **Cast** | 2 | 56x56 | [`gokuxeno_Cast.piskel`](Cast/gokuxeno_Cast.piskel) | [`gokuxeno_Cast.gif`](Cast/gokuxeno_Cast.gif) | [`gokuxeno_Cast_sheet.png`](Cast/gokuxeno_Cast_sheet.png) |
 | **Pow** | 1 | 94x94 | [`gokuxeno_Pow.piskel`](Pow/gokuxeno_Pow.piskel) | [`gokuxeno_Pow.gif`](Pow/gokuxeno_Pow.gif) | [`gokuxeno_Pow_sheet.png`](Pow/gokuxeno_Pow_sheet.png) |
 | **Hurt** | 2 | 58x58 | [`gokuxeno_Hurt.piskel`](Hurt/gokuxeno_Hurt.piskel) | [`gokuxeno_Hurt.gif`](Hurt/gokuxeno_Hurt.gif) | [`gokuxeno_Hurt_sheet.png`](Hurt/gokuxeno_Hurt_sheet.png) |
 | **Faint** | 1 | 56x56 | [`gokuxeno_Faint.piskel`](Faint/gokuxeno_Faint.piskel) | [`gokuxeno_Faint.gif`](Faint/gokuxeno_Faint.gif) | [`gokuxeno_Faint_sheet.png`](Faint/gokuxeno_Faint_sheet.png) |

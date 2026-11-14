@@ -3,12 +3,16 @@
 Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (https://www.piskelapp.com/).
 
 ## Cómo abrir en Piskel:
-1. Entra a **https://www.piskelapp.com/p/create** en tu navegador.
+1. Entra a **https://www.piskelapp.com/p/create/sprite** en tu navegador.
 2. Haz clic en el icono de carpeta de la barra derecha (**Import**).
 3. Elige cualquiera de estas opciones:
    - **Import .piskel file**: selecciona el archivo `.piskel` de cualquier animación.
    - **Import animated GIF**: selecciona el archivo `.gif` (Piskel importa todos los fotogramas y la velocidad al instante).
    - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).
+
+## Volver al juego:
+`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/nappa_0/origen.json --heroe nappa --forma 0 --anim attack --aplicar`
+Después: `python herramientas/montar_animaciones.py nappa` y revisión visual. Solo se aceptan sprites originales exportados.
 
 ## Animaciones disponibles:
 
@@ -18,7 +22,7 @@ Esta carpeta contiene las animaciones listas para abrir y editar en **Piskel** (
 | **Walk** | 1 | 72x72 | [`nappa_Walk.piskel`](Walk/nappa_Walk.piskel) | [`nappa_Walk.gif`](Walk/nappa_Walk.gif) | [`nappa_Walk_sheet.png`](Walk/nappa_Walk_sheet.png) |
 | **Attack** | 5 | 58x58 | [`nappa_Attack.piskel`](Attack/nappa_Attack.piskel) | [`nappa_Attack.gif`](Attack/nappa_Attack.gif) | [`nappa_Attack_sheet.png`](Attack/nappa_Attack_sheet.png) |
 | **Kick** | 3 | 62x62 | [`nappa_Kick.piskel`](Kick/nappa_Kick.piskel) | [`nappa_Kick.gif`](Kick/nappa_Kick.gif) | [`nappa_Kick_sheet.png`](Kick/nappa_Kick_sheet.png) |
-| **Cast** | 2 | 50x50 | [`nappa_Cast.piskel`](Cast/nappa_Cast.piskel) | [`nappa_Cast.gif`](Cast/nappa_Cast.gif) | [`nappa_Cast_sheet.png`](Cast/nappa_Cast_sheet.png) |
+| **Cast** | 2 | 54x54 | [`nappa_Cast.piskel`](Cast/nappa_Cast.piskel) | [`nappa_Cast.gif`](Cast/nappa_Cast.gif) | [`nappa_Cast_sheet.png`](Cast/nappa_Cast_sheet.png) |
 | **Pow** | 3 | 82x82 | [`nappa_Pow.piskel`](Pow/nappa_Pow.piskel) | [`nappa_Pow.gif`](Pow/nappa_Pow.gif) | [`nappa_Pow_sheet.png`](Pow/nappa_Pow_sheet.png) |
 | **Hurt** | 2 | 58x58 | [`nappa_Hurt.piskel`](Hurt/nappa_Hurt.piskel) | [`nappa_Hurt.gif`](Hurt/nappa_Hurt.gif) | [`nappa_Hurt_sheet.png`](Hurt/nappa_Hurt_sheet.png) |
 | **Faint** | 1 | 66x66 | [`nappa_Faint.piskel`](Faint/nappa_Faint.piskel) | [`nappa_Faint.gif`](Faint/nappa_Faint.gif) | [`nappa_Faint_sheet.png`](Faint/nappa_Faint_sheet.png) |

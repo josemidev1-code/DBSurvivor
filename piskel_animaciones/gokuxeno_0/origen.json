@@ -1,0 +1,103 @@
+{
+  "heroe": "gokuxeno",
+  "forma": "0",
+  "pack": "04_Heroes_y_videojuegos/Goku/266_GOKU BASE XENO ULSW",
+  "frames": [
+    {
+      "sha256": "38f434b82d9e9bf90e6ad5142280837c15732828f3e16f3b43a73a7fc414a589",
+      "indice": 4
+    },
+    {
+      "sha256": "6c4191e62c2320bd82ae818236e8342b6379deed3b9f84e610b14ace8d175374",
+      "indice": 5
+    },
+    {
+      "sha256": "72793259a574f5f4df10a2d9991332ee68aec9f12d1799e7b6bed7cd1693efef",
+      "indice": 14
+    },
+    {
+      "sha256": "a4d80dd34eb304f80305a941ecfbace3218ffdcd1d297f3cfdcb3b1d0ddbf839",
+      "indice": 15
+    },
+    {
+      "sha256": "18bc4fd66b722fac78ccb9242fec534c740958392dc02508ee95903524b692f9",
+      "indice": 16
+    },
+    {
+      "sha256": "a8f6c11f3afe991c1bc5e128d26a9119afb3b94b380344db146115d4a67d3d66",
+      "indice": 17
+    },
+    {
+      "sha256": "c62f9c1e97cd61aa45ae8dd4989dd53641201de40c4bfdcbfa208a70a1a4adef",
+      "indice": 25
+    },
+    {
+      "sha256": "c4d84c0fe043da7fa0fcd1be99533363d145d3dccdcc160456fd9480fb902275",
+      "indice": 26
+    },
+    {
+      "sha256": "100321b30e46182f407d52799986a1d753145cd490d9d20ecb0968e2edf8fcaf",
+      "indice": 50
+    },
+    {
+      "sha256": "e8f100d3d64fdc961e8f926c26bc78e8744b2d4cfb0debee94522a9491ced1e4",
+      "indice": 52
+    },
+    {
+      "sha256": "b26b64f6fa2cd985ed6f626b20e77b4d8d96980e9224cceec9748543f50ff639",
+      "indice": 42
+    },
+    {
+      "sha256": "fa17be8ee2edb08a5fb58dd51ca82a3e29b086393ee6316c8ac98871eb86c694",
+      "indice": 33
+    },
+    {
+      "sha256": "ee7a806b8857b47732a90ff7ed43ec2c050c0822dc4416b79eb6fe2b5d098d5d",
+      "indice": 36
+    },
+    {
+      "sha256": "62a47723edd2122b49953c655ad35356cb8a64fec1dbe425d7bcdc7a72daed29",
+      "indice": 37
+    },
+    {
+      "sha256": "f1c13845b755ea6ceba15dbd07a917bae08b8633d3dcf4fcdfc092cc71b6eab0",
+      "indice": 19
+    },
+    {
+      "sha256": "7ddbf182bd8ac3e67d7e54a60d0c0056e0713d02f6bf8ad91382b0f4f2cdc821",
+      "indice": 20
+    },
+    {
+      "sha256": "cc2d94f3bb3936070aa35a0279d6ac54580a287e1f784d3937b72e8cdde7558c",
+      "indice": 27
+    },
+    {
+      "sha256": "c93dc928280ea5c554c74e46759fc5aaf06603c7b568c47d2abcabbe439e5674",
+      "indice": 30
+    },
+    {
+      "sha256": "7581a23bc314483c8525015afe04c47091270a42e238902f6a41dadd0c04c5f7",
+      "indice": 28
+    },
+    {
+      "sha256": "783221442958e50d9f7e5f237f0adb7d7019acacc4612572723c8d6ecdf2bc99",
+      "indice": 31
+    },
+    {
+      "sha256": "100321b30e46182f407d52799986a1d753145cd490d9d20ecb0968e2edf8fcaf",
+      "indice": 50
+    },
+    {
+      "sha256": "e8f100d3d64fdc961e8f926c26bc78e8744b2d4cfb0debee94522a9491ced1e4",
+      "indice": 52
+    },
+    {
+      "sha256": "ce2d0604c1441e033cd9503e96d1733cf50527babde76386cfdbed5599422a22",
+      "indice": 93
+    },
+    {
+      "sha256": "ad13ddcacb5f5a0598b0a94ee518d97bb0a586c2550179e6e15ec6ed444ce37e",
+      "indice": 94
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "heroe": "cell",
+  "forma": "3",
+  "pack": "05_Fanmade_y_alternativos/Cell/154_GOLDEN CELL +KAIOKEN REMASTERIZADO, ANDRÉS GAMEN ANIMATIONS",
+  "frames": [
+    {
+      "sha256": "09df0a894a31c63a748d63c20b92f47b03ec98dd687cfd2741526c5ef2beb178",
+      "indice": 16
+    },
+    {
+      "sha256": "d1ae0f532d735503d7f76eaa7efc0ecdbeb0ac131f9a57049102cb0e8b28fadc",
+      "indice": 17
+    },
+    {
+      "sha256": "6b3007f1f5892ca68f8ec9f1f6d5b7379fe2c61646b81df61240101222d72035",
+      "indice": 160
+    },
+    {
+      "sha256": "de09f670e2ddc4a425f153530d0b79bec3bb97779fc857d2b583ea4fbe4e8824",
+      "indice": 142
+    },
+    {
+      "sha256": "005d8327fae904023b043572c0a3e91982c5945e7648bfb35b636f7baf413fd8",
+      "indice": 143
+    },
+    {
+      "sha256": "ff5b0b7d431b4135edc9208d45e18f3e60204a6bb40577c89d86ca61978dacda",
+      "indice": 144
+    },
+    {
+      "sha256": "08636d90edf422bcd54bf223c155e5cf52622eae291fd43250d4a76a1b167589",
+      "indice": 126
+    },
+    {
+      "sha256": "04d1b4021e67640d4476f26fbd16cfa148e09f2305051ae433fa18005ec84d95",
+      "indice": 128
+    },
+    {
+      "sha256": "b9979252af2d59e18be7927a19f65768fd64c651948a0c60af97f432abc3ecf2",
+      "indice": 167
+    },
+    {
+      "sha256": "c8c791c8cf9554ad3ec55c10ba65c1065346cb8212b04d64878540334fbf58c3",
+      "indice": 14
+    },
+    {
+      "sha256": "4746630a2a97fa5b1ae74114eb702ae827f8d681db03125d9c673241fcff473a",
+      "indice": 94
+    },
+    {
+      "sha256": "bb3a90d390d2bacb602ee7cc7bdc7d4e02c030ad90d4eeb0e5790bf38afee9fc",
+      "indice": 95
+    },
+    {
+      "sha256": "b314bdc7afab1deed6f8d35d25b02bc8a6408f45e20410bf8515a5398567794b",
+      "indice": 96
+    },
+    {
+      "sha256": "c6e78808b09a80e96c3a24ee85da2c8267a7dcfa38de4fb10fc81c69ac7a8f31",
+      "indice": 117
+    },
+    {
+      "sha256": "173d0996f447b2cd41e3fd35ca1d14c9fdc743ab2486fa685c3f8e51c7725686",
+      "indice": 118
+    },
+    {
+      "sha256": "1433281b1c65f6590b3ebaaefe52cdd20519faf8f151d9f4ad0631d6fa316a88",
+      "indice": 109
+    },
+    {
+      "sha256": "90655767a24eda98a6db8fbf4bf29e192ef7924a557cdd39feb8f1cc2f46c6bc",
+      "indice": 145
+    },
+    {
+      "sha256": "66137d818b37c91e63521fba6e2b22cc16d8bca5d71076a2641d81896ba57aa7",
+      "indice": 146
+    },
+    {
+      "sha256": "94945a96807ccd020f985ddcd36d0201aca49036dcc5fc3f00890ef3743dfd09",
+      "indice": 147
+    },
+    {
+      "sha256": "4c7b06b61e2922d547b91bd177a9b5585e06f9067074dd3949da5ae23e417270",
+      "indice": 148
+    },
+    {
+      "sha256": "fc034b438038f66b6c6c9a26e2035d4b376d8c9954e1c4ee67fb6b65d49c16fb",
+      "indice": 129
+    },
+    {
+      "sha256": "900874c987e5c222133e2536a5cab46a412cae49888ce3d161f8aa4574be7b0d",
+      "indice": 130
+    },
+    {
+      "sha256": "b9979252af2d59e18be7927a19f65768fd64c651948a0c60af97f432abc3ecf2",
+      "indice": 167
+    },
+    {
+      "sha256": "c8c791c8cf9554ad3ec55c10ba65c1065346cb8212b04d64878540334fbf58c3",
+      "indice": 14
+    },
+    {
+      "sha256": "6b3007f1f5892ca68f8ec9f1f6d5b7379fe2c61646b81df61240101222d72035",
+      "indice": 160
+    }
+  ]
+}

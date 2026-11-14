@@ -22,7 +22,7 @@ Después: `python herramientas/montar_animaciones.py gokuui` y revisión visual.
 | **Walk** | 1 | 76x76 | [`gokuui_Walk.piskel`](Walk/gokuui_Walk.piskel) | [`gokuui_Walk.gif`](Walk/gokuui_Walk.gif) | [`gokuui_Walk_sheet.png`](Walk/gokuui_Walk_sheet.png) |
 | **Attack** | 3 | 58x58 | [`gokuui_Attack.piskel`](Attack/gokuui_Attack.piskel) | [`gokuui_Attack.gif`](Attack/gokuui_Attack.gif) | [`gokuui_Attack_sheet.png`](Attack/gokuui_Attack_sheet.png) |
 | **Kick** | 2 | 62x62 | [`gokuui_Kick.piskel`](Kick/gokuui_Kick.piskel) | [`gokuui_Kick.gif`](Kick/gokuui_Kick.gif) | [`gokuui_Kick_sheet.png`](Kick/gokuui_Kick_sheet.png) |
-| **Cast** | 2 | 52x52 | [`gokuui_Cast.piskel`](Cast/gokuui_Cast.piskel) | [`gokuui_Cast.gif`](Cast/gokuui_Cast.gif) | [`gokuui_Cast_sheet.png`](Cast/gokuui_Cast_sheet.png) |
+| **Cast** | 2 | 56x56 | [`gokuui_Cast.piskel`](Cast/gokuui_Cast.piskel) | [`gokuui_Cast.gif`](Cast/gokuui_Cast.gif) | [`gokuui_Cast_sheet.png`](Cast/gokuui_Cast_sheet.png) |
 | **Pow** | 2 | 66x66 | [`gokuui_Pow.piskel`](Pow/gokuui_Pow.piskel) | [`gokuui_Pow.gif`](Pow/gokuui_Pow.gif) | [`gokuui_Pow_sheet.png`](Pow/gokuui_Pow_sheet.png) |
 | **Hurt** | 2 | 50x50 | [`gokuui_Hurt.piskel`](Hurt/gokuui_Hurt.piskel) | [`gokuui_Hurt.gif`](Hurt/gokuui_Hurt.gif) | [`gokuui_Hurt_sheet.png`](Hurt/gokuui_Hurt_sheet.png) |
 | **Attack3** | 2 | 68x68 | [`gokuui_Attack3.piskel`](Attack3/gokuui_Attack3.piskel) | [`gokuui_Attack3.gif`](Attack3/gokuui_Attack3.gif) | [`gokuui_Attack3_sheet.png`](Attack3/gokuui_Attack3_sheet.png) |

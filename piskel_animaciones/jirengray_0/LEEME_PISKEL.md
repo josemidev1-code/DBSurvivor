@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py jirengray` y revisión visu
 | **Attack2** | 2 | 52x52 | [`jirengray_Attack2.piskel`](Attack2/jirengray_Attack2.piskel) | [`jirengray_Attack2.gif`](Attack2/jirengray_Attack2.gif) | [`jirengray_Attack2_sheet.png`](Attack2/jirengray_Attack2_sheet.png) |
 | **Attack3** | 2 | 56x56 | [`jirengray_Attack3.piskel`](Attack3/jirengray_Attack3.piskel) | [`jirengray_Attack3.gif`](Attack3/jirengray_Attack3.gif) | [`jirengray_Attack3_sheet.png`](Attack3/jirengray_Attack3_sheet.png) |
 | **Kick2** | 2 | 70x70 | [`jirengray_Kick2.piskel`](Kick2/jirengray_Kick2.piskel) | [`jirengray_Kick2.gif`](Kick2/jirengray_Kick2.gif) | [`jirengray_Kick2_sheet.png`](Kick2/jirengray_Kick2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`jirengray_Beam.piskel`](Beam/jirengray_Beam.piskel) | [`jirengray_Beam.gif`](Beam/jirengray_Beam.gif) | [`jirengray_Beam_sheet.png`](Beam/jirengray_Beam_sheet.png) |
 | **Up** | 1 | 54x54 | [`jirengray_Up.piskel`](Up/jirengray_Up.piskel) | [`jirengray_Up.gif`](Up/jirengray_Up.gif) | [`jirengray_Up_sheet.png`](Up/jirengray_Up_sheet.png) |

@@ -25,6 +25,7 @@ Después: `python herramientas/montar_animaciones.py goku` y revisión visual. S
 | **Cast** | 2 | 64x64 | [`goku_Cast.piskel`](Cast/goku_Cast.piskel) | [`goku_Cast.gif`](Cast/goku_Cast.gif) | [`goku_Cast_sheet.png`](Cast/goku_Cast_sheet.png) |
 | **Pow** | 2 | 94x94 | [`goku_Pow.piskel`](Pow/goku_Pow.piskel) | [`goku_Pow.gif`](Pow/goku_Pow.gif) | [`goku_Pow_sheet.png`](Pow/goku_Pow_sheet.png) |
 | **Hurt** | 2 | 62x62 | [`goku_Hurt.piskel`](Hurt/goku_Hurt.piskel) | [`goku_Hurt.gif`](Hurt/goku_Hurt.gif) | [`goku_Hurt_sheet.png`](Hurt/goku_Hurt_sheet.png) |
+| **Faint** | 1 | 68x68 | [`goku_Faint.piskel`](Faint/goku_Faint.piskel) | [`goku_Faint.gif`](Faint/goku_Faint.gif) | [`goku_Faint_sheet.png`](Faint/goku_Faint_sheet.png) |
 | **Attack2** | 2 | 58x58 | [`goku_Attack2.piskel`](Attack2/goku_Attack2.piskel) | [`goku_Attack2.gif`](Attack2/goku_Attack2.gif) | [`goku_Attack2_sheet.png`](Attack2/goku_Attack2_sheet.png) |
 | **Attack3** | 2 | 52x52 | [`goku_Attack3.piskel`](Attack3/goku_Attack3.piskel) | [`goku_Attack3.gif`](Attack3/goku_Attack3.gif) | [`goku_Attack3_sheet.png`](Attack3/goku_Attack3_sheet.png) |
 | **Kick2** | 2 | 68x68 | [`goku_Kick2.piskel`](Kick2/goku_Kick2.piskel) | [`goku_Kick2.gif`](Kick2/goku_Kick2.gif) | [`goku_Kick2_sheet.png`](Kick2/goku_Kick2_sheet.png) |

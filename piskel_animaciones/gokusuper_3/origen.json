@@ -1,0 +1,111 @@
+{
+  "heroe": "gokusuper",
+  "forma": "3",
+  "pack": "01_Dragon_Ball_Super/00_Dioses_y_Super_Saiyan_God/Goku/050_Goku God",
+  "frames": [
+    {
+      "sha256": "cafd1bcb8c859489d9039cafda304b9de053110ae7dec7a1630fa44bb9127b97",
+      "indice": 5
+    },
+    {
+      "sha256": "675b98e84392185aea15d0e9e71af315d0b7934b9db4cebef9910c5152c62fd4",
+      "indice": 6
+    },
+    {
+      "sha256": "cca6f85228aef75e7a31fc671cf3718852b8aefecbe09aeac05d960d07267e99",
+      "indice": 7
+    },
+    {
+      "sha256": "35379b15097515f20a7592bda2def776b2baa0ef8d0119d4af0c0e2315fad984",
+      "indice": 29
+    },
+    {
+      "sha256": "d8040189508d84ab8024dcd2f69b333302236d8af2a4ac6133e1db6a3d623512",
+      "indice": 24
+    },
+    {
+      "sha256": "68b18eef5346d53199a6c32464f497367ac1ed7da8cb216f8285026faa98d445",
+      "indice": 25
+    },
+    {
+      "sha256": "9d089ac83e599c31f46de108ffc9903874feccae237222f4783e0247aacbc4ce",
+      "indice": 26
+    },
+    {
+      "sha256": "ec3711823fe089e8d9c8d2f7e072527b9438b255fd45bf8a93dbc18f063f8f91",
+      "indice": 27
+    },
+    {
+      "sha256": "5af0763e13ee2d6fb2dee905b0323ee799b29fb3bb48a2766608ffb3d3c5f100",
+      "indice": 32
+    },
+    {
+      "sha256": "19794b9be49cd675f026ded58eddc8a25816b45746aeffb91c573ad49963e20d",
+      "indice": 33
+    },
+    {
+      "sha256": "9be7f88b1006611b740a7033bdf833bb67ce59db9879cfcda50d5f6e3aee3147",
+      "indice": 42
+    },
+    {
+      "sha256": "938092ad5b4d6844e09a46928ff0c9378c615dc918ae842675a360131a66d44a",
+      "indice": 43
+    },
+    {
+      "sha256": "740c8267d5f5a5c70c99d5688356c867e07f780769509f19daccfff9a5bd377d",
+      "indice": 40
+    },
+    {
+      "sha256": "c048bcbee4269e6f8c2f6eea4036c72d354fc07217fac8b5adb2194357427a30",
+      "indice": 41
+    },
+    {
+      "sha256": "e64670495363c8d9ac4b9efa589ede8d87ed4091f5a806598fadc0a185464748",
+      "indice": 51
+    },
+    {
+      "sha256": "1af643500f94679d2d4f3afec29fec88fa4195046f098338950979beddbada68",
+      "indice": 52
+    },
+    {
+      "sha256": "b1709f55df2e404695280b774c4b7778c2c023b02ffbb808b41af015ea343051",
+      "indice": 54
+    },
+    {
+      "sha256": "ed51596fa7ca6c6fd48cbe14c1b7525a424c8e1305833c9e758e3b398171ed5c",
+      "indice": 28
+    },
+    {
+      "sha256": "35379b15097515f20a7592bda2def776b2baa0ef8d0119d4af0c0e2315fad984",
+      "indice": 29
+    },
+    {
+      "sha256": "cba67d6f5d04dc49d40feec24cccf3475e1ad8729f7b54ffaeda53f8738cb347",
+      "indice": 58
+    },
+    {
+      "sha256": "484377e68e631fcfaad59b47bbfef1a2b4c0d63ba6b60696e04263c7d30c5f34",
+      "indice": 59
+    },
+    {
+      "sha256": "ae6dcbf474cbffc205926cdf12f4bc863638f18ec5f33ac3ba1c63939867e6b1",
+      "indice": 36
+    },
+    {
+      "sha256": "86d192d5dab8b22f695b7422026396a6ab9145d25adddc9c4f946b8df516c5ad",
+      "indice": 37
+    },
+    {
+      "sha256": "0bb30e4d1317da0995445ebdfb4605e04e586d17bba1e9eb3c38c4da9fbc1692",
+      "indice": 60
+    },
+    {
+      "sha256": "2c581c4c854388682f4482efd7109349a766465aaba61e4e84248fb7b13943d3",
+      "indice": 61
+    },
+    {
+      "sha256": "35379b15097515f20a7592bda2def776b2baa0ef8d0119d4af0c0e2315fad984",
+      "indice": 29
+    }
+  ]
+}

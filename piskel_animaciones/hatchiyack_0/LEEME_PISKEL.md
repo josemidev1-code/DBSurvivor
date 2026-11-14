@@ -25,7 +25,9 @@ Después: `python herramientas/montar_animaciones.py hatchiyack` y revisión vis
 | **Cast** | 2 | 52x52 | [`hatchiyack_Cast.piskel`](Cast/hatchiyack_Cast.piskel) | [`hatchiyack_Cast.gif`](Cast/hatchiyack_Cast.gif) | [`hatchiyack_Cast_sheet.png`](Cast/hatchiyack_Cast_sheet.png) |
 | **Pow** | 3 | 72x72 | [`hatchiyack_Pow.piskel`](Pow/hatchiyack_Pow.piskel) | [`hatchiyack_Pow.gif`](Pow/hatchiyack_Pow.gif) | [`hatchiyack_Pow_sheet.png`](Pow/hatchiyack_Pow_sheet.png) |
 | **Hurt** | 2 | 42x42 | [`hatchiyack_Hurt.piskel`](Hurt/hatchiyack_Hurt.piskel) | [`hatchiyack_Hurt.gif`](Hurt/hatchiyack_Hurt.gif) | [`hatchiyack_Hurt_sheet.png`](Hurt/hatchiyack_Hurt_sheet.png) |
+| **Faint** | 1 | 34x34 | [`hatchiyack_Faint.piskel`](Faint/hatchiyack_Faint.piskel) | [`hatchiyack_Faint.gif`](Faint/hatchiyack_Faint.gif) | [`hatchiyack_Faint_sheet.png`](Faint/hatchiyack_Faint_sheet.png) |
 | **Attack2** | 2 | 44x44 | [`hatchiyack_Attack2.piskel`](Attack2/hatchiyack_Attack2.piskel) | [`hatchiyack_Attack2.gif`](Attack2/hatchiyack_Attack2.gif) | [`hatchiyack_Attack2_sheet.png`](Attack2/hatchiyack_Attack2_sheet.png) |
 | **Attack3** | 2 | 48x48 | [`hatchiyack_Attack3.piskel`](Attack3/hatchiyack_Attack3.piskel) | [`hatchiyack_Attack3.gif`](Attack3/hatchiyack_Attack3.gif) | [`hatchiyack_Attack3_sheet.png`](Attack3/hatchiyack_Attack3_sheet.png) |
+| **Kick2** | 2 | 48x48 | [`hatchiyack_Kick2.piskel`](Kick2/hatchiyack_Kick2.piskel) | [`hatchiyack_Kick2.gif`](Kick2/hatchiyack_Kick2.gif) | [`hatchiyack_Kick2_sheet.png`](Kick2/hatchiyack_Kick2_sheet.png) |
 | **Beam** | 2 | 52x52 | [`hatchiyack_Beam.piskel`](Beam/hatchiyack_Beam.piskel) | [`hatchiyack_Beam.gif`](Beam/hatchiyack_Beam.gif) | [`hatchiyack_Beam_sheet.png`](Beam/hatchiyack_Beam_sheet.png) |
 | **Up** | 1 | 54x54 | [`hatchiyack_Up.piskel`](Up/hatchiyack_Up.piskel) | [`hatchiyack_Up.gif`](Up/hatchiyack_Up.gif) | [`hatchiyack_Up_sheet.png`](Up/hatchiyack_Up_sheet.png) |

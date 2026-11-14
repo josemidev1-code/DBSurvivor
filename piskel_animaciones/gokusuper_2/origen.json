@@ -1,0 +1,75 @@
+{
+  "heroe": "gokusuper",
+  "forma": "2",
+  "pack": "05_Fanmade_y_alternativos/Goku/275_GOKU SUPER SAIYAJIN KAIOKEN",
+  "frames": [
+    {
+      "sha256": "2420a904ffd03dfcb5d55c461566935c38df0152a05793419eca2f1d4874d461",
+      "indice": 14
+    },
+    {
+      "sha256": "03bcf45c47e2e0f96ba1812bfd04a7d9c713801d15d373ff09a3501d97d3ebe5",
+      "indice": 15
+    },
+    {
+      "sha256": "74010f88829dcc2174eabf3f9a0d338c2519452358c636b37dc210a3092f58e6",
+      "indice": 20
+    },
+    {
+      "sha256": "d4a8c30efe2fdb40cf2e55004bfbf8c643a7db25a3ea0a7ff18673d19f9549b0",
+      "indice": 21
+    },
+    {
+      "sha256": "bf00f2e85578302f4ad6ef87e2b95f2cdbcab50d31e3c10c56562f50217be5e6",
+      "indice": 22
+    },
+    {
+      "sha256": "d027a7e42df81a1afbec30e4937b9057fd9fcbc3729e80c91b947106ee104dec",
+      "indice": 23
+    },
+    {
+      "sha256": "5c82caed64ee971105fa7fed4e36a3288c7e92925afb410c22310a832b01279b",
+      "indice": 24
+    },
+    {
+      "sha256": "47ce54194345dc2f8f408f8763d692ffc93611f31e4b7c3017cd0549b55f7bac",
+      "indice": 16
+    },
+    {
+      "sha256": "749cf8fdff985d39408f978422cae6921f5eeb176679d039cd9bbd201bd2b180",
+      "indice": 17
+    },
+    {
+      "sha256": "110613c211847e842473eda506161081a8307051aa87b033f72fde2d527c23d0",
+      "indice": 18
+    },
+    {
+      "sha256": "2420a904ffd03dfcb5d55c461566935c38df0152a05793419eca2f1d4874d461",
+      "indice": 14
+    },
+    {
+      "sha256": "1d983e4e4b0527c9ea11c9b2af47477adfaafaf9fd3408e4cfd708def02b9b22",
+      "indice": 48
+    },
+    {
+      "sha256": "fa82ae3e3762b4a0dbe74d9c4ce1df9d8ceb7af29829d1d655e685259f5b6c60",
+      "indice": 37
+    },
+    {
+      "sha256": "740198a58098c176557d105cfe5c5aacf71f6f2f2d5f689303d938600f5e4db9",
+      "indice": 38
+    },
+    {
+      "sha256": "fa18ccb61d6e82bd4d5c0a8834d148dc90d4fa6b62e2653e2902e63cc7073d57",
+      "indice": 39
+    },
+    {
+      "sha256": "3f70c3d220590f5fa0d42f4da66a34ed8c078fbadd29b4568b45f164be8e6073",
+      "indice": 25
+    },
+    {
+      "sha256": "c73ab7cd22cf80e51e34dafb6da1bba8e968d18e0ca2f31957cf14156eeec0f1",
+      "indice": 41
+    }
+  ]
+}

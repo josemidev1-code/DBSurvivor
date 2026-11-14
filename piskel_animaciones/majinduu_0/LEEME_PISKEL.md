@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py majinduu` y revisión visua
 | **Attack2** | 3 | 52x52 | [`majinduu_Attack2.piskel`](Attack2/majinduu_Attack2.piskel) | [`majinduu_Attack2.gif`](Attack2/majinduu_Attack2.gif) | [`majinduu_Attack2_sheet.png`](Attack2/majinduu_Attack2_sheet.png) |
 | **Attack3** | 2 | 54x54 | [`majinduu_Attack3.piskel`](Attack3/majinduu_Attack3.piskel) | [`majinduu_Attack3.gif`](Attack3/majinduu_Attack3.gif) | [`majinduu_Attack3_sheet.png`](Attack3/majinduu_Attack3_sheet.png) |
 | **Kick2** | 2 | 52x52 | [`majinduu_Kick2.piskel`](Kick2/majinduu_Kick2.piskel) | [`majinduu_Kick2.gif`](Kick2/majinduu_Kick2.gif) | [`majinduu_Kick2_sheet.png`](Kick2/majinduu_Kick2_sheet.png) |
+| **Beam** | 2 | 52x52 | [`majinduu_Beam.piskel`](Beam/majinduu_Beam.piskel) | [`majinduu_Beam.gif`](Beam/majinduu_Beam.gif) | [`majinduu_Beam_sheet.png`](Beam/majinduu_Beam_sheet.png) |
 | **Up** | 1 | 56x56 | [`majinduu_Up.piskel`](Up/majinduu_Up.piskel) | [`majinduu_Up.gif`](Up/majinduu_Up.gif) | [`majinduu_Up_sheet.png`](Up/majinduu_Up_sheet.png) |

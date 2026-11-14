@@ -29,4 +29,5 @@ Después: `python herramientas/montar_animaciones.py blackfan` y revisión visua
 | **Attack2** | 2 | 50x50 | [`blackfan_Attack2.piskel`](Attack2/blackfan_Attack2.piskel) | [`blackfan_Attack2.gif`](Attack2/blackfan_Attack2.gif) | [`blackfan_Attack2_sheet.png`](Attack2/blackfan_Attack2_sheet.png) |
 | **Attack3** | 3 | 60x60 | [`blackfan_Attack3.piskel`](Attack3/blackfan_Attack3.piskel) | [`blackfan_Attack3.gif`](Attack3/blackfan_Attack3.gif) | [`blackfan_Attack3_sheet.png`](Attack3/blackfan_Attack3_sheet.png) |
 | **Kick2** | 2 | 52x52 | [`blackfan_Kick2.piskel`](Kick2/blackfan_Kick2.piskel) | [`blackfan_Kick2.gif`](Kick2/blackfan_Kick2.gif) | [`blackfan_Kick2_sheet.png`](Kick2/blackfan_Kick2_sheet.png) |
+| **Beam** | 2 | 56x56 | [`blackfan_Beam.piskel`](Beam/blackfan_Beam.piskel) | [`blackfan_Beam.gif`](Beam/blackfan_Beam.gif) | [`blackfan_Beam_sheet.png`](Beam/blackfan_Beam_sheet.png) |
 | **Up** | 1 | 60x60 | [`blackfan_Up.piskel`](Up/blackfan_Up.piskel) | [`blackfan_Up.gif`](Up/blackfan_Up.gif) | [`blackfan_Up_sheet.png`](Up/blackfan_Up_sheet.png) |

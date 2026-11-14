@@ -27,6 +27,7 @@ Después: `python herramientas/montar_animaciones.py gokualt` y revisión visual
 | **Hurt** | 2 | 64x64 | [`gokualt_Hurt.piskel`](Hurt/gokualt_Hurt.piskel) | [`gokualt_Hurt.gif`](Hurt/gokualt_Hurt.gif) | [`gokualt_Hurt_sheet.png`](Hurt/gokualt_Hurt_sheet.png) |
 | **Faint** | 1 | 54x54 | [`gokualt_Faint.piskel`](Faint/gokualt_Faint.piskel) | [`gokualt_Faint.gif`](Faint/gokualt_Faint.gif) | [`gokualt_Faint_sheet.png`](Faint/gokualt_Faint_sheet.png) |
 | **Attack2** | 2 | 62x62 | [`gokualt_Attack2.piskel`](Attack2/gokualt_Attack2.piskel) | [`gokualt_Attack2.gif`](Attack2/gokualt_Attack2.gif) | [`gokualt_Attack2_sheet.png`](Attack2/gokualt_Attack2_sheet.png) |
+| **Attack3** | 2 | 54x54 | [`gokualt_Attack3.piskel`](Attack3/gokualt_Attack3.piskel) | [`gokualt_Attack3.gif`](Attack3/gokualt_Attack3.gif) | [`gokualt_Attack3_sheet.png`](Attack3/gokualt_Attack3_sheet.png) |
 | **Kick2** | 2 | 62x62 | [`gokualt_Kick2.piskel`](Kick2/gokualt_Kick2.piskel) | [`gokualt_Kick2.gif`](Kick2/gokualt_Kick2.gif) | [`gokualt_Kick2_sheet.png`](Kick2/gokualt_Kick2_sheet.png) |
 | **Beam** | 2 | 54x54 | [`gokualt_Beam.piskel`](Beam/gokualt_Beam.piskel) | [`gokualt_Beam.gif`](Beam/gokualt_Beam.gif) | [`gokualt_Beam_sheet.png`](Beam/gokualt_Beam_sheet.png) |
 | **Up** | 1 | 62x62 | [`gokualt_Up.piskel`](Up/gokualt_Up.piskel) | [`gokualt_Up.gif`](Up/gokualt_Up.gif) | [`gokualt_Up_sheet.png`](Up/gokualt_Up_sheet.png) |

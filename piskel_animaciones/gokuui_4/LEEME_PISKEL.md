@@ -22,10 +22,11 @@ Después: `python herramientas/montar_animaciones.py gokuui` y revisión visual.
 | **Walk** | 1 | 74x74 | [`gokuui_Walk.piskel`](Walk/gokuui_Walk.piskel) | [`gokuui_Walk.gif`](Walk/gokuui_Walk.gif) | [`gokuui_Walk_sheet.png`](Walk/gokuui_Walk_sheet.png) |
 | **Attack** | 3 | 54x54 | [`gokuui_Attack.piskel`](Attack/gokuui_Attack.piskel) | [`gokuui_Attack.gif`](Attack/gokuui_Attack.gif) | [`gokuui_Attack_sheet.png`](Attack/gokuui_Attack_sheet.png) |
 | **Kick** | 2 | 50x50 | [`gokuui_Kick.piskel`](Kick/gokuui_Kick.piskel) | [`gokuui_Kick.gif`](Kick/gokuui_Kick.gif) | [`gokuui_Kick_sheet.png`](Kick/gokuui_Kick_sheet.png) |
-| **Cast** | 2 | 70x70 | [`gokuui_Cast.piskel`](Cast/gokuui_Cast.piskel) | [`gokuui_Cast.gif`](Cast/gokuui_Cast.gif) | [`gokuui_Cast_sheet.png`](Cast/gokuui_Cast_sheet.png) |
+| **Cast** | 2 | 54x54 | [`gokuui_Cast.piskel`](Cast/gokuui_Cast.piskel) | [`gokuui_Cast.gif`](Cast/gokuui_Cast.gif) | [`gokuui_Cast_sheet.png`](Cast/gokuui_Cast_sheet.png) |
 | **Pow** | 2 | 86x86 | [`gokuui_Pow.piskel`](Pow/gokuui_Pow.piskel) | [`gokuui_Pow.gif`](Pow/gokuui_Pow.gif) | [`gokuui_Pow_sheet.png`](Pow/gokuui_Pow_sheet.png) |
 | **Hurt** | 2 | 56x56 | [`gokuui_Hurt.piskel`](Hurt/gokuui_Hurt.piskel) | [`gokuui_Hurt.gif`](Hurt/gokuui_Hurt.gif) | [`gokuui_Hurt_sheet.png`](Hurt/gokuui_Hurt_sheet.png) |
 | **Attack3** | 2 | 66x66 | [`gokuui_Attack3.piskel`](Attack3/gokuui_Attack3.piskel) | [`gokuui_Attack3.gif`](Attack3/gokuui_Attack3.gif) | [`gokuui_Attack3_sheet.png`](Attack3/gokuui_Attack3_sheet.png) |
+| **Kick2** | 3 | 56x56 | [`gokuui_Kick2.piskel`](Kick2/gokuui_Kick2.piskel) | [`gokuui_Kick2.gif`](Kick2/gokuui_Kick2.gif) | [`gokuui_Kick2_sheet.png`](Kick2/gokuui_Kick2_sheet.png) |
 | **Beam** | 2 | 54x54 | [`gokuui_Beam.piskel`](Beam/gokuui_Beam.piskel) | [`gokuui_Beam.gif`](Beam/gokuui_Beam.gif) | [`gokuui_Beam_sheet.png`](Beam/gokuui_Beam_sheet.png) |
 | **Up** | 1 | 52x52 | [`gokuui_Up.piskel`](Up/gokuui_Up.piskel) | [`gokuui_Up.gif`](Up/gokuui_Up.gif) | [`gokuui_Up_sheet.png`](Up/gokuui_Up_sheet.png) |
 | **Dash** | 1 | 74x74 | [`gokuui_Dash.piskel`](Dash/gokuui_Dash.piskel) | [`gokuui_Dash.gif`](Dash/gokuui_Dash.gif) | [`gokuui_Dash_sheet.png`](Dash/gokuui_Dash_sheet.png) |

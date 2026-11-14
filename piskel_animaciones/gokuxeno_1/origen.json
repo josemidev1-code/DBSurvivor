@@ -1,0 +1,99 @@
+{
+  "heroe": "gokuxeno",
+  "forma": "1",
+  "pack": "04_Heroes_y_videojuegos/Goku/253_goku_xeno ssj dios.andres Game",
+  "frames": [
+    {
+      "sha256": "1d5d6fecbd4377afe1918a3621d8b742e1d41636373129918060acbcb8a80dac",
+      "indice": 1
+    },
+    {
+      "sha256": "5d83daaf3c10ed4b1e2ec380aaa16bdc025dfd7b1d98a8e428a765b433be780f",
+      "indice": 2
+    },
+    {
+      "sha256": "22196607c4b3abc28053e794a97215f42e83923eddb2e33760a9ee7e65df4813",
+      "indice": 9
+    },
+    {
+      "sha256": "fae8ab72ec4687bfabc2d365f25f534d3e3c210cb4c1e06689c7292674d7668d",
+      "indice": 27
+    },
+    {
+      "sha256": "944ad8194a90598d6f9b8c3e1c5bb22d7af87f9a754dee719d111585686ec966",
+      "indice": 28
+    },
+    {
+      "sha256": "16f831f8bb8257d3c2dfd5e7d5a1505bcc7da25fe7327cda80f74536587b4210",
+      "indice": 29
+    },
+    {
+      "sha256": "a23f52a2174904429a336efe0875019886309b4e47b8f5316672b5b1ceec2ef3",
+      "indice": 41
+    },
+    {
+      "sha256": "d9bb7a13ddb0eec3fdc588638bbb2efc95d276d66964864aebef6bf81c61fed2",
+      "indice": 46
+    },
+    {
+      "sha256": "1d5d6fecbd4377afe1918a3621d8b742e1d41636373129918060acbcb8a80dac",
+      "indice": 1
+    },
+    {
+      "sha256": "944ad8194a90598d6f9b8c3e1c5bb22d7af87f9a754dee719d111585686ec966",
+      "indice": 28
+    },
+    {
+      "sha256": "ea9e031bf82695e7d94b98f854d0126661b068a99be1450163e48f19c894758e",
+      "indice": 69
+    },
+    {
+      "sha256": "66dead8f391926e5447aa99b72e2b6bdda59482dfdcbe824cc83ce042e440f55",
+      "indice": 52
+    },
+    {
+      "sha256": "140c5177fe0335e167223277b7658c56c6f904594ab3de025bf2b35c6f2143f0",
+      "indice": 53
+    },
+    {
+      "sha256": "7978c1c12f9395376d0f45b933330ed9826e62a25520c98463531f5d7012716d",
+      "indice": 60
+    },
+    {
+      "sha256": "f49faac085a2a84f6c129c162ed5724ccc14900ced5af093f7246529deccf9df",
+      "indice": 37
+    },
+    {
+      "sha256": "24f250f1705092e53d99c4b21bef0f657cff7514c4e49352cc4d449a2174411f",
+      "indice": 38
+    },
+    {
+      "sha256": "47aeeb48c90c5b70194a7218870b4db1381467ba3f2358ff42858e2e8af94e3b",
+      "indice": 32
+    },
+    {
+      "sha256": "d09f3f7db5164f9ae1410e3b419c03662a947fe0473ee2769585b2a24e94941a",
+      "indice": 36
+    },
+    {
+      "sha256": "a76f0e76784e5a26280ea4b6f4eccd457123ce59dadb7e7cc7d1cece6b29e3aa",
+      "indice": 42
+    },
+    {
+      "sha256": "0704e54012a760d71dda03fbfbe956e7ec18b33cbf41a78cf851482d63d47687",
+      "indice": 45
+    },
+    {
+      "sha256": "1d5d6fecbd4377afe1918a3621d8b742e1d41636373129918060acbcb8a80dac",
+      "indice": 1
+    },
+    {
+      "sha256": "944ad8194a90598d6f9b8c3e1c5bb22d7af87f9a754dee719d111585686ec966",
+      "indice": 28
+    },
+    {
+      "sha256": "980404e6818c9425bf7037abcff347e2bad0f7b0e0e68274244f1750205d8f78",
+      "indice": 22
+    }
+  ]
+}

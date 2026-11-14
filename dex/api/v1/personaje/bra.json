@@ -61,7 +61,7 @@
     "velocidad": 96,
     "recarga": 95
    },
-   "estado": "CASI",
+   "estado": "COMPLETA",
    "animaciones": {
     "idle": "animada",
     "move": "animada",
@@ -74,7 +74,7 @@
     "portrait": "animada",
     "attack2": "animada",
     "attack3": "animada",
-    "kick2": "falta",
+    "kick2": "animada",
     "beam": "animada",
     "up": "animada"
    },

@@ -1,0 +1,123 @@
+{
+  "heroe": "gokusuper",
+  "forma": "1",
+  "pack": "07_Personajes_sin_saga_concreta/Goku/063_Goku kaioken",
+  "frames": [
+    {
+      "sha256": "36bfca877b631669e50b3a6642904b01014989b80619a79442a8198a47ab69b2",
+      "indice": 8
+    },
+    {
+      "sha256": "fee57ec08225ad7a7c1517a810f752ee1d4069b911320b7d50a55ecaa9be9fa3",
+      "indice": 9
+    },
+    {
+      "sha256": "da7fe0bf2e1dacedd218cbce9a706582cb4db47635836f464265c4dc67f2e365",
+      "indice": 20
+    },
+    {
+      "sha256": "d90ddab5d0e91cf33ca89bae49bbd22e5cf7389c0de0638c4dc967b2fd486d83",
+      "indice": 15
+    },
+    {
+      "sha256": "a57896dab0e68807b5d34379e829bdcfd84853b65d07f36c6f96944d077af28e",
+      "indice": 16
+    },
+    {
+      "sha256": "64322cdffdcd88011bcf45917bbb5314c64c4be5680b31309645a8a60b099c2b",
+      "indice": 17
+    },
+    {
+      "sha256": "f48e3297466ea72fc7d44ae3eba2acf5a1e35671b188b5a941a4d154d7b185b2",
+      "indice": 18
+    },
+    {
+      "sha256": "4b3f7cb9589564b7459c71a12256d8d4f1ac96363cab2c741a167aa5f66a54a4",
+      "indice": 23
+    },
+    {
+      "sha256": "f83646587164f3fb5803c3b670348f9194fe43bb3c32ba13a3f6803310fd08d4",
+      "indice": 24
+    },
+    {
+      "sha256": "5252f40ec4ec5750e2c3ef72850571c8aabd8a5eb7dea8c21a7a61379e28a8ba",
+      "indice": 25
+    },
+    {
+      "sha256": "37d0865636235342e73da748d0ba1f45b69f4a2aab13317399484fd7822c066a",
+      "indice": 57
+    },
+    {
+      "sha256": "b1f67e2693efbb37c5591796c1dcbf9813f6510a405baa2b885bd0d353b34efd",
+      "indice": 62
+    },
+    {
+      "sha256": "6a4b440fc86b88849ae2562db4acbfa07b80ddf69025336c7a678e08b185b9ad",
+      "indice": 12
+    },
+    {
+      "sha256": "1367efc73561b38e132bc6c81aa3299e2d46eac18c78f1ce0573239fd10c4555",
+      "indice": 13
+    },
+    {
+      "sha256": "871560277e7acfe5957c8a66a61d728e1b2709e25039bace86fec1ca421f2237",
+      "indice": 14
+    },
+    {
+      "sha256": "617c5345ad84b0747c24ca8df1aeecaddb1b2cb0a0546de7779289cd5c8a7e21",
+      "indice": 46
+    },
+    {
+      "sha256": "ae8351545095d29a27916b30286f7e44976f24a824ead5cb5776eb5ac0080c8f",
+      "indice": 47
+    },
+    {
+      "sha256": "cbba1d43a518e5bcd4a63090dd20666787eb987526e9699a3d507a01264f38f5",
+      "indice": 50
+    },
+    {
+      "sha256": "4140c028a2a801d6c9ef14e26b6d05a9d6266c4608497ca94dfde1f344067840",
+      "indice": 31
+    },
+    {
+      "sha256": "ccf4de6879b507a0b59188c3bf3340eb4bca2f1493c0ed9706eda435c97f5956",
+      "indice": 32
+    },
+    {
+      "sha256": "540beeb39663594d7924977010564a9c93f01f15442be1b41f7c01d49c38a328",
+      "indice": 34
+    },
+    {
+      "sha256": "37a610d65f99f1f0f4204a6116b5e1a7fc88e325179f3343b7111524a3de3b53",
+      "indice": 51
+    },
+    {
+      "sha256": "a12eb178684aaaef3a0515cdc46aa4b6b1d9a41fb6ffe55a0bd6b1a73d11daff",
+      "indice": 52
+    },
+    {
+      "sha256": "8fdf59dd4041d9498005be17a861fd8955998d57c151c34e837276f285b7e55d",
+      "indice": 21
+    },
+    {
+      "sha256": "e4f0b7d6f8528ddc6ef8dc402f75371f8fb13037444c0effccfedbfc20693b6c",
+      "indice": 22
+    },
+    {
+      "sha256": "5da7a4e5dd26a37d59e0068e8f394269f787ef3f7f7c9d5dfa82f0221889ea95",
+      "indice": 59
+    },
+    {
+      "sha256": "5d33c26e095cddb72ac32813ad0fbaf9b346353cb693ccbfa076a0c7f1667f7e",
+      "indice": 63
+    },
+    {
+      "sha256": "eb4765790fd27749fd11abc6f08baa11ac869257da7505b6eb713b573a0ed3c3",
+      "indice": 35
+    },
+    {
+      "sha256": "da7fe0bf2e1dacedd218cbce9a706582cb4db47635836f464265c4dc67f2e365",
+      "indice": 20
+    }
+  ]
+}

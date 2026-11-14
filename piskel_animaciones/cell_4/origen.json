@@ -1,0 +1,107 @@
+{
+  "heroe": "cell",
+  "forma": "4",
+  "pack": "05_Fanmade_y_alternativos/Cell/204_Majin Cell, ANDRÉS GAMEN",
+  "frames": [
+    {
+      "sha256": "29be2121bfbaaca68296caabb3d91f054fefd0dc1765648ff71610564537ab62",
+      "indice": 0
+    },
+    {
+      "sha256": "9dffc56607f49a54ef5bf95912332d25b27017e85efbb46807b5a363e6204821",
+      "indice": 1
+    },
+    {
+      "sha256": "6536ea70edccb50fe9db6c1869bd56565bd621cd386f822c87fd262140f96cec",
+      "indice": 11
+    },
+    {
+      "sha256": "a254dc15cc23a27e5d253c214347fd6b2ab864733379bf918a05689ca595e2b8",
+      "indice": 20
+    },
+    {
+      "sha256": "45cd87a357565127c76a706053f2a383aeb5a580542ee5c821b2af07ebb8adc0",
+      "indice": 21
+    },
+    {
+      "sha256": "6922a71277597ced5e7efe8f87fda130495c691c95fd529b65bb70bdd463a92e",
+      "indice": 23
+    },
+    {
+      "sha256": "753576019bba7b8d4af7ba7cd73cccbc12e3fa5b75f50d888a0d515a0317d03b",
+      "indice": 29
+    },
+    {
+      "sha256": "a63b102ac3dafe6ce0ff87ca628fdea6f25f348fb9006f125cd27db09fb87d81",
+      "indice": 30
+    },
+    {
+      "sha256": "29be2121bfbaaca68296caabb3d91f054fefd0dc1765648ff71610564537ab62",
+      "indice": 0
+    },
+    {
+      "sha256": "3bb6b6a40124c3bf49b28fe6f5f2766e9bfaa8c12a4bf3107d722160f2e083bf",
+      "indice": 50
+    },
+    {
+      "sha256": "41989b6770286cc396589f9555ecf82b34e07e89cc1f68103659f5d3271aed36",
+      "indice": 37
+    },
+    {
+      "sha256": "7931b4825f6ae1f0ffd4f8a1883479a490f358cf79fc71b7f7c325604a3fbc65",
+      "indice": 38
+    },
+    {
+      "sha256": "0cea86f1ed9f818effb6bbec01f32dd330e8c6d53fe3b18e6c085fc66b42cd32",
+      "indice": 32
+    },
+    {
+      "sha256": "551d02d85dfe30027406a25d078ce83bd8680ec5416bf085820ea6e0eb26499b",
+      "indice": 33
+    },
+    {
+      "sha256": "c702d73eb82ac31a21d29a91ce26061d9cb44de9f50ca27d0a09f2d4de7acb6c",
+      "indice": 35
+    },
+    {
+      "sha256": "ac6b0c9e07c67d520d3258fa5edac05bc75ec3f3e8c8694a299cdcb47a1d977d",
+      "indice": 24
+    },
+    {
+      "sha256": "a15201ab508721716e477e1ad994c3ebcfa86137f37a52f6aaab3c95ef6b56ed",
+      "indice": 25
+    },
+    {
+      "sha256": "a06f71474162348aec102a69d4aceefdf51d68b2ba911f6d92720f6d7a44ec99",
+      "indice": 26
+    },
+    {
+      "sha256": "b60a88b31cac2e4e02aab3f8ab28f437a7a0c1359da269ffe165bc6248d85726",
+      "indice": 27
+    },
+    {
+      "sha256": "944ed1afd17fde3d45497164c1e349eee421c64575dfd0b11a530c7855b62bcb",
+      "indice": 31
+    },
+    {
+      "sha256": "53c31ab5e48f23b04139e2baa685aa75a7602772a2c802f1331fed6a108a829e",
+      "indice": 34
+    },
+    {
+      "sha256": "29be2121bfbaaca68296caabb3d91f054fefd0dc1765648ff71610564537ab62",
+      "indice": 0
+    },
+    {
+      "sha256": "3bb6b6a40124c3bf49b28fe6f5f2766e9bfaa8c12a4bf3107d722160f2e083bf",
+      "indice": 50
+    },
+    {
+      "sha256": "72733ceae6db6982baad768b7007240fe868bb4c6f3084dcd85d412fada08844",
+      "indice": 46
+    },
+    {
+      "sha256": "6536ea70edccb50fe9db6c1869bd56565bd621cd386f822c87fd262140f96cec",
+      "indice": 11
+    }
+  ]
+}
