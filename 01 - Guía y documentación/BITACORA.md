@@ -4479,3 +4479,29 @@ ode --check.
   - Al renombrar, GitHub cerró los PR #1 y #2; reabiertos como #4 (andar 302 formas) y #5 (Gohan Bestia) con la misma descripción.
   - Pendiente de decidir con Josemi: las 5 ramas con trabajo que no está en `main` (son del 31 oct. al 13 nov. y `main` ha cambiado mucho desde entonces).
 - Josemi: «las dejamos como recuerdo». Las 5 ramas antiguas que no están en `main` (`andar-revisado-302-formas`, `gohan-bestia-makankosappo`, `andar-goku-sprite-fusion`, `siete-personajes-deviantart`, `plugin-pixelfx`) se quedan en GitHub sin tocar. No borrarlas ni unirlas sin preguntar.
+
+
+## 2026-11-15 — Antigravity (sesión 20 — Búsqueda exhaustiva de sprites LSW)
+
+### Lo que pidió el usuario
+- Buscar más sprites en internet (DeviantArt y otras páginas) de la misma estética y estilo que los del juego: sprites pixel art pequeños (estilo LSW / Legendary Super Warriors), que no sean de otros estilos más grandes ni realistas.
+- Buscar hojas completas con todas las animaciones (defensa, ataque, correr/volar, etc.) y en especial las que traen el recuadro con el pixel art de la cara (portrait/retrato) arriba y abajo todos los movimientos.
+- Añadir hojas de personajes que ya tenemos si traen más movimientos o la cara que les falte, y buscar también nuevos personajes que no tengamos.
+- Guardar todos los sprites encontrados en una carpeta separada para no mezclar ni fusionar con las carpetas actuales.
+- Realizar un análisis exhaustivo y metódico tomándose el tiempo necesario.
+
+### Lo que hice
+- Identificación precisa del estilo del juego: formato **LSW / ULSW (Legendary Super Warriors)**, personajes chibi en pixel art pequeño (~32 a 55 px de altura).
+- Identificación de la plantilla clave indicada por Josemi: cabecera con el recuadro del pixel art de la cara (**portrait/retrato**) y filas completas inferiores con guardia, impulso/vuelo/dash con estelas de polvo, combos cuerpo a cuerpo (puñetazos/patadas), carga de ki, proyectiles y daño/muerte. Artistas de referencia: Strice12, MrDryy, Qsab101, ErickJCrack507, AlquimistaSK, FilipeSpriter, BrolyGamer096, MAST3RK1LL3R171, Cenket, Said971, TheWarriorFF2 y Bite035.
+- Búsqueda exhaustiva en DeviantArt mediante su API RSS oficial en dos fases:
+  1. Escaneo de 23 autores especializados y 76 consultas temáticas de personajes faltantes del anime/películas (379 candidatos únicos localizados).
+  2. Descarga y filtrado de las hojas más completas, descartando estilos grandes (Mugen, Extreme Butoden, JUS) y asegurando resolución original sin compresión.
+- Creación de la carpeta independiente `05 - Sprites nuevos encontrados/` estructurada en 3 subcarpetas para no mezclar nada con las carpetas activas del juego:
+  - `01_Hojas_Completas_Con_Retrato/` (21 hojas completas con recuadro de retrato: Cooler 4ª forma, Freezer 2ª forma, Super Janemba, Uub, Vegeta Ultra Ego, Vegeta Xeno, Goku Kaioken, Goku Dañado, Gogeta SSJ Broly, Goku Black SSJ, Cabba SSJ2, Caulifla Base y SSJ, Kefla, Majuub, Tenshinhan, Great Saiyaman 2, Goku Ultimate, Freezer Ultimate todas las formas, Golden Freezer, Nappa Dañado).
+  - `02_Personajes_Faltantes_del_Anime/` (16 hojas de personajes que estaban retirados o ausentes: Zarbon, Babidi, Dr. Gero / A20, Burter, Recoome, Pui Pui, Yamu, Tao Pai Pai, Toppo, Rey Vegeta, Omega Shenron, Bojack, Magetta, Lord Slug, Meca Freezer, Nail).
+  - `03_Nuevas_Formas_y_Mejoras/` (8 hojas con mejoras de personajes: Goku Daima SSJ4, Vegeta Daima SSJ3, Shallot SSB, Future Gohan a un brazo, Krilin Niño clásico, Granolah Full Power, Gamma 1 y 2, Glorio Daima Deluxe).
+- Generación del catálogo [INDICE_SPRITES_NUEVOS.md](file:///C:/Users/josem/Desktop/DBSURVIVOR/DBSurvivor/05%20-%20Sprites%20nuevos%20encontrados/INDICE_SPRITES_NUEVOS.md) con tabla completa de 45 hojas: personaje, forma, autor, presencia de recuadro de cara, movimientos clave, dimensiones y archivo.
+- Espacio total ocupado por las 45 hojas completas: ~14.3 MB.
+
+### Siguiente paso recomendado
+- Revisar con Josemi las hojas recopiladas en `05 - Sprites nuevos encontrados/` y decidir cuáles desea recortar con `herramientas/recortar_hoja.py` para introducirlas en `sprites/` o incorporarlas al catálogo de la Dex y del juego.

@@ -14,7 +14,17 @@ Actualizado: 5 de noviembre de 2026.
 
 
 
-## Últimas novedades implementadas (Sesión 19 - Antigravity)
+## Últimas novedades implementadas (Sesión 20 - Antigravity)
+1. **Recopilación y catálogo exhaustivo de 45 hojas completas en estilo LSW / ULSW**:
+   - Cumpliendo la regla del usuario: sprites en pixel art pequeño (~32 a 55 px de altura) con la estética nativa de Dragon Ball Legendary Super Warriors, descartando estilos grandes (Mugen/Extreme Butoden).
+   - Enfoque en hojas con **recuadro de retrato (pixel art de la cara)** en cabecera y el conjunto completo de movimientos abajo (guardia, impulso/vuelo/dash, combos de combate, patadas, proyectiles ki, daño y muerte).
+   - Organización en una carpeta independiente: `05 - Sprites nuevos encontrados/` (14.3 MB en total) para no mezclar con las carpetas actuales:
+     - `01_Hojas_Completas_Con_Retrato/` (21 hojas maestras con portrait y movimientos completos de Cooler, Freezer 2, Super Janemba, Uub, Vegeta Ultra Ego/Xeno, Goku Kaioken/Dañado/Ultimate, Gogeta SSJ, Black SSJ, Cabba SSJ2, Caulifla, Kefla, Majuub, Tenshinhan, Videl...).
+     - `02_Personajes_Faltantes_del_Anime/` (16 hojas de personajes retirados o pendientes: Zarbon, Babidi, Dr. Gero / A20, Burter, Recoome, Pui Pui, Yamu, Tao Pai Pai, Toppo, Rey Vegeta, Omega Shenron, Bojack, Magetta, Lord Slug, Meca Freezer, Nail).
+     - `03_Nuevas_Formas_y_Mejoras/` (8 hojas de expansiones: Goku Daima SSJ4, Vegeta Daima SSJ3, Shallot SSB, Future Gohan a un brazo, Krilin Niño clásico, Granolah Full Power, Gamma 1 y 2, Glorio Daima).
+   - Catálogo completo con tabla descriptiva en `05 - Sprites nuevos encontrados/INDICE_SPRITES_NUEVOS.md`.
+
+## Novedades anteriores (Sesión 19 - Antigravity)
 1. **Accesibilidad total de menús para niños de 5 años y navegación intuitiva**:
    - **Barra universal de navegación superior (`.menuTopBar`)**: Implementada en todos los 10 menús y modales del juego (`#roster`, `#shop`, `#rank`, `#settings`, `#mine`, `#gacha`, `#forge`, `#train`, `#credits`, `#maps`). Cuenta con un botón grande, táctil y evidente `◀ VOLVER` a la izquierda, título nítido en el centro y botón de cierre `✕` en rojo de alto contraste a la derecha. La barra es fija (`position: sticky`), garantizando que aunque haya scroll siempre esté visible y al alcance de un clic o toque con el dedo.
    - **Salida universal por teclado (`Escape` y `Backspace`)**: Cualquier modal o menú abierto se cierra de inmediato regresando al menú principal sin posibilidad de atascarse o perderse.
