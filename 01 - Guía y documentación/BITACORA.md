@@ -4502,6 +4502,11 @@ ode --check.
   - `03_Nuevas_Formas_y_Mejoras/` (8 hojas con mejoras de personajes: Goku Daima SSJ4, Vegeta Daima SSJ3, Shallot SSB, Future Gohan a un brazo, Krilin Niño clásico, Granolah Full Power, Gamma 1 y 2, Glorio Daima Deluxe).
 - Generación del catálogo [INDICE_SPRITES_NUEVOS.md](file:///C:/Users/josem/Desktop/DBSURVIVOR/DBSurvivor/05%20-%20Sprites%20nuevos%20encontrados/INDICE_SPRITES_NUEVOS.md) con tabla completa de 45 hojas: personaje, forma, autor, presencia de recuadro de cara, movimientos clave, dimensiones y archivo.
 - Espacio total ocupado por las 45 hojas completas: ~14.3 MB.
+- **Optimización de calidad solicitada por Josemi (descarga Lossless / PNG puro)**:
+  - Se detectó que DeviantArt por defecto entregaba ciertas hojas en formato JPEG comprimido (`q_70`/`q_80`), introduciendo artefactos borrosos alrededor de los píxeles.
+  - Se implementó un extractor forzado de PNG puro sin pérdidas (`q_100`) a través de Wixmp y baseUri directo, actualizando las 9 hojas que tenían compresión a PNGs 100% nítidos pixel-perfect.
+  - Se sustituyeron las 4 miniaturas previas por hojas maestras gigantes: Krilin DBFZ SWL (1280x7944 px, 7.5 MB), Vegeta SSJ3 Daima (1393x2007 px), Gamma 2 (666x800 px) e incorporación de Toppo e Hit de thekrillmaster.
+  - El 100% de los 46 archivos en `05 - Sprites nuevos encontrados/` son ahora PNG puros sin compresión JPEG.
 
 ### Siguiente paso recomendado
 - Revisar con Josemi las hojas recopiladas en `05 - Sprites nuevos encontrados/` y decidir cuáles desea recortar con `herramientas/recortar_hoja.py` para introducirlas en `sprites/` o incorporarlas al catálogo de la Dex y del juego.
