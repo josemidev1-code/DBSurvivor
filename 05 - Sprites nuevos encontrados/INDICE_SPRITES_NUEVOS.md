@@ -2,7 +2,7 @@
 
 > **Colección especializada en estilo LSW / ULSW (Legendary Super Warriors)**.
 > Todos los sprites son en **pixel art pequeño** (~32 a 55 px de altura de personaje), respetando al 100% la estética nativa del juego.
-> Total de hojas organizadas y verificadas: **46 hojas completas**.
+> Total de recursos organizados y verificados: **46 hojas completas de personajes + 43 archivos de assets, esferas, items y efectos FX (89 archivos en total)**.
 
 ## Estructura de la carpeta `05 - Sprites nuevos encontrados/`
 
@@ -62,3 +62,54 @@
 | **Krillin DBFZ SWL Master Sheet** | Variante | **KarlSpriter18** | ✅ Sí (Recuadro) | Movimientos LSW completos | 1280x7944 | `03_Nuevas_Formas_y_Mejoras` | `Krillin DBFZ SWL Master Sheet [KarlSpriter18].png` |
 | **Shallot** | Super Saiyan Blue (DB Legends) | **Cenket** | ✅ Sí (Recuadro) | Retrato azul divino de Shallot, Wild Cannon, Vuelo rápido, Combos agresivos, Daño | 1479x2232 | `03_Nuevas_Formas_y_Mejoras` | `Shallot SSB SWL [Cenket].png` |
 | **Vegeta Daima** | Super Saiyan 3 | **Cenket** | ✅ Sí (Recuadro) | Retrato chibi SSJ3 sin cejas, Guardia orgullosa Daima, Galick Gun mini, Daño | 1393x2007 | `03_Nuevas_Formas_y_Mejoras` | `Vegeta SSJ3 Daima ULSW [Cenket].png` |
+
+---
+
+## 4. `04_Assets_y_Objetos/` — Esferas del Dragón, Consumibles, FX y UI en Pixel Art
+
+Colección especializada de assets, objetos, efectos de combate y recursos de interfaz solicitados por Josemi. Todos los archivos han sido descargados en **PNG puro sin pérdidas (Lossless)** o **GIF animado**, preservando el píxel art nítido al 100%.
+
+### 4.1. Esferas del Dragón y Shenron (`01_Esferas_del_Dragon_y_Shenron/`)
+
+| Recurso / Archivo | Autor | Tipo / Estilo | Dimensiones | Descripción y Uso Recomendado |
+|---|---|---|---|---|
+| `Dragon_Balls_v2_MasterSheet_[Metalangelol].png` | **Metalangelol** | Hoja Maestra Pixel Art | 744x632 | Las 7 esferas del dragón completas con sombreado esférico de cristal (39 colores), reflejos y estrellas rojas nítidas. |
+| `Dragon_Balls_v1_ClassicSheet_[Metalangelol].png` | **Metalangelol** | Hoja Maestra Retro / Flat | 744x632 | Variante clásica en paleta reducida de 9 colores (estilo 8-bit/16-bit retro). |
+| `Summoning_Shenron_PixelArt_[MQuetzalPixel].png` | **MQuetzalPixel** | Ilustración Pixel Art | 1280x1600 | Invocación de Shenron emergiendo entre las nubes oscuras con las 7 esferas iluminadas en el suelo. Ideal para pantalla de gachapón o cinemática de deseos. |
+| `Shenron_SW2_Oficial_[ArcSystemWorks].png` | **Arc System Works / Bandai** | Sprites Oficiales NDS | 366x162 | Poses de Shenron, nubes místicas y relámpagos extraídos de *Supersonic Warriors 2*. |
+| `01_Individuales_HD_184px/esfera_1_estrella_184px.png` a `7_estrellas` (7 archivos) | **Metalangelol / DBSurvivor** | PNG con Transparencia | 184x184 cada una | Recortes individuales de cada una de las 7 esferas con fondo transparente limpio para visualización HD, interfaz o dex. |
+| `02_Individuales_Juego_32px/esfera_1_estrella_32px.png` a `7_estrellas` (7 archivos) | **Metalangelol / DBSurvivor** | Sprite de Juego (32x32) | 32x32 cada una | Escalado pixel-perfect (Nearest-Neighbor) para sustitución directa de las esferas del suelo en el juego. |
+| `03_Individuales_Juego_24px/esfera_1_estrella_24px.png` a `7_estrellas` (7 archivos) | **Metalangelol / DBSurvivor** | Sprite HUD / Radar (24x24) | 24x24 cada una | Tamaño compacto ideal para el marcador superior, indicadores de radar o inventario. |
+
+### 4.2. Radar del Dragón e Ítems Consumibles (`02_Radar_e_Items_Consumibles/`)
+
+| Recurso / Archivo | Autor | Tipo / Estilo | Dimensiones | Descripción y Uso Recomendado |
+|---|---|---|---|---|
+| `Dragon_Radar_Animado_[PyroDragoness].gif` | **PyroDragoness** | GIF Animado (50 frames) | 500x500 | Radar del dragón completamente animado con escaneo de cuadrícula circular y esferas parpadeantes. |
+| `Dragon_Radar_HD_[Swordmastertrunks].png` | **Swordmastertrunks** | Pixel Art de Alta Definición | 1024x1366 | Carcasa, pantalla y botón pulsador del radar del dragón con texturas pixeladas detalladas. |
+| `Nube_Kinton_SWL_Sheet_[Supermali95].png` | **Supermali95** | Hoja de Sprites SWL / LSW | 1000x800 | Hoja completa de la Nube Kinton (Nube Voladora): estelas de humo, giros aéreos, aceleración y monturas de personajes. |
+| `Semillas_del_Ermitanio_Items_[LACC777].png` | **LACC777** | Hoja de Ítems Pixel Art | 720x720 | Jarrón sagrado de la Torre de Karin, saquito de tela tradicional y semilla Senzu individual suelta. |
+| `Pack_Scouters_Rastreadores_[FilipeSpriter].png` | **FilipeSpriter** | Sprites de Rostro / Visor | 242x102 | Rastreadores con lentes de varios colores (verde clásico, rojo Saiyan, azul) e indicadores digitales. |
+| `Logo_Dragon_Ball_Z_Pixel_[Said971].png` | **Said971** | Logotipo Pixel Art | 194x61 | Logotipo oficial de Dragon Ball Z en pixel art puro con tipografía japonesa y relieve. |
+
+### 4.3. Efectos de Combate, Rayos y Auras (`03_Efectos_FX_y_Auras/`)
+
+| Recurso / Archivo | Autor | Tipo / Estilo | Dimensiones | Descripción y Uso Recomendado |
+|---|---|---|---|---|
+| `DBZ_Ataques_MasterSheet_LSW_[Saiyagami].png` | **Saiyagami** | Hoja Maestra Colosal LSW | 4050x3400 | Hoja maestra con todos los ataques del anime: Kamehameha, Galick Gun, Masenko, Final Flash, Makankosappo, Big Bang Attack, Kienzan, Spirit Bomb (Genkidama), proyectiles de ki continuos, cabezas y estelas de rayos. |
+| `DBZ_Auras_Todas_las_Fases_SWL_[JustOruma_Samuca0123].png` | **JustOruma & Samuca0123** | Hoja de Auras Multi-Fase | 1092x2265 | Auras pixel art completas: Base blanca, Super Saiyan dorada, SSJ2 con chispas de rayos, SSJ3, SSJ God roja, SSJ Blue, Super Saiyan Rose, Ultra Instinct plateada y Kaioken. |
+| `Ki_Blast_Ultra_Sheet_[QuiriArt].png` | **QuiriArt** | Ultra Hoja de Proyectiles | 1141x1057 | Esferas de ki densas, disparos directos, destellos de lanzamiento y ondas concéntricas de energía. |
+| `Dragon_Fist_Ryuken_FX_[TehKrazeh1].png` | **TehKrazeh1** | Efecto Especial de Impacto | 248x643 | Puño del Dragón (Ryuken): invocación del dragón de oro y mandíbula de impacto de ataque definitivo. |
+| `Crateres_e_Impactos_Suelo_[AnimeSpriter98].png` | **AnimeSpriter98** | Efectos de Entorno | 1167x568 | Cráteres circulares y lineales en el suelo, grietas de tierra por aterrizaje o explosión, y nubes de polvo. |
+| `Carga_de_Ki_Aura_Secuencia_[ZaruMania].png` | **ZaruMania** | Secuencia de Animación | 1272x333 | Secuencia de fotogramas de carga de ki con 27 colores limpios y estelas verticales de poder. |
+| `Aura_Animada_Chibi_LSW_[Said971].gif` | **Said971** | GIF Animado Chibi (17 frames) | 42x46 | Aura envolvente diseñada a escala exacta (~42x46 px) de los personajes LSW del juego al cargar ki. |
+| `Goku_SuperKamehameha_Rayo_[Said971].png` | **Said971** | Rayo de Energía Continuo | 700x260 | Rayo gigante de Super Kamehameha con núcleo concentrado y destellos exteriores. |
+| `Combate_Chispas_y_Golpes_LSW_[LswSprite].png` | **Lsw-sprite** | Mega Hoja de Combate FX | 1000x5000 | Chispazos de impacto melee, bloqueos en guardia, estelas de velocidad y líneas de tensión física. |
+| `Choque_de_Poderes_Rayos_LSW_[LswSprite].png` | **Lsw-sprite** | Efectos de Choque de Rayos | 592x3357 | Choque de ondas de energía, empujes de rayos y destellos de haz frontal. |
+| `Explosiones_y_Detonaciones_LSW_[LswSprite].png` | **Lsw-sprite** | Efectos de Explosión | 661x1336 | Explosiones esféricas de ki, detonaciones terrestres y estelas de humo residual. |
+
+### 4.4. Barras e Interfaz HUD (`04_HUD_e_Interfaz/`)
+
+| Recurso / Archivo | Autor | Tipo / Estilo | Dimensiones | Descripción y Uso Recomendado |
+|---|---|---|---|---|
+| `DBZ_Barras_Vida_y_Ki_HUD_[Maxidev1].png` | **Maxidev1** | Elementos de UI Pixel Art | 500x500 | Barras de salud curvas y rectas, marcos biselados para medidor de Ki, cajas de número de nivel e indicadores de combate. |

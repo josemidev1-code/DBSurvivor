@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**15 nov. 2026 (sesión 21 — Assets, Esferas del Dragón, Objetos y FX en Pixel Art):** Incorporación de 43 nuevos archivos en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/` clasificados en 4 categorías: Esferas del Dragón maestras y recortadas transparentes (184px, 32px y 24px), Shenron invocación pixel art, Radar del Dragón animado (50 frames), Nube Kinton SWL completa, Semillas Senzu, Scouters, mega hoja de ataques LSW (4050x3400), auras de todas las fases, proyectiles de ki, cráteres de suelo y HUD en pixel art puro sin pérdidas. Catálogo completo en `INDICE_SPRITES_NUEVOS.md` y créditos en `CREDITOS_RECURSOS.md`.
+
 **16 nov. 2026 (limpieza):** carpetas ordenadas: `03 - Dex/` y `04 - Piskel/` (antes `dex/` y `piskel_animaciones/`), documentos antiguos en `01 - Guía y documentación/Histórico/`, `herramientas/_revisar/` fuera de git (se regenera). Mapa visual en `ABREME - GUIA DEL PROYECTO.html`.
 
 **14 nov. 2026 (DB Dex):** nueva `03 - Dex/index.html` al estilo de PMD Sprite Collab: cada personaje con sus animaciones en movimiento, su estado (animada, 1 fotograma o falta) y filtros para saber qué animar con Piskel. Trae estadísticas del juego y datos de dragonball-api.com; lo que no tiene la API, inventado como en el anime. API estática en `03 - Dex/api/v1/`. Se regenera con `python herramientas/generar_dex.py`.

@@ -215,3 +215,33 @@ RecopilaciÃ³n exhaustiva de 770 hojas de sprites 2D en tamaÃ±o original comp
 
 ## Datos de la Dex (14 nov. 2026)
 - Raza, planeta, afiliación, descripción y poder de pelea: [dragonball-api.com](https://dragonball-api.com) (API pública y gratuita), descargados con `herramientas/descargar_dbapi.py` en `herramientas/dbapi/`. Lo que la API no trae se inventa y la Dex lo marca como «INVENTADO».
+
+
+
+## Incorporados en la sesión 21 (15/11/2026) — Esferas del Dragón, Ítems, FX y HUD en Pixel Art
+
+Nuevos recursos recopilados y clasificados en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/` a petición de Josemi. Se descargaron en formato PNG sin compresión (lossless) o GIF original íntegro para preservar la pureza técnica del pixel art sin artefactos JPEG.
+
+| Recurso | Autor / Crédito | Fuente Original | Uso en el Proyecto |
+|---|---|---|---|
+| **Esferas del Dragón v2 (Master Sheet)** | **Metalangelol** (DeviantArt) | [Dragon Balls pixel art v.2.0](https://www.deviantart.com/metalangelol/art/Dragon-Balls-pixel-art-v.2.0-765524469) | Hoja maestra de las 7 esferas con sombreado esférico de cristal y 39 colores. |
+| **Esferas del Dragón v1 (Classic Sheet)** | **Metalangelol** (DeviantArt) | [Dragon Balls pixel art v.1.0](https://www.deviantart.com/metalangelol/art/Dragon-Balls-pixel-art-v.1.0-732023676) | Variante retro plana (9 colores). |
+| **Esferas 1 a 7 Estrellas Recortadas (184px)** | **Metalangelol / DBSurvivor** | `05 - Sprites nuevos encontrados/...` | Recortes individuales en PNG con canal alfa transparente para UI, gachapón y Dex. |
+| **Esferas 1 a 7 Estrellas (32x32 y 24x24 px)** | **Metalangelol / DBSurvivor** | `05 - Sprites nuevos encontrados/...` | Sprites escalados por nearest-neighbor listos para sustituir los actuales de 18x18 en suelo y HUD. |
+| **Invocación de Shenron Pixel Art** | **MQuetzalPixel** (DeviantArt) | [Summoning Shenron](https://www.deviantart.com/mquetzalpixel/art/Summoning-Shenron-993539378) | Escena de invocación del dragón sagrado sobre el cielo oscuro con las 7 esferas. |
+| **Dragon Radar Animado (50 frames)** | **PyroDragoness** (DeviantArt) | [Dragon Radar animated GIF](https://www.deviantart.com/pyrodragoness/art/Dragon-Radar-animated-GIF-297783177) | Radar del dragón animado con cuadrícula de barrido circular y esferas titilantes. |
+| **Dragon Radar HD** | **Swordmastertrunks** (DeviantArt) | [Dragon radar pixel art](https://www.deviantart.com/swordmastertrunks/art/Dragon-radar-pixel-art-417631189) | Radar de alta resolución pixelada para pantallas de carga, menú o cinemáticas. |
+| **Nube Kinton / Voladora SWL** | **Supermali95** (DeviantArt) | [Flying Nimbus Swl Sheet](https://www.deviantart.com/supermali95/art/Flying-Nimbus-Swl-Sheet-1086741739) | Hoja completa de Nube Kinton en estilo SWL/LSW: aceleración, giros y monturas. |
+| **Semillas del Ermitaño (Senzu)** | **LACC777** (DeviantArt) | [Items semillas del ermitao](https://www.deviantart.com/lacc777/art/Items-semillas-del-ermitao-981645433) | Jarrón de Karin, saco de tela y semilla Senzu suelta en pixel art. |
+| **Pack Scouters / Rastreadores** | **FilipeSpriter** (DeviantArt) | [Pack Vegeta Scouters Ulsw Face Sets](https://www.deviantart.com/filipespriter/art/Pack-Vegeta-Scouters-Ulsw-Face-Sets-898361625) | Rastreadores con visores verde, rojo, azul y HUD táctico. |
+| **Logo Pixel Dragon Ball Z** | **Said971** (DeviantArt) | [[Pixel Art] Logo Dragon Ball Z](https://www.deviantart.com/said971/art/%5BPixel-Art%5D-Logo-Dragon-Ball-Z-567432766) | Logotipo de DBZ en pixel art de 194x61 px con tipografía japonesa. |
+| **Ataques LSW Master Sheet** | **Saiyagami** (DeviantArt) | [Dragon Ball Z LSW Attack Sprites](https://www.deviantart.com/saiyagami/art/Dragon-Ball-Z-LSW-Attack-Sprites-326401952) | Hoja colosal (4050x3400) con todos los ataques especiales: Kamehameha, Galick Gun, Masenko, Final Flash, Makankosappo, Big Bang, Kienzan, Genkidama y proyectiles de ki. |
+| **Auras de Todas las Fases SWL** | **JustOruma & Samuca0123** (DeviantArt) | [DBZ Aura effects sheet (by justOruma)](https://www.deviantart.com/samuca0123/art/DBZ-Aura-effects-sheet-%28by-justOruma%29-1276473634) | Auras completas: Base, SSJ, SSJ2 (rayos), SSJ3, SSJ God, SSJ Blue, SSJ Rose, Ultra Instinct y Kaioken. |
+| **Ki Blast Ultra Sheet** | **QuiriArt** (DeviantArt) | [SPECIAL 1: KI BLAST | ULTRA SHEET](https://www.deviantart.com/quiriart/art/SPECIAL-1%3A-KI-BLAST-%7C-ULTRA-SHEET-BY_QUIRIART%21-1377060702) | Ráfagas de ki ultradetalladas, proyectiles densos y destellos de energía. |
+| **Puño del Dragón (Ryuken FX)** | **TehKrazeh1** (DeviantArt) | [DBZ FX I: Dragon Fist](https://www.deviantart.com/tehkrazeh1/art/DBZ-FX-I%3A-Dragon-Fist-297172087) | Efecto especial del dragón dorado saliendo del golpe definitivo. |
+| **Cráteres e Impactos de Tierra** | **AnimeSpriter98** (DeviantArt) | [Crater Sprite Effects (Custom Edit)](https://www.deviantart.com/animespriter98/art/Crater-Sprite-Effects-%28Custom-Edit%29-923695493) | Grietas terrestres por aterrizaje fuerte o impacto de explosión, y polvo. |
+| **Carga de Ki Secuencia** | **ZaruMania** (DeviantArt) | [DBZ Aura Sheet](https://www.deviantart.com/zarumania/art/DBZ-Aura-Sheet-520311504) | Secuencia limpia de carga de ki con 27 colores puros. |
+| **Aura Animada Chibi LSW (17 frames)** | **Said971** (DeviantArt) | [LOG - Aura Test](https://www.deviantart.com/said971/art/LOG---Aura-Test-760200474) | GIF animado a escala exacta 42x46 px para envolver a los chibis LSW en combate. |
+| **Super Kamehameha Rayo** | **Said971** (DeviantArt) | [Goku SuperKamehameha Lswi](https://www.deviantart.com/said971/art/Goku-SuperKamehameha-Lswi-567185368) | Secuencia y haz gigante continuo de Kamehameha. |
+| **Combate, Choques y Explosiones LSW** | **Lsw-sprite** (DeviantArt) | [Effect sprite 1, 5, 7](https://www.deviantart.com/lsw-sprite/art/Effect-sprite-1-614872393) | Chispas melee, líneas de tensión, choque de rayos y explosiones de ki. |
+| **HUD de Salud y Ki** | **Maxidev1** (DeviantArt) | [Hud Para juegos de dragon ball pixel art](https://www.deviantart.com/maxidev1/art/Hud-Para-juegos-de-dragon-ball-pixel-art-1304333048) | Barras de vida, marcos biselados de energía y cajas de nivel. |

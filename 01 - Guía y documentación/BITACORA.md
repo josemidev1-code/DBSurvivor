@@ -4510,3 +4510,62 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Revisar con Josemi las hojas recopiladas en `05 - Sprites nuevos encontrados/` y decidir cuáles desea recortar con `herramientas/recortar_hoja.py` para introducirlas en `sprites/` o incorporarlas al catálogo de la Dex y del juego.
+
+
+## 2026-11-15 — Antigravity (sesión 21 — Búsqueda de assets: Esferas del Dragón, objetos y efectos en pixel art)
+
+### Lo que pidió el usuario
+- Búsqueda súper exhaustiva en internet de assets en pixel art de alta calidad para el juego:
+  - Sprites de las **Bolas del Dragón** (Esferas del Dragón de 1 a 7 estrellas) con sombreado de cristal y detalles fieles en pixel art.
+  - Objetos e ítems icónicos para gameplay e interfaz (Radar del Dragón detallado y animado, Cápsulas Hoi-Poi de colores/rangos, Semillas del Ermitaño / Senzu en saquitos y sueltas, Nube Kinton / Voladora, Scouters / Rastreadores con display de números, etc.).
+  - Efectos de combate / FX (auras de Ki, proyectiles, ondas de choque, rayos de energía Kamehameha/Galick Gun/Final Flash, explosiones).
+  - Elementos de invocación (Shenron / Porunga en pixel art, altar de invocación, pedestal para las 7 esferas).
+- Requisitos:
+  - Estricto estilo pixel art coherente y de altísima factura técnica.
+  - Guardar todo en una carpeta aislada y bien estructurada (`05 - Sprites nuevos encontrados/04_Assets_y_Objetos/`) sin alterar ni romper los assets activos del juego.
+  - Descargar en calidad 100% pura sin compresión JPEG (PNGs lossless).
+  - Documentar exhaustivamente autores, procedencia y licencias en `CREDITOS_RECURSOS.md`.
+
+### Lo que hice
+- **Búsqueda exhaustiva multi-fase en internet**:
+  - Rastreo en DeviantArt y repositorios de pixel art de Dragon Ball mediante consultas temáticas sobre esferas, radar, consumibles, efectos de combate, rayos, auras y UI.
+  - Localización de más de 470 candidatos y filtrado riguroso descartando estilos sobredimensionados, 3D renders o JPEG comprimidos.
+- **Colección de 43 nuevos archivos de assets y objetos en pixel art** organizados en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/`:
+  - `01_Esferas_del_Dragon_y_Shenron/` (25 archivos):
+    - Hoja maestra `Dragon_Balls_v2_MasterSheet_[Metalangelol].png` (744x632 px): las 7 esferas del dragón en pixel art HD con sombreado esférico de cristal (39 colores), reflejos de luz y estrellas rojas perfectas.
+    - Hoja maestra `Dragon_Balls_v1_ClassicSheet_[Metalangelol].png` (744x632 px): variante clásica retro en paleta de 9 colores.
+    - Ilustración `Summoning_Shenron_PixelArt_[MQuetzalPixel].png` (1280x1600 px): invocación de Shenron entre las nubes oscuras con las 7 esferas iluminadas en el suelo.
+    - Hoja `Shenron_SW2_Oficial_[ArcSystemWorks].png` (366x162 px): sprites de Shenron, nubes y relámpagos extraídos de *Supersonic Warriors 2*.
+    - Subcarpeta `01_Individuales_HD_184px/`: 7 archivos PNG con canal alfa transparente, recortados exactamente a 184x184 px para cada una de las 7 esferas (1 a 7 estrellas).
+    - Subcarpeta `02_Individuales_Juego_32px/`: 7 archivos PNG a 32x32 px escalados por Nearest-Neighbor sin perder un solo píxel de definición, listos como reemplazo directo de las esferas de 18x18 actuales en el mapa.
+    - Subcarpeta `03_Individuales_Juego_24px/`: 7 archivos PNG a 24x24 px listos para el HUD, minimapa o inventario.
+  - `02_Radar_e_Items_Consumibles/` (6 archivos):
+    - `Dragon_Radar_Animado_[PyroDragoness].gif`: Radar del dragón completamente animado con 50 fotogramas y barrido circular de radar.
+    - `Dragon_Radar_HD_[Swordmastertrunks].png` (1024x1366 px): radar de alta definición pixel art.
+    - `Nube_Kinton_SWL_Sheet_[Supermali95].png` (1000x800 px): hoja completa de la Nube Kinton con estelas de humo, giros y monturas estilo SWL/LSW.
+    - `Semillas_del_Ermitanio_Items_[LACC777].png` (720x720 px): jarrón de Karin, saquito de tela y semilla Senzu suelta.
+    - `Pack_Scouters_Rastreadores_[FilipeSpriter].png` (242x102 px): visores y rastreadores verde, rojo y azul con display táctico.
+    - `Logo_Dragon_Ball_Z_Pixel_[Said971].png` (194x61 px): logo oficial de DBZ en pixel art puro.
+  - `03_Efectos_FX_y_Auras/` (11 archivos):
+    - `DBZ_Ataques_MasterSheet_LSW_[Saiyagami].png` (4050x3400 px, 63 colores): hoja colosal con todos los ataques del anime (Kamehameha, Galick Gun, Masenko, Final Flash, Makankosappo, Big Bang Attack, Kienzan, Genkidama, proyectiles de ki continuos, cabezas y estelas de rayos).
+    - `DBZ_Auras_Todas_las_Fases_SWL_[JustOruma_Samuca0123].png` (1092x2265 px): hoja completa de auras pixel art (Base, SSJ, SSJ2 con chispas, SSJ3, SSJ God roja, SSJ Blue, SSJ Rose, Ultra Instinct y Kaioken).
+    - `Ki_Blast_Ultra_Sheet_[QuiriArt].png` (1141x1057 px): esferas densas de energía, ráfagas continuas y destellos de lanzamiento.
+    - `Dragon_Fist_Ryuken_FX_[TehKrazeh1].png` (248x643 px): invocación del dragón dorado del Puño del Dragón.
+    - `Crateres_e_Impactos_Suelo_[AnimeSpriter98].png` (1167x568 px): cráteres terrestres, grietas de tierra y nubes de polvo por impacto.
+    - `Carga_de_Ki_Aura_Secuencia_[ZaruMania].png` (1272x333 px): secuencia de fotogramas de carga de ki.
+    - `Aura_Animada_Chibi_LSW_[Said971].gif` (42x46 px, 17 frames): aura animada envolvente a escala 1:1 de los chibis del juego.
+    - `Goku_SuperKamehameha_Rayo_[Said971].png` (700x260 px): rayo continuo de Super Kamehameha.
+    - `Combate_Chispas_y_Golpes_LSW_[LswSprite].png` (1000x5000 px), `Choque_de_Poderes_Rayos_LSW_[LswSprite].png` (592x3357 px) y `Explosiones_y_Detonaciones_LSW_[LswSprite].png` (661x1336 px).
+  - `04_HUD_e_Interfaz/` (1 archivo):
+    - `DBZ_Barras_Vida_y_Ki_HUD_[Maxidev1].png` (500x500 px): barras curvas y rectas de vida, marcos biselados de ki y cajas de nivel.
+- **Aseguramiento de Calidad y Formato**:
+  - El 100% de los archivos se extrajeron forzando PNG puro sin pérdidas (`q_100`) o conservando el GIF animado íntegro.
+  - Ningún archivo activo de `ui/` o `sprites/` fue modificado ni sobreescrito.
+- **Actualización de Documentación y Créditos**:
+  - `05 - Sprites nuevos encontrados/INDICE_SPRITES_NUEVOS.md`: Catálogo completo con tablas detalladas de los 43 nuevos archivos, dimensiones, autores y recomendaciones de uso.
+  - `01 - Guía y documentación/CREDITOS_RECURSOS.md`: Nuevos créditos detallados con autores (Metalangelol, MQuetzalPixel, PyroDragoness, Swordmastertrunks, Supermali95, LACC777, FilipeSpriter, Said971, Saiyagami, JustOruma, Samuca0123, QuiriArt, TehKrazeh1, AnimeSpriter98, ZaruMania, Lsw-sprite, Maxidev1) y enlaces originales.
+  - `01 - Guía y documentación/ESTADO_ACTUAL.md`: Inventario general actualizado a 89 archivos nuevos encontrados (46 hojas de personajes + 43 assets y objetos).
+
+### Siguiente paso recomendado
+- Presentar a Josemi los nuevos recursos organizados y las comparativas de las Esferas del Dragón (las 18x18 actuales vs las nuevas en 32x32 y HD).
+- Decidir con Josemi si desea que incorporemos las nuevas Esferas del Dragón al juego (`ui_imagenes.js`), el radar animado o cualquiera de los efectos de combate (Kamehameha, auras, explosiones).
