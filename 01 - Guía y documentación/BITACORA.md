@@ -4472,3 +4472,4 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Josemi buscará sprites de los personajes del anime que faltan (Chaoz, Zarbon, Dodoria, Dabura, Whis…); meterlos en `sprites/<serie>/…/<personaje>/` y montarlos. Hay packs sin usar de Androide 19 y Bujin.
+- Josemi: «unelo a main» → `main` avanzado a f0af9eac (fast-forward, sin conflictos). Después: «pues dale con DBSurvivor arreglalo». El repositorio `Animesurvivor` se renombró a `DBSurvivor` (GitHub redirige el antiguo). GitHub Pages ya estaba activo en DBSurvivor desde `main` y sirve la versión nueva en https://josemidev1-code.github.io/DBSurvivor/ (comprobado: juego y Dex responden, `animaciones_juego.js?v=150`). Corregidas las direcciones viejas en README, AGENTS y el relevo.

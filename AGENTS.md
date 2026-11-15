@@ -28,7 +28,7 @@ Para que nadie pierda el hilo, **todas las IAs deben cumplir estas reglas**.
 
 1. Cierra tu entrada de `01 - Guía y documentación/BITACORA.md` con: qué quedó hecho, qué quedó a medias y qué debería hacer la siguiente IA.
 2. Actualiza `README.md` («Cómo está ahora» y «Lo que falta») si ha cambiado algo.
-3. Haz commit de todo. Si puedes, `git push` (el repositorio es `josemidev1-code/Animesurvivor`, rama `main`).
+3. Haz commit de todo. Si puedes, `git push` (el repositorio es `josemidev1-code/DBSurvivor`, rama `main`).
 
 ## Formato de cada entrada de la bitácora
 
