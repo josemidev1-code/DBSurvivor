@@ -1,20 +1,79 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AnimeSurvivor · Guía del proyecto</title>
-<style> :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#10131f;color:#edf0fa;font-family:Segoe UI,Arial,sans-serif;line-height:1.5}main{max-width:1050px;margin:auto;padding:54px 24px}header{padding:40px;border:1px solid #454055;border-radius:24px;background:linear-gradient(130deg,#352038,#1a2037 65%,#102c37)}.tag{color:#ffbb71;font-size:.78rem;font-weight:800;letter-spacing:.14em}h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:12px 0}header p{color:#c8cce0;max-width:650px}.primary{display:inline-block;background:#ffae49;color:#251507;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:10px;margin-top:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.card{display:block;background:#1b2030;border:1px solid #343d54;border-radius:16px;padding:22px;color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-3px);border-color:#ffae49}.card strong{display:block;font-size:1.1rem;margin-bottom:6px}.card span{color:#b8c0d4;font-size:.92rem}h2{margin:40px 0 14px}footer{color:#a6aec2;font-size:.9rem;margin-top:35px}code{color:#ffca8c}</style></head>
-<body><main><header><div class="tag">TU PROYECTO · GUÍA RÁPIDA</div><h1>AnimeSurvivor</h1><p>Un punto de entrada para jugar, encontrar la documentación y saber dónde están los recursos del proyecto.</p><a class="primary" href="index.html">▶ Abrir el juego</a></header>
-<h2>Por dónde empezar</h2><div class="grid">
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/ESTADO_ACTUAL.md"><strong>📍 Estado actual</strong><span>Resumen del proyecto y último relevo.</span></a>
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/TAREAS_CODEX.md"><strong>✅ Próximas tareas</strong><span>Prioridades y decisiones pendientes.</span></a>
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/BITACORA.md"><strong>📓 Bitácora</strong><span>Historial de lo pedido y realizado.</span></a>
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/INDICE_SPRITES.md"><strong>🧩 Índice de sprites</strong><span>Busca las carpetas usadas por cada personaje.</span></a>
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/PRUEBAS_RAPIDAS.md"><strong>🧪 Guía de pruebas</strong><span>Qué comprobar según el cambio realizado.</span></a>
-<a class="card" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/SPRITES_PENDIENTES.md"><strong>🎨 Sprites pendientes</strong><span>Recursos y personajes por revisar.</span></a>
-</div><h2>Carpetas principales</h2><div class="grid">
-<a class="card" href="02%20-%20C%C3%B3digo%20del%20juego/"><strong>💻 Código del juego</strong><span>Programación, estilos y recursos preparados que usa el juego.</span></a>
-<a class="card" href="sprites/"><strong>🖼️ sprites</strong><span>Biblioteca original de personajes, efectos y escenarios.</span></a>
-<a class="card" href="herramientas/"><strong>🛠️ herramientas</strong><span>Montaje, revisión y comprobaciones.</span></a>
-<a class="card" href="ui/"><strong>✨ ui</strong><span>Imágenes utilizadas en la interfaz y objetos.</span></a>
-<a class="card" href="Planes y diseños/"><strong>📚 Planes y diseños</strong><span>Diseños y planes anteriores.</span></a>
-<a class="card" href="dex/index.html"><strong>📖 DB Dex</strong><span>Personajes, animaciones y estadísticas.</span></a>
-<a class="card" href="Tus%20dibujos%20pixel%20art/"><strong>✏️ Tus dibujos pixel art</strong><span>Espacio para los dibujos que quieras aportar.</span></a>
-</div><footer>Los archivos <code>.md</code> se pueden abrir con Obsidian, un editor de texto o una aplicación compatible con Markdown. El código y los archivos preparados del juego están reunidos en su carpeta; los sprites originales se conservan en sprites.</footer></main></body></html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DragonBall Survivor · Guía del proyecto</title>
+<style>
+:root{color-scheme:dark;--bg:#120f17;--panel:#1d1824;--borde:#3a2f45;--txt:#f1ecf6;--suave:#b9afc6;--naranja:#ff9a2e;--azul:#5fb4ff;--verde:#5fd38d;--gris:#8a8296}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:Segoe UI,Arial,sans-serif;line-height:1.5}
+main{max-width:1080px;margin:auto;padding:40px 16px 60px}
+header{padding:34px;border:1px solid var(--borde);border-radius:22px;background:linear-gradient(130deg,#3a1d10,#1d1824 60%,#13223a)}
+.tag{color:var(--naranja);font-size:.78rem;font-weight:800;letter-spacing:.14em}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:10px 0}header p{color:var(--suave);max-width:680px;margin:0 0 6px}
+.botones{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{display:inline-block;background:var(--naranja);color:#241306;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:10px}
+.btn.sec{background:transparent;color:var(--txt);border:1px solid var(--borde)}
+h2{margin:38px 0 6px}.nota{color:var(--suave);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{display:block;background:var(--panel);border:1px solid var(--borde);border-left:5px solid var(--c,var(--gris));border-radius:14px;padding:18px;color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--c,var(--naranja))}
+.card strong{display:block;font-size:1.05rem;margin-bottom:4px}.card span{color:var(--suave);font-size:.92rem}
+.card small{display:block;margin-top:8px;color:var(--c,var(--gris));font-weight:700;font-size:.78rem;letter-spacing:.04em}
+.juego{--c:var(--naranja)}.tuyo{--c:var(--verde)}.tecnico{--c:var(--azul)}.viejo{--c:var(--gris)}
+pre{background:var(--panel);border:1px solid var(--borde);border-radius:14px;padding:18px;overflow-x:auto;font-size:.9rem;line-height:1.55;color:var(--suave)}
+pre b{color:var(--txt)}pre i{color:var(--naranja);font-style:normal}
+.leyenda{display:flex;flex-wrap:wrap;gap:16px;margin:4px 0 14px;color:var(--suave);font-size:.9rem}
+.leyenda span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+footer{color:var(--gris);font-size:.88rem;margin-top:36px}code{color:#ffc27d}
+</style></head>
+<body><main>
+<header>
+  <div class="tag">DRAGONBALL SURVIVOR · GUÍA DEL PROYECTO</div>
+  <h1>Todo el proyecto de un vistazo</h1>
+  <p>Juego de supervivencia con personajes de Dragon Ball en pixel art. Desde aquí puedes jugar, abrir la Dex y saber qué hay en cada carpeta.</p>
+  <div class="botones">
+    <a class="btn" href="index.html">▶ Jugar</a>
+    <a class="btn sec" href="03%20-%20Dex/index.html">📖 Abrir la Dex</a>
+    <a class="btn sec" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/ESTADO_ACTUAL.md">📍 Cómo va el proyecto</a>
+  </div>
+</header>
+
+<h2>Mapa de carpetas</h2>
+<p class="nota">Las carpetas con número son las que más vas a abrir. Las que van en minúscula las usa el juego por dentro: no les cambies el nombre.</p>
+<pre><b>DBSurvivor/</b>
+├─ <i>index.html</i>                        ▶ EL JUEGO (doble clic)
+├─ <i>ABREME - GUIA DEL PROYECTO.html</i>   esta guía
+├─ README.md · AGENTS.md · CLAUDE.md  explicación e instrucciones para IAs
+│
+├─ <b>01 - Guía y documentación/</b>        estado, bitácora, inventarios, créditos
+│   └─ Histórico/                     documentos antiguos ya cumplidos
+├─ <b>02 - Código del juego/</b>            la programación del juego (no tocar a mano)
+├─ <b>03 - Dex/</b>                         la Dex: personajes, formas y animaciones
+├─ <b>04 - Piskel/</b>                      animaciones listas para editar en piskelapp.com
+│
+├─ sprites/                          packs de sprites originales (materia prima)
+├─ ui/                               logo, esferas, Shenron y botones del menú
+└─ herramientas/                     programas para montar animaciones, Dex y Piskel</pre>
+
+<h2>Abrir</h2>
+<div class="leyenda"><span style="--c:var(--naranja)">para jugar o ver</span><span style="--c:var(--verde)">para leer</span><span style="--c:var(--azul)">recursos y programas</span><span style="--c:var(--gris)">antiguo</span></div>
+<div class="grid">
+  <a class="card juego" href="index.html"><strong>▶ El juego</strong><span>Ábrelo con doble clic. No necesita internet ni instalar nada.</span><small>index.html</small></a>
+  <a class="card juego" href="03%20-%20Dex/index.html"><strong>📖 Dex</strong><span>Todos los personajes jugables con sus formas, animaciones y lo que les falta.</span><small>03 - Dex</small></a>
+  <a class="card juego" href="04%20-%20Piskel/LEEME.md"><strong>🎞️ Piskel</strong><span>Una carpeta por personaje y forma con sus animaciones en .piskel, GIF y hoja.</span><small>04 - Piskel</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/ESTADO_ACTUAL.md"><strong>📍 Estado actual</strong><span>Resumen de cómo está el proyecto y qué toca después.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/BITACORA.md"><strong>📓 Bitácora</strong><span>Lo que pediste y lo que se hizo en cada sesión.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/Cambios%20propuestos%20por%20Josemi.md"><strong>✍️ Tus cambios propuestos</strong><span>Tu lista de ideas y cambios para el juego.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/INVENTARIO_ANIMACIONES.md"><strong>📋 Inventario de animaciones</strong><span>Qué tiene animado cada forma y qué le falta.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/SPRITES_PENDIENTES.md"><strong>🎨 Sprites pendientes</strong><span>Personajes sin sprites y packs que aún no están en el juego.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tuyo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/CREDITOS_RECURSOS.md"><strong>🙌 Créditos</strong><span>Autores de los sprites y recursos usados.</span><small>01 - Guía y documentación</small></a>
+  <a class="card tecnico" href="sprites/"><strong>🖼️ sprites</strong><span>Packs originales por serie: Z, Super, GT, Daima, videojuegos, fanmade y escenarios.</span><small>sprites</small></a>
+  <a class="card tecnico" href="ui/LEEME.md"><strong>✨ ui</strong><span>Logo, título, esferas, Shenron y botones del menú.</span><small>ui</small></a>
+  <a class="card tecnico" href="herramientas/LEEME.md"><strong>🛠️ herramientas</strong><span>Programas para montar animaciones, regenerar la Dex y exportar a Piskel.</span><small>herramientas</small></a>
+  <a class="card tecnico" href="02%20-%20C%C3%B3digo%20del%20juego/"><strong>💻 Código del juego</strong><span>Programación y recursos ya preparados. Se genera con las herramientas.</span><small>02 - Código del juego</small></a>
+  <a class="card viejo" href="01%20-%20Gu%C3%ADa%20y%20documentaci%C3%B3n/Hist%C3%B3rico/LEEME.md"><strong>🗄️ Histórico</strong><span>Revisiones, planes y relevos antiguos. Solo para consultar.</span><small>01 - Guía y documentación/Histórico</small></a>
+</div>
+
+<h2>¿Tienes sprites nuevos?</h2>
+<p class="nota">Mete cada pack en <code>sprites/</code>, dentro de su serie (por ejemplo <code>sprites/00_Dragon_Ball_Z/01_Namek_y_Freezer/Zarbon/</code>), con una carpeta por pack y los fotogramas en PNG. Después se eligen los fotogramas y se montan con las herramientas.</p>
+
+<footer>Los archivos <code>.md</code> se leen con cualquier editor de texto, Obsidian o el navegador. Guía actualizada el 16/11/2026.</footer>
+</main></body></html>

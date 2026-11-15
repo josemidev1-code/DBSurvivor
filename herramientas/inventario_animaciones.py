@@ -112,9 +112,9 @@ def escribir():
     for p, n in sorted(sin_montar.items()):
         L.append(f'- `{p}` ({n} imágenes)')
     L += ['', '## Cómo animar con Piskel', '',
-          '1. `python herramientas/exportar_piskel_lote.py` deja en `piskel_animaciones/<personaje>_<forma>/` un `.piskel` por animación.',
+          '1. `python herramientas/exportar_piskel_lote.py` deja en `04 - Piskel/<personaje>_<forma>/` un `.piskel` por animación.',
           '2. Abre el `.piskel` en https://www.piskelapp.com (Abrir → archivo), edita o añade fotogramas y guarda el `.piskel`.',
-          '3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `piskel_animaciones/LEEME.md` antes).', '']
+          '3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `04 - Piskel/LEEME.md` antes).', '']
     open(os.path.join(RAIZ, '01 - Guía y documentación', 'INVENTARIO_ANIMACIONES.md'), 'w', encoding='utf-8').write('\n'.join(L))
     print(len(jug), dict(cuenta), len(ene), len(sin_montar))
     print('quietas', quietas.most_common()); print('faltan', faltan.most_common())

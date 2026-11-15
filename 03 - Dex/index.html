@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DB Survivor Dex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+<link rel="stylesheet" href="../02 - Código del juego/interfaz.css">
+<style>
+:root{--bg:#0c0602;--panel:#1e0e04;--panel2:#2b1407;--edge:#c2410c;--ink:#fff7ed;--dim:#fed7aa;--ki:#ffd23f;--orange:#f97316;
+  --ok:#34d399;--mid:#facc15;--bad:#ef4444;--blue:#54c8ff;--purple:#c38aff;--gold:#ffd36a;
+  --pix:'Press Start 2P',ui-monospace,monospace;--vt:'VT323',ui-monospace,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--vt);font-size:20px;line-height:1.25;min-height:100vh;
+  background-image:radial-gradient(circle at 50% -20%,#3a1806 0,transparent 60%),repeating-linear-gradient(0deg,rgba(255,255,255,.015) 0 2px,transparent 2px 4px)}
+img,canvas{image-rendering:pixelated}
+a{color:var(--ki)}
+.wrap{max-width:1200px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;justify-content:space-between}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
+.marca img{width:min(260px,52vw)}
+.marca b{font-family:var(--pix);font-size:22px;color:var(--ki);text-shadow:3px 3px 0 #c2410c,5px 5px 0 #000}
+.panel{border:12px solid transparent;border-image:var(--px-marco) 6 fill / 12px stretch;background:transparent;padding:6px 8px}
+.panelOro{border:12px solid transparent;border-image:var(--px-marco-oro,var(--px-marco)) 6 fill / 12px stretch;padding:6px 8px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+.filtros input,.filtros select{font-family:var(--vt);font-size:20px;background:#140802;color:var(--ink);border:2px solid var(--edge);padding:4px 8px;box-shadow:0 0 0 2px #000}
+.filtros input{flex:1 1 200px;min-width:0}
+.filtros input:focus,.filtros select:focus{outline:2px solid var(--ki)}
+.resumen{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.chipE{font-family:var(--pix);font-size:9px;padding:6px 8px;border:2px solid #000;box-shadow:0 0 0 2px var(--edge);background:var(--panel2);cursor:pointer;color:var(--ink)}
+.chipE[aria-pressed=true]{background:var(--orange);color:#1a0a00}
+.chipE i{font-style:normal;display:inline-block;width:8px;height:8px;margin-right:6px;border:1px solid #000}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.ficha{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:inherit;padding:8px 6px;
+  background:var(--panel);border:3px solid var(--edge);box-shadow:0 0 0 3px #000,4px 4px 0 3px #000;transition:transform .1s,border-color .1s;position:relative}
+.ficha:hover,.ficha:focus-visible{border-color:var(--ki);transform:translateY(-3px);outline:none}
+.ficha .num{position:absolute;left:6px;top:4px;font-family:var(--pix);font-size:8px;color:var(--dim);opacity:.8}
+.ficha .rar{position:absolute;right:6px;top:4px;width:10px;height:10px;border:2px solid #000}
+.ficha .cara{width:84px;height:84px;object-fit:contain;background:#140802;border:2px solid var(--orange);padding:3px}
+.ficha h3{font-family:var(--pix);font-size:9px;margin:4px 0 0;color:var(--ki);text-align:center;line-height:1.5;min-height:2.6em;display:flex;align-items:center}
+.puntos{display:flex;gap:2px;flex-wrap:wrap;justify-content:center;max-width:120px}
+.puntos span{width:7px;height:7px;border:1px solid #000}
+.a-animada{background:var(--ok)}.a-quieta{background:var(--mid)}.a-falta{background:var(--bad)}
+.e-COMPLETA{color:var(--ok)}.e-CASI{color:#a3e635}.e-A.MEDIAS,.e-A_MEDIAS{color:var(--mid)}.e-POCA{color:var(--bad)}
+.estado{font-family:var(--pix);font-size:7px}
+.r0{background:#fed7aa}.r3{background:var(--blue)}.r4{background:var(--purple)}.r5{background:var(--gold)}
+.vacio{text-align:center;padding:40px;color:var(--dim)}
+/* ficha detallada */
+.volver{font-family:var(--pix);font-size:10px;display:inline-block;margin:10px 0}
+.det{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:16px;align-items:start}
+@media (max-width:760px){.det{grid-template-columns:1fr}.barra{grid-template-columns:84px 48px minmax(0,1fr)}.anims{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.det>div{min-width:0}
+.escena{height:230px;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(#1a3a6a,#3b74b8 60%,#7ab04a 60%,#4f8a32);border:3px solid #000;position:relative;overflow:hidden}
+.escena canvas{width:100%;height:100%}
+.det h1{font-family:var(--pix);font-size:18px;color:var(--ki);margin:6px 0;text-shadow:2px 2px 0 #c2410c,4px 4px 0 #000;line-height:1.4}
+.det h2{font-family:var(--pix);font-size:11px;color:var(--orange);margin:14px 0 8px}
+.formas{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.formas button{font-family:var(--pix);font-size:8px;padding:6px 8px;background:var(--panel2);color:var(--ink);border:2px solid #000;box-shadow:0 0 0 2px var(--edge);cursor:pointer}
+.formas button[aria-pressed=true]{background:var(--ki);color:#1a0a00}
+.datos{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0}
+.datos dt{color:var(--dim)}.datos dd{margin:0}
+.barra{display:grid;grid-template-columns:120px 60px 1fr;gap:8px;align-items:center;margin:4px 0}
+.barra u{display:block;height:12px;background:#140802;border:2px solid #000;position:relative}
+.barra u i{position:absolute;inset:0 auto 0 0;background:linear-gradient(var(--ki),var(--orange))}
+.poder{font-family:var(--pix);font-size:13px;color:var(--ki);margin:4px 0}
+.fuente{font-family:var(--pix);font-size:7px;padding:3px 5px;border:1px solid #000;vertical-align:middle;margin-left:6px}
+.fuente.api{background:var(--ok);color:#03140c}.fuente.inv{background:var(--purple);color:#14031c}
+.anims{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.anim{background:var(--panel);border:3px solid #000;box-shadow:0 0 0 2px var(--edge);text-align:center;padding:6px}
+.anim canvas{width:100%;height:150px;background:#140802}
+.anim b{display:block;font-family:var(--pix);font-size:8px;margin-top:6px}
+.anim small{display:block;color:var(--dim);font-size:16px}
+.anim.falta canvas{opacity:.25}
+.anim.falta{box-shadow:0 0 0 2px var(--bad)}.anim.quieta{box-shadow:0 0 0 2px var(--mid)}
+.cmd{font-family:ui-monospace,monospace;font-size:13px;background:#000;color:#bef264;padding:8px;display:block;overflow-x:auto;white-space:pre}
+.desc{color:var(--dim);margin:6px 0}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;color:var(--dim);font-size:18px;margin:6px 0}
+.leyenda span::before{content:'';display:inline-block;width:10px;height:10px;margin-right:6px;border:1px solid #000;vertical-align:middle}
+.leyenda .l1::before{background:var(--ok)}.leyenda .l2::before{background:var(--mid)}.leyenda .l3::before{background:var(--bad)}
+.cargando{font-family:var(--pix);font-size:10px;text-align:center;padding:60px;color:var(--ki)}
+footer{color:var(--dim);font-size:16px;margin:30px 0 10px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="marca" href="#"><img data-ui="titulo" alt="Dragon Ball Survivor"><b>DEX</b></a>
+  </header>
+  <main id="app"><p class="cargando">CARGANDO SPRITES…</p></main>
+  <footer>Datos del anime: <a href="https://dragonball-api.com" target="_blank" rel="noopener">dragonball-api.com</a> · lo que no tiene la API, inventado como en el anime · API propia en <a href="api/v1/personaje/index.json">api/v1/personaje/</a></footer>
+</div>
+<script src="datos.js"></script>
+<script src="../02 - Código del juego/ui_imagenes.js"></script>
+<script src="../02 - Código del juego/animaciones_juego.js"></script>
+<script>
+(()=>{
+const D=window.DEX,A=(window.ANIM_SET||{}).h||{},$=s=>document.querySelector(s),app=$('#app');
+const ANIM=D.anim, RNOM={0:'INICIAL',3:'RARO',4:'ÉPICO',5:'LEGENDARIO'}, NIVEL=['COMPLETA','CASI','A MEDIAS','POCA'];
+const ICO={animada:'Animada',quieta:'1 fotograma',falta:'Falta'};
+document.querySelectorAll('[data-ui]').forEach(i=>{const u=window.UI_IMG&&UI_IMG[i.dataset.ui];if(u)i.src=u});
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const imgs={};function img(u){if(!imgs[u]){const i=new Image();i.src=u;imgs[u]=i}return imgs[u]}
+function retrato(p,f){const h=A[p.id]||{};const fs=[String(f),...p.formas.map(x=>String(x.n)),...Object.keys(h)];for(const k of fs)if(h[k]&&h[k].portrait)return h[k].portrait;return ''}
+function mejor(p){const o={COMPLETA:0,CASI:1,'A MEDIAS':2,POCA:3};return p.formas.reduce((a,f)=>o[f.estado]<o[a.estado]?f:a,p.formas[0])}
+// ---------- animación en canvas ----------
+let vivos=[];
+function animar(cv,hoja,{ref=0,suelo=.9}={}){
+  if(!hoja)return;const im=img(hoja.url);vivos.push({cv,hoja,im,ref,suelo,t0:performance.now()});
+}
+function bucle(now){
+  vivos=vivos.filter(v=>v.cv.isConnected);
+  for(const v of vivos){const {cv,hoja,im}=v;if(!im.complete||!im.naturalWidth)continue;
+    const r=cv.getBoundingClientRect();const W=Math.max(1,Math.round(r.width)),H=Math.max(1,Math.round(r.height));
+    if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H}
+    const g=cv.getContext('2d');g.imageSmoothingEnabled=false;g.clearRect(0,0,W,H);
+    const n=hoja.du.length,fw=im.naturalWidth/n,fh=im.naturalHeight,tot=hoja.du.reduce((a,b)=>a+b,0);
+    let t=((now-v.t0)/1000*60)%tot,i=0;while(t>=hoja.du[i]&&i<n-1){t-=hoja.du[i];i++}
+    let s=Math.min(W*0.95/fw,H*suelo(v)/fh,v.ref?H*0.8/v.ref:9);s=s>=1?Math.floor(s*2)/2:s;
+    const dw=fw*s,dh=fh*s,x=Math.round((W-dw)/2),y=Math.round(H*v.suelo-dh);
+    g.fillStyle='rgba(0,0,0,.35)';g.beginPath();g.ellipse(W/2,H*v.suelo,dw*.32,Math.max(2,s*2),0,0,7);g.fill();
+    g.drawImage(im,i*fw,0,fw,fh,x,y,dw,dh)}
+  requestAnimationFrame(bucle)}
+const suelo=v=>v.suelo*0.96;
+requestAnimationFrame(bucle);
+// ---------- lista ----------
+const F={q:'',rar:'',raza:'',estado:'',orden:'num',falta:''};
+try{Object.assign(F,JSON.parse(sessionStorage.getItem('dexF')||'{}'))}catch(e){}
+const razas=[...new Set(D.personajes.map(p=>p.raza))].sort();
+function lista(){
+  vivos=[];
+  const n={};for(const p of D.personajes)for(const f of p.formas)n[f.estado]=(n[f.estado]||0)+1;
+  const totF=D.personajes.reduce((a,p)=>a+p.formas.length,0);
+  app.innerHTML=`<div class="filtros">
+    <input id="q" type="search" placeholder="Buscar personaje, forma o raza…" value="${esc(F.q)}" aria-label="Buscar">
+    <select id="rar" aria-label="Rareza"><option value="">Todas las rarezas</option>${[0,3,4,5].map(r=>`<option value="${r}" ${String(F.rar)===String(r)?'selected':''}>${RNOM[r]}</option>`).join('')}</select>
+    <select id="raza" aria-label="Raza"><option value="">Todas las razas</option>${razas.map(r=>`<option ${F.raza===r?'selected':''}>${esc(r)}</option>`).join('')}</select>
+    <select id="falta" aria-label="Animación pendiente"><option value="">Cualquier animación</option>${ANIM.filter(a=>a[0]!=='portrait').map(a=>`<option value="${a[0]}" ${F.falta===a[0]?'selected':''}>Le falta: ${a[1]}</option>`).join('')}</select>
+    <select id="orden" aria-label="Orden"><option value="num">Orden: número</option><option value="nombre" ${F.orden==='nombre'?'selected':''}>Orden: nombre</option><option value="poder" ${F.orden==='poder'?'selected':''}>Orden: poder de pelea</option><option value="anim" ${F.orden==='anim'?'selected':''}>Orden: menos animados</option></select>
+  </div>
+  <div class="resumen">${NIVEL.map((e,i)=>`<button class="chipE" data-e="${e}" aria-pressed="${F.estado===e}"><i class="${['a-animada','a-animada','a-quieta','a-falta'][i]}" ${i===1?'style="background:#a3e635"':''}></i>${e} · ${n[e]||0}</button>`).join('')}<span class="chipE" style="cursor:default">${D.personajes.length} PERSONAJES · ${totF} FORMAS</span></div>
+  <div class="leyenda"><span class="l1">animada</span><span class="l2">1 solo fotograma</span><span class="l3">falta</span></div>
+  <div class="grid" id="grid"></div>`;
+  $('#q').oninput=e=>{F.q=e.target.value;pintar()};
+  for(const k of ['rar','raza','orden','falta'])$('#'+k).onchange=e=>{F[k]=e.target.value;pintar()};
+  app.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>{F.estado=F.estado===b.dataset.e?'':b.dataset.e;lista()});
+  pintar();
+}
+function pintar(){
+  try{sessionStorage.setItem('dexF',JSON.stringify(F))}catch(e){}
+  const q=F.q.trim().toLowerCase();
+  let ps=D.personajes.filter(p=>(!q||(p.nombre+' '+p.raza+' '+p.formas.map(f=>f.nombre).join(' ')+' '+p.id).toLowerCase().includes(q))
+    &&(F.rar===''||String(p.rareza)===String(F.rar))&&(!F.raza||p.raza===F.raza)&&(!F.estado||p.formas.some(f=>f.estado===F.estado))&&(!F.falta||p.formas.some(f=>f.animaciones[F.falta]!=='animada')));
+  const pend=p=>Math.max(...p.formas.map(f=>Object.entries(f.animaciones).filter(([k,v])=>k!=='portrait'&&v!=='animada').length));
+  if(F.orden==='nombre')ps.sort((a,b)=>a.nombre.localeCompare(b.nombre));
+  if(F.orden==='poder')ps.sort((a,b)=>Math.max(...b.formas.map(f=>f.poder.valor))-Math.max(...a.formas.map(f=>f.poder.valor)));
+  if(F.orden==='anim')ps.sort((a,b)=>pend(b)-pend(a));
+  const g=$('#grid');
+  g.innerHTML=ps.length?ps.map(p=>{const f=F.falta?p.formas.find(x=>x.animaciones[F.falta]!=='animada'):F.estado?p.formas.find(x=>x.estado===F.estado):mejor(p);
+    return `<a class="ficha" href="#${p.id}/${f.n}"><span class="num">#${String(p.num).padStart(3,'0')}</span><span class="rar r${p.rareza}" title="${RNOM[p.rareza]}"></span>
+    <img class="cara" src="${retrato(p,f.n)}" alt="" loading="lazy"><h3>${esc(p.nombre)}</h3>
+    <div class="puntos" title="Animaciones de ${esc(f.nombre)}">${ANIM.filter(a=>a[0]!=='portrait').map(a=>`<span class="a-${f.animaciones[a[0]]}" title="${a[1]}: ${ICO[f.animaciones[a[0]]]}"></span>`).join('')}</div>
+    <span class="estado e-${f.estado.replace(' ','_')}">${p.formas.length>1?p.formas.length+' FORMAS · ':''}${f.estado}</span></a>`}).join(''):'<p class="vacio">Nada con esos filtros.</p>';
+}
+// ---------- ficha ----------
+function ficha(id,fn){
+  vivos=[];window.scrollTo(0,0);
+  const p=D.personajes.find(x=>x.id===id);if(!p)return lista();
+  const f=p.formas.find(x=>String(x.n)===String(fn))||p.formas[0],H=(A[p.id]||{})[f.n]||{anims:{}};
+  const maxS={pv:200,ataque:200,velocidad:110,recarga:100};
+  const barras=[['PV','pv'],['Ataque','ataque'],['Velocidad','velocidad'],['Recarga','recarga']].map(([n,k])=>
+    `<div class="barra"><span>${n}</span><b>${f.stats[k]}${k==='ataque'||k==='recarga'?'%':''}</b><u><i style="width:${Math.min(100,Math.round(f.stats[k]/maxS[k]*100))}%"></i></u></div>`).join('');
+  const pod=Math.min(100,Math.max(4,Math.round(Math.log10(Math.max(10,f.poder.valor))/27*100)));
+  const anims=ANIM.filter(a=>a[0]!=='portrait').map(([k,n,hoja])=>{const e=f.animaciones[k],h=H.anims[hoja]||(k==='move'?H.anims.Walk:null);
+    return `<div class="anim ${e}"><canvas data-hoja="${esc(hoja)}" aria-label="${n}"></canvas><b>${n}</b><small>${ICO[e]}${h&&e!=='falta'?' · '+h.du.length+' fot.':''}</small></div>`}).join('');
+  app.innerHTML=`<a class="volver" href="#">◀ VOLVER A LA DEX</a>
+  <div class="det">
+    <div>
+      <div class="escena"><canvas id="grande"></canvas></div>
+      <div class="formas">${p.formas.map(x=>`<button data-f="${x.n}" aria-pressed="${x.n===f.n}">${esc(x.nombre)}</button>`).join('')}</div>
+      <div class="panel"><h2 style="margin-top:0">ESTADÍSTICAS EN EL JUEGO</h2>${barras}
+        <h2>PODER DE PELEA</h2><p class="poder">${esc(f.poder.texto)}<span class="fuente ${f.poder.fuente==='inventado'?'inv':'api'}">${f.poder.fuente==='inventado'?'INVENTADO':'API'}</span></p>
+        <div class="barra" style="grid-template-columns:1fr"><u><i style="width:${pod}%"></i></u></div></div>
+    </div>
+    <div>
+      <span class="num" style="font-family:var(--pix);font-size:10px;color:var(--dim)">#${String(p.num).padStart(3,'0')} · ${RNOM[p.rareza]}</span>
+      <h1>${esc(p.nombre)}${p.formas.length>1?' · '+esc(f.nombre):''}</h1>
+      <dl class="datos">
+        <dt>Raza</dt><dd>${esc(p.raza)}</dd><dt>Bando</dt><dd>${esc(p.bando)}</dd>
+        ${p.planeta?`<dt>Planeta</dt><dd>${esc(p.planeta)}</dd>`:''}
+        <dt>Técnica inicial</dt><dd>${esc(p.tecnica)}</dd>
+        <dt>En el juego</dt><dd>${esc(p.descJuego)}</dd>
+        <dt>Animación</dt><dd class="e-${f.estado.replace(' ','_')}">${f.estado}</dd>
+      </dl>
+      ${p.descripcion?`<p class="desc">${esc(p.descripcion.length>420?p.descripcion.slice(0,420).replace(/\s\S*$/,'')+'…':p.descripcion)}</p>`:''}
+      <h2>ANIMACIONES</h2>
+      <div class="anims">${anims}</div>
+      <h2>ANIMAR CON PISKEL</h2>
+      <code class="cmd">python herramientas/exportar_piskel_lote.py ${esc(p.id)}</code>
+      <p class="desc">Abre el .piskel de 04 - Piskel/${esc(p.id)}_${f.n}/ en piskelapp.com, dibuja lo que falta y vuelve con importar_piskel.py.</p>
+      <h2>API</h2>
+      <p class="desc"><a href="api/v1/personaje/${esc(p.id)}.json">api/v1/personaje/${esc(p.id)}.json</a>${p.api?` · fuente: <a href="${esc(p.api.url)}" target="_blank" rel="noopener">dragonball-api #${p.api.id} (${esc(p.api.nombre)})</a>`:''}</p>
+    </div>
+  </div>`;
+  app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{location.hash=p.id+'/'+b.dataset.f});
+  const ref=H.anims.Idle?H.anims.Idle.h:60;
+  animar($('#grande'),H.anims.Idle,{suelo:.86,ref:ref*0.75});
+  app.querySelectorAll('canvas[data-hoja]').forEach(c=>animar(c,H.anims[c.dataset.hoja]||H.anims.Idle,{suelo:.92,ref}));
+}
+function ruta(){const h=decodeURIComponent(location.hash.slice(1));if(h){const[id,f]=h.split('/');ficha(id,f)}else lista()}
+addEventListener('hashchange',ruta);ruta();
+})();
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 (rayos, bolas, auras, estelas). Marca el pack como dudoso, con motivos, cuando no está claro.
 
 Uso:  python herramientas/proponer_fotogramas.py "<pack dentro de sprites/>" [...]
-Salida: herramientas/propuestas/<pack>.json (ver Planes y diseños/superpowers/specs/2026-11-01-propuesta-fotogramas-design.md)
+Salida: herramientas/propuestas/<pack>.json (ver 01 - Guía y documentación/Histórico/Planes y diseños/superpowers/specs/2026-11-01-propuesta-fotogramas-design.md)
 """
 import glob, json, os, re, statistics, sys, unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

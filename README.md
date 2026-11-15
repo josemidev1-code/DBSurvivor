@@ -5,38 +5,41 @@ Juego de supervivencia (estilo PokéSurvivor / Vampire Survivors) con personajes
 
 ## Qué hay en la carpeta
 
-| Archivo / carpeta | Para qué sirve |
-|---|---|
-| `index.html` | El juego (ábrelo con doble clic) |
-| `02 - Código del juego/script.js` | Lógica principal del juego |
-| `02 - Código del juego/utilidades.js` | Utilidades generales compartidas; se carga antes de `02 - Código del juego/script.js` |
-| `02 - Código del juego/style.css` | El aspecto de menús y pantallas |
-| `02 - Código del juego/animaciones_juego.js` | Las animaciones de los personajes (se genera solo con `herramientas/montar_animaciones.py`) |
-| `02 - Código del juego/sprites.js` | Enemigos, escenarios y efectos ya metidos en el juego |
-| `02 - Código del juego/ui_imagenes.js` | Tu logo y tus 7 esferas, metidos en el juego |
-| `02 - Código del juego/portadas_mapas.js`, `02 - Código del juego/shenron_imagen.js` | Portadas de los mapas y Shenron del gachapón (se generan con `herramientas/montar_portadas.py` y `montar_shenron.py`) |
-| `ui/` | Tu logo y tus esferas en PNG (si los cambias, hay que volver a meterlos) |
-| `ui/objetos/` | Senzu, cápsulas, radares, originales y procedencia de cada recurso |
-| `01 - Guía y documentación/CREDITOS_RECURSOS.md` | Autores de los recursos incorporados y catálogo de fuentes revisadas |
-| `sprites/` | Los packs de sprites originales de donde salen los personajes |
-| `herramientas/` | Programas para elegir fotogramas y montar las animaciones (ver `herramientas/GUIA_ANIMACIONES.md`) |
-| `01 - Guía y documentación/BITACORA.md` | Diario: lo que pediste y lo que se hizo en cada sesión |
-| `01 - Guía y documentación/TAREAS_CODEX.md` | Prioridades actuales para la siguiente IA |
-| `01 - Guía y documentación/TAREAS_CODEX_HISTORICO.md` | Relevos y procedimientos anteriores |
-| `01 - Guía y documentación/ESTADO_ACTUAL.md` | Resumen breve y mapa del proyecto |
-| `01 - Guía y documentación/INDICE_SPRITES.md` | Índice regenerable de selecciones de packs de animación |
-| `01 - Guía y documentación/PRUEBAS_RAPIDAS.md` | Pruebas recomendadas según el cambio |
-| `01 - Guía y documentación/PIXEL_ART_POR_CODIGO.md` | Lista de lo que está dibujado por código, para que lo sustituyas por tus dibujos |
-| `01 - Guía y documentación/SPRITES_PENDIENTES.md` | Packs que faltan por meter y personajes que no tienen sprites buenos |
-| `AGENTS.md`, `CLAUDE.md` | Instrucciones para las IAs que trabajan en el proyecto |
+Mapa visual: abre `ABREME - GUIA DEL PROYECTO.html` con doble clic.
 
-Lo viejo que no usa el juego (copias antiguas, capturas, fondos sueltos, la importación de Gemini/Codex y la
-carpeta de referencia de 3,6 GB) está en `Desktop/AnimeSurvivor_archivo/`, por si algún día hace falta.
+```
+DBSurvivor/
+├─ index.html                       ▶ EL JUEGO (doble clic)
+├─ ABREME - GUIA DEL PROYECTO.html   guía visual del proyecto
+├─ README.md · AGENTS.md · CLAUDE.md
+├─ 01 - Guía y documentación/       estado, bitácora, inventarios, créditos
+│   └─ Histórico/                    documentos antiguos ya cumplidos
+├─ 02 - Código del juego/           la programación del juego (se genera con las herramientas)
+├─ 03 - Dex/                        la Dex (se genera con herramientas/generar_dex.py)
+├─ 04 - Piskel/                     animaciones para editar en piskelapp.com
+├─ sprites/                         packs de sprites originales (materia prima)
+├─ ui/                              logo, esferas, Shenron y botones del menú
+└─ herramientas/                    programas para montar animaciones, Dex y Piskel
+```
+
+`sprites/`, `ui/` y `herramientas/` conservan su nombre porque el juego y los programas los usan por dentro.
+Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
+
+| Documento | Para qué sirve |
+|---|---|
+| `01 - Guía y documentación/ESTADO_ACTUAL.md` | Resumen breve y relevo |
+| `01 - Guía y documentación/BITACORA.md` | Diario: lo que pediste y lo que se hizo |
+| `01 - Guía y documentación/Cambios propuestos por Josemi.md` | Tus ideas y cambios para el juego |
+| `01 - Guía y documentación/INVENTARIO_ANIMACIONES.md` | Qué tiene animado cada forma (se regenera) |
+| `01 - Guía y documentación/SPRITES_PENDIENTES.md` | Personajes sin sprites y packs por meter |
+| `01 - Guía y documentación/CREDITOS_RECURSOS.md` | Autores de los recursos |
+| `01 - Guía y documentación/TAREAS_CODEX.md` | Prioridades para la siguiente IA |
+| `herramientas/GUIA_ANIMACIONES.md` | Cómo elegir y revisar animaciones |
 
 ## Cómo está ahora (05/11/2026)
 
 - La biblioteca `antigravity sprites/` y `Recursos pendientes/` se quitaron el 14 nov. 2026 (siguen en el historial de git).
-- Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/CAMBIOS_COMBATE_2026-11-04.md`.
+- Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/Histórico/CAMBIOS_COMBATE_2026-11-04.md`.
 - Pendiente principal: revisar y seleccionar los ataques extra de cada pack; todavía no se ha hecho para todo el catálogo.
 
 - **Control manual exclusivo de ataques por teclado numérico**: El jugador comienza cada partida con 2 ataques. Mediante las teclas 1, 2, 3... (o teclado numérico Numpad) o toque en el HUD, el jugador decide cuál ataque usar de forma exclusiva: SOLO se ejecuta el ataque activo elegido, sin disparos automáticos simultáneos del resto de técnicas. Al subir de nivel se desbloquean más ranuras y al derrotar jefes se pueden fusionar técnicas.
@@ -88,7 +91,7 @@ carpeta de referencia de 3,6 GB) está en `Desktop/AnimeSurvivor_archivo/`, por 
 > que se consigue aguantando y sube todas las estadísticas). La lista de bloques de abajo es la anterior.
 
 
-Plan acordado con el usuario en la sesión 10 (bloque 1 hecho; diseño en `Planes y diseños/superpowers/specs/`):
+Plan acordado con el usuario en la sesión 10 (bloque 1 hecho; diseño en `01 - Guía y documentación/Histórico/Planes y diseños/superpowers/specs/`):
 
 1. **Bloque 2 · Técnicas de la serie** con el efecto dibujado en su propio pack (150 de 162 packs traen rayos, bolas
    o auras sin usar; ninguno genérico).
@@ -99,7 +102,7 @@ Plan acordado con el usuario en la sesión 10 (bloque 1 hecho; diseño en `Plane
 5. **Bloque 6 · Mecánicas nuevas.**
 
 Entre bloque y bloque, jugar una partida para comprobar que sigue siendo divertido. Sigue pendiente sustituir lo
-dibujado por código (`01 - Guía y documentación/PIXEL_ART_POR_CODIGO.md`).
+dibujado por código (`01 - Guía y documentación/Histórico/PIXEL_ART_POR_CODIGO.md`).
 
 Comprobación de personajes: `node herramientas/comprobar_personajes.cjs`. Para aplicar las reglas de fotogramas y muerte a las incorporaciones de esta sesión:
 `node herramientas/comprobar_personajes.cjs gokubroly vegetamanga vegetabroly blacktime blackfan gokualt`.
@@ -126,7 +129,7 @@ El gachapón ahora presenta una máquina Hoi-Poi en pixel art con caída, rebote
 
 
 ### 6 de noviembre — Revisión de sprites en partida
-Se corrigieron 125 selecciones en 91 formas, la continuidad de los combos y las secuencias de ataque de los enemigos. Se incorporaron Tora, Vegeta explorador HD, Vegeta SSJ2 HD, Kyabe clásico y Goku Black LSW. El catálogo incluye 307 formas. Véase `01 - Guía y documentación/REVISION_SPRITES_2026-11-06.md` para pruebas, limpieza y material pendiente.
+Se corrigieron 125 selecciones en 91 formas, la continuidad de los combos y las secuencias de ataque de los enemigos. Se incorporaron Tora, Vegeta explorador HD, Vegeta SSJ2 HD, Kyabe clásico y Goku Black LSW. El catálogo incluye 307 formas. Véase `01 - Guía y documentación/Histórico/REVISION_SPRITES_2026-11-06.md` para pruebas, limpieza y material pendiente.
 
 
 ### 6 de noviembre — Correspondencia de técnicas y sprites

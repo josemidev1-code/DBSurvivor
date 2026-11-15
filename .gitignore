@@ -36,3 +36,6 @@ herramientas/efectos_pixelfx/package*.json
 
 # Hojas y propuestas temporales de proponer_ki_limpio.py (se regeneran)
 herramientas/_revisar/ki_*
+
+# Hojas y vistas previas de revisión (se regeneran con ver_pack.py y previsualizar.py)
+herramientas/_revisar/

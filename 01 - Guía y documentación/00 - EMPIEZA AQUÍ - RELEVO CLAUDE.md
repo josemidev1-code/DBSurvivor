@@ -54,7 +54,7 @@ Lee `Cambios propuestos por Josemi.md` en esta misma carpeta: es el documento co
 3. **Menú:** recuadro de noticias arriba a la izquierda y enlace al rap de Porta (https://www.youtube.com/watch?v=HunKXh1ikes).
 4. **Transformaciones con un deseo a Shenron** (menú, permanente): botón `#gForma`, 5 tickets × número de forma, guardado `formas[héroe]`. Se bloquean **todas** las transformaciones (confirmado). En partida, aviso «FORMA BLOQUEADA».
 5. Pruebas nuevas: `herramientas/comprobar_combate.cjs`, `comprobar_roles.cjs`, `comprobar_formas.cjs`. Depuración: `window.AS.aj` y `window.AS.rol` permiten cambiar los ajustes en marcha.
-6. Diseño y plan en `Planes y diseños/superpowers/` (specs y plans del 2 nov.).
+6. Diseño y plan en `01 - Guía y documentación/Histórico/Planes y diseños/superpowers/` (specs y plans del 2 nov.).
 
 ## Valoración de Josemi tras jugar (para el bloque de jugabilidad, después)
 

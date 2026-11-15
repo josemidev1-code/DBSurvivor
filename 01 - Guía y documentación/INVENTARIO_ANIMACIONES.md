@@ -393,6 +393,6 @@ No tienen ninguna animación en el juego todavía.
 
 ## Cómo animar con Piskel
 
-1. `python herramientas/exportar_piskel_lote.py` deja en `piskel_animaciones/<personaje>_<forma>/` un `.piskel` por animación.
+1. `python herramientas/exportar_piskel_lote.py` deja en `04 - Piskel/<personaje>_<forma>/` un `.piskel` por animación.
 2. Abre el `.piskel` en https://www.piskelapp.com (Abrir → archivo), edita o añade fotogramas y guarda el `.piskel`.
-3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `piskel_animaciones/LEEME.md` antes).
+3. `python herramientas/importar_piskel.py` lo devuelve al juego (lee `04 - Piskel/LEEME.md` antes).

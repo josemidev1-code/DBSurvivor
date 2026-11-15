@@ -1,6 +1,8 @@
 # Estado actual — AnimeSurvivor
 
-**14 nov. 2026 (DB Dex):** nueva `dex/index.html` al estilo de PMD Sprite Collab: cada personaje con sus animaciones en movimiento, su estado (animada, 1 fotograma o falta) y filtros para saber qué animar con Piskel. Trae estadísticas del juego y datos de dragonball-api.com; lo que no tiene la API, inventado como en el anime. API estática en `dex/api/v1/`. Se regenera con `python herramientas/generar_dex.py`.
+**16 nov. 2026 (limpieza):** carpetas ordenadas: `03 - Dex/` y `04 - Piskel/` (antes `dex/` y `piskel_animaciones/`), documentos antiguos en `01 - Guía y documentación/Histórico/`, `herramientas/_revisar/` fuera de git (se regenera). Mapa visual en `ABREME - GUIA DEL PROYECTO.html`.
+
+**14 nov. 2026 (DB Dex):** nueva `03 - Dex/index.html` al estilo de PMD Sprite Collab: cada personaje con sus animaciones en movimiento, su estado (animada, 1 fotograma o falta) y filtros para saber qué animar con Piskel. Trae estadísticas del juego y datos de dragonball-api.com; lo que no tiene la API, inventado como en el anime. API estática en `03 - Dex/api/v1/`. Se regenera con `python herramientas/generar_dex.py`.
 
 **13 nov. 2026 (título y PokéSurvivor):** título nuevo en pixel art (DRAGON BALL con la esfera en la O y SURVIVOR debajo; `herramientas/generar_titulo.py` → `ui/titulo.png`). Botón «Cambiar opciones (R)» al subir de nivel (1 por partida + mejora «Consejo de Kaio»). Pantalla final con récord, casillas, maestría y botón Mejoras. **Estilo nuevo:** logo sacado de la foto (solo DRAGON BALL; SURVIVOR con la letra de DAIMA, versión C elegida por Josemi el 14 nov.), inicio con el mapa de fondo, marcos pixel art de 9 trozos en ventanas y HUD e iconos propios del menú (`herramientas/generar_interfaz.py` → `interfaz.css`). Escape vuelve a pausar. Pendiente de que Josemi lo valore. Ver la bitácora.
 
@@ -150,7 +152,7 @@ Actualizado: 5 de noviembre de 2026.
 
 ## 6 nov. — Auditoría e integración de sprites
 - 125 selecciones corregidas en 91 formas. Combos continuos y enemigos con secuencias de ataque. Cinco incorporaciones desde packs locales completos.
-- 307 formas montadas, índice sin rutas faltantes. Catálogo y pruebas de navegador sin errores de carga de sprites. Detalle y límites en REVISION_SPRITES_2026-11-06.md.
+- 307 formas montadas, índice sin rutas faltantes. Catálogo y pruebas de navegador sin errores de carga de sprites. Detalle y límites en Histórico/REVISION_SPRITES_2026-11-06.md.
 - Siete archivos vacíos sin extensión apartados con manifest recuperable. Créditos y fotogramas duplicados conservados para mantener procedencia e índices.
 - script.js?v=160, animaciones_juego.js?v=112. Guardado local, publicación pendiente.
 

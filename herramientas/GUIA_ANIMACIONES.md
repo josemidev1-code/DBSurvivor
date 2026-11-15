@@ -102,7 +102,7 @@ nada de efectos sueltos. Ejemplo revisado: `goku` forma `0`.
 - `python herramientas/auditar_animaciones.py` lista los packs sin usar y los ataques que faltan por personaje (`01 - Guía y documentación/AUDITORIA_ANIMACIONES.md`).
 - Las tandas nuevas van en un `herramientas/animaciones/zz_*.json`: se mezcla el último, campo a campo. Ejemplo: `zz_tanda_ataques_2026_11_06.json`.
 - `dash` no aporta ataque nuevo: la prueba del catálogo exige que sea igual que el vuelo.
-- `python herramientas/exportar_piskel_lote.py <heroe>` genera `piskel_animaciones/<heroe>_<forma>/` con `.piskel`, GIF y hoja. El camino de vuelta se explica a continuación.
+- `python herramientas/exportar_piskel_lote.py <heroe>` genera `04 - Piskel/<heroe>_<forma>/` con `.piskel`, GIF y hoja. El camino de vuelta se explica a continuación.
 
 
 ## Coherencia por técnica y vuelta de Piskel (6/11/2026)
@@ -114,7 +114,7 @@ nada de efectos sueltos. Ejemplo revisado: `goku` forma `0`.
 1. Exportar: `python herramientas/preparar_piskel.py goku 0`.
 2. Abrir https://www.piskelapp.com/p/create/sprite e importar el `.piskel`. La exportación guarda `origen.json` con personaje, forma, pack y huellas de los sprites originales. Los fotogramas repetidos conservan las pausas a pesar de que Piskel solo tiene una velocidad global.
 3. Reordenar, duplicar o quitar fotogramas; guardar un `.piskel`. No pintar sprites nuevos ni usar otro personaje. Se conservan las carpetas históricas de Piskel: que exista una carpeta no significa que esa animación siga activa.
-4. Validar: `python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/goku_0/origen.json --heroe goku --forma 0 --anim attack`. No cambia nada sin `--aplicar`.
+4. Validar: `python herramientas/importar_piskel.py editado.piskel --manifiesto "04 - Piskel/goku_0/origen.json" --heroe goku --forma 0 --anim attack`. No cambia nada sin `--aplicar`.
 5. Repetir con `--aplicar`: escribe `herramientas/animaciones/zzzz_piskel.json`, que se mezcla al final. Se aceptan nombres `tecnica_ID` además de las acciones normales. Ki, Beam y Hurt mantienen dos fotogramas.
 6. Ejecutar `python herramientas/montar_animaciones.py goku`, revisar PNG/GIF y jugar. Revisar también el origen del proyectil si se cambia el orden de una técnica que tenga `Origen` manual.
 

@@ -5,7 +5,7 @@ Para que nadie pierda el hilo, **todas las IAs deben cumplir estas reglas**.
 
 ## Al empezar
 
-1. Lee `01 - Guía y documentación/ESTADO_ACTUAL.md` y consulta las últimas entradas de `01 - Guía y documentación/BITACORA.md` si necesitas el relevo. Consulta `01 - Guía y documentación/TAREAS_CODEX.md` para prioridades, `01 - Guía y documentación/INDICE_SPRITES.md` para localizar packs y `01 - Guía y documentación/PRUEBAS_RAPIDAS.md` según la tarea. Consulta `README.md` y `01 - Guía y documentación/TAREAS_CODEX_HISTORICO.md` cuando necesites más contexto; pueden contener información histórica.
+1. Lee `01 - Guía y documentación/ESTADO_ACTUAL.md` y consulta las últimas entradas de `01 - Guía y documentación/BITACORA.md` si necesitas el relevo. Consulta `01 - Guía y documentación/TAREAS_CODEX.md` para prioridades, `01 - Guía y documentación/INDICE_SPRITES.md` para localizar packs y `01 - Guía y documentación/PRUEBAS_RAPIDAS.md` según la tarea. Consulta `README.md` y `01 - Guía y documentación/Histórico/TAREAS_CODEX_HISTORICO.md` cuando necesites más contexto; pueden contener información histórica.
 2. Si vas a tocar animaciones, lee `herramientas/GUIA_ANIMACIONES.md`.
 3. Si no queda claro qué hacer, comprueba el estado actual y consulta la lista «Lo que falta» de `README.md`,
    salvo que el usuario pida otra cosa.

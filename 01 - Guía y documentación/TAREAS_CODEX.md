@@ -23,7 +23,7 @@
 
 # Prioridades actuales
 
-Consulta `01 - Guía y documentación/ESTADO_ACTUAL.md` para el relevo breve y verifica la petición actual del usuario antes de seguir esta lista. El historial y los procedimientos anteriores se conservan en `01 - Guía y documentación/TAREAS_CODEX_HISTORICO.md`; pueden estar desactualizados.
+Consulta `01 - Guía y documentación/ESTADO_ACTUAL.md` para el relevo breve y verifica la petición actual del usuario antes de seguir esta lista. El historial y los procedimientos anteriores se conservan en `01 - Guía y documentación/Histórico/TAREAS_CODEX_HISTORICO.md`; pueden estar desactualizados.
 
 1. Que el usuario pruebe el movimiento con varios personajes y decida qué otras guardias necesitan revisión; `trunks/2` conserva polvo junto al pie según la bitácora.
 2. Verificar la rama y acordar con el usuario qué hacer con los cambios de `bloque1-fotogramas` y la rama de siete personajes antes de fusionar.

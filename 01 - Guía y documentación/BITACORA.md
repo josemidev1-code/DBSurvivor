@@ -4457,3 +4457,18 @@ ode --check.
 - Josemi: «Sí, sigue» (las 7 formas que quedaban).
 - Tanda 16 (13.ª parte): revisadas las 7 últimas. Vegetto Blue (`vegitoblue254`): **arreglado un fallo antiguo**, su vuelo y dos fotogramas del puñetazo eran de otro personaje del mismo pack (un Black con aura morada); ahora vuelo 196, puñetazos 181-183-189, combos 2 y 3, patada 2, rayo (277-278), muerte (243) y brazos arriba (255), todo revisado en la vista previa. Black Time Breaker mejorado: combo 2 (177-178), patada 2 (165-166) y rayo con el dedo (126-127). Combo 3 de Black Majin (21-22) y Tao Pai Pai (17-18). El resto (Goku Moro Blue, Black Rosé evolución, Trunks niño SSJ y los huecos de Black Majin y Tao Pai Pai) sin fotograma bueno en su pack. Montaje completo, Piskel, inventario y Dex regenerados; `index.html` a v=150.
 - Cierre de la tanda 16: ya no queda ninguna forma jugable con animaciones sin revisar. Jugables: 18 completas, 167 casi, 40 a medias (los «casi» y «a medias» son huecos sin fotograma bueno en su pack o animaciones de un solo fotograma).
+
+## 2026-11-16 — Claude (limpieza y orden de carpetas)
+
+### Lo que pidió el usuario
+- «quiero que me digas el proyecto ahora mismo como esta de carpetas… que quiero hacer una limpieza» y después «hazlo tu todo te doy permiso y quiero que organizes bien la carpeta, visualmente para que cualquiera se guie». Los personajes del anime sin sprites los buscará él por internet.
+
+### Lo que hice
+- Borradas las vistas previas regenerables de `herramientas/_revisar/` (571 MB; 817 de esos archivos estaban en git y se sacaron) y la copia local de `herramientas/pixelfx/` (66 MB, se vuelve a clonar). `_revisar/` va ahora en `.gitignore`. Quitado el stash viejo de vistas previas. `herramientas/` pasa de 650 MB a 14 MB.
+- Carpetas renombradas con número para que se vean en orden: `dex/` → `03 - Dex/` y `piskel_animaciones/` → `04 - Piskel/`. Actualizadas las rutas en `generar_dex.py`, `preparar_piskel.py`, `inventario_animaciones.py`, la Dex, los LEEME de Piskel y la documentación. `sprites/`, `ui/` y `herramientas/` conservan su nombre porque el juego y los programas los usan por dentro.
+- Documentos antiguos movidos a `01 - Guía y documentación/Histórico/` (revisiones de noviembre, análisis de PokéSurvivor, pixel art por código, relevos antiguos, la auditoría con capturas y `Planes y diseños/`).
+- Nueva guía visual `ABREME - GUIA DEL PROYECTO.html` con el mapa de carpetas y accesos directos (antes enlazaba a una carpeta que ya no existía). `LEEME.md` nuevos en `04 - Piskel/`, `ui/`, `herramientas/` y `Histórico/`. Tabla «Qué hay en la carpeta» del README rehecha.
+- Comprobado: el juego carga sin errores, la Dex abre desde `03 - Dex/`, todos los enlaces de la guía responden, `generar_dex.py`, `exportar_piskel_lote.py`, `inventario_animaciones.py` y `ver_pack.py` funcionan con las rutas nuevas, y pasan `test_piskel` y la comprobación de ataques. `unittest discover` de todas las pruebas se quedó colgado más de 6 minutos y se paró (sin mirar cuál).
+
+### Siguiente paso recomendado
+- Josemi buscará sprites de los personajes del anime que faltan (Chaoz, Zarbon, Dodoria, Dabura, Whis…); meterlos en `sprites/<serie>/…/<personaje>/` y montarlos. Hay packs sin usar de Androide 19 y Bujin.

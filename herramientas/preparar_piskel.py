@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from importar_piskel import huella
 from montar_animaciones import leer_config, cargar_forma, tira, CLAVES, DUR, RAIZ, claves_forma
 
-def export_to_piskel(heroe, forma, out_dir="piskel_animaciones"):
+def export_to_piskel(heroe, forma, out_dir="04 - Piskel"):
     config = leer_config()
     if heroe not in config or forma not in config[heroe]:
         print(f"Error: {heroe}/{forma} not found in configs")
@@ -143,7 +143,7 @@ def export_to_piskel(heroe, forma, out_dir="piskel_animaciones"):
     with open(os.path.join(char_dir, 'origen.json'), 'w', encoding='utf-8') as mf:
         json.dump(manifest, mf, ensure_ascii=False, indent=2)
 
-    # Generate README for this character in piskel_animaciones
+    # Generate README for this character in 04 - Piskel
     readme_path = os.path.join(char_dir, "LEEME_PISKEL.md")
     lines = [
         f"# Animaciones para Piskel — {heroe.upper()} (Forma {forma})",
@@ -159,7 +159,7 @@ def export_to_piskel(heroe, forma, out_dir="piskel_animaciones"):
         "   - **Import from picture**: selecciona el `_sheet.png` (pon el Frame size que se indica abajo).",
         "",
         "## Volver al juego:",
-        f"`python herramientas/importar_piskel.py editado.piskel --manifiesto piskel_animaciones/{heroe}_{forma}/origen.json --heroe {heroe} --forma {forma} --anim attack --aplicar`",
+        f"`python herramientas/importar_piskel.py editado.piskel --manifiesto \"04 - Piskel/{heroe}_{forma}/origen.json\" --heroe {heroe} --forma {forma} --anim attack --aplicar`",
         f"Después: `python herramientas/montar_animaciones.py {heroe}` y revisión visual. Solo se aceptan sprites originales exportados.",
         "",
         "## Animaciones disponibles:",

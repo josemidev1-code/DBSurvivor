@@ -2,9 +2,9 @@
 
 Uso:  python herramientas/generar_dex.py
 Escribe:
-- dex/datos.js                         (window.DEX, lo lee dex/index.html; funciona con doble clic)
-- dex/api/v1/personaje/index.json      (lista, al estilo de PokéAPI)
-- dex/api/v1/personaje/<id>.json       (ficha completa de cada personaje)
+- 03 - Dex/datos.js                         (window.DEX, lo lee 03 - Dex/index.html; funciona con doble clic)
+- 03 - Dex/api/v1/personaje/index.json      (lista, al estilo de PokéAPI)
+- 03 - Dex/api/v1/personaje/<id>.json       (ficha completa de cada personaje)
 
 De dónde sale cada dato:
 - Estadísticas del juego (PV, ataque, velocidad, recarga): HDEF de script.js, con la misma subida por forma que stats().
@@ -21,7 +21,7 @@ import inventario_animaciones as INV
 
 RAIZ = INV.RAIZ
 HERR = os.path.join(RAIZ, 'herramientas')
-DEX = os.path.join(RAIZ, 'dex')
+DEX = os.path.join(RAIZ, '03 - Dex')
 
 RAREZA = {0: 'INICIAL', 3: 'RARO', 4: 'ÉPICO', 5: 'LEGENDARIO'}
 ANIM_HOJA = {'idle': 'Idle', 'move': 'Walk', 'attack': 'Attack', 'kick': 'Kick', 'ki': 'Cast', 'pow': 'Pow', 'hurt': 'Hurt',
