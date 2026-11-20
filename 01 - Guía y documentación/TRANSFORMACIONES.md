@@ -12,11 +12,14 @@ Las transformaciones tienen que ser fieles a la serie, y cada forma ha de notars
 ## Cómo funciona (decidido)
 
 - **Barra de ki.** Se carga manteniendo una tecla: el personaje se queda quieto y no ataca. El aura atrae a los enemigos, cada golpe recibido quita parte de lo cargado y matar enemigos da muy poco ki. Los jefes castigan al que carga delante de ellos.
-- **Las formas altas piden más carga.** **(propuesta de Claude)** La barra está dividida en tramos, uno por forma. Al soltar la tecla, el personaje se transforma en la forma que haya cargado.
+- **Se sube forma a forma, cada una con sus tiempos (Josemi, 20 nov.).** «Cargas un tiempo razonable y después ya te transformas en Super Saiyan 1, en Super Saiyan 2, en Super Saiyan 3… cada transformación tiene sus respectivos tiempos, y en todos los personajes».
+  - Se carga un tiempo razonable y el personaje se transforma en la primera forma (SSJ1). Ya transformado, vuelve a cargar para subir a la siguiente (SSJ2), y así hasta la última forma abierta, como en la serie.
+  - Cada forma de cada personaje tiene **su tiempo de carga y su duración**. **(propuesta de Claude)** Las formas altas cargan más y duran menos. Valores de partida para ajustar jugando: SSJ1 carga 3 s y dura 25 s; cada forma siguiente carga 1,5 s más y dura 3 s menos. Al subir de forma, el tiempo vuelve a empezar con la duración de la nueva.
+  - Josemi aprobó el diseño («el diseño está bien… muy bien, la verdad») y pide que lo visual salga de los sprites («tienes que cogerlo de los sprites»).
 - **Transformación de unos 20 segundos**, con estallido de aura, temblor de pantalla y cambio al sprite de esa forma. Al acabar vuelve a la forma base y hay que volver a cargar.
 - **Personajes de una sola forma: «poder máximo».** Cargan igual y durante unos 20 segundos ganan un aura blanca, más fuerza y su técnica estrella potenciada, sin cambiar de sprite.
 - **Auras con PixelFX** (Josemi: «quedará mejor»). Las hojas de `05 - Sprites nuevos encontrados/…/03_Efectos_FX_y_Auras` sirven de modelo de cómo debe verse. Antes de darlas por buenas se manda un GIF a Josemi.
-- **(propuesta de Claude)** Las formas se siguen desbloqueando para siempre con el deseo a Shenron del menú. En cada partida, el nivel decide cuántos tramos de barra hay disponibles: todas las formas se abren por niveles (decidido por Josemi). **(propuesta de Claude)** Se reparten entre el nivel 5 y el 40 según cuántas formas tenga el personaje (Goku: una cada 4 o 5 niveles; Piccolo: la naranja hacia el nivel 20). Se ajustará con el simulador de partidas.
+- **(propuesta de Claude)** Las formas se siguen desbloqueando para siempre con el deseo a Shenron del menú. En cada partida, el nivel decide hasta qué forma se puede subir: todas las formas se abren por niveles (decidido por Josemi). **(propuesta de Claude)** Se reparten entre el nivel 5 y el 40 según cuántas formas tenga el personaje (Goku: una cada 4 o 5 niveles; Piccolo: la naranja hacia el nivel 20). Se ajustará con el simulador de partidas.
 
 ## Prioridad: los personajes principales primero
 
@@ -48,9 +51,9 @@ Cada forma tendría una mejora propia sacada de la serie, en vez del +25 % igual
 
 1. ~~Lista de principales~~: resuelta, son los 11 de arriba.
 2. ~~Formas inventadas por fans~~: resuelta. Cell Golden, Cell Majin y Broly SSJ4 salen de la cadena de los principales y se tratan más adelante, junto con los fanmade.
-3. ~~Muchas formas~~: resuelta. Josemi: «todas por niveles». En cada partida se empieza con las primeras formas y cada pocos niveles se abre la siguiente, en el orden de la serie; la barra solo tiene tramos hasta la forma abierta.
+3. ~~Muchas formas~~: resuelta. Josemi: «todas por niveles». En cada partida se empieza con las primeras formas y cada pocos niveles se abre la siguiente, en el orden de la serie; solo se puede subir hasta la forma abierta.
 
-Ya no quedan dudas abiertas: falta que Josemi apruebe el diseño completo.
+Diseño aprobado por Josemi el 20 nov. 2026.
 
 ## Todos los personajes (118 en la pantalla de selección)
 
