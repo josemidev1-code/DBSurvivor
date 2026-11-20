@@ -4629,6 +4629,7 @@ ode --check.
 - Goku y Vegeta (9 formas): Josemi elige «Todas por niveles» (cada pocos niveles se abre la siguiente forma de la serie).
 - Josemi: «vale, pero visualmente ponme para que lo vea». Hecha una página visual (artifact privado de claude.ai, https://claude.ai/artifact/RrptqZhy8XLpckaqe87dMw) con los sprites reales del juego: simulación de la carga de ki con la barra por tramos, línea de niveles de Goku, los principales con sus formas y mejoras, el poder máximo y el orden de trabajo. Los sprites se sacaron del juego en marcha (`ANIM_SET.h`).
 - Josemi aprueba el diseño: «el diseño está bien y tienes que cogerlo de los sprites… cargas un tiempo razonable y después ya te transformas en Super Saiyan 1, en Super Saiyan 2, en Super Saiyan 3… cada transformación tiene sus respectivos tiempos y en todos los personajes. Pero muy bien, la verdad». Cambio: se sube forma a forma (cargar → SSJ1, volver a cargar → SSJ2…), cada forma con su tiempo de carga y su duración.
+- Plan de implementación escrito en `01 - Guía y documentación/PLAN_TRANSFORMACIONES.md` (8 tareas: datos, carga forma a forma, conexión con la partida, mejoras por forma, enemigos que castigan la carga, barra de ki y botón táctil, auras PixelFX con GIF y cierre). Pendiente de que Josemi lo revise.
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
