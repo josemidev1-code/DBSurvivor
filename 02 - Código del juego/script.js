@@ -7208,12 +7208,11 @@ function render(time){
 
     if(e===P){const x=P.x-cam.x,y=P.y-cam.y;ctx.save();ctx.translate(x,y);ctx.scale(0.5,0.5);ctx.translate(-x,-y);shadow(x,y,P.moving&&!P.cast&&(P.anim*1.2|0)%4===2?18:16);
 
-      if(P.form>0){const fl=auraFlames(heroAura(S.hid,P.form)),f=(time*14|0)%3;
-
-        // sin aura permanente alrededor del personaje (Josemi, 11 nov.: «no dejes esa cosa que le envuelve»); el aura solo sale
-        // al transformarse (PFX.transform). Para recuperarla: PFX.aura(ctx,x,y+2,heroAura(S.hid,P.form),time,0,2) o las llamas fl[f]
-
-        if(P.form>=2&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
+      // aura solo mientras se carga ki (blanca) y mientras dura la transformación o el poder máximo (Josemi, 20 nov.);
+      // nunca en base sin cargar (11 nov.: «no dejes esa cosa que le envuelve»)
+      {const tr=P.tr&&P.tr.paso>0,ak=P.trCarg&&!tr?'white':tr?(P.trCad.length<2?'white':heroAura(S.hid,P.form)):null;
+        if(ak&&typeof PFX!=='undefined'&&PFX.aura)PFX.aura(ctx,x,y+2,ak,time,P.trCarg||(tr&&P.tr.paso>=2)?1:0,2);
+        if(tr&&P.trTE&&P.trTE.rayos&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 
       if(P.iframe>0&&((time*20|0)%2)){ctx.restore();continue;}
 
@@ -7588,7 +7587,7 @@ function hud(time){
       hudR(x-1,sy+w-11,12,12,'#04060f');text(String(i+1),x+1,sy+w-9,on?'#ffd23f':'#fed7aa',8,'left')}
     let ly=y-21;
     if(L[P.sel]){const W=MV[L[P.sel]];hudPill(W.name.toUpperCase(),ly,'#ffd23f','#7c2d12',HW/2);ly-=18}
-    if(S.t<12&&!TACTIL){const hint='WASD MOVER · 1-'+n+' ATAQUE · ESC PAUSA';if(hint.length*8+12<HW)hudPill(hint,ly,'#c7d2fe','#3b4a9c',HW/2);ly-=18}
+    if(S.t<12&&!TACTIL){const hint='WASD MOVER · 1-'+n+' ATAQUE · ESPACIO KI · ESC PAUSA';if(hint.length*8+12<HW)hudPill(hint,ly,'#c7d2fe','#3b4a9c',HW/2);ly-=18}
     if(!(S.boss&&!S.boss.dead)&&S.bossIdx<BOSS_T.length){const left=BOSS_T[S.bossIdx]-S.t;if(left<20){const t='SE ACERCA '+ET[MAPS[S.map].bosses[S.bossIdx]].n.toUpperCase()+' '+Math.ceil(left),big=t.length*16+12<HW;hudPill(t,ly-(big?8:0),(time*4|0)%2?'#fca5a5':'#ffffff','#dc2626',HW/2,big?16:8);ly-=big?30:18}}
     if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b=TACTIL?'TOCALO ABAJO PARA USARLO':'PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
 
