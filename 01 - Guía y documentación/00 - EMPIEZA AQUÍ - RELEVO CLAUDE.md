@@ -1,6 +1,19 @@
 # Empieza aquí — Relevo para Claude
 
-## >>> SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 22): HAZ ESTO PRIMERO <<<
+## >>> SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 23): HAZ ESTO PRIMERO <<<
+
+Sigue en la rama `claude/pensive-maxwell-rmrwmm` (repo en `~/Documents/Proyectos/DBSurvivor/DBSurvivor`). Detalle en «2026-11-20 — Claude (sesión 23)» de `BITACORA.md`.
+
+**Hecho en la sesión 23:**
+- Paso 1 de la lista de abajo HECHO: plugin `codex@openai-codex` 1.0.6 instalado (ámbito usuario) y `codex-cli` 0.171.0 ya conectado con la cuenta ChatGPT de Josemi. Hay `/codex:rescue`, `/codex:review`, `/codex:status`, `/codex:result` y el subagente `codex:codex-rescue`: úsalos para las animaciones (pasos 4 y 5).
+- Los 12 commits de Codex del 13 nov. que solo están en el `main` local se quedan fuera (Josemi: «la última versión es la que cuenta»). No fusionarlos ni borrarlos.
+- Las carpetas sin seguimiento `piskel_animaciones/` y `visor-sprites/` ya estaban; no tocarlas.
+
+**Siguiente:** paso 2 (esperar a que Josemi juegue y diga qué tal ritmo de niveles y jefes). Si no ha jugado, proponerle el diseño de transformaciones (paso 3) o arreglar las comprobaciones y el README (paso 7).
+
+---
+
+## (Anterior) SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 22)
 
 Rama con lo último: `claude/pensive-maxwell-rmrwmm` (subida a GitHub, sin fusionar en `main`). Detalle en la entrada «2026-11-20 — Claude (sesión 22)» de `BITACORA.md`.
 
