@@ -4626,6 +4626,7 @@ ode --check.
 - Josemi: «ponme una lista para que la vea yo de las cosas que tenemos que hacer aún. Y poquito a poquito vamos a ir haciendo». Hecha en `01 - Guía y documentación/LISTA_PENDIENTES.md`.
 - Josemi: «empieza por el 1». Quiere ver todos los personajes y cómo se transforman, pero primero los principales de la serie («Goku, Vegeta, Piccolo… los principales»): «vamos a trabajar primero con esos para animarlos bien… tener los personajes más icónicos de la serie bien animados y jugables. Y después ya seguiremos con los otros».
 - Josemi, sobre la lista: «primero vamos a centrarnos con todos los de la serie y después ya fanmade y todos esos… pero primero los principales, los que salen en la serie». Orden: principales de la serie → resto de la serie → fanmade. Las formas inventadas por fans salen de la cadena de los principales.
+- Goku y Vegeta (9 formas): Josemi elige «Todas por niveles» (cada pocos niveles se abre la siguiente forma de la serie).
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.

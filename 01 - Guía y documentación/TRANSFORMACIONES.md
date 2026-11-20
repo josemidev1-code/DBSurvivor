@@ -16,7 +16,7 @@ Las transformaciones tienen que ser fieles a la serie, y cada forma ha de notars
 - **Transformación de unos 20 segundos**, con estallido de aura, temblor de pantalla y cambio al sprite de esa forma. Al acabar vuelve a la forma base y hay que volver a cargar.
 - **Personajes de una sola forma: «poder máximo».** Cargan igual y durante unos 20 segundos ganan un aura blanca, más fuerza y su técnica estrella potenciada, sin cambiar de sprite.
 - **Auras con PixelFX** (Josemi: «quedará mejor»). Las hojas de `05 - Sprites nuevos encontrados/…/03_Efectos_FX_y_Auras` sirven de modelo de cómo debe verse. Antes de darlas por buenas se manda un GIF a Josemi.
-- **(propuesta de Claude)** Las formas se siguen desbloqueando para siempre con el deseo a Shenron del menú. En cada partida, el nivel decide cuántos tramos de barra hay disponibles (10, 20, 30 y 40, como ahora).
+- **(propuesta de Claude)** Las formas se siguen desbloqueando para siempre con el deseo a Shenron del menú. En cada partida, el nivel decide cuántos tramos de barra hay disponibles: todas las formas se abren por niveles (decidido por Josemi). **(propuesta de Claude)** Se reparten entre el nivel 5 y el 40 según cuántas formas tenga el personaje (Goku: una cada 4 o 5 niveles; Piccolo: la naranja hacia el nivel 20). Se ajustará con el simulador de partidas.
 
 ## Prioridad: los personajes principales primero
 
@@ -48,7 +48,9 @@ Cada forma tendría una mejora propia sacada de la serie, en vez del +25 % igual
 
 1. ~~Lista de principales~~: resuelta, son los 11 de arriba.
 2. ~~Formas inventadas por fans~~: resuelta. Cell Golden, Cell Majin y Broly SSJ4 salen de la cadena de los principales y se tratan más adelante, junto con los fanmade.
-3. **Goku y Vegeta tienen 9 y 10 formas.** ¿Se pueden cargar todas en una partida (barra muy larga) o eliges antes de jugar 4 o 5 formas?
+3. ~~Muchas formas~~: resuelta. Josemi: «todas por niveles». En cada partida se empieza con las primeras formas y cada pocos niveles se abre la siguiente, en el orden de la serie; la barra solo tiene tramos hasta la forma abierta.
+
+Ya no quedan dudas abiertas: falta que Josemi apruebe el diseño completo.
 
 ## Todos los personajes (118 en la pantalla de selección)
 
