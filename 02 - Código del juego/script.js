@@ -5133,8 +5133,9 @@ function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
     if(P.trTE.regen)P.hp=Math.min(st.maxhp,P.hp+st.maxhp*P.trTE.regen*dt);if(P.trTE.drenaje)P.hp=Math.max(1,P.hp-st.maxhp*P.trTE.drenaje*dt)}
   P.form=P.trCad[Math.min(P.tr.paso,P.trCad.length-1)];
   if(ev==='sube'){S.forms++;P.trDura=P.tr.t;const mx=stats().maxhp;P.hp=Math.min(mx,P.hp*mx/mx0);
-    S.banner={t:2.2,text:trNombre(P.tr.paso)+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.4;P.powT=1.2;cam.shake=8;sfx('trans');
-    if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,P.trCad.length<2?'white':heroAura(S.hid,P.form));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}
+    const pk=typeof scHero==='function'?scHero(S.hid,P.form):null,TA=pk&&pk.Trans,dT=TA?TA.du.reduce((a,b)=>a+b,0)/60:0;
+    S.banner={t:2.2+dT,text:trNombre(P.tr.paso)+'!',sub:'¡Transformación!',trans:1};S.flash=0.2;cam.shake=8;sfx('trans');
+    if(TA){P.transT=P.transD=dT;S.freeze=dT}else S.freeze=0.35;P.powT=TA?0.9:1.4}
   else if(ev==='vuelve'){P.hp=Math.min(P.hp,stats().maxhp);S.banner={t:1.4,text:'FIN DE LA TRANSFORMACIÓN',sub:'Vuelve a cargar ki'}}}
 
 
@@ -5188,6 +5189,8 @@ function rolAI(e,d,dx,dy,dt){if(e.caza){rolCancel(e);return null} // carga de ki
 // ---------- update ----------
 
 function update(dt){
+
+  if(P&&P.transT>0)P.transT-=dt;
 
   if(S.freeze>0){S.freeze-=dt;updateFx(dt);if(window.PFX)PFX.update(dt);return}
 
@@ -7210,8 +7213,9 @@ function render(time){
 
       // aura solo mientras se carga ki (blanca) y mientras dura la transformación o el poder máximo (Josemi, 20 nov.);
       // nunca en base sin cargar (11 nov.: «no dejes esa cosa que le envuelve»)
-      {const tr=P.tr&&P.tr.paso>0,ak=P.trCarg&&!tr?'white':tr?(P.trCad.length<2?'white':heroAura(S.hid,P.form)):null;
-        if(ak&&typeof PFX!=='undefined'&&PFX.aura)PFX.aura(ctx,x,y+2,ak,time,P.trCarg||(tr&&P.tr.paso>=2)?1:0,2);
+      // 20 nov. (Josemi: «prefiero la de los sprites»): sin aura de PixelFX; el aura es la dibujada en el pack
+      // (Pow al cargar, Trans al transformarse). Aquí solo quedan los rayos de SSJ2 mientras dura la forma.
+      {const tr=P.tr&&P.tr.paso>0;
         if(tr&&P.trTE&&P.trTE.rayos&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 
       if(P.iframe>0&&((time*20|0)%2)){ctx.restore();continue;}
@@ -7249,8 +7253,9 @@ function render(time){
         bm=P.cast?beams.find(q=>q.hero):null,chg=P.cast&&(!bm||bm.t<0),
         pose=P.atkPose||(P.atkK===2?'kick':P.atkK?'cast':'atk'),
         atk=!P.cast&&!(P.hitT>0)&&ak&&attackClip(pk,pose,P.atkV,P.atkId),
-        A=P.dead?(pk.Faint||pk.Hurt):P.hitT>0?pk.Hurt:pd?attackClip(pk,pd.pose,0,pd.id):P.cast?attackClip(pk,P.cast.pose||'beam',0,P.cast.id):P.dash?(pk.Dash||pk.Walk):atk||((pw&&pk.Pow)?pk.Pow:P.moving?pk.Walk:pk.Idle),
-        i=P.dead?Math.min(A.R.length-1,Math.floor(P.dead*3)):P.hitT>0?Math.min(1,A.R.length-1):pd?attackFrame(A,Math.min(0.49,(1-pd.t/pd.T)*0.5)):P.cast?(chg?0:A.R.length-1):P.dash?scFrame(A,time):atk?(['cast','beam','up'].includes(pose)?A.R.length-1:attackFrame(A,1-P.atkT/P.atkD)):scFrame(A,time),
+        trs=P.transT>0&&pk.Trans,
+        A=trs?pk.Trans:P.dead?(pk.Faint||pk.Hurt):P.hitT>0?pk.Hurt:pd?attackClip(pk,pd.pose,0,pd.id):P.cast?attackClip(pk,P.cast.pose||'beam',0,P.cast.id):P.dash?(pk.Dash||pk.Walk):atk||((pw&&pk.Pow)?pk.Pow:P.moving?pk.Walk:pk.Idle),
+        i=trs?Math.min(A.R.length-1,Math.floor((1-P.transT/P.transD)*A.R.length)):P.dead?Math.min(A.R.length-1,Math.floor(P.dead*3)):P.hitT>0?Math.min(1,A.R.length-1):pd?attackFrame(A,Math.min(0.49,(1-pd.t/pd.T)*0.5)):P.cast?(chg?0:A.R.length-1):P.dash?scFrame(A,time):atk?(['cast','beam','up'].includes(pose)?A.R.length-1:attackFrame(A,1-P.atkT/P.atkD)):scFrame(A,time),
         im=(left?A.L:A.R)[Math.max(0,Math.min(A.R.length-1,i|0))],fly=P.moving&&!P.cast&&!(P.hitT>0)&&A===pk.Walk,
 
         // vuelo bajo al moverse: la pose de impulso se despega 3 px de la sombra y flota (0, 1, 2, 1 px) a 8 pasos por segundo;

@@ -1,0 +1,43 @@
+{
+ "_nota": "20 nov. 2026 (Josemi: «prefiero la de los sprites»): secuencia de transformación del propio pack al llegar a la forma. Índices en el orden natural de los archivos del pack.",
+ "heroes": {
+  "goku": {
+   "1": {
+    "trans": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "transDu": [
+     10,
+     8,
+     10,
+     18
+    ]
+   },
+   "3": {
+    "trans": [
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111
+    ],
+    "transDu": [
+     8,
+     8,
+     8,
+     8,
+     10,
+     10,
+     8,
+     14
+    ]
+   }
+  }
+ }
+}
