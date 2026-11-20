@@ -4619,6 +4619,7 @@ ode --check.
 - Josemi aún no ha jugado; elige empezar por las transformaciones (paso 3): «No, transformaciones». Proponer el diseño antes de programar.
 - Diseño de transformaciones: Claude propuso A) por nivel o B) barra de ki que se activa con una tecla. Josemi: «barra de ki molaría, pero si es un reto cargar ki, porque si es fácil cargar ki sin que te disparen o te lo dejen difícil no tiene gracia».
 - Propuesta de carga aceptada por Josemi («Me vale así»): se carga manteniendo una tecla, quieto y sin atacar; el aura atrae a los enemigos; cada golpe recibido quita parte de lo cargado; matar da poco ki; las formas altas piden más carga; los jefes castigan la carga. Con la barra llena se pulsa para transformarse unos 20 s.
+- Personajes de una sola forma (117): Josemi elige «Poder máximo» (cargan la barra igual y entran en su poder máximo unos 20 s: aura, más fuerza y técnica estrella potenciada, sin cambiar de sprite).
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
