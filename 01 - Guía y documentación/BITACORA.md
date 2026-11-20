@@ -4643,6 +4643,7 @@ ode --check.
 - Josemi: «sí, sigue» (mismo trato a Vegeta y los demás principales).
 - Secuencias de transformación del pack para el resto de principales (revisados a ojo 32 packs): Vegeta SSJ, Dios, Blue, Blue Evolution y Ultra Ego; Gohan Místico y Bestia; Piccolo Naranja; Trunks SSJ y SSJ2; Freezer Black; Cell Semiperfecto; Buu Maligno, Super Buu y Buu Gohan; Broly Legendario; Goku Kaioken, Blue, UI Señal y UI Dominado. Sin secuencia en su pack (se transforman con su aura `pow`): Goku SSJ2 y Dios, Vegeta Super Vegeta y Majin, Gohan SSJ y SSJ2, Freezer 3.ª, Final, 100 % y Golden, Cell Perfecto, Kid Buu y Broly SSJ. Quitados fotogramas de efecto que el limpiador de fondo recortaba mal (llamas de Vegeta Dios, columna de Goku Blue, final de Freezer Black). Resto de `animaciones_juego.js` idéntico.
 - Josemi sobre las transformaciones con los sprites del pack: «me gustan».
+- Josemi pidió ver todas las transformaciones juntas en un GIF (enviado: cuadrícula de los 11 principales). Siguiente, elegido por Josemi: «poder máximo» (que se note durante los 20 s, con sprites).
 - Decisiones tomadas por Claude (detalle en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`): matar da 0,005 de carga (con 0,02 las hordas llenaban la barra solas); la partida empieza siempre en la base; en la forma base no hay rasgo; el aura del 11 nov. se reutiliza tal cual.
 
 ### Lo que hice
