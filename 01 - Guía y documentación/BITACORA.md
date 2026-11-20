@@ -4636,6 +4636,7 @@ ode --check.
 - GIF mandados a Josemi: Goku cargando (Kaioken → SSJ → SSJ2) y Krilin en poder máximo. Montados con un codificador de GIF propio en el navegador (no hay ffmpeg ni Pillow en el Mac).
 - Comprobaciones: pasan `comprobar_transformaciones`, `formas`, `roles`, `combate`, `personajes`, `animaciones_ataques` y `catalogo_sprites`. Fallan `enemigos`, `objetos` y `rotacion`, igual que antes de esta sesión (comprobado en el commit 329c35b).
 - Error mío durante la tarea 5: ejecuté sin querer un `git stash` y lo deshice al momento con `git stash pop`; no se perdió nada.
+- Josemi pidió ver el juego y después fotos (5 enviadas). Opinión: «no me gustan… no siento que sean como las de la serie… tiene un fondo blanco y eso, yo prefiero la de los sprites. Mira en los sprites cómo está la transformación, y si no, fíjate en otros juegos así de pixel art, cómo transforman».
 - Decisiones tomadas por Claude (detalle en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`): matar da 0,005 de carga (con 0,02 las hordas llenaban la barra solas); la partida empieza siempre en la base; en la forma base no hay rasgo; el aura del 11 nov. se reutiliza tal cual.
 
 ### Lo que hice
