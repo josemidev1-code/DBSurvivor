@@ -4622,6 +4622,7 @@ ode --check.
 - Personajes de una sola forma (117): Josemi elige «Poder máximo» (cargan la barra igual y entran en su poder máximo unos 20 s: aura, más fuerza y técnica estrella potenciada, sin cambiar de sprite).
 - Josemi, sobre el poder máximo: «a las de una sola forma les pondría como un aura blanca… porque en los sprites seguro que está… pero que le quede bien… para que sepan que tienen más poder».
 - Claude encontró dos hojas de auras en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/03_Efectos_FX_y_Auras/` (todas las fases SWL y carga de ki). Josemi: «puedes usar esa, pero creo que quedará mejor» con el repositorio PixelFX de GitHub: «descárgalo, instálalo y así lo usamos para Dragon Ball. Y ponme una lista de lo que tenemos que hacer, lo que queda por hacer. Y te digo yo».
+- Josemi: recordar que tenemos ChatGPT con el plugin de Codex y la página Sprite Fusion para hacer las animaciones de los personajes a los que les faltan movimientos, «pero eso más adelante, porque tengo los créditos limitados y necesito que sea bueno». Usar ChatGPT para lo que Claude no pueda hacer, por ejemplo pasar a pixel art imágenes de objetos de Dragon Ball: «así os complementáis y sois el mejor equipo».
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
