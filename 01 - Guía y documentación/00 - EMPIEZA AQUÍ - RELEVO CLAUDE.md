@@ -1,6 +1,29 @@
 # Empieza aquí — Relevo para Claude
 
-## >>> SIGUIENTE SESIÓN (dejado el 11 nov. 2026): HAZ ESTO PRIMERO <<<
+## >>> SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 22): HAZ ESTO PRIMERO <<<
+
+Rama con lo último: `claude/pensive-maxwell-rmrwmm` (subida a GitHub, sin fusionar en `main`). Detalle en la entrada «2026-11-20 — Claude (sesión 22)» de `BITACORA.md`.
+
+**Hecho el 20 nov.** (script.js?v=194):
+- Arreglados los dos cuelgues tras los jefes: técnicas fusionadas del cofre sin `wid`/`dur` (nuevo `fusionSt()`) y técnicas sin descripciones por nivel que impedían abrir la subida de nivel (nuevo `mvDs()`). El rayo PixelFX solo se crea con tamaños válidos.
+- Rayos (Kamehameha…) apuntan al grupo más denso (`crowdTarget()`); bolas de ki en abanico con dispersión; teledirigidas giran más lento y no cambian de objetivo.
+- Niveles más lentos: `need`=5+4l+0,8l²+0,03l³ (≈ nivel 20 a los 4 min; antes 38). Jefes: vida ×1,35×(1+0,05×nivel) (tardan 22-83 s; antes 4-29 s).
+- Simulador de partidas (bot que se mueve y alterna ataques) usado para medir: no está en el repo; rehacerlo con `AS.tick`, `AS.S`, `AS.P` si hace falta.
+
+**Por hacer (pedido por Josemi, en este orden salvo que diga otra cosa):**
+1. Instalar el plugin `openai/codex-plugin-cc` (lo hace Josemi con `/plugin`; Codex necesita su cuenta de OpenAI) y usar Codex/ChatGPT para mejorar las animaciones.
+2. Que Josemi juegue y valore el ritmo de niveles y la dificultad de jefes; ajustar si hace falta.
+3. Transformaciones en partida (Super Saiyan, Cell → Cell Perfecto…) y mejoras distintas por personaje, fieles al lore. Proponer el diseño antes de programar.
+4. Pulir ataques y animaciones de todos los personajes uno a uno. 70 de 133 enemigos tienen un solo fotograma de movimiento (Jiren, Janemba, Nappa, Dabura, Broly, Black, Toppo, Whis, Bills…).
+5. Ataques no genéricos por personaje y época (Goku aún tiene «Ráfaga de Ki» y «Combo de golpes»): enseñar lista a Josemi antes de aplicarla.
+6. Pendiente de valorar por Josemi: título/estilo del 13 nov., efectos PixelFX del 11 nov., recursos de `05 - Sprites nuevos encontrados/`.
+7. Comprobaciones que fallan desde el 6 nov.: `comprobar_enemigos`, `formas`, `objetos`, `rotacion`. README «Cómo está ahora» anticuado (dice 62 personajes; hay 118).
+
+Objetivo de Josemi: juego entretenido y «dopamínico», con satisfacción visual al arrasar hordas y algo de reto en los jefes.
+
+---
+
+## (Anterior) SIGUIENTE SESIÓN (dejado el 11 nov. 2026)
 
 Josemi abrirá una sesión nueva y solo dirá «sigue». Trabaja en la rama `claude/nice-darwin-y7t5jp` (o la que indique el sistema), lee las últimas entradas de `BITACORA.md` y haz, en este orden:
 

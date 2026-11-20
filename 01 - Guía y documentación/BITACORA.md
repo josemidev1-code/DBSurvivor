@@ -4590,6 +4590,8 @@ ode --check.
 
 ### A medias / problemas
 - Codex: el plugin `openai/codex-plugin-cc` no está en el catálogo de esta sesión en la nube ni hay CLI de Codex; necesita que Josemi lo instale con `/plugin` y su cuenta de OpenAI (ver respuesta de la sesión).
+- Respuesta a «¿están animados todos?»: 70 de 133 tipos de enemigo tienen un solo fotograma de movimiento.
+- Relevo para el siguiente chat escrito en «00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md».
 - Sin hacer todavía: transformaciones en partida y mejoras propias por personaje (diseño a hablar con Josemi), pulido de ataques y animaciones uno a uno.
 
 ### Siguiente paso recomendado
