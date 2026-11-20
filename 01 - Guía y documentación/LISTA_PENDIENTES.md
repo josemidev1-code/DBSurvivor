@@ -4,11 +4,13 @@ Actualizada el 20 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a po
 
 ## A. Transformaciones (diseño hablado el 20 nov.)
 
-- [ ] 1. Escribir el diseño completo y enseñar a Josemi la lista de mejoras de cada forma, fiel a la serie.
-- [ ] 2. Barra de ki por tramos: se carga manteniendo una tecla, quieto y sin atacar; el aura atrae a los enemigos y los golpes quitan carga.
-- [ ] 3. Transformación de unos 20 segundos con su sprite y un aura del color de la forma.
-- [ ] 4. Poder máximo con aura blanca para los personajes de una sola forma.
-- [ ] 5. Crear las auras y la carga de ki con PixelFX y mandar un GIF a Josemi.
+- [x] 1. Escribir el diseño completo y enseñar a Josemi la lista de mejoras de cada forma, fiel a la serie.
+- [x] 2. Barra de ki por tramos: se carga manteniendo una tecla, quieto y sin atacar; el aura atrae a los enemigos y los golpes quitan carga.
+- [x] 3. Transformación de unos 20 segundos con su sprite y un aura del color de la forma.
+- [x] 4. Poder máximo con aura blanca para los personajes de una sola forma.
+- [x] 5. Crear las auras y la carga de ki con PixelFX y mandar un GIF a Josemi.
+
+- [ ] Que Josemi vea los GIF (Goku y Krilin) y juegue: ajustar tiempos, auras y mejoras.
 
 ## B. Jugar y ajustar
 

@@ -4632,6 +4632,11 @@ ode --check.
 - Plan de implementación escrito en `01 - Guía y documentación/PLAN_TRANSFORMACIONES.md` (8 tareas: datos, carga forma a forma, conexión con la partida, mejoras por forma, enemigos que castigan la carga, barra de ki y botón táctil, auras PixelFX con GIF y cierre). Josemi: «sí, empieza». Se programa en esta sesión, tarea a tarea (registro en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`).
 - Tareas 1-3 hechas: `transformaciones.js` (cadenas, tiempos, mejoras, carga forma a forma) y conexión con la partida (Espacio para cargar, quieto y sin atacar; los golpes quitan carga; matar da muy poco). Probado en el navegador: Goku nivel 12 → Kaioken a los 3 s.
 - Josemi, para el futuro: «molaría que les saliese un bocadillo a los enemigos y dijeran alguna frase». Apuntado en `LISTA_PENDIENTES.md` (punto 16).
+- Tareas 4-8 hechas: mejora propia de cada forma (Kaioken drena vida, SSJ2 rayos que saltan, SSJ3/Blue/Golden duran menos, Dios/Perfecto/Kid Buu se regeneran, UI esquiva y UI Dominado contraataca, Majin recibe más daño, Ultra Ego y Bestia pegan más con menos vida, Super Buu absorbe, Legendario crece con el tiempo, Freezer 100 % se cansa); los enemigos van a por quien carga y los jefes adelantan su rayo; barra de ki en el HUD («KI > forma siguiente» y cuenta atrás) y botón KI táctil; aura de PixelFX (la del 11 nov.) solo al cargar y transformado; «ESPACIO KI» en la ayuda de controles.
+- GIF mandados a Josemi: Goku cargando (Kaioken → SSJ → SSJ2) y Krilin en poder máximo. Montados con un codificador de GIF propio en el navegador (no hay ffmpeg ni Pillow en el Mac).
+- Comprobaciones: pasan `comprobar_transformaciones`, `formas`, `roles`, `combate`, `personajes`, `animaciones_ataques` y `catalogo_sprites`. Fallan `enemigos`, `objetos` y `rotacion`, igual que antes de esta sesión (comprobado en el commit 329c35b).
+- Error mío durante la tarea 5: ejecuté sin querer un `git stash` y lo deshice al momento con `git stash pop`; no se perdió nada.
+- Decisiones tomadas por Claude (detalle en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`): matar da 0,005 de carga (con 0,02 las hordas llenaban la barra solas); la partida empieza siempre en la base; en la forma base no hay rasgo; el aura del 11 nov. se reutiliza tal cual.
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.

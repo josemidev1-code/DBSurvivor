@@ -4,6 +4,7 @@ Todas las tareas: revisa los cambios concretos y ejecuta `node --check "02 - Có
 
 - **Movimiento y colisiones:** juega con varios personajes, comprueba las cuatro direcciones, obstáculos, ataques y pausa. Si cambian sprites, revisa también sus poses visualmente.
 - **Personajes y animaciones:** `node herramientas/comprobar_personajes.cjs`; consulta `herramientas/GUIA_ANIMACIONES.md` y revisa los sprites de la forma afectada en movimiento. Para formas nuevas usa los IDs como argumentos cuando corresponda.
+- **Transformaciones:** `node herramientas/comprobar_transformaciones.cjs` y `node herramientas/comprobar_formas.cjs`; en partida, mantener Espacio con Goku (deseos pedidos a Shenron) y comprobar carga, subida de forma, aura y fin de la transformación.
 - **Enemigos y mapas:** `node herramientas/comprobar_enemigos.cjs` y juega una partida del mapa afectado. La simulación no sustituye la prueba visual.
 - **Objetos:** `node herramientas/comprobar_objetos.cjs` y comprueba recogida y efectos en partida.
 - **Menús y HUD:** abre el juego, recorre las pantallas afectadas y comprueba botones, teclado y tamaños de ventana.

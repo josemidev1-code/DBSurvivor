@@ -53,7 +53,7 @@ Cada forma tendría una mejora propia sacada de la serie, en vez del +25 % igual
 2. ~~Formas inventadas por fans~~: resuelta. Cell Golden, Cell Majin y Broly SSJ4 salen de la cadena de los principales y se tratan más adelante, junto con los fanmade.
 3. ~~Muchas formas~~: resuelta. Josemi: «todas por niveles». En cada partida se empieza con las primeras formas y cada pocos niveles se abre la siguiente, en el orden de la serie; solo se puede subir hasta la forma abierta.
 
-Diseño aprobado por Josemi el 20 nov. 2026.
+Diseño aprobado por Josemi el 20 nov. 2026. **Programado el mismo día** (ver `PLAN_TRANSFORMACIONES.md`); falta su opinión sobre los GIF y ajustar tiempos jugando.
 
 ## Todos los personajes (118 en la pantalla de selección)
 
