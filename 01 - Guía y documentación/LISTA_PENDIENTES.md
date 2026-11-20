@@ -26,6 +26,10 @@ Actualizada el 20 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a po
 - [ ] 11. Más adelante: crear con Sprite Fusion las animaciones que falten (los créditos son limitados, así que antes hay que preparar bien lo que se pide).
 - [ ] 12. Usar ChatGPT para lo que Claude no pueda hacer, como pasar a pixel art objetos de Dragon Ball.
 
+## F. Ideas para el futuro
+
+- [ ] 16. Bocadillos de diálogo sobre los enemigos con alguna frase suya (Josemi, 20 nov.: «molaría que les saliese un bocadillo a los enemigos y dijeran alguna frase»).
+
 ## E. Mantenimiento
 
 - [ ] 13. Arreglar las 4 comprobaciones que fallan (enemigos, formas, objetos y rotación).
