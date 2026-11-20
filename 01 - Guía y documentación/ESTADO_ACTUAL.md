@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**20 nov. 2026 (sesión 22 — arreglos de partida):** arreglados los dos cuelgues tras los jefes (fusiones sin datos de rayo y técnicas sin descripción por nivel). Kamehameha y rayos apuntan al grupo más grande; bolas de ki menos teledirigidas. Subida de nivel más lenta (≈ nivel 20 a los 4 min, antes 38) y jefes con más vida según tu nivel. Pendiente de que Josemi lo juegue. Ver la bitácora.
+
 **15 nov. 2026 (sesión 21 — Assets, Esferas del Dragón, Objetos y FX en Pixel Art):** Incorporación de 43 nuevos archivos en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/` clasificados en 4 categorías: Esferas del Dragón maestras y recortadas transparentes (184px, 32px y 24px), Shenron invocación pixel art, Radar del Dragón animado (50 frames), Nube Kinton SWL completa, Semillas Senzu, Scouters, mega hoja de ataques LSW (4050x3400), auras de todas las fases, proyectiles de ki, cráteres de suelo y HUD en pixel art puro sin pérdidas. Catálogo completo en `INDICE_SPRITES_NUEVOS.md` y créditos en `CREDITOS_RECURSOS.md`.
 
 **16 nov. 2026 (limpieza):** carpetas ordenadas: `03 - Dex/` y `04 - Piskel/` (antes `dex/` y `piskel_animaciones/`), documentos antiguos en `01 - Guía y documentación/Histórico/`, `herramientas/_revisar/` fuera de git (se regenera). Mapa visual en `ABREME - GUIA DEL PROYECTO.html`.

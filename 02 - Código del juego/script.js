@@ -4035,7 +4035,9 @@ function newGame(hid,map){
 
 }
 
-const need=l=>Math.floor(4+l*3.5+l*l*0.28);
+// Experiencia para pasar de nivel. Antes (4+3,5l+0,28l²) se llegaba a nivel 37 a los 4 min y a 90 a los 7 min;
+// ahora el principio sigue siendo rápido y luego cuesta más (≈ nivel 25-30 a los 5 min con buen equipo).
+const need=l=>Math.floor(5+l*4+l*l*0.8+l*l*l*0.03);
 
 function addMove(id){if(!P.moves[id]){P.moves[id]={lv:1,t:0.4,evo:false};P.order.push(id)}else P.moves[id].lv++}
 
@@ -4134,6 +4136,13 @@ function near(x,y,r,cb){const x0=Math.floor((x-r)/CELL),x1=Math.floor((x+r)/CELL
 
 function nearest(x,y,maxD=260){let best=null,bd=maxD*maxD;for(const e of enemies){if(e.dead)continue;const d=(e.x-x)**2+(e.y-y)**2;if(d<bd){bd=d;best=e}}return best}
 
+// Enemigo hacia el que un rayo atraviesa a más enemigos (Josemi: «el Kamehameha tiene que ir a la pila de enemigos»).
+// Prueba la dirección de cada enemigo cercano y cuenta cuántos caen dentro del rayo; en empate, el más cercano.
+function crowdTarget(x,y,len,wid){const L=enemies.filter(e=>!e.dead&&(e.x-x)**2+(e.y-y)**2<len*len);if(!L.length)return null;
+  L.sort((a,b)=>((a.x-x)**2+(a.y-y)**2)-((b.x-x)**2+(b.y-y)**2));const C=L.slice(0,40),hw=Math.max(8,wid/2);let best=C[0],bn=-1;
+  for(const t of C){const a=Math.atan2(t.y-6-y,t.x-x),ca=Math.cos(a),sa=Math.sin(a);let n=0;
+    for(const e of L){const dx=e.x-x,dy=e.y-6-y,f=dx*ca+dy*sa;if(f<0||f>len)continue;if(Math.abs(-dx*sa+dy*ca)<hw+(e.r||6))n++}
+    if(n>bn){bn=n;best=t}}return best}
 function nearestN(x,y,n){return enemies.filter(e=>!e.dead).map(e=>[e,(e.x-x)**2+(e.y-y)**2]).sort((a,b)=>a[1]-b[1]).slice(0,n).map(a=>a[0])}
 
 
@@ -4309,13 +4318,13 @@ function fire(id,m,st,ps){
 
        attackRelease(W,aimAt(ts[0]));P.tilt=heroTilt(d<0,0,0);const hh=heroHand(1,d<0);if(hh){ox=hh[0];oy=hh[1]}}
 
-     for(let i=0;i<n;i++){const t=ts[i%Math.max(1,ts.length)];const a=W.ring?i*TAU/n+rnd(-0.05,0.05):aimAt(t)+(ts.length<n?(i-(n-1)/2)*0.18:rnd(-0.05,0.05));
+     for(let i=0;i<n;i++){const t=ts[i%Math.max(1,ts.length)];const a=W.ring?i*TAU/n+rnd(-0.05,0.05):aimAt(ts[0])+(i-(n-1)/2)*0.2+rnd(-0.12,0.12);
 
        projs.push({k:'ki',x:ox,y:oy,vx:Math.cos(a)*st.spd,vy:Math.sin(a)*st.spd,r:4*ps.area,dmg,pierce:st.pierce+(ev?2:0),life:W.home?2.2:1.3,home:W.home?(t||true):null,age:0,hit:new Set(),col:W.col,spr:FO&&KI_REAL.has(id)?heroKi():null})}
 
      attackRelease(W,aimAt(ts[0]));sfx('shot');break}
 
-   case 'beam':{const t=nearest(ox,oy,st.len);const a=aimAt(t);shout(id,ev);
+   case 'beam':{const t=crowdTarget(ox,oy,st.len,st.wid||16);const a=aimAt(t);shout(id,ev);
 
      const evm=ev?1.5:1;
 
@@ -4323,7 +4332,7 @@ function fire(id,m,st,ps){
 
      {const bm={x:ox,y:oy,a,len:st.len*ps.area*(ev?1.25:1),wid:st.wid*ps.area*evm,dur,t:-ch,T:ch,tick:0,dmg:dmg*0.45,col:W.col,spiral:W.spiral,hero:1,big:!W.spiral,mv:id};
      // Kamehameha y sus variantes: carga, rayo e impacto de pixelfx (efectos_pixelfx.js); si no carga, el rayo de siempre
-     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)){bm.estilo=PFX_ESTILO[id]||(W.spiral?'espiral':'kame');bm.pfx=PFX.beam(bm)}beams.push(bm)}
+     if(window.PFX&&PFX.beam&&PFX_RAYO.test(id)&&bm.len>0&&bm.wid>0&&bm.dur>0){bm.estilo=PFX_ESTILO[id]||(W.spiral?'espiral':'kame');bm.pfx=PFX.beam(bm)}beams.push(bm)}
 
      P.cast={a,t:ch+dur,pose:attackPose(W),id};sfx('charge');setTimeout(()=>sfx('beam'),ch*1000);break}
 
@@ -4413,7 +4422,7 @@ function spawn(type,x,y){
 
     kx:0,ky:0,flash:0,anim:rnd(4),spr,h:spr.h*(spr.big?1:d.boss?2:1),shootT:d.shoot?rnd(1,d.shoot):0,aiT:2,aiS:0,pc:(PAL[type]||{}).g||(PAL[type]||{}).p||(PAL[type]||{}).s,aura:d.aura};
 
-  if(d.boss)e.hp*=1+0.03*lv;if(d.boss&&S.endless)e.hp*=1+S.t/600;
+  if(d.boss)e.hp*=1.35*(1+0.05*lv);if(d.boss&&S.endless)e.hp*=1+S.t/600;
 
   {const D=DIFF[S.diff||0];e.hp*=D.hp;e.dmg*=D.dmg;if(!d.boss)e.spd*=Math.min(1.25,1+(D.hp-1)*0.05)}
 
@@ -4816,6 +4825,16 @@ const RELICS={
 
 // ---------- FUSIONES DE TÉCNICAS (Recompensa de derrotar jefes) ----------
 
+// Estadísticas de una técnica fusionada: parte de una técnica base del mismo tipo (así tiene todos los
+// datos que necesita: rayo = len, wid, dur, charge; disparo = count, spd…) y la refuerza. Antes solo traía
+// w/len sueltos, el rayo salía con ancho NaN y el juego se colgaba al dispararlo tras derrotar a un jefe.
+function fusionSt(op){const rec=op.rec||{},kind=rec.kind||'beam';
+  const base=[op.idA,op.idB].map(i=>MV[i]).find(m=>m&&m.kind===kind&&m.st)||Object.values(MV).find(m=>m.kind===kind&&m.st);
+  return lv=>{const b=base?base.st(Math.min(5,lv+1)):{};const o={...b,dmg:(b.dmg||30)*1.7,cd:Math.max(0.6,(b.cd||2.5)*0.8)};
+    if(rec.len&&o.len)o.len=rec.len;if(rec.w&&o.wid)o.wid=rec.w;if(rec.rad&&o.rad)o.rad=rec.rad;if(rec.reach&&o.reach)o.reach=rec.reach;
+    return o}}
+// Descripciones por nivel de una técnica; algunas (Genkidama, fusiones…) no traen lista y colgaban la subida de nivel.
+function mvDs(W){return W.ds&&W.ds.length?W.ds:[W.desc||'Nueva técnica','+Daño','+Daño y alcance','+Daño','+Daño y menos recarga']}
 const FUSION_RECIPES = {
 
   'kame+galick': {id:'finalkame',name:'FINAL KAMEHAMEHA',desc:'Fusión de Kamehameha y Galick Gun. Haz gigantesco de energía divina que desintegra todo (+150% daño).',col:['#60a5fa','#a855f7'],pose:'beam',kind:'beam',len:480,w:32,hits:14,dmg:4.5,cd:3.2},
@@ -4942,7 +4961,7 @@ function applyOpt(op){
 
      if(!MV[op.fusId] && op.rec){
 
-       MV[op.fusId]={name:op.fusName,kind:op.rec.kind||'beam',pose:op.rec.pose||'beam',col:op.rec.col||['#fbbf24','#60a5fa'],st:(lv)=>({dmg:(op.rec.dmg||4.0)*(1+lv*0.25),cd:Math.max(0.6,(op.rec.cd||2.5)*(1-lv*0.05)),len:480,w:34,hits:12,rad:180,reach:220,kb:100})};
+       MV[op.fusId]={name:op.fusName,kind:op.rec.kind||'beam',pose:op.rec.pose||'beam',col:op.rec.col||['#fbbf24','#60a5fa'],st:fusionSt(op)};
 
      }
 
@@ -5012,7 +5031,7 @@ function optInfo(op){
 
   if(op.t==='relic'){const R=RELICS[op.id],cv=icon(R.ic,32);return{cv,nm:R.name,lv:'LEGADO',ds:R.desc,cls:'evo'}}
 
-  if(op.t==='move'||op.t==='new'){const W=MV[op.id],lv=P.moves[op.id]?P.moves[op.id].lv+1:1,cv=sigIcon(op.id,32);return{cv,nm:W.name,lv:op.t==='new'?'¡NUEVA TÉCNICA!':'NIVEL '+lv,ds:W.ds[lv-1]+(lv===5?' · Evoluciona con '+CARDS[W.req].name:''),cls:op.t==='new'?'new':''}}
+  if(op.t==='move'||op.t==='new'){const W=MV[op.id],lv=P.moves[op.id]?P.moves[op.id].lv+1:1,cv=sigIcon(op.id,32);return{cv,nm:W.name,lv:op.t==='new'?'¡NUEVA TÉCNICA!':'NIVEL '+lv,ds:mvDs(W)[lv-1]+(lv===5&&CARDS[W.req]?' · Evoluciona con '+CARDS[W.req].name:''),cls:op.t==='new'?'new':''}}
 
   if(op.t==='evo'){const W=MV[op.id],cv=sigIcon(op.id,32);return{cv,nm:W.evo,lv:'EVOLUCIÓN',ds:'Evoluciona '+W.name+': mucho más daño y tamaño.',cls:'evo'}}
 
@@ -5034,7 +5053,7 @@ function openLevelUp(title,cambio){
 
   options().forEach((op,i)=>{const inf=optInfo(op),b=document.createElement('button');b.type='button';b.className='up t-'+op.t+' '+inf.cls;
     const cat={fusion:'FUSIÓN',relic:'LEGADO',move:'TÉCNICA',new:'TÉCNICA',evo:'EVOLUCIÓN',card:'PASIVA',sig:'ATAQUE',sigup:'ATAQUE',heal:'CURACIÓN'}[op.t]||'BOTÍN';
-    let pips='';if(op.t==='move'||op.t==='new'||op.t==='sigup'){const W=MV[op.id],mx=op.t==='sigup'?5:W.ds.length,n=op.t==='sigup'?sigLv(op.i)+1:(P.moves[op.id]?P.moves[op.id].lv+1:1);pips='<span class="pips" aria-label="Nivel '+n+' de '+mx+'">'+Array.from({length:mx},(_,k)=>'<i class="'+(k<n-1?'on':k===n-1?'next':'')+'"></i>').join('')+'</span>'}
+    let pips='';if(op.t==='move'||op.t==='new'||op.t==='sigup'){const W=MV[op.id],mx=op.t==='sigup'?5:mvDs(W).length,n=op.t==='sigup'?sigLv(op.i)+1:(P.moves[op.id]?P.moves[op.id].lv+1:1);pips='<span class="pips" aria-label="Nivel '+n+' de '+mx+'">'+Array.from({length:mx},(_,k)=>'<i class="'+(k<n-1?'on':k===n-1?'next':'')+'"></i>').join('')+'</span>'}
     b.insertAdjacentHTML('beforeend','<span class="lv"><em>'+cat+'</em>'+inf.lv+'</span>');
     const wr=document.createElement('span');wr.className='upIco';const ic=cvCopy(inf.cv||icon(inf.ic,32));ic.setAttribute('aria-hidden','true');wr.appendChild(ic);b.appendChild(wr);
     b.insertAdjacentHTML('beforeend','<span class="nm">'+inf.nm+'</span><span class="ds">'+inf.ds+'</span>'+pips+'<span class="key">'+(i+1)+'</span>');
@@ -5222,7 +5241,7 @@ function update(dt){
 
     // bolas teledirigidas: salen abiertas y luego giran hacia su enemigo
 
-    if(p.home&&(p.age=(p.age||0)+dt)>0.12){if(p.home===true||p.home.dead)p.home=nearest(p.x,p.y,240)||true;if(p.home!==true){const sp=Math.hypot(p.vx,p.vy),a=Math.atan2(p.home.y-8-p.y,p.home.x-p.x),k=Math.min(1,dt*7);p.vx+=(Math.cos(a)*sp-p.vx)*k;p.vy+=(Math.sin(a)*sp-p.vy)*k}}
+    if(p.home&&(p.age=(p.age||0)+dt)>0.12){if(p.home!==true&&p.home.dead)p.home=true;if(p.home!==true){const sp=Math.hypot(p.vx,p.vy),a=Math.atan2(p.home.y-8-p.y,p.home.x-p.x),k=Math.min(1,dt*2.6);p.vx+=(Math.cos(a)*sp-p.vx)*k;p.vy+=(Math.sin(a)*sp-p.vy)*k}}
 
     p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.life<=0)continue;
 

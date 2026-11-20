@@ -4569,3 +4569,29 @@ ode --check.
 ### Siguiente paso recomendado
 - Presentar a Josemi los nuevos recursos organizados y las comparativas de las Esferas del Dragón (las 18x18 actuales vs las nuevas en 32x32 y HD).
 - Decidir con Josemi si desea que incorporemos las nuevas Esferas del Dragón al juego (`ui_imagenes.js`), el radar animado o cualquiera de los efectos de combate (Kamehameha, auras, explosiones).
+
+
+## 2026-11-20 — Claude (sesión 22)
+
+### Lo que pidió el usuario
+- «Mira cómo está ahora mismo Dragon Ball Survivor» (revisión del estado; capturas enviadas).
+- Arreglar: «subes de nivel muy rápido», «matas a los jefes muy rápido y si lo matas muy rápido se te queda buggeado en la isla donde lo matas», «los disparos van muy dirigidos y matas muy fácil a los enemigos, parece que tienes aimbot».
+- «Las animaciones siguen sin gustarme»: instalar el plugin codex-plugin-cc y conectarse con Codex para hacer las animaciones bien.
+
+### Lo que hice
+- Peticiones añadidas durante la sesión: «que el juego sea entretenido y dopamínico», «reto al matar a los jefes»; «los Kamehamehas tienen que ir a la pila de enemigos»; «pulir todos los ataques y animaciones de todos los personajes, uno a uno»; «transformarse en Super Saiyan en partida, mejoras diferentes por personaje y fieles al lore (p. ej. Cell → Cell Perfecto)»; «instalar codex-plugin-cc y hablar con ChatGPT/Codex para las animaciones».
+- Medido con una simulación de partidas en navegador (bot que se mueve en círculos, alterna ataques 1-3 y elige mejoras al azar; jugador inmortal).
+- **Cuelgue tras los jefes (causa encontrada):** las técnicas fusionadas del cofre del jefe se creaban sin `wid`/`dur`; el rayo salía con ancho NaN, PixelFX lanzaba `ImageData` en cada fotograma y la partida se congelaba. Ahora `fusionSt()` parte de una técnica base del mismo tipo. Además el rayo PixelFX solo se crea con tamaños válidos.
+- **Segundo cuelgue:** Genkidama y las fusiones no tenían descripciones por nivel (`ds`) y la subida de nivel fallaba al abrirse. Nuevo `mvDs()` con textos de respaldo.
+- **Puntería:** rayos (Kamehameha y demás) apuntan con `crowdTarget()` hacia donde atraviesan a más enemigos; bolas de ki en abanico hacia el más cercano con dispersión; teledirigidas giran más despacio (7→2,6) y no buscan otro objetivo si el suyo muere.
+- **Subida de nivel:** `need` = 5+4l+0,8l²+0,03l³. Antes nivel 38 a los 4 min y 65-74 a los 7 min; ahora 19-23 y 25-33.
+- **Jefes:** vida ×1,35×(1+0,05×nivel) (antes ×(1+0,03×nivel)). Antes caían en 4-29 s; ahora 22-83 s con el bot.
+- script.js?v=194. Comprobaciones: las mismas 4 que ya fallaban (enemigos, formas, objetos, rotación), ninguna nueva.
+
+### A medias / problemas
+- Codex: el plugin `openai/codex-plugin-cc` no está en el catálogo de esta sesión en la nube ni hay CLI de Codex; necesita que Josemi lo instale con `/plugin` y su cuenta de OpenAI (ver respuesta de la sesión).
+- Sin hacer todavía: transformaciones en partida y mejoras propias por personaje (diseño a hablar con Josemi), pulido de ataques y animaciones uno a uno.
+
+### Siguiente paso recomendado
+- Que Josemi juegue y valore el ritmo nuevo (niveles y jefes). Ajustar `need` y la vida de jefes en `spawn()` si hace falta.
+- Diseñar con Josemi las transformaciones en partida (SSJ, Cell Perfecto…) y las mejoras por personaje.
