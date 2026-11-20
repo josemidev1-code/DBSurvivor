@@ -4627,6 +4627,8 @@ ode --check.
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
 - Plugin de Codex comprobado: en esta sesión están las skills `codex:*` y el subagente `codex:codex-rescue`. `/codex:setup` dice «ready»: Node 26.13.1, npm 11.20.0, codex-cli 0.171.0 con el motor avanzado, sesión de ChatGPT activa y verificada. La revisión obligatoria antes de parar (review gate) está desactivada.
 - Preguntado a Josemi si ya ha jugado para valorar el ritmo de niveles y jefes (paso 2).
+- Diseño de transformaciones hablado con Josemi (ver «Lo que pidió el usuario»). Falta escribir el documento de diseño y la lista de mejoras por forma.
+- PixelFX instalado: marketplace `pixelfx` (patch-gg/pixelfx) y plugin `pixelfx@pixelfx` (ámbito usuario; el skill aparece al abrir una sesión nueva). Copia local clonada en `herramientas/pixelfx/` (versión 0.3.1, commit `5294518`; está en `.gitignore`). El juego ya usaba PixelFX desde el 4 nov. (`efectos_pixelfx.js`, explosiones, golpes y Kamehameha). No trae un aura de Dragon Ball hecha: habría que crearla como se hizo con `fx/kamehameha.js` (hay `arcane/spell-charge`, `status/rage`, `status/haste` y `holy/sunburst` de partida).
 
 ### A medias / problemas
 - La rama tiene 4 commits locales sin subir a GitHub (más el de esta entrada). Se suben solo si Josemi lo pide.
