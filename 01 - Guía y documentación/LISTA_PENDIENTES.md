@@ -10,7 +10,9 @@ Actualizada el 20 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a po
 - [x] 4. Poder máximo con aura blanca para los personajes de una sola forma.
 - [x] 5. Crear las auras y la carga de ki con PixelFX y mandar un GIF a Josemi.
 
-- [ ] Que Josemi vea los GIF (Goku y Krilin) y juegue: ajustar tiempos, auras y mejoras.
+- [x] Transformaciones con los sprites de cada pack (aprobado por Josemi el 20 nov.).
+- [ ] Poder máximo (personajes de una sola forma): que se note durante los 20 s, con sprites.
+- [ ] Que Josemi juegue: ajustar tiempos de carga, duraciones y mejoras.
 
 ## B. Jugar y ajustar
 
