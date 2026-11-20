@@ -4611,3 +4611,19 @@ ode --check.
 - Paso 1: comandos del plugin comprobados en el README oficial de `openai/codex-plugin-cc` (marketplace `openai-codex`, plugin `codex`). Node 26 y npm 11 instalados en el Mac. Pendiente de que Josemi los escriba.
 - Josemi: «si los commits son de antes y tienen cosas que no tenemos o que hemos quitado, déjalos; la última versión es la que cuenta». Probada la fusión (chocaba en `.gitignore`, `index.html`, `animaciones_juego.js`, bitácora y Piskel) y cancelada. Los 12 commits del 13 nov. siguen solo en el `main` local, sin tocar. Manda esta rama (20 nov.).
 - Josemi pidió «instálalo» (codex-plugin-cc). Instalado desde aquí con el claude que trae la app: marketplace `openai-codex` y plugin `codex@openai-codex` v1.0.6 (ámbito usuario, activo). Instalado también `@openai/codex` (codex-cli 0.171.0); ya estaba conectado con ChatGPT. Los comandos `/codex:...` aparecen al abrir una sesión nueva.
+
+## 2026-11-20 — Claude (sesión 24)
+
+### Lo que pidió el usuario
+- Seguir con DBSurvivor en la rama `claude/pensive-maxwell-rmrwmm`: poner la sesión al día, comprobar que el plugin de Codex está cargado y preguntar a Josemi por dónde seguir (pasos 2-7 del relevo).
+
+### Lo que hice
+- Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
+- Plugin de Codex comprobado: en esta sesión están las skills `codex:*` y el subagente `codex:codex-rescue`. `/codex:setup` dice «ready»: Node 26.13.1, npm 11.20.0, codex-cli 0.171.0 con el motor avanzado, sesión de ChatGPT activa y verificada. La revisión obligatoria antes de parar (review gate) está desactivada.
+- Preguntado a Josemi si ya ha jugado para valorar el ritmo de niveles y jefes (paso 2).
+
+### A medias / problemas
+- La rama tiene 4 commits locales sin subir a GitHub (más el de esta entrada). Se suben solo si Josemi lo pide.
+
+### Siguiente paso recomendado
+- Según lo que responda Josemi: ajustar el ritmo (paso 2), proponer el diseño de transformaciones (paso 3) o arreglar las comprobaciones y el README (paso 7).
