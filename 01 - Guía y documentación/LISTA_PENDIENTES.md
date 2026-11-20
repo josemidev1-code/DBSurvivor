@@ -11,7 +11,7 @@ Actualizada el 20 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a po
 - [x] 5. Crear las auras y la carga de ki con PixelFX y mandar un GIF a Josemi.
 
 - [x] Transformaciones con los sprites de cada pack (aprobado por Josemi el 20 nov.).
-- [ ] Poder máximo (personajes de una sola forma): que se note durante los 20 s, con sprites.
+- [x] Poder máximo (personajes de una sola forma): aura blanca de contorno en sprites durante los 20 s.
 - [ ] Que Josemi juegue: ajustar tiempos de carga, duraciones y mejoras.
 
 ## B. Jugar y ajustar

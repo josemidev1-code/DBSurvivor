@@ -5122,6 +5122,7 @@ function trAbiertos(){const n=P.trCad.length-1;if(n<1)return 1;let l=0;for(let p
 // efecto de la forma actual (transformaciones.js); base = neutro. baseHp: vida máxima sin transformación
 function trEfecto(baseHp){const paso=P&&P.tr?P.tr.paso:0;if(!paso||!window.TRANSF)return TRANSF_NEUTRO;
   return TRANSF.efecto(trNombre(paso),{vidaFrac:clamp(P.hp/Math.max(1,baseHp*TRANSF.mejora(trNombre(paso)).hp),0,1),tTrans:Math.max(0,(P.trDura||0)-P.tr.t)})}
+const AURA_IMG={};
 const TRANSF_NEUTRO={dmg:1,spd:1,cd:1,hpMax:1,recibe:1,regen:0,drenaje:0,esquiva:0,contra:false,cura:0,rayos:false};
 function trCorto(n){return n.replace('SUPER SAIYAN','SSJ').replace('PICCOLO ','')}
 function cargandoKi(){return state==='play'&&!!P&&!!(keys.Space||P.kiToque)}
@@ -7216,6 +7217,11 @@ function render(time){
       // 20 nov. (Josemi: «prefiero la de los sprites»): sin aura de PixelFX; el aura es la dibujada en el pack
       // (Pow al cargar, Trans al transformarse). Aquí solo quedan los rayos de SSJ2 mientras dura la forma.
       {const tr=P.tr&&P.tr.paso>0;
+        // poder máximo (personajes de una sola forma): aura blanca de contorno en sprites (hoja SWL), detrás del personaje;
+        // los primeros 0,6 s, el estallido blanco lleno
+        if(tr&&P.trCad.length<2&&window.AURA_SPR){const lleno=(P.trDura||0)-P.tr.t<0.6,a=lleno?AURA_SPR.lleno:AURA_SPR.contorno,f=(time*8|0)%a.n,
+            im=AURA_IMG[lleno?'lleno':'contorno']||(AURA_IMG[lleno?'lleno':'contorno']=Object.assign(new Image(),{src:a.url})),k=lleno?1.9:1.8;
+          if(im.complete){const sm=ctx.imageSmoothingEnabled;ctx.imageSmoothingEnabled=false;ctx.drawImage(im,f*a.w,0,a.w,a.h,Math.round(x-a.w*k/2),Math.round(y+4-a.h*k),a.w*k,a.h*k);ctx.imageSmoothingEnabled=sm}}
         if(tr&&P.trTE&&P.trTE.rayos&&Math.random()<0.35){ctx.fillStyle='#bfe6ff';let lx=x+rnd(-10,10),ly=y-rnd(4,24);for(let i=0;i<5;i++){ctx.fillRect(Math.round(lx),Math.round(ly),1,2);lx+=rnd(-2,2)|0;ly+=2}}}
 
       if(P.iframe>0&&((time*20|0)%2)){ctx.restore();continue;}

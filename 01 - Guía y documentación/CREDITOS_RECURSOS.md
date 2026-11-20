@@ -245,3 +245,7 @@ Nuevos recursos recopilados y clasificados en `05 - Sprites nuevos encontrados/0
 | **Super Kamehameha Rayo** | **Said971** (DeviantArt) | [Goku SuperKamehameha Lswi](https://www.deviantart.com/said971/art/Goku-SuperKamehameha-Lswi-567185368) | Secuencia y haz gigante continuo de Kamehameha. |
 | **Combate, Choques y Explosiones LSW** | **Lsw-sprite** (DeviantArt) | [Effect sprite 1, 5, 7](https://www.deviantart.com/lsw-sprite/art/Effect-sprite-1-614872393) | Chispas melee, líneas de tensión, choque de rayos y explosiones de ki. |
 | **HUD de Salud y Ki** | **Maxidev1** (DeviantArt) | [Hud Para juegos de dragon ball pixel art](https://www.deviantart.com/maxidev1/art/Hud-Para-juegos-de-dragon-ball-pixel-art-1304333048) | Barras de vida, marcos biselados de energía y cajas de nivel. |
+
+## Auras del poder máximo (20 nov. 2026)
+
+- `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/03_Efectos_FX_y_Auras/DBZ_Auras_Todas_las_Fases_SWL_[JustOruma_Samuca0123].png`, de **JustOruma** y **Samuca0123** (estilo SWL). Recortadas en `02 - Código del juego/auras_sprites.js` con `herramientas/montar_auras.py`.
