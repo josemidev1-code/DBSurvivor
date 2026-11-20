@@ -4637,6 +4637,7 @@ ode --check.
 - Comprobaciones: pasan `comprobar_transformaciones`, `formas`, `roles`, `combate`, `personajes`, `animaciones_ataques` y `catalogo_sprites`. Fallan `enemigos`, `objetos` y `rotacion`, igual que antes de esta sesión (comprobado en el commit 329c35b).
 - Error mío durante la tarea 5: ejecuté sin querer un `git stash` y lo deshice al momento con `git stash pop`; no se perdió nada.
 - Josemi pidió ver el juego y después fotos (5 enviadas). Opinión: «no me gustan… no siento que sean como las de la serie… tiene un fondo blanco y eso, yo prefiero la de los sprites. Mira en los sprites cómo está la transformación, y si no, fíjate en otros juegos así de pixel art, cómo transforman».
+- Revisados a ojo los packs de Goku: traen la transformación dibujada. Base (`215_GOKU BASE…`): aura de carga blanca y azul en los fotogramas 41-42 y paso a SSJ en 48-52. SSJ1 (`220_GOKU,SSJ 1…`): secuencia 0-3 y aura en bucle 28-29. SSJ2 (`055_Goku SSJ 2`): aura 03-05. SSJ3 (`147_GOKU SSJ3…`): transformación 104-117 y aura 66-67. (Índices = orden alfabético de los archivos del pack). Mandada a Josemi una tira con los pasos y dos GIF montados con esos fotogramas.
 - Decisiones tomadas por Claude (detalle en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`): matar da 0,005 de carga (con 0,02 las hordas llenaban la barra solas); la partida empieza siempre en la base; en la forma base no hay rasgo; el aura del 11 nov. se reutiliza tal cual.
 
 ### Lo que hice
