@@ -81,5 +81,27 @@
     return null;
   }
 
-  window.TRANSF={CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora,nuevo,avanzar};
+  // Efecto en partida de estar en una forma (nombre null = base). ctx = {vidaFrac (0-1), tTrans (s transformado)}
+  function efecto(nombre,ctx){
+    const r={dmg:1,spd:1,cd:1,hpMax:1,recibe:1,regen:0,drenaje:0,esquiva:0,contra:false,cura:0,rayos:false};
+    if(!nombre)return r;
+    const m=mejora(nombre),v=ctx&&ctx.vidaFrac!=null?ctx.vidaFrac:1,t=ctx&&ctx.tTrans||0;
+    r.dmg=m.dmg;r.spd=m.spd;r.cd=m.cd;r.hpMax=m.hp;
+    switch(m.rasgo){
+      case 'kaioken':r.drenaje=0.02;break;
+      case 'regenera':r.regen=0.015;break;
+      case 'esquiva':r.esquiva=0.3;break;
+      case 'esquivaContra':r.esquiva=0.6;r.contra=true;break;
+      case 'ultraEgo':r.dmg*=1+0.8*(1-v);break;
+      case 'bestia':r.dmg*=1+1.0*(1-v);break;
+      case 'legendario':r.dmg*=1+Math.min(0.5,t/40*0.5);break;
+      case 'majin':r.recibe=1.25;break;
+      case 'absorbe':r.cura=0.01;break;
+      case 'rayos':r.rayos=true;break;
+      case 'cansancio':r.dmg*=1-Math.min(0.3,t/60*0.3);break;
+    }
+    return r;
+  }
+
+  window.TRANSF={CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora,nuevo,avanzar,efecto};
 })();

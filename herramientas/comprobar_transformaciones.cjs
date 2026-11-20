@@ -45,3 +45,18 @@ console.log('Transformaciones: datos correctos.');
   // una forma que gasta mucho (duraK) dura menos
   const T6={carga:0.999,paso:0,t:0,cargando:true};T.avanzar(T6,{...e(true),nombre:()=>'SSJ BLUE'},0.1);cerca(T6.t,25*0.7,'SSJ Blue dura un 30 % menos')}
 console.log('Transformaciones: carga de ki correcta.');
+
+// ---- efecto de cada forma: multiplicadores de mejora() y su rasgo de la serie
+{const ctx={vidaFrac:1,tTrans:0},m=n=>T.mejora(n);
+  const ue=T.efecto('ULTRA EGO',{vidaFrac:0.5,tTrans:0});cerca(ue.dmg,m('ULTRA EGO').dmg*1.4,'Ultra Ego pega más cuanto más daño recibe');
+  cerca(T.efecto('BESTIA',{vidaFrac:0.5,tTrans:0}).dmg,m('BESTIA').dmg*1.5,'Bestia: más daño con menos vida');
+  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:40}).dmg,m('LEGENDARIO').dmg*1.5,'Legendario crece con el tiempo');
+  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:400}).dmg,m('LEGENDARIO').dmg*1.5,'Legendario tiene tope');
+  cerca(T.efecto('100%',{vidaFrac:1,tTrans:60}).dmg,m('100%').dmg*0.7,'Freezer 100 % se cansa');
+  const k=T.efecto('KAIOKEN',ctx);cerca(k.drenaje,0.02);cerca(k.dmg,m('KAIOKEN').dmg);cerca(k.hpMax,m('KAIOKEN').hp);
+  cerca(T.efecto('SSJ DIOS',ctx).regen,0.015);cerca(T.efecto('UI SEÑAL',ctx).esquiva,0.3);
+  const ui=T.efecto('UI DOMINADO',ctx);cerca(ui.esquiva,0.6);assert.equal(ui.contra,true);
+  cerca(T.efecto('MAJIN VEGETA',ctx).recibe,1.25);cerca(T.efecto('SUPER BUU',ctx).cura,0.01);assert.equal(T.efecto('SUPER SAIYAN 2',ctx).rayos,true);
+  assert.deepEqual({...T.efecto(null,ctx)},{dmg:1,spd:1,cd:1,hpMax:1,recibe:1,regen:0,drenaje:0,esquiva:0,contra:false,cura:0,rayos:false},'en base todo neutro');
+  const ss=T.efecto('SUPER SAIYAN',ctx);assert.equal(ss.drenaje+ss.regen+ss.esquiva+ss.cura,0);cerca(ss.spd,m('SUPER SAIYAN').spd);cerca(ss.cd,m('SUPER SAIYAN').cd)}
+console.log('Transformaciones: efectos correctos.');

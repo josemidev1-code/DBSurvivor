@@ -4027,7 +4027,7 @@ function newGame(hid,map){
 
      moves:{},order:[],cards:{},orbA:0,hitT:0,sel:0,sigT:0.6,sigCD:1,sigN:0,sigU:2,sigB:[],sigTimers:{},sigCursor:0,relics:{},powT:1.2};
 
-  if(window.TRANSF){P.trCad=[...TRANSF.cadena(hid,H.forms||['BASE'])];P.tr=TRANSF.nuevo();P.form=P.startForm=P.trCad[0]}
+  if(window.TRANSF){P.trCad=[...TRANSF.cadena(hid,H.forms||['BASE'])];P.tr=TRANSF.nuevo();P.trTE=null;P.form=P.startForm=P.trCad[0]}
 
   P.hp=stats().maxhp;fxSl.length=0;fxRg.length=0;if(window.PFX)PFX.clear();
 
@@ -4047,7 +4047,9 @@ function stats(){
 
   const H=HEROES[S.hid],c=P.cards,f=P.form,M=S.meta;
 
-  const isLow=(P&&P.hp&&(P.hp/(H.hp+20*(c.hp||0)+15*f+M.hp)<0.35));
+  const TE=trEfecto(H.hp+20*(c.hp||0)+M.hp);
+
+  const isLow=(P&&P.hp&&(P.hp/((H.hp+20*(c.hp||0)+M.hp)*TE.hpMax)<0.35));
 
   const zenkaiDmg=(isLow&&c.zenkai)?(1+0.15*c.zenkai):1;
 
@@ -4063,13 +4065,13 @@ function stats(){
 
   return{
 
-    dmg:H.atk*(1+0.12*(c.power||0))*(1+0.25*f)*M.dmg*S.mr*(1+0.08*(S.aw||0))*zenkaiDmg*pesasDmg,
+    dmg:H.atk*(1+0.12*(c.power||0))*TE.dmg*M.dmg*S.mr*(1+0.08*(S.aw||0))*zenkaiDmg*pesasDmg,
 
-    maxhp:Math.round((H.hp+20*(c.hp||0)+15*f+M.hp)*(1+0.08*(S.aw||0))),
+    maxhp:Math.round((H.hp+20*(c.hp||0)+M.hp)*TE.hpMax*(1+0.08*(S.aw||0))),
 
-    spd:1.3*H.spd*(1+0.08*(c.speed||0))*(1+0.06*f)*M.spd*zenkaiSpd*kintonSpd*slowDebuff,
+    spd:1.3*H.spd*(1+0.08*(c.speed||0))*TE.spd*M.spd*zenkaiSpd*kintonSpd*slowDebuff,
 
-    cd:Math.pow(0.92,c.cd||0)*(1-0.05*f)*M.cd*Math.pow(0.88,P.relics?.capsule||0),
+    cd:Math.pow(0.92,c.cd||0)*TE.cd*M.cd*Math.pow(0.88,P.relics?.capsule||0),
 
     mag:55*(1+0.35*(c.magnet||0))*M.mag*radarMag,
 
@@ -4217,7 +4219,9 @@ function hurt(e,dmg,kx=0,ky=0){
 
   if(e.dead)return;if(S.ev&&S.ev.k==='furia')dmg*=2;const st=stats(),crit=Math.random()<(st.critChance||0.08);if(crit)dmg*=2.2;
 
-  e.hp-=dmg;e.flash=0.08;const km=st.knockback||1;if(!e.boss){e.kx+=kx*km;e.ky+=ky*km}
+  e.hp-=dmg;e.flash=0.08;if(P&&P.trTE&&P.trTE.rayos&&!hurt.rayo){let o=null;near(e.x,e.y,60,q=>{if(!o&&q!==e&&!q.dead&&!q.crate)o=q});
+    if(o){hurt.rayo=1;hurt(o,dmg*0.4,0,0);hurt.rayo=0;if(parts.length<400)for(let i=0;i<5;i++){const k=i/4;parts.push({x:e.x+(o.x-e.x)*k,y:e.y-10+(o.y-e.y)*k,vx:rnd(-8,8),vy:rnd(-8,8),t:0.18,c:'#fff6a8',s:2})}}}
+  const km=st.knockback||1;if(!e.boss){e.kx+=kx*km;e.ky+=ky*km}
 
   if(texts.length<70)texts.push({x:e.x+rnd(-3,3),y:e.y-e.h*0.8,v:Math.round(dmg),t:0.6,c:crit?'#ffd23f':'#ffffff'});
 
@@ -4229,7 +4233,7 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
   if(e.evChest)putPickup({k:'chest',x:e.x,y:e.y});
 
-  e.dead=true;S.kills++;if(P)P.trMuertes=(P.trMuertes||0)+1;S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
+  e.dead=true;S.kills++;if(P){P.trMuertes=(P.trMuertes||0)+1;if(P.trTE&&P.trTE.cura){const mx=stats().maxhp;P.hp=Math.min(mx,P.hp+mx*P.trTE.cura)}}S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
 
   if(typeof PFX!=='undefined'&&PFX.muerte)PFX.muerte(e.x,e.y,e.boss?'jefe':ET[e.type].elite?'elite':'normal');
   if(e.boss){for(let i=0;i<6;i++)setTimeout(()=>{fx(e.x+rnd(-18,18),e.y-10+rnd(-18,12),i%2?'fire':'gold',16+(i%3)*4,0.6);smoke(e.x,e.y-10,6)},i*140)}
@@ -4272,7 +4276,12 @@ function roce(v){if(P.iframe>0||state!=='play')return;P.hp-=v;P.hitT=Math.max(P.
 
 function hitPlayer(d,big){
 
-  if(P.iframe>0||state!=='play')return;const st=stats();d=Math.max(1,d-st.armor);
+  if(P.iframe>0||state!=='play')return;const TE=P.trTE||TRANSF_NEUTRO;
+
+  if(TE.esquiva&&Math.random()<TE.esquiva){P.iframe=0.35;if(texts.length<70)texts.push({x:P.x,y:P.y-34,v:'ESQUIVA',t:0.6,c:'#cfe3ff'});
+    if(TE.contra){const t=nearest(P.x,P.y,70);if(t)hurt(t,(26+4*P.lvl)*stats().dmg,(t.x-P.x)*2,(t.y-P.y)*2)}return}
+
+  const st=stats();d=Math.max(1,d*TE.recibe-st.armor);
 
   P.hp-=d;P.trGolpes=(P.trGolpes||0)+1;P.iframe=big?1.0:0.6;P.hitT=0.2;cam.shake=Math.max(cam.shake,3);sfx('hurt');
 
@@ -5107,13 +5116,19 @@ function formaUI(){const b=$('#gForma');if(!b)return;const hid=companion(),H=HER
 
 function trNombre(paso){return P.trCad.length<2?'PODER MÁXIMO':HEROES[S.hid].forms[P.trCad[Math.min(paso,P.trCad.length-1)]]}
 function trAbiertos(){const n=P.trCad.length-1;if(n<1)return 1;let l=0;for(let p=1;p<=n;p++)if(P.lvl>=TRANSF.nivelPaso(p,n))l=p;return Math.min(l,formasAbiertas(S.hid))}
+// efecto de la forma actual (transformaciones.js); base = neutro. baseHp: vida máxima sin transformación
+function trEfecto(baseHp){const paso=P&&P.tr?P.tr.paso:0;if(!paso||!window.TRANSF)return TRANSF_NEUTRO;
+  return TRANSF.efecto(trNombre(paso),{vidaFrac:clamp(P.hp/Math.max(1,baseHp*TRANSF.mejora(trNombre(paso)).hp),0,1),tTrans:Math.max(0,(P.trDura||0)-P.tr.t)})}
+const TRANSF_NEUTRO={dmg:1,spd:1,cd:1,hpMax:1,recibe:1,regen:0,drenaje:0,esquiva:0,contra:false,cura:0,rayos:false};
 function cargandoKi(){return state==='play'&&!!P&&!!(keys.Space||P.kiToque)}
 function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
   const ab=trAbiertos(),mx0=stats().maxhp;P.trCarg=cargandoKi()&&P.tr.paso<ab;
   const ev=TRANSF.avanzar(P.tr,{cargando:P.trCarg,golpes:P.trGolpes||0,muertes:P.trMuertes||0,abiertos:ab,nombre:trNombre},dt);P.trGolpes=0;P.trMuertes=0;
   if(P.trCarg)P.powT=Math.max(P.powT||0,0.15);
+  {const st=stats();P.trTE=P.tr.paso>0?trEfecto(st.maxhp/TRANSF.mejora(trNombre(P.tr.paso)).hp):TRANSF_NEUTRO;
+    if(P.trTE.regen)P.hp=Math.min(st.maxhp,P.hp+st.maxhp*P.trTE.regen*dt);if(P.trTE.drenaje)P.hp=Math.max(1,P.hp-st.maxhp*P.trTE.drenaje*dt)}
   P.form=P.trCad[Math.min(P.tr.paso,P.trCad.length-1)];
-  if(ev==='sube'){S.forms++;const mx=stats().maxhp;P.hp=Math.min(mx,P.hp*mx/mx0);
+  if(ev==='sube'){S.forms++;P.trDura=P.tr.t;const mx=stats().maxhp;P.hp=Math.min(mx,P.hp*mx/mx0);
     S.banner={t:2.2,text:trNombre(P.tr.paso)+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.4;P.powT=1.2;cam.shake=8;sfx('trans');
     if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,P.trCad.length<2?'white':heroAura(S.hid,P.form));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}
   else if(ev==='vuelve'){P.hp=Math.min(P.hp,stats().maxhp);S.banner={t:1.4,text:'FIN DE LA TRANSFORMACIÓN',sub:'Vuelve a cargar ki'}}}
