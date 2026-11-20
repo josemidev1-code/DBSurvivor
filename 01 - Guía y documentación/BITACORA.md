@@ -4621,6 +4621,7 @@ ode --check.
 - Propuesta de carga aceptada por Josemi («Me vale así»): se carga manteniendo una tecla, quieto y sin atacar; el aura atrae a los enemigos; cada golpe recibido quita parte de lo cargado; matar da poco ki; las formas altas piden más carga; los jefes castigan la carga. Con la barra llena se pulsa para transformarse unos 20 s.
 - Personajes de una sola forma (117): Josemi elige «Poder máximo» (cargan la barra igual y entran en su poder máximo unos 20 s: aura, más fuerza y técnica estrella potenciada, sin cambiar de sprite).
 - Josemi, sobre el poder máximo: «a las de una sola forma les pondría como un aura blanca… porque en los sprites seguro que está… pero que le quede bien… para que sepan que tienen más poder».
+- Claude encontró dos hojas de auras en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/03_Efectos_FX_y_Auras/` (todas las fases SWL y carga de ki). Josemi: «puedes usar esa, pero creo que quedará mejor» con el repositorio PixelFX de GitHub: «descárgalo, instálalo y así lo usamos para Dragon Ball. Y ponme una lista de lo que tenemos que hacer, lo que queda por hacer. Y te digo yo».
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
