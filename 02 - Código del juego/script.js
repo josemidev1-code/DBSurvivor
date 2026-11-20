@@ -4761,6 +4761,9 @@ function bossBeam(e,dt){const B=BBEAM[e.type];if(!B)return false;e.bT=(e.bT===un
 
 function bossAI(e,dt){
 
+  // si el jugador carga ki cerca, el jefe lo castiga: adelanta su rayo y su embestida
+  if(P.trCarg&&Math.hypot(P.x-e.x,P.y-e.y)<320){e.bT=Math.min(e.bT===undefined?5:e.bT,1.2);e.aiT=Math.min(e.aiT||0,0.8)}
+
   e.aiT-=dt;const a=Math.atan2(P.y-e.y,P.x-e.x);if(bossBeam(e,dt))return true;
 
   switch(e.ai){
@@ -5153,7 +5156,8 @@ function rolCancel(e){if(e.stun>0&&e.atk)e.atk=null}
 
 // velocidad que pide el tipo, o null para perseguir como siempre
 
-function rolAI(e,d,dx,dy,dt){const r=rolE(e),A=ROL_AJ;if(r==='jefe'||r==='kami')return null;
+function rolAI(e,d,dx,dy,dt){if(e.caza){rolCancel(e);return null} // carga de ki: todos van a por el jugador
+  const r=rolE(e),A=ROL_AJ;if(r==='jefe'||r==='kami')return null;
 
   if(e.atkCd>0)e.atkCd-=dt;const a=e.atk;
 
@@ -5235,7 +5239,7 @@ function update(dt){
 
     const dx=P.x-e.x,dy=P.y-e.y,d=Math.hypot(dx,dy)||1;
 
-    let vx=0,vy=0;if(e.stun>0){rolCancel(e);e.stun-=dt}else if(!skip){const v=rolAI(e,d,dx,dy,dt);if(v){vx=v[0];vy=v[1]}else{const tb=rolTurbo(e,d);vx=dx/d*e.spd*tb;vy=dy/d*e.spd*tb;if(e.avoidT>0){e.avoidT-=dt;const q=e.avoid||1,nx=-dy/d*q,ny=dx/d*q;vx=vx*0.3+nx*e.spd*0.95;vy=vy*0.3+ny*e.spd*0.95}}}
+    let vx=0,vy=0;if(e.stun>0){rolCancel(e);e.stun-=dt}else if(!skip){const caza=e.caza=P.trCarg&&!e.boss&&d<260;const v=rolAI(e,d,dx,dy,dt);if(v){vx=v[0];vy=v[1]}else{const tb=rolTurbo(e,d)*(caza?1.35:1);vx=dx/d*e.spd*tb;vy=dy/d*e.spd*tb;if(e.avoidT>0){e.avoidT-=dt;const q=e.avoid||1,nx=-dy/d*q,ny=dx/d*q;vx=vx*0.3+nx*e.spd*0.95;vy=vy*0.3+ny*e.spd*0.95}}}
 
     if(!skip){vx+=e.kx;vy+=e.ky;const hit=solidMove(e,vx*dt,vy*dt,e.r);if(hit){e.avoidT=0.45;e.avoid=e.avoid||(((e.x*13+e.y*7)|0)&1?1:-1)}}else solidResolve(e,e.r);e.kx*=0.86;e.ky*=0.86;
 
