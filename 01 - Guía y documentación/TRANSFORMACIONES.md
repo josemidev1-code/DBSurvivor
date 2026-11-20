@@ -1,0 +1,64 @@
+# Transformaciones en partida — diseño (borrador para Josemi)
+
+Hablado con Josemi el 20 nov. 2026 (sesión 24). Es un borrador: no se programa hasta que Josemi lo apruebe.
+Lo marcado **(propuesta de Claude)** no lo ha decidido Josemi y se puede cambiar.
+
+## Por qué
+
+Josemi quiere un juego «dopamínico»: arrasar hordas con buenos efectos y que los jefes supongan un reto.
+Transformarse tiene que ser un subidón que **cueste ganarse**: «si es fácil cargar ki sin que te disparen o te lo dejen difícil, no tiene gracia».
+Las transformaciones tienen que ser fieles a la serie, y cada forma ha de notarse distinta.
+
+## Cómo funciona (decidido)
+
+- **Barra de ki.** Se carga manteniendo una tecla: el personaje se queda quieto y no ataca. El aura atrae a los enemigos, cada golpe recibido quita parte de lo cargado y matar enemigos da muy poco ki. Los jefes castigan al que carga delante de ellos.
+- **Las formas altas piden más carga.** **(propuesta de Claude)** La barra está dividida en tramos, uno por forma. Al soltar la tecla, el personaje se transforma en la forma que haya cargado.
+- **Transformación de unos 20 segundos**, con estallido de aura, temblor de pantalla y cambio al sprite de esa forma. Al acabar vuelve a la forma base y hay que volver a cargar.
+- **Personajes de una sola forma: «poder máximo».** Cargan igual y durante unos 20 segundos ganan un aura blanca, más fuerza y su técnica estrella potenciada, sin cambiar de sprite.
+- **Auras con PixelFX** (Josemi: «quedará mejor»). Las hojas de `05 - Sprites nuevos encontrados/…/03_Efectos_FX_y_Auras` sirven de modelo de cómo debe verse. Antes de darlas por buenas se manda un GIF a Josemi.
+- **(propuesta de Claude)** Las formas se siguen desbloqueando para siempre con el deseo a Shenron del menú. En cada partida, el nivel decide cuántos tramos de barra hay disponibles (10, 20, 30 y 40, como ahora).
+
+## Prioridad: los personajes principales primero
+
+Josemi: «primero lo que quiero tener son los personajes más icónicos de la serie, tenerlos bien animados y jugables. Y después ya seguiremos con los otros».
+
+**(propuesta de Claude)** Personajes principales: Goku, Vegeta, Gohan, Piccolo, Krilin, Trunks, Goten, Freezer, Cell, Majin Buu y Broly. Pendiente de que Josemi añada o quite alguno (por ejemplo Yamcha, Tenshinhan, Androide 18, Gogeta o Vegetto).
+
+### Formas y mejoras de los principales (propuesta de Claude)
+
+Cada forma tendría una mejora propia sacada de la serie, en vez del +25 % igual para todas. Se ordenan como pasan en la serie.
+
+| Personaje | Formas en orden de la serie | Mejora de cada forma |
+|---|---|---|
+| **Goku** | Base → Kaioken → SSJ → SSJ2 → SSJ3 → SSJ Dios → SSJ Blue → UI Señal → UI Dominado (aparte: SSJ4 GT) | Kaioken: mucho daño, pero pierde vida poco a poco. SSJ: equilibrada. SSJ2: los golpes sueltan rayos que saltan a otro enemigo. SSJ3: daño enorme, pero dura menos. Dios: se regenera y va más rápido. Blue: ki muy fuerte, pero gasta la barra deprisa. UI Señal: esquiva sola parte de los golpes. UI Dominado: esquiva casi todo y contraataca. SSJ4: fuerza bruta y aguante. |
+| **Vegeta** | Base → SSJ → Super Vegeta → Majin Vegeta → SSJ Dios → SSJ Blue → Blue Evolution → Ultra Ego (aparte: SSJ4 GT) | Super Vegeta: más fuerza y algo más lento. Majin: más daño, pero recibe más daño. Ultra Ego: cuanto más daño recibe, más fuerte pega. |
+| **Gohan** | Base → SSJ → SSJ2 → Definitivo → Bestia | SSJ2: rayos y furia. Definitivo: sube todo sin pegas. Bestia: más daño cuanto menos vida le queda. |
+| **Piccolo** | Base → Naranja | Base: se regenera. Naranja: mucha más vida y fuerza bruta. |
+| **Trunks** | Base → SSJ → SSJ2 (manga) | Hoy tiene «BASE MANGA» como si fuera otra forma; se quitaría de la cadena. |
+| **Freezer** | 1ª → 3ª → Final → 100 % → Golden → Black | 100 %: muy fuerte, pero se cansa. Golden: enorme, pero gasta la barra muy rápido. Black: lo más alto. (No hay sprite de la 2ª forma). |
+| **Cell** | Imperfecto → Semiperfecto → Perfecto | Imperfecto: se cura al matar (absorbe). Semiperfecto: más vida. Perfecto: se regenera y su Kamehameha es más fuerte. |
+| **Majin Buu** | Gordo → Maligno → Super Buu → Buu Gohan → Kid Buu | Gordo: aguanta mucho. Super Buu y Buu Gohan: absorben (se curan al matar). Kid Buu: se regenera muy deprisa. |
+| **Broly** | Contenido → SSJ → Legendario | Legendario: cuanto más dura el combate, más fuerte se hace. |
+| **Krilin** | Una forma: poder máximo | Aura blanca y Kienzan potenciado. |
+| **Goten** | Una forma (SSJ): poder máximo | Hoy no tiene forma base, solo SSJ. |
+
+### Dudas para Josemi
+
+1. ¿Te vale esta lista de principales o quitas o añades alguno?
+2. **Formas inventadas por fans:** Cell Golden, Cell Majin y Broly SSJ4 son de fans, no de la serie. **(propuesta de Claude)** Quitarlas de la cadena de los principales y dejarlas en sus personajes «fanmade».
+3. **Goku y Vegeta tienen 9 y 10 formas.** ¿Se pueden cargar todas en una partida (barra muy larga) o eliges antes de jugar 4 o 5 formas?
+
+## Todos los personajes (118 en la pantalla de selección)
+
+Con varias formas (los principales están en la tabla de arriba):
+- Bardock: Base, SSJ, SSJ4 · Bardock Leyendas: Base, SSJ, Black, Evolución
+- Vegetto: Base, Super Vegetto, Super Vegetto 2, Blue · Gogeta: Super Gogeta, SSJ4, Blue
+- Goku Black: Base, SSJ, Rosé · Black Time Breaker: Dios, Rosé, Rosé 3
+- Kefla: SSJ, Blue · Kale: Base, Berserker · Kyabe: Base, SSJ · Raditz: Base, SSJ · Bra: Base, SSJ · Turles: Base, SSJ maligno
+- Frost: 1ª forma, final · Zamasu: Base, fusionado · Jiren: Base, máximo poder, Hakaishin
+- Gohan DBS: Base, Místico, UI, MUI, Bestia · Goku saga Moro: Base, SSJ, Dios, Blue, UI · Goku película Broly: Base, SSJ, Dios, Blue perfecto · Vegeta Blue manga: Blue, Blue perfecto
+- Goku Xeno: Base, Dios, SSJ4 · Vegeta Xeno: Base, SSJ4 · Goku Yardrat: Base, SSJ · Trunks niño: Base, SSJ
+- Saiyans zombi: Gohan, Goku, Vegeta
+- Fanmade: Goku fanmade (13 formas), Goku Black fanmade (7), Vegetto fanmade (4), Gogeta fanmade (3), Broly fanmade (2)
+
+Con una sola forma (poder máximo): Krilin, Yamcha, Goten, Tenshinhan, Androides 13, 14, 16, 17, 18 y 21, Gotenks, Caulifla, Maestro Roshi, Saibaman, Cooler, Metal Cooler, Janemba, Bills, Hit, Toppo, Moro, Baby Vegeta, Gohan poseído, Gohan manga, Gohan del futuro, Cumber, DLRX, Nappa, Ginyu, Ginyu (cuerpo de Goku), Jeice, Guldo, Uub, Mr. Satán, Dyspo, Kibito, Kibitoshin, Supremo Kaioshin, Glorio, Hatchiyack, Trunks GT, Trunks armadura, Pan GT, Nuova Shenron, Omega Shenron, Super 17, Rey Gomah, Merus, Majin Kuu, Majin Duu, Bulma, Magetta, Gran Sacerdote, Paragus, Granola, Gas, Lord Slug, Tarble, Rey Cold, Cui, Videl, Goku niño, Tao Pai Pai, Tora, Vegeta Yardrat, Goku patrullero, Goku Black Kaioshin, Jiren (torneo) y las versiones sueltas de una forma (Goku SSJ4 Daima, Goku SSJ Kaioken, Goku UI verdadero, Goku SSJ chaqueta, Vegeta UI dominado, Vegeta Blue maligno, Vegeta SSJ3 Daima, Vegetto Blue, Vegetto SSJ falso, Bra Majin SSJ, Zamasu fusionado).
