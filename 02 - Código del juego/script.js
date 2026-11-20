@@ -4116,11 +4116,11 @@ addEventListener('blur',()=>{for(const k in keys)keys[k]=false;if(state==='play'
 
 const joy={on:false,id:null,ox:0,oy:0,x:0,y:0};
 
-cv.addEventListener('pointerdown',e=>{initAudio();if(state!=='play')return;{const x=e.clientX/SC,y=e.clientY/SC,R=P&&P.barR||[];for(let i=0;i<R.length;i++){const r=R[i];if(x>=r[0]&&x<r[0]+r[2]&&y>=r[1]&&y<r[1]+r[3]){sigSelect(i);return}}}joy.on=true;joy.id=e.pointerId;joy.ox=joy.x=e.clientX/SC;joy.oy=joy.y=e.clientY/SC;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointerdown',e=>{initAudio();if(state!=='play')return;{const x=e.clientX/SC,y=e.clientY/SC,K=P&&P.kiR;if(K&&x>=K[0]&&x<K[0]+K[2]&&y>=K[1]&&y<K[1]+K[3]){P.kiToque=true;P.kiId=e.pointerId;return}}{const x=e.clientX/SC,y=e.clientY/SC,R=P&&P.barR||[];for(let i=0;i<R.length;i++){const r=R[i];if(x>=r[0]&&x<r[0]+r[2]&&y>=r[1]&&y<r[1]+r[3]){sigSelect(i);return}}}joy.on=true;joy.id=e.pointerId;joy.ox=joy.x=e.clientX/SC;joy.oy=joy.y=e.clientY/SC;cv.setPointerCapture(e.pointerId)});
 
 cv.addEventListener('pointermove',e=>{if(joy.on&&e.pointerId===joy.id){joy.x=e.clientX/SC;joy.y=e.clientY/SC}});
 
-const endJoy=e=>{if(e.pointerId===joy.id)joy.on=false};
+const endJoy=e=>{if(e.pointerId===joy.id)joy.on=false;if(P&&e.pointerId===P.kiId){P.kiToque=false;P.kiId=null}};
 
 cv.addEventListener('pointerup',endJoy);cv.addEventListener('pointercancel',endJoy);
 
@@ -5123,6 +5123,7 @@ function trAbiertos(){const n=P.trCad.length-1;if(n<1)return 1;let l=0;for(let p
 function trEfecto(baseHp){const paso=P&&P.tr?P.tr.paso:0;if(!paso||!window.TRANSF)return TRANSF_NEUTRO;
   return TRANSF.efecto(trNombre(paso),{vidaFrac:clamp(P.hp/Math.max(1,baseHp*TRANSF.mejora(trNombre(paso)).hp),0,1),tTrans:Math.max(0,(P.trDura||0)-P.tr.t)})}
 const TRANSF_NEUTRO={dmg:1,spd:1,cd:1,hpMax:1,recibe:1,regen:0,drenaje:0,esquiva:0,contra:false,cura:0,rayos:false};
+function trCorto(n){return n.replace('SUPER SAIYAN','SSJ').replace('PICCOLO ','')}
 function cargandoKi(){return state==='play'&&!!P&&!!(keys.Space||P.kiToque)}
 function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
   const ab=trAbiertos(),mx0=stats().maxhp;P.trCarg=cargandoKi()&&P.tr.paso<ab;
@@ -7525,7 +7526,15 @@ function hud(time){
     const low=fHp<0.25,mid=fHp<0.5,c=low?((time*6|0)%2?'#ef4444':'#fb7185'):mid?'#f59e0b':'#22c55e',hi=low?'#fecaca':mid?'#fde68a':'#86efac',lo=low?'#991b1b':mid?'#b45309':'#15803d';
     hudBar(bx,y+15,bw,10,fHp,c,hi,lo,HUDST.hp);
     text(Math.ceil(Math.max(0,P.hp))+'/'+ps.maxhp,bx+bw/2,y+16,'#ffffff',8);
-    hudBar(bx,y+29,bw,4,P.xp/P.need,'#ffd23f','#fff3c4','#d97706',0,0)}
+    hudBar(bx,y+29,bw,4,P.xp/P.need,'#ffd23f','#fff3c4','#d97706',0,0);
+    // barra de ki (transformaciones): se carga manteniendo Espacio o el botón KI
+    if(P.tr){const ab=trAbiertos(),n=P.trCad.length-1,ky=y+h+3,max=Math.floor((w-10)/6);let lab,f=P.tr.carga;
+      if(P.tr.paso===0&&ab<1){lab=formasAbiertas(S.hid)<1?'PIDE LA FORMA A SHENRON':'KI: NIVEL '+TRANSF.nivelPaso(1,n);f=0}
+      else lab=P.tr.paso<ab?'KI > '+trCorto(trNombre(P.tr.paso+1)):'KI MÁXIMO';
+      hudPanel(x,ky,w,17);
+      hudBar(x+4,ky+4,w-8,9,f,P.trCarg&&(time*10|0)%2?'#fff6a8':'#ffd23f','#fff3c4','#d97706',0,0);
+      text(hudCut(lab,max),x+6,ky+5,'#ffffff',6,'left');
+      if(P.tr.paso>0)text(Math.ceil(P.tr.t)+'S',x+w-6,ky+5,'#7dd3fc',6,'right')}}
 
   // Arriba en el centro: tiempo y las siete esferas
   if(!mini){const pw=118,px=Math.round(HW/2-pw/2),m=Math.floor(S.t/60),s=Math.floor(S.t%60);
@@ -7588,6 +7597,10 @@ function hud(time){
     hudR(0,y-5,HW,h+6,'rgba(8,11,32,.82)');hudR(0,y-6,HW,1,edge);hudR(0,y+h+1,HW,1,edge);
     text(b.text,HW/2,y,b.boss?'#ff6b78':'#ffd23f',big?16:8);if(b.sub)text(b.sub,HW/2,y+(big?20:12),'#ffffff',8)}
   ctx.restore();
+  // botón KI táctil: mantener pulsado para cargar (abajo a la derecha)
+  if(TACTIL&&P.tr&&state==='play'){const hk=SC*DPR/2>1?1:2,HW=VW*2/hk,HH=VH*2/hk,cx=HW-30,cy=HH-78,on=P.kiToque;
+    ctx.save();ctx.scale(hk/2,hk/2);circ(cx,cy,19,on?'#ffd23f':'rgba(4,6,15,.65)');ring(cx,cy,19,'#ffd23f',2);text('KI',cx,cy-4,on?'#2a1600':'#ffd23f',8);ctx.restore();
+    P.kiR=[(cx-22)*hk/2,(cy-22)*hk/2,44*hk/2,44*hk/2]}else if(P)P.kiR=null;
   // en coordenadas del mundo: flecha del radar y joystick táctil
   drawRadar(time);
   if(joy.on){ring(Math.round(joy.ox),Math.round(joy.oy),18,'rgba(255,255,255,.5)',2);const dx=joy.x-joy.ox,dy=joy.y-joy.oy,d=Math.hypot(dx,dy),k=d>18?18/d:1;circ(Math.round(joy.ox+dx*k),Math.round(joy.oy+dy*k),6,'rgba(255,255,255,.6)')}
