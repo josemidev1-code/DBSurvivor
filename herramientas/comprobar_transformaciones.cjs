@@ -32,7 +32,7 @@ console.log('Transformaciones: datos correctos.');
   const T1=T.nuevo();T.avanzar(T1,e(true),1.5);T.avanzar(T1,e(false,1),0);
   cerca(T1.carga,0.15,'un golpe quita 0,35');
   T.avanzar(T1,e(false),5);cerca(T1.carga,0.15,'soltar no pierde la carga');
-  T.avanzar(T1,e(false,0,2),0);cerca(T1.carga,0.19,'cada muerte da 0,02');
+  T.avanzar(T1,e(false,0,2),0);cerca(T1.carga,0.16,'cada muerte da 0,005 (poco: matar no basta para transformarse)');
   const T2=T.nuevo();T.avanzar(T2,e(true,0,0,0),10);assert.equal(T2.carga,0,'sin formas abiertas no carga');
   const T3={carga:0,paso:1,t:0.05,cargando:false};
   assert.equal(T.avanzar(T3,e(false),0.1),'vuelve');assert.equal(T3.paso,0);assert.equal(T3.carga,0);

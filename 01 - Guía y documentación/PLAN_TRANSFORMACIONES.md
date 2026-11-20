@@ -83,7 +83,7 @@ assert.deepEqual(T.mejora('FORMA INVENTADA'),{dmg:1.25,spd:1.06,cd:0.95,hp:1.15,
   - `nuevo() → T` con `T={carga:0, paso:0, t:0, cargando:false}` (`carga` de 0 a 1 hacia el paso siguiente; `paso` 0 = base; `t` = segundos que quedan de transformación).
   - `avanzar(T, e, dt) → evento|null`, con `e={cargando:bool, golpes:int, muertes:int, abiertos:int, nombre:(paso)=>string}`. Devuelve `'sube'`, `'vuelve'` o `null` y modifica `T`.
     - Si `e.cargando` y `T.paso<e.abiertos`: `T.carga += dt/tiempos(T.paso+1).carga`.
-    - Cada golpe resta `0.35` a `T.carga` (mínimo 0); cada muerte suma `0.02` (aunque no se esté cargando).
+    - Cada golpe resta `0.35` a `T.carga` (mínimo 0); cada muerte suma `0.005` (aunque no se esté cargando).
     - Si `T.carga>=1`: `T.paso++`, `T.carga=0`, `T.t = tiempos(T.paso).dura * (mejora(e.nombre(T.paso)).duraK||1)` y devuelve `'sube'`. Si se sigue manteniendo, empieza a cargar el paso siguiente.
     - Si `T.paso>0`: `T.t-=dt`; al llegar a 0, `T.paso=0`, `T.carga=0` y devuelve `'vuelve'`.
   - Poder máximo: un personaje con cadena de un solo elemento usa `abiertos=1` y el paso 1 es «PODER MÁXIMO».

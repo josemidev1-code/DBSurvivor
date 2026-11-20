@@ -71,7 +71,7 @@
     if(T.paso>0){T.t-=dt;if(T.t<=0){T.paso=0;T.carga=0;T.t=0;return 'vuelve'}}
     if(T.paso<e.abiertos){
       if(e.cargando)T.carga+=dt/tiempos(T.paso+1).carga;
-      T.carga+=0.02*(e.muertes||0);
+      T.carga+=0.005*(e.muertes||0);
     }
     T.carga=Math.max(0,T.carga-0.35*(e.golpes||0));
     if(T.paso<e.abiertos&&T.carga>=1-1e-9){

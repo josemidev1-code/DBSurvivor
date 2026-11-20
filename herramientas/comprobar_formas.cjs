@@ -8,7 +8,8 @@ const c=vm.createContext({Math,HEROES:{goku:{name:'GOKU',forms:['BASE','SUPER SA
   FORM_LV:[0,10,20,30,40],loadSave:()=>save,writeSave:()=>escrito++,clamp:(v,a,b)=>Math.max(a,Math.min(b,v)),
   stats:()=>({maxhp:100}),cam:{shake:0},sfx:()=>{},burst:()=>{}});
 vm.runInContext(tramo('const FORMA_TK=','// ---------- fin del deseo de transformación')+';this.FORMA_TK=FORMA_TK',c);
-{const a=src.indexOf('function checkForm('),fin="'#fff6a8'])}}",b=src.indexOf(fin,a);assert(a>=0&&b>a,'No se encuentra checkForm');vm.runInContext(src.slice(a,b+fin.length),c)}
+vm.runInContext(fs.readFileSync(path.join(raiz,'02 - Código del juego/transformaciones.js'),'utf8').replace('window.TRANSF=','this.TRANSF='),c);
+vm.runInContext(tramo('function trAbiertos(','\n'),c);
 
 // Sin deseo pedido, solo la forma base
 assert.equal(c.formasAbiertas('goku'),0);
@@ -20,12 +21,14 @@ assert.equal(c.pedirForma('goku'),'ok');assert.equal(save.tickets,20-c.FORMA_TK)
 assert.equal(c.costeForma('goku'),2*c.FORMA_TK);
 save={tickets:999,formas:{goku:3}};assert.equal(c.pedirForma('goku'),'todas');assert.equal(save.tickets,999);
 assert.equal(c.pedirForma('a16'),'todas','un personaje sin transformaciones no gasta tickets');
-// En partida: el nivel solo transforma hasta las formas despertadas, y avisa una vez de que falta el deseo
-const partida=(formas)=>{save={formas};c.S={hid:'goku',forms:0};c.P={lvl:25,form:0,hp:1};c.checkForm();return{form:c.P.form,banner:c.S.banner}};
-{const r=partida({});assert.equal(r.form,0,'se transforma sin haber pedido el deseo');assert.match(r.banner.sub,/SHENRON/i);
-  c.S.banner=null;c.checkForm();assert.equal(c.S.banner,null,'repite el aviso');}
-assert.equal(partida({goku:1}).form,1);
-assert.equal(partida({goku:3}).form,2,'el nivel 25 no debe dar más de la 2ª forma');
+// En partida (barra de ki, 20 nov.): se puede subir hasta la forma abierta por nivel Y pedida a Shenron
+const abiertos=(hid,forms,lvl,deseos)=>{save={formas:{[hid]:deseos}};c.HEROES[hid]={name:hid,forms};c.S={hid};c.P={lvl,trCad:[...c.TRANSF.cadena(hid,forms)]};return c.trAbiertos()};
+const GOKU=['BASE','SUPER SAIYAN','SUPER SAIYAN 2','SUPER SAIYAN 3','SSJ BLUE','UI SEÑAL','UI DOMINADO','SSJ4 GT','KAIOKEN','SSJ DIOS'];
+assert.equal(abiertos('goku',GOKU,12,3),2,'Goku nivel 12 con 3 deseos: 2 formas');
+assert.equal(abiertos('goku',GOKU,40,1),1,'Goku nivel 40 con 1 deseo: 1 forma');
+assert.equal(abiertos('goku',GOKU,40,9),8,'Goku nivel 40 con todos los deseos: las 8');
+assert.equal(abiertos('goku',GOKU,4,9),0,'antes del nivel 5 no hay formas');
+assert.equal(abiertos('krilin',['BASE'],1,0),1,'Krilin: poder máximo sin deseo');
 // La pantalla de Shenron tiene el botón y lo prepara al abrirse
 assert(fs.readFileSync(path.join(raiz,'index.html'),'utf8').includes('id="gForma"'),'falta el botón #gForma');
 assert(tramo('function openGacha(','\n').includes('formaUI()'),'openGacha no prepara el botón');

@@ -4027,6 +4027,8 @@ function newGame(hid,map){
 
      moves:{},order:[],cards:{},orbA:0,hitT:0,sel:0,sigT:0.6,sigCD:1,sigN:0,sigU:2,sigB:[],sigTimers:{},sigCursor:0,relics:{},powT:1.2};
 
+  if(window.TRANSF){P.trCad=[...TRANSF.cadena(hid,H.forms||['BASE'])];P.tr=TRANSF.nuevo();P.form=P.startForm=P.trCad[0]}
+
   P.hp=stats().maxhp;fxSl.length=0;fxRg.length=0;if(window.PFX)PFX.clear();
 
   fxs=[];ebeams=[];enemies=[];projs=[];eshots=[];beams=[];bombs=[];gems=[];pickups=[];parts=[];texts=[];
@@ -4227,7 +4229,7 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
   if(e.evChest)putPickup({k:'chest',x:e.x,y:e.y});
 
-  e.dead=true;S.kills++;S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
+  e.dead=true;S.kills++;if(P)P.trMuertes=(P.trMuertes||0)+1;S.kt=S.kt||{};S.kt[e.type]=(S.kt[e.type]||0)+1;if(ET[e.type].elite)S.elites=(S.elites||0)+1;if(e.type==='saiba'||e.type==='saibaR')S.saiba++;
 
   if(typeof PFX!=='undefined'&&PFX.muerte)PFX.muerte(e.x,e.y,e.boss?'jefe':ET[e.type].elite?'elite':'normal');
   if(e.boss){for(let i=0;i<6;i++)setTimeout(()=>{fx(e.x+rnd(-18,18),e.y-10+rnd(-18,12),i%2?'fire':'gold',16+(i%3)*4,0.6);smoke(e.x,e.y-10,6)},i*140)}
@@ -4272,7 +4274,7 @@ function hitPlayer(d,big){
 
   if(P.iframe>0||state!=='play')return;const st=stats();d=Math.max(1,d-st.armor);
 
-  P.hp-=d;P.iframe=big?1.0:0.6;P.hitT=0.2;cam.shake=Math.max(cam.shake,3);sfx('hurt');
+  P.hp-=d;P.trGolpes=(P.trGolpes||0)+1;P.iframe=big?1.0:0.6;P.hitT=0.2;cam.shake=Math.max(cam.shake,3);sfx('hurt');
 
   // al recibir un golpe, los enemigos pegados salen despedidos y dejan un hueco para escapar
 
@@ -5100,13 +5102,21 @@ function formaUI(){const b=$('#gForma');if(!b)return;const hid=companion(),H=HER
 
 // ---------- fin del deseo de transformación
 
-function checkForm(){const lv=FORM_LV.filter(l=>P.lvl>=l).length-1,f=Math.min(HEROES[S.hid].forms.length-1,Math.max(P.startForm||0,lv));
+// ---------- transformaciones con la barra de ki (20 nov.; lógica en transformaciones.js) ----------
+// se carga manteniendo Espacio (o el botón KI táctil), quieto y sin atacar; se sube forma a forma
 
-  if(f>P.form){S.forms+=f-P.form;P.form=f;P.hp=stats().maxhp;
-
-  S.banner={t:2.6,text:HEROES[S.hid].forms[f]+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.6;P.powT=1.6;cam.shake=8;sfx('trans');
-
-  if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,heroAura(S.hid,f));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}}
+function trNombre(paso){return P.trCad.length<2?'PODER MÁXIMO':HEROES[S.hid].forms[P.trCad[Math.min(paso,P.trCad.length-1)]]}
+function trAbiertos(){const n=P.trCad.length-1;if(n<1)return 1;let l=0;for(let p=1;p<=n;p++)if(P.lvl>=TRANSF.nivelPaso(p,n))l=p;return Math.min(l,formasAbiertas(S.hid))}
+function cargandoKi(){return state==='play'&&!!P&&!!(keys.Space||P.kiToque)}
+function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
+  const ab=trAbiertos(),mx0=stats().maxhp;P.trCarg=cargandoKi()&&P.tr.paso<ab;
+  const ev=TRANSF.avanzar(P.tr,{cargando:P.trCarg,golpes:P.trGolpes||0,muertes:P.trMuertes||0,abiertos:ab,nombre:trNombre},dt);P.trGolpes=0;P.trMuertes=0;
+  if(P.trCarg)P.powT=Math.max(P.powT||0,0.15);
+  P.form=P.trCad[Math.min(P.tr.paso,P.trCad.length-1)];
+  if(ev==='sube'){S.forms++;const mx=stats().maxhp;P.hp=Math.min(mx,P.hp*mx/mx0);
+    S.banner={t:2.2,text:trNombre(P.tr.paso)+'!',sub:'¡Transformación!',trans:1};S.flash=0.5;S.freeze=0.4;P.powT=1.2;cam.shake=8;sfx('trans');
+    if(typeof PFX!=='undefined'&&PFX.transform)PFX.transform(P.x,P.y,P.trCad.length<2?'white':heroAura(S.hid,P.form));burst(P.x,P.y-10,60,['#ffd23f','#ffffff','#fff6a8'])}
+  else if(ev==='vuelve'){P.hp=Math.min(P.hp,stats().maxhp);S.banner={t:1.4,text:'FIN DE LA TRANSFORMACIÓN',sub:'Vuelve a cargar ki'}}}
 
 
 
@@ -5161,7 +5171,7 @@ function update(dt){
 
   if(S.freeze>0){S.freeze-=dt;updateFx(dt);if(window.PFX)PFX.update(dt);return}
 
-  S.t+=dt;const ps=stats();
+  S.t+=dt;trUpdate(dt);const ps=stats();
 
   // move
 
@@ -5169,6 +5179,7 @@ function update(dt){
 
   if(joy.on){const dx=joy.x-joy.ox,dy=joy.y-joy.oy,d=Math.hypot(dx,dy);if(d>3){mx=dx/Math.max(d,18);my=dy/Math.max(d,18)}}
 
+  if(P.trCarg){mx=0;my=0}
   const ml=Math.hypot(mx,my);if(ml>1){mx/=ml;my/=ml}
 
   P.moving=ml>0.05;P.mvx=mx;P.mvy=my;if(!P.moving&&P.atkT>0&&P.atkFace)P.face=P.atkFace;else{P.atkFace=0;if(mx<-0.1)P.face=-1;else if(mx>0.1)P.face=1}
@@ -5191,7 +5202,7 @@ function update(dt){
 
   if(P.form>0&&Math.random()<0.5)parts.push({x:P.x+rnd(-7,7),y:P.y-rnd(0,18),vx:0,vy:-rnd(20,45),t:rnd(0.2,0.45),c:S.hid==='piccolo'?(P.form===3?'#ffb060':'#c8f0ff'):(Math.random()<.5?'#ffd23f':'#fff6a8'),s:1});
 
-  director(dt);eventos(dt);gridBuild();updateMoves(dt,ps);sigUpdate(dt,ps);
+  director(dt);eventos(dt);gridBuild();updateMoves(dt,ps);if(!P.trCarg)sigUpdate(dt,ps);
 
   // enemies
 
@@ -5366,8 +5377,6 @@ function update(dt){
   pickups=pickups.filter(k=>!k.got);
 
   updateFx(dt);
-
-  checkForm();
 
   if(S.wish&&state==='play'){S.wish=false;S.wishes++;openWish()}
 
@@ -9051,7 +9060,7 @@ function toggleFull(){if(document.fullscreenElement)document.exitFullscreen();el
   });
 })();
 
-window.AS={SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,enemies:()=>enemies,eshots:()=>eshots,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
+window.AS={tr:()=>P&&P.tr,trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,enemies:()=>enemies,eshots:()=>eshots,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
 
 newGame('goku');showTitle();
 
