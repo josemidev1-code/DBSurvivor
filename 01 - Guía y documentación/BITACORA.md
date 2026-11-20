@@ -4597,3 +4597,15 @@ ode --check.
 ### Siguiente paso recomendado
 - Que Josemi juegue y valore el ritmo nuevo (niveles y jefes). Ajustar `need` y la vida de jefes en `spawn()` si hace falta.
 - Diseñar con Josemi las transformaciones en partida (SSJ, Cell Perfecto…) y las mejoras por personaje.
+
+## 2026-11-20 — Claude (sesión 23)
+
+### Lo que pidió el usuario
+- Seguir desde la rama `claude/pensive-maxwell-rmrwmm`. Objetivo: juego «entretenido y dopamínico», gusto al ver a Goku arrasar hordas, efectos chulos y jefes con reto.
+- Orden de tareas: 1) instalar `codex-plugin-cc` y conectar con Codex/ChatGPT para las animaciones («dime los comandos exactos que tengo que escribir yo»); 2) probar ritmo de niveles y jefes y ajustar; 3) transformaciones en partida y mejoras por personaje fieles al lore (proponer antes de programar); 4) pulir ataques y animaciones de todos, incluidos los 70 enemigos con un fotograma; 5) ataques propios por personaje y época, enseñar lista antes y no inventar; 6) valorar título/estilo del 13 nov., PixelFX del 11 nov. y `05 - Sprites nuevos encontrados`; 7) arreglar las 4 comprobaciones y el README.
+- Reglas: todo en español, doble clic en `index.html`, solo sprites de `sprites/`, apuntar cada petición, commits pequeños, GIFs o capturas.
+
+### Lo que hice
+- Repositorio local en `~/Documents/Proyectos/DBSurvivor/DBSurvivor`. Creada la rama local `claude/pensive-maxwell-rmrwmm` desde GitHub.
+- Aviso: el `main` local tiene 12 commits de Codex del 13 nov. (hojas originales, visor, Piskel) que NO están en GitHub ni en esta rama. No se han tocado; preguntar a Josemi si subirlos o fusionarlos.
+- Paso 1: comandos del plugin comprobados en el README oficial de `openai/codex-plugin-cc` (marketplace `openai-codex`, plugin `codex`). Node 26 y npm 11 instalados en el Mac. Pendiente de que Josemi los escriba.
