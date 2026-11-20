@@ -4617,6 +4617,7 @@ ode --check.
 ### Lo que pidió el usuario
 - Seguir con DBSurvivor en la rama `claude/pensive-maxwell-rmrwmm`: poner la sesión al día, comprobar que el plugin de Codex está cargado y preguntar a Josemi por dónde seguir (pasos 2-7 del relevo).
 - Josemi aún no ha jugado; elige empezar por las transformaciones (paso 3): «No, transformaciones». Proponer el diseño antes de programar.
+- Diseño de transformaciones: Claude propuso A) por nivel o B) barra de ki que se activa con una tecla. Josemi: «barra de ki molaría, pero si es un reto cargar ki, porque si es fácil cargar ki sin que te disparen o te lo dejen difícil no tiene gracia».
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
