@@ -4616,6 +4616,7 @@ ode --check.
 
 ### Lo que pidió el usuario
 - Seguir con DBSurvivor en la rama `claude/pensive-maxwell-rmrwmm`: poner la sesión al día, comprobar que el plugin de Codex está cargado y preguntar a Josemi por dónde seguir (pasos 2-7 del relevo).
+- Josemi aún no ha jugado; elige empezar por las transformaciones (paso 3): «No, transformaciones». Proponer el diseño antes de programar.
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
