@@ -62,5 +62,24 @@
   function nivelPaso(paso,pasos){return pasos>1?Math.round(5+35*(paso-1)/(pasos-1)):20}
   function mejora(nombre){return MEJORAS[nombre]||NEUTRA}
 
-  window.TRANSF={CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora};
+  // Estado de la carga: carga (0-1 hacia la forma siguiente), paso (0 = base), t (segundos que quedan transformado)
+  function nuevo(){return{carga:0,paso:0,t:0,cargando:false}}
+  // e = {cargando, golpes, muertes, abiertos (pasos que se pueden alcanzar), nombre(paso) → nombre de la forma}
+  // Devuelve 'sube', 'vuelve' o null.
+  function avanzar(T,e,dt){
+    T.cargando=!!e.cargando;
+    if(T.paso>0){T.t-=dt;if(T.t<=0){T.paso=0;T.carga=0;T.t=0;return 'vuelve'}}
+    if(T.paso<e.abiertos){
+      if(e.cargando)T.carga+=dt/tiempos(T.paso+1).carga;
+      T.carga+=0.02*(e.muertes||0);
+    }
+    T.carga=Math.max(0,T.carga-0.35*(e.golpes||0));
+    if(T.paso<e.abiertos&&T.carga>=1-1e-9){
+      T.paso++;T.carga=0;T.t=tiempos(T.paso).dura*(mejora(e.nombre(T.paso)).duraK||1);return 'sube';
+    }
+    if(T.paso>=e.abiertos)T.carga=Math.min(T.carga,0);
+    return null;
+  }
+
+  window.TRANSF={CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora,nuevo,avanzar};
 })();
