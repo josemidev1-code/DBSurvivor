@@ -22,7 +22,9 @@ Las transformaciones tienen que ser fieles a la serie, y cada forma ha de notars
 
 Josemi: «primero lo que quiero tener son los personajes más icónicos de la serie, tenerlos bien animados y jugables. Y después ya seguiremos con los otros».
 
-**(propuesta de Claude)** Personajes principales: Goku, Vegeta, Gohan, Piccolo, Krilin, Trunks, Goten, Freezer, Cell, Majin Buu y Broly. Pendiente de que Josemi añada o quite alguno (por ejemplo Yamcha, Tenshinhan, Androide 18, Gogeta o Vegetto).
+Personajes principales: Goku, Vegeta, Gohan, Piccolo, Krilin, Trunks, Goten, Freezer, Cell, Majin Buu y Broly.
+
+**Orden de trabajo (Josemi, 20 nov.):** primero los principales, solo con lo que sale en la serie; después el resto de personajes de la serie; y al final los fanmade y similares («primero vamos a centrarnos con todos los de la serie y después ya fanmade y todos esos»).
 
 ### Formas y mejoras de los principales (propuesta de Claude)
 
@@ -44,8 +46,8 @@ Cada forma tendría una mejora propia sacada de la serie, en vez del +25 % igual
 
 ### Dudas para Josemi
 
-1. ¿Te vale esta lista de principales o quitas o añades alguno?
-2. **Formas inventadas por fans:** Cell Golden, Cell Majin y Broly SSJ4 son de fans, no de la serie. **(propuesta de Claude)** Quitarlas de la cadena de los principales y dejarlas en sus personajes «fanmade».
+1. ~~Lista de principales~~: resuelta, son los 11 de arriba.
+2. ~~Formas inventadas por fans~~: resuelta. Cell Golden, Cell Majin y Broly SSJ4 salen de la cadena de los principales y se tratan más adelante, junto con los fanmade.
 3. **Goku y Vegeta tienen 9 y 10 formas.** ¿Se pueden cargar todas en una partida (barra muy larga) o eliges antes de jugar 4 o 5 formas?
 
 ## Todos los personajes (118 en la pantalla de selección)
