@@ -4624,6 +4624,7 @@ ode --check.
 - Claude encontró dos hojas de auras en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/03_Efectos_FX_y_Auras/` (todas las fases SWL y carga de ki). Josemi: «puedes usar esa, pero creo que quedará mejor» con el repositorio PixelFX de GitHub: «descárgalo, instálalo y así lo usamos para Dragon Ball. Y ponme una lista de lo que tenemos que hacer, lo que queda por hacer. Y te digo yo».
 - Josemi: recordar que tenemos ChatGPT con el plugin de Codex y la página Sprite Fusion para hacer las animaciones de los personajes a los que les faltan movimientos, «pero eso más adelante, porque tengo los créditos limitados y necesito que sea bueno». Usar ChatGPT para lo que Claude no pueda hacer, por ejemplo pasar a pixel art imágenes de objetos de Dragon Ball: «así os complementáis y sois el mejor equipo».
 - Josemi: «ponme una lista para que la vea yo de las cosas que tenemos que hacer aún. Y poquito a poquito vamos a ir haciendo». Hecha en `01 - Guía y documentación/LISTA_PENDIENTES.md`.
+- Josemi: «empieza por el 1». Quiere ver todos los personajes y cómo se transforman, pero primero los principales de la serie («Goku, Vegeta, Piccolo… los principales»): «vamos a trabajar primero con esos para animarlos bien… tener los personajes más icónicos de la serie bien animados y jugables. Y después ya seguiremos con los otros».
 
 ### Lo que hice
 - Leídos `AGENTS.md`, el relevo (bloque sesión 23) y la entrada de la sesión 23.
