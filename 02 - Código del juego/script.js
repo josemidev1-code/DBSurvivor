@@ -4112,11 +4112,11 @@ addEventListener('keydown',e=>{keys[e.code]=true;
 
 addEventListener('keyup',e=>{keys[e.code]=false});
 
-addEventListener('blur',()=>{for(const k in keys)keys[k]=false;if(state==='play')pauseGame()});
+addEventListener('blur',()=>{for(const k in keys)keys[k]=false;if(P)P.kiToque=false;if(state==='play')pauseGame()});
 
 const joy={on:false,id:null,ox:0,oy:0,x:0,y:0};
 
-cv.addEventListener('pointerdown',e=>{initAudio();if(state!=='play')return;{const x=e.clientX/SC,y=e.clientY/SC,K=P&&P.kiR;if(K&&x>=K[0]&&x<K[0]+K[2]&&y>=K[1]&&y<K[1]+K[3]){P.kiToque=true;P.kiId=e.pointerId;return}}{const x=e.clientX/SC,y=e.clientY/SC,R=P&&P.barR||[];for(let i=0;i<R.length;i++){const r=R[i];if(x>=r[0]&&x<r[0]+r[2]&&y>=r[1]&&y<r[1]+r[3]){sigSelect(i);return}}}joy.on=true;joy.id=e.pointerId;joy.ox=joy.x=e.clientX/SC;joy.oy=joy.y=e.clientY/SC;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointerdown',e=>{initAudio();if(state!=='play')return;{const x=e.clientX/SC,y=e.clientY/SC,K=P&&P.kiR;if(K&&x>=K[0]&&x<K[0]+K[2]&&y>=K[1]&&y<K[1]+K[3]){P.kiToque=true;P.kiId=e.pointerId;cv.setPointerCapture(e.pointerId);return}}{const x=e.clientX/SC,y=e.clientY/SC,R=P&&P.barR||[];for(let i=0;i<R.length;i++){const r=R[i];if(x>=r[0]&&x<r[0]+r[2]&&y>=r[1]&&y<r[1]+r[3]){sigSelect(i);return}}}joy.on=true;joy.id=e.pointerId;joy.ox=joy.x=e.clientX/SC;joy.oy=joy.y=e.clientY/SC;cv.setPointerCapture(e.pointerId)});
 
 cv.addEventListener('pointermove',e=>{if(joy.on&&e.pointerId===joy.id){joy.x=e.clientX/SC;joy.y=e.clientY/SC}});
 
