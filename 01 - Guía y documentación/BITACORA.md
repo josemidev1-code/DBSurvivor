@@ -4645,6 +4645,7 @@ ode --check.
 - Josemi sobre las transformaciones con los sprites del pack: «me gustan».
 - Josemi pidió ver todas las transformaciones juntas en un GIF (enviado: cuadrícula de los 11 principales). Siguiente, elegido por Josemi: «poder máximo» (que se note durante los 20 s, con sprites).
 - Poder máximo hecho con sprites: aura blanca de contorno de la hoja SWL (`DBZ_Auras_Todas_las_Fases_SWL`) detrás del personaje durante los 20 s, y el estallido blanco lleno los primeros 0,6 s. Recortes en `02 - Código del juego/auras_sprites.js` (generado por `herramientas/montar_auras.py`); créditos añadidos. Probado con Krilin y GIF enviado.
+- Opinión de Josemi sobre las transformaciones y el poder máximo: «me encanta» (21 nov.; la dio en otra sesión al ver de nuevo los GIF de la cuadrícula de los 11 principales y de Krilin en poder máximo; esos GIF se volvieron a grabar allí porque los del scratchpad se habían borrado). Siguiente punto de la lista: cuando Josemi lo diga.
 - Decisiones tomadas por Claude (detalle en `.superpowers/sdd/PLAN_TRANSFORMACIONES/progress.md`): matar da 0,005 de carga (con 0,02 las hordas llenaban la barra solas); la partida empieza siempre en la base; en la forma base no hay rasgo; el aura del 11 nov. se reutiliza tal cual.
 
 ### Lo que hice
