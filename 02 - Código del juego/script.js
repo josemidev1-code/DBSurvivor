@@ -3090,7 +3090,8 @@ const UNLOCK_LV=[1,1,4,8,12,16];
 
 let FO=null;const fxSl=[],fxRg=[];
 
-function sigList(hid=S.hid){if(SIGS[hid])return SIGS[hid];const st=HEROES[hid]&&HEROES[hid].start;return['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku']}
+// la partida en curso usa su propia copia (P.sigs): así una fusión no se queda guardada para las partidas siguientes
+function sigList(hid=S.hid){if(P&&P.sigs&&S&&hid===S.hid&&(state==='play'||state==='levelup'||state==='pause'||state==='dying'))return P.sigs;if(SIGS[hid])return SIGS[hid];const st=HEROES[hid]&&HEROES[hid].start;return['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku']}
 
 function sigOpen(){return sigList().slice(0,P.sigU||2)}
 
@@ -4421,9 +4422,9 @@ function updateMoves(dt,ps){
 
 // ---------- spawning ----------
 
-function spawn(type,x,y){
+function spawn(type,x,y,comoJefe){
 
-  let d=ET[type];if(!d)throw new Error('Enemigo sin animaciones revisadas: '+type);if(d.boss)d={r:13,...d,...BOSS_SLOT[Math.max(0,Math.min(4,S.bossN||0))]};else if(d.r==null)d={...d,r:6};const lv=(P&&P.lvl||1)-1,sc=1+Math.max(0,S.t-60)/200+(S.endless?S.t/300:0); // dificultad justa (22 nov.): los enemigos normales crecen con el tiempo, no con tu nivel
+  let d=ET[type];if(!d)throw new Error('Enemigo sin animaciones revisadas: '+type);/* un élite puesto de jefe de mapa se comporta como jefe (si no, al morir te dejaba atrapado en la isla) */if(comoJefe&&!d.boss)d={...d,boss:1};if(d.boss)d={r:13,...d,...BOSS_SLOT[Math.max(0,Math.min(4,S.bossN||0))]};else if(d.r==null)d={...d,r:6};const lv=(P&&P.lvl||1)-1,sc=1+Math.max(0,S.t-60)/200+(S.endless?S.t/300:0); // dificultad justa (22 nov.): los enemigos normales crecen con el tiempo, no con tu nivel
 
   if(x===undefined){const a=rnd(TAU),r=Math.min((VW/2+18)/Math.max(0.05,Math.abs(Math.cos(a))),(VH/2+18)/Math.max(0.05,Math.abs(Math.sin(a))));x=P.x+Math.cos(a)*r;y=P.y+Math.sin(a)*r}
 
@@ -4536,11 +4537,13 @@ function director(dt){
 
       S.banner={t:2,text:'MINUTO '+mi,sub:['¡ESTAMPIDA!','¡TE RODEAN!','¡ATAQUE EN PINZA!'][kind]}}}
 
-  if(S.bossIdx<BOSS_T.length&&S.t>=BOSS_T[S.bossIdx]){const id=MAPS[S.map].bosses[S.bossIdx];S.bossIdx++;spawnBoss(id,S.bossIdx===5)}
+  if(S.bossIdx<BOSS_T.length&&S.t>=BOSS_T[S.bossIdx]){const id=jefeDe(S.bossIdx);S.bossIdx++;spawnBoss(id,S.bossIdx===5)}
 
   if(S.endless&&S.t>=S.nextEndless){S.nextEndless=S.t+90;const b=MAPS[S.map].bosses;spawnBoss(b[(Math.random()*b.length)|0])}}
 
-function spawnBoss(id,final){islandStart();const a=rnd(TAU);S.bossN=S.bossIdx-1;if(S.endless)S.bossN=4;const e=spawn(id,P.x+Math.cos(a)*90,P.y+Math.sin(a)*90);e.final=!!final;S.boss=e;e.powT=1.8;
+// jefe número i del mapa; en el modo infinito, los mapas con 5 jefes repiten desde el principio (antes se rompía el juego)
+function jefeDe(i){const L=MAPS[S.map].bosses;return L[i]||L[i%L.length]}
+function spawnBoss(id,final){islandStart();const a=rnd(TAU);S.bossN=S.bossIdx-1;if(S.endless)S.bossN=4;const e=spawn(id,P.x+Math.cos(a)*90,P.y+Math.sin(a)*90,true);e.final=!!final;S.boss=e;e.powT=1.8;
 
   S.banner={t:3,text:'¡'+ET[id].n+'!',sub:S.isl.name+' · derrota al jefe y elige una mejora',boss:1};sfx('boss');cam.shake=6;if(window.PFX&&PFX.llegada)PFX.llegada(e.x,e.y)}
 
@@ -4987,13 +4990,13 @@ function applyOpt(op){
 
      {
 
-       const cur=sigList();
+       const cur=sigList().slice();
 
        const idxA=cur.indexOf(op.idA);
 
        if(idxA!==-1)cur[idxA]=op.fusId;else cur[0]=op.fusId;
 
-       SIGS[S.hid]=cur;
+       P.sigs=cur;
 
        P.sigTimers[op.fusId]=0;P.sel=idxA!==-1?idxA:0;P.sigCursor=P.sel;P.sigT=0;
 
@@ -6277,6 +6280,7 @@ function islandTick(){const I=S.isl;if(!I)return;
 
   const d=Math.hypot(P.x-I.x,P.y-I.y),R=ISLR*T-10;if(d>R){P.x=I.x+(P.x-I.x)/d*R;P.y=I.y+(P.y-I.y)/d*R}
 
+  if(S.boss&&S.boss.dead)S.boss=null; // por si acaso: un jefe muerto nunca debe dejarte atrapado en la isla
   if(!S.boss&&!I.end)I.end=S.t+2.5;
 
   if(I.end&&S.t>=I.end){const dx=I.bx-I.x,dy=I.by-I.y,near=o=>Math.hypot(o.x-I.x,o.y-I.y)<ISLR*T*3;
@@ -7611,7 +7615,7 @@ function hud(time){
     let ly=y-21;
     if(L[P.sel]){const W=MV[L[P.sel]];hudPill(W.name.toUpperCase(),ly,'#ffd23f','#7c2d12',HW/2);ly-=18}
     if(S.t<12&&!TACTIL){const hint='WASD MOVER · 1-'+n+' ATAQUE · ESPACIO KI · ESC PAUSA';if(hint.length*8+12<HW)hudPill(hint,ly,'#c7d2fe','#3b4a9c',HW/2);ly-=18}
-    if(!(S.boss&&!S.boss.dead)&&S.bossIdx<BOSS_T.length){const left=BOSS_T[S.bossIdx]-S.t;if(left<20){const t='SE ACERCA '+ET[MAPS[S.map].bosses[S.bossIdx]].n.toUpperCase()+' '+Math.ceil(left),big=t.length*16+12<HW;hudPill(t,ly-(big?8:0),(time*4|0)%2?'#fca5a5':'#ffffff','#dc2626',HW/2,big?16:8);ly-=big?30:18}}
+    if(!(S.boss&&!S.boss.dead)&&S.bossIdx<BOSS_T.length){const left=BOSS_T[S.bossIdx]-S.t;if(left<20){const t='SE ACERCA '+ET[jefeDe(S.bossIdx)].n.toUpperCase()+' '+Math.ceil(left),big=t.length*16+12<HW;hudPill(t,ly-(big?8:0),(time*4|0)%2?'#fca5a5':'#ffffff','#dc2626',HW/2,big?16:8);ly-=big?30:18}}
     if(P.newSig){const id=L[P.newSig.i];if(id&&((P.newSig.t*4|0)%2||P.newSig.t<2.2)){const t='¡NUEVO ATAQUE: '+MV[id].name.toUpperCase()+'!',t2b=TACTIL?'TOCALO ABAJO PARA USARLO':'PULSA '+(P.newSig.i+1)+' PARA USARLO',bw=Math.max(t.length,t2b.length)*8+16,bx=Math.round(HW/2-bw/2);hudPanel(bx,ly-14,bw,26,'#ffd23f');text(t,HW/2,ly-11,'#ffd23f',8);text(t2b,HW/2,ly,'#ffffff',8)}}}
 
   // Avisos grandes: franja con filetes dorados
@@ -8280,7 +8284,7 @@ function pauseGame(){state='pause';$('#pause').hidden=false;
   const item=(cv,nm,lv)=>{const d=document.createElement('div');d.className='pItem';d.appendChild(cvCopy(cv));d.insertAdjacentHTML('beforeend','<span>'+nm+'</span><b>'+lv+'</b>');return d};
   const mv=$('#pauseMoves'),cd=$('#pauseCards');mv.innerHTML='';cd.innerHTML='';
   sigOpen().forEach((id,i)=>mv.appendChild(item(sigIcon(id,32),MV[id].name,'NV.'+sigLv(i))));
-  P.order.forEach(id=>mv.appendChild(item(sigIcon(id,32),P.moves[id].evo?MV[id].evo:MV[id].name,'NV.'+P.moves[id].lv)));
+  P.order.forEach(id=>mv.appendChild(item(sigIcon(id,32),(P.moves[id].evo?MV[id].evo:MV[id].name)+' (auto)','NV.'+P.moves[id].lv))); // las automáticas, marcadas para no confundirlas con el ataque elegido (1-6)
   Object.keys(P.cards).forEach(id=>cd.appendChild(item(icon(id,32),CARDS[id].name,'x'+P.cards[id])));
   if(!cd.children.length)cd.innerHTML='<p class="pVacio">Elige pasivas al subir de nivel.</p>';
   setTimeout(()=>$('#bResume').focus(),20)}
