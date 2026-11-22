@@ -1,6 +1,15 @@
 # Lo que queda por hacer en DBSurvivor
 
-Actualizada el 20 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a poco y se marca con [x] lo que esté hecho.
+Actualizada el 22 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a poco y se marca con [x] lo que esté hecho.
+
+## 0. Lo más importante ahora (22 nov.)
+
+Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculos y es imposible aguantar aunque juegues bien. Detalle y datos en `ESTADO_Y_RUMBO.md`.
+
+- [ ] Dificultad justa: los enemigos no se hacen más fuertes cuando subes de nivel; menos enemigos pero más peligrosos y que avisen antes de atacar.
+- [ ] Mapas con obstáculos de verdad (rocas grandes, paredes, pasillos) para cubrirse y usar el terreno.
+- [ ] Enemigos propios de cada saga, cada tipo con su forma de atacar, y hordas que cambian cada minuto.
+- [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
 
 ## A. Transformaciones (diseño hablado el 20 nov.)
 
