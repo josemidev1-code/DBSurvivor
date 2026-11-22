@@ -215,7 +215,11 @@ window.PFX = {
     for (const e of live) {
       clearFrame(e.frame); e.fx.draw(e.frame); composite(e.frame, e.img.data, null);
       e.g.putImageData(e.img, 0, 0);
-      ctx.drawImage(e.cv, Math.round(X(e.x) - e.ox), Math.round(Y(e.y) - e.oy));
+      // Impactos y nubes más pequeños y transparentes; rayos y transformaciones conservan su dibujo.
+      const suave = ["plasma", "blunt", "golpe", "poof", "big"].includes(e.id), k = suave ? 0.5 : 1;
+      ctx.save(); if (suave) ctx.globalAlpha *= 0.4;
+      ctx.drawImage(e.cv, Math.round(X(e.x) - e.ox * k), Math.round(Y(e.y) - e.oy * k), e.cv.width * k, e.cv.height * k);
+      ctx.restore();
     }
   },
   clear() { live = []; rayos = []; },

@@ -4204,7 +4204,7 @@ let fxs=[];
 
 function fx(x,y,kind,R,dur){if(fxs.length>90)return;fxs.push({x,y,fr:kind==='spark'?sparkFrames(R):fxFrames(kind,R),t:0,T:dur||0.42})}
 
-function smoke(x,y,n){for(let i=0;i<n&&parts.length<500;i++)parts.push({x:x+rnd(-5,5),y:y+rnd(-4,4),vx:rnd(-10,10),vy:-rnd(8,24),t:rnd(0.4,0.8),c:Math.random()<.5?'#6a6470':'#8a8490',s:2})}
+function smoke(x,y,n){for(let i=0;i<n&&parts.length<500;i++)parts.push({x:x+rnd(-5,5),y:y+rnd(-4,4),vx:rnd(-10,10),vy:-rnd(8,24),t:rnd(0.4,0.8),c:Math.random()<.5?'#6a6470':'#8a8490',s:1,a:0.35})}
 
 function fxKind(hex){if(!hex||hex[0]!=='#')return'fire';const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
 
@@ -7444,7 +7444,7 @@ function render(time){
 
     for(let i=0;i<n;i++){const a=P.orbA+i*TAU/n,x=X(P.x+Math.cos(a)*rad),y=Y(P.y-8+Math.sin(a)*rad);circ(x,y,4,OUTL);circ(x,y,3,m.evo?'#ffe066':'#f2911a');ctx.fillStyle='#d81e1e';ctx.fillRect(x-1,y-1,2,2);ctx.fillStyle='#fff0b0';ctx.fillRect(x-2,y-2,1,1)}}
 
-  for(const p of parts){if(p.ring){ring(X(p.x),Y(p.y),Math.round(p.r*(1-p.t/p.T)),p.c,2);continue}ctx.fillStyle=p.c;ctx.fillRect(X(p.x),Y(p.y),p.s,p.s)}
+  for(const p of parts){if(p.ring){ring(X(p.x),Y(p.y),Math.round(p.r*(1-p.t/p.T)),p.c,2);continue}ctx.globalAlpha=p.a??1;ctx.fillStyle=p.c;ctx.fillRect(X(p.x),Y(p.y),p.s,p.s);ctx.globalAlpha=1}
 
   // las explosiones grandes, algo transparentes para que se vea lo que pasa debajo
 
@@ -7599,8 +7599,8 @@ function hud(time){
     text(Math.ceil(Math.max(0,P.hp))+'/'+ps.maxhp,bx+bw/2,y+16,'#ffffff',8);
     hudBar(bx,y+29,bw,4,P.xp/P.need,'#ffd23f','#fff3c4','#d97706',0,0);
     // barra de ki (transformaciones): se carga manteniendo Espacio o el botón KI
-    if(P.tr){const ab=trAbiertos(),n=P.trCad.length-1,ky=y+h+3,max=Math.floor((w-10)/6);let lab,f=P.tr.carga;
-      if(P.tr.paso===0&&ab<1){lab=formasAbiertas(S.hid)<1?'PIDE LA FORMA A SHENRON':'KI: NIVEL '+TRANSF.nivelPaso(1,n);f=0}
+    if(P.tr&&(P.tr.paso>0||P.trCad.length<2||formasAbiertas(S.hid)>0)){const ab=trAbiertos(),n=P.trCad.length-1,ky=y+h+3,max=Math.floor((w-10)/6);let lab,f=P.tr.carga;
+      if(P.tr.paso===0&&ab<1){lab='KI: NIVEL '+TRANSF.nivelPaso(1,n);f=0}
       else lab=P.tr.paso<ab?'KI > '+trCorto(trNombre(P.tr.paso+1)):'KI MÁXIMO';
       hudPanel(x,ky,w,17);
       hudBar(x+4,ky+4,w-8,9,f,P.trCarg&&(time*10|0)%2?'#fff6a8':'#ffd23f','#fff3c4','#d97706',0,0);
@@ -7615,14 +7615,16 @@ function hud(time){
       if(i<S.balls&&im&&im.complete&&im.naturalWidth){ctx.drawImage(im,bxx,byy,13,13)}else if(i<S.balls){hudR(bxx+2,byy+2,9,9,'#ea580c')}else{hudR(bxx+1,byy+1,11,11,'#1a1f3e');hudR(bxx+4,byy+4,5,5,'#2b3263')}}}
 
   // Arriba a la derecha (o bajo el tiempo en pantallas estrechas): K.O., zeni y escenario
-  const statY=compact?42:5;let topY=44;
-  if(mini){const m=Math.floor(S.t/60),t=m+':'+String(Math.floor(S.t%60)).padStart(2,'0'),ko=S.kills+' KO',zn=String(S.zeni),w=Math.min(HW-12,(t.length+ko.length+zn.length)*8+40),x=Math.round(HW/2-w/2);hudPanel(x,45,w,15,'#f59e0b');text(t,x+6,49,'#ffd23f',8,'left');const kx=x+6+t.length*8+8;text(ko,kx,49,'#ffffff',8,'left');const cx=kx+ko.length*8+8;hudCoin(cx,49);text(zn,cx+10,49,'#ffd23f',8,'left');topY=62;if(S.balls>0){for(let i=0;i<S.balls&&i<7;i++){const im=DBIMG[i+1];if(im&&im.complete&&im.naturalWidth)ctx.drawImage(im,Math.round(HW/2-S.balls*6)+i*12,62,11,11)}topY=75}}
+  const statY=compact?42:5;let topY=44,radarHudBajo=0;
+  if(mini){const m=Math.floor(S.t/60),t=m+':'+String(Math.floor(S.t%60)).padStart(2,'0'),ko=S.kills+' KO',zn=String(S.zeni),w=Math.min(HW-12,(t.length+ko.length+zn.length)*8+40),x=Math.round(HW/2-w/2);radarHudBajo=60*hk;hudPanel(x,45,w,15,'#f59e0b');text(t,x+6,49,'#ffd23f',8,'left');const kx=x+6+t.length*8+8;text(ko,kx,49,'#ffffff',8,'left');const cx=kx+ko.length*8+8;hudCoin(cx,49);text(zn,cx+10,49,'#ffd23f',8,'left');topY=62;if(S.balls>0){for(let i=0;i<S.balls&&i<7;i++){const im=DBIMG[i+1];if(im&&im.complete&&im.naturalWidth)ctx.drawImage(im,Math.round(HW/2-S.balls*6)+i*12,62,11,11)}topY=75}}
   else{const ko=S.kills+' KO',zn=String(S.zeni),sub=(S.isl?S.isl.name:MAPS[S.map].name)+(S.diff?' · '+DIFF[S.diff].n:''),line=ko.length*8+zn.length*8+27,showSub=!compact&&HW>=560,w=Math.max(line,showSub?Math.min(sub.length*8,Math.floor(HW/2-82)):0)+12,h=showSub?28:15,x=compact?Math.round(HW/2-w/2):HW-6-w;
-    hudPanel(x,statY,w,h,'#3b4a9c');
+    radarHudBajo=(statY+h)*hk;hudPanel(x,statY,w,h,'#3b4a9c');
     text(ko,x+6,statY+4,'#ffffff',8,'left');
     const cx=x+6+ko.length*8+10;hudCoin(cx,statY+4);text(zn,cx+10,statY+4,'#ffd23f',8,'left');
     if(showSub)text(hudCut(sub,Math.floor((w-12)/8)),x+6,statY+16,'#9db4f5',8,'left');
     if(compact)topY=60}
+
+  if(radarAviso){const r=cv.getBoundingClientRect();radarAviso.style.top=Math.ceil(r.top+radarHudBajo*r.height/(VH*2))+8+'px'}
 
   // Jefe: nombre y barra grande con rastro de daño
   if(S.boss&&!S.boss.dead){const w=Math.min(300,HW-40)&~1,x=Math.round(HW/2-w/2),y=topY,f=S.boss.hp/S.boss.maxhp;

@@ -38,6 +38,8 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
 
 ## Cómo está ahora (05/11/2026)
 
+- Interfaz (23/11/2026): radar debajo de las estadísticas, retirado el aviso fijo de Shenron, impactos más pequeños y transparentes, NOTICIAS sin invadir ZENI y logo sin aparición lenta.
+
 - La biblioteca `antigravity sprites/` y `Recursos pendientes/` se quitaron el 14 nov. 2026 (siguen en el historial de git).
 - Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/Histórico/CAMBIOS_COMBATE_2026-11-04.md`.
 - Pendiente principal: revisar y seleccionar los ataques extra de cada pack; todavía no se ha hecho para todo el catálogo.
@@ -77,6 +79,7 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
   `01 - Guía y documentación/00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md`.
 
 ## Lo que falta (en este orden)
+
 
 **Pendiente pedido por Josemi (2 nov., 20:33):**
 1. **Ataques personalizados para cada personaje**: hoy los nuevos usan las técnicas comunes de su familia (`FAMILIAS` en `herramientas/meter.py`); cada uno debe tener las suyas.

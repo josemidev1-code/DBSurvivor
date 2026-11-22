@@ -4689,3 +4689,25 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Según lo que responda Josemi: ajustar el ritmo (paso 2), proponer el diseño de transformaciones (paso 3) o arreglar las comprobaciones y el README (paso 7).
+
+## 2026-11-23 — Codex (dentro de la sesión 24 de Claude, por encargo suyo)
+
+### Lo que pidió el usuario
+- Cinco arreglos pequeños de interfaz: radar debajo del recuadro de KO/mapa; quitar «PIDE LA FORMA A SHENRON» fijo del HUD; humo de impactos a mitad de tamaño y más transparente sin tocar Kamehameha ni transformaciones; evitar que NOTICIAS pise ZENI en escritorio y móvil; logo visible desde el principio sin fetch.
+- Cambios mínimos; subir versiones de caché, comprobar sintaxis y las diez comprobaciones. No hacer commit, cambiar de rama ni usar stash/reset.
+
+### Lo que hice
+- Radar situado con el borde inferior real del panel de estadísticas del HUD, convertido de coordenadas canvas a CSS en cada dibujo (también al redimensionar).
+- Retirado el panel fijo de Shenron cuando no hay formas desbloqueadas; se conserva la barra útil de ki y de poder máximo para personajes de una sola forma.
+- Humo básico a 1 px y opacidad 0,35; nubes/impactos PixelFX (plasma, blunt, golpe, poof, big) a escala 0,5 y opacidad 0,4, tanto en el puente fuente como en el archivo empaquetado. Rayos y transformaciones conservados.
+- NOTICIAS usa border-box: sus bordes de 12 px y relleno quedan dentro del ancho reservado por la barra. Se conserva la disposición móvil en otra fila.
+- Imagen del título asignada inmediatamente después de ui_imagenes.js, antes de cargar sprites y el resto del juego; quitada su animación de entrada. Sin fetch.
+- Caché: script.js 212, style.css 102, efectos_pixelfx.js 11. Sintaxis correcta y las diez comprobaciones pasan. git diff --check correcto.
+- Sin commit, cambios de rama, stash ni reset, por petición expresa.
+
+### A medias / problemas
+- Los cinco cambios están terminados. No se pudo hacer la revisión visual a 1280×720, 1920×1080 y 375×812 ni verificar el doble clic en un navegador: el servicio de acceso al navegador devolvió «The browser access host is unavailable».
+
+### Siguiente paso recomendado
+- Comprobar visualmente los cinco ajustes en esos tres tamaños cuando esté disponible el navegador.
+- **Comprobado por Claude** (23 nov.) en el navegador: logo desde el primer momento; NOTICIAS sin pisar ZENI a 1280×720 y en móvil 375×812 (allí NOTICIAS va abajo); «RADAR ACTIVO» debajo del recuadro de KO/mapa; sin el aviso de Shenron; humo de los golpes pequeño y transparente, el personaje se ve en mitad de la horda. Josemi pidió estos arreglos («Arreglos rápidos»).
