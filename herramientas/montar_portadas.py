@@ -1,8 +1,8 @@
 # Genera portadas_mapas.js: una portada por mapa, incrustada (sin fetch).
 # Dos modos:
 #   python herramientas/montar_portadas.py                 -> dibujos de sprites/06_Escenarios (las portadas antiguas)
-#   python herramientas/montar_portadas.py --juego ui/portadas_mapas -> fotos del propio juego (<mapa>.png), sacadas con
-#                                                            herramientas/capturar_mapas.js (22 nov. 2026)
+#   python herramientas/montar_portadas.py --juego CARPETA -> CARPETA/<mapa>.png. Hoy: ui/portadas_mapas/serie, hechas con
+#                                                            herramientas/montar_portadas_serie.py (23 nov. 2026)
 import glob,io,base64,json,os,sys
 from PIL import Image
 os.chdir(os.path.join(os.path.dirname(__file__),'..'))
@@ -15,8 +15,9 @@ if '--juego' in sys.argv:
   for k in ELEGIDAS:
     im=Image.open(os.path.join(carpeta,k+'.png')).convert('RGB')
     # pixel art: paleta de 128 colores sin tramado, en PNG (nítido y ligero)
-    q=im.quantize(128,dither=Image.Dither.NONE);b=io.BytesIO();q.save(b,'PNG',optimize=True)
-    out[k]='data:image/png;base64,'+base64.b64encode(b.getvalue()).decode();fuentes[k]='foto del juego ('+k+')'
+    im=im.resize((352,220),Image.LANCZOS)  # en el menú se ven a 176×110: el doble para pantallas nítidas
+    b=io.BytesIO();im.save(b,'JPEG',quality=86)  # JPEG: los fondos de la serie tienen demasiados colores para una paleta
+    out[k]='data:image/jpeg;base64,'+base64.b64encode(b.getvalue()).decode();fuentes[k]=carpeta+'/'+k+'.png'
 else:
   fs=[f for f in sorted(glob.glob('sprites/06_Escenarios/**/*',recursive=True)) if f.lower().endswith(('.png','.jpg','.jpeg','.webp','.gif'))]
   W,H=264,165  # índice de la hoja de miniaturas (orden alfabético de rutas) -> mapa

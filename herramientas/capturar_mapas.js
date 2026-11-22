@@ -15,6 +15,7 @@
     P.x=(o.tx||SITIO[0])*T;P.y=(o.ty||SITIO[1])*T;AS.place(P,5,1);P.powT=0;for(let i=0;i<20;i++){AS.tick(1/30);AS.enemies().length=0}
     AS.gems().length=0;AS.pickups().length=0;
     S.freeze=999;S.banner=null;
+    if(o.sinJugador){P.x+=5000;P.y+=5000}  /* con el juego congelado la cámara no se mueve: el jugador queda fuera de la foto */
     if(AS.state==='pause'){const b=document.querySelector('#pause button');if(b)b.click()}
     await fotograma();await fotograma();await espera(120);
     // recorte del centro sin el HUD de arriba y la barra de abajo, en proporción 1,6
