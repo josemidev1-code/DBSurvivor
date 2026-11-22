@@ -11,8 +11,8 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 - [ ] Que Josemi juegue (mañana en clase) y diga si ya se puede aguantar con habilidad.
 - [x] Arreglado el nombre de las fusiones que se acumulaba y aclaradas las técnicas «repetidas» de la pausa (22 nov.).
 - [x] Arreglados los jefes élite que te dejaban atrapado en la isla y el modo infinito en mapas de 5 jefes (22 nov.).
-- [ ] Mejorar los mapas y sus portadas (Josemi, 22 nov.: «hay que mejorar los mapas y las fotos de los mapas un poco»).
-- [ ] Mapas con obstáculos de verdad (rocas grandes, paredes, pasillos) para cubrirse y usar el terreno.
+- [x] Portadas de los mapas con fotos del propio juego (23 nov.). Falta que Josemi diga si le gustan los obstáculos y las portadas.
+- [x] Mapas con obstáculos de verdad (paredes, esquinas, roquedales y ruedos) para cubrirse y usar el terreno (22-23 nov., programado por Codex).
 - [ ] Enemigos propios de cada saga, cada tipo con su forma de atacar, y hordas que cambian cada minuto.
 - [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
 
