@@ -4252,7 +4252,7 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
     if(e.final&&!S.won){S.won=true;S.victoryAfterReward=true}
 
-  }else{dropGem(e.x,e.y,e.xp);if(e.ball)putPickup({k:'dball',n:(S.ballN++%7)+1,x:e.x,y:e.y});if(Math.random()<0.006)putPickup({k:'senzu',x:e.x,y:e.y});if(Math.random()<0.012)putPickup({k:'zeni',x:e.x+4,y:e.y})}}
+  }else{dropGem(e.x,e.y,Math.ceil(e.xp*1.5));if(e.ball)putPickup({k:'dball',n:(S.ballN++%7)+1,x:e.x,y:e.y});if(Math.random()<0.006)putPickup({k:'senzu',x:e.x,y:e.y});if(Math.random()<0.012)putPickup({k:'zeni',x:e.x+4,y:e.y})}}
 
 function putPickup(o){solidPlace(o,4);pickups.push(o);return o}
 
@@ -4423,13 +4423,13 @@ function updateMoves(dt,ps){
 
 function spawn(type,x,y){
 
-  let d=ET[type];if(!d)throw new Error('Enemigo sin animaciones revisadas: '+type);if(d.boss)d={r:13,...d,...BOSS_SLOT[Math.max(0,Math.min(4,S.bossN||0))]};else if(d.r==null)d={...d,r:6};const lv=(P&&P.lvl||1)-1,sc=(1+Math.max(0,S.t-60)/170+(S.endless?S.t/300:0))*(1+0.03*lv);
+  let d=ET[type];if(!d)throw new Error('Enemigo sin animaciones revisadas: '+type);if(d.boss)d={r:13,...d,...BOSS_SLOT[Math.max(0,Math.min(4,S.bossN||0))]};else if(d.r==null)d={...d,r:6};const lv=(P&&P.lvl||1)-1,sc=1+Math.max(0,S.t-60)/200+(S.endless?S.t/300:0); // dificultad justa (22 nov.): los enemigos normales crecen con el tiempo, no con tu nivel
 
   if(x===undefined){const a=rnd(TAU),r=Math.min((VW/2+18)/Math.max(0.05,Math.abs(Math.cos(a))),(VH/2+18)/Math.max(0.05,Math.abs(Math.sin(a))));x=P.x+Math.cos(a)*r;y=P.y+Math.sin(a)*r}
 
   const spr=enemySprite(type);
 
-  const e={type,x,y,hp:d.hp*(d.boss?1:sc),maxhp:0,spd:d.spd*(d.boss?1:rnd(0.9,1.1)),dmg:d.dmg*(1+S.t/500)*(1+0.02*lv)*(S.t<180?0.6+0.4*S.t/180:1),xp:d.xp,r:d.r,boss:!!d.boss,final:!!d.final,ai:d.ai,
+  const e={type,x,y,hp:d.hp*(d.boss?1:sc),maxhp:0,spd:d.spd*(d.boss?1:rnd(0.9,1.1)),dmg:d.dmg*(1+S.t/(d.boss?500:600))*(S.t<180?0.6+0.4*S.t/180:1),xp:d.xp,r:d.r,boss:!!d.boss,final:!!d.final,ai:d.ai,
 
     kx:0,ky:0,flash:0,anim:rnd(4),spr,h:spr.h*(spr.big?1:d.boss?2:1),shootT:d.shoot?rnd(1,d.shoot):0,aiT:2,aiS:0,pc:(PAL[type]||{}).g||(PAL[type]||{}).p||(PAL[type]||{}).s,aura:d.aura};
 
@@ -4507,9 +4507,10 @@ function director(dt){
 
   S.spawnT-=dt;
 
-  if(S.spawnT<=0){S.spawnT=Math.max(0.22,0.85-S.t/500)/DIFF[S.diff||0].sp;const n=2+Math.floor(S.t/100)+Math.floor((P.lvl||1)/8);
+  // dificultad justa (22 nov.): menos enemigos a la vez, un tope que sube con el tiempo y nada que dependa de tu nivel
+  if(S.spawnT<=0){S.spawnT=Math.max(0.3,0.95-S.t/600)/DIFF[S.diff||0].sp;const n=1+Math.floor(S.t/120),tope=Math.min(MAXE,(30+S.t*0.35)*DIFF[S.diff||0].sp);
 
-    for(let i=0;i<n&&enemies.length<MAXE;i++)spawn(pickType(S.t))}
+    for(let i=0;i<n&&enemies.length<tope;i++)spawn(pickType(S.t))}
 
   if(S.ringIdx<RINGS.length&&S.t>=RINGS[S.ringIdx]){S.ringIdx++;const n=S.t<200?18:36,r=Math.max(VW,VH)/2+10,typ=MAPS[S.map].ring[S.t>400?1:0];
 
@@ -4529,7 +4530,7 @@ function director(dt){
 
   {const mi=Math.floor(S.t/60);if(mi>(S.minute||0)){S.minute=mi;const L=MAPS[S.map].pool.filter(p=>S.t>=p[0]&&!ET[p[1]].elite).map(p=>p[1]),typ=L[(Math.random()*L.length)|0]||'saiba',
 
-      n=Math.min(64,mi<3?4+mi*5:12+mi*5),kind=mi%3,r=Math.max(VW,VH)/2+14,a0=rnd(TAU);
+      n=Math.min(48,mi<3?4+mi*4:8+mi*4),kind=mi%3,r=Math.max(VW,VH)/2+14,a0=rnd(TAU);
 
       for(let i=0;i<n&&enemies.length<MAXE;i++){const a=kind===1?i/n*TAU:a0+(kind===2&&i%2?Math.PI:0)+rnd(-0.35,0.35),rr=r+(kind===1?0:rnd(0,60)),e=spawn(typ,P.x+Math.cos(a)*rr,P.y+Math.sin(a)*rr);if(e&&kind!==1&&mi>=3)e.spd*=1.25}
 
@@ -5147,7 +5148,7 @@ function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
 
 // roce: daño por segundo de cada enemigo pegado (sin invulnerabilidad), así rodearte de muchos es peligroso y uno suelto no
 
-const ROL_AJ={aviso:0.25,avisoE:0.15,golpe:0.18,encadena:0.45,golpesE:3,alcance:22,cdGolpe:1.1,cargaAviso:0.25,cargaVel:200,cargaDur:0.45,cargaMin:30,cargaMax:110,cdCarga:1.8,turbo:2.2,turboCerca:50,turboLejos:110,roce:0.5,maxBalas:6};
+const ROL_AJ={aviso:0.4,avisoE:0.25,golpe:0.18,encadena:0.45,golpesE:3,alcance:22,cdGolpe:1.1,cargaAviso:0.4,cargaVel:200,cargaDur:0.45,cargaMin:30,cargaMax:110,cdCarga:1.8,turbo:2.2,turboCerca:50,turboLejos:110,roce:0.5,maxBalas:6};
 
 // sprint de llegada (lo pidió Josemi: «los enemigos tienen que venirte»): lejos corren para alcanzarte y al llegar recuperan su velocidad, así se les puede seguir esquivando
 
@@ -5244,7 +5245,7 @@ function update(dt){
 
     const dx=P.x-e.x,dy=P.y-e.y,d=Math.hypot(dx,dy)||1;
 
-    let vx=0,vy=0;if(e.stun>0){rolCancel(e);e.stun-=dt}else if(!skip){const caza=e.caza=P.trCarg&&!e.boss&&d<260;const v=rolAI(e,d,dx,dy,dt);if(v){vx=v[0];vy=v[1]}else{const tb=rolTurbo(e,d)*(caza?1.35:1);vx=dx/d*e.spd*tb;vy=dy/d*e.spd*tb;if(e.avoidT>0){e.avoidT-=dt;const q=e.avoid||1,nx=-dy/d*q,ny=dx/d*q;vx=vx*0.3+nx*e.spd*0.95;vy=vy*0.3+ny*e.spd*0.95}}}
+    let vx=0,vy=0;if(e.stun>0){rolCancel(e);e.stun-=dt}else if(!skip){const caza=e.caza=P.trCarg&&!e.boss&&d<260;const v=rolAI(e,d,dx,dy,dt);if(v){vx=v[0];vy=v[1]}else{const tb=rolTurbo(e,d)*(caza?1.35:1),vel=caza?e.spd*tb:Math.min(e.spd*tb,Math.max(e.spd,ps.spd*0.85));/* el sprint de llegada nunca supera el 85 % de tu velocidad: si te mueves bien, puedes escapar */vx=dx/d*vel;vy=dy/d*vel;if(e.avoidT>0){e.avoidT-=dt;const q=e.avoid||1,nx=-dy/d*q,ny=dx/d*q;vx=vx*0.3+nx*e.spd*0.95;vy=vy*0.3+ny*e.spd*0.95}}}
 
     if(!skip){vx+=e.kx;vy+=e.ky;const hit=solidMove(e,vx*dt,vy*dt,e.r);if(hit){e.avoidT=0.45;e.avoid=e.avoid||(((e.x*13+e.y*7)|0)&1?1:-1)}}else solidResolve(e,e.r);e.kx*=0.86;e.ky*=0.86;
 
@@ -9102,7 +9103,7 @@ function toggleFull(){if(document.fullscreenElement)document.exitFullscreen();el
   });
 })();
 
-window.AS={tr:()=>P&&P.tr,trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,enemies:()=>enemies,eshots:()=>eshots,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
+window.AS={tr:()=>P&&P.tr,trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,enemies:()=>enemies,eshots:()=>eshots,ebeams:()=>ebeams,hazards:()=>hazards,bombs:()=>bombs,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
 
 newGame('goku');showTitle();
 
