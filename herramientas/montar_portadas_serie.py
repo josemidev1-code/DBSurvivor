@@ -39,6 +39,8 @@ PORTADAS={
  'gizard':(f('HTR001_Desierto.png'),.5,('piccolo',0),('nappa',0)),
  'volcan':(f('MH4_U_Ingle_Isle_Screenshot_001.png'),.5,('goku',1),('freezer',3)),
 }
+# Josemi (23 nov.): «me gustaría que los personajes no estuviesen». Solo el escenario; True vuelve a ponerlos.
+CON_PERSONAJES=False
 # su pose de aura (pow) no queda bien en portada: van en guardia
 SIN_AURA={'piccolo'}
 def fondo(ruta,cx):
@@ -59,14 +61,15 @@ def capa(color,mascara):c=Image.new('RGBA',(W,H),color);c.putalpha(mascara);retu
 def montar(k):
   ruta,cx,heroe,jefe=PORTADAS[k];im=fondo(ruta,cx)
   # viñeta y suelo oscuro para que destaquen los personajes
-  m=Image.new('L',(W,H),0);ImageDraw.Draw(m).ellipse((-W*.2,-H*.25,W*1.2,H*1.15),fill=255);m=ImageOps.invert(m.filter(ImageFilter.GaussianBlur(55))).point(lambda v:v*120//255)
+  m=Image.new('L',(W,H),0);ImageDraw.Draw(m).ellipse((-W*.2,-H*.25,W*1.2,H*1.15),fill=255);m=ImageOps.invert(m.filter(ImageFilter.GaussianBlur(55))).point(lambda v:v*(120 if CON_PERSONAJES else 70)//255)
   im=Image.alpha_composite(im,capa((8,4,24,255),m))
-  g=Image.new('L',(1,H));[g.putpixel((0,y),int(175*max(0,(y-H*.5)/(H*.5))**1.5)) for y in range(H)];im=Image.alpha_composite(im,capa((8,4,24,255),g.resize((W,H))))
-  j=personaje(*jefe,'idle',H*.58,True);h=personaje(*heroe,'idle' if heroe[0] in SIN_AURA else 'pow',H*.5,False)
-  # resplandor detrás de cada uno: dorado el protagonista, rojo el jefe
-  for (px,py,pw,ph,col) in [(W-j.width//2-26,H-j.height//2-8,j.width,j.height,(255,70,50,95)),(34+h.width//2,H-h.height//2-12,h.width,h.height,(255,215,90,95))]:
-    gl=Image.new('RGBA',(W,H));ImageDraw.Draw(gl).ellipse((px-pw*.75,py-ph*.62,px+pw*.75,py+ph*.62),fill=col);im=Image.alpha_composite(im,gl.filter(ImageFilter.GaussianBlur(28)))
-  im.alpha_composite(j,(W-j.width-22,H-j.height-4));im.alpha_composite(h,(34,H-h.height-8))
+  g=Image.new('L',(1,H));[g.putpixel((0,y),int((175 if CON_PERSONAJES else 60)*max(0,(y-H*.5)/(H*.5))**1.5)) for y in range(H)];im=Image.alpha_composite(im,capa((8,4,24,255),g.resize((W,H))))
+  if CON_PERSONAJES:
+    j=personaje(*jefe,'idle',H*.58,True);h=personaje(*heroe,'idle' if heroe[0] in SIN_AURA else 'pow',H*.5,False)
+    # resplandor detrás de cada uno: dorado el protagonista, rojo el jefe
+    for (px,py,pw,ph,col) in [(W-j.width//2-26,H-j.height//2-8,j.width,j.height,(255,70,50,95)),(34+h.width//2,H-h.height//2-12,h.width,h.height,(255,215,90,95))]:
+      gl=Image.new('RGBA',(W,H));ImageDraw.Draw(gl).ellipse((px-pw*.75,py-ph*.62,px+pw*.75,py+ph*.62),fill=col);im=Image.alpha_composite(im,gl.filter(ImageFilter.GaussianBlur(28)))
+    im.alpha_composite(j,(W-j.width-22,H-j.height-4));im.alpha_composite(h,(34,H-h.height-8))
   return im.convert('RGB')
 os.makedirs('ui/portadas_mapas/serie',exist_ok=True)
 for k in PORTADAS:montar(k).save(f'ui/portadas_mapas/serie/{k}.png')
