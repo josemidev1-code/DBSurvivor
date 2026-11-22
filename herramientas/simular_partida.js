@@ -19,7 +19,6 @@
     if(AS.ebeams)for(const b of AS.ebeams())if(linea(b.x,b.y+10,b.a,b.len,b.wid))p+=3;
     for(const e of AS.enemies())if(e.boss&&e.aiW>0&&linea(e.x,e.y,e.wa,e.wl+20,24))p+=3;
     for(const s of AS.eshots()){const d=Math.hypot(x-s.x,y-s.y);if(d<60)p+=3/Math.max(6,d)}
-    if(AS.solid(x,y,6))p+=1;
     // como un jugador de verdad, va a por las gemas de experiencia cuando no hay mucho peligro
     let g=0;for(const o of AS.gems()){const d=Math.hypot(x-o.x,y-o.y);if(d<140)g+=0.25/Math.max(10,d)}
     // y pelea: se queda a unos 45 px del enemigo más cercano para que sus ataques lleguen, sin huir de todo
@@ -28,7 +27,10 @@
     return p-g}
   function decidir(){
     const P=AS.P,v=AS.spd()*0.4;let mejor=peligro(P.x,P.y)-0.003,dir=null;
-    for(const [a,b] of DIRS){const l=Math.hypot(a,b),p=peligro(P.x+a/l*v,P.y+b/l*v);if(p<mejor){mejor=p;dir=[a,b]}}
+    for(const [a,b] of DIRS){const l=Math.hypot(a,b),ux=a/l,uy=b/l;let p=peligro(P.x+ux*v,P.y+uy*v);
+      /* no ir hacia una pared: mira el camino, no solo el punto final */
+      for(const f of [0.25,0.5,0.75,1])if(AS.solid(P.x+ux*v*f,P.y+uy*v*f,6)){p+=2*(1.25-f);break}
+      if(p<mejor){mejor=p;dir=[a,b]}}
     if(!dir){soltar();return}
     tecla('KeyD',dir[0]>0?1:0);tecla('KeyA',dir[0]<0?1:0);tecla('KeyS',dir[1]>0?1:0);tecla('KeyW',dir[1]<0?1:0);
   }

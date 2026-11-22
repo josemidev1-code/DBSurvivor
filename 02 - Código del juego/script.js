@@ -6467,6 +6467,51 @@ const SOLID_DEF={
 
 };
 
+/* Formaciones deterministas: celdas de 12×12, margen de dos casillas y varios
+   tramos abiertos por celda activa para ofrecer cobertura sin cerrar los pasillos. */
+const FORMACIONES={
+  namek:['rock','tree0','tree1','mesa'],tierra:['boulder','spire'],time:['pillar','hourglass'],vegetasei:['redspire','boulder'],futuro:['car','ruin0','ruin1'],arena:['boulder','spire2'],
+  kame:['rock','palm'],kaio:['rock','ktree'],poder:['pillar','debris'],bills:['rock','btree','bfloat'],infierno:['needle','htree'],yardrat:['ybig','ypop','ycliff'],
+  kaioshin:['rock','kstree'],redribbon:['crate','barrel','car'],musculo:['snowrock','spine'],budokai:['rock','ktree','palm'],lookout:['pillar','lpalm','lpot'],capsule:['car','ktree'],
+  paoz:['rock','fpine','ftree'],desierto:['boulder','drock','dcactus','palm'],volcan:['lrock','needle'],gizard:['boulder','drock','mesaS'],pradera:['rock','btree2','ktree'],bosque:['bigtree','fpine','log']
+};
+const formMemo=new Map(),formViejo={},formSemilla={};
+function formacion(id,tx,ty){const W=WORLD[id],lista=FORMACIONES[id];if(!W||!lista||Math.abs(tx)<7&&Math.abs(ty)<7)return null;
+  const cx=Math.floor(tx/12),cy=Math.floor(ty/12),lx=tx-cx*12,ly=ty-cy*12;if(lx<2||lx>9||ly<2||ly>9||W.special(tx,ty))return null;
+  const clave=id+':'+cx+','+cy;let celda=formMemo.get(clave);
+  if(!celda){celda=new Map();const sem=formSemilla[id],r=n=>h2(cx,cy,sem+n),p=id==='time'?.28:id==='bosque'?.60:id==='gizard'?.65:id==='yardrat'?.70:['tierra','futuro','lookout'].includes(id)?.70:.67;
+    if(r(0)<p){const puntos=new Map(),giro=r(1)<.5,tipo=r(2)*4|0,densa=['tierra','futuro','lookout'].includes(id),suave=id==='paoz';
+      const pon=(x,y,grupo=0)=>{if(giro)[x,y]=[y,x];puntos.set(x+','+y,[x,y,grupo])};
+      const pared=(x,y,n,vertical=0,hueco=0)=>{const corte=(n/2|0)-1;for(let i=0;i<n;i++)if(!hueco||n<6||i<corte||i>corte+1)pon(x+(vertical?0:i),y+(vertical?i:0))};
+      if(tipo===0){for(let j=0;j<(suave?2:3);j++)pared(2,2+j*3,(densa?7:6)+(r(10+j)*(densa?1:2)|0),0,id!=='futuro'&&r(15+j)<.18)}
+      else if(tipo===1){for(const x of [2,7]){const n=densa?5:3+(r(20+x)*3|0);pared(x,2,n,1);pared(x,2,3)}pared(2,9,suave?4:7)}
+      else if(tipo===2){for(let j=0;j<(suave?2:3);j++){const n=(densa?8:6)+(r(30+j)*(densa?1:3)|0);for(let i=0;i<n;i++)pon(2+j*3+i%2,2+(i/2|0),1)}if(id==='futuro')pared(2,9,4)}
+      else{for(const [x,y] of [[3,3],[4,2],[5,2],[6,2],[7,3],[3,8],[4,9],[5,9],[6,9],[7,8]])pon(x,y)}
+      for(const [x,y,grupo] of puntos.values()){const ax=cx*12+x,ay=cy*12+y;if(Math.abs(ax)<7&&Math.abs(ay)<7||W.special(ax,ay))continue;
+        /* Conserva los hitos y el espacio que ya les reservaban sus envoltorios. */
+        let hito=false;for(let dy=-3;dy<=3&&!hito;dy++)for(let dx=-3;dx<=3;dx++){const d=formViejo[id](ax+dx,ay+dy,h2(ax+dx,ay+dy,3));if(d&&[DECOR.fship,DECOR.podcrater,DECOR.ccorp,DECOR.kamehouse,DECOR.kaiohouse,DECOR.gokuhouse,DECOR.temple,DECOR.kamipalace,DECOR.budokai,DECOR.bpyramid,DECOR.zenobox,DECOR.kstemple,DECOR.rrtower,DECOR.muscle,DECOR.ypod].includes(d)){hito=true;break}}
+        if(hito)continue;const v=h2(ax,ay,sem+50),k=grupo?lista[v<.8?0:Math.min(lista.length-1,1+(v*17|0)%(lista.length-1))]:lista[0];if(DECOR[k]&&SOLID_DEF[k])celda.set(x+','+y,k)}
+    }
+    formAbrir(celda);if(formMemo.size>4096)formMemo.clear();formMemo.set(clave,celda)}
+  return DECOR[celda.get(lx+','+ly)]||null}
+/* Abre también los pequeños huecos entre cuatro huellas elípticas: un grupo
+   visualmente macizo puede rodear un punto transitable para el radio 5. */
+function formAbrir(celda){for(let vuelta=0;vuelta<24&&celda.size;vuelta++){
+  const piezas=[...celda].map(([k,d])=>{const [x,y]=k.split(',').map(Number),f=SOLID_DEF[d];return{k,x:x*T+8,y:y*T+8,rx:f[0]+5,ry:f[1]+5}}),N=48,libre=new Uint8Array(N*N),visto=new Uint8Array(N*N),cola=[];
+  for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,px=x*4+2,py=y*4+2;libre[i]=!piezas.some(q=>(px-q.x)**2/(q.rx*q.rx)+(py-q.y)**2/(q.ry*q.ry)<1);
+    if(libre[i]&&(x===0||y===0||x===N-1||y===N-1)){visto[i]=1;cola.push(i)}}
+  while(cola.length){const i=cola.pop(),x=i%N,y=i/N|0;for(const j of [x?i-1:-1,x<N-1?i+1:-1,y?i-N:-1,y<N-1?i+N:-1])if(j>=0&&libre[j]&&!visto[j]){visto[j]=1;cola.push(j)}}
+  const hueco=libre.findIndex((v,i)=>v&&!visto[i]);if(hueco<0)return;const x=(hueco%N)*4+2,y=(hueco/N|0)*4+2;
+  let cerca=piezas[0],dist=Infinity;for(const q of piezas){const d=(x-q.x)**2+(y-q.y)**2;if(d<dist){dist=d;cerca=q}}celda.delete(cerca.k)}
+  /* Ante un grupo excepcionalmente complejo, deja la celda abierta. */
+  celda.clear()}
+/* Alinea la huella al centro de la casilla, compensando la altura del sprite.
+   Dibujo y colisión usan exactamente el mismo desplazamiento, sin dispersión. */
+function decorDesplazamiento(id,tx,ty,d){if(formacion(id,tx,ty)===d){const k=FORMACIONES[id].find(k=>DECOR[k]===d),f=SOLID_DEF[k];return[0,f[2]+f[1]-d.height/2]}return[(h2(tx,ty,4)*8)|0,(h2(tx,ty,6)*8)|0]}
+for(const [i,id] of Object.keys(WORLD).entries()){const W=WORLD[id],viejo=W.decor;formViejo[id]=viejo;formSemilla[id]=701+i*101;
+  /* Las islas mantienen su decorado original, incluso al llamar a W.decor. */
+  W.decor=(tx,ty,v)=>S&&S.isl?viejo(tx,ty,v):formacion(id,tx,ty)||viejo(tx,ty,v)}
+
 const SOLID_BY=new Map(),solidMemo=new Map(),solidNearM=new Map();let solidMap='',solidIX=0,solidIY=0,solidIsland=0;
 
 function solidInit(){if(SOLID_BY.size)return;for(const k in SOLID_DEF)if(SOLID_DEF[k]&&DECOR[k])SOLID_BY.set(DECOR[k],SOLID_DEF[k])}
@@ -6481,7 +6526,7 @@ function solidAt(tx,ty){solidInit();const I=S&&S.isl,key=(tx+65536)*131072+(ty+6
 
   if(I)d=islandDecor(tx,ty);
 
-  else if(!W.special(tx,ty)){d=W.decor(tx,ty,h2(tx,ty,3));jx=(h2(tx,ty,4)*8)|0;jy=(h2(tx,ty,6)*8)|0}
+  else if(!W.special(tx,ty)){d=W.decor(tx,ty,h2(tx,ty,3));if(d)[jx,jy]=decorDesplazamiento(MAPK,tx,ty,d)}
 
   const f=d&&SOLID_BY.get(d);if(!f){solidMemo.set(key,0);return 0}const q={x:tx*T+jx+8,y:ty*T+jy+8+d.height/2-f[2]-f[1],rx:f[0],ry:f[1]};if(solidMemo.size>50000)solidMemo.clear();solidMemo.set(key,q);return q}
 
@@ -6752,7 +6797,7 @@ function drawWorld(time){
 
   for(let ty=ty0-3;ty<=ty1+1;ty++)for(let tx=tx0-3;tx<=tx1+1;tx++){if(W.special(tx,ty))continue;const d=W.decor(tx,ty,h2(tx,ty,3));
 
-    if(d)drawLivingDecor(d,tx*T-cx+((h2(tx,ty,4)*8)|0)-d.width/2+8,ty*T-cy+((h2(tx,ty,6)*8)|0)-d.height/2+8,time)}
+    if(d){const [jx,jy]=decorDesplazamiento(MAPK,tx,ty,d);drawLivingDecor(d,tx*T-cx+jx-d.width/2+8,ty*T-cy+jy-d.height/2+8,time)}}
 
   drawEnvWind(time,cx,cy)}
 
