@@ -1999,7 +1999,7 @@ const DECOR={};
 
   for(const k in window.ESC_TILES||{}){const E=ESC_TILES[k];pinta(E.src,E.f,c=>{const L=[];for(let i=0;i<E.n;i++){const t=mk(T,T);t.getContext('2d').drawImage(c,i*T,0,T,T,0,0,T,T);L.push(t)}if(TILES[k])TILES[k].splice(0,TILES[k].length,...L)})}
 
-  for(const k in window.ESC_DECOR||{}){const E=ESC_DECOR[k];pinta(E.src,E.f,c=>{DECOR[k]=c})}})();
+  for(const k in window.ESC_DECOR||{}){const E=ESC_DECOR[k];pinta(E.src,E.f,c=>{DECOR[k]=c;formMemo.clear();SOLID_BY.clear();solidReset()})}})();
 
 (function buildDecor(){
 
@@ -5548,6 +5548,9 @@ let MAPK='namek';
 
 function groundTile(set,tx,ty){const v=h2(tx,ty,5),n=set.length;return set[v<0.5?(v*(n-2)|0):Math.min(n-1,n-3+((v-0.5)*6|0))]}
 
+/* Corrige casillas aisladas consultando siempre las cuatro vecinas originales. */
+function terrenoContinuo(f){return(tx,ty)=>{const v=f(tx,ty),n=f(tx,ty-1);return n!==v&&f(tx,ty+1)===n&&f(tx-1,ty)===n&&f(tx+1,ty)===n?n:v}}
+
 const WORLD={
 
  namek:{
@@ -5718,6 +5721,8 @@ const WORLD={
 
   const onKaio=(tx,ty)=>tx*tx+ty*ty<=13*13;
 
+  const kaioCamino=terrenoContinuo((tx,ty)=>Math.round(Math.sqrt(tx*tx+ty*ty))===8);
+
   const onSnake=(tx,ty)=>tx<-10&&Math.abs(ty-Math.round(Math.sin(tx/5)*5))<=1;
 
   Dc.kaiohouse=D(40,40,(g,p)=>{shd(g,20,36,17,4);p(6,18,28,18,'#f4f0e0');p(6,34,28,2,'#c8c0a8');p(16,24,8,12,'#7a4a2a');p(9,22,5,5,'#5aa8e0');p(26,22,5,5,'#5aa8e0');
@@ -5728,9 +5733,9 @@ const WORLD={
 
   Dc.ktree=tree(['#2a7a2a','#3a9a32','#56b840','#7ad458']);
 
-  WORLD.kaio={special:(tx,ty)=>!onKaio(tx,ty)&&!onSnake(tx,ty),
+  WORLD.kaio={formSuelo:(tx,ty)=>onKaio(tx,ty)&&!kaioCamino(tx,ty),special:(tx,ty)=>!onKaio(tx,ty)&&!onSnake(tx,ty),
 
-    tile(tx,ty,x,y,wf){if(onKaio(tx,ty)){const d=Math.round(Math.sqrt(tx*tx+ty*ty));ctx.drawImage(groundTile(d===8?Tl.kroad:Tl.kgrass,tx,ty),x,y);
+    tile(tx,ty,x,y,wf){if(onKaio(tx,ty)){ctx.drawImage(groundTile(kaioCamino(tx,ty)?Tl.kroad:Tl.kgrass,tx,ty),x,y);
 
         if(!onKaio(tx,ty+1)){ctx.fillStyle='#4a8a2a';ctx.fillRect(x,y+T-4,T,4);ctx.fillStyle='#2a5a1a';ctx.fillRect(x,y+T-1,T,1)}return}
 
@@ -5774,7 +5779,7 @@ const WORLD={
 
   Dc.debris=D(20,14,(g,p)=>{pball(g,10,6,8,['#7a788e','#9a98ae','#c8c6d8'],4);p(4,9,12,4,'#5a5060')},'#0a0820');
 
-  WORLD.poder={special:()=>false,
+  WORLD.poder={formSuelo:onTP,special:()=>false,
 
     tile(tx,ty,x,y,wf){if(onTP(tx,ty)){const r=tpR(tx,ty),rr=Math.round(r);ctx.drawImage(r<3.5?Tl.tpcore[(tx+ty)&1]:(rr===8||rr===15)?Tl.tpband[(tx+ty)&1]:groundTile(Tl.tpfloor,tx,ty),x,y);
 
@@ -6024,7 +6029,7 @@ const WORLD={
 
   Dc.lpot=D(12,14,(g,p)=>{p(2,7,8,6,'#c8783a');p(2,7,8,1,'#e89a5a');pball(g,6,5,4,['#2a8a2a','#4ab04a','#8ae070']);p(4,3,1,1,'#ff6a8a');p(8,5,1,1,'#ffe060')},'#1a1008');
 
-  WORLD.lookout={special:()=>false,
+  WORLD.lookout={formSuelo:(tx,ty)=>onLook(tx,ty)&&!lkGarden(tx,ty)&&!lkPath(tx,ty),special:()=>false,
 
     tile(tx,ty,x,y,wf){if(onLook(tx,ty)){ctx.drawImage(lkGarden(tx,ty)?groundTile(Tl.lookgrass,tx,ty):lkPath(tx,ty)?Tl.lookpath[(tx+ty)&1]:groundTile(Tl.lookfl,tx,ty),x,y);
 
@@ -6072,7 +6077,7 @@ const WORLD={
 
   Tl.river=liq('#3a9ad0','#3288bc','#c0ecff',111);
 
-  const isRiver=field((tx,ty)=>{const c=Math.sin(tx/7)*5+Math.sin(tx/17)*4+10;return Math.abs(ty-c)<1.6||(tx*tx+ty*ty>100&&fbm(tx/8,ty/8,91)>0.74)});
+  const isRiver=field(terrenoContinuo((tx,ty)=>{const c=Math.sin(tx/7)*5+Math.sin(tx/17)*4+10;return Math.abs(ty-c)<1.6||(tx*tx+ty*ty>100&&fbm(tx/8,ty/8,91)>0.74)}));
 
   Dc.fpine=pine(['#1e5a2a','#2a7034','#3a8a42']);
 
@@ -6174,7 +6179,7 @@ const WORLD={
 
   Tl.lake=liq('#3a98e8','#3288d8','#d0f0ff',141);
 
-  const isLake=field((tx,ty)=>(tx*tx+ty*ty>64)&&fbm(tx/10,ty/10,181)>0.66);
+  const isLake=field(terrenoContinuo((tx,ty)=>(tx*tx+ty*ty>64)&&fbm(tx/10,ty/10,181)>0.66));
 
   Dc.rpillar=D(34,56,(g,p)=>{shd(g,17,53,14,3);for(let y=12;y<52;y++){const w=Math.round(22-Math.sin(y*0.15)*3);p(17-(w>>1),y,w,1,y%6<3?'#d89a7a':'#c8886a');p(17-(w>>1),y,3,1,'#f0b898');p(17+(w>>1)-3,y,3,1,'#a86a50')}
 
@@ -6200,7 +6205,7 @@ const WORLD={
 
   Tl.dirt=nt(4,4150,['#8a6a42','#84643e'],['#6a4a2a','#a8885a'],16);
 
-  const isTrail=field((tx,ty)=>{return Math.abs(ty-Math.round(Math.sin(tx/6)*4))<=1||Math.abs(tx-Math.round(Math.sin(ty/6)*4))<=1});
+  const isTrail=field(terrenoContinuo((tx,ty)=>Math.abs(ty-Math.round(Math.sin(tx/6)*4))<=1||Math.abs(tx-Math.round(Math.sin(ty/6)*4))<=1));
 
   Dc.bigtree=D(52,56,(g,p)=>{shd(g,26,52,20,4);p(22,34,8,20,'#5a3a22');p(22,34,2,20,'#7a5232');p(16,50,20,4,'#5a3a22');
 
@@ -6470,27 +6475,37 @@ const SOLID_DEF={
 /* Formaciones deterministas: celdas de 12×12, margen de dos casillas y varios
    tramos abiertos por celda activa para ofrecer cobertura sin cerrar los pasillos. */
 const FORMACIONES={
-  namek:['rock','tree0','tree1','mesa'],tierra:['boulder','spire'],time:['pillar','hourglass'],vegetasei:['redspire','boulder'],futuro:['car','ruin0','ruin1'],arena:['boulder','spire2'],
+  namek:['rock','tree0','tree1','mesa'],tierra:['spire','drock'],time:['pillar','hourglass'],vegetasei:['redspire','drock'],futuro:['car','ruin0','ruin1'],arena:['spire2','drock'],
   kame:['rock','palm'],kaio:['rock','ktree'],poder:['pillar','debris'],bills:['rock','btree','bfloat'],infierno:['needle','htree'],yardrat:['ybig','ypop','ycliff'],
   kaioshin:['rock','kstree'],redribbon:['crate','barrel','car'],musculo:['snowrock','spine'],budokai:['rock','ktree','palm'],lookout:['pillar','lpalm','lpot'],capsule:['car','ktree'],
-  paoz:['rock','fpine','ftree'],desierto:['boulder','drock','dcactus','palm'],volcan:['lrock','needle'],gizard:['boulder','drock','mesaS'],pradera:['rock','btree2','ktree'],bosque:['bigtree','fpine','log']
+  paoz:['rock','fpine','ftree'],desierto:['drock','dcactus'],volcan:['lrock','needle'],gizard:['drock','mesaS'],pradera:['rock','btree2','ktree'],bosque:['bigtree','fpine','log']
 };
 const formMemo=new Map(),formViejo={},formSemilla={};
+/* Al cargar los PNG reales se invalidan las formaciones y las huellas anteriores. */
+/* Rectángulos en coordenadas de dibujo: el mismo anclaje que decorDesplazamiento. */
+function formRect(tx,ty,d,f){const jx=f?0:(h2(tx,ty,4)*8)|0,jy=f?f[2]+f[1]-d.height/2:(h2(tx,ty,6)*8)|0;return{x:tx*T+8+jx-d.width/2,y:ty*T+8+jy-d.height/2,w:d.width,h:d.height}}
+function formSolapa(a,b){return Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>2&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>2}
+/* Reserva una casilla alrededor de todo el sprite, también si sobresale de su anclaje. */
+function formTerreno(W,q){for(let y=Math.floor((q.y+2)/T)-1;y<=Math.floor((q.y+q.h-2.001)/T)+1;y++)for(let x=Math.floor((q.x+2)/T)-1;x<=Math.floor((q.x+q.w-2.001)/T)+1;x++)if(W.special(x,y)||W.formSuelo&&!W.formSuelo(x,y))return false;return true}
 function formacion(id,tx,ty){const W=WORLD[id],lista=FORMACIONES[id];if(!W||!lista||Math.abs(tx)<7&&Math.abs(ty)<7)return null;
   const cx=Math.floor(tx/12),cy=Math.floor(ty/12),lx=tx-cx*12,ly=ty-cy*12;if(lx<2||lx>9||ly<2||ly>9||W.special(tx,ty))return null;
   const clave=id+':'+cx+','+cy;let celda=formMemo.get(clave);
-  if(!celda){celda=new Map();const sem=formSemilla[id],r=n=>h2(cx,cy,sem+n),p=id==='time'?.28:id==='bosque'?.60:id==='gizard'?.65:id==='yardrat'?.70:['tierra','futuro','lookout'].includes(id)?.70:.67;
-    if(r(0)<p){const puntos=new Map(),giro=r(1)<.5,tipo=r(2)*4|0,densa=['tierra','futuro','lookout'].includes(id),suave=id==='paoz';
+  if(!celda){celda=new Map();const sem=formSemilla[id],r=n=>h2(cx,cy,sem+n),p=['tierra','arena','yardrat','infierno'].includes(id)?1:id==='time'?.55:['vegetasei','futuro','capsule'].includes(id)?.9:id==='bosque'?.60:id==='gizard'?.65:id==='lookout'?.70:.67;
+    if(r(0)<p){const aceptadas=[],puntos=new Map(),giro=r(1)<.5,tipo=r(2)*4|0,densa=['tierra','futuro','lookout'].includes(id),suave=id==='paoz';
       const pon=(x,y,grupo=0)=>{if(giro)[x,y]=[y,x];puntos.set(x+','+y,[x,y,grupo])};
       const pared=(x,y,n,vertical=0,hueco=0)=>{const corte=(n/2|0)-1;for(let i=0;i<n;i++)if(!hueco||n<6||i<corte||i>corte+1)pon(x+(vertical?0:i),y+(vertical?i:0))};
       if(tipo===0){for(let j=0;j<(suave?2:3);j++)pared(2,2+j*3,(densa?7:6)+(r(10+j)*(densa?1:2)|0),0,id!=='futuro'&&r(15+j)<.18)}
       else if(tipo===1){for(const x of [2,7]){const n=densa?5:3+(r(20+x)*3|0);pared(x,2,n,1);pared(x,2,3)}pared(2,9,suave?4:7)}
       else if(tipo===2){for(let j=0;j<(suave?2:3);j++){const n=(densa?8:6)+(r(30+j)*(densa?1:3)|0);for(let i=0;i<n;i++)pon(2+j*3+i%2,2+(i/2|0),1)}if(id==='futuro')pared(2,9,4)}
       else{for(const [x,y] of [[3,3],[4,2],[5,2],[6,2],[7,3],[3,8],[4,9],[5,9],[6,9],[7,8]])pon(x,y)}
+      /* Más candidatos en los roquedales amplios; el filtro conserva huecos y evita amontonarlos. */
+      if(['tierra','arena','yardrat'].includes(id))for(let y=2;y<=9;y++)for(let x=2;x<=9;x++)if(!puntos.has(x+','+y))puntos.set(x+','+y,[x,y,1]);
       for(const [x,y,grupo] of puntos.values()){const ax=cx*12+x,ay=cy*12+y;if(Math.abs(ax)<7&&Math.abs(ay)<7||W.special(ax,ay))continue;
         /* Conserva los hitos y el espacio que ya les reservaban sus envoltorios. */
         let hito=false;for(let dy=-3;dy<=3&&!hito;dy++)for(let dx=-3;dx<=3;dx++){const d=formViejo[id](ax+dx,ay+dy,h2(ax+dx,ay+dy,3));if(d&&[DECOR.fship,DECOR.podcrater,DECOR.ccorp,DECOR.kamehouse,DECOR.kaiohouse,DECOR.gokuhouse,DECOR.temple,DECOR.kamipalace,DECOR.budokai,DECOR.bpyramid,DECOR.zenobox,DECOR.kstemple,DECOR.rrtower,DECOR.muscle,DECOR.ypod].includes(d)){hito=true;break}}
-        if(hito)continue;const v=h2(ax,ay,sem+50),k=grupo?lista[v<.8?0:Math.min(lista.length-1,1+(v*17|0)%(lista.length-1))]:lista[0];if(DECOR[k]&&SOLID_DEF[k])celda.set(x+','+y,k)}
+        if(hito)continue;const v=h2(ax,ay,sem+50),k=id==='tierra'?lista[v<.3?0:1]:id==='yardrat'?lista[v<.6?0:v<.9?1:2]:grupo?lista[v<.8?0:Math.min(lista.length-1,1+(v*17|0)%(lista.length-1))]:lista[0];const d=DECOR[k],f=SOLID_DEF[k];if(!d||!f)continue;const q=formRect(ax,ay,d,f);if(!formTerreno(W,q)||aceptadas.some(a=>formSolapa(q,a)))continue;
+        let choque=false;for(let dy=-4;dy<=4&&!choque;dy++)for(let dx=-4;dx<=4;dx++){const bx=ax+dx,by=ay+dy;if(W.special(bx,by))continue;const viejo=formViejo[id](bx,by,h2(bx,by,3));if(viejo&&formSolapa(q,formRect(bx,by,viejo))){choque=true;break}}
+        if(!choque){celda.set(x+','+y,k);aceptadas.push(q)}}
     }
     formAbrir(celda);if(formMemo.size>4096)formMemo.clear();formMemo.set(clave,celda)}
   return DECOR[celda.get(lx+','+ly)]||null}

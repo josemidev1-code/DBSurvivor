@@ -42,7 +42,7 @@ NAMEK = 'hue-rotate(95deg) saturate(1.3)'
 DECORADOS = {
     'tree0': (ARBOL_P, NAMEK), 'tree1': (ARBOL_A, NAMEK),
     'ftree': (ARBOL_P, ''), 'btree': (ARBOL_P2, ''), 'btree2': (ARBOL_P, ''), 'kstree': (ARBOL_P2, ''),
-    'bigtree': (ARBOL_A, ''), 'rock': (ROCA_P, ''), 'boulder': (ROCA, ''),
+    'bigtree': (ARBOL_A, ''), 'rock': (ROCA_P, ''), 'boulder': (ROCA, 'sepia(.8) saturate(1.1) hue-rotate(-12deg) brightness(.95)'),
 }
 
 def a_url(im):
