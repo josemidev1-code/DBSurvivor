@@ -14,6 +14,10 @@
       // reacciona a los avisos: se aparta del que va a golpear y de la línea del que va a embestir
       const a=e.atk;if(a&&a.f==='aviso'&&d<34)p+=1.5;
       if(a&&(a.f==='carga'||a.f==='embiste')){const rx=x-e.x,ry=y-e.y,t=rx*a.ux+ry*a.uy,lat=Math.abs(rx*a.uy-ry*a.ux);if(t>-8&&t<100&&lat<14)p+=1.5}}
+    // rayos de jefe (avisan con una línea roja) y embestidas de jefe avisadas
+    const linea=(ox,oy,a,len,wid)=>{const ux=Math.cos(a),uy=Math.sin(a),rx=x-ox,ry=y-oy,t=rx*ux+ry*uy,lat=Math.abs(rx*uy-ry*ux);return t>-10&&t<len&&lat<wid/2+10};
+    if(AS.ebeams)for(const b of AS.ebeams())if(linea(b.x,b.y+10,b.a,b.len,b.wid))p+=3;
+    for(const e of AS.enemies())if(e.boss&&e.aiW>0&&linea(e.x,e.y,e.wa,e.wl+20,24))p+=3;
     for(const s of AS.eshots()){const d=Math.hypot(x-s.x,y-s.y);if(d<60)p+=3/Math.max(6,d)}
     if(AS.solid(x,y,6))p+=1;
     // como un jugador de verdad, va a por las gemas de experiencia cuando no hay mucho peligro
@@ -47,5 +51,10 @@
     soltar();
     return {aguanto:Math.round(S.t),nivel:P.lvl,muertes:S.kills,estado:AS.state,minutos:res};
   }
-  window.SIMULAR={partida};
+  // sigue la partida en curso con el bot hasta el segundo t (para sacar capturas de un momento concreto)
+  async function hasta(t){const S=AS.S;
+    for(let n=0;S.t<t&&n<200000;n++){if(AS.state==='levelup'){AS.pick(0);continue}if(AS.state==='pause'){const b=document.querySelector('#pause button');if(b)b.click();continue}
+      if(AS.state!=='play')break;if(n%2===0)decidir();AS.tick(0.1);if(n%50===0)await new Promise(r=>setTimeout(r,0))}
+    soltar();return {t:Math.round(S.t),estado:AS.state,enemigos:AS.enemies().length,vida:Math.round(AS.P.hp),nivel:AS.P.lvl}}
+  window.SIMULAR={partida,hasta};
 })();

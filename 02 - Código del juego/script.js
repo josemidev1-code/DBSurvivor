@@ -4760,6 +4760,7 @@ function bossBeam(e,dt){const B=BBEAM[e.type];if(!B)return false;e.bT=(e.bT===un
 
   return ebeams.some(b=>b.e===e&&b.t<0.8)}
 
+const BOSS_AVISO=0.55; // segundos que avisa un jefe antes de embestir
 function bossAI(e,dt){
 
   // si el jugador carga ki cerca, el jefe lo castiga: adelanta su rayo y su embestida
@@ -4771,9 +4772,11 @@ function bossAI(e,dt){
 
    case 'dash':if(e.aiS>0){e.aiS-=dt;if(solidMove(e,e.dx*dt,e.dy*dt,e.r))e.aiS=0;return true}
 
-     if(e.aiT<=0){e.aiT=3.6;e.aiS=0.5;e.dx=Math.cos(a)*170;e.dy=Math.sin(a)*170;burst(e.x,e.y-10,10,['#c58af0','#ffffff']);
+     // dificultad justa (22 nov.): antes de embestir se para y avisa con una línea roja, como los enemigos normales
+     if(e.aiW>0){e.aiW-=dt;if(e.aiW<=0){const w=e.wa;e.aiS=0.5;e.dx=Math.cos(w)*170;e.dy=Math.sin(w)*170;burst(e.x,e.y-10,10,['#c58af0','#ffffff']);
+       const c=ET[e.type].col;if(c)for(let i=-1;i<=1;i++)eshot(e.x,e.y-14,w+i*0.25,150,e.dmg*0.6,3,c)}return true}
 
-       const c=ET[e.type].col;if(c)for(let i=-1;i<=1;i++)eshot(e.x,e.y-14,a+i*0.25,150,e.dmg*0.6,3,c)}break;
+     if(e.aiT<=0){e.aiT=3.6;e.aiW=BOSS_AVISO;e.wa=a;e.wl=85}break;
 
    case 'frieza':if(e.aiT<=0){e.aiT=2.2;e.cnt=(e.cnt||0)+1;
 
@@ -4793,9 +4796,11 @@ function bossAI(e,dt){
 
    case 'buu':if(e.aiS>0){e.aiS-=dt;if(solidMove(e,e.dx*dt,e.dy*dt,e.r))e.aiS=0;return true}
 
+     if(e.aiW>0){e.aiW-=dt;if(e.aiW<=0){e.aiS=0.5;e.dx=Math.cos(e.wa)*260;e.dy=Math.sin(e.wa)*260}return true}
+
      if(e.aiT<=0){e.aiT=2.6;e.cnt=(e.cnt||0)+1;
 
-       if(e.cnt%2){e.aiS=0.5;e.dx=Math.cos(a)*260;e.dy=Math.sin(a)*260}
+       if(e.cnt%2){e.aiW=BOSS_AVISO;e.wa=a;e.wl=130}
 
        else for(let i=0;i<18;i++)eshot(e.x,e.y-14,i/18*TAU+e.cnt,85,e.dmg*0.6,3,ET[e.type].col||'#ff8ad0')}break;
 
@@ -5482,6 +5487,11 @@ function digits(str,x,y,col){const w=str.length*4;x=Math.round(x-w/2);y=Math.rou
 function text(s,x,y,col,size=8,align='center'){s=s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');ctx.font=size+'px "Press Start 2P", monospace';ctx.textAlign=align;ctx.textBaseline='top';
 
   ctx.fillStyle=OUTL;for(const [a,b] of [[-1,0],[1,0],[0,-1],[0,1],[1,1]])ctx.fillText(s,x+a,y+b);ctx.fillStyle=col;ctx.fillText(s,x,y)}
+
+// aviso de embestida de jefe (22 nov.): «!» rojo sobre la cabeza y la línea por donde va a pasar
+function drawBossAviso(e,x,y,hh){const ax=Math.round(x),ay=Math.round(y-hh-18),ux=Math.cos(e.wa),uy=Math.sin(e.wa);
+  if((e.anim*2|0)%2||e.aiW<0.15){ctx.fillStyle=OUTL;ctx.fillRect(ax-3,ay-2,6,11);ctx.fillStyle='#ff3030';ctx.fillRect(ax-2,ay-1,4,6);ctx.fillRect(ax-2,ay+6,4,2)}
+  ctx.fillStyle='rgba(255,40,30,0.55)';for(let s=12;s<e.wl;s+=7)ctx.fillRect(Math.round(x+ux*s)-2,Math.round(y-6+uy*s)-1,5,3)}
 
 function drawPkEnemy(e,x,y){const o=e.spr.pk,t=e.anim/6,left=e.x>P.x,d=Math.hypot(P.x-e.x,P.y-e.y),T=ET[e.type]||{};let A=o.Walk&&(o.Walk.R.length>1||(d>48&&!e.stun))?o.Walk:o.Idle,i=0,bob=0;
 
@@ -7332,6 +7342,7 @@ function render(time){
     if(e.aura){const fl=auraFlames(e.aura)[(time*10|0)%3];ctx.globalAlpha=0.75;ctx.drawImage(fl,Math.round(x-fl.width/2),Math.round(y-fl.height+2));ctx.globalAlpha=1}
 
     if(e.spr.pk)drawPkEnemy(e,x,y);else drawSprite(e.spr,x,y+(e.boss?0:0),e.anim,e.x>P.x,e.flash>0,sc);
+    if(e.boss&&e.aiW>0)drawBossAviso(e,x,y,(e.h||24)*(e.spr.pk?1:sc));
 
     // vida sobre la cabeza de cada enemigo
 

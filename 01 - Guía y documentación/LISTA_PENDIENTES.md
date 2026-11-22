@@ -7,7 +7,9 @@ Actualizada el 22 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a po
 Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculos y es imposible aguantar aunque juegues bien. Detalle y datos en `ESTADO_Y_RUMBO.md`.
 
 - [x] Dificultad justa: los enemigos no se hacen más fuertes cuando subes de nivel; menos enemigos a la vez, avisos más largos y nunca más rápidos que tú (22 nov.).
-- [ ] Que Josemi juegue y diga si ya se puede aguantar con habilidad.
+- [x] Los jefes avisan antes de embestir (22 nov.).
+- [ ] Que Josemi juegue (mañana en clase) y diga si ya se puede aguantar con habilidad.
+- [ ] Arreglar el nombre de las fusiones que se acumula («FUSIÓN: FUSIÓN: …») y las técnicas repetidas en la pausa.
 - [ ] Mapas con obstáculos de verdad (rocas grandes, paredes, pasillos) para cubrirse y usar el terreno.
 - [ ] Enemigos propios de cada saga, cada tipo con su forma de atacar, y hordas que cambian cada minuto.
 - [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
