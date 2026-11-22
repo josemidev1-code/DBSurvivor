@@ -9,7 +9,9 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 - [x] Dificultad justa: los enemigos no se hacen más fuertes cuando subes de nivel; menos enemigos a la vez, avisos más largos y nunca más rápidos que tú (22 nov.).
 - [x] Los jefes avisan antes de embestir (22 nov.).
 - [ ] Que Josemi juegue (mañana en clase) y diga si ya se puede aguantar con habilidad.
-- [ ] Arreglar el nombre de las fusiones que se acumula («FUSIÓN: FUSIÓN: …») y las técnicas repetidas en la pausa.
+- [x] Arreglado el nombre de las fusiones que se acumulaba y aclaradas las técnicas «repetidas» de la pausa (22 nov.).
+- [x] Arreglados los jefes élite que te dejaban atrapado en la isla y el modo infinito en mapas de 5 jefes (22 nov.).
+- [ ] Mejorar los mapas y sus portadas (Josemi, 22 nov.: «hay que mejorar los mapas y las fotos de los mapas un poco»).
 - [ ] Mapas con obstáculos de verdad (rocas grandes, paredes, pasillos) para cubrirse y usar el terreno.
 - [ ] Enemigos propios de cada saga, cada tipo con su forma de atacar, y hordas que cambian cada minuto.
 - [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
@@ -48,8 +50,8 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 
 ## E. Mantenimiento
 
-- [ ] 13. Arreglar las 4 comprobaciones que fallan (enemigos, formas, objetos y rotación).
-- [ ] 14. Actualizar el README: dice 62 personajes y ya hay 118.
+- [x] 13. Arreglar las comprobaciones que fallan: pasan las 10 (22 nov.).
+- [x] 14. Actualizar el README (22 nov.).
 - [ ] 15. Subir a GitHub los commits de esta rama (solo cuando Josemi lo pida).
 
 ## Ya hecho (20 nov.)

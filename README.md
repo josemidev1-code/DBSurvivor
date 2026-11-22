@@ -47,17 +47,16 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
 - **Panel de subida de nivel cuadrado**: Interfaz de recompensas y nivel rediseñada en formato estrictamente cuadrado (aspect-ratio 1:1) con estética Dragon Ball, sin expandirse horizontalmente hacia los lados.
 - **Plantel unificado ('vienen de una')**: Eliminadas las tarjetas redundantes sueltas (Goku GT, Goku UI, Goku Super, Vegeta Ego, Vegeta GT, etc.). Cada héroe aparece una sola vez con todas sus formas integradas y elegibles directamente (Goku con 10 transformaciones, Vegeta con 9, Gohan con 5, Trunks con 4).
 - **Selección de personajes y transformaciones**: Foto de perfil fija en la cuadrícula del plantel y animación en movimiento dinámico al seleccionarlo. Se puede elegir cualquier transformación disponible para empezar a jugar directamente en esa forma con sus estadísticas y auras activas.
-- **62 personajes jugables**, con sus formas, todos sacados de `sprites/` y revisados a ojo. Nadie encoge al transformarse.
+- **118 personajes jugables** en la pantalla de selección (181 contando formas sueltas), con sus formas, todos sacados de `sprites/` y revisados a ojo. Nadie encoge al transformarse.
 - Nuevos de la sesión 7: Goku película Broly (4 formas), Vegeta Blue manga (2), Vegeta Dios de Broly (1),
   Black Time Breaker (3), Goku Black fanmade (4) y Goku alternativo (Místico, Ikari y Bestia). Las 17 formas tienen guardia, impulso, combo, patada, ki, aura, daño, muerte y retrato.
 - Sesión 9: 31 técnicas nuevas (cada personaje tiene su lista propia), 12 eventos en partida, HUD y subida de nivel como
   PokéSurvivor, rayos y bolas de ki sacados de los packs, portadas de los mapas, y suelos, árboles y rocas reales
   (pack Ninja Adventure, CC0, generados con `herramientas/montar_escenarios.py` en `02 - Código del juego/escenarios_tiles.js`).
-- 7 jugables más (Nappa, Ginyu, Jeice, Guldo, Uub, Mr. Satán, Androide 21) esperan en la rama
-  `claude/quizzical-gates-9cf9c0`, sin fusionar todavía.
-- **82 tipos de enemigo** con animaciones seleccionadas de sus propios personajes; además, la sombra del jugador.
+- Nappa, Ginyu, Jeice, Guldo, Uub, Mr. Satán y Androide 21 ya están en el juego.
+- **132 tipos de enemigo** (62 jefes y 53 élites) con animaciones seleccionadas de sus propios personajes; además, la sombra del jugador.
 - **35 tipos retirados temporalmente** por no tener secuencias completas revisadas (lista en `01 - Guía y documentación/SPRITES_PENDIENTES.md`).
-  Los 24 mapas conservan cinco encuentros con jefes. Hay menos variedad de enemigos normales mientras se recuperan sus packs.
+  Los 24 mapas tienen de cinco a siete jefes (a los 2, 4, 6, 8, 10, 12:30 y 15 minutos; los de cinco los repiten en el modo infinito). Hay menos variedad de enemigos normales mientras se recuperan sus packs.
 - Los enemigos con un único fotograma de vuelo flotan en guardia; durante la carga ya no se dibujan cuerpos por código.
 - Logo del menú y esferas del dragón dibujados por ti.
 - Senzu y radar con sprites de Legacy of Goku II; cápsulas de vitalidad (+25% vida), cápsulas de ki
@@ -95,8 +94,7 @@ Plan acordado con el usuario en la sesión 10 (bloque 1 hecho; diseño en `01 - 
 
 1. **Bloque 2 · Técnicas de la serie** con el efecto dibujado en su propio pack (150 de 162 packs traen rayos, bolas
    o auras sin usar; ninguno genérico).
-2. **Bloque 3 · Más personajes jugables** con los 168 packs de `sprites/` que no se usan (incluye decidir la rama
-   `claude/quizzical-gates-9cf9c0` con 7 personajes nuevos).
+2. **Bloque 3 · Más personajes jugables** con los 168 packs de `sprites/` que no se usan (los 7 personajes de la rama `claude/quizzical-gates-9cf9c0` ya están en el juego).
 3. **Bloque 4 · Enemigos**: recuperar los 35 retirados (Burter, Recoome…) con ataques propios.
 4. **Bloque 5 · Experiencia y HUD** nuevos (al usuario el HUD actual le parece horroroso).
 5. **Bloque 6 · Mecánicas nuevas.**
@@ -108,6 +106,14 @@ Comprobación de personajes: `node herramientas/comprobar_personajes.cjs`. Para 
 `node herramientas/comprobar_personajes.cjs gokubroly vegetamanga vegetabroly blacktime blackfan gokualt`.
 
 Comprobación de enemigos sin navegador: `node herramientas/comprobar_enemigos.cjs`.
+
+Todas las comprobaciones (las 10 pasan desde el 22 nov. 2026):
+
+```bash
+for f in herramientas/comprobar_*.cjs; do node "$f" >/dev/null && echo "OK $f" || echo "FALLA $f"; done
+```
+
+Dificultad: `herramientas/simular_partida.js` juega partidas aceleradas con un bot (instrucciones en el propio archivo y en `PRUEBAS_RAPIDAS.md`).
 Ejecuta las tablas y el director del juego durante 16 minutos simulados en cada mapa, con dibujo y sonido simulados.
 No sustituye jugar una partida: el navegador de pruebas no permitió abrir el archivo local en la sesión 6.
 

@@ -23,28 +23,29 @@ for(const [id,t] of Object.entries(datos.ET)){
   }
 }
 for(const [id,m] of Object.entries(datos.MAPS)){
-  assert.equal(m.bosses.length,5,id);assert.equal(m.ring.length,2,id);
+  assert(m.bosses.length>=5&&m.bosses.length<=7,id+': '+m.bosses.length+' jefes'); // algunos mapas tienen 7 (hay 7 huecos en BOSS_SLOT)
+  assert.equal(m.ring.length,2,id);
   assert(m.pool.some(p=>p[0]===0&&!datos.ET[p[1]].elite),`${id}: inicio sin enemigos normales`);
   for(const p of m.pool)assert(datos.ET[p[1]],`${id}: ${p[1]}`);
-  for(const b of m.bosses)assert(datos.ET[b]?.boss,`${id}: jefe ${b}`);
+  for(const b of m.bosses)assert(datos.ET[b]?.boss||datos.ET[b]?.elite,`${id}: jefe ${b}`); // un élite puede ser jefe de mapa: spawnBoss lo convierte en jefe
   for(const e of [...m.ring,...(m.squad?.[1]||[])])assert(datos.ET[e],`${id}: ${e}`);
 }
 for(const w of Object.values(datos.WAVES)){assert(w.length);for(const [id] of w)assert(datos.ET[id])}
-// Recorre 16 minutos de cada mapa: población, anillos, escuadrones, oleadas y cinco jefes.
+// Recorre 16 minutos de cada mapa: población, anillos, escuadrones, oleadas y los 7 jefes de BOSS_T (los mapas con 5 repiten en el modo infinito).
 let apariciones=0,jefes=0;
 Object.assign(c,{
   rnd:(a,b)=>b===undefined?Math.random()*a:a+Math.random()*(b-a),TAU:Math.PI*2,VW:480,VH:270,
   P:{x:0,y:0,lvl:1},DIFF:[{sp:1}],enemies:[],cam:{},sfx:()=>{},
   spawn:(id)=>{assert(datos.ET[id],`Invocación retirada: ${id}`);apariciones++;return{}},
-  spawnBoss:(id)=>{assert(datos.ET[id]?.boss,id);jefes++},
+  spawnBoss:(id)=>{assert(datos.ET[id]?.boss||datos.ET[id]?.elite,id);jefes++},
 });
 vm.runInContext(tramo('function pickType','function spawnBoss'),c);
 for(const map of Object.keys(datos.MAPS)){
   c.S={map,t:0,spawnT:0,diff:0,bossIdx:0,ringIdx:0,waveIdx:0,squadDone:0};
   for(let t=0;t<=960;t++){c.S.t=t;vm.runInContext('director(1)',c)}
-  assert.equal(c.S.bossIdx,5,map);
+  assert.equal(c.S.bossIdx,vm.runInContext('BOSS_T.length',c),map);
 }
-assert.equal(jefes,Object.keys(datos.MAPS).length*5);
+assert.equal(jefes,Object.keys(datos.MAPS).length*vm.runInContext('BOSS_T.length',c));
 // Sin PNG listo, no se llama a las antiguas rutinas que dibujaban cuerpos por código.
 let listo=false;const real={fr:[{}],h:26};
 Object.assign(c,{mk:()=>({}),myEnemy:()=>null,scEnemy:()=>listo?real:null});

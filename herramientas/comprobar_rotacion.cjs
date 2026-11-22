@@ -11,9 +11,16 @@ Object.assign(c,{S:{hid:'goku'},P:{x:0,y:0,sel:0,sigU:6,sigB:[],lvl:1,sigN:6,sig
  nearest:()=>({x:90,y:0}),fire:(id,m,st)=>{assert(Number.isFinite(st.dmg));fired.push(id)},
  sfx:()=>{},state:'play'});
 vm.runInContext(section('function sigList','function fireSig'),c);
+// Control por teclado (commit 2a03a38c5): solo se lanza la técnica elegida con 1-6, sin disparos simultáneos.
 for(let i=0;i<1200;i++)vm.runInContext('sigUpdate(1/60,{cd:1,dmg:1,area:1})',c);
-assert.deepEqual([...new Set(fired)].sort(),['kiblast','kame','punch','kaioken','instant','genki'].sort());
+assert.deepEqual([...new Set(fired)],['kiblast'],'Con la primera elegida solo debe salir esa');
 assert(fired.filter(x=>x==='kiblast').length>3,'El ataque base debe repetirse');
+// al elegir otra (2-5), se usa esa y ninguna más: su recarga empieza y no se dispara nada distinto
+for(const [i,id] of vm.runInContext('sigOpen()',c).slice(1,5).entries()){fired.length=0;c.P.pend=null;c.P.cast=null;c.P.sigT=0;for(const k in c.P.sigTimers)c.P.sigTimers[k]=0;
+  vm.runInContext('sigSelect('+(i+1)+')',c);let usada=false;
+  for(let k=0;k<600&&!usada;k++){vm.runInContext('sigUpdate(1/60,{cd:1,dmg:1,area:1})',c);if(c.P.pend){fired.push(c.P.pend.id);c.P.pend=null}c.P.cast=null;usada=fired.includes(id)||c.P.sigTimers[id]>0}
+  assert(usada,'Al elegir '+(i+1)+' debe usarse '+id);assert(fired.every(x=>x===id),'Solo debe salir la elegida: '+fired)}
+vm.runInContext('sigSelect(0)',c);fired.length=0;
 // Ninguna técnica se emite mientras una animación de rayo está ocupada.
 c.P.pend=null;const n=fired.length;c.P.cast={};for(let i=0;i<120;i++)vm.runInContext('sigUpdate(1/60,{cd:1,dmg:1,area:1})',c);
 assert.equal(fired.length,n);assert.equal(c.P.sigTimers.kiblast,0,'La recarga debe avanzar durante el rayo');
