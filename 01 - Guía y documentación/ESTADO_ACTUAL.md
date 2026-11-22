@@ -1,6 +1,6 @@
 # Estado actual — AnimeSurvivor
 
-**23 nov. 2026 (sesión 24 — interfaz, arreglos rápidos hechos por Codex):** corregidos radar bajo KO/mapa, aviso fijo de Shenron, tamaño/opacidad de impactos, solape NOTICIAS/ZENI y aparición inicial del logo. Diez comprobaciones y sintaxis correctas; comprobados en el navegador por Claude (1280×720 y móvil). Sin commit por petición del usuario.
+**23 nov. 2026 (sesión 24 — interfaz, arreglos rápidos hechos por Codex):** corregidos radar bajo KO/mapa, aviso fijo de Shenron, tamaño/opacidad de impactos, solape NOTICIAS/ZENI y aparición inicial del logo. Diez comprobaciones y sintaxis correctas; comprobados en el navegador por Claude (1280×720 y móvil).
 
 **23 nov. 2026 (sesión 24 — mapas):** los 24 mapas tienen obstáculos de verdad (paredes, esquinas, roquedales y ruedos, del 7 % al 12 % del suelo), programados por Codex y revisados por Claude. Las portadas de los mapas son escenarios de la serie, sin personajes (`herramientas/montar_portadas_serie.py` + `montar_portadas.py --juego ui/portadas_mapas/serie`). Pendiente de que Josemi lo valore jugando.
 
