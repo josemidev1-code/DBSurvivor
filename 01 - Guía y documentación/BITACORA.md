@@ -4821,3 +4821,16 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Que Josemi juegue Namek con Goku, Trunks y 17 y diga si se reconoce cada amenaza y si los tiempos le parecen justos. Después, la misma pauta en el siguiente mapa: tres enemigos comunes con comportamientos distintos, un élite y un jefe por saga.
+
+## 2026-11-24 — Claude (sesión 24): resumen de la sesión y subida a GitHub
+
+### Lo que pidió el usuario
+- Josemi: «coge toda la información que tenemos en este chat, reúnela en un texto, apunta lo que hemos hecho y lo que nos queda, y commitea a GitHub».
+
+### Lo que hice
+- Escribí `RESUMEN_SESION_24.md` con todo lo hecho del 20 al 24 nov. y lo que queda, ordenado por prioridad.
+- Puse al día el relevo (`00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md`) y `LISTA_PENDIENTES.md`.
+- Commit y subida de la rama `claude/pensive-maxwell-rmrwmm` a GitHub.
+
+### Siguiente paso recomendado
+- Que Josemi juegue el piloto de Namek y diga qué ajustar.

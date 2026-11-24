@@ -1,6 +1,14 @@
 # Empieza aquí — Relevo para Claude
 
-## >>> SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 23): HAZ ESTO PRIMERO <<<
+## >>> SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 24): HAZ ESTO PRIMERO <<<
+
+Lee `RESUMEN_SESION_24.md`: ahí está todo lo hecho del 20 al 24 nov. (transformaciones, dificultad, obstáculos, interfaz, ataques, dex y piloto de Namek) y lo que queda. Rama `claude/pensive-maxwell-rmrwmm`, subida a GitHub el 24 nov.
+
+**Siguiente:** que Josemi juegue el piloto de Namek (0:00-2:00) con Goku, Trunks y 17 y diga qué ajustar. Después, la misma pauta en otro mapa (tres enemigos comunes distintos, un élite y un jefe por saga) y los jefes más duros.
+
+---
+
+## (Anterior) SIGUIENTE SESIÓN (dejado el 20 nov. 2026, sesión 23)
 
 Sigue en la rama `claude/pensive-maxwell-rmrwmm` (repo en `~/Documents/Proyectos/DBSurvivor/DBSurvivor`). Detalle en «2026-11-20 — Claude (sesión 23)» de `BITACORA.md`.
 

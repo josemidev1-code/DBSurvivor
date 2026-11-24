@@ -1,6 +1,6 @@
 # Lo que queda por hacer en DBSurvivor
 
-Actualizada el 22 nov. 2026 (sesión 24). Josemi elige el orden; vamos poco a poco y se marca con [x] lo que esté hecho.
+Actualizada el 24 nov. 2026 (sesión 24). Resumen de todo en `RESUMEN_SESION_24.md`. Josemi elige el orden; vamos poco a poco y se marca con [x] lo que esté hecho.
 
 ## 0. Lo más importante ahora (22 nov.)
 
@@ -15,6 +15,10 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 - [ ] Buscar fondos de la serie para la Sala del Tiempo, el Torneo de Artes Marciales y Red Ribbon (hoy usan una foto del juego).
 - [x] Mapas con obstáculos de verdad (paredes, esquinas, roquedales y ruedos) para cubrirse y usar el terreno (22-23 nov., programado por Codex).
 - [ ] Enemigos propios de cada saga, cada tipo con su forma de atacar, y hordas que cambian cada minuto.
+  - [x] Piloto en Namek de 0:00 a 2:00: patrulla, tiradores, Burter con embestida anunciada y cierre con salida (24 nov.).
+  - [ ] Que Josemi juegue el piloto y diga qué ajustar.
+  - [ ] La misma pauta en los demás mapas: tres enemigos comunes, un élite y un jefe por saga.
+- [ ] Jefes más duros (mirar también la mejora «Fuerza» de la tienda).
 - [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
 
 ## A. Transformaciones (diseño hablado el 20 nov.)
@@ -54,7 +58,7 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 
 - [x] 13. Arreglar las comprobaciones que fallan: pasan las 10 (22 nov.).
 - [x] 14. Actualizar el README (22 nov.).
-- [ ] 15. Subir a GitHub los commits de esta rama (solo cuando Josemi lo pida).
+- [x] 15. Subir a GitHub los commits de esta rama (24 nov., lo pidió Josemi).
 
 ## Ya hecho (20 nov.)
 
