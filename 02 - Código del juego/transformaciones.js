@@ -19,7 +19,10 @@
   };
 
   // Mejora de cada forma (multiplicadores) y su rasgo de la serie. duraK acorta la duración (formas que gastan mucho).
-  const M=(dmg,spd,cd,hp,rasgo,duraK)=>duraK?{dmg,spd,cd,hp,rasgo:rasgo||null,duraK}:{dmg,spd,cd,hp,rasgo:rasgo||null};
+  // 24 nov. (Josemi: «están muy chetados»): el daño de cada forma sube la mitad que antes y nunca pasa de ×1,7 (DMG_MAX).
+  // La velocidad, la vida y el rasgo de cada forma no cambian.
+  const DMG_MAX=1.7,suave=d=>Math.round((1+(d-1)*0.5)*1000)/1000;
+  const M=(dmg,spd,cd,hp,rasgo,duraK)=>(dmg=suave(dmg),duraK)?{dmg,spd,cd,hp,rasgo:rasgo||null,duraK}:{dmg,spd,cd,hp,rasgo:rasgo||null};
   const MEJORAS={
     'SUPER SAIYAN':M(1.25,1.06,0.95,1.15),
     'KAIOKEN':M(1.35,1.10,0.95,1.0,'kaioken'),
@@ -51,7 +54,7 @@
     'LEGENDARIO':M(1.70,1.00,0.90,1.60,'legendario'),
     'PODER MÁXIMO':M(1.50,1.10,0.90,1.20)
   };
-  const NEUTRA={dmg:1.25,spd:1.06,cd:0.95,hp:1.15,rasgo:null};
+  const NEUTRA={dmg:suave(1.25),spd:1.06,cd:0.95,hp:1.15,rasgo:null};
 
   function cadena(hid,forms){
     const L=CADENAS[hid];if(!L)return forms.map((_,i)=>i);
@@ -92,16 +95,17 @@
       case 'regenera':r.regen=0.015;break;
       case 'esquiva':r.esquiva=0.3;break;
       case 'esquivaContra':r.esquiva=0.6;r.contra=true;break;
-      case 'ultraEgo':r.dmg*=1+0.8*(1-v);break;
-      case 'bestia':r.dmg*=1+1.0*(1-v);break;
-      case 'legendario':r.dmg*=1+Math.min(0.5,t/40*0.5);break;
+      case 'ultraEgo':r.dmg*=1+0.4*(1-v);break;
+      case 'bestia':r.dmg*=1+0.5*(1-v);break;
+      case 'legendario':r.dmg*=1+Math.min(0.25,t/40*0.25);break;
       case 'majin':r.recibe=1.25;break;
       case 'absorbe':r.cura=0.01;break;
       case 'rayos':r.rayos=true;break;
       case 'cansancio':r.dmg*=1-Math.min(0.3,t/60*0.3);break;
     }
+    r.dmg=Math.min(DMG_MAX,r.dmg);
     return r;
   }
 
-  window.TRANSF={CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora,nuevo,avanzar,efecto};
+  window.TRANSF={DMG_MAX,CADENAS,MEJORAS,cadena,tiempos,nivelPaso,mejora,nuevo,avanzar,efecto};
 })();

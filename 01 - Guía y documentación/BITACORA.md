@@ -4735,3 +4735,24 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Cuando Josemi diga sí: aplicar A y B, comprobarlo con el bot (que un jefe aguante entre 25 y 40 s con buenas mejoras) y mandar un GIF. Después, más enemigos y los jefes.
+
+## 2026-11-24 — Claude (sesión 24): propuesta de ataques aplicada
+
+### Lo que pidió el usuario
+- Josemi aprobó `ATAQUES_PROPUESTA.md` tal cual: «Sí, aplícala».
+
+### Lo que hice
+- **Transformaciones** (`transformaciones.js`): el daño de cada forma sube la mitad que antes y nunca pasa de ×1,7 (`DMG_MAX`). SSJ ×1,125, SSJ Blue ×1,5, UI Dominado y Black ×1,7. Ultra Ego, Bestia y Legendario suman la mitad que antes. Velocidad, vida y rasgos sin cambios.
+- **Cartas de Poder**: +8 % cada una (antes +12 %). Ya tenían un máximo de 5.
+- **Técnicas descompensadas**: tope de daño por segundo a nivel 5 por tipo (ráfagas 280, golpes 210, rayos 190), aplicado al cargar `MV`. Los rayos esperan al menos 2,5 s.
+- **Listas**: los 11 principales con la lista de la propuesta (`SIGS_PRINCIPALES`). El resto, con las mismas reglas: su técnica más famosa en la tecla 1 y fuera el golpe genérico de relleno si tiene uno suyo (siempre quedan al menos 4).
+- La animación ya la elige `attackClip`: primero la propia de la técnica (`Tecnica_*`) y después la pose del sprite. No hizo falta tocarla.
+- `comprobar_transformaciones.cjs` y `comprobar_rotacion.cjs` puestas al día (la tecla 1 ya no es siempre la Ráfaga de Ki). Pasan las 10 comprobaciones. Caché: script.js 215, transformaciones.js 3.
+- Medidas (pruebas sin sonido):
+  - Con el bot en Namek, aguantan parecido a antes: Goku unos 190 s, Vegeta unos 210 s, Piccolo unos 280 s, Krilin unos 225 s y Broly unos 275 s.
+  - Goku a nivel 15, con 5 cartas de Poder y SSJ Blue, contra Ginyu: antes lo mataba en 31 s con su mejor técnica y ahora en 54 s.
+  - Captura de la tecla 1 de cada uno: Kamehameha, Galick Gun, Rayo de los Ojos y Kienzan.
+
+### A medias / problemas
+- No sé con qué mejoras de la tienda jugó Josemi: Fuerza llega a +200 % con 50 niveles, y eso por sí solo puede seguir haciendo los jefes cortos. Se mira en el paso 3 (jefes).
+- Siguen pendientes: más enemigos (paso 2) y jefes más duros (paso 3). También la pregunta de Shenron y las formas.

@@ -3082,10 +3082,31 @@ MV.deathbeam.col=['#b51025','#ff354b','#ffffff'];
 
 // Una técnica característica desde el inicio; variantes del mismo luchador conservan su escuela.
 
-for(const id in SIGS){const L=SIGS[id],i=L.findIndex(x=>!['kiblast','punch','kick','renzoku'].includes(x));
+/* 24 nov. (aprobado por Josemi, 01 - Guía y documentación/ATAQUES_PROPUESTA.md): la tecla 1 es la técnica más famosa
+   del personaje y se quita el relleno repetido (como mucho un golpe genérico, y solo si no tiene uno suyo). Los 11
+   principales llevan la lista de la propuesta, en el orden en que se abren. */
+const SIGS_PRINCIPALES={goku:['kame','kaioken','instant','kiblast','dragonfist','genki'],
+ vegeta:['galick','renzoku','bigbang','punch','finalflash','finalexp'],gohan:['masenko','gekiretsu','kick','kame','fskame'],
+ piccolo:['eyebeam','makanko','hellzone','punch','lightgren'],krilin:['kienzan','scatter','taiyoken','kick','kame'],
+ trunks:['tsword','burning','finishbuster','masenko','heatdome'],goten:['kame','kiblast','punch','kick'],
+ freezer:['deathbeam','discomortal','punch','deathball'],cell:['kame','kienzan','punch','solarkame','finalexp'],
+ buu:['choco','vanish','punch','kiblast'],broly:['blaster','lariat','eraser','roar','omega']};
+{const GEN=['kiblast','punch','kick','renzoku'],GOLPE=['punch','kick'];
+ for(const id in SIGS){if(!SIGS[id])continue;if(SIGS_PRINCIPALES[id]){SIGS[id]=SIGS_PRINCIPALES[id].filter(m=>MV[m]);continue}
+  const L=SIGS[id].slice(),propio=L.some(x=>MV[x]&&(MV[x].kind==='melee'||MV[x].kind==='sword')&&!GOLPE.includes(x));
+  let sobran=L.filter(x=>GOLPE.includes(x));if(!propio)sobran=sobran.slice(1);
+  for(const x of sobran)if(L.length>4)L.splice(L.indexOf(x),1);
+  const i=L.findIndex(x=>!GEN.includes(x));if(i>0){const [x]=L.splice(i,1);L.unshift(x)}
+  SIGS[id]=L}}
 
- if(i>1){const [x]=L.splice(i,1);L.splice(1,0,x)}}
-
+/* 24 nov. (Josemi: «están muy chetados»): ninguna técnica pasa del tope de daño por segundo de su tipo (a nivel 5)
+   y los rayos esperan al menos 2,5 s entre uno y otro. Las ~15 que pegaban casi el doble bajan al nivel de las demás. */
+{const TOPE={shot:280,melee:210,beam:190},
+  efic=(W,s)=>W.kind==='beam'?s.dmg*0.45*Math.ceil(s.dur*10)/Math.max(0.4,s.cd,(s.charge||0.25)+s.dur)
+   :W.kind==='melee'?s.dmg*(s.hits||1)/Math.max(0.4,s.cd,(s.hits||1)*0.09+0.1):s.dmg*(s.count||1)/Math.max(0.4,s.cd);
+ for(const id in MV){const W=MV[id],tope=TOPE[W.kind];if(!tope||typeof W.st!=='function')continue;const st0=W.st;let s5=st0(5);if(s5.cd==null)continue;
+  const rayo=W.kind==='beam';if(rayo)s5={...s5,cd:Math.max(2.5,s5.cd)};const k=Math.min(1,tope/efic(W,s5));
+  if(k<1||rayo)W.st=l=>{const q=st0(l);return{...q,dmg:q.dmg*k,cd:rayo?Math.max(2.5,q.cd):q.cd}}}}
 const UNLOCK_LV=[1,1,4,8,12,16];
 
 let FO=null;const fxSl=[],fxRg=[];
@@ -3454,7 +3475,7 @@ function sigIcon(id,size=32){
 
 const CARDS={
 
- power:{name:'Entrenamiento',ds:'+12% de daño'},
+ power:{name:'Entrenamiento',ds:'+8% de daño'},
 
  hp:{name:'Gravedad x100',ds:'+20 de vida máxima'},
 
@@ -4066,7 +4087,7 @@ function stats(){
 
   return{
 
-    dmg:H.atk*(1+0.12*(c.power||0))*TE.dmg*M.dmg*S.mr*(1+0.08*(S.aw||0))*zenkaiDmg*pesasDmg,
+    dmg:H.atk*(1+0.08*(c.power||0))*TE.dmg*M.dmg*S.mr*(1+0.08*(S.aw||0))*zenkaiDmg*pesasDmg,
 
     maxhp:Math.round((H.hp+20*(c.hp||0)+M.hp)*TE.hpMax*(1+0.08*(S.aw||0))),
 
@@ -4088,7 +4109,7 @@ function stats(){
 
     knockback:1+0.30*(c.knockback||0),
 
-    auraDmg:(c.aura_burst||0)*16*(1+0.12*(c.power||0))}}
+    auraDmg:(c.aura_burst||0)*16*(1+0.08*(c.power||0))}}
 
 
 

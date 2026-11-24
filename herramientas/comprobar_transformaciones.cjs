@@ -20,7 +20,7 @@ assert.equal(T.tiempos(9).dura,8,'la duración no baja de 8 s');
 assert.deepEqual([1,2,8].map(p=>T.nivelPaso(p,8)),[5,10,40]);
 assert.equal(T.nivelPaso(1,1),20);
 assert.equal(T.mejora('KAIOKEN').rasgo,'kaioken');
-assert.deepEqual({...T.mejora('FORMA INVENTADA')},{dmg:1.25,spd:1.06,cd:0.95,hp:1.15,rasgo:null});
+assert.deepEqual({...T.mejora('FORMA INVENTADA')},{dmg:1.125,spd:1.06,cd:0.95,hp:1.15,rasgo:null});
 for(const id in T.CADENAS)for(const n of T.CADENAS[id])assert.ok(n==='BASE'||T.MEJORAS[n]||['IMPERFECTO','GORDO','CONTENIDO','1ª FORMA'].includes(n),`${id}: ${n} sin mejora`);
 
 console.log('Transformaciones: datos correctos.');
@@ -48,10 +48,10 @@ console.log('Transformaciones: carga de ki correcta.');
 
 // ---- efecto de cada forma: multiplicadores de mejora() y su rasgo de la serie
 {const ctx={vidaFrac:1,tTrans:0},m=n=>T.mejora(n);
-  const ue=T.efecto('ULTRA EGO',{vidaFrac:0.5,tTrans:0});cerca(ue.dmg,m('ULTRA EGO').dmg*1.4,'Ultra Ego pega más cuanto más daño recibe');
-  cerca(T.efecto('BESTIA',{vidaFrac:0.5,tTrans:0}).dmg,m('BESTIA').dmg*1.5,'Bestia: más daño con menos vida');
-  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:40}).dmg,m('LEGENDARIO').dmg*1.5,'Legendario crece con el tiempo');
-  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:400}).dmg,m('LEGENDARIO').dmg*1.5,'Legendario tiene tope');
+  const ue=T.efecto('ULTRA EGO',{vidaFrac:0.5,tTrans:0});cerca(ue.dmg,Math.min(T.DMG_MAX,m('ULTRA EGO').dmg*1.2),'Ultra Ego pega más cuanto más daño recibe');
+  cerca(T.efecto('BESTIA',{vidaFrac:0.5,tTrans:0}).dmg,Math.min(T.DMG_MAX,m('BESTIA').dmg*1.25),'Bestia: más daño con menos vida');
+  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:40}).dmg,Math.min(T.DMG_MAX,m('LEGENDARIO').dmg*1.25),'Legendario crece con el tiempo');
+  cerca(T.efecto('LEGENDARIO',{vidaFrac:1,tTrans:400}).dmg,Math.min(T.DMG_MAX,m('LEGENDARIO').dmg*1.25),'Legendario tiene tope');
   cerca(T.efecto('100%',{vidaFrac:1,tTrans:60}).dmg,m('100%').dmg*0.7,'Freezer 100 % se cansa');
   const k=T.efecto('KAIOKEN',ctx);cerca(k.drenaje,0.02);cerca(k.dmg,m('KAIOKEN').dmg);cerca(k.hpMax,m('KAIOKEN').hp);
   cerca(T.efecto('SSJ DIOS',ctx).regen,0.015);cerca(T.efecto('UI SEÑAL',ctx).esquiva,0.3);
