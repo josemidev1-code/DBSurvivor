@@ -20,7 +20,9 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
   - [ ] La misma pauta en los demás mapas: tres enemigos comunes, un élite y un jefe por saga.
   - [x] Enemigos de cada mapa según el lore, por zonas, con 15 comunes y élites nuevos (24 nov.). Tabla en `REPARTO_ENEMIGOS.md`.
   - [ ] Pedir a Josemi los sprites de la lista de `REPARTO_ENEMIGOS.md` (Red Ribbon, esbirros de las películas, clase baja, Super…): hay mapas con solo 2-3 comunes.
-- [ ] **Corregir los mapas (24 nov., Josemi):** los obstáculos siguen sin gustarle; los quiere más naturales y fieles a la serie (no paredes y ruedos de juego, sino lo que hay en cada escenario).
+- [x] **Corregir los mapas (24 nov., Josemi):** los obstáculos siguen sin gustarle; los quiere más naturales y fieles a la serie (no paredes y ruedos de juego, sino lo que hay en cada escenario).
+  - [x] Hecho el 24 nov.: paisaje natural por mapa (`const PAISAJE=` en `script.js`): arboledas, pedregales y peñascos agrupados con ruido, según el escenario de la serie; sin huecos cerrados en ningún mapa.
+  - [ ] Que Josemi lo vea jugando y diga qué mapa ajustar (cada uno se cambia en su línea de `PAISAJE`).
 - [ ] Jefes más duros (mirar también la mejora «Fuerza» de la tienda).
 - [ ] Animaciones: que Josemi diga qué no le gusta; pulir a Goku como modelo y luego el resto.
 

@@ -6572,60 +6572,77 @@ const SOLID_DEF={
 
 };
 
-/* Formaciones deterministas: celdas de 12×12, margen de dos casillas y varios
-   tramos abiertos por celda activa para ofrecer cobertura sin cerrar los pasillos. */
-const FORMACIONES={
-  namek:['rock','tree0','tree1','mesa'],tierra:['spire','drock'],time:['pillar','hourglass'],vegetasei:['redspire','drock'],futuro:['car','ruin0','ruin1'],arena:['spire2','drock'],
-  kame:['rock','palm'],kaio:['rock','ktree'],poder:['pillar','debris'],bills:['rock','btree','bfloat'],infierno:['needle','htree'],yardrat:['ybig','ypop','ycliff'],
-  kaioshin:['rock','kstree'],redribbon:['crate','barrel','car'],musculo:['snowrock','spine'],budokai:['rock','ktree','palm'],lookout:['pillar','lpalm','lpot'],capsule:['car','ktree'],
-  paoz:['rock','fpine','ftree'],desierto:['drock','dcactus'],volcan:['lrock','needle'],gizard:['drock','mesaS'],pradera:['rock','btree2','ktree'],bosque:['bigtree','fpine','log']
+/* Paisaje natural (24 nov., sesión 25, pedido por Josemi: «quiero que sea más natural y fiel a la serie»).
+   Sustituye a las formaciones en cuadrícula (paredes, columnas y anillos de rocas iguales).
+   Cada mapa tiene capas por orden de prioridad: k = piezas (se pueden repetir para dar peso), c = tamaño de celda en casillas
+   (una pieza como mucho por celda, en un punto al azar de la celda), e = escala del ruido, u = umbral del ruido (agrupa en
+   arboledas, pedregales…; 0 = repartido), p = probabilidad, g = hueco mínimo en píxeles entre huellas (siempre deja pasar),
+   orilla = solo a esa distancia del agua/camino del mapa, sobre = puede tapar grietas que solo son dibujo. */
+const PAISAJE={
+  namek:[{k:['mesa'],c:10,e:12,u:.45,p:.7,g:26},{k:['house'],c:12,e:9,u:.5,p:.55,g:20,orilla:4},{k:['tree0','tree1','tree1','tree1','rock'],c:2,e:8,u:.63,p:.85,g:10},{k:['rock'],c:6,p:.3,g:16}],
+  tierra:[{k:['spire'],c:8,e:10,u:.4,p:.7,g:24,sobre:1},{k:['boulder','boulder','cactus'],c:3,e:6,u:.66,p:.8,g:12,sobre:1},{k:['cactus'],c:7,p:.3,g:14}],
+  gizard:[{k:['mesaL'],c:12,e:11,u:.45,p:.65,g:26,sobre:1},{k:['mesaS','drock','drock'],c:4,e:8,u:.58,p:.65,g:16,sobre:1},{k:['drock'],c:3,e:5,u:.68,p:.8,g:12,sobre:1}], /* las grietas del suelo son solo dibujo */
+  arena:[{k:['spire2'],c:8,e:10,u:.45,p:.6,g:24},{k:['boulder','boulder','drock'],c:4,e:6,u:.66,p:.7,g:12}],
+  vegetasei:[{k:['redspire','redspire','boulder'],c:3,e:7,u:.62,p:.8,g:12},{k:['pod'],c:14,p:.4,g:20},{k:['boulder'],c:5,p:.35,g:14}],
+  futuro:[{k:['ruin0','ruin1'],c:6,e:9,u:.45,p:.8,g:18},{k:['car'],c:4,p:.5,g:14,orilla:2},{k:['debris'],c:3,e:6,u:.65,p:.7,g:12}],
+  kame:[{k:['palm'],c:2,e:5,u:.55,p:.8,g:10},{k:['rock'],c:6,p:.3,g:14}],
+  kaio:[{k:['ktree'],c:4,p:.45,g:14},{k:['rock'],c:6,p:.3,g:14}],
+  poder:[{k:['pillar'],c:4,e:7,u:.6,p:.8,g:14},{k:['debris'],c:3,e:5,u:.66,p:.7,g:12}],
+  bills:[{k:['bfloat'],c:9,p:.5,g:22},{k:['btree'],c:2,e:7,u:.63,p:.85,g:10},{k:['rock'],c:5,p:.3,g:14}],
+  infierno:[{k:['needle'],c:3,e:7,u:.6,p:.8,g:12},{k:['htree'],c:2,e:6,u:.67,p:.85,g:10}],
+  yardrat:[{k:['ycliff'],c:11,e:10,u:.45,p:.5,g:24},{k:['ybig'],c:3,e:7,u:.6,p:.8,g:12},{k:['ypop'],c:2,e:6,u:.66,p:.85,g:10}],
+  kaioshin:[{k:['kstree'],c:2,e:7,u:.62,p:.85,g:10},{k:['rock'],c:6,p:.3,g:14}],
+  redribbon:[{k:['crate'],c:2,e:6,u:.66,p:.85,g:10},{k:['barrel'],c:2,e:5,u:.7,p:.8,g:10},{k:['car'],c:7,p:.4,g:16}],
+  musculo:[{k:['spine'],c:2,e:7,u:.6,p:.85,g:10},{k:['snowrock'],c:5,e:6,u:.55,p:.5,g:14}],
+  budokai:[{k:['ktree'],c:3,e:7,u:.62,p:.8,g:12},{k:['palm'],c:3,e:6,u:.66,p:.8,g:12},{k:['rock'],c:7,p:.3,g:14}],
+  lookout:[{k:['lpalm'],c:3,e:6,u:.6,p:.8,g:12},{k:['pillar'],c:8,p:.3,g:18},{k:['lpot'],c:4,p:.3,g:12}],
+  capsule:[{k:['cdome'],c:9,e:9,u:.4,p:.6,g:22},{k:['ktree'],c:2,e:6,u:.66,p:.85,g:10},{k:['car'],c:4,p:.5,g:14,orilla:2}],
+  paoz:[{k:['fpine'],c:2,e:8,u:.6,p:.85,g:10},{k:['ftree'],c:2,e:7,u:.65,p:.85,g:10},{k:['rock'],c:6,p:.35,g:14}],
+  desierto:[{k:['drock','drock','dcactus'],c:3,e:7,u:.64,p:.8,g:12},{k:['dcactus'],c:4,p:.45,g:12}],
+  volcan:[{k:['needle'],c:5,e:8,u:.55,p:.6,g:16},{k:['lrock','lrock','needle'],c:3,e:6,u:.63,p:.8,g:12}],
+  pradera:[{k:['rpillar'],c:9,e:10,u:.45,p:.55,g:24},{k:['btree2'],c:2,e:7,u:.63,p:.85,g:10},{k:['ktree'],c:2,e:6,u:.68,p:.85,g:10},{k:['rock'],c:6,p:.3,g:14}],
+  bosque:[{k:['bigtree'],c:3,e:6,u:.5,p:.85,g:12},{k:['fpine'],c:2,e:5,u:.6,p:.85,g:10},{k:['log'],c:6,p:.35,g:14}],
+  /* La Sala del Tiempo es un vacío blanco: casi nada */
+  time:[{k:['pillar'],c:9,p:.3,g:20},{k:['hourglass'],c:12,p:.3,g:20}]
 };
-const formMemo=new Map(),formViejo={},formSemilla={};
-/* Al cargar los PNG reales se invalidan las formaciones y las huellas anteriores. */
-/* Rectángulos en coordenadas de dibujo: el mismo anclaje que decorDesplazamiento. */
+const FORMACIONES={};for(const id in PAISAJE)FORMACIONES[id]=[...new Set(PAISAJE[id].flatMap(L=>L.k))];
+const formPlano=new WeakMap(),formMemo=new Map(),formViejo={},formSemilla={},HITOS=['fship','podcrater','ccorp','kamehouse','kaiohouse','gokuhouse','temple','kamipalace','budokai','bpyramid','zenobox','kstemple','rrtower','muscle','ypod','turtle'];
+/* Rectángulo de dibujo en el mismo anclaje que decorDesplazamiento. */
 function formRect(tx,ty,d,f){const jx=f?0:(h2(tx,ty,4)*8)|0,jy=f?f[2]+f[1]-d.height/2:(h2(tx,ty,6)*8)|0;return{x:tx*T+8+jx-d.width/2,y:ty*T+8+jy-d.height/2,w:d.width,h:d.height}}
 function formSolapa(a,b){return Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>2&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>2}
-/* Reserva una casilla alrededor de todo el sprite, también si sobresale de su anclaje. */
-function formTerreno(W,q){for(let y=Math.floor((q.y+2)/T)-1;y<=Math.floor((q.y+q.h-2.001)/T)+1;y++)for(let x=Math.floor((q.x+2)/T)-1;x<=Math.floor((q.x+q.w-2.001)/T)+1;x++)if(W.special(x,y)||W.formSuelo&&!W.formSuelo(x,y))return false;return true}
-function formacion(id,tx,ty){const W=WORLD[id],lista=FORMACIONES[id];if(!W||!lista||Math.abs(tx)<7&&Math.abs(ty)<7)return null;
-  const cx=Math.floor(tx/12),cy=Math.floor(ty/12),lx=tx-cx*12,ly=ty-cy*12;if(lx<2||lx>9||ly<2||ly>9||W.special(tx,ty))return null;
-  const clave=id+':'+cx+','+cy;let celda=formMemo.get(clave);
-  if(!celda){celda=new Map();const sem=formSemilla[id],r=n=>h2(cx,cy,sem+n),p=['tierra','arena','yardrat','infierno'].includes(id)?1:id==='time'?.55:['vegetasei','futuro','capsule'].includes(id)?.9:id==='bosque'?.60:id==='gizard'?.65:id==='lookout'?.70:.67;
-    if(r(0)<p){const aceptadas=[],puntos=new Map(),giro=r(1)<.5,tipo=r(2)*4|0,densa=['tierra','futuro','lookout'].includes(id),suave=id==='paoz';
-      const pon=(x,y,grupo=0)=>{if(giro)[x,y]=[y,x];puntos.set(x+','+y,[x,y,grupo])};
-      const pared=(x,y,n,vertical=0,hueco=0)=>{const corte=(n/2|0)-1;for(let i=0;i<n;i++)if(!hueco||n<6||i<corte||i>corte+1)pon(x+(vertical?0:i),y+(vertical?i:0))};
-      if(tipo===0){for(let j=0;j<(suave?2:3);j++)pared(2,2+j*3,(densa?7:6)+(r(10+j)*(densa?1:2)|0),0,id!=='futuro'&&r(15+j)<.18)}
-      else if(tipo===1){for(const x of [2,7]){const n=densa?5:3+(r(20+x)*3|0);pared(x,2,n,1);pared(x,2,3)}pared(2,9,suave?4:7)}
-      else if(tipo===2){for(let j=0;j<(suave?2:3);j++){const n=(densa?8:6)+(r(30+j)*(densa?1:3)|0);for(let i=0;i<n;i++)pon(2+j*3+i%2,2+(i/2|0),1)}if(id==='futuro')pared(2,9,4)}
-      else{for(const [x,y] of [[3,3],[4,2],[5,2],[6,2],[7,3],[3,8],[4,9],[5,9],[6,9],[7,8]])pon(x,y)}
-      /* Más candidatos en los roquedales amplios; el filtro conserva huecos y evita amontonarlos. */
-      if(['tierra','arena','yardrat'].includes(id))for(let y=2;y<=9;y++)for(let x=2;x<=9;x++)if(!puntos.has(x+','+y))puntos.set(x+','+y,[x,y,1]);
-      for(const [x,y,grupo] of puntos.values()){const ax=cx*12+x,ay=cy*12+y;if(Math.abs(ax)<7&&Math.abs(ay)<7||W.special(ax,ay))continue;
-        /* Conserva los hitos y el espacio que ya les reservaban sus envoltorios. */
-        let hito=false;for(let dy=-3;dy<=3&&!hito;dy++)for(let dx=-3;dx<=3;dx++){const d=formViejo[id](ax+dx,ay+dy,h2(ax+dx,ay+dy,3));if(d&&[DECOR.fship,DECOR.podcrater,DECOR.ccorp,DECOR.kamehouse,DECOR.kaiohouse,DECOR.gokuhouse,DECOR.temple,DECOR.kamipalace,DECOR.budokai,DECOR.bpyramid,DECOR.zenobox,DECOR.kstemple,DECOR.rrtower,DECOR.muscle,DECOR.ypod].includes(d)){hito=true;break}}
-        if(hito)continue;const v=h2(ax,ay,sem+50),k=id==='tierra'?lista[v<.3?0:1]:id==='yardrat'?lista[v<.6?0:v<.9?1:2]:grupo?lista[v<.8?0:Math.min(lista.length-1,1+(v*17|0)%(lista.length-1))]:lista[0];const d=DECOR[k],f=SOLID_DEF[k];if(!d||!f)continue;const q=formRect(ax,ay,d,f);if(!formTerreno(W,q)||aceptadas.some(a=>formSolapa(q,a)))continue;
-        let choque=false;for(let dy=-4;dy<=4&&!choque;dy++)for(let dx=-4;dx<=4;dx++){const bx=ax+dx,by=ay+dy;if(W.special(bx,by))continue;const viejo=formViejo[id](bx,by,h2(bx,by,3));if(viejo&&formSolapa(q,formRect(bx,by,viejo))){choque=true;break}}
-        if(!choque){celda.set(x+','+y,k);aceptadas.push(q)}}
-    }
-    formAbrir(celda);if(formMemo.size>4096)formMemo.clear();formMemo.set(clave,celda)}
-  return DECOR[celda.get(lx+','+ly)]||null}
-/* Abre también los pequeños huecos entre cuatro huellas elípticas: un grupo
-   visualmente macizo puede rodear un punto transitable para el radio 5. */
-function formAbrir(celda){for(let vuelta=0;vuelta<24&&celda.size;vuelta++){
-  const piezas=[...celda].map(([k,d])=>{const [x,y]=k.split(',').map(Number),f=SOLID_DEF[d];return{k,x:x*T+8,y:y*T+8,rx:f[0]+5,ry:f[1]+5}}),N=48,libre=new Uint8Array(N*N),visto=new Uint8Array(N*N),cola=[];
-  for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,px=x*4+2,py=y*4+2;libre[i]=!piezas.some(q=>(px-q.x)**2/(q.rx*q.rx)+(py-q.y)**2/(q.ry*q.ry)<1);
-    if(libre[i]&&(x===0||y===0||x===N-1||y===N-1)){visto[i]=1;cola.push(i)}}
-  while(cola.length){const i=cola.pop(),x=i%N,y=i/N|0;for(const j of [x?i-1:-1,x<N-1?i+1:-1,y?i-N:-1,y<N-1?i+N:-1])if(j>=0&&libre[j]&&!visto[j]){visto[j]=1;cola.push(j)}}
-  const hueco=libre.findIndex((v,i)=>v&&!visto[i]);if(hueco<0)return;const x=(hueco%N)*4+2,y=(hueco/N|0)*4+2;
-  let cerca=piezas[0],dist=Infinity;for(const q of piezas){const d=(x-q.x)**2+(y-q.y)**2;if(d<dist){dist=d;cerca=q}}celda.delete(cerca.k)}
-  /* Ante un grupo excepcionalmente complejo, deja la celda abierta. */
-  celda.clear()}
-/* Alinea la huella al centro de la casilla, compensando la altura del sprite.
-   Dibujo y colisión usan exactamente el mismo desplazamiento, sin dispersión. */
+/* La zona dada tiene que caer en suelo libre (sin agua, camino ni hitos). */
+function formTerreno(W,q){for(let y=Math.floor((q.y+2)/T);y<=Math.floor((q.y+q.h-2.001)/T);y++)for(let x=Math.floor((q.x+2)/T);x<=Math.floor((q.x+q.w-2.001)/T);x++)if(W.special(x,y)||W.formSuelo&&!W.formSuelo(x,y))return false;return true}
+function formHito(id,ax,ay){for(let dy=-4;dy<=4;dy++)for(let dx=-4;dx<=4;dx++){const d=formViejo[id](ax+dx,ay+dy,h2(ax+dx,ay+dy,3));if(d&&HITOS.some(k=>DECOR[k]===d))return true}return false}
+/* Candidato de una capa en una celda: casilla al azar dentro de la celda, filtrada por ruido, probabilidad y terreno. */
+function formCand(id,li,cx,cy){const key=id+'|'+li+'|'+cx+','+cy;if(formMemo.has(key))return formMemo.get(key);
+  const W=WORLD[id],L=PAISAJE[id][li],sem=formSemilla[id]+li*37;let r=null;
+  const tx=cx*L.c+(h2(cx,cy,sem)*L.c|0),ty=cy*L.c+(h2(cx,cy,sem+1)*L.c|0);
+  if(!(Math.abs(tx)<7&&Math.abs(ty)<7)&&h2(cx,cy,sem+2)<L.p&&(!L.u||fbm(tx/L.e,ty/L.e,sem)>L.u)&&!W.special(tx,ty)){
+    const k=L.k[h2(tx,ty,sem+3)*L.k.length|0],d=DECOR[k],f=SOLID_DEF[k];
+    if(d&&f){const q=formRect(tx,ty,d,f),cx0=tx*T+8,cy0=ty*T+8;let ok=L.sobre||formTerreno(W,{x:cx0-f[0]-4,y:cy0-f[1]-4,w:2*f[0]+8,h:2*f[1]+8}); /* basta con que la base pise suelo libre */
+      if(ok&&L.orilla){ok=false;for(let dy=-L.orilla;dy<=L.orilla&&!ok;dy++)for(let dx=-L.orilla;dx<=L.orilla;dx++)if(W.special(tx+dx,ty+dy)){ok=true;break}}
+      if(ok&&!formHito(id,tx,ty))r={tx,ty,k,q,x:tx*T+8,y:ty*T+8,rx:f[0],ry:f[1],g:L.g,pr:h2(cx,cy,sem+4)}}}
+  if(formMemo.size>60000)formMemo.clear();formMemo.set(key,r);return r}
+/* hueco mínimo de 14 px: el jugador (radio 5) pasa siempre, aunque la cuenta con elipses sea aproximada */
+function formChoca(a,b){const g=Math.max(a.g,b.g,14),rx=a.rx+b.rx+g,ry=a.ry+b.ry+g,dx=a.x-b.x,dy=a.y-b.y;return dx*dx/(rx*rx)+dy*dy/(ry*ry)<1||formSolapa(a.q,b.q)&&Math.abs(dy)<6}
+/* Aceptado: no choca con piezas aceptadas de capas anteriores ni con vecinas de su capa con más prioridad. */
+function formAcept(id,li,cx,cy){const key=id+'#'+li+'|'+cx+','+cy;if(formMemo.has(key))return formMemo.get(key);
+  const a=formCand(id,li,cx,cy);let ok=!!a;
+  if(ok){const L=PAISAJE[id];
+    for(let lj=0;lj<=li&&ok;lj++){const c=L[lj].c,R=Math.ceil(90/(c*T))+1,bx=Math.floor(a.tx/c),by=Math.floor(a.ty/c);
+      for(let y=by-R;y<=by+R&&ok;y++)for(let x=bx-R;x<=bx+R;x++){if(lj===li&&x===cx&&y===cy)continue;
+        const b=lj<li?formAcept(id,lj,x,y):formCand(id,lj,x,y);if(!b||lj===li&&b.pr<a.pr)continue;if(formChoca(a,b)){ok=false;break}}}}
+  const r=ok?a:null;formMemo.set(key,r);return r}
+/* Pieza de la casilla tx,ty (o null). */
+function formacion(id,tx,ty){const L=PAISAJE[id];if(!L||!WORLD[id])return null;
+  for(let li=0;li<L.length;li++){const c=L[li].c,a=formAcept(id,li,Math.floor(tx/c),Math.floor(ty/c));if(a&&a.tx===tx&&a.ty===ty)return DECOR[a.k]}return null}
+/* Dibujo y colisión usan el mismo desplazamiento. */
 function decorDesplazamiento(id,tx,ty,d){if(formacion(id,tx,ty)===d){const k=FORMACIONES[id].find(k=>DECOR[k]===d),f=SOLID_DEF[k];return[0,f[2]+f[1]-d.height/2]}return[(h2(tx,ty,4)*8)|0,(h2(tx,ty,6)*8)|0]}
+/* Del decorado antiguo solo quedan los hitos (casas, naves…) y lo plano (cráteres, juncos, helechos):
+   lo sólido sale del paisaje, para que no haya rocas sueltas sin sentido. */
 for(const [i,id] of Object.keys(WORLD).entries()){const W=WORLD[id],viejo=W.decor;formViejo[id]=viejo;formSemilla[id]=701+i*101;
-  /* Las islas mantienen su decorado original, incluso al llamar a W.decor. */
-  W.decor=(tx,ty,v)=>S&&S.isl?viejo(tx,ty,v):formacion(id,tx,ty)||viejo(tx,ty,v)}
+  const plano=d=>{let v=formPlano.get(d);if(v===undefined){v=true;for(const k in SOLID_DEF)if(DECOR[k]===d){v=!SOLID_DEF[k]||HITOS.includes(k);break}formPlano.set(d,v)}return v};
+  W.decor=(tx,ty,v)=>{if(S&&S.isl)return viejo(tx,ty,v);const f=formacion(id,tx,ty);if(f)return f;const d=viejo(tx,ty,v);return d&&(!PAISAJE[id]||plano(d))?d:null}}
 
 const SOLID_BY=new Map(),solidMemo=new Map(),solidNearM=new Map();let solidMap='',solidIX=0,solidIY=0,solidIsland=0;
 
@@ -9401,7 +9418,7 @@ function toggleFull(){if(document.fullscreenElement)document.exitFullscreen();el
   });
 })();
 
-window.AS={tr:()=>P&&P.tr,mapas:()=>MAPS,oleadas:()=>WAVES,sigs:id=>sigList(id).filter(m=>MV[m]).map(m=>({id:m,n:MV[m].name,kind:MV[m].kind,pose:attackPose(MV[m])})),trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,beams:()=>beams,piloto:PILOTO,pilAj:PIL_AJ,enemies:()=>enemies,eshots:()=>eshots,ebeams:()=>ebeams,hazards:()=>hazards,bombs:()=>bombs,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
+window.AS={tr:()=>P&&P.tr,mapas:()=>MAPS,oleadas:()=>WAVES,sigs:id=>sigList(id).filter(m=>MV[m]).map(m=>({id:m,n:MV[m].name,kind:MV[m].kind,pose:attackPose(MV[m])})),trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,beams:()=>beams,piloto:PILOTO,pilAj:PIL_AJ,enemies:()=>enemies,eshots:()=>eshots,ebeams:()=>ebeams,hazards:()=>hazards,bombs:()=>bombs,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),mundo:()=>({WORLD,DECOR,PAISAJE,decorDesplazamiento,render}),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
 
 newGame('goku');showTitle();
 

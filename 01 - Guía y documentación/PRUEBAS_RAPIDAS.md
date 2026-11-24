@@ -12,3 +12,5 @@ Todas las tareas: revisa los cambios concretos y ejecuta `node --check "02 - Có
 - **Herramientas de animación:** `python -m unittest discover -s herramientas/pruebas -t .`; revisar además los resultados visuales afectados.
 
 Anota qué se probó y qué no. Si cambian archivos cargados desde `index.html`, actualiza sus versiones de caché cuando corresponda.
+
+- **Obstáculos y mapas:** carga `herramientas/vista_aerea.js` en la consola (servidor local: `node herramientas/servidor.cjs`) y mira `await AEREA('mapa')`; comprueba que no haya huecos cerrados y que el paisaje se parezca al de la serie.

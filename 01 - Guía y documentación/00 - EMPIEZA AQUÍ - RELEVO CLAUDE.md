@@ -2,7 +2,7 @@
 
 ## >>> SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 25): HAZ ESTO PRIMERO <<<
 
-Sesión 25: enemigos repartidos por zonas según el lore (`const ZONAS=` en `script.js`, tabla en `REPARTO_ENEMIGOS.md`). **Siguiente:** recibir de Josemi los sprites de esa lista y rehacer los obstáculos de los mapas (los quiere naturales y fieles a la serie). Para probar en el navegador: `.claude/launch.json` arranca `herramientas/servidor.cjs`.
+Sesión 25: enemigos repartidos por zonas según el lore (`const ZONAS=` en `script.js`, tabla en `REPARTO_ENEMIGOS.md`). Los obstáculos ya están rehechos como paisaje natural (`const PAISAJE=`). **Siguiente:** recibir de Josemi los sprites de esa lista y ajustar los mapas que no le convenzan jugando. Para probar en el navegador: `.claude/launch.json` arranca `herramientas/servidor.cjs`.
 
 ## (Anterior) SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 24)
 

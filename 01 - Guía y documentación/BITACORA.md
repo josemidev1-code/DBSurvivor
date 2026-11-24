@@ -4853,3 +4853,36 @@ ode --check.
 ### Siguiente paso recomendado
 - Que Josemi mire el reparto de `REPARTO_ENEMIGOS.md` y mande los sprites que pueda de la lista.
 - Rehacer los obstáculos de los mapas para que sean naturales y fieles a cada escenario.
+- Josemi (24 nov.): «sigue con los obstáculos, yo te voy buscando los sprites». Empiezo a rehacer los obstáculos de los mapas.
+
+
+## 2026-11-24 — Antigravity (sesión 26)
+
+### Lo que pidió el usuario
+- Buscar y recopilar sprites y sprite sheets para ampliar la variedad de enemigos de DragonBall Survivor por zonas/mapas según lore.
+- Grupos por prioridad:
+  1. Ejército Red Ribbon: General White, Sargento Metallic, Androide 8, Comandante Red.
+  2. Villanos y esbirros de películas: Garlic Jr. (esbirros), Slug (esbirros), Turles (banda), Escuadrón Cooler (Salza, Neiz, Dore), Bojack y banda (Bujin, Bido, Gokua).
+  3. Planeta Vegeta: Saiyans de clase baja (comunes).
+  4. Torneo y entorno: Spopovich, Bacterian, Giran, Babidi.
+  5. Dragon Ball Super: Tropas del Orgullo reconocibles, Sorbet y Tagoma, Gamma 1 y Gamma 2.
+  6. Dragon Ball clásico: Robots de Pilaf, animales/dinosaurios para Monte Paoz.
+- Requisitos: Pixel art compatible con LSW / ULSW (~32-55px), con animaciones de combate (guardia, impulso/vuelo, ataque, daño, muerte). Descargar y guardar en `05 - Sprites nuevos encontrados/`, registrar fuentes, autores, licencias/créditos, documentar y no modificar el código del juego.
+
+### Lo que hice
+- Registrada la petición en la bitácora e inspeccionado el estado actual (`AGENTS.md`, `ESTADO_ACTUAL.md`, `SPRITES_PENDIENTES.md`, `REPARTO_ENEMIGOS.md`, `INDICE_SPRITES.md`, carpetas `sprites/` y `05 - Sprites nuevos encontrados/`).
+
+### A medias / problemas
+- Búsqueda y descarga de sprites en progreso.
+
+### Siguiente paso recomendado
+- Buscar sprite sheets en DeviantArt, The Spriters Resource y comunidades de LSW para los grupos prioritarios, descargarlos en `05 - Sprites nuevos encontrados/` y documentarlos.
+- Obstáculos rehechos (pedido de Josemi: más naturales y fieles a la serie): fuera las formaciones en cuadrícula (paredes, columnas y anillos de rocas iguales en celdas de 12×12). Nuevo `const PAISAJE=` en `script.js`: cada mapa tiene capas por prioridad (peñascos grandes, casas junto al agua, arboledas, piedras sueltas…). El ruido agrupa las piezas como en la naturaleza y mezcla tipos y tamaños dentro de cada grupo. Del decorado antiguo solo quedan los hitos (Kame House, la nave de Freezer…) y lo plano.
+  - Ejemplos: Namek con arboledas de árboles azules, peñascos y casas namekianas junto al agua; Gizard con mesetas y rocas; bosque denso con troncos; Musculo con pinos nevados; la Sala del Tiempo casi vacía, como en la serie.
+  - Siempre queda un paso de 14 px como mínimo entre obstáculos. Comprobado con un relleno por inundación en los 24 mapas: ningún hueco cerrado. Ocupan del 0 al 8 % del suelo.
+  - El dibujo cuesta unos 2 ms por fotograma en el mapa más denso.
+  - Herramienta nueva `herramientas/vista_aerea.js`: vista aérea a escala de un mapa para juzgar el reparto. `AS.mundo()` da acceso a `WORLD`, `DECOR`, `PAISAJE` y `render` para depurar.
+  - Pasan las 11 comprobaciones.
+
+### Siguiente paso recomendado
+- Que Josemi juegue y diga qué mapa no le convence. Cada uno se ajusta en su línea de `PAISAJE`.

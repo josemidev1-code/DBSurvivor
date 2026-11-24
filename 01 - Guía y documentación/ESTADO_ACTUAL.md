@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**24 nov. 2026 (sesión 25 — obstáculos naturales):** los obstáculos ya no son paredes y cuadrículas: cada mapa tiene su paisaje de la serie (arboledas, pedregales, peñascos), agrupado con ruido, en `const PAISAJE=` de `script.js`. Ningún mapa deja huecos cerrados. Vista aérea para revisarlo: `herramientas/vista_aerea.js`. Pendiente de que Josemi lo valore jugando.
+
 **24 nov. 2026 (sesión 25 — enemigos por zonas):** cada mapa tiene los enemigos de su saga según el lore (`const ZONAS=` en `script.js`, tabla en `REPARTO_ENEMIGOS.md`): ni zombis en Namek ni Buu en Kame House. Hay 15 enemigos nuevos con sprites que ya teníamos y el jefe Cell Superperfecto; la Sala del Tiempo hace de mapa mezcla. Pendiente: sprites que faltan (lista en ese documento) y rehacer los obstáculos de los mapas para que sean naturales y fieles a la serie.
 
 **24 nov. 2026 (sesión 24 — piloto de combate en Namek):** los dos primeros minutos de Namek siguen un guion: patrulla de Freezer en fila (0:00), tiradores que apuntan con línea y se esquivan moviéndote o cubriéndote tras una roca (0:30), Burter con embestida anunciada que le deja mareado (1:00) y las tres amenazas juntas dejando un hueco señalado con una flecha verde (1:30). Dodoria sigue a los 2:00. El Teletransporte salta hacia donde te mueves y las barreras ya protegen de golpes anunciados. Código en `pilotoNamek`, `pilTirador` y `pilEmbestidor` (`PIL_AJ`) de `script.js`; medidas y pendientes en la bitácora. Pendiente de que Josemi lo juegue.
