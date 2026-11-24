@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "brablast",
+   "n": "Ráfaga de Bra",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

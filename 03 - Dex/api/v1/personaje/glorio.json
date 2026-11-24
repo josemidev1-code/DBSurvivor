@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "gloriogun",
+   "n": "Pistola de Glorio",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "gloriowave",
+   "n": "Onda Mágica",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "glorioshield",
+   "n": "Barrera Mágica",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

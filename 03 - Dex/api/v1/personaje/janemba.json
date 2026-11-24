@@ -17,6 +17,32 @@
   "ki": "15 Billion",
   "maxKi": "75 Billion"
  },
+ "tecnicas": [
+  {
+   "id": "dimsword",
+   "n": "Espada Dimensional",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "rakshasa",
+   "n": "Garra Rakshasa",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

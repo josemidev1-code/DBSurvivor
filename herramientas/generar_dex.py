@@ -13,6 +13,8 @@ De dónde sale cada dato:
   bajado con descargar_dbapi.py). Si la API no tiene el personaje o la forma, el poder se inventa con las reglas de
   PODER_FORMA y BASE_ANIME (como en el anime), y la ficha lo marca con fuente «inventado».
 - Estado de las animaciones: inventario_animaciones.py.
+- Técnicas de cada personaje (teclas 1-6) y su pose: herramientas/tecnicas.json (AS.sigs(id) de cada héroe, volcado
+  con --volcar o desde la consola del juego).
 """
 import json, math, os, re, subprocess, sys, unicodedata
 sys.dont_write_bytecode = True
@@ -181,7 +183,9 @@ const {chromium}=require('playwright');
 await p.goto('file://'+process.argv[2]);await p.waitForFunction(()=>window.AS&&window.AS.HDEF);
 const r=await p.evaluate(()=>{const o={};for(const[k,v]of Object.entries(AS.HDEF)){o[k]={};for(const a of ['name','rar','hp','spd','atk','start','desc','forms','aura','regen'])if(v[a]!==undefined)o[k][a]=v[a]}
  const M={};for(const k of new Set(Object.values(AS.HDEF).map(h=>h.start)))M[k]=(window.AS.MOVES&&AS.MOVES[k]?.name)||k;return {h:o}});
-require('fs').writeFileSync(process.argv[3],JSON.stringify(r.h,null,1));await b.close()})();
+require('fs').writeFileSync(process.argv[3],JSON.stringify(r.h,null,1));
+const t=await p.evaluate(()=>{const o={};for(const k of Object.keys(AS.HDEF))o[k]=AS.sigs(k);return o});
+require('fs').writeFileSync(process.argv[3].replace('hdef.json','tecnicas.json'),JSON.stringify(t,null,1));await b.close()})();
 """
     tmp = os.path.join(HERR, '_volcar_hdef.js')
     open(tmp, 'w').write(js)
@@ -205,6 +209,8 @@ def main():
     HD = json.load(open(os.path.join(HERR, 'hdef.json'), encoding='utf-8'))
     API = {c['name'].strip(): c for c in json.load(open(os.path.join(HERR, 'dbapi', 'personajes.json'), encoding='utf-8'))}
     TEC = nombres_tecnicas()
+    ruta_tec = os.path.join(HERR, 'tecnicas.json')
+    TECJ = json.load(open(ruta_tec, encoding='utf-8')) if os.path.exists(ruta_tec) else {}
 
     def api_de(h):
         k = max((p for p in API_DE if h.startswith(p)), key=len, default=None)
@@ -294,6 +300,7 @@ def main():
             'raza': raza, 'bando': bando, 'planeta': planeta, 'descripcion': desc_anime,
             'api': {'id': api['id'], 'nombre': api['name'], 'url': f"https://dragonball-api.com/api/characters/{api['id']}",
                     'ki': api['ki'], 'maxKi': api['maxKi']} if api else None,
+            'tecnicas': TECJ.get(h, []),
             'formas': formas,
         })
 

@@ -17,6 +17,44 @@
   "ki": "54.000.000",
   "maxKi": "19.84 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gamma",
+   "n": "Gamma Burst Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 2,

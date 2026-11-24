@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "gomahstaff",
+   "n": "Bastón de Gomah",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gomahwave",
+   "n": "Onda Demoníaca",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gomahball",
+   "n": "Esfera del Rey Demonio",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,38 @@
   "ki": "45.000.000",
   "maxKi": "40 septillion"
  },
+ "tecnicas": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "beastcannon",
+   "n": "Cañón Especial Bestia",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

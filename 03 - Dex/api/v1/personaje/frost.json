@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

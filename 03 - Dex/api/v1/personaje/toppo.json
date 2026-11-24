@@ -17,6 +17,32 @@
   "ki": "99 Quadrillion",
   "maxKi": "7.5 Sextillion"
  },
+ "tecnicas": [
+  {
+   "id": "justiceflash",
+   "n": "Justice Flash",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "hakai",
+   "n": "Hakai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

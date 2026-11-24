@@ -17,6 +17,32 @@
   "ki": "60.000.000",
   "maxKi": "90 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "eraser",
+   "n": "Eraser Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

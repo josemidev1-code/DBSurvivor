@@ -17,6 +17,32 @@
   "ki": "180 Billion",
   "maxKi": "10.8 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "spiritsword",
+   "n": "Espada Espiritual",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

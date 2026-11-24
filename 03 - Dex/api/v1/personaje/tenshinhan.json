@@ -17,6 +17,38 @@
   "ki": "2.400.000",
   "maxKi": "80.000.000"
  },
+ "tecnicas": [
+  {
+   "id": "kikoho",
+   "n": "Kikoho",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "taiyoken",
+   "n": "Taiyoken",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "dodonpa",
+   "n": "Dodonpa",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

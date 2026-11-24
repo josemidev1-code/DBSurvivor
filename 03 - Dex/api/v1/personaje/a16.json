@@ -17,6 +17,38 @@
   "ki": "440.000.000",
   "maxKi": "440.000.000"
  },
+ "tecnicas": [
+  {
+   "id": "rocketpunch",
+   "n": "Puño Cohete",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "hellflash",
+   "n": "Hell Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

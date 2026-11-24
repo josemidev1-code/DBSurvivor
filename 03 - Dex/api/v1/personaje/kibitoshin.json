@@ -17,6 +17,32 @@
   "ki": "3.2 Billion",
   "maxKi": "3.2 Billion"
  },
+ "tecnicas": [
+  {
+   "id": "kaikai",
+   "n": "Kai Kai",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kaishot",
+   "n": "Esfera Divina",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

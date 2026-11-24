@@ -17,6 +17,32 @@
   "ki": "121 Quintillion",
   "maxKi": "12.1 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "jirenrush",
+   "n": "Golpe del Orgullo",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "powerimpact",
+   "n": "Power Impact",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

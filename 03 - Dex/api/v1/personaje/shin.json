@@ -17,6 +17,32 @@
   "ki": "unknown",
   "maxKi": "unknown"
  },
+ "tecnicas": [
+  {
+   "id": "kaishot",
+   "n": "Esfera Divina",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kaikai",
+   "n": "Kai Kai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

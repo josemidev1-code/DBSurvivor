@@ -11,6 +11,38 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kyabecannon",
+   "n": "Cañón de Kyabe",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

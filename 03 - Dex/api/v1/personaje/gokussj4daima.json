@@ -17,6 +17,32 @@
   "ki": "60.000.000",
   "maxKi": "90 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "kame10x",
+   "n": "Kamehameha x10",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

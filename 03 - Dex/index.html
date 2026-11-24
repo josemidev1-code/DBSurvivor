@@ -173,6 +173,19 @@ function ficha(id,fn){
   const pod=Math.min(100,Math.max(4,Math.round(Math.log10(Math.max(10,f.poder.valor))/27*100)));
   const anims=ANIM.filter(a=>a[0]!=='portrait').map(([k,n,hoja])=>{const e=f.animaciones[k],h=H.anims[hoja]||(k==='move'?H.anims.Walk:null);
     return `<div class="anim ${e}"><canvas data-hoja="${esc(hoja)}" aria-label="${n}"></canvas><b>${n}</b><small>${ICO[e]}${h&&e!=='falta'?' · '+h.du.length+' fot.':''}</small></div>`}).join('');
+  /* técnicas: misma elección de animación que attackClip() del juego */
+  const POSE={kick:['Kick'],atk:['Attack'],up:['Up','Pow','Cast'],pow:['Pow','Cast'],beam:['Beam','Cast'],cast:['Cast']};
+  const PNOM={Kick:'Patada',Attack:'Puñetazo',Up:'Brazos arriba',Pow:'Poder/aura',Beam:'Rayo',Cast:'Ki',Idle:'Guardia'};
+  const KIND={shot:'Disparo',beam:'Rayo',big:'Esfera grande',bomb:'Bomba',disc:'Disco',melee:'Cuerpo a cuerpo',sword:'Espada',nova:'Onda',aura:'Aura',orbit:'Órbita'};
+  const tecs=(p.tecnicas||[]).map((t,i)=>{let hoja,e,txt;
+    if(H.anims['Tecnica_'+t.id]){hoja='Tecnica_'+t.id;e='animada';txt='Animación propia'}
+    else{const L=POSE[t.pose]||['Cast'],k=L.find(x=>H.anims[x]);
+      if(k===L[0]){hoja=k;e='animada';const v=k==='Attack'?['Attack','Attack2','Attack3'].filter(x=>H.anims[x]).length:k==='Kick'?['Kick','Kick2'].filter(x=>H.anims[x]).length:1;
+        txt='Pose de '+PNOM[k].toLowerCase()+(v>1?' (alterna '+v+')':'')}
+      else if(k){hoja=k;e='quieta';txt='Le falta '+PNOM[L[0]].toLowerCase()+': usa '+PNOM[k].toLowerCase()}
+      else{hoja='Idle';e='falta';txt='Sin pose: usa la guardia'}}
+    return `<div class="anim ${e}"><canvas data-hoja="${esc(hoja)}" aria-label="${esc(t.n)}"></canvas><b>${i+1} · ${esc(t.n)}</b><small>${esc(KIND[t.kind]||t.kind)} · ${txt}</small></div>`}).join('');
+  const propias=(p.tecnicas||[]).filter(t=>H.anims['Tecnica_'+t.id]).length;
   app.innerHTML=`<a class="volver" href="#">◀ VOLVER A LA DEX</a>
   <div class="det">
     <div>
@@ -188,13 +201,16 @@ function ficha(id,fn){
       <dl class="datos">
         <dt>Raza</dt><dd>${esc(p.raza)}</dd><dt>Bando</dt><dd>${esc(p.bando)}</dd>
         ${p.planeta?`<dt>Planeta</dt><dd>${esc(p.planeta)}</dd>`:''}
-        <dt>Técnica inicial</dt><dd>${esc(p.tecnica)}</dd>
+        <dt>Técnica principal</dt><dd>${esc((p.tecnicas&&p.tecnicas[0]&&p.tecnicas[0].n)||p.tecnica)}</dd>
         <dt>En el juego</dt><dd>${esc(p.descJuego)}</dd>
         <dt>Animación</dt><dd class="e-${f.estado.replace(' ','_')}">${f.estado}</dd>
       </dl>
       ${p.descripcion?`<p class="desc">${esc(p.descripcion.length>420?p.descripcion.slice(0,420).replace(/\s\S*$/,'')+'…':p.descripcion)}</p>`:''}
       <h2>ANIMACIONES</h2>
       <div class="anims">${anims}</div>
+      ${tecs?`<h2>TÉCNICAS (TECLAS 1-${p.tecnicas.length}) · ${propias} CON ANIMACIÓN PROPIA</h2>
+      <p class="desc">Lo que hace el personaje al lanzar cada técnica en esta forma. Verde: su animación propia o la pose que le toca. Amarillo: le falta esa pose y usa otra. Rojo: no tiene pose y se queda en guardia.</p>
+      <div class="anims">${tecs}</div>`:''}
       <h2>ANIMAR CON PISKEL</h2>
       <code class="cmd">python herramientas/exportar_piskel_lote.py ${esc(p.id)}</code>
       <p class="desc">Abre el .piskel de 04 - Piskel/${esc(p.id)}_${f.n}/ en piskelapp.com, dibuja lo que falta y vuelve con importar_piskel.py.</p>

@@ -11,6 +11,38 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "a18volley",
+   "n": "Ráfaga de Energía",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "hellstorm",
+   "n": "Tormenta Infernal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "s17barrier",
+   "n": "Barrera Absorbente",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "powerblitz",
+   "n": "Power Blitz",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

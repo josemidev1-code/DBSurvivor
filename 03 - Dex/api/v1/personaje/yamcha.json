@@ -17,6 +17,32 @@
   "ki": "1.980.000",
   "maxKi": "4.000.000"
  },
+ "tecnicas": [
+  {
+   "id": "rogafu",
+   "n": "Rōgafūfūken",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "sokidan",
+   "n": "Sōkidan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

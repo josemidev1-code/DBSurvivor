@@ -17,6 +17,38 @@
   "ki": "121 Quintillion",
   "maxKi": "12.1 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "jirenrush",
+   "n": "Golpe del Orgullo",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "powerimpact",
+   "n": "Power Impact",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "omega",
+   "n": "Omega Blaster",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,38 @@
   "ki": "54.000.000",
   "maxKi": "19.84 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

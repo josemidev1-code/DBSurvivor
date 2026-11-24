@@ -17,6 +17,38 @@
   "ki": "1.000.000",
   "maxKi": "1 Billion"
  },
+ "tecnicas": [
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "scatter",
+   "n": "Ráfaga de Krilin",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "taiyoken",
+   "n": "Taiyoken",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,32 @@
   "ki": "50 Trillion",
   "maxKi": "150 Quintillion"
  },
+ "tecnicas": [
+  {
+   "id": "dysposlash",
+   "n": "Golpe Relámpago",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "dyspoball",
+   "n": "Bola de Justicia",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dysposhoot",
+   "n": "Super Maximum Light Speed",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

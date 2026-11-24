@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "jankenpon",
+   "n": "Jan Ken",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

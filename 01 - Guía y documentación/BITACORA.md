@@ -4756,3 +4756,23 @@ ode --check.
 ### A medias / problemas
 - No sé con qué mejoras de la tienda jugó Josemi: Fuerza llega a +200 % con 50 niveles, y eso por sí solo puede seguir haciendo los jefes cortos. Se mira en el paso 3 (jefes).
 - Siguen pendientes: más enemigos (paso 2) y jefes más duros (paso 3). También la pregunta de Shenron y las formas.
+
+## 2026-11-24 — Claude (sesión 24): la dex, puesta al día con las técnicas
+
+### Lo que pidió el usuario
+- Josemi: «dime los personajes y enemigos que tenemos ahora y vamos con la dex, que la dejamos olvidada; quiero revisar cada personaje y qué animaciones tiene». También quiere mejorar las animaciones de ataque y movimiento, los efectos de los ataques y meter más enemigos de la saga.
+
+### Lo que hice
+- **Dex regenerada** (la anterior era del 15 nov.): 138 personajes jugables y 224 formas. El volcado con Playwright no funciona en este Mac (Node no tiene `playwright`), así que `hdef.json` y `tecnicas.json` se volcaron desde la consola del juego en el navegador.
+- **Ficha nueva «TÉCNICAS (TECLAS 1-6)»** en `03 - Dex/index.html`: cada técnica de la forma, animada, con la misma elección que `attackClip` del juego. Verde: animación propia (`Tecnica_*`) o la pose que le toca. Amarillo: le falta esa pose y usa otra. Rojo: se queda en guardia. «Técnica inicial» pasa a «Técnica principal» (la de la tecla 1).
+- `window.AS` expone `sigs(id)` (técnicas con nombre, tipo y pose), `mapas()` y `oleadas()` para regenerar la dex. `generar_dex.py` lee `herramientas/tecnicas.json`. Caché: script.js 216.
+- Pasan las 10 comprobaciones. Consola sin errores (solo el favicon del servidor de pruebas).
+
+### Lo que dice la dex (forma base de cada personaje)
+- Animaciones: 9 completas, 101 casi, 28 a medias. Lo que más falta: brazos arriba (121), combo 3 (31), patada 2 (24), muerte (21) y rayo (20).
+- Técnicas: 629 en total. 21 con animación propia, 572 con su pose y 36 que usan otra pose porque falta la suya (29 personajes, sobre todo variantes de Goku y Vegeta sin rayo ni brazos arriba). Ninguna se queda en guardia.
+- Solo 11 formas tienen animaciones propias de técnica: Goku (y sus copias de UI y Broly), Vegeta, Gohan, Piccolo, Krilin, Tenshinhan, Buu y Janemba.
+- Enemigos: 134 tipos definidos y 125 salen en algún mapa; 61 en hordas o élites y 67 jefes distintos. Sin usar: Guldo, Frost, Androide 21 Majin, Zamasu fusionado, Goku SSJ enemigo y el Saibaman de ki. La carne de cañón de cada mapa es casi siempre la misma: Saibaman (3 tipos), Soldado, Élite, Cell Jr. y Fragmento de Buu.
+
+### Siguiente paso recomendado
+- Que Josemi revise la dex y diga qué personajes o animaciones le gustan menos. Después, más enemigos propios de cada saga (paso 2) y jefes (paso 3).

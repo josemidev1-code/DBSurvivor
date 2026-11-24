@@ -17,6 +17,32 @@
   "ki": "192.500.000",
   "maxKi": "192.500.000"
  },
+ "tecnicas": [
+  {
+   "id": "a14wave",
+   "n": "Onda del 14",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "a14rush",
+   "n": "Embestida del 14",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

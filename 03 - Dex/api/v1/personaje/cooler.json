@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "supernova",
+   "n": "Supernova",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

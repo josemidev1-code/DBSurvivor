@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "slugball",
+   "n": "Bola Explosiva",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "slugarm",
+   "n": "Brazo Estirado",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "eyebeam",
+   "n": "Rayo de los Ojos",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

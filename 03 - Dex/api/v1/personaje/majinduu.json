@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "duuball",
+   "n": "Bola Majin",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "duuroll",
+   "n": "Rodillo Majin",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

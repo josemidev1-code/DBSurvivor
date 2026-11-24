@@ -17,6 +17,38 @@
   "ki": "50.000.000",
   "maxKi": "37.4 septllion"
  },
+ "tecnicas": [
+  {
+   "id": "tsword",
+   "n": "Espada del Futuro",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "burning",
+   "n": "Burning Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finishbuster",
+   "n": "Finish Buster",
+   "kind": "big",
+   "pose": "up"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "heatdome",
+   "n": "Heat Dome Attack",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

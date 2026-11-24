@@ -17,6 +17,32 @@
   "ki": "969 Googolplex",
   "maxKi": "969 Googolplex"
  },
+ "tecnicas": [
+  {
+   "id": "angelbeam",
+   "n": "Golpe Angelical",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "angelnova",
+   "n": "Aura Divina",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
  "formas": [
   {
    "n": 0,

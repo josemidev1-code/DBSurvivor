@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "breakcannon",
+   "n": "Break Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bomberdx",
+   "n": "Bomber DX",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

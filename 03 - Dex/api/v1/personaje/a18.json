@@ -17,6 +17,32 @@
   "ki": "280,000,000",
   "maxKi": "300,000,000"
  },
+ "tecnicas": [
+  {
+   "id": "a18volley",
+   "n": "Ráfaga de Energía",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "powerblitz",
+   "n": "Power Blitz",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

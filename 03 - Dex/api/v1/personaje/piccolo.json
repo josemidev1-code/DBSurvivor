@@ -17,6 +17,38 @@
   "ki": "2.000.000",
   "maxKi": "500.000.000"
  },
+ "tecnicas": [
+  {
+   "id": "eyebeam",
+   "n": "Rayo de los Ojos",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "hellzone",
+   "n": "Hellzone Grenade",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "lightgren",
+   "n": "Light Grenade",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

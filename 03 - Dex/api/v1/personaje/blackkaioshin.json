@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "holywrath",
+   "n": "Ira Divina",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

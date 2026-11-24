@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "metalbeam",
+   "n": "Rayo de Metal Cooler",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "metalregen",
+   "n": "Regeneración",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "supernova",
+   "n": "Supernova",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,38 @@
   "ki": "1.500 ",
   "maxKi": "1.500 "
  },
+ "tecnicas": [
+  {
+   "id": "saturday",
+   "n": "Saturday Crush",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "doublesunday",
+   "n": "Double Sunday",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

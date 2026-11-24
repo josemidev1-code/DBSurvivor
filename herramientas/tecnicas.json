@@ -1,0 +1,5470 @@
+{
+ "goku": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegeta": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "piccolo": [
+  {
+   "id": "eyebeam",
+   "n": "Rayo de los Ojos",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "hellzone",
+   "n": "Hellzone Grenade",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "lightgren",
+   "n": "Light Grenade",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "krilin": [
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "scatter",
+   "n": "Ráfaga de Krilin",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "taiyoken",
+   "n": "Taiyoken",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "yamcha": [
+  {
+   "id": "rogafu",
+   "n": "Rōgafūfūken",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "sokidan",
+   "n": "Sōkidan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "goten": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "gohan": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "gekiretsu",
+   "n": "Gekiretsu Madan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "fskame",
+   "n": "Kamehameha Padre e Hijo",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "trunks": [
+  {
+   "id": "tsword",
+   "n": "Espada del Futuro",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "burning",
+   "n": "Burning Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finishbuster",
+   "n": "Finish Buster",
+   "kind": "big",
+   "pose": "up"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "heatdome",
+   "n": "Heat Dome Attack",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "a18": [
+  {
+   "id": "a18volley",
+   "n": "Ráfaga de Energía",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "powerblitz",
+   "n": "Power Blitz",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "bardock": [
+  {
+   "id": "riot",
+   "n": "Riot Javelin",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "rebellion",
+   "n": "Rebellion Trigger",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalspirit",
+   "n": "Final Spirit Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "broly": [
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "eraser",
+   "n": "Eraser Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "omega",
+   "n": "Omega Blaster",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "vegetto": [
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "spiritsword",
+   "n": "Espada Espiritual",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "gogeta": [
+  {
+   "id": "bbkame",
+   "n": "Big Bang Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "stardust",
+   "n": "Stardust Breaker",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "black": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "gohanb": [
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "gokuui": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetaue": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "hakai",
+   "n": "Hakai",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "a17npc": [
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "orbs",
+   "n": "Esferas del Dragón",
+   "kind": "orbit",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "a18npc": [
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "orbs",
+   "n": "Esferas del Dragón",
+   "kind": "orbit",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "gotenks": [
+  {
+   "id": "ghost",
+   "n": "Ataque Kamikaze Fantasma",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "donut",
+   "n": "Donut Galáctico",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "victory",
+   "n": "Victory Cannon",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "kefla": [
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "giganticray",
+   "n": "Gigantic Ray",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "caulifla": [
+  {
+   "id": "crush",
+   "n": "Crush Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "kale": [
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "eraser",
+   "n": "Eraser Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "kyabe": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kyabecannon",
+   "n": "Cañón de Kyabe",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "gohanadult": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "fskame",
+   "n": "Kamehameha Padre e Hijo",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokugt": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame10x",
+   "n": "Kamehameha x10",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "vegetagt": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalshine",
+   "n": "Final Shine Attack",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokusuper": [
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetasuper": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gamma",
+   "n": "Gamma Burst Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "trunkscell": [
+  {
+   "id": "tsword",
+   "n": "Espada del Futuro",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "burning",
+   "n": "Burning Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finishbuster",
+   "n": "Finish Buster",
+   "kind": "big",
+   "pose": "up"
+  },
+  {
+   "id": "heatdome",
+   "n": "Heat Dome Attack",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "roshi": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "mafuba",
+   "n": "Mafuba",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "raditz": [
+  {
+   "id": "saturday",
+   "n": "Saturday Crush",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "doublesunday",
+   "n": "Double Sunday",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "saibaman": [
+  {
+   "id": "acidspit",
+   "n": "Ácido Saibaman",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "jibaku",
+   "n": "Autodestrucción",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "a16": [
+  {
+   "id": "rocketpunch",
+   "n": "Puño Cohete",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "hellflash",
+   "n": "Hell Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "a17": [
+  {
+   "id": "a18volley",
+   "n": "Ráfaga de Energía",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "barrier",
+   "n": "Barrera",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "powerblitz",
+   "n": "Power Blitz",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "freezer": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "deathball",
+   "n": "Death Ball",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "cooler": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "supernova",
+   "n": "Supernova",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "janemba": [
+  {
+   "id": "dimsword",
+   "n": "Espada Dimensional",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "rakshasa",
+   "n": "Garra Rakshasa",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "cell": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "solarkame",
+   "n": "Kamehameha Solar",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "buu": [
+  {
+   "id": "choco",
+   "n": "Rayo Chocolate",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "vanish",
+   "n": "Bola Desvanecedora",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "turles": [
+  {
+   "id": "killdriver",
+   "n": "Kill Driver",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "calamity",
+   "n": "Calamity Blaster",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "bills": [
+  {
+   "id": "sphere",
+   "n": "Esfera de Destrucción",
+   "kind": "bomb",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "hakai",
+   "n": "Hakai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "frost": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  }
+ ],
+ "hit": [
+  {
+   "id": "invisible",
+   "n": "Puño Invisible",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "timeskip",
+   "n": "Salto Temporal",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "zamasu": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "holywrath",
+   "n": "Ira Divina",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "jiren": [
+  {
+   "id": "jirenrush",
+   "n": "Golpe del Orgullo",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "powerimpact",
+   "n": "Power Impact",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "toppo": [
+  {
+   "id": "justiceflash",
+   "n": "Justice Flash",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "hakai",
+   "n": "Hakai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "moro": [
+  {
+   "id": "absorb",
+   "n": "Absorción de Energía",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "babyvegeta": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalshine",
+   "n": "Final Shine Attack",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "revdeathball",
+   "n": "Revenge Death Ball",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "bra": [
+  {
+   "id": "brablast",
+   "n": "Ráfaga de Bra",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "gohandbs": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "gekiretsu",
+   "n": "Gekiretsu Madan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "fskame",
+   "n": "Kamehameha Padre e Hijo",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gohanposeido": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "evilkame",
+   "n": "Kamehameha Maligno",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gohanmanga": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "beastcannon",
+   "n": "Cañón Especial Bestia",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "bardockalt": [
+  {
+   "id": "riot",
+   "n": "Riot Javelin",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalspirit",
+   "n": "Final Spirit Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "cumber": [
+  {
+   "id": "evilkame",
+   "n": "Kamehameha Maligno",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "dlrx": [
+  {
+   "id": "finishbuster",
+   "n": "Finish Buster",
+   "kind": "big",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "zombies": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "brolyfan": [
+  {
+   "id": "eraser",
+   "n": "Eraser Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "omega",
+   "n": "Omega Blaster",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "gogetafan": [
+  {
+   "id": "bbkame",
+   "n": "Big Bang Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "stardust",
+   "n": "Stardust Breaker",
+   "kind": "bomb",
+   "pose": "up"
+  },
+  {
+   "id": "soulpunisher",
+   "n": "Soul Punisher",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegettofan": [
+  {
+   "id": "spiritsword",
+   "n": "Espada Espiritual",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "gokuxeno": [
+  {
+   "id": "kame10x",
+   "n": "Kamehameha x10",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "gokumoro": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokubroly": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetamanga": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gamma",
+   "n": "Gamma Burst Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetabroly": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gamma",
+   "n": "Gamma Burst Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "blacktime": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "timebreak",
+   "n": "Ruptura del Tiempo",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "blackfan": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "timebreak",
+   "n": "Ruptura del Tiempo",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "gokualt": [
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "ikarikame",
+   "n": "Kamehameha Ikari",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "nappa": [
+  {
+   "id": "breakcannon",
+   "n": "Break Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bomberdx",
+   "n": "Bomber DX",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "ginyu": [
+  {
+   "id": "milky",
+   "n": "Milky Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bodychange",
+   "n": "Cambio de Cuerpo",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "jeice": [
+  {
+   "id": "crusherball",
+   "n": "Crusher Ball",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "guldo": [
+  {
+   "id": "psychorock",
+   "n": "Rocas Psíquicas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "timefreeze",
+   "n": "Parada del Tiempo",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "uub": [
+  {
+   "id": "kiai",
+   "n": "Kiai",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "mrsatan": [
+  {
+   "id": "megaton",
+   "n": "Megaton Punch",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "dynamite",
+   "n": "Dynamite Kick",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "presentbomb",
+   "n": "Regalo Explosivo",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "a21": [
+  {
+   "id": "choco",
+   "n": "Rayo Chocolate",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "photonwave",
+   "n": "Photon Wave",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "fullcourse",
+   "n": "Menú Completo",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "dyspo": [
+  {
+   "id": "dysposlash",
+   "n": "Golpe Relámpago",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "dyspoball",
+   "n": "Bola de Justicia",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dysposhoot",
+   "n": "Super Maximum Light Speed",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "kibito": [
+  {
+   "id": "kibitoslash",
+   "n": "Corte de Kibito",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kibitowave",
+   "n": "Onda Paralizante",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kibitoheal",
+   "n": "Curación Divina",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "gohanfut": [
+  {
+   "id": "gohanfutrush",
+   "n": "Furia del Último Guerrero",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gohanfutkame",
+   "n": "Kamehameha del Futuro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  }
+ ],
+ "glorio": [
+  {
+   "id": "gloriogun",
+   "n": "Pistola de Glorio",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "gloriowave",
+   "n": "Onda Mágica",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "glorioshield",
+   "n": "Barrera Mágica",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "hatchiyack": [
+  {
+   "id": "revenger",
+   "n": "Revenger Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "tsufurwave",
+   "n": "Onda Tsufur",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "hatchiwave",
+   "n": "Aura de Venganza",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "trunksgt": [
+  {
+   "id": "trunksbuster",
+   "n": "Buster Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "trunksflash",
+   "n": "Ráfaga de Trunks",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "nuova": [
+  {
+   "id": "nuovafire",
+   "n": "Disparo Ígneo",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "novastrike",
+   "n": "Nova Strike",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "nuovasun",
+   "n": "Gran Bola de Fuego",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "gomah": [
+  {
+   "id": "gomahstaff",
+   "n": "Bastón de Gomah",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gomahwave",
+   "n": "Onda Demoníaca",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "gomahball",
+   "n": "Esfera del Rey Demonio",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "merus": [
+  {
+   "id": "merusgun",
+   "n": "Disparo de la Patrulla",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "merusstaff",
+   "n": "Bastón de Merus",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "angelbeam",
+   "n": "Golpe Angelical",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "angelnova",
+   "n": "Aura Divina",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "majinkuu": [
+  {
+   "id": "kuublast",
+   "n": "Ráfaga de Kuu",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kuuball",
+   "n": "Bomba Majin Kuu",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "metalcooler": [
+  {
+   "id": "metalbeam",
+   "n": "Rayo de Metal Cooler",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "metalregen",
+   "n": "Regeneración",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "supernova",
+   "n": "Supernova",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "a14": [
+  {
+   "id": "a14wave",
+   "n": "Onda del 14",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "a14rush",
+   "n": "Embestida del 14",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "a13": [
+  {
+   "id": "deadlybomber",
+   "n": "SS Deadly Bomber",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "bulma": [
+  {
+   "id": "bulmagun",
+   "n": "Pistola de Bulma",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bulmacapsule",
+   "n": "Cápsula Explosiva",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "presentbomb",
+   "n": "Regalo Explosivo",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "magetta": [
+  {
+   "id": "magma",
+   "n": "Escupitajo de Magma",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "magettapunch",
+   "n": "Puño de Hierro",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "majinduu": [
+  {
+   "id": "duuball",
+   "n": "Bola Majin",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "duuroll",
+   "n": "Rodillo Majin",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "daishinkan": [
+  {
+   "id": "angelbeam",
+   "n": "Golpe Angelical",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "angelnova",
+   "n": "Aura Divina",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "paragus": [
+  {
+   "id": "paragusball",
+   "n": "Esfera de Paragus",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "granola": [
+  {
+   "id": "granolasnipe",
+   "n": "Disparo Certero",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "granolarain",
+   "n": "Lluvia de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "gas": [
+  {
+   "id": "gasring",
+   "n": "Anillo Paralizador",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gasbeam",
+   "n": "Rayo de Gas",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiai",
+   "n": "Kiai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "omega": [
+  {
+   "id": "negaball",
+   "n": "Bola de Energía Negativa",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "minusball",
+   "n": "Minus Energy Power Ball",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "super17": [
+  {
+   "id": "a18volley",
+   "n": "Ráfaga de Energía",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "hellstorm",
+   "n": "Tormenta Infernal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "s17barrier",
+   "n": "Barrera Absorbente",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "powerblitz",
+   "n": "Power Blitz",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "pangt": [
+  {
+   "id": "giru",
+   "n": "Giru Bomba",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "slug": [
+  {
+   "id": "slugball",
+   "n": "Bola Explosiva",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "slugarm",
+   "n": "Brazo Estirado",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "eyebeam",
+   "n": "Rayo de los Ojos",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "tarble": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "reycold": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "coldcannon",
+   "n": "Cañón de Cold",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "supernova",
+   "n": "Supernova",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "cui": [
+  {
+   "id": "cuiblast",
+   "n": "Ráfaga de Cui",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "kibitoshin": [
+  {
+   "id": "kaikai",
+   "n": "Kai Kai",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kaishot",
+   "n": "Esfera Divina",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "shin": [
+  {
+   "id": "kaishot",
+   "n": "Esfera Divina",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kaikai",
+   "n": "Kai Kai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "videl": [
+  {
+   "id": "videlkick",
+   "n": "Patada Justiciera",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "gokunino": [
+  {
+   "id": "jankenpon",
+   "n": "Jan Ken",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "trunksnino": [
+  {
+   "id": "burningatk",
+   "n": "Burning Attack",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "tenshinhan": [
+  {
+   "id": "kikoho",
+   "n": "Kikoho",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "taiyoken",
+   "n": "Taiyoken",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "dodonpa",
+   "n": "Dodonpa",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "taopaipai": [
+  {
+   "id": "taopunch",
+   "n": "Golpe de la Grulla",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dodonpa",
+   "n": "Dodonpa",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "gokureymono": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetamui": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegitoblue254": [
+  {
+   "id": "spiritsword",
+   "n": "Espada Espiritual",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "bramajin": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "brablast",
+   "n": "Ráfaga de Bra",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "zamasufusion": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "holywrath",
+   "n": "Ira Divina",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "gokussj4daima": [
+  {
+   "id": "kame10x",
+   "n": "Kamehameha x10",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "blackrose290": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "gokussjfp": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussj053": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "goku045": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "goku044": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussjkaioken2": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussjlegend": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokudiosberserk": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussj4dios": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussjsupremo": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuultradios": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokumuidios": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokumuiblue": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokumuiblueevo": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuevilssj2": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussjkaioken": [
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame10x",
+   "n": "Kamehameha x10",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "dragonfist",
+   "n": "Puño del Dragón",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "gokussj2buu": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuuimanga": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokumuimanga": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokubluedbfz": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokubluemoro": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuuiverdadero": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
+ "gokumuigranola": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussjchaqueta": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokupatrulla": [
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokumuifp": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuuisign": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokubluewhis": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussj3swl": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokussj3mais": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetabluemal": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "gamma",
+   "n": "Gamma Burst Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetauihd": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetassjhd": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetaxeno": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalshine",
+   "n": "Final Shine Attack",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "vegetaego": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetabaseulsw": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetablueevo": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetabluefp": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetablueulsw": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetablue092": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetabluewhis": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetassjwhis": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "vegetassj4gt": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "gokussj4gt": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "vegetayardrat": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "gokuyardratswl": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuyardratssj": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokuyardrat": [
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kaioken",
+   "n": "Kaioken",
+   "kind": "melee",
+   "pose": "kick"
+  }
+ ],
+ "blackmajin": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "blackrosen": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "blackfalso": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "blackkaioshin": [
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "holywrath",
+   "n": "Ira Divina",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "jirengray": [
+  {
+   "id": "jirenrush",
+   "n": "Golpe del Orgullo",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "powerimpact",
+   "n": "Power Impact",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "omega",
+   "n": "Omega Blaster",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "vegettofalso": [
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "trunksarmor": [
+  {
+   "id": "burning",
+   "n": "Burning Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finishbuster",
+   "n": "Finish Buster",
+   "kind": "big",
+   "pose": "up"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "tora": [
+  {
+   "id": "riot",
+   "n": "Riot Javelin",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "finalspirit",
+   "n": "Final Spirit Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "vegetaexploradorhd": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "vegetassj2hd": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "kyabeclasico": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kyabecannon",
+   "n": "Cañón de Kyabe",
+   "kind": "big",
+   "pose": "cast"
+  }
+ ],
+ "blacklsw": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
+ "ginyucuerpogoku": [
+  {
+   "id": "milky",
+   "n": "Milky Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "bodychange",
+   "n": "Cambio de Cuerpo",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
+ "vegetasinarmadura": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "vegetaxenossj4": [
+  {
+   "id": "finalshine",
+   "n": "Final Shine Attack",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
+ "vegetassj3daima": [
+  {
+   "id": "galick",
+   "n": "Galick Gun",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "finalflash",
+   "n": "Final Flash",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
+ "gokumuigranolav2": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
+ "gokumuitorneoanime": [
+  {
+   "id": "silver",
+   "n": "Golpe del Instinto",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ]
+}

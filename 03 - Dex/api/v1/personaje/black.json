@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "blackkame",
+   "n": "Kamehameha Negro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

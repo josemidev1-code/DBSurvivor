@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "magma",
+   "n": "Escupitajo de Magma",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "magettapunch",
+   "n": "Puño de Hierro",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

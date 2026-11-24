@@ -17,6 +17,38 @@
   "ki": "60.000.000",
   "maxKi": "90 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "instant",
+   "n": "Teletransporte",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "godkame",
+   "n": "Kamehameha Divino",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "genki",
+   "n": "Genkidama",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

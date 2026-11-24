@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "nuovafire",
+   "n": "Disparo Ígneo",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "novastrike",
+   "n": "Nova Strike",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "nuovasun",
+   "n": "Gran Bola de Fuego",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

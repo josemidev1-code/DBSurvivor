@@ -17,6 +17,38 @@
   "ki": "250.000.000",
   "maxKi": "5 Billion"
  },
+ "tecnicas": [
+  {
+   "id": "kame",
+   "n": "Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kienzan",
+   "n": "Kienzan",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "solarkame",
+   "n": "Kamehameha Solar",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "finalexp",
+   "n": "Final Explosion",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

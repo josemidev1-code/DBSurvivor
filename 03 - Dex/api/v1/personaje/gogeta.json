@@ -17,6 +17,32 @@
   "ki": "250 Billion",
   "maxKi": "15 septillion"
  },
+ "tecnicas": [
+  {
+   "id": "bbkame",
+   "n": "Big Bang Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "stardust",
+   "n": "Stardust Breaker",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

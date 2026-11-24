@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "merusgun",
+   "n": "Disparo de la Patrulla",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "merusstaff",
+   "n": "Bastón de Merus",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "angelbeam",
+   "n": "Golpe Angelical",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "angelnova",
+   "n": "Aura Divina",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

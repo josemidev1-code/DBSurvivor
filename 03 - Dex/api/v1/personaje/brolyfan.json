@@ -17,6 +17,38 @@
   "ki": "7 quadrillion",
   "maxKi": "11.2 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "eraser",
+   "n": "Eraser Cannon",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "lariat",
+   "n": "Lariat",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "blaster",
+   "n": "Blaster Meteor",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "omega",
+   "n": "Omega Blaster",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "roar",
+   "n": "Gigantic Roar",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

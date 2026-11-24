@@ -17,6 +17,32 @@
   "ki": "530.000",
   "maxKi": "52.71 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "deathbeam",
+   "n": "Rayo Mortal",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "discomortal",
+   "n": "Disco Mortal",
+   "kind": "disc",
+   "pose": "up"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "deathball",
+   "n": "Death Ball",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

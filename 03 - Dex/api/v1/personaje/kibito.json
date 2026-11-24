@@ -17,6 +17,32 @@
   "ki": "unknown",
   "maxKi": "unknown"
  },
+ "tecnicas": [
+  {
+   "id": "kibitoslash",
+   "n": "Corte de Kibito",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kibitowave",
+   "n": "Onda Paralizante",
+   "kind": "nova",
+   "pose": "pow"
+  },
+  {
+   "id": "kibitoheal",
+   "n": "Curación Divina",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

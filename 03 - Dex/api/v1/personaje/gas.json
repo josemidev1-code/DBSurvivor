@@ -11,6 +11,32 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "gasring",
+   "n": "Anillo Paralizador",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gasbeam",
+   "n": "Rayo de Gas",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiai",
+   "n": "Kiai",
+   "kind": "nova",
+   "pose": "pow"
+  }
+ ],
  "formas": [
   {
    "n": 0,

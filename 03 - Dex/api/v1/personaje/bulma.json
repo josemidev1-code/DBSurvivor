@@ -17,6 +17,26 @@
   "ki": "0",
   "maxKi": "0"
  },
+ "tecnicas": [
+  {
+   "id": "bulmagun",
+   "n": "Pistola de Bulma",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "bulmacapsule",
+   "n": "Cápsula Explosiva",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "presentbomb",
+   "n": "Regalo Explosivo",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

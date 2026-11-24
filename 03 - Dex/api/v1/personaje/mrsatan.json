@@ -17,6 +17,32 @@
   "ki": "450",
   "maxKi": "5.000"
  },
+ "tecnicas": [
+  {
+   "id": "megaton",
+   "n": "Megaton Punch",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "dynamite",
+   "n": "Dynamite Kick",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "presentbomb",
+   "n": "Regalo Explosivo",
+   "kind": "bomb",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,

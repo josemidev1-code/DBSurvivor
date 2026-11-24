@@ -17,6 +17,32 @@
   "ki": "50.000.000",
   "maxKi": "37.4 septllion"
  },
+ "tecnicas": [
+  {
+   "id": "trunksbuster",
+   "n": "Buster Cannon",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "trunksflash",
+   "n": "Ráfaga de Trunks",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

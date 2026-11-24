@@ -11,6 +11,38 @@
  "planeta": null,
  "descripcion": null,
  "api": null,
+ "tecnicas": [
+  {
+   "id": "lances",
+   "n": "Lanzas Divinas",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "holywrath",
+   "n": "Ira Divina",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "scythe",
+   "n": "Guadaña Rosé",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,32 @@
   "ki": "180 Billion",
   "maxKi": "10.8 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "spiritsword",
+   "n": "Espada Espiritual",
+   "kind": "sword",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "kiblade",
+   "n": "Espada de Ki",
+   "kind": "sword",
+   "pose": "atk"
+  }
+ ],
  "formas": [
   {
    "n": 0,

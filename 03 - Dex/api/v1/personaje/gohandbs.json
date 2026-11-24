@@ -17,6 +17,44 @@
   "ki": "45.000.000",
   "maxKi": "40 septillion"
  },
+ "tecnicas": [
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "kick",
+   "n": "Patada voladora",
+   "kind": "melee",
+   "pose": "kick"
+  },
+  {
+   "id": "gekiretsu",
+   "n": "Gekiretsu Madan",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "makanko",
+   "n": "Makankosappo",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "fskame",
+   "n": "Kamehameha Padre e Hijo",
+   "kind": "beam",
+   "pose": "beam"
+  }
+ ],
  "formas": [
   {
    "n": 0,

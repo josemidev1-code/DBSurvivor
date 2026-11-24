@@ -17,6 +17,38 @@
   "ki": "180 Billion",
   "maxKi": "10.8 Septillion"
  },
+ "tecnicas": [
+  {
+   "id": "bigbang",
+   "n": "Big Bang Attack",
+   "kind": "big",
+   "pose": "cast"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "punch",
+   "n": "Combo de golpes",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "finalkame",
+   "n": "Final Kamehameha",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "renzoku",
+   "n": "Renzoku Energy Dan",
+   "kind": "shot",
+   "pose": "cast"
+  }
+ ],
  "formas": [
   {
    "n": 0,

@@ -17,6 +17,32 @@
   "ki": "45.000.000",
   "maxKi": "40 septillion"
  },
+ "tecnicas": [
+  {
+   "id": "gohanfutrush",
+   "n": "Furia del Último Guerrero",
+   "kind": "melee",
+   "pose": "atk"
+  },
+  {
+   "id": "kiblast",
+   "n": "Ráfaga de Ki",
+   "kind": "shot",
+   "pose": "cast"
+  },
+  {
+   "id": "gohanfutkame",
+   "n": "Kamehameha del Futuro",
+   "kind": "beam",
+   "pose": "beam"
+  },
+  {
+   "id": "masenko",
+   "n": "Masenko",
+   "kind": "beam",
+   "pose": "up"
+  }
+ ],
  "formas": [
   {
    "n": 0,
