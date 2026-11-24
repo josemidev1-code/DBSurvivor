@@ -4834,3 +4834,22 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Que Josemi juegue el piloto de Namek y diga qué ajustar.
+
+## 2026-11-24 — Claude (sesión 25)
+
+### Lo que pidió el usuario
+- «Enemigos por mapas»: que cada mapa tenga los enemigos que le tocan según el lore (no Majin Buu en Kame House). Investigar el lore y repartirlos por zonas.
+- Poner bastantes enemigos distintos por mapa, para que no sea repetitivo; si faltan sprites, pedírselos.
+- Apuntar que hay que corregir los mapas: los obstáculos siguen sin gustarle, los quiere más naturales y fieles a la serie.
+
+### Lo que hice
+- Reparto de enemigos por zonas según el lore: nuevo `const ZONAS=` en `script.js`, que sustituye a los parches que metían lo mismo en todos los mapas. Ya no salen zombis en Namek (solo en el Infierno y el Planeta de Kaio), ni Buu ni Cooler en Kame House, etc. Tabla completa en `REPARTO_ENEMIGOS.md`.
+- 15 enemigos nuevos con sprites que ya teníamos (variantes de soldados de Freezer, Red Ribbon, Cell Jr., Buu, zombis, clones de Zamasu, Tropas del Orgullo; élites Tao Pai Pai, Jackie Chun, Tenshinhan y Paragus) y el jefe Cell Superperfecto.
+- Quedan sin mapa a propósito Goku SSJ, Vegeta SSJ y Trunks SSJ (son héroes) y Broly SSJ4 (de fans); los demás enemigos ya salen en algún mapa.
+- Servidor local nuevo `herramientas/servidor.cjs` (python no podía abrir la carpeta Documentos) y `.claude/launch.json` apuntando a él.
+- Probado: `comprobar_enemigos.cjs` pasa (148 tipos, 24 mapas) y en el navegador, silenciado, salen los nuevos con su sprite y sin errores.
+- Apuntado en `LISTA_PENDIENTES.md`: corregir los obstáculos de los mapas (más naturales y fieles a la serie) y pedir los sprites que faltan.
+
+### Siguiente paso recomendado
+- Que Josemi mire el reparto de `REPARTO_ENEMIGOS.md` y mande los sprites que pueda de la lista.
+- Rehacer los obstáculos de los mapas para que sean naturales y fieles a cada escenario.

@@ -8151,6 +8151,29 @@ for(const k in MAPS){const M=MAPS[k],saga=WSAGA[k]||'tierra';M.pool.push([90,'zo
 
   if(saga==='buu'&&!M.pool.some(p=>p[1]==='majin'))M.pool.push([30,'majin',5])}
 
+// 24 nov. (sesión 25, pedido por Josemi): más enemigos comunes por zona. Mismo sprite que su grupo de la serie,
+// pero cada uno con otro papel (pegador, embestidor, tirador o suicida) y otro color, para que las hordas no sean iguales.
+Object.assign(ET,{
+  frzApp:{n:'Soldado de la raza de Appule',hp:20,spd:46,dmg:8,xp:2,r:7},
+  frostS:{n:'Soldado de Frost',hp:24,spd:30,dmg:9,xp:2,r:7,shoot:3},
+  rrsoldierK:{n:'Asaltante Red Ribbon',hp:22,spd:46,dmg:9,xp:2,r:7},
+  rrsoldierP:{n:'Artillero Red Ribbon',hp:34,spd:22,dmg:13,xp:3,r:7,shoot:2.6},
+  murasakiH:{n:'Hermano de Murasaki',hp:40,spd:50,dmg:10,xp:4,r:7},
+  celljrR:{n:'Cell Jr. veloz',hp:24,spd:66,dmg:9,xp:3,r:6},
+  celljrK:{n:'Cell Jr. de ki',hp:30,spd:38,dmg:10,xp:3,r:6,shoot:3},
+  majinG:{n:'Trozo de Majin Buu',hp:46,spd:26,dmg:12,xp:4,r:8},
+  zombiV:{n:'Saiyan zombi de ki',hp:30,spd:30,dmg:10,xp:3,r:7,shoot:3.2},
+  zamasuCM:{n:'Clon de Zamasu (espada)',hp:36,spd:48,dmg:11,xp:3,r:7},
+  tropaO:{n:'Tropa del Orgullo',hp:34,spd:44,dmg:11,xp:3,r:7,shoot:3.4},
+  taoE:{n:'TAO PAI PAI',hp:460,spd:58,dmg:15,xp:40,r:8,elite:1,shoot:2,col:'#ffd23f'},
+  jackieE:{n:'JACKIE CHUN',hp:420,spd:56,dmg:14,xp:40,r:8,elite:1,shoot:2.2,col:'#7ad8ff'},
+  tenshinE:{n:'TENSHINHAN',hp:480,spd:52,dmg:15,xp:40,r:8,elite:1,shoot:2,col:'#ffd23f'},
+  paragusE:{n:'PARAGUS',hp:440,spd:46,dmg:14,xp:40,r:8,elite:1,shoot:2,col:'#7af04a'},
+  cellspB:{n:'CELL SUPERPERFECTO',boss:1,col:'#ffd23f'}}); /* en la serie es igual que el Perfecto, con chispas en el aura */
+Object.assign(ENEMIGO_HEROE,{frzApp:['e_appule',0],frostS:['e_soldado',0],rrsoldierK:['e_rrsoldier',0],rrsoldierP:['e_rrsoldier',0],murasakiH:['e_murasaki',0],
+  celljrR:['cell',2],celljrK:['cell',2],majinG:['buu',0],zombiV:['zombies',2],zamasuCM:['zamasu',0],tropaO:['dyspo',0],cellspB:['cell',2],
+  taoE:['taopaipai',0],jackieE:['roshi',0],tenshinE:['tenshinhan',0],paragusE:['paragus',0]});
+for(const id of ['celljrR','celljrK'])ET[id].z=0.45;
 for(const id in ENEMIGO_HEROE){const [h,f]=ENEMIGO_HEROE[id];if(ET[id]&&SCPACK.h[h]&&SCPACK.h[h][f]){ET[id].hero=[h,f];delete SCPACK.e[id]}}
 
 // También los jefes que ya declaraban hero deben saltarse la tira antigua.
@@ -8198,8 +8221,101 @@ const FUERA_ENEMIGOS={};
   for(const saga in WAVES){WAVES[saga]=WAVES[saga].filter(w=>ET[w[0]]);if(!WAVES[saga].length)WAVES[saga]=[['saiba',14]]}
 
 })();
+/* 24 nov. (sesión 25, pedido por Josemi): REPARTO POR ZONAS SEGÚN EL LORE. Sustituye a los parches anteriores.
+   Cada mapa: comunes (c: [segundo, id, peso]), élites que entran de uno en uno (e), jefes en orden (b), anillo, escuadrón y oleadas.
+   Nada de enemigos de otra época: ni zombis en Namek ni Majin Buu en Kame House. Ver «REPARTO_ENEMIGOS.md». */
+const ZONAS={
+  namek:{c:[[0,'frzS2',8],[0,'frzS4',4],[45,'frzApp',5],[120,'soldier',4],[240,'soldierE',4]],e:['appuleE','cuiE','guldo','jeice','burter','recoomeE','vegsaiE','freeza2E'],
+    b:['dodoria','zarbon','ginyu','freeza1B','freeza2B','freeza3B','frieza100'],ring:['frzS2','frzApp'],squad:[600,['ginyu','jeice','burter','recoomeE','guldo'],'¡FUERZAS ESPECIALES!'],
+    w:[['frzS2',14],['frzApp',10],['appuleE',1],['frzS4',10],['cuiE',1],['soldierE',8],['recoomeE',1]]},
+  volcan:{sub:'Namek se desmorona',c:[[0,'frzS2',6],[0,'frzApp',6],[60,'frzS4',4],[180,'soldierE',4],[300,'soldier',3]],e:['cuiE','vegsaiE','freeza2E','coolerE'],
+    b:['freeza1B','freeza2B','freeza3B','frieza','frieza100','coolerB'],ring:['frzApp','soldierE'],squad:[600,['freeza2E','cuiE'],'¡LOS ÚLTIMOS DE FREEZER!'],
+    w:[['frzApp',14],['frzS4',10],['cuiE',1],['soldierE',8],['freeza2E',1]]},
+  yardrat:{sub:'Cooler viene a por Goku',c:[[0,'frzS2',7],[0,'frzApp',5],[60,'frzS4',4],[180,'soldierE',4],[300,'soldier',3]],e:['appuleE','cuiE','coolerE','freeza2E'],
+    b:['cuiE','reycoldB','mecha','coolerB','metalcoolerB'],ring:['frzS2','frzS4'],squad:[630,['coolerE','freeza2E'],'¡LA FAMILIA DE FREEZER!'],
+    w:[['frzS2',14],['frzApp',10],['coolerE',1],['soldierE',8],['cuiE',1]]},
+  vegetasei:{c:[[0,'frzS2',7],[0,'frzS4',4],[45,'frzApp',5],[150,'renegB',3],[240,'soldierE',4]],e:['vegsaiE','raditzE','nappaE','kingvegE'],
+    b:['dodoria','zarbon','kingvegE','ozaruB','freeza1B'],ring:['frzS2','frzApp'],squad:[630,['raditzE','vegsaiE','nappaE'],'¡SAIYANS DE ÉLITE!'],
+    w:[['frzS2',14],['frzApp',10],['raditzE',1],['frzS4',10],['nappaE',1],['soldierE',8],['kingvegE',1]]},
+  gizard:{c:[[0,'saiba',9],[45,'saibaB',5],[120,'saibaX',3],[200,'saibaR',5]],e:['raditzE','nappaE','vegsaiE','turlesE'],
+    b:['raditz','nappa','turles','vegetaSB','ozaruB'],ring:['saiba','saibaR'],squad:[630,['nappaE','vegsaiE'],'¡LOS SAIYANS!'],
+    w:[['saiba',16],['saibaB',10],['nappaE',1],['saibaX',8],['saibaR',12],['vegsaiE',1]]},
+  pradera:{sub:'Raditz y los villanos de las películas',c:[[0,'saiba',8],[45,'saibaB',5],[150,'saibaX',3],[220,'saibaR',5]],e:['raditzE','garlicE','turlesE','zangyaE','paragusE'],
+    b:['raditz','garlicB','turles','slugB','broly2B','broly3B','brolyB'],ring:['saiba','saibaB'],squad:[630,['paragusE','turlesE'],'¡VIENEN DEL ESPACIO!'],
+    w:[['saiba',16],['saibaB',10],['garlicE',1],['saibaR',12],['zangyaE',1],['saibaX',8],['paragusE',1]]},
+  kame:{sub:'Red Ribbon y Raditz en la isla',c:[[0,'rrsoldier',8],[45,'rrsoldierK',5],[180,'rrsoldierP',3]],e:['blueE','raditzE','a17e','a18e'],
+    b:['blueE','raditz','a17B','cellimpE','cellsemiE'],ring:['rrsoldier','rrsoldierK'],squad:[630,['a17e','a18e'],'¡LOS ANDROIDES BUSCAN A GOKU!'],
+    w:[['rrsoldier',14],['rrsoldierK',10],['blueE',1],['rrsoldierP',8],['raditzE',1]]},
+  paoz:{sub:'Garlic Jr. y los androides en casa de Goku',c:[[0,'saiba',8],[45,'saibaB',5],[150,'saibaX',3],[220,'saibaR',4]],e:['garlicE','raditzE','a17e','a18e','a16E'],
+    b:['raditz','garlicB','a18e','a17B','a16B'],ring:['saiba','saibaR'],squad:[630,['a17e','a18e','a16E'],'¡LOS ANDROIDES!'],
+    w:[['saiba',16],['saibaB',10],['garlicE',1],['saibaR',12],['a16E',1]]},
+  bosque:{sub:'El bosque de Karin',c:[[0,'rrsoldier',8],[45,'rrsoldierK',5],[180,'rrsoldierP',3]],e:['silverE','taoE','blueE','garlicE'],
+    b:['silverE','blueE','taoE','garlicB','piccoloB'],ring:['rrsoldier','rrsoldierK'],squad:[630,['silverE','blueE'],'¡OFICIALES DE LA RED RIBBON!'],
+    w:[['rrsoldier',14],['rrsoldierK',10],['silverE',1],['rrsoldierP',8],['taoE',1]]},
+  musculo:{c:[[0,'rrsoldier',8],[45,'rrsoldierK',5],[120,'murasakiH',3],[200,'rrsoldierP',3]],e:['murasakiE','silverE','taoE','blueE'],
+    b:['silverE','murasakiE','blueE','taoE','geroE'],ring:['rrsoldier','murasakiH'],squad:[630,['murasakiH','murasakiH','murasakiH','murasakiH','murasakiE'],'¡LOS HERMANOS MURASAKI!'],
+    w:[['rrsoldier',14],['murasakiH',6],['murasakiE',1],['rrsoldierK',10],['silverE',1]]},
+  redribbon:{c:[[0,'rrsoldier',8],[45,'rrsoldierK',5],[180,'rrsoldierP',4]],e:['silverE','murasakiE','blueE','taoE','a13E','a14E'],
+    b:['blueE','taoE','geroE','a19','a16B','a13E','a21B'],ring:['rrsoldier','rrsoldierP'],squad:[630,['a13E','a14E'],'¡LOS ANDROIDES DE GERO!'],
+    w:[['rrsoldier',14],['rrsoldierK',10],['blueE',1],['rrsoldierP',8],['a14E',1],['rrsoldier',14],['a13E',1]]},
+  desierto:{sub:'Los androides del Dr. Gero',c:[[0,'rrsoldier',8],[45,'rrsoldierK',5],[180,'rrsoldierP',3]],e:['geroE','a13E','a14E','a17e','a18e','a21E'],
+    b:['geroE','a19','a13E','a16B','a21B','a21mB'],ring:['rrsoldier','rrsoldierK'],squad:[630,['a17e','a18e'],'¡LOS ANDROIDES!'],
+    w:[['rrsoldier',14],['rrsoldierK',10],['a14E',1],['rrsoldierP',8],['a13E',1]]},
+  tierra:{sub:'Llegan Freezer y los androides',c:[[0,'frzS2',7],[0,'frzS4',4],[60,'frzApp',5],[200,'soldierE',4]],e:['geroE','a17e','a18e','a16E','cellimpE'],
+    b:['mecha','reycoldB','a19','geroE','cellimpE','cellsemiE','cell'],ring:['frzS2','frzS4'],squad:[630,['a17e','a18e'],'¡LOS ANDROIDES!'],
+    w:[['frzS2',14],['frzApp',10],['geroE',1],['frzS4',10],['a16E',1],['soldierE',8],['cellimpE',1]]},
+  arena:{sub:'Saga de Cell',c:[[0,'celljr',7],[45,'celljrR',5],[150,'celljrK',4]],e:['a16E','a18e','a17e','cellperfE','celljrE'],
+    b:['cellimpE','cellsemiE','a16B','cell','cellspB'],ring:['celljr','celljrR'],squad:[600,['celljrE','celljrE','celljrE','celljrE','celljrE','celljrE','celljrE'],'¡LOS CELL JR.!'],
+    w:[['celljr',14],['celljrR',10],['celljrE',2],['celljrK',10],['a16E',1],['celljr',14],['cellperfE',1]]},
+  capsule:{sub:'Freezer resucita y Bills llega a la fiesta',c:[[0,'frzS2',7],[0,'frzS4',4],[60,'frzApp',5],[200,'soldierE',4]],e:['geroE','freeza2E','coolerE'],
+    b:['a19','geroE','freezaF','golden','billsB'],ring:['frzS2','frzApp'],squad:[630,['freeza2E','coolerE'],'¡EL EJÉRCITO DE FREEZER!'],
+    w:[['frzS2',14],['frzApp',10],['freeza2E',1],['frzS4',10],['soldierE',8],['coolerE',1]]},
+  budokai:{c:[[0,'demonS',6],[45,'demonS2',4],[150,'majin',4]],e:['namE','jackieE','tenshinE','taoE','tambourineE','majinvE'],
+    b:['namE','jackieE','taoE','piccoloB','majinv'],ring:['demonS','demonS2'],squad:[600,['tambourineE','drumE'],'¡LOS HIJOS DE PICCOLO DAIMAKU!'],
+    w:[['demonS',14],['demonS2',10],['namE',1],['majin',10],['tenshinE',1],['demonS',14],['majinvE',1]]},
+  lookout:{c:[[0,'majin',7],[60,'majinG',4],[150,'demonS',3]],e:['garlicE','buuthinE','superbuuE','gohanpossE'],
+    b:['piccoloB','garlicB','buuthinB','superbuuB','buugohanB'],ring:['majin','majinG'],squad:[600,['shadow'],'¡TU SOMBRA!'],
+    w:[['majin',14],['majinG',8],['garlicE',1],['majin',14],['superbuuE',1]]},
+  kaioshin:{c:[[0,'majin',7],[0,'demonS',4],[60,'demonS2',4],[150,'majinG',4]],e:['majinvE','fatbuuE','gohanpossE','buuthinE','superbuuE','kidbuuE'],
+    b:['dabura','majinv','fatbuu','buuthinB','superbuuB','buugohanB','buu'],ring:['majin','demonS'],squad:[600,['demonS','demonS2','majinvE'],'¡LOS ESBIRROS DE BABIDI!'],
+    w:[['majin',14],['demonS',10],['majinvE',1],['demonS2',10],['fatbuuE',1],['majinG',8],['kidbuuE',1]]},
+  infierno:{c:[[0,'zombi',8],[45,'zombiV',4],[150,'zombiR',4]],e:['guldo','jeice','burter','recoomeE','coolerE','cellperfE','hatchiyackE'],
+    b:['coolerB','frieza','cell','buu','janemba'],ring:['zombi','zombiR'],squad:[600,['ginyu','jeice','burter','recoomeE','guldo'],'¡LAS FUERZAS ESPECIALES ESCAPAN!'],
+    w:[['zombi',16],['zombiV',10],['recoomeE',1],['zombiR',10],['coolerE',1],['zombi',16],['cellperfE',1]]},
+  kaio:{sub:'El Más Allá',c:[[0,'zombi',8],[45,'zombiV',4],[150,'zombiR',4]],e:['guldo','jeice','burter','recoomeE','cellperfE'],
+    b:['jeice','recoomeE','ginyu','frieza','cell'],ring:['zombi','zombiV'],squad:[600,['ginyu','jeice','burter','recoomeE','guldo'],'¡FUERZAS ESPECIALES!'],
+    w:[['zombi',16],['zombiV',10],['jeice',1],['zombiR',10],['burter',1]]},
+  futuro:{c:[[0,'zamasuC',7],[45,'zamasuCM',5]],e:['a17e','a18e','black2E','zamasuE','zamasuhE'],
+    b:['a17B','a18e','black','blackssjB','zamasuB','rose','zamasufB'],ring:['zamasuC','zamasuCM'],squad:[630,['a17e','a18e'],'¡LOS ANDROIDES DEL FUTURO!'],
+    w:[['zamasuC',14],['zamasuCM',10],['black2E',1],['zamasuC',14],['zamasuE',1],['zamasuCM',10],['zamasuhE',1]]},
+  bills:{sub:'El torneo de Champa',c:[[0,'frostS',7],[45,'frzApp',4],[150,'soldierE',3]],e:['frostE','magettaE','hitE','frost2E','vegetaE'],
+    b:['frost','magettaE','hitB','vegetaSB','whisB','billsB'],ring:['frostS','frzApp'],squad:[600,['frostE','magettaE'],'¡EL UNIVERSO 6!'],
+    w:[['frostS',14],['frzApp',10],['frostE',1],['soldierE',8],['magettaE',1],['frostS',14],['hitE',1]]},
+  poder:{c:[[0,'tropaO',7],[60,'frostS',4]],e:['dyspoE','magettaE','frost2E','hit2E','kalessjE'],
+    b:['dyspoE','frost','kalessjB','hitB','toppoB','jiren'],ring:['tropaO','tropaO'],squad:[600,['dyspoE','tropaO','tropaO','tropaO'],'¡LAS TROPAS DEL ORGULLO!'],
+    w:[['tropaO',14],['frostS',10],['dyspoE',1],['tropaO',14],['kalessjE',1],['frostS',10],['hit2E',1]]}
+  /* Sala del Tiempo: en la serie no hay enemigos dentro, así que hace de sala de entrenamiento contra rivales de todas las épocas
+     (aquí van también los de GT, Daima y la saga de Granola, que aún no tienen mapa propio). */
+  ,time:{sub:'Entrenamiento contra rivales de todas las épocas',c:[[0,'saiba',5],[0,'frzS2',5],[45,'rrsoldierK',4],[90,'celljrR',4],[150,'majin',4],[220,'zamasuC',4],[300,'tropaO',4],[380,'zombiV',3]],
+    e:['raditzssjE','nuovaE','glorioE','hitE','black2E','zamasuhE','kalessjE','vegetaE'],
+    b:['myuuB','babyB','super17B','gomahB','gasB','moroB','omegaB'],ring:['saiba','celljrR'],squad:[600,['shadow'],'¡TU SOMBRA!'],
+    w:[['saiba',14],['celljrR',10],['nuovaE',1],['zamasuC',10],['glorioE',1],['tropaO',10],['raditzssjE',1]]}
+};
+(function repartoPorZonas(){const ok=id=>!!ET[id],faltan=[];
+  for(const k in ZONAS){const M=MAPS[k],Z=ZONAS[k];if(!M)continue;
+    const chk=l=>l.filter(id=>{if(ok(id))return true;faltan.push(k+':'+id);return false});
+    const pool=Z.c.filter(p=>ok(p[1])||!faltan.push(k+':'+p[1])).map(p=>p.slice());
+    const el=chk(Z.e);el.forEach((id,i)=>pool.push([150+i*Math.round(660/el.length),id,0.3]));
+    M.pool=pool;if(Z.sub)M.sub=Z.sub;
+    const b=chk(Z.b);if(b.length>=5)M.bosses=b;
+    const r=chk(Z.ring);if(r.length)M.ring=r.length===1?[r[0],r[0]]:r;
+    if(Z.squad){const q=chk(Z.squad[1]);if(q.length)M.squad=[Z.squad[0],q,Z.squad[2]];else delete M.squad}else delete M.squad;
+    const w=Z.w.filter(x=>ok(x[0]));if(w.length){WAVES[k]=w;WSAGA[k]=k}}
+  if(faltan.length)console.warn('Reparto por zonas: enemigos sin animaciones',faltan)})();
+
 
 const SCTINT={frzS2:'hue-rotate(95deg) saturate(1.2)',frzS4:'hue-rotate(200deg)',soldierE:'hue-rotate(300deg) saturate(1.3)',celljr:'hue-rotate(150deg) saturate(1.15)',celljrE:'hue-rotate(150deg) saturate(1.3)',saibaR:'hue-rotate(-70deg) saturate(1.6)',saibaB:'hue-rotate(140deg) saturate(1.2)',saibaX:'hue-rotate(200deg) brightness(1.1)'},SCTC={};
+Object.assign(SCTINT,{frzApp:'hue-rotate(35deg)',frostS:'hue-rotate(250deg) saturate(1.3)',rrsoldierK:'hue-rotate(100deg) saturate(1.2)',rrsoldierP:'hue-rotate(200deg) brightness(.9)',murasakiH:'hue-rotate(60deg)',celljrR:'hue-rotate(110deg) saturate(1.4)',celljrK:'hue-rotate(200deg) saturate(1.2)',majinG:'hue-rotate(-20deg) saturate(1.2)',zombiV:'hue-rotate(40deg)',zamasuCM:'hue-rotate(160deg)',tropaO:'hue-rotate(150deg) saturate(1.3)'});
 
 function scTintPk(o,f){const r={ok:1};for(const a in o){if(a==='ok')continue;const A=o[a],tc=c=>{const n=mk(c.width,c.height),g=n.getContext('2d');g.filter=f;g.drawImage(c,0,0);return n};r[a]={...A,R:A.R.map(tc),L:A.L.map(tc)}}return r}
 

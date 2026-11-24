@@ -1,6 +1,10 @@
 # Empieza aquí — Relevo para Claude
 
-## >>> SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 24): HAZ ESTO PRIMERO <<<
+## >>> SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 25): HAZ ESTO PRIMERO <<<
+
+Sesión 25: enemigos repartidos por zonas según el lore (`const ZONAS=` en `script.js`, tabla en `REPARTO_ENEMIGOS.md`). **Siguiente:** recibir de Josemi los sprites de esa lista y rehacer los obstáculos de los mapas (los quiere naturales y fieles a la serie). Para probar en el navegador: `.claude/launch.json` arranca `herramientas/servidor.cjs`.
+
+## (Anterior) SIGUIENTE SESIÓN (dejado el 24 nov. 2026, sesión 24)
 
 Lee `RESUMEN_SESION_24.md`: ahí está todo lo hecho del 20 al 24 nov. (transformaciones, dificultad, obstáculos, interfaz, ataques, dex y piloto de Namek) y lo que queda. Rama `claude/pensive-maxwell-rmrwmm`, subida a GitHub el 24 nov.
 
