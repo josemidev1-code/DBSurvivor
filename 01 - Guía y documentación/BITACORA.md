@@ -4776,3 +4776,48 @@ ode --check.
 
 ### Siguiente paso recomendado
 - Que Josemi revise la dex y diga qué personajes o animaciones le gustan menos. Después, más enemigos propios de cada saga (paso 2) y jefes (paso 3).
+
+## 2026-11-24 — Claude (sesión 24): piloto de combate en Namek (0:00-2:00)
+
+### Lo que pidió el usuario
+- Josemi mandó `DBSurvivor_Prompt_para_Claude.md`: que cada saga se reconozca desde su primera oleada y que cambiar de personaje cambie cómo resuelves la misma situación. Primero un piloto en los dos primeros minutos de Namek, probado con Goku Base, Trunks Base y Androide 17:
+  - Oleada con progresión: patrulla de Freezer, después tiradores que guardan distancia, una amenaza rápida que corta la huida con una embestida anunciada y, al final, las tres juntas dejando una salida visible.
+  - Cada amenaza pide una respuesta distinta: el soldado de primera línea obliga a moverse, el tirador castiga quedarse quieto y se evita con cobertura, la embestida se esquiva de lado y deja una ventana para contraatacar.
+  - Goku (Kamehameha y Teletransporte), Trunks (Espada del Futuro y Burning Attack) y 17 (Barrera y ráfaga) deben jugar distinto. Mantener el desbloqueo real y el primer jefe a los 2:00.
+  - Comprobar con `node herramientas/comprobar_enemigos.cjs`, otro mapa y doble clic; resumen con archivos, secuencia, qué se probó y qué queda.
+
+### Lo que hice
+- **Guion de Namek de 0:00 a 2:00** (`pilotoNamek` en `script.js`, antes de `director`). Solo afecta a Namek; los demás mapas no cambian:
+  - **0:00, patrulla de Freezer.** Soldados rasos (`frzS2`) en fila de 5-6 que avanzan rectos unos 5 s, como un muro que hay que rodear. Su golpe te empuja 18 px. Cada 9 s entra otra patrulla, y entre una y otra van llegando soldados sueltos (14 a la vez como mucho).
+  - **0:30, tiradores.** Soldados de Freezer (`frzS4`) que se quedan entre 85 y 150 px. Apuntan 0,75 s con una línea roja y una mira en el suelo, y disparan **donde estabas**: si te mueves fallan, y si hay una roca en medio la bala se para.
+  - **1:00, Burter.** Marca su embestida 0,7 s con una línea roja gruesa hacia donde vas (así corta la huida en línea recta), embiste 135 px y se queda **mareado 1,1 s** con estrellas y el texto «¡AHORA!». En ese rato recibe un 50 % más de daño. Mientras carga o embiste, tus golpes no lo frenan; si está demasiado cerca, se aparta para coger carrerilla. Tiene 200 de vida y se retira a los 1:57.
+  - **1:30, te cierran el paso.** Una patrulla, tres tiradores y una embestida (Burter, o Appule si ya mataste a Burter) llegan por tres lados. El cuarto queda libre, se elige hacia suelo sin rocas ni agua y una flecha verde lo señala durante 4 s. Los refuerzos también entran por los lados cerrados.
+  - **2:00, Dodoria**, como siempre. Durante el piloto no salen la emboscada del 1:30 ni la estampida del minuto 1, porque el guion las sustituye.
+- **Arreglos para que los tres personajes jueguen distinto** (son generales, no solo de Namek):
+  - **Teletransporte:** si te estás moviendo, salta al enemigo más lejano hacia donde vas (antes, siempre al más cercano). Sirve para salir del cerco.
+  - **Barreras (Barrera de 17 y la de Super 17):** ya se pueden subir en cuanto hay una amenaza a menos de 180 px. Antes solo salían con un enemigo encima, y si no había nadie dentro de la onda se perdían sin dar el escudo, así que no protegían de un golpe anunciado.
+- Entorno de pruebas: `window.AS` expone `beams()`, `piloto` (con `AS.piloto.fin=0` se vuelve a la oleada antigua) y `pilAj`. Caché: script.js 227.
+
+### Qué comprobé (en el navegador, sin sonido, con el entorno de pruebas del juego; no es una partida a mano)
+- **Tirador**, en 10 s: con el jugador quieto acierta 2 disparos; moviéndose en zigzag, ninguno. Detrás de una roca, de 3 disparos no entra ninguno; a la misma distancia sin roca, entran 2.
+- **Embestida**, 24 embestidas por caso entre los tres personajes: quieto te dan 22, huyendo en línea recta 18 y apartándote de lado 4.
+- **Goku:** el Kamehameha da a los 6 soldados de una fila alineada con el rayo y a 2-3 si la fila está de frente. Con el Teletransporte, quieto se queda pegando dentro de un cerco de 8; moviéndose hacia un tirador, salta 148 px fuera del anillo y le golpea.
+- **Trunks:** la Espada del Futuro corta a 4 soldados de una fila que le viene de frente y a 2 si entra por la punta. Al revés que Goku: Trunks recibe la fila de cara y Goku busca ponerse en su extremo.
+- **17:** con la Barrera bien sincronizada recibe 1 embestida de 4 (sin ella, 3). En el mareo de Burter le quita unos 300 puntos de vida.
+- **Desbloqueo real (partidas nuevas en Normal):** Trunks tiene Espada y Burning Attack desde el principio. El Teletransporte de Goku y la Barrera de 17 son la tecla 3 y salen como carta a partir del nivel 4, entre los 0:20 y los 0:45. Lo que depende de la tecla 3 se probó con `P.sigU=3`.
+- **Bot que se mueve en cuadrado, 3 partidas por personaje, comparando con la oleada antigua:**
+  - Trunks y 17 llegan siempre a Dodoria, al nivel 9-10. Con el piloto reciben de 2 a 5 veces más daño (Trunks 139-232, antes 32-90; 17 unos 70, antes unos 25).
+  - Goku Base muere 2 de 3 veces antes de los 2:00. Con la oleada antigua moría las 3, así que es un problema del bot con Goku, no del piloto.
+- Dodoria sale a los 2:00. En Tierra (Raditz a los 2:00) y Yardrat no hay enemigos del piloto y salen sus jefes. Pasan las 10 comprobaciones (`comprobar_enemigos.cjs` y `comprobar_roles.cjs` incluidas). No hay errores de consola salvo los de una prueba mía con un mapa que no existe.
+- No pude abrir `index.html` como archivo en el panel del navegador. No se ha añadido ningún `fetch` ni archivo nuevo, así que el doble clic debería seguir funcionando igual.
+
+### A medias / problemas
+- **No lo ha jugado nadie a mano.** Faltan por ajustar jugando los tiempos (aviso de 0,75 s y 0,7 s, mareo de 1,1 s) y cuántos enemigos salen a la vez.
+- **Problemas fuera de Namek que no he tocado:**
+  - Goku Base aguanta poco con el bot: el Kamehameha se lanza solo, le frena al 45 % y le dura mucho.
+  - Después de los 2:00 salen en Namek «Saiyan zombi» (`zombi`, a partir del 1:30 en todos los mapas), que no son de la saga.
+  - En la pausa, Trunks puede tener «Burning Attack» dos veces (la técnica de la tecla y la especial).
+- La Espada del Futuro sigue usando la pose de puñetazo en la dex. Hace falta su animación propia (`Tecnica_tsword`), y eso es trabajo de animación.
+
+### Siguiente paso recomendado
+- Que Josemi juegue Namek con Goku, Trunks y 17 y diga si se reconoce cada amenaza y si los tiempos le parecen justos. Después, la misma pauta en el siguiente mapa: tres enemigos comunes con comportamientos distintos, un élite y un jefe por saga.

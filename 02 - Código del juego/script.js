@@ -3253,7 +3253,7 @@ function sigUpdate(dt,ps){
 
     const st=selW.st(sigLv(P.sel));
 
-    t=nearest(P.x,P.y,sigReach(selW,st));
+    t=nearest(P.x,P.y,selW.shield?Math.max(180,sigReach(selW,st)):sigReach(selW,st)); /* las barreras se pueden subir antes de que llegue el golpe anunciado (piloto de Namek) */
 
     if(t)chosen=P.sel;
 
@@ -3281,7 +3281,11 @@ function sigUpdate(dt,ps){
 
 function fireSig(W,st,dmg,ps){
 
-  const t=nearest(P.x,P.y,sigReach(W,st)+10);if(!t)return;const d=t.x>=P.x?1:-1;if(!P.moving){P.face=d;P.dir='side'}
+  let t=nearest(P.x,P.y,sigReach(W,st)+10);
+  /* Teletransporte (piloto de Namek): si te mueves, salta al enemigo más lejano hacia donde vas, para salir de un cerco o ganar espacio */
+  if(t&&W.tp&&P.moving){const R=sigReach(W,st)+10;let bv=0;for(const e of enemies){if(e.dead||e.crate)continue;const ex=e.x-P.x,ey=e.y-P.y,dd=Math.hypot(ex,ey);if(dd>R||dd<24)continue;if((ex*P.mvx+ey*P.mvy)/dd>0.6&&dd>bv){bv=dd;t=e}}}
+  /* una barrera sube aunque el enemigo aún no esté dentro de la onda (antes se perdía y no protegía del golpe anunciado) */
+  if(!t&&!(W.kind==='nova'&&W.shield))return;const d=t?(t.x>=P.x?1:-1):(P.face||1);if(t&&!P.moving){P.face=d;P.dir='side'}
 
   if(W.kind==='melee'){const far=Math.hypot(t.x-P.x,t.y-P.y)>st.rad*0.8,tx=t.x-d*MELEE_AJ.parada,ty=t.y+1;
 
@@ -4239,7 +4243,7 @@ const DEATHK={saiba:'green',saibaR:'fire',celljr:'green',blob:'pink',majin:'pink
 
 function hurt(e,dmg,kx=0,ky=0){
 
-  if(e.dead)return;if(S.ev&&S.ev.k==='furia')dmg*=2;const st=stats(),crit=Math.random()<(st.critChance||0.08);if(crit)dmg*=2.2;
+  if(e.dead)return;if(S.ev&&S.ev.k==='furia')dmg*=2;if(e.atk&&e.atk.f==='mareo')dmg*=PIL_AJ.danoMareo;const st=stats(),crit=Math.random()<(st.critChance||0.08);if(crit)dmg*=2.2;
 
   e.hp-=dmg;e.flash=0.08;if(P&&P.trTE&&P.trTE.rayos&&!hurt.rayo){let o=null;near(e.x,e.y,60,q=>{if(!o&&q!==e&&!q.dead&&!q.crate)o=q});
     if(o){hurt.rayo=1;hurt(o,dmg*0.4,0,0);hurt.rayo=0;if(parts.length<400)for(let i=0;i<5;i++){const k=i/4;parts.push({x:e.x+(o.x-e.x)*k,y:e.y-10+(o.y-e.y)*k,vx:rnd(-8,8),vy:rnd(-8,8),t:0.18,c:'#fff6a8',s:2})}}}
@@ -4523,14 +4527,47 @@ function eventos(dt){if(S.boss||S.isl)return;const E=S.ev;
 
   else if(k==='furia'){S.ev={k,t:15};S.banner={t:2.5,text:'¡FURIA SAIYAN!',sub:'15 segundos con el doble de daño'};P.powT=1.2;sfx('trans')}}
 
+/* piloto de Namek (24 nov., pedido por Josemi): los dos primeros minutos siguen un guion en vez de la población al azar.
+   0:00 patrulla de Freezer · 0:30 tiradores · 1:00 Burter (embestida) · 1:30 las tres juntas dejando un hueco libre · 2:00 Dodoria.
+   Comportamientos en pilTirador/pilEmbestidor/rolAI (PIL_AJ). */
+const PILOTO={mapa:'namek',fin:120,fases:[0,30,60,90]};
+function pilSpawn(id,x,y,rol){const e=spawn(id,x,y);if(!e)return null;e.pil=1;e.rol=rol;if(rol!=='pegador')e.shootT=0;return e}
+function pilBorde(a,extra=0){const r=Math.max(VW,VH)/2+10+extra;return[P.x+Math.cos(a)*r,P.y+Math.sin(a)*r]}
+function pilPatrulla(a,n){const [cx,cy]=pilBorde(a),px=-Math.sin(a),py=Math.cos(a); /* fila perpendicular que avanza recta hacia ti */
+  for(let i=0;i<n&&enemies.length<MAXE;i++){const o=(i-(n-1)/2)*15,e=pilSpawn('frzS2',cx+px*o,cy+py*o,'pegador');if(e)e.marcha={ux:-Math.cos(a),uy:-Math.sin(a),t:5}}}
+function pilTiradores(a0,a1,n,dist){for(let i=0;i<n;i++){const a=a0+(a1-a0)*(n>1?i/(n-1):0.5);pilSpawn('frzS4',P.x+Math.cos(a)*dist,P.y+Math.sin(a)*dist,'tirador')}}
+function pilEmbestida(a,dist){const G=S.pil,id=G.emb&&G.emb.dead?'appuleE':'burter',e=pilSpawn(id,P.x+Math.cos(a)*dist,P.y+Math.sin(a)*dist,'embestidor');
+  if(e){e.hp=e.maxhp=200*(DIFF[S.diff||0].hp||1);e.atkCd=1.2;G.emb=e}return e}
+/* el hueco libre apunta a suelo despejado (sin rocas ni agua), para que la salida se pueda usar de verdad */
+function pilSalida(a0){if(typeof solidHit!=='function')return a0;let best=a0,bs=-1;
+  for(let i=0;i<12;i++){const a=a0+i*TAU/12;let sc=0;for(let r=30;r<=170;r+=20){const x=P.x+Math.cos(a)*r,y=P.y+Math.sin(a)*r;if(!solidHit(x,y,6)&&!onWaterAt(x,y))sc++}if(sc>bs){bs=sc;best=a}}return best}
+function pilotoNamek(dt){const G=S.pil||(S.pil={fase:-1,pat:0,goteo:0}),sp=DIFF[S.diff||0].sp||1;
+  let f=0;while(f<3&&S.t>=PILOTO.fases[f+1])f++;
+  if(f!==G.fase){G.fase=f;const a=rnd(TAU);
+    if(f===0){pilPatrulla(a,5);G.pat=9;S.banner={t:2.6,text:'¡PATRULLA DE FREEZER!',sub:'Avanzan en fila: rodéalos o ábrete paso'}}
+    else if(f===1){pilTiradores(a-0.5,a+0.5,3,150);G.pat=12;S.banner={t:2.8,text:'¡TIRADORES!',sub:'Disparan adonde estás: muévete o cúbrete tras una roca'}}
+    else if(f===2){pilEmbestida(a,170);G.pat=12;S.banner={t:2.8,text:'¡BURTER!',sub:'Mira la línea de su embestida: apártate de lado y pégale cuando se maree',boss:1};sfx('boss')}
+    else{G.salida=pilSalida(a);G.salidaT=4;const a2=G.salida;/* la salida (ángulo a) queda libre: los demás llegan por los otros lados */
+      pilPatrulla(a2+Math.PI*0.6,6);pilTiradores(a2+Math.PI*1.05,a2+Math.PI*1.45,3,160);if(!G.emb||G.emb.dead)pilEmbestida(a2+Math.PI*0.95,180);
+      G.pat=13;S.banner={t:2.8,text:'¡TE CIERRAN EL PASO!',sub:'Busca el hueco libre y sal por él'}}}
+  if(G.salidaT>0)G.salidaT-=dt;
+  const lado=()=>f===3?G.salida+Math.PI+rnd(-2,2):rnd(TAU);
+  G.pat-=dt;if(G.pat<=0){G.pat=f===0?9:13;pilPatrulla(lado(),f===0?6:5)}
+  G.goteo-=dt;if(G.goteo<=0){G.goteo=(f===0?1.5:1.25)/sp;
+    if(enemies.length<[14,20,22,24][f]*sp){let nT=0;for(const e of enemies)if(e.pil&&e.rol==='tirador'&&!e.dead)nT++;
+      const tir=f>0&&nT<(f===1?5:4)&&Math.random()<0.35,[x,y]=pilBorde(lado(),rnd(0,30));pilSpawn(tir?'frzS4':'frzS2',x,y,tir?'tirador':'pegador')}}
+  /* Burter se retira antes de Dodoria: las Fuerzas Especiales al completo llegan más tarde */
+  if(G.emb&&!G.emb.dead&&!G.retiro&&S.t>=PILOTO.fin-3){G.retiro=1;G.emb.dead=true;if(typeof smoke==='function'){smoke(G.emb.x,G.emb.y-8,10);texts.push({x:G.emb.x,y:G.emb.y-30,v:'SE RETIRA',t:1.2,c:'#ffd23f'})}}}
 function director(dt){
 
   if(S.isl)return;
 
   S.spawnT-=dt;
+  const pil=S.map===PILOTO.mapa&&S.t<PILOTO.fin&&!S.endless;
+  if(pil){pilotoNamek(dt);if(S.ringIdx===0&&S.t>=RINGS[0])S.ringIdx=1;S.minute=Math.max(S.minute||0,Math.floor(S.t/60))}
 
   // dificultad justa (22 nov.): menos enemigos a la vez, un tope que sube con el tiempo y nada que dependa de tu nivel
-  if(S.spawnT<=0){S.spawnT=Math.max(0.3,0.95-S.t/600)/DIFF[S.diff||0].sp;const n=1+Math.floor(S.t/120),tope=Math.min(MAXE,(30+S.t*0.35)*DIFF[S.diff||0].sp);
+  else if(S.spawnT<=0){S.spawnT=Math.max(0.3,0.95-S.t/600)/DIFF[S.diff||0].sp;const n=1+Math.floor(S.t/120),tope=Math.min(MAXE,(30+S.t*0.35)*DIFF[S.diff||0].sp);
 
     for(let i=0;i<n&&enemies.length<tope;i++)spawn(pickType(S.t))}
 
@@ -5178,6 +5215,34 @@ function trUpdate(dt){if(!P.tr||!window.TRANSF)return;
 // roce: daño por segundo de cada enemigo pegado (sin invulnerabilidad), así rodearte de muchos es peligroso y uno suelto no
 
 const ROL_AJ={aviso:0.4,avisoE:0.25,golpe:0.18,encadena:0.45,golpesE:3,alcance:22,cdGolpe:1.1,cargaAviso:0.4,cargaVel:200,cargaDur:0.45,cargaMin:30,cargaMax:110,cdCarga:1.8,turbo:2.2,turboCerca:50,turboLejos:110,roce:0.5,maxBalas:6};
+/* piloto de Namek (24 nov.): amenazas que piden respuestas distintas. Solo las usan los enemigos marcados con e.pil.
+   tirador: guarda distancia, apunta donde estás con una línea y dispara allí (moverse o cubrirse tras una roca lo evita);
+   embestidor: marca su recorrido hacia donde vas, embiste en línea recta y se queda mareado (ventana para contraatacar o cargar ki);
+   patrulla: avanza en fila recta unos segundos (un muro que hay que rodear) y su golpe te empuja. */
+const PIL_AJ={lejos:150,cerca:85,apunta:0.75,recarga:0.9,cdTiro:2.6,balaVel:190,embAviso:0.7,embVel:270,embDur:0.5,mareo:1.1,embMin:45,embMax:175,cdEmb:1.4,prever:0.5,empuje:18,danoMareo:1.5};
+function pilTirador(e,d,dx,dy,dt){const A=PIL_AJ,a=e.atk,ux=dx/d,uy=dy/d;if(e.atkCd>0)e.atkCd-=dt;
+  if(a){a.t-=dt;
+    if(a.f==='apunta'){if(a.t<=0){eshot(e.x+ux*6,e.y-12,Math.atan2(a.ty-(e.y-12),a.tx-e.x),A.balaVel,e.dmg,3,'#ff5a5a','ball',{cubre:1,life:1.7});sfx('shoot');a.f='recarga';a.t=A.recarga}return[0,0]}
+    if(a.f==='recarga'){if(a.t<=0){e.atk=null;e.atkCd=A.cdTiro}return[0,0]}
+    e.atk=null}
+  if(!(e.atkCd>0)&&d<A.lejos+15&&d>40){e.atk={f:'apunta',t:A.apunta,tx:P.x,ty:P.y-14};return[0,0]}
+  if(d>A.lejos)return null;
+  if(d<A.cerca)return[-ux*e.spd,-uy*e.spd];
+  const q=e.lado||(e.lado=((e.x*7)|0)&1?1:-1);return[-uy*q*e.spd*0.6,ux*q*e.spd*0.6]}
+function pilEmbestidor(e,d,dx,dy,dt){const A=PIL_AJ,a=e.atk;if(e.atkCd>0)e.atkCd-=dt;
+  if(a){a.t-=dt;
+    if(a.f==='carga'||a.f==='embiste'){e.kx=e.ky=0} /* no lo frenan tus golpes mientras carga o embiste */
+    if(a.f==='carga'){if(a.t<=0){a.f='embiste';a.t=A.embDur;sfx('dash')}return[0,0]}
+    if(a.f==='embiste'){if(!a.hit&&d<e.r+14){a.hit=1;hitPlayer(e.dmg,true)}
+      if(a.t<=0){a.f='mareo';a.t=A.mareo;texts.push({x:e.x,y:e.y-28,v:'¡AHORA!',t:0.9,c:'#7cff6a'})}return[a.ux*A.embVel,a.uy*A.embVel]}
+    if(a.f==='mareo'){if(a.t<=0){e.atk=null;e.atkCd=A.cdEmb}return[0,0]}
+    e.atk=null}
+  if(!(e.atkCd>0)&&d>A.embMin&&d<A.embMax){/* apunta adonde vas, no adonde estás: corta la huida en línea recta */
+    const tx=P.x+(P.mvx||0)*60*A.prever,ty=P.y+(P.mvy||0)*60*A.prever,l=Math.hypot(tx-e.x,ty-e.y)||1;
+    e.atk={f:'carga',t:A.embAviso,ux:(tx-e.x)/l,uy:(ty-e.y)/l,len:A.embVel*A.embDur};return[0,0]}
+  if(d<A.embMin+25)return[-dx/d*e.spd*0.8,-dy/d*e.spd*0.8]; /* demasiado cerca: se aparta para coger carrerilla */
+  return null}
+function pilEmpuje(dx,dy,d){solidMove(P,dx/d*PIL_AJ.empuje,dy/d*PIL_AJ.empuje,5)}
 
 // sprint de llegada (lo pidió Josemi: «los enemigos tienen que venirte»): lejos corren para alcanzarte y al llegar recuperan su velocidad, así se les puede seguir esquivando
 
@@ -5191,12 +5256,14 @@ function rolCancel(e){if(e.stun>0&&e.atk)e.atk=null}
 
 function rolAI(e,d,dx,dy,dt){if(e.caza){rolCancel(e);return null} // carga de ki: todos van a por el jugador
   const r=rolE(e),A=ROL_AJ;if(r==='jefe'||r==='kami')return null;
+  if(e.pil){if(r==='tirador')return pilTirador(e,d,dx,dy,dt);if(r==='embestidor')return pilEmbestidor(e,d,dx,dy,dt);
+    const m=e.marcha;if(m&&m.t>0&&!e.atk){m.t-=dt;if(d>55)return[m.ux*e.spd*1.15,m.uy*e.spd*1.15];m.t=0}}
 
   if(e.atkCd>0)e.atkCd-=dt;const a=e.atk;
 
   if(a){a.t-=dt;
 
-    if(a.f==='aviso'){if(a.t<=0){a.f='golpe';a.t=A.golpe;a.k=!a.k;if(d<A.alcance+e.r)hitPlayer(e.dmg,false)}return null}
+    if(a.f==='aviso'){if(a.t<=0){a.f='golpe';a.t=A.golpe;a.k=!a.k;if(d<A.alcance+e.r){hitPlayer(e.dmg,false);if(e.pil)pilEmpuje(dx,dy,d)}}return null}
 
     if(a.f==='golpe'){if(a.t<=0){if(--a.n>0){a.f='aviso';a.t=A.encadena}else{e.atk=null;e.atkCd=A.cdGolpe}}return null}
 
@@ -5361,6 +5428,7 @@ function update(dt){
     if(s.k==='missile'&&Math.random()<0.45&&parts.length<500)parts.push({x:s.x,y:s.y,vx:-s.vx*0.12,vy:-s.vy*0.12,t:0.25,c:'#94a3b8',s:1.5});
 
     s.x+=s.vx*dt;s.y+=s.vy*dt;
+    if(s.extra?.cubre&&solidHit(s.x,s.y+12,1)){s.life=0;burst(s.x,s.y,5,['#ff5a5a','#ffd0c0']);continue}
 
     if(Math.abs(s.x-P.x)<s.r+6&&s.y>P.y-30-s.r&&s.y<P.y+s.r){
 
@@ -5534,6 +5602,9 @@ function drawPkEnemy(e,x,y){const o=e.spr.pk,t=e.anim/6,left=e.x>P.x,d=Math.hypo
       const progress=clamp(1-attack.t/ROL_AJ.golpe,0,1);
       i=Math.min(A.R.length-1,Math.floor(progress*A.R.length));
     }else if(phase==='carga'){A=o.Pow||o.Attack;i=0}
+    else if(phase==='apunta'){A=o.Cast||o.Attack;i=0}
+    else if(phase==='recarga'){A=attack.t>PIL_AJ.recarga-0.25&&o.Cast?o.Cast:o.Idle;i=A===o.Cast?Math.min(1,A.R.length-1):scFrame(A,t)}
+    else if(phase==='mareo'){A=o.Hurt||o.Idle;i=0}
     else{A=o.Dash||o.Walk||o.Attack;i=scFrame(A,t)}
   }
 
@@ -5551,11 +5622,19 @@ function drawPkEnemy(e,x,y){const o=e.spr.pk,t=e.anim/6,left=e.x>P.x,d=Math.hypo
 
   // aviso de ataque: «!» parpadeando sobre la cabeza y, al cargar una embestida, la línea por donde va a pasar
 
-  const k=e.atk;if(k&&(k.f==='aviso'||k.f==='carga')){const ax=Math.round(x),ay=Math.round(y-hh-15);
+  const k=e.atk;if(k&&(k.f==='aviso'||k.f==='carga'||k.f==='apunta')){const ax=Math.round(x),ay=Math.round(y-hh-15);
 
     if((e.anim*2|0)%2||k.t<0.15){ctx.fillStyle=OUTL;ctx.fillRect(ax-2,ay-1,4,8);ctx.fillStyle=ET[e.type].elite?'#ff3030':'#ffd23f';ctx.fillRect(ax-1,ay,2,4);ctx.fillRect(ax-1,ay+5,2,1)}
 
-    if(k.f==='carga'){ctx.fillStyle='rgba(255,60,40,0.45)';for(let s=10;s<ROL_AJ.cargaVel*ROL_AJ.cargaDur;s+=8)ctx.fillRect(Math.round(x+k.ux*s)-1,Math.round(y-4+k.uy*s)-1,3,2)}}}
+    if(k.f==='carga'){const L=k.len||ROL_AJ.cargaVel*ROL_AJ.cargaDur,w=k.len?3:2;ctx.fillStyle=k.len?'rgba(255,40,30,0.6)':'rgba(255,60,40,0.45)';for(let s=10;s<L;s+=8)ctx.fillRect(Math.round(x+k.ux*s)-1,Math.round(y-4+k.uy*s)-1,3,w)}}
+  /* piloto: el tirador marca con una línea y una mira dónde va a disparar; el embestidor mareado lleva estrellas */
+  if(k&&k.f==='apunta'){const ox=x,oy=y-12,tx=k.tx+(x-e.x),ty=k.ty+(y-e.y),dx=tx-ox,dy=ty-oy,l=Math.hypot(dx,dy)||1,on=k.t<0.25?1:(e.anim*3|0)%2;
+    ctx.fillStyle=on?'rgba(255,50,40,0.9)':'rgba(255,50,40,0.55)';for(let s=8;s<l;s+=5)ctx.fillRect(Math.round(ox+dx/l*s)-1,Math.round(oy+dy/l*s)-1,2,2);
+    /* mira en el suelo, donde está el blanco: si sigues ahí cuando acabe, te da */
+    const mx=Math.round(tx),my=Math.round(ty+14),r=7;ctx.fillStyle=OUTL;for(const [a,b,w,h] of [[-r-1,-1,5,3],[r-3,-1,5,3],[-1,-r+1,3,4],[-1,r-4,3,4]])ctx.fillRect(mx+a,my+b,w,h);
+    ctx.fillStyle=on?'#ff3a2a':'#ff8a6a';for(const [a,b,w,h] of [[-r,0,3,1],[r-2,0,3,1],[0,-r+2,1,2],[0,r-3,1,2]])ctx.fillRect(mx+a,my+b,w,h);
+    ctx.globalAlpha=0.35;ctx.fillRect(mx-4,my-1,9,3);ctx.globalAlpha=1}
+  if(k&&k.f==='mareo'){const hy=Math.round(y-hh-6);for(let j=0;j<3;j++){const an=e.anim*1.6+j*TAU/3,sx=Math.round(x+Math.cos(an)*7),sy=Math.round(hy+Math.sin(an)*2);ctx.fillStyle=OUTL;ctx.fillRect(sx-2,sy-1,5,3);ctx.fillRect(sx-1,sy-2,3,5);ctx.fillStyle='#ffe95a';ctx.fillRect(sx-1,sy,3,1);ctx.fillRect(sx,sy-1,1,3)}}}
 
 function drawSprite(spr,x,y,frame,flip,white,scale=1){
 
@@ -7520,6 +7599,11 @@ function render(time){
 
     const bub=((time*8+h.x)|0)%3;ctx.fillStyle='#bef264';if(bub===0)ctx.fillRect(x-2,y-1,2,2);else if(bub===1)ctx.fillRect(x+2,y,2,2)}
 
+  /* piloto de Namek: flecha verde hacia el hueco libre durante unos segundos */
+  if(S.pil&&S.pil.salidaT>0&&((time*4|0)%2||S.pil.salidaT>3)){const G=S.pil,ux=Math.cos(G.salida),uy=Math.sin(G.salida),px=-uy,py=ux;
+    for(let j=0;j<3;j++){const d=34+j*12+((time*20)%12),cx=X(P.x)+ux*d,cy=Y(P.y)-10+uy*d;
+      for(let s=-5;s<=5;s++){const k=Math.abs(s),qx=Math.round(cx+px*s-ux*k),qy=Math.round(cy+py*s-uy*k);ctx.fillStyle=OUTL;ctx.fillRect(qx-1,qy-1,4,4)}for(let s=-5;s<=5;s++){const k=Math.abs(s),qx=Math.round(cx+px*s-ux*k),qy=Math.round(cy+py*s-uy*k);ctx.fillStyle=j===2?'#d8ffd0':'#5cf04a';ctx.fillRect(qx,qy,2,2)}}}
+
   // proyectiles con pixel art tematico
 
   for(const s of eshots){
@@ -9201,7 +9285,7 @@ function toggleFull(){if(document.fullscreenElement)document.exitFullscreen();el
   });
 })();
 
-window.AS={tr:()=>P&&P.tr,mapas:()=>MAPS,oleadas:()=>WAVES,sigs:id=>sigList(id).filter(m=>MV[m]).map(m=>({id:m,n:MV[m].name,kind:MV[m].kind,pose:attackPose(MV[m])})),trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,enemies:()=>enemies,eshots:()=>eshots,ebeams:()=>ebeams,hazards:()=>hazards,bombs:()=>bombs,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
+window.AS={tr:()=>P&&P.tr,mapas:()=>MAPS,oleadas:()=>WAVES,sigs:id=>sigList(id).filter(m=>MV[m]).map(m=>({id:m,n:MV[m].name,kind:MV[m].kind,pose:attackPose(MV[m])})),trAbiertos:()=>trAbiertos(),SCPACK,scHero,scLoad,heroAnim,rotSpr,walkCycle,bodySplit,walkCfg,spawnAt:(t,dx,dy)=>spawn(t,P.x+dx,P.y+dy),spawnBoss,spawnCrate,putPickup,dropGem,addMove:id=>{addMove(id);const m=P.moves[id];m.lv=5},ebeamT:()=>ebeams.length?ebeams[0].t:null,setDiff:d=>{pickedDiff=d},kiSprite,autoWalk,ET,fxFrames,sparkFrames,fxN:()=>fxs.length,HDEF,loadSave,doPull,heroFrames,enemySprite,beamT:()=>{const b=beams.find(q=>q.hero);return b?b.t:-1},beamsN:()=>beams.length,beams:()=>beams,piloto:PILOTO,pilAj:PIL_AJ,enemies:()=>enemies,eshots:()=>eshots,ebeams:()=>ebeams,hazards:()=>hazards,bombs:()=>bombs,gems:()=>gems,pickups:()=>pickups,spd:()=>stats().spd,maps:()=>Object.keys(WORLD),decorAudit:()=>Object.keys(DECOR).filter(k=>!(k in SOLID_DEF)),obstacle:(tx,ty)=>{solidSync();return solidAt(tx,ty)},solid:(x,y,r)=>solidHit(x,y,r),move:(o,dx,dy,r)=>solidMove(o,dx,dy,r),place:(o,r,f)=>solidPlace(o,r,f),setMap:id=>{MAPK=id;S.map=id;S.isl=null;solidReset()},get state(){return state},get S(){return S},get P(){return P},aj:MELEE_AJ,rol:ROL_AJ,start:startGame,tick:(sec)=>{for(let i=0;i<sec*30;i++){if(state==='play')update(1/30)}},pick:i=>{const b=$('#ups').querySelectorAll('button')[i||0];b&&b.click()}};
 
 newGame('goku');showTitle();
 

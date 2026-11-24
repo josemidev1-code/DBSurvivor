@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**24 nov. 2026 (sesión 24 — piloto de combate en Namek):** los dos primeros minutos de Namek siguen un guion: patrulla de Freezer en fila (0:00), tiradores que apuntan con línea y se esquivan moviéndote o cubriéndote tras una roca (0:30), Burter con embestida anunciada que le deja mareado (1:00) y las tres amenazas juntas dejando un hueco señalado con una flecha verde (1:30). Dodoria sigue a los 2:00. El Teletransporte salta hacia donde te mueves y las barreras ya protegen de golpes anunciados. Código en `pilotoNamek`, `pilTirador` y `pilEmbestidor` (`PIL_AJ`) de `script.js`; medidas y pendientes en la bitácora. Pendiente de que Josemi lo juegue.
+
 **23 nov. 2026 (sesión 24 — interfaz, arreglos rápidos hechos por Codex):** corregidos radar bajo KO/mapa, aviso fijo de Shenron, tamaño/opacidad de impactos, solape NOTICIAS/ZENI y aparición inicial del logo. Diez comprobaciones y sintaxis correctas; comprobados en el navegador por Claude (1280×720 y móvil).
 
 **23 nov. 2026 (sesión 24 — mapas):** los 24 mapas tienen obstáculos de verdad (paredes, esquinas, roquedales y ruedos, del 7 % al 12 % del suelo), programados por Codex y revisados por Claude. Las portadas de los mapas son escenarios de la serie, sin personajes (`herramientas/montar_portadas_serie.py` + `montar_portadas.py --juego ui/portadas_mapas/serie`). Pendiente de que Josemi lo valore jugando.
