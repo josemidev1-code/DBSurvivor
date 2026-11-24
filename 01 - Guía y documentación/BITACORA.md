@@ -4713,3 +4713,25 @@ ode --check.
 ### Siguiente paso recomendado
 - Comprobar visualmente los cinco ajustes en esos tres tamaños cuando esté disponible el navegador.
 - **Comprobado por Claude** (23 nov.) en el navegador: logo desde el primer momento; NOTICIAS sin pisar ZENI a 1280×720 y en móvil 375×812 (allí NOTICIAS va abajo); «RADAR ACTIVO» debajo del recuadro de KO/mapa; sin el aviso de Shenron; humo de los golpes pequeño y transparente, el personaje se ve en mitad de la horda. Josemi pidió estos arreglos («Arreglos rápidos»).
+
+## 2026-11-24 — Claude (sesión 24, continuación)
+
+### Lo que pidió el usuario
+- Josemi (en la sesión 23, me lo pasó esa sesión): «hay que mejorar los ataques de los personajes porque están muy chetados y hay que mejorar a los jefes porque te los cargas enseguida; primero me gustaría mejorar los ataques de los personajes para que sean variados dependiendo del personaje, sean los de los sprites y sean fieles a la saga, y que haya más enemigos; míralo bien eso». Orden: 1) ataques, 2) más enemigos, 3) jefes.
+- Josemi: «cuando hagas testeos bájale la voz, que no quiero escucharlo». A partir de ahora pruebo siempre con el juego silenciado (botón MUDO).
+
+### Lo que hice
+- Medí los ataques con el juego abierto:
+  - Con una partida nueva, Goku tarda más de un minuto en matar a cada jefe de Namek.
+  - Lo que se dispara es la suma de multiplicadores sin tope: cartas de Poder (+12 % cada una), tienda, crítico y transformaciones (hasta ×2,4).
+  - Unas 15 técnicas pegan casi el doble que las de su tipo.
+  - Las listas de técnicas ya son de la serie en casi todos (solo 3 secundarios empiezan con dos genéricas). Lo que se repite es el relleno: «Ráfaga de Ki», «Combo de golpes» y «Patada voladora».
+- Escribí `ATAQUES_PROPUESTA.md`: bajar la potencia (A) y las listas de técnicas con su animación del sprite (B). No se aplica hasta que Josemi la apruebe (punto 9 de la lista).
+- Arreglado un fallo que ya estaba: al hacer un acelerón (combo que se acerca al enemigo), la estela usaba la misma variable que la transformación (`P.tr`). Daba «TR.unshift is not a function» y el dibujo se cortaba ese fotograma. Ahora la estela usa `P.dashTr`. Caché de script.js a 214.
+
+### A medias / problemas
+- Pendiente de que Josemi responda a la propuesta. También: con qué personaje y mejoras jugó cuando los jefes le duraron tan poco.
+- Pregunta abierta de la sesión 23: con Goku, ESPACIO no carga ki si no ha comprado la forma a Shenron, aunque eligió «todas por niveles». ¿Quitamos lo de Shenron?
+
+### Siguiente paso recomendado
+- Cuando Josemi diga sí: aplicar A y B, comprobarlo con el bot (que un jefe aguante entre 25 y 40 s con buenas mejoras) y mandar un GIF. Después, más enemigos y los jefes.

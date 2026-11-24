@@ -7375,7 +7375,7 @@ function render(time){
 
         P.pivDY=SP?piv-y:null;P.pivDX=SP?hx-x:0;
 
-        {const TR=P.tr||(P.tr=[]);if(P.dash){if(!(time-TR.lt<0.045)){TR.lt=time;TR.unshift([P.x,P.y]);if(TR.length>4)TR.length=4}}else TR.length=0;
+        {const TR=P.dashTr||(P.dashTr=[]);if(P.dash){if(!(time-TR.lt<0.045)){TR.lt=time;TR.unshift([P.x,P.y]);if(TR.length>4)TR.length=4}}else TR.length=0;
 
           for(let k=TR.length-1;k>=1;k--){ctx.globalAlpha=0.34-k*0.08;ctx.drawImage(ri,Math.round(rx+(TR[k][0]-P.x)*2),Math.round(ry+(TR[k][1]-P.y)*2))}ctx.globalAlpha=1}
 
