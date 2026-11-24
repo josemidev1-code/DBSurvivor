@@ -37,8 +37,8 @@ Josemi: los enemigos son siempre los mismos, los mapas casi no tienen obstáculo
 
 - [ ] 7. Pulir los ataques y las animaciones de cada personaje, uno a uno.
 - [ ] 8. 70 enemigos con un solo fotograma de movimiento (Jiren, Janemba, Nappa, Broly, Bills…).
-- [ ] 9. Ataques propios de cada personaje y época, en lugar de «Ráfaga de Ki» o «Combo de golpes». Antes de aplicarla, enseñar la lista a Josemi.
-  - 24 nov.: propuesta en `ATAQUES_PROPUESTA.md` (bajar la potencia y las listas con la animación de cada sprite). Esperando a Josemi. Después: más enemigos y jefes más duros (pidió ese orden).
+- [x] 9. Ataques propios de cada personaje y época, en lugar de «Ráfaga de Ki» o «Combo de golpes». Antes de aplicarla, enseñar la lista a Josemi.
+  - 24 nov.: propuesta en `ATAQUES_PROPUESTA.md` (bajar la potencia y las listas con la animación de cada sprite). Aprobada y aplicada el 24 nov. Siguiente: más enemigos y jefes más duros (pidió ese orden).
 
 ## D. Recursos
 
