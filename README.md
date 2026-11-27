@@ -38,7 +38,7 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
 
 ## Cómo está ahora (05/11/2026)
 
-- **27 nov. (rama `arreglos-bloque1`):** revisión completa en `01 - Guía y documentación/REVISION_2026-11-27.md` (38 fallos, 13 decisiones para Josemi y hoja de ruta en 11 bloques). Bloque 1 hecho: la fusión ya no congela el juego, los mapas con un élite en el hueco del jefe se pueden ganar, el guardado ya no pierde datos al recargar, las bolas grandes estallan una vez, la tecla mantenida no acorta recargas ni elige cartas, y el cuerpo a cuerpo ya no da invulnerabilidad sin fin (provisional). Comprobaciones: 9 de 10 en verde; `comprobar_formas` espera la decisión sobre el deseo de transformación.
+- **27 nov. (rama `arreglos-bloque1`, ya en `main`):** revisión completa en `01 - Guía y documentación/REVISION_2026-11-27.md` (38 fallos, 13 decisiones para Josemi y hoja de ruta en 11 bloques). Bloque 1 hecho: la fusión ya no congela el juego, los mapas con un élite en el hueco del jefe se pueden ganar, el guardado ya no pierde datos al recargar, las bolas grandes estallan una vez, la tecla mantenida no acorta recargas ni elige cartas, y el cuerpo a cuerpo ya no da invulnerabilidad sin fin (provisional). Comprobaciones: 9 de 10 en verde; `comprobar_formas` espera la decisión sobre el deseo de transformación.
 
 - La biblioteca `antigravity sprites/` y `Recursos pendientes/` se quitaron el 14 nov. 2026 (siguen en el historial de git).
 - Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/Histórico/CAMBIOS_COMBATE_2026-11-04.md`.

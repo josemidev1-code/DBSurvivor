@@ -4592,7 +4592,7 @@ ode --check.
 - 12 huecos de jefe siguen con un élite de refuerzo (lista en la salida de `comprobar_enemigos`): ya se pueden ganar, pero Josemi debe elegir qué jefe va en cada uno (pregunta 12).
 - El ajuste del cuerpo a cuerpo es provisional: falta que Josemi lo valore jugando (pregunta 2).
 - No probado: abrir `index.html` con doble clic (solo se probó con el servidor local) ni las pruebas Python de `herramientas/pruebas` (no se tocaron herramientas de animación).
-- La rama no está fusionada en `main` ni subida a GitHub.
+- 28 nov.: Josemi pidió «Pásala ya a main» sin jugarla antes. Fusionada en `main` (avance directo) y subida a GitHub; la web de GitHub Pages se actualiza desde `main`. Falta su valoración jugando.
 
 ### Siguiente paso recomendado
 - Que Josemi juegue la rama y responda las 13 preguntas de `REVISION_2026-11-27.md` (sección 6.2). Después, Bloque 2: limpiar lo que promete y no hace (reliquias, cápsula roja, cápsula dorada, deseo de formas, textos de bloqueo).
