@@ -4569,3 +4569,20 @@ ode --check.
 ### Siguiente paso recomendado
 - Presentar a Josemi los nuevos recursos organizados y las comparativas de las Esferas del Dragón (las 18x18 actuales vs las nuevas en 32x32 y HD).
 - Decidir con Josemi si desea que incorporemos las nuevas Esferas del Dragón al juego (`ui_imagenes.js`), el radar animado o cualquiera de los efectos de combate (Kamehameha, auras, explosiones).
+
+## 2026-11-27 — Claude (sesión: revisión completa y Bloque 1 de arreglos)
+
+### Lo que pidió el usuario
+- «Mi juego es este y quedan muchísimas cosas por hacer, ve mirándolo». Revisión del estado del juego comparado con PokéSurvivor.
+- «Yo quiero hacer como PokéSurvivor pero de Dragon Ball, pero aún faltan muchas mejoras y quiero que me ayudes».
+- «Sí, empieza»: empezar el Bloque 1 de la hoja de ruta (arreglar lo que rompe partidas).
+
+### Lo que hice
+- Revisión completa del código, las comprobaciones y una partida en la versión publicada: `REVISION_2026-11-27.md` en esta carpeta (38 fallos, 13 decisiones para Josemi, hoja de ruta en 11 bloques).
+- Rama de trabajo: `arreglos-bloque1`.
+
+### A medias / problemas
+- Bloque 1 en curso.
+
+### Siguiente paso recomendado
+- Terminar el Bloque 1 (ver `REVISION_2026-11-27.md`, sección 6.4).
