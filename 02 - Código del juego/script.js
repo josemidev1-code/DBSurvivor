@@ -3090,7 +3090,10 @@ const UNLOCK_LV=[1,1,4,8,12,16];
 
 let FO=null;const fxSl=[],fxRg=[];
 
-function sigList(hid=S.hid){if(SIGS[hid])return SIGS[hid];const st=HEROES[hid]&&HEROES[hid].start;return['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku']}
+// Lista de técnicas de un personaje tal como viene en las tablas (no se modifica nunca).
+function baseSigs(hid){if(SIGS[hid])return SIGS[hid];const st=HEROES[hid]&&HEROES[hid].start;return['kiblast','punch',MV[st]&&st!=='kiblast'?st:'kame','kick','renzoku']}
+// Lista de la partida en curso: una copia propia (P.sigs) para que la fusión no cambie las tablas ni las partidas siguientes.
+function sigList(){return (typeof P!=='undefined'&&P&&P.sigs)||baseSigs(S.hid)}
 
 function sigOpen(){return sigList().slice(0,P.sigU||2)}
 
@@ -4025,7 +4028,7 @@ function newGame(hid,map){
 
   P={dir:'down',cast:null,x:0,y:0,hp:H.hp,face:1,anim:0,moving:false,iframe:0,lvl:1,xp:0,need:need(1),form:initForm,startForm:initForm,
 
-     moves:{},order:[],cards:{},orbA:0,hitT:0,sel:0,sigT:0.6,sigCD:1,sigN:0,sigU:2,sigB:[],sigTimers:{},sigCursor:0,relics:{},powT:1.2};
+     moves:{},order:[],cards:{},orbA:0,hitT:0,sel:0,sigT:0.6,sigCD:1,sigN:0,sigU:2,sigB:[],sigTimers:{},sigCursor:0,relics:{},powT:1.2,sigs:[...baseSigs(hid)]};
 
   P.hp=stats().maxhp;fxSl.length=0;fxRg.length=0;if(window.PFX)PFX.clear();
 
@@ -4908,13 +4911,17 @@ function options(){
 
   const o=[],hid=S.hid;
 
-  for(const id of P.order){const m=P.moves[id];
+  // Sistema antiguo de armas (P.moves): hoy solo tienen efecto las técnicas en órbita (updateMoves).
+  // Las demás («Nueva técnica», «Nivel X», «Evolución» de rayos, bolas…) no hacían nada, así que ya no se ofrecen.
+  const antiguaUtil=id=>MV[id]&&MV[id].kind==='orbit'&&Array.isArray(MV[id].ds);
+
+  for(const id of P.order){const m=P.moves[id];if(!antiguaUtil(id))continue;
 
     if(m.lv<5)o.push({t:'move',id,w:3});
 
     else if(!m.evo&&P.cards[MV[id].req])o.push({t:'evo',id,w:100})}
 
-  if(P.order.length<4)for(const id in MV){if(P.moves[id])continue;const W=MV[id];if(W.only&&!W.only.includes(hid))continue;if(W.sig||!sigList().includes(id))continue;o.push({t:'new',id,w:W.only?3:2})}
+  if(P.order.length<4)for(const id in MV){if(P.moves[id])continue;const W=MV[id];if(!antiguaUtil(id))continue;if(W.only&&!W.only.includes(hid))continue;if(W.sig||!sigList().includes(id))continue;o.push({t:'new',id,w:W.only?3:2})}
 
   for(const id in CARDS){if((P.cards[id]||0)<5)o.push({t:'card',id,w:2})}
 
@@ -4932,6 +4939,17 @@ function options(){
 
   return pick}
 
+// Técnica fusionada: parte de las estadísticas reales de una de las dos técnicas (la del tipo que pide la receta,
+// si alguna lo es) para que fire() reciba los campos que espera ese tipo (rayo: wid/len/dur; bolas: count/spd…).
+// Mejora: +70 % de daño (lo que dice la carta) y algo más de tamaño.
+function fusionMove(op){
+  const A=MV[op.idA],B=MV[op.idB],want=op.rec&&op.rec.kind;
+  const base=(want&&A&&A.kind===want)?A:(want&&B&&B.kind===want)?B:(A||B||MV.kiblast);
+  const grande={rad:1.3,len:1.2,wid:1.25,reach:1.15};
+  return {...base,name:op.fusName,col:(op.rec&&op.rec.col)||base.col,sig:1,fusion:1,ds:undefined,evo:undefined,req:undefined,only:undefined,
+    st:lv=>{const s={...base.st(lv)};if(typeof s.dmg==='number')s.dmg*=1.7;for(const k in grande)if(typeof s[k]==='number')s[k]*=grande[k];return s}};
+}
+
 function applyOpt(op){
 
   switch(op.t){
@@ -4940,21 +4958,17 @@ function applyOpt(op){
 
      P.fusionUsed=true;
 
-     if(!MV[op.fusId] && op.rec){
-
-       MV[op.fusId]={name:op.fusName,kind:op.rec.kind||'beam',pose:op.rec.pose||'beam',col:op.rec.col||['#fbbf24','#60a5fa'],st:(lv)=>({dmg:(op.rec.dmg||4.0)*(1+lv*0.25),cd:Math.max(0.6,(op.rec.cd||2.5)*(1-lv*0.05)),len:480,w:34,hits:12,rad:180,reach:220,kb:100})};
-
-     }
+     if(!MV[op.fusId])MV[op.fusId]=fusionMove(op);
 
      {
 
-       const cur=sigList();
+       const cur=[...sigList()];
 
        const idxA=cur.indexOf(op.idA);
 
        if(idxA!==-1)cur[idxA]=op.fusId;else cur[0]=op.fusId;
 
-       SIGS[S.hid]=cur;
+       P.sigs=cur;
 
        P.sigTimers[op.fusId]=0;P.sel=idxA!==-1?idxA:0;P.sigCursor=P.sel;P.sigT=0;
 
@@ -5012,7 +5026,7 @@ function optInfo(op){
 
   if(op.t==='relic'){const R=RELICS[op.id],cv=icon(R.ic,32);return{cv,nm:R.name,lv:'LEGADO',ds:R.desc,cls:'evo'}}
 
-  if(op.t==='move'||op.t==='new'){const W=MV[op.id],lv=P.moves[op.id]?P.moves[op.id].lv+1:1,cv=sigIcon(op.id,32);return{cv,nm:W.name,lv:op.t==='new'?'¡NUEVA TÉCNICA!':'NIVEL '+lv,ds:W.ds[lv-1]+(lv===5?' · Evoluciona con '+CARDS[W.req].name:''),cls:op.t==='new'?'new':''}}
+  if(op.t==='move'||op.t==='new'){const W=MV[op.id],lv=P.moves[op.id]?P.moves[op.id].lv+1:1,cv=sigIcon(op.id,32);return{cv,nm:W.name,lv:op.t==='new'?'¡NUEVA TÉCNICA!':'NIVEL '+lv,ds:((W.ds&&W.ds[lv-1])||W.name)+(lv===5&&CARDS[W.req]?' · Evoluciona con '+CARDS[W.req].name:''),cls:op.t==='new'?'new':''}}
 
   if(op.t==='evo'){const W=MV[op.id],cv=sigIcon(op.id,32);return{cv,nm:W.evo,lv:'EVOLUCIÓN',ds:'Evoluciona '+W.name+': mucho más daño y tamaño.',cls:'evo'}}
 
@@ -5030,11 +5044,16 @@ function optInfo(op){
 
 function openLevelUp(title,cambio){
 
-  state='levelup';const box=$('#ups');box.innerHTML='';$('#luTitle').textContent=S.mastery?'¡FUSIÓN Y LEGADO DEL JEFE!':title||'¡Nivel '+P.lvl+'!';
+  const box=$('#ups');box.innerHTML='';$('#luTitle').textContent=S.mastery?'¡FUSIÓN Y LEGADO DEL JEFE!':title||'¡Nivel '+P.lvl+'!';
 
-  options().forEach((op,i)=>{const inf=optInfo(op),b=document.createElement('button');b.type='button';b.className='up t-'+op.t+' '+inf.cls;
+  // Si una carta falla al montarse se descarta (antes el juego se quedaba congelado sin panel).
+  let ops;try{ops=options()}catch(err){console.error('options()',err);ops=[]}
+  ops=ops.filter(op=>{try{optInfo(op);return true}catch(err){console.error('optInfo',op,err);return false}});
+  if(!ops.length)ops=[{t:'heal'},{t:'zeni'}];
+  state='levelup';
+  ops.forEach((op,i)=>{const inf=optInfo(op),b=document.createElement('button');b.type='button';b.className='up t-'+op.t+' '+inf.cls;
     const cat={fusion:'FUSIÓN',relic:'LEGADO',move:'TÉCNICA',new:'TÉCNICA',evo:'EVOLUCIÓN',card:'PASIVA',sig:'ATAQUE',sigup:'ATAQUE',heal:'CURACIÓN'}[op.t]||'BOTÍN';
-    let pips='';if(op.t==='move'||op.t==='new'||op.t==='sigup'){const W=MV[op.id],mx=op.t==='sigup'?5:W.ds.length,n=op.t==='sigup'?sigLv(op.i)+1:(P.moves[op.id]?P.moves[op.id].lv+1:1);pips='<span class="pips" aria-label="Nivel '+n+' de '+mx+'">'+Array.from({length:mx},(_,k)=>'<i class="'+(k<n-1?'on':k===n-1?'next':'')+'"></i>').join('')+'</span>'}
+    let pips='';if(op.t==='move'||op.t==='new'||op.t==='sigup'){const W=MV[op.id],mx=op.t==='sigup'?5:((W.ds&&W.ds.length)||5),n=op.t==='sigup'?sigLv(op.i)+1:(P.moves[op.id]?P.moves[op.id].lv+1:1);pips='<span class="pips" aria-label="Nivel '+n+' de '+mx+'">'+Array.from({length:mx},(_,k)=>'<i class="'+(k<n-1?'on':k===n-1?'next':'')+'"></i>').join('')+'</span>'}
     b.insertAdjacentHTML('beforeend','<span class="lv"><em>'+cat+'</em>'+inf.lv+'</span>');
     const wr=document.createElement('span');wr.className='upIco';const ic=cvCopy(inf.cv||icon(inf.ic,32));ic.setAttribute('aria-hidden','true');wr.appendChild(ic);b.appendChild(wr);
     b.insertAdjacentHTML('beforeend','<span class="nm">'+inf.nm+'</span><span class="ds">'+inf.ds+'</span>'+pips+'<span class="key">'+(i+1)+'</span>');
@@ -7094,7 +7113,7 @@ function shenlong(f=0){
 
 function openWish(){state='levelup';const box=$('#ups');box.innerHTML='';$('#luBuild').hidden=true;{const r=$('#luReroll');if(r)r.hidden=true}{const sc=document.createElement('canvas');sc.width=170;sc.height=120;sc.getContext('2d').drawImage(shenlong(),0,0);sc.style.cssText='max-width:510px;width:100%;image-rendering:pixelated';const wr=document.createElement('div');wr.style.cssText='flex-basis:100%;display:flex;justify-content:center';wr.appendChild(sc);box.appendChild(wr)}$('#luTitle').textContent='¡SHENLONG! PIDE UN DESEO';S.flash=0.6;cam.shake=6;sfx('trans');
 
-  const W=[['wPow','PODER ILIMITADO','Todas tus técnicas suben 1 nivel.',()=>{for(const id of P.order){const m=P.moves[id];if(m.lv<5)m.lv++}}],
+  const W=[['wPow','PODER ILIMITADO','Todas tus técnicas suben 1 nivel.',()=>{for(const id of P.order){const m=P.moves[id];if(m.lv<5)m.lv++}sigOpen().forEach((id,i)=>{if(sigLv(i)<5)P.sigB[i]=(P.sigB[i]||0)+1})}],
 
     ['wLife','VIDA ETERNA','Vida al máximo y una resurrección extra en esta partida.',()=>{S.revives++;P.hp=stats().maxhp}],
 
@@ -8915,7 +8934,7 @@ function rosterPreview(id){const H=HEROES[id];if(!H)return;
 
     // sus técnicas de la serie y el nivel en que se aprenden
 
-    $('#rPrevMoves').innerHTML=sigList(id).map((m,i)=>MV[m]?`<li><b>Nv ${UNLOCK_LV[i]||1}</b> ${MV[m].name}</li>`:'').join('');rosterAnim.id=id;rosterAnim.t0=performance.now();rosterForm(0);
+    $('#rPrevMoves').innerHTML=baseSigs(id).map((m,i)=>MV[m]?`<li><b>Nv ${UNLOCK_LV[i]||1}</b> ${MV[m].name}</li>`:'').join('');rosterAnim.id=id;rosterAnim.t0=performance.now();rosterForm(0);
 
     document.querySelectorAll('#chars .card').forEach(c=>c.classList.toggle('selected',c.dataset.id===id));
 
