@@ -3107,13 +3107,15 @@ function sigSelect(n){
 
   const prevSel=P.sel;
 
+  // Volver a pulsar la ranura ya elegida no hace nada: antes adelantaba la recarga 0,25 s y anulaba el retardo global.
+  // Al cambiar de ranura, la técnica conserva su propia recarga y sale en cuanto esté lista.
+  if(prevSel===n)return;
+
   P.sel=n;P.sigCursor=n;
 
-  const id=L[n],W=MV[id];
+  P.sigT=Math.min(P.sigT||0,0.08);
 
-  if(W&&(!P.sigTimers[id]||P.sigTimers[id]<=0.25)){P.sigTimers[id]=0;P.sigT=0}else{P.sigT=Math.min(P.sigT||0,0.08)}
-
-  if(prevSel!==n)sfx('shot');
+  sfx('shot');
 
 }
 
@@ -3270,7 +3272,10 @@ function fireSig(W,st,dmg,ps){
 
     else if(far)P.dash={x:tx,y:ty,t:0.12,c:W.col[0]};
 
-    P.combo={id:Object.keys(MV).find(id=>MV[id]===W),v:(P.comboSerial=(P.comboSerial||0)+1)-1,n:st.hits,i:0,t:0.08,d,dmg,rad:st.rad*ps.area,kb:st.kb,col:W.col,kick:W.pose==='kick',dragon:W.dragon};P.iframe=Math.max(P.iframe,st.hits*0.09+MELEE_AJ.guardaExtra);
+    P.combo={id:Object.keys(MV).find(id=>MV[id]===W),v:(P.comboSerial=(P.comboSerial||0)+1)-1,n:st.hits,i:0,t:0.08,d,dmg,rad:st.rad*ps.area,kb:st.kb,col:W.col,kick:W.pose==='kick',dragon:W.dragon};
+    // Protección del combo (provisional, 27 nov.): como mucho la mitad de la recarga real y sin renovarla si aún queda.
+    // Antes, con técnicas rápidas la protección duraba más que la recarga y el jugador era invulnerable sin parar.
+    {const cdReal=Math.max(0.4,st.cd*ps.cd),guarda=Math.min(st.hits*0.09+MELEE_AJ.guardaExtra,0.5*cdReal);if(!(P.iframe>0))P.iframe=guarda}
 
     if(W.kaio)P.kaioT=1.4;if(W.dragon)sfx('charge');return}
 
@@ -4096,9 +4101,10 @@ addEventListener('keydown',e=>{keys[e.code]=true;
 
   if(e.code==='F2'){debugSolid=!debugSolid;e.preventDefault()}
 
-  if(state==='play'){let num=-1;const m=/^(Digit|Numpad)([1-6])$/.exec(e.code);if(m)num=+m[2];else if(/^[1-6]$/.test(e.key))num=+e.key;if(num>=1&&num<=6){sigSelect(num-1);e.preventDefault()}}
+  if(state==='play'&&!e.repeat){let num=-1;const m=/^(Digit|Numpad)([1-6])$/.exec(e.code);if(m)num=+m[2];else if(/^[1-6]$/.test(e.key))num=+e.key;if(num>=1&&num<=6){sigSelect(num-1);e.preventDefault()}}
 
-  if(state==='levelup'&&/^Digit[1-4]$/.test(e.code)){const b=$('#ups').querySelectorAll('button')[+e.code.slice(5)-1];if(b)b.click()}
+  // Subida de nivel: 1-4, también en el teclado numérico. Una tecla mantenida, o pulsada en los primeros 300 ms, no elige una carta sin verla.
+  if(state==='levelup'&&!e.repeat&&performance.now()-(S.luOpenT||0)>=300){const m=/^(Digit|Numpad)([1-4])$/.exec(e.code);if(m){const b=$('#ups').querySelectorAll('button')[+m[2]-1];if(b){b.click();e.preventDefault()}}}
   if(state==='levelup'&&e.code==='KeyR'){const b=$('#luReroll');if(b&&!b.hidden&&!b.disabled){b.click();e.preventDefault()}}
 
   if((e.code==='Escape'||e.code==='KeyP')){if(state==='play')pauseGame();else if(state==='pause')resume()}
@@ -5052,7 +5058,7 @@ function openLevelUp(title,cambio){
   let ops;try{ops=options()}catch(err){console.error('options()',err);ops=[]}
   ops=ops.filter(op=>{try{optInfo(op);return true}catch(err){console.error('optInfo',op,err);return false}});
   if(!ops.length)ops=[{t:'heal'},{t:'zeni'}];
-  state='levelup';
+  state='levelup';S.luOpenT=performance.now();
   ops.forEach((op,i)=>{const inf=optInfo(op),b=document.createElement('button');b.type='button';b.className='up t-'+op.t+' '+inf.cls;
     const cat={fusion:'FUSIÓN',relic:'LEGADO',move:'TÉCNICA',new:'TÉCNICA',evo:'EVOLUCIÓN',card:'PASIVA',sig:'ATAQUE',sigup:'ATAQUE',heal:'CURACIÓN'}[op.t]||'BOTÍN';
     let pips='';if(op.t==='move'||op.t==='new'||op.t==='sigup'){const W=MV[op.id],mx=op.t==='sigup'?5:((W.ds&&W.ds.length)||5),n=op.t==='sigup'?sigLv(op.i)+1:(P.moves[op.id]?P.moves[op.id].lv+1:1);pips='<span class="pips" aria-label="Nivel '+n+' de '+mx+'">'+Array.from({length:mx},(_,k)=>'<i class="'+(k<n-1?'on':k===n-1?'next':'')+'"></i>').join('')+'</span>'}
@@ -5245,11 +5251,14 @@ function update(dt){
 
     if(p.home&&(p.age=(p.age||0)+dt)>0.12){if(p.home===true||p.home.dead)p.home=nearest(p.x,p.y,240)||true;if(p.home!==true){const sp=Math.hypot(p.vx,p.vy),a=Math.atan2(p.home.y-8-p.y,p.home.x-p.x),k=Math.min(1,dt*7);p.vx+=(Math.cos(a)*sp-p.vx)*k;p.vy+=(Math.sin(a)*sp-p.vy)*k}}
 
-    p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.life<=0)continue;
+    p.x+=p.vx*dt;p.y+=p.vy*dt;
+
+    // Las bolas grandes estallan una sola vez: al tocar a alguien o al caducar (antes, dos veces o ninguna).
+    if(p.life<=0){if(p.k==='big'&&!p.boomed){p.boomed=1;explode(p.x,p.y,p.rad,p.dmg,p.col)}continue}
 
     near(p.x,p.y+6,p.r+14,e=>{if(p.life<=0||p.hit.has(e))return;if(Math.hypot(e.x-p.x,e.y-6-p.y)<p.r+e.r){p.hit.add(e);
 
-      if(p.k==='big'){explode(p.x,p.y,p.rad,p.dmg,p.col);p.life=0;return}
+      if(p.k==='big'){if(!p.boomed){p.boomed=1;explode(p.x,p.y,p.rad,p.dmg,p.col)}p.life=0;return}
 
       const l=Math.hypot(p.vx,p.vy)||1;hurt(e,p.dmg,p.vx/l*70,p.vy/l*70);if(p.pierce--<=0)p.life=0}});
 
