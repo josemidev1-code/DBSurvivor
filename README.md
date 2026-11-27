@@ -38,6 +38,8 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
 
 ## Cómo está ahora (05/11/2026)
 
+- **27 nov. (rama `arreglos-bloque1`):** revisión completa en `01 - Guía y documentación/REVISION_2026-11-27.md` (38 fallos, 13 decisiones para Josemi y hoja de ruta en 11 bloques). Bloque 1 hecho: la fusión ya no congela el juego, los mapas con un élite en el hueco del jefe se pueden ganar, el guardado ya no pierde datos al recargar, las bolas grandes estallan una vez, la tecla mantenida no acorta recargas ni elige cartas, y el cuerpo a cuerpo ya no da invulnerabilidad sin fin (provisional). Comprobaciones: 9 de 10 en verde; `comprobar_formas` espera la decisión sobre el deseo de transformación.
+
 - La biblioteca `antigravity sprites/` y `Recursos pendientes/` se quitaron el 14 nov. 2026 (siguen en el historial de git).
 - Actualización Codex: técnicas automáticas con recargas individuales, arenas emblemáticas, legados de jefe, combo ki/patada, más cofres y vegetación animada. Detalle, pruebas y límites en `01 - Guía y documentación/Histórico/CAMBIOS_COMBATE_2026-11-04.md`.
 - Pendiente principal: revisar y seleccionar los ataques extra de cada pack; todavía no se ha hecho para todo el catálogo.
@@ -55,9 +57,9 @@ Cada carpeta principal tiene un `LEEME.md` que explica qué hay dentro.
   (pack Ninja Adventure, CC0, generados con `herramientas/montar_escenarios.py` en `02 - Código del juego/escenarios_tiles.js`).
 - 7 jugables más (Nappa, Ginyu, Jeice, Guldo, Uub, Mr. Satán, Androide 21) esperan en la rama
   `claude/quizzical-gates-9cf9c0`, sin fusionar todavía.
-- **82 tipos de enemigo** con animaciones seleccionadas de sus propios personajes; además, la sombra del jugador.
-- **35 tipos retirados temporalmente** por no tener secuencias completas revisadas (lista en `01 - Guía y documentación/SPRITES_PENDIENTES.md`).
-  Los 24 mapas conservan cinco encuentros con jefes. Hay menos variedad de enemigos normales mientras se recuperan sus packs.
+- **132 tipos de enemigo** con animaciones seleccionadas de sus propios personajes; además, la sombra del jugador (recuento del 27 nov., `comprobar_enemigos.cjs`).
+- **11 tipos retirados temporalmente** por no tener secuencias completas revisadas (lista en `01 - Guía y documentación/SPRITES_PENDIENTES.md`).
+  Los 24 mapas tienen cinco jefes en partida normal (2, 4, 6, 8 y 10 min) y casi todos dos más en infinito. En 12 huecos el jefe es un élite de refuerzo: desde el 27 nov. cuenta como jefe al caer, pero falta que Josemi elija qué jefe va en cada uno. Hay menos variedad de enemigos normales mientras se recuperan sus packs.
 - Los enemigos con un único fotograma de vuelo flotan en guardia; durante la carga ya no se dibujan cuerpos por código.
 - Logo del menú y esferas del dragón dibujados por ti.
 - Senzu y radar con sprites de Legacy of Goku II; cápsulas de vitalidad (+25% vida), cápsulas de ki

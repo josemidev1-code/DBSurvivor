@@ -1,5 +1,7 @@
 # Estado actual — AnimeSurvivor
 
+**27 nov. 2026 (Claude, rama `arreglos-bloque1`, sin fusionar en `main`):** revisión completa en `REVISION_2026-11-27.md` y Bloque 1 hecho (fusión sin congelar, mapas con élite en el hueco del jefe ganables, guardado completo, bolas grandes, teclado y protección del cuerpo a cuerpo provisional). `script.js?v=195`. Comprobaciones: 9 de 10 en verde (`comprobar_formas` espera la decisión sobre el deseo de transformación). Siguiente: que Josemi juegue y responda las 13 preguntas de la sección 6.2 de la revisión; después, Bloque 2 (limpiar lo que promete y no hace).
+
 **15 nov. 2026 (sesión 21 — Assets, Esferas del Dragón, Objetos y FX en Pixel Art):** Incorporación de 43 nuevos archivos en `05 - Sprites nuevos encontrados/04_Assets_y_Objetos/` clasificados en 4 categorías: Esferas del Dragón maestras y recortadas transparentes (184px, 32px y 24px), Shenron invocación pixel art, Radar del Dragón animado (50 frames), Nube Kinton SWL completa, Semillas Senzu, Scouters, mega hoja de ataques LSW (4050x3400), auras de todas las fases, proyectiles de ki, cráteres de suelo y HUD en pixel art puro sin pérdidas. Catálogo completo en `INDICE_SPRITES_NUEVOS.md` y créditos en `CREDITOS_RECURSOS.md`.
 
 **16 nov. 2026 (limpieza):** carpetas ordenadas: `03 - Dex/` y `04 - Piskel/` (antes `dex/` y `piskel_animaciones/`), documentos antiguos en `01 - Guía y documentación/Histórico/`, `herramientas/_revisar/` fuera de git (se regenera). Mapa visual en `ABREME - GUIA DEL PROYECTO.html`.

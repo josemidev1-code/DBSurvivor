@@ -4579,10 +4579,20 @@ ode --check.
 
 ### Lo que hice
 - Revisión completa del código, las comprobaciones y una partida en la versión publicada: `REVISION_2026-11-27.md` en esta carpeta (38 fallos, 13 decisiones para Josemi, hoja de ruta en 11 bloques).
-- Rama de trabajo: `arreglos-bloque1`.
+- Rama de trabajo: `arreglos-bloque1` (copia del repositorio en `C:\Users\josem\Desktop\dbsurvivor`).
+- Bloque 1 (fallos que rompían partidas), probado en el navegador con el servidor local:
+  - Fusión: lista de técnicas propia de cada partida (`P.sigs`, `baseSigs`), técnica fusionada sacada de la técnica real con +70 % de daño (`fusionMove`), sin cartas antiguas que no hacían nada y sin congelarse si una carta falla. Krilin: fusión y 14 subidas seguidas sin congelarse; la fusión hace daño; la partida siguiente empieza con su lista normal. (commit 0c1d3aa)
+  - `kill()`: quien ocupa el hueco del jefe cuenta como jefe al caer. Red Ribbon: el élite General Blue cae a los 2:14, suelta el cofre y la arena se cierra. `loadSave` conserva formas, freeD, pity4, guar e hist al recargar (probado recargando). (commit 7e4a41f)
+  - Bolas grandes: estallan una vez. Teclado: la tecla repetida ya no adelanta recargas; subida de nivel con bloqueo de 300 ms, sin repetición y con teclado numérico. Cuerpo a cuerpo provisional: protección del combo como mucho la mitad de la recarga real y sin renovarla; Videl quieta en Normal ya recibe daño (bajó a 55 de 100) y sigue viva. (commit cede2bb)
+  - Comprobaciones al día (`enemigos`, `objetos`, `rotacion`) y una nueva, `comprobar_guardado_fusion.cjs`. 9 de 10 en verde. (commit b449588)
+  - `script.js?v=195`.
 
 ### A medias / problemas
-- Bloque 1 en curso.
+- `comprobar_formas` falla a propósito: las transformaciones no esperan al deseo de Shenron. Es la pregunta 4 de la revisión.
+- 12 huecos de jefe siguen con un élite de refuerzo (lista en la salida de `comprobar_enemigos`): ya se pueden ganar, pero Josemi debe elegir qué jefe va en cada uno (pregunta 12).
+- El ajuste del cuerpo a cuerpo es provisional: falta que Josemi lo valore jugando (pregunta 2).
+- No probado: abrir `index.html` con doble clic (solo se probó con el servidor local) ni las pruebas Python de `herramientas/pruebas` (no se tocaron herramientas de animación).
+- La rama no está fusionada en `main` ni subida a GitHub.
 
 ### Siguiente paso recomendado
-- Terminar el Bloque 1 (ver `REVISION_2026-11-27.md`, sección 6.4).
+- Que Josemi juegue la rama y responda las 13 preguntas de `REVISION_2026-11-27.md` (sección 6.2). Después, Bloque 2: limpiar lo que promete y no hace (reliquias, cápsula roja, cápsula dorada, deseo de formas, textos de bloqueo).
