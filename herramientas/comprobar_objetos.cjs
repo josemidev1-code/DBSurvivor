@@ -20,11 +20,11 @@ vm.runInContext("recogerObjeto('capsulaVida',{maxhp:100})",c);assert.equal(c.P.h
 vm.runInContext("recogerObjeto('senzu',{maxhp:100})",c);assert.equal(c.P.hp,100);
 vm.runInContext("recogerObjeto('capsulaKi',{maxhp:100})",c);assert.equal(c.P.sigT,0);
 vm.runInContext("recogerObjeto('radar',{maxhp:100})",c);assert(c.gems.every(x=>x.mag));assert.equal(c.S.radarHasta,16);
-// Todas las ramas del botín siguen siendo alcanzables (incluidos los tres nuevos objetos).
+// Todas las ramas del botín siguen siendo alcanzables (tramos de crateLoot actualizados el 27 nov., con las cápsulas roja y dorada).
 let r=0,botin=[];
 Object.assign(c,{Math:{random:()=>r},burst:()=>{},putPickup:o=>botin.push(o.k),dropGem:()=>botin.push('xp'),rnd:()=>0});
 vm.runInContext(tramo('function crateLoot','function crateTick'),c);
-for(const [azar,tipo,cantidad] of [[.01,'dball',1],[.10,'chest',1],[.20,'senzu',1],[.35,'capsulaVida',1],[.45,'capsulaKi',1],[.55,'radar',1],[.65,'xp',6],[.9,'zeni',3]]){
+for(const [azar,tipo,cantidad] of [[.01,'dball',1],[.10,'chest',1],[.20,'senzu',1],[.25,'capsulaVida',1],[.35,'capsulaKi',1],[.40,'radar',1],[.50,'capsulaRoja',1],[.55,'capsulaDorada',1],[.65,'xp',6],[.9,'zeni',3]]){
   r=azar;botin=[];c.S.balls=0;c.S.ballN=0;vm.runInContext('crateLoot({x:0,y:0})',c);
   assert.equal(botin.length,cantidad,tipo);assert(botin.every(x=>x===tipo),tipo);
 }
@@ -35,4 +35,4 @@ c.S.t=17;vm.runInContext('actualizarRadarAnimado()',c);assert.equal(aviso.hidden
 c.pickups.push({k:'dball',radar:1});vm.runInContext('actualizarRadarAnimado()',c);assert.equal(aviso.hidden,false);
 c.state='pause';vm.runInContext('actualizarRadarAnimado()',c);assert.equal(aviso.hidden,true);
 assert(!src.includes("fetch('sprites/manifest.json')"),'Los créditos deben funcionar con doble clic');
-console.log('OK: 5 imágenes sin red, 2 créditos, curación limitada, ki listo, radar, 8 ramas de botín y visibilidad en pausa.');
+console.log('OK: 5 imágenes sin red, 2 créditos, curación limitada, ki listo, radar, 10 ramas de botín y visibilidad en pausa.');

@@ -22,26 +22,33 @@ for(const [id,t] of Object.entries(datos.ET)){
     assert(a[n],`${id}: falta ${n}`);assert(a[n][2].length>0);assert(a[n][3].startsWith('data:image/png;base64,'));
   }
 }
+// Cada mapa tiene al menos 5 jefes (los de la partida normal, a los 2-10 min); casi todos tienen 2 más para el modo infinito.
+// Si se retira un jefe por no tener tira, la depuración pone un refuerzo de su saga, que puede ser un élite.
+// Desde el 27 nov. kill() trata como jefe a quien ocupa el hueco, así que ya no te deja encerrado; queda como aviso
+// hasta que Josemi elija qué jefe va en cada hueco.
+const huecosConElite=[];
 for(const [id,m] of Object.entries(datos.MAPS)){
-  assert.equal(m.bosses.length,5,id);assert.equal(m.ring.length,2,id);
+  assert(m.bosses.length>=5,`${id}: ${m.bosses.length} jefes`);assert.equal(m.ring.length,2,id);
   assert(m.pool.some(p=>p[0]===0&&!datos.ET[p[1]].elite),`${id}: inicio sin enemigos normales`);
   for(const p of m.pool)assert(datos.ET[p[1]],`${id}: ${p[1]}`);
-  for(const b of m.bosses)assert(datos.ET[b]?.boss,`${id}: jefe ${b}`);
+  m.bosses.forEach((b,i)=>{assert(datos.ET[b],`${id}: jefe ${b}`);if(!datos.ET[b].boss)huecosConElite.push(`${id} ${i+1}.º (${b})`)});
   for(const e of [...m.ring,...(m.squad?.[1]||[])])assert(datos.ET[e],`${id}: ${e}`);
 }
 for(const w of Object.values(datos.WAVES)){assert(w.length);for(const [id] of w)assert(datos.ET[id])}
-// Recorre 16 minutos de cada mapa: población, anillos, escuadrones, oleadas y cinco jefes.
+// Recorre los 10 minutos de cada mapa (más un margen): población, anillos, escuadrones, oleadas y cinco jefes.
 let apariciones=0,jefes=0;
 Object.assign(c,{
   rnd:(a,b)=>b===undefined?Math.random()*a:a+Math.random()*(b-a),TAU:Math.PI*2,VW:480,VH:270,
   P:{x:0,y:0,lvl:1},DIFF:[{sp:1}],enemies:[],cam:{},sfx:()=>{},
   spawn:(id)=>{assert(datos.ET[id],`Invocación retirada: ${id}`);apariciones++;return{}},
-  spawnBoss:(id)=>{assert(datos.ET[id]?.boss,id);jefes++},
+  spawnBoss:(id)=>{assert(datos.ET[id],id);jefes++},
 });
 vm.runInContext(tramo('function pickType','function spawnBoss'),c);
 for(const map of Object.keys(datos.MAPS)){
   c.S={map,t:0,spawnT:0,diff:0,bossIdx:0,ringIdx:0,waveIdx:0,squadDone:0};
-  for(let t=0;t<=960;t++){c.S.t=t;vm.runInContext('director(1)',c)}
+  // Partida normal: 10 minutos (el último jefe sale a los 600 s y al vencerlo se gana) y un margen.
+  // Los jefes 6.º y 7.º (750 y 900 s) son del modo infinito.
+  for(let t=0;t<=660;t++){c.S.t=t;vm.runInContext('director(1)',c)}
   assert.equal(c.S.bossIdx,5,map);
 }
 assert.equal(jefes,Object.keys(datos.MAPS).length*5);
@@ -67,3 +74,6 @@ console.log(`${Object.keys(datos.MAPS).length} mapas · ${jefes} jefes · ${apar
 console.log(`${Object.keys(datos.ET).length-2} tipos de enemigo con animaciones seleccionadas; ${Object.keys(datos.FUERA_ENEMIGOS).length} retirados.`);
 console.log('Carga diferida, recuperación de alias y selección de guardia: correctas. No sustituye una partida visual.');
 console.log('Retirados:',JSON.stringify(datos.FUERA_ENEMIGOS));
+if(huecosConElite.length)console.log(`Aviso: ${huecosConElite.length} huecos de jefe con un élite de refuerzo (pendiente de Josemi): ${huecosConElite.join(', ')}`);
+// kill() debe cerrar la arena aunque quien ocupe el hueco no sea un jefe de la tabla.
+assert(/if\(e\.boss\|\|S\.boss===e\)/.test(src),'kill() solo cierra la arena si el enemigo tiene la marca de jefe');
