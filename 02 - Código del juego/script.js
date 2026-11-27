@@ -4230,7 +4230,9 @@ function kill(e){if(e.crate){e.dead=true;crateLoot(e);return}
 
   burst(e.x,e.y-6,e.boss?40:6,e.boss?['#ffd23f','#ffffff','#ff7a3a']:['#ffffff','#bfe6ff',e.pc||'#9bd65a']);
 
-  if(e.boss){S.flash=0.3;cam.shake=8;sfx('boom');S.bossKills=(S.bossKills||0)+1;
+  // Quien ocupa el hueco del jefe cuenta como jefe al caer, aunque sea un élite de refuerzo
+  // (si no, la arena no se cerraba y esos mapas no se podían ganar).
+  if(e.boss||S.boss===e){S.flash=0.3;cam.shake=8;sfx('boom');S.bossKills=(S.bossKills||0)+1;
 
     for(let i=0;i<12;i++)dropGem(e.x+rnd(-20,20),e.y+rnd(-20,20),Math.ceil(e.xp/12));
 
@@ -8230,7 +8232,10 @@ let SAVE=null;
 
 function loadSave(){if(SAVE)return SAVE;let d={};try{d=JSON.parse(localStorage.getItem('animesurvivor-save')||'{}')}catch(e){}
 
-  SAVE={tickets:d.tickets??10,zeni:d.zeni||0,pity:d.pity||0,pulls:d.pulls||0,owned:d.owned||{goku:1,vegeta:1,piccolo:1},best:d.best||{},up:d.up||{},mis:d.mis||{},st:d.st||{},mast:d.mast||{},daily:d.daily||'',streak:d.streak||0,clear:d.clear||{},bes:d.bes||{},mprog:d.mprog||{},lockv:d.lockv||0,sel:d.sel||'goku',selForm:d.selForm||{}};return SAVE}
+  SAVE={tickets:d.tickets??10,zeni:d.zeni||0,pity:d.pity||0,pulls:d.pulls||0,owned:d.owned||{goku:1,vegeta:1,piccolo:1},best:d.best||{},up:d.up||{},mis:d.mis||{},st:d.st||{},mast:d.mast||{},daily:d.daily||'',streak:d.streak||0,clear:d.clear||{},bes:d.bes||{},mprog:d.mprog||{},lockv:d.lockv||0,sel:d.sel||'goku',selForm:d.selForm||{}};
+  // Conserva el resto de lo guardado (formas, freeD, pity4, guar, hist…): antes se perdía al recargar la página.
+  for(const k in d)if(!(k in SAVE))SAVE[k]=d[k];
+  return SAVE}
 
 function writeSave(){try{localStorage.setItem('animesurvivor-save',JSON.stringify(SAVE))}catch(e){}}
 
