@@ -1,6 +1,76 @@
 # Empieza aquí — Relevo para Claude
 
-## >>> SIGUIENTE SESIÓN (dejado el 11 nov. 2026): HAZ ESTO PRIMERO <<<
+## >>> SIGUIENTE SESIÓN (dejado el 28 nov. 2026): HAZ ESTO PRIMERO <<<
+
+**Objetivo de Josemi:** «quiero hacer como PokéSurvivor pero de Dragon Ball» y «vamos a mejorar el juego al máximo». Coge de PokéSurvivor las mecánicas y lo que lo hace divertido, no su aspecto ni su código: menús y HUD con estilo propio de Dragon Ball.
+
+**Dónde está todo**
+- Copia de trabajo: `C:\Users\josem\Desktop\dbsurvivor` (PC de Josemi, usuario `josem`). Repositorio `josemidev1-code/DBSurvivor`, rama `main`. La web (GitHub Pages) se actualiza sola al subir a `main`: https://josemidev1-code.github.io/DBSurvivor/
+- Josemi aprueba subir a `main` directamente («Pásala ya a main», 28 nov.). Aun así, trabaja en una rama por bloque y pregúntale antes de fusionar.
+- Identidad de git en este repositorio: `Claude <noreply@anthropic.com>` (ya configurada en local).
+
+**Lee, por este orden**
+1. `REVISION_2026-11-27.md`, en esta carpeta: estado de todo el juego, 38 fallos, comparación con PokéSurvivor y hoja de ruta en 11 bloques. Lo más importante son las secciones 4, 5, 6.2 (preguntas) y 6.5 (bloques).
+2. `REFERENCIA_POKESURVIVOR.md`, en esta carpeta: cómo funciona PokéSurvivor sistema por sistema, con números e ideas adaptables. Es solo inspiración.
+3. La última entrada de `BITACORA.md` (27 nov.): qué se hizo en el Bloque 1 y qué quedó pendiente.
+
+**Hecho el 27-28 nov. (Bloque 1, ya en `main`, `script.js?v=195`)**
+- Fusión sin congelar: copia de técnicas por partida (`P.sigs`, `baseSigs`, `sigList`) y técnica fusionada sacada de la real con +70 % de daño (`fusionMove`). Ya no se ofrecen cartas del sistema antiguo de armas, salvo las esferas en órbita. `openLevelUp` descarta una carta que falle.
+- `kill()`: quien ocupa el hueco del jefe cuenta como jefe al caer, así que los mapas con un élite de refuerzo ya se pueden ganar.
+- `loadSave` conserva todos los campos guardados.
+- Bolas grandes: estallan una vez. Teclado: sin repetición de tecla y bloqueo de 300 ms en la subida de nivel.
+- Cuerpo a cuerpo **provisional**: la protección del combo dura como mucho la mitad de la recarga real.
+- Comprobaciones: 9 de 10 en verde, más una nueva (`comprobar_guardado_fusion.cjs`). `comprobar_formas` falla a propósito hasta que Josemi decida sobre las transformaciones.
+
+**Primer paso de la nueva sesión**
+1. Pregúntale a Josemi cómo le fue al jugar, sobre todo el cuerpo a cuerpo.
+2. Hazle las 13 preguntas de `REVISION_2026-11-27.md` §6.2, de pocas en pocas y con opciones para elegir:
+   1. ranuras (reserva automática, 4 ranuras o Q/E);
+   2. cuerpo a cuerpo;
+   3. fusión;
+   4. formas y deseo de Shenron;
+   5. plantel y gachapón;
+   6. dificultades;
+   7. duración de la partida;
+   8. maqueta del HUD;
+   9. retrato de la selección;
+   10. nombres;
+   11. techo de las mejoras;
+   12. jefe para cada uno de los 12 huecos con élite (lista en la salida de `comprobar_enemigos.cjs`);
+   13. música e iconos.
+3. Empieza el **Bloque 2 · Limpiar la fachada** (§6.5): reliquias que no hacen lo que dicen, cápsula roja sin efecto, cápsula dorada que cuenta el zeni dos veces, textos de desbloqueo falsos, Escape en los menús, aviso del regalo diario, y fallos pequeños de eventos y enemigos. Son cambios pequeños, cada uno con su prueba. Lo que dependa de una respuesta de Josemi espera a esa respuesta.
+4. Orden propuesto para después:
+   - 3 · Selección y estadísticas;
+   - 4 · HUD;
+   - 5 · Equilibrio (antes, un contador de daño por técnica);
+   - 6 · Progresión: cartas con valores, evolución de técnicas y Kaioken que se carga aguantando;
+   - 7 · Técnicas propias;
+   - 8 · Enemigos;
+   - 9 · Menús y música;
+   - 10 · Carga;
+   - 11 · Mecánicas nuevas (calendario de jefes visible, torneo, poder tras el jefe, Zanzoken en Espacio…).
+
+   Josemi puede cambiar el orden.
+
+**Cómo probar (lo que funcionó el 27 nov.)**
+- Servidor local: `.claude/launch.json` («animesurvivor», `python -m http.server 8765` desde la raíz). Si la herramienta de vista previa no lo encuentra, lanza ese mismo comando con `--directory` apuntando a la raíz del repositorio.
+- Desde la consola del navegador, el juego expone `window.AS`:
+  - `AS.start(héroe, mapa)`;
+  - `AS.tick(seg)`: ojo, ejecuta `seg*30` pasos de 1/30 s, redondeando hacia arriba;
+  - `AS.pick(i)`: elige carta;
+  - `AS.dropGem(x,y,xp)`: fuerza subidas de nivel;
+  - `AS.putPickup({k:'chest',bossReward:true,x,y})`: da el cofre de jefe con fusión;
+  - `AS.spawnAt(tipo,dx,dy)`, `AS.S`, `AS.P` y `AS.enemies()`.
+- Ids de mapa: namek, tierra, time, vegetasei, futuro, arena, kame, kaio, poder, bills, infierno, yardrat, kaioshin, redribbon, musculo, budokai, lookout, capsule, paoz, desierto, volcan, gizard, pradera, bosque.
+- Comprobaciones: `node --check "02 - Código del juego/script.js"` y `node herramientas/comprobar_*.cjs`. Sube `script.js?v=` en `index.html` al cambiar el código.
+- Los `.md` tienen saltos de línea CRLF: edítalos con la herramienta de edición, no con reemplazos de texto por script.
+- Abrir `index.html` con doble clic no se ha podido probar desde el navegador integrado: pídele a Josemi que lo pruebe.
+
+**Reglas que siguen valiendo:** las de `AGENTS.md` (bitácora con sus palabras, commits pequeños, solo sprites de `sprites/`, todo en español, doble clic en `index.html`) y las decisiones creativas siempre las elige Josemi entre opciones. Es un juego de fans: nada de venderlo, anuncios ni compras.
+
+---
+
+## Relevo anterior (11 nov. 2026; parte ya hecha, el resto entra en los bloques 7 y 4)
 
 Josemi abrirá una sesión nueva y solo dirá «sigue». Trabaja en la rama `claude/nice-darwin-y7t5jp` (o la que indique el sistema), lee las últimas entradas de `BITACORA.md` y haz, en este orden:
 

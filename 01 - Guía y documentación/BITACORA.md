@@ -4576,6 +4576,7 @@ ode --check.
 - «Mi juego es este y quedan muchísimas cosas por hacer, ve mirándolo». Revisión del estado del juego comparado con PokéSurvivor.
 - «Yo quiero hacer como PokéSurvivor pero de Dragon Ball, pero aún faltan muchas mejoras y quiero que me ayudes».
 - «Sí, empieza»: empezar el Bloque 1 de la hoja de ruta (arreglar lo que rompe partidas).
+- 28 nov.: «Pásala ya a main» y «déjame el contexto para un nuevo chat y vamos a mejorar el juego al máximo». Relevo nuevo arriba del todo en `00 - EMPIEZA AQUÍ - RELEVO CLAUDE.md` y referencia de mecánicas en `REFERENCIA_POKESURVIVOR.md`.
 
 ### Lo que hice
 - Revisión completa del código, las comprobaciones y una partida en la versión publicada: `REVISION_2026-11-27.md` en esta carpeta (38 fallos, 13 decisiones para Josemi, hoja de ruta en 11 bloques).
